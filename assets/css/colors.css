@@ -1,0 +1,14 @@
+:root {
+    /* vert: #5c9902 101/179/46 marron: #924c02 147/96/55 bleu: #0183d5 0/128/201 noir 0/47/74 */
+
+    --green: #5c9902;
+    --green-hovered: #4d7f02;
+
+    --brown: #924c02;
+    --brown-hovered: #753d01;
+
+    --blue: #0183d5;
+    --blue-hovered: #0183d5;
+
+    --black: rgb(20, 20, 20);
+}
