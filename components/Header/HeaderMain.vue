@@ -1,5 +1,5 @@
 <template>
-    <header class="r">
+    <header class="">
         <div class="imageBox">
             <!-- <img src="" alt=""> -->
         </div>
@@ -13,18 +13,31 @@
 <script setup>
 
 const pageTitle = 'Accueil'
-
 const props = defineProps({
-    title: "string"
+    title: String,
+    images: Array
 })
 
+
+const image = ref(null)
+const images = ref(props.images)
+
+setTimeout(() => {
+    changeImage()
+}, 5000)
+
+const changeImage = () => {
+    
+}
 
 </script>
 
 <style>
-header {
+
+
+header .imageBox {
     width: 100%;
-    height: 50vh;
+    height: 69vh;
 }
 
 </style>

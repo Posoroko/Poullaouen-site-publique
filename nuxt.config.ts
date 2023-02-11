@@ -37,6 +37,8 @@ export default defineNuxtConfig({
                 { name: "og:image", content: "@carine_leduc" },
                 { name: "og:url", content: "https://mairie-poullaouen.fr" },
             ],
-        }
-    },
+        },
+        // baseURL: '/accueil/'
+    }
+    
 })

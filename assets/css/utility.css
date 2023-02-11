@@ -1,6 +1,8 @@
 .w100 {width: 100%;}
 .h100 {height: 100%;}
 
+.block {display: block;}
+
 .flex {display: flex;}
 .column {flex-direction: column;}
 .row {flex-direction: row;}
@@ -16,10 +18,7 @@
 .alignStart {align-items: flex-start;}
 .alignEnd {align-items: flex-end;}
 
-.centered {display: grid;place-items: center;
-}
-
-
+.centered {display: grid;place-items: center;}
 
 .r {border: 1px solid red;}
 .b {border: 1px solid blue;}
@@ -32,3 +31,10 @@
 .sticky {position: sticky;}
 
 .top {top: 0;}
+.right {right: 0;}
+
+.pointer {cursor: pointer;}
+
+.relative {position: relative;}
+.absolute {position: absolute;}
+

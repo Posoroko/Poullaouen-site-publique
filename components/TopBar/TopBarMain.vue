@@ -1,10 +1,10 @@
 <template>
-    <nav class="flex justifyBetween sticky top b">
+    <nav class="flex justifyBetween alignCenter sticky top relative">
         <TopBarSiteIcon />
 
-        <TopBarTabMenu :tabs="tabs" />
+        <TopBarTabMenu />
         
-        <TopBarBurgerMenu :tabs="tabs" v-if="false" />
+        <TopBarBurgerMenu v-if="false" />
 
         <TopBarContactWidget />
     </nav>
@@ -12,35 +12,14 @@
 
 <script setup>
 
-const tabs = [
-    {
-        article: 'ma',
-        name: 'MAIRIE'
-    },
-    {
-        article: 'mon',
-        name: 'QUOTIDIEN'
-    },
-    {
-        article: 'mes',
-        name: 'SORTIES'
-    },
-    {
-        article: 'mes',
-        name: 'INFOS'
-    },
-    {
-        article: 'mes',
-        name: 'AFFAIRES'
-    }
-    
-]
+
 
 </script>
 
 <style>
 nav {
     background-color: #fff;
+    box-shadow: var(--shadow);
 }
 
 

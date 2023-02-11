@@ -7,10 +7,15 @@
     --brown: #924c02;
     --brown-hovered: #753d01;
 
-    --blue: #0183d5;
-    --blue-hovered: #0183d5;
+    --light-blue: #0183d5;
+    --light-blue-hovered: #0183d5;
+
+    --dark-blue: #002f4a;
+    --dark-blue-hovered: #014064;
 
     --black: rgb(20, 20, 20);
+
+    --shadow: 1px 1px 5px rgba(0, 0, 0, 0.26);
 }
 
 /* main colors */

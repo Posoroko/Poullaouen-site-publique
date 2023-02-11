@@ -32,7 +32,7 @@
 /*  ---  */
 
 
-.icon {
+/* .icon {
     font-family: 'Material Symbols Outlined';
     font-weight: normal;
     font-style: normal;
@@ -45,4 +45,8 @@
     direction: ltr;
     -moz-osx-font-smoothing: grayscale;
     user-select: none;
+} */
+
+.icon {
+    font-family: 'Material Icons';
 }
