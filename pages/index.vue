@@ -1,10 +1,11 @@
 <template>
-    <h1>
-        Bienvenue à Poullaouen
-    </h1>
+    <HeaderMain />
+    <main>
+        main section
+    </main>
 </template>
-
 <script setup>
+
 
 </script>
 

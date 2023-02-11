@@ -1,11 +1,9 @@
 <template>
     <TopBarMain />
 
-    <HeaderMain />
+    <slot />
 
-    <main>
-        <slot />
-    </main>
+    <FooterMain />
 </template>
 
 <script setup>

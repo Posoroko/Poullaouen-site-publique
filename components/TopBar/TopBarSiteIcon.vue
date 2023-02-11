@@ -1,11 +1,11 @@
 <template>
-    <h1>
-        site icon
-    </h1>
+    <div class="g">
+        icon
+    </div>
 </template>
 
 <script setup>
-
+const icon = 'icon'
 </script>
 
 <style>

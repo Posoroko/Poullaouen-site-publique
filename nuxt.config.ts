@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     ssr: true,
 
     modules: [
-
+        
     ],
     app: {
         head: {

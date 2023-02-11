@@ -5,6 +5,8 @@
         <TopBarTabMenu :tabs="tabs" />
         
         <TopBarBurgerMenu :tabs="tabs" v-if="false" />
+
+        <TopBarContactWidget />
     </nav>
 </template>
 

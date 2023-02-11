@@ -12,3 +12,31 @@
 
     --black: rgb(20, 20, 20);
 }
+
+/* main colors */
+    /* Background colors */
+    .blueBG {background-color: var(--blue);}
+    .greenBG {background-color: var(--green);}
+    .brownBG {background-color: var(--brown);}
+
+    /* Any text inside a colored background */
+    .blueBG *, .greenBG *, .brownBG * {
+        color: white;
+    }
+
+
+/* Components that react to user actions */
+    .blue_action {background-color: var(--blue);}
+    .blue_action:hover {
+        background-color: var(--blue-hovered);
+    }
+
+    .green_action {background-color: var(--green);}
+    .green_action:hover {
+        background-color: var(--green-hovered);
+    }
+
+    .brown_action {background-color: var(--brown);}
+    .brown_action:hover {
+        background-color: var(--brown-hovered);
+    }

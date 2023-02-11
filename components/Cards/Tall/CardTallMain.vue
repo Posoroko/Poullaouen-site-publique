@@ -1,10 +1,17 @@
 <template>
     <div>
-        burger menu
+
     </div>
 </template>
 
 <script setup>
+
+
+
+const props = defineProps({
+    title: "string"
+})
+
 
 </script>
 
