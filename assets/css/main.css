@@ -6,3 +6,44 @@
     width: min(100%, 1200px);
     padding: 0 20px;
 }
+
+main {
+    padding-top: 50px;
+}
+
+
+.whiteSection .sectionContent .shoeBox .foot svg g .pied {
+    fill: var(--brown);
+}
+
+.sectionTitleBox {
+    background-color: white;
+}
+
+
+.blueSection .sectionContent{
+    background-color: var(--dark-blue);
+}
+.blueSection .sectionContent * {
+    color: white;
+}
+.blueSection .sectionContent .shoeBox .foot svg g .pied {
+    fill: var(--brown);
+}
+
+
+
+.brownSection .sectionContent{
+    background-color: var(--brown);
+}
+.brownSection .sectionContent * {
+    color: white;
+}
+
+.brownSection .sectionContent .shoeBox .foot svg g .pied {
+    fill: white;
+}
+
+.brownSection .sectionContent .mainWidth, .blueSection .sectionContent .mainWidth{
+    flex-direction: row-reverse;
+}

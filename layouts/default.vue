@@ -12,10 +12,5 @@
 </script>
 
 <style>
-.topBarBox {
-    height: 150px;
-}
-main {
-    height: 200vh;
-}
+
 </style>

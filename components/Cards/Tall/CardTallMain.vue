@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="tallCard">
 
     </div>
 </template>
@@ -16,5 +16,8 @@ const props = defineProps({
 </script>
 
 <style>
-
+.tallCard {
+    width: 300px;
+    aspect-ratio: 1/1.5;
+}
 </style>

@@ -1,12 +1,12 @@
 <template>
     <header class="">
         <div class="imageBox">
-            <!-- <img src="" alt=""> -->
+            <img :src="currentImage.src" alt="">
         </div>
 
-        <HeaderTItleBar :title="pageTitle"/>
-
-        <HeaderPathBar />
+        <HeaderPathBar :path="data.path"/>
+        
+        <HeaderTitleBar :title="data.title"/>
     </header>  
 </template>
 
@@ -14,21 +14,15 @@
 
 const pageTitle = 'Accueil'
 const props = defineProps({
-    title: String,
-    images: Array
+    data: Object
 })
 
+const currentImage = ref({})
+let counter = 0
 
-const image = ref(null)
-const images = ref(props.images)
-
-setTimeout(() => {
-    changeImage()
-}, 5000)
-
-const changeImage = () => {
-    
-}
+onMounted(() => {
+    currentImage.value = props.data.images[counter]
+})
 
 </script>
 
@@ -37,7 +31,14 @@ const changeImage = () => {
 
 header .imageBox {
     width: 100%;
+    
     height: 69vh;
+}
+
+header .imageBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 </style>

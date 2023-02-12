@@ -1,5 +1,5 @@
 <template>
-    <nav class="flex justifyBetween alignCenter sticky top relative">
+    <nav class="topBar flex justifyBetween alignCenter sticky top relative">
         <TopBarSiteIcon />
 
         <TopBarTabMenu />
@@ -17,10 +17,11 @@
 </script>
 
 <style>
-nav {
+.topBar {
     background-color: #fff;
     box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 10000;
 }
-
-
 </style>

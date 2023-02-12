@@ -1,16 +1,36 @@
 <template>
-    <div class="pathBox brownBG">
-        <div class="path">{{ path }} </div>
+    <div class="pathBox brownBG centered">
+        <div class="path mainWidth flex alignCenter">
+            <span class="step flex alignCenter" v-for="step in path" :key="step">
+                <span class="icon">arrow_right</span>
+
+                <nuxtLink :to="step.target" class="italic stepLink flex alignCenter">
+                    {{ step.text }}
+                </nuxtLink>
+                
+            </span>
+        </div>
     </div>
 </template>
 
 <script setup>
-const path = useRoute()
 
-
+const props = defineProps({
+    path: Array
+})
 
 </script>
 
 <style>
+.pathBox {
+    height: 5vh;
+}
 
+.step .icon,
+.step .stepLink {
+    margin-right: 20px;
+}
+.stepLink:hover {
+    color: rgb(149, 246, 253);
+}
 </style>

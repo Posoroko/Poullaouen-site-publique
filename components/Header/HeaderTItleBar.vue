@@ -1,6 +1,6 @@
 <template>
-    <div class="titleBox blueBG">
-        <h1 class="pageTitle">
+    <div class="titleBox darkBlueBG centered">
+        <h1 class="pageTitle mainWidth">
             {{ title }}
         </h1>
     </div>
@@ -16,9 +16,12 @@ const props = defineProps({
 </script>
 
 <style>
-
-.pageTitle {
-    font-size: 24px;
+.titleBox {
+    height: 11vh;
 }
-
+.pageTitle {
+    font-weight: 900;
+    font-size: max(20px, 2vw);
+    letter-spacing: 2px;
+}
 </style>

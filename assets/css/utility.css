@@ -6,6 +6,7 @@
 .flex {display: flex;}
 .column {flex-direction: column;}
 .row {flex-direction: row;}
+.wrap {flex-wrap: wrap;}
 
 .justifyCenter {justify-content: center;}
 .justifyStart {justify-content: flex-start;}
@@ -37,4 +38,6 @@
 
 .relative {position: relative;}
 .absolute {position: absolute;}
+.absolutlyCentered {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 
+.mainWidth { width: min(100%, 1200px); margin: auto;}
