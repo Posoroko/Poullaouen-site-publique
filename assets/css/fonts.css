@@ -9,6 +9,7 @@
 /*  Main font style  */
 *{
     font-family: 'Montserrat', sans-serif;
+    color: var(--dark-blue);
 }
 
 .oleo {
@@ -19,9 +20,40 @@
 
     /* main text font for classic pages */
         .page-text {
-            font-size: 18px;
             font-weight: 400;
             color: var(--dark-blue);
+        }
+
+        @media (max-width: 719px) {
+            .page-text {
+                font-size: 16px;
+            }
+        }
+
+        @media (min-width: 720px) {
+            .page-text {
+                font-size: 18px;
+                line-height: 24px;
+            }
+        }
+
+        /* intro text at top of pages */
+        .page-text {
+            font-weight: 500;
+            color: var(--dark-blue);
+        }
+
+        @media (max-width: 719px) {
+            .page-text {
+                font-size: 18px;
+            }
+        }
+
+        @media (min-width: 720px) {
+            .page-text {
+                font-size: 20px;
+                line-height: 24px;
+            }
         }
     
     

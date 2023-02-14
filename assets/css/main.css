@@ -44,6 +44,12 @@ main {
     fill: white;
 }
 
-.brownSection .sectionContent .mainWidth, .blueSection .sectionContent .mainWidth{
+.brownSection .sectionContent .mainWidth, 
+.blueSection .sectionContent .mainWidth{
     flex-direction: row-reverse;
 }
+
+
+
+
+

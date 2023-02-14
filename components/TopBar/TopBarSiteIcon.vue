@@ -1,6 +1,6 @@
 <template>
     <nuxt-link to="/">
-        <img class="logo pointer" src="images/logo.png" alt="logo de la commune de Poullaouën">
+        <!-- <img class="logo pointer" src="/images/logo.png" alt="logo de la commune de Poullaouën"> -->
     </nuxt-link>
 </template>
 
@@ -11,7 +11,8 @@ const icon = 'icon'
 <style>
 
 .logo {
-    height: 75px;
-    margin-left: 20px;
+    width: clamp(50px, 5vw, 75px);
 }
+
+
 </style>

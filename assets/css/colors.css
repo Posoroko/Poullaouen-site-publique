@@ -23,16 +23,7 @@
 }
 
 /* main colors */
-    /* Background colors */
-    .lightBlueBG {background-color: var(--light-blue);}
-    .darkBlueBG {background-color: var(--dark-blue);}
-    .greenBG {background-color: var(--green);}
-    .brownBG {background-color: var(--brown);}
-
-    /* Any text inside a colored background */
-        .lightBlueBG *, .darkBlueBG *, .greenBG *, .brownBG * {
-        color: white;
-    }
+    
 
 
 /* Components that react to user actions */
@@ -55,3 +46,35 @@
     .brown_action:hover {
         background-color: var(--brown-hovered);
     }
+
+
+    /* shadows, borders, backgrounds, etc */
+
+        /* Background colors */
+        .lightBlueBG {
+            background-color: var(--light-blue);
+        }
+    
+        .darkBlueBG {
+            background-color: var(--dark-blue);
+        }
+    
+        .greenBG {
+            background-color: var(--green);
+        }
+    
+        .brownBG {
+            background-color: var(--brown);
+        }
+    
+        /* Any text inside a colored background */
+        .lightBlueBG *,
+        .darkBlueBG *,
+        .greenBG *,
+        .brownBG * {
+            color: white;
+        }
+
+        .shadow {
+            box-shadow: var(--shadow);
+        }

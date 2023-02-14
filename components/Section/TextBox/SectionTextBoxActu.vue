@@ -1,5 +1,5 @@
 <template>
-    <div class="textBox w100 flex column justifyBetween">
+    <div class="textBox  flex column justifyBetween">
         <div class="intro">
             <h3>{{ data.subtitle }}</h3>
             <p>{{ data.date }}</p>
@@ -19,12 +19,12 @@
 
                 <NuxtLink class="button blue_action flex pointer alignCenter" :to="data.file">
                     <span class="icon">download</span>
-                    <span class="italic">télécharger</span>
+                    <span class="italic page-text">télécharger</span>
                 </NuxtLink>
 
                 <span class="button blue_action flex pointer alignCenter">
                     <span class="icon">visibility</span>
-                    <span>afficher</span>
+                    <span class="italic page-text">afficher</span>
                 </span>
             </div>
         </div>
@@ -47,13 +47,28 @@ const props = defineProps({
 
 <style scoped>
 .textBox {
-    width: 50%;
-
     padding: 50px 30px;
     overflow-y: auto;
 }
-
-
+.textBox {
+    text-align: justify;
+}
+@media (max-width: 719px) {
+    .textBox {
+        width: 100%;
+    }
+}
+@media (min-width: 720px) {
+    .textBox {
+        width: 50%;
+    }
+}
+.intro p, .content {
+    margin-top: 5px;
+}
+.content {
+    margin-top: 15px;
+}
 .moreInfo {
     margin-top: 20px;
 }

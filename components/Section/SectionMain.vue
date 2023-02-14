@@ -3,7 +3,7 @@
         <SectionTitleBar v-if="showTitle" :title="data.title"/>
 
         <div class="sectionContent w100">
-            <div class="mainWidth flex wrap h100">
+            <div class="mainWidth flex alignCenter justifyCenter wrap">
                 <SectionShoeBox :image="data.image" />
                 
                 <SectionTextBoxActu v-if="type === 'actualites'" :data="data" />
@@ -31,14 +31,10 @@ const types = props.type
 </script>
 
 <style scoped>
-.sectionContent {
-    height: 60vh;
-}
-.sectionContent {
-    margin-top: 20px;
-}
 
-.whiteSection .sectionContent .shoeBox .foot svg g .pied {
-    background-color: red;
+.sectionContent {
+    min-height: 60vh;
+    margin-top: 20px;
+    padding: 20px 0;
 }
 </style>

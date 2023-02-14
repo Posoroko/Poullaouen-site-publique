@@ -1,7 +1,7 @@
 <template>
-    <footer class="w100 relative flex justifycenter r">
+    <footer class="w100 relative flex justifycenter">
         <section class="mainWidth relative flex justifyAround">
-            <div class="leftBox">
+            <div class="leftBox" id="footerInfo">
                 <address>
                     <p class="poullaouen">Poullaouen</p>
 
@@ -20,7 +20,33 @@
             </div>
 
             <div class="centerBox">
-                <img class="logo" src="images/logo-poullaouen.svg" alt="logo de la Commune de Poullaouën">
+                <!-- <img class="logo" src="/images/logo-poullaouen.svg" alt="logo de la Commune de Poullaouën"> -->
+
+                <div class="phoneBox">
+                    <NuxtLink href="mailto:mairie-de-poullaouen@wanadoo.fr" class="phoneBtn">
+                        <span class="icon">call</span>
+
+                        <span class="city">Poullaouen</span>
+                    </NuxtLink>
+
+                    <NuxtLink href="mailto:mairie-de-poullaouen@wanadoo.fr" class="phoneBtn">
+                        <span class="icon">call</span>
+                        
+                        <span class="city">Locmaria-Berrien</span>
+                    </NuxtLink>
+
+                    <NuxtLink href="mailto:mairie-de-poullaouen@wanadoo.fr" class="phoneBtn">
+                        <span class="icon">mail</span>
+                    
+                        <span class="city">Poullaouen</span>
+                    </NuxtLink>
+                    
+                    <NuxtLink href="mailto:mairie-de-poullaouen@wanadoo.fr" class="phoneBtn">
+                        <span class="icon">mail</span>
+                    
+                        <span class="city">Locmaria-Berrien</span>
+                    </NuxtLink>
+                </div>
 
                 <a href="www.facebook.com/mairiedepoullaouen" class="button flex alignCenter justifyCenter">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="width100 iconBox">
@@ -29,6 +55,7 @@
                     </svg>
                     <span class="centered">Suivez-nous!</span>
                 </a>
+                
                 <a href="mailto:mairie-de-poullaouen@wanadoo.fr" class="button centered">Envoyer un mail</a>
                 <a href="www.poher-communauté.com" class="button centered">Poher communauté</a>
 
@@ -38,7 +65,7 @@
                 <address>
                     <p class="poullaouen">Locmaria-Berrien</p>
 
-                    <p class="address felx alignCEnter"> <span class="icon adIcon">pin_drop</span>3 rue Ti Ker - 29690 Locmaria
+                    <p class="address flex alignCenter"> <span class="icon adIcon">pin_drop</span>3 rue Ti Ker - 29690 Locmaria
                         - Berrien</p>
 
                     <a href="tel:+33298997309" class="tel"><span class="icon adIcon">call</span>02.98.99.73.09</a>
@@ -52,7 +79,7 @@
 
             </div>
         </section>
-        <img class="absolute vague" src="images/vague.svg">
+        <img class="absolute vague" src="/images/vague.svg">
     </footer>
 </template>
 
@@ -69,6 +96,41 @@ footer section {
     gap: 20px;
 }
 
+.phoneBox {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+@media (min-width: 719px) {
+    .phoneBox {
+        display: none;
+    }
+}
+
+.phoneBox .phoneBtn {
+    width: calc(50% - 5px);
+    aspect-ratio: 1/1;
+    color: white;
+    background-color: var(--green);
+    padding: 20px 0;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 5px; */
+}
+.phoneBox .phoneBtn .icon {
+    aspect-ratio: 1/1;
+    font-size: 30px;
+    text-align: center;
+}
+.phoneBox .phoneBtn .city {
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
 .leftBox,
 .rightBox {
     display: flex;
@@ -108,7 +170,7 @@ footer section {
     left: 0;
 }
 
-.centerBox a {
+.centerBox .button {
     height: 50px;
     color: white;
     background-color: var(--dark-blue);

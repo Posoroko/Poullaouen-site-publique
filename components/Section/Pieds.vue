@@ -16,10 +16,11 @@ import { ref, onMounted } from 'vue'
 
 <style>
 .foot {
-    height: 100%;
+    width: 100%;
 }
+
 #Calque_1{
-    height: 55vh;
+    /* height: 55vh; */
     overflow: visible;
 }
 

@@ -24,6 +24,11 @@
             </div>
         </div>
     </div>
+    <a href="#footerInfo" id="tinyWidget" class="icon tinyWidget">
+        question_mark
+    </a>
+ 
+
 </template>
 
 <script setup>
@@ -50,5 +55,30 @@
     font-size: 16px;
     color: var(--light-blue);
     padding: 0 5px;
+}
+#tinyWidget {
+    color: white;
+}
+.tinyWidget {
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    color: white;
+    background-color: var(--dark-blue);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+@media (max-width: 999px) {
+    .contactWidgetBox {
+        display: none;
+    }
+}
+
+@media (min-width: 1000px) {
+    .tinyWidget {
+        display: none;
+    }
 }
 </style>

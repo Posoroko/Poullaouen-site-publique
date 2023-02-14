@@ -1,5 +1,5 @@
 <template>
-    <div class="shoeBox relative">
+    <div class="shoeBox flex alignCenter relative">
         <SectionPieds />
 
         <img class="absolutlyCentered" :src="image" alt="">
@@ -16,9 +16,19 @@ const props = defineProps({
 
 <style scoped>
 .shoeBox {
-    width: 50%;
     height: 100%;
     /* padding: 30px; */
+}
+@media (max-width: 719px) {
+    .shoeBox {
+        width: 80%;
+    }
+}
+
+@media (min-width: 720px) {
+    .shoeBox {
+        width: 50%;
+    }
 }
 
 .shoeBox img {

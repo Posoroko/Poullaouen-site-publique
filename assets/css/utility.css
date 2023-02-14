@@ -19,6 +19,10 @@
 .alignStart {align-items: flex-start;}
 .alignEnd {align-items: flex-end;}
 
+.gap5 {gap: 5px;}
+.gap10 {gap: 10px;}
+.gap20 {gap: 20px;}
+
 .centered {display: grid;place-items: center;}
 
 .r {border: 1px solid red;}
@@ -41,3 +45,14 @@
 .absolutlyCentered {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 
 .mainWidth { width: min(100%, 1200px); margin: auto;}
+
+.objectFitCover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.marTop20 {margin-top: 20px;}
+
+.pad10 {padding: 10px;}

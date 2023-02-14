@@ -11,8 +11,11 @@ export default defineNuxtConfig({
     ssr: true,
 
     modules: [
-        
+        "nuxt-directus"
     ],
+    directus: {
+        url: "https://findstable.net"
+    },
     app: {
         head: {
             htmlAttrs: {
