@@ -31,8 +31,8 @@ const links = {
             path: "/ma-mairie/documents/bulletin-municipal"
         },
         {
-            text: "Les comptes rendus du conseil muninicipal",
-            path: "/ma-mairie/comptes-rendus-du-conseil-municipal"
+            text: "Les procès verbaux du conseil muninicipal",
+            path: "/ma-mairie/documents/proces-verbaux-du-conseil-municipal"
         },
         {
             text: "Les publications réglementaires",

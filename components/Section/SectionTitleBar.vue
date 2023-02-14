@@ -2,7 +2,7 @@
     <div class="sectionTitleBox mainWidth">
         <h2 class="oleo">{{ title }}</h2>
 
-        <div class="stripe"></div>
+        <div class="titleStripe"></div>
     </div>
 </template>
 
@@ -24,7 +24,7 @@ const props = defineProps({
     margin-top: max(30px, 3vw);
 }
 
-.stripe {
+.sectionTitleBox .titleStripe {
     width: max(120px, 12vw);
     height: max(8px, 0.7vw);
     background: linear-gradient(270deg, rgba(0, 47, 74, 1) 0%, rgba(147, 96, 55, 1) 100%);
@@ -32,6 +32,7 @@ const props = defineProps({
     margin-top: 20px;
 }
 
+/* .whiteSection appears in parent component */
 .whiteSection .sectionTitleBox h2 {
     color: var(--dark-blue);
 }

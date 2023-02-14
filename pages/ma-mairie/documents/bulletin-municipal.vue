@@ -1,53 +1,53 @@
 <template>
     <HeaderMain :data="headerData" />
 
-    <main class="w100 flex column">
+    <main class="docsMain w100 flex column">
         <p class="intro page-text mainWidth">
             Le bulletin municipal réalisé par la commission communication relate l’essentiel de l’actualité de l’année.
         </p>
 
-        <SectionTitleBar title="Les plus récents" />
-
-        <section class="latests relative">
+        <section class="docsSection docsLatestsSection relative">
+            <SectionTitleBar class="titleComp" title="Les plus récents" />
             
-            <div class="latestsStripe flex justifyCenter gap20 darkBlueBG relative wrap" v-if="documents">
-                 <article class="docCard pointer" v-for="doc in documents.splice(0, 4)" :key="doc.id">
-                    <figure class="frame">
-                        <img class="objectFitCover" :src="`${directusAssets}${doc.image}.jpg`" alt="">
-                    </figure>
+            <div class="stripe relative" v-if="documents">
+                <div class="w100 flex darkBlueBG justifyCenter gap20  relative wrap">
+                    <article class="bulletinCard pointer" v-for="doc in documents.splice(0, 4)" :key="doc.id">
+                        <figure class="frame">
+                            <img class="objectFitCover" :src="`${directusAssets}${doc.image}.jpg`" alt="" @click.prevent="openModal">
+                        </figure>
+                    
+                        <figCaption class="centered">
+                            {{ doc.datePublication }}
+                        </figCaption>
+                    </article>
+                </div>
 
-                    <figCaption class="centered">
-                        {{ doc.datePublication }}
-                    </figCaption>
-                 </article>
-
-                 
-            </div>
-
-            <div class="footBox absolutlyCentered">
-                <SectionPieds />
+                <div class="footBox">
+                    <SectionPieds />
+                </div>
             </div>
         </section>
 
-        <SectionTitleBar title="années suivantes" />
+        <section class="docsSection docsOldestsSection relative">
+            <SectionTitleBar title="Années précédentes" />
         
-        <section class="latests relative">
+            <div class="stripe relative" v-if="documents">
+                <div class="flex justifyCenter gap20  relative wrap">
+                    <article class="bulletinCard pointer" v-for="doc in documents" :key="doc.id">
+                        <figure class="frame">
+                            <img class="objectFitCover" :src="`${directusAssets}${doc.image}.jpg`" alt=""
+                                @click.prevent="openModal">
+                        </figure>
         
-            <div class="olderStripe flex justifyCenter gap20 relative wrap" v-if="documents">
-                <article class="docCard pointer" v-for="doc in documents" :key="doc.id">
-                    <figure class="frame">
-                        <img class="objectFitCover" :src="`${directusAssets}${doc.image}.jpg`" alt="">
-                    </figure>
-        
-                    <figCaption class="centered">
-                        {{ doc.datePublication }}
-                    </figCaption>
-                </article>
+                        <figCaption class="centered">
+                            {{ doc.datePublication }}
+                        </figCaption>
+                    </article>
+                </div>
             </div>
         </section>
 
     </main>
-
 </template>
 
 <script setup>
@@ -64,10 +64,9 @@ const fetchOptions = {
 }
 
 const { data: documents } = await useAsyncData(
-    "bulletins",
+    "bulletin",
     async () => {
         const items = await $fetch(`${directusItems}Bulletins`, fetchOptions)
-        console.log(items.data[0])
         return items.data
     }
     ,
@@ -82,7 +81,7 @@ const headerData = {
             alt: 'mairie de Locmaria-Berrien',
         }
     ],
-    title: 'Bulletin municipale',
+    title: 'Bulletin municipal',
     path: [
         {
             text: 'accueil',
@@ -99,6 +98,7 @@ const headerData = {
     ]
 }
 
+
 </script>
 
 <style>
@@ -106,47 +106,55 @@ const headerData = {
     height: 10vh;
 }
 
-.latests {
-    padding: 30px 0;
-    z-index: 10;
-}
-.latestsStripe {
-    color: white;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    /* padding adds up with figcaption's padding */
+.docsMain {
+    gap: 100px;
 }
 
-.docCard {
+.docsMain .docsSection .stripe {
+    margin-top: 20px;
+    z-index: 1;
+}
+.docsMain .docsSection .stripe .flex{
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.docsMain .docsSection .stripe .flex .bulletinCard {
     background-color: #fff;
     box-shadow: var(--shadow);
+    border-radius: 5px;
+    overflow: hidden;
 }
-.docCard figure{
-    width: 210px;
-    height: 297px;
+.bulletinCard figure{
+    width: min(210px, 100vw);
+    max-height: 296px;
 }
 
-.docCard figcaption {
+.bulletinCard figcaption {
     background-color: var(--dark-blue);
     color: white;
     font-size: 24px;
     font-weight: 600;
     padding: 10px;
 }
+.docsMain .docsLatestsSection .stripe .footBox {
+    width: 100%;
+    height: 150%;
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
-.footBox {
-width: min(100%, 600px);
-z-index:-1;
+
+@media (max-width: 920px) {
+    .footBox {
+        display: none;
+    }
 }
 .footBox * {
     fill: var(--brown);
-}
-.olderStripe {
-    padding-top: 20px;
-    padding-bottom: 10px;
-}
-.olderStripe .docCard figcaption {
-    color: var(--ddark-blue);
-    background-color: #fff;
 }
 </style>

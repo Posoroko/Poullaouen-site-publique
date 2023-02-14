@@ -153,7 +153,7 @@ const headerData = {
     }
 }
 
-.footBox {
+.maire .stripe .content .footBox {
     top: -10%;
     bottom: -10%;
     left: 25%;
@@ -161,7 +161,7 @@ const headerData = {
     z-index: -1;
 }
 
-.footBox .foot svg .pied {
+.maire .stripe .content .footBox .foot svg .pied {
     fill: var(--brown);
 }
 
