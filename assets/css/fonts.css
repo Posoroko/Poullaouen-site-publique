@@ -20,8 +20,7 @@
 
     /* main text font for classic pages */
         .page-text {
-            font-weight: 400;
-            color: var(--dark-blue);
+            font-weight: 300;
         }
 
         @media (max-width: 719px) {
@@ -32,13 +31,13 @@
 
         @media (min-width: 720px) {
             .page-text {
-                font-size: 18px;
+                font-size: 16px;
                 line-height: 24px;
             }
         }
 
         /* intro text at top of pages */
-        .page-text {
+        .intro-text {
             font-weight: 500;
             color: var(--dark-blue);
         }
@@ -51,7 +50,8 @@
 
         @media (min-width: 720px) {
             .page-text {
-                font-size: 20px;
+                font-size: 17px;
+                letter-spacing: 0px;
                 line-height: 24px;
             }
         }

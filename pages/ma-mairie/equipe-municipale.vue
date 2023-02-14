@@ -3,11 +3,11 @@
 
     <main class="w100 flex column equipeMain">
 
-        <EquipeMaire />
+        <EquipeMaire :maire="poullaouennais.maire[0]" />
 
-        <EquipeAdjoints />
+        <EquipeAdjoints :delegues="poullaouennais.adjoints"/>
 
-        <EquipeConseillers />
+        <EquipeConseillers :conseillers="poullaouennais.conseillers"/>
 
         <EquipeGroups title="Les commissions communales" :data="commissions" />
 
@@ -18,6 +18,34 @@
 </template>
 
 <script setup>
+const appConfig = useAppConfig();
+const directusAssets = appConfig.directus.assets;
+const directusItems = appConfig.directus.items;
+
+const fetchOptions = {
+    server: true,
+    params: {
+        fields: 'id, firstName, lastName, role, roleDetail, image'
+    }
+}
+
+const { data: poullaouennais } = await useAsyncData(
+    "equipe",
+    async () => {
+        const items = await $fetch(`${directusItems}Equipe`, fetchOptions)
+        console.log(items.data)
+
+        const temp = {
+            maire: items.data.filter(el => el.role == 'maire'),
+            adjoints: items.data.filter(el => el.role.includes('adj')),
+            conseillers: items.data.filter(el => el.role.includes('conseil'))
+        }
+
+        return temp
+    }
+    ,
+    { server: true }
+)
 
 const commissions = [
     {

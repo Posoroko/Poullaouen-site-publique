@@ -6,62 +6,48 @@
             <div class="stripe marTop20 relative">
                 <!-- <SectionPieds /> -->
                 <div class="content mainWidth flex alignCenter justifyCenter">
-                    <div class="card flex column">
+                    <div class="maireCard flex column">
                         <div class="titleBox centered">
                             <h2>
-                                Didier GOUBIL
+                                {{ maire.firstName }} {{ maire.lastName }}
                             </h2>
 
                             <h3>
-                                Maire de Poullaouën
+                                {{ maire.role }}
                             </h3>
                         </div>
 
-                        <div class="frame">
+                        <figure class="frame">
                             <img class="objectFitCover" src="/images/equipe/Didier-Goubil.jpg" alt="">
-                        </div>
+                        </figure>
                     </div>
 
                     <p class="text page-text">
-                        Mes chers amis, <br><br>
+                        Mes chers amis, <br>
                         Au- delà de ses fonctionnalités, le site internet de notre mairie est aussi une vitrine publique
-                        qui transmet une
-                        image
-                        et des valeurs. Un site institutionnel dynamique et interactif génère du lien entre la
-                        collectivité et ses
-                        administrés.
-                        Les habitants sont bien sûr les premiers concernés par les informations de notre commune, mais
-                        il s’adresse à un
-                        public
-                        bien plus large : futurs ou anciens habitants, parents d’élèves et leur famille, usagers des
-                        services médicaux, des
-                        commerces et des entreprises, touristes…
+                        qui transmet une image et des valeurs. Un site institutionnel dynamique et interactif génère du lien entre la
+                        collectivité et ses administrés. Les habitants sont bien sûr les premiers concernés 
+                        par les informations de notre commune, mais il s’adresse à un public bien plus large : futurs ou anciens habitants, 
+                        parents d’élèves et leur famille, usagers des services médicaux, des commerces et des entreprises, touristes…
+                        <br>
                         Le premier réflexe d’une personne qui veut se renseigner sur une commune est d’effectuer une
-                        recherche sur internet…
-                        le
-                        potentiel de visibilité d’un site de mairie est énorme.
+                        recherche sur internet… le potentiel de visibilité d’un site de mairie est énorme.
                         Le site internet de notre mairie a donc pour objectif :
+                        <br>
                         Informer le public, dynamiser la vie de la commune, diffuser des actualités, démontrer le
-                        dynamisme de l’équipe
-                        municipale, annoncer les évènements, les projets, faciliter les démarches administratives,
-                        partager les comptes
-                        rendus
-                        des conseils municipaux, promouvoir les opportunités économiques, les aspects touristiques, sans
+                        dynamisme de l’équipe municipale, annoncer les évènements, les projets, faciliter les démarches administratives,
+                        partager les comptes rendus des conseils municipaux, promouvoir les opportunités économiques, les aspects touristiques, sans
                         oublier de raconter
-                        «
-                        l’histoire » de notre commune…
+                        « l’histoire » de notre commune…
+                        <br>
                         Je conclurais en remerciant et félicitant les membres de la commission communication, qui ont
-                        œuvré à l’élaboration
-                        du
-                        site et principalement Nicole Tanguy, maire adjointe en charge de la communication, pour son
-                        engagement sur ce
-                        chantier
-                        ô combien important. <br><br>
+                        œuvré à l’élaboration du site et principalement Nicole Tanguy, maire adjointe en charge de la communication, pour son
+                        engagement sur ce chantier ô combien important. <br>
                         Bonne visite…
                     </p>
                 </div>
 
-                <div class="footBox absolute">
+                <div class="footBox absolutlyCentered">
                     <SectionPieds />
                 </div>
 
@@ -75,6 +61,10 @@
 </template>
 
 <script setup>
+
+const props = defineProps({
+    maire: Object
+})
 
 const headerData = {
     images: [
@@ -101,6 +91,7 @@ const headerData = {
 <style>
 .maire .stripe {
     background-color: var(--dark-blue);
+    padding: 30px 0;
 }
 
 .maire .stripe .content {
@@ -108,21 +99,25 @@ const headerData = {
     gap: 30px;
 }
 
-.maire .stripe .content .card {
+.maireCard {
+    
+
     background-color: #fff;
     border-radius: 10px;
     overflow: hidden;
 }
 
-.maire .stripe .content .card .frame {
-    height: 55vh;
+.maireCard .frame {
+    width: min(95vw, 375px);
 }
-
-.maire .stripe .content .card .titleBox {
+.maireCard .titleBox {
     padding: 10px;
 }
-
-.maire .stripe .content .card .titleBox h3 {
+.maireCard .titleBox h2 {
+    font-weight: 24px;
+    font-weight: 600;
+}
+.maireCard .titleBox h3 {
     font-weight: 400;
 }
 
@@ -153,16 +148,10 @@ const headerData = {
     }
 }
 
-.maire .stripe .content .footBox {
-    top: -10%;
-    bottom: -10%;
-    left: 25%;
-    right: 25%;
+.maire .stripe .footBox {
+    height: 150%;
+    width: 150%;
     z-index: -1;
-}
-
-.maire .stripe .content .footBox .foot svg .pied {
-    fill: var(--brown);
 }
 
 .sectionTitleBox {

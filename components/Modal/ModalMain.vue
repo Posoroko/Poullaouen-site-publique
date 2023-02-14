@@ -8,7 +8,7 @@
 const modal = ref(null)
 
 const props = defineProps({
-    type: String,
+    // type: String,
     // type = "img" => img tag, "imgLink",
     data: String
 })

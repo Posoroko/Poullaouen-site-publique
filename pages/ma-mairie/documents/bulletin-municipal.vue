@@ -13,7 +13,8 @@
                 <div class="w100 flex darkBlueBG justifyCenter gap20  relative wrap">
                     <article class="bulletinCard pointer" v-for="doc in documents.splice(0, 4)" :key="doc.id">
                         <figure class="frame">
-                            <img class="objectFitCover" :src="`${directusAssets}${doc.image}.jpg`" alt="" @click.prevent="openModal">
+                            <img class="objectFitCover" :src="`${directusAssets}${doc.image}.jpg`" 
+                            :alt="`Bulletin municipal de Poullaouën ${doc.datePublication}`" @click.prevent="openModal">
                         </figure>
                     
                         <figCaption class="centered">
@@ -35,8 +36,8 @@
                 <div class="flex justifyCenter gap20  relative wrap">
                     <article class="bulletinCard pointer" v-for="doc in documents" :key="doc.id">
                         <figure class="frame">
-                            <img class="objectFitCover" :src="`${directusAssets}${doc.image}.jpg`" alt=""
-                                @click.prevent="openModal">
+                            <img class="objectFitCover" :src="`${directusAssets}${doc.image}.jpg`" 
+                            :alt="`Bulletin municipal de Poullaouën ${doc.datePublication}`" @click.prevent="openModal">
                         </figure>
         
                         <figCaption class="centered">
@@ -47,10 +48,22 @@
             </div>
         </section>
 
+        <ModalMain :data="modalData" />
+
     </main>
 </template>
 
 <script setup>
+
+const modalData = ref('')
+
+
+
+
+
+
+
+
 const appConfig = useAppConfig();
 const directusAssets = appConfig.directus.assets;
 const directusItems = appConfig.directus.items;
@@ -77,8 +90,8 @@ const { data: documents } = await useAsyncData(
 const headerData = {
     images: [
         {
-            src: '/images/header/equipe/équipe-municipale-Poullaouën.jpg',
-            alt: 'mairie de Locmaria-Berrien',
+            src: '/images/header/bulletin.jpg',
+            alt: 'Bulletin minicipal de Poullaouën',
         }
     ],
     title: 'Bulletin municipal',
@@ -120,23 +133,28 @@ const headerData = {
     padding-bottom: 20px;
 }
 
-.docsMain .docsSection .stripe .flex .bulletinCard {
-    background-color: #fff;
-    box-shadow: var(--shadow);
-    border-radius: 5px;
-    overflow: hidden;
-}
+
 .bulletinCard figure{
     width: min(210px, 100vw);
     max-height: 296px;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
 }
 
 .bulletinCard figcaption {
-    background-color: var(--dark-blue);
-    color: white;
     font-size: 24px;
     font-weight: 600;
     padding: 10px;
+}
+.docsMain .docsLatestsSection .stripe .flex .bulletinCard figcaption {
+    background-color: var(--dark-blue);
+    color: white;
+}
+
+.docsMain .docsOldestsSection .stripe .flex .bulletinCard figcaption {
+    background-color: white;
+    color: var(--dark-blue);
 }
 .docsMain .docsLatestsSection .stripe .footBox {
     width: 100%;

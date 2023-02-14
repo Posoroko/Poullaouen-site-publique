@@ -6,7 +6,7 @@
             <div class="stripe marTop20 relative">
                 <!-- <SectionPieds /> -->
                 <div class="content mainWidth flex alignCenter justifyCenter wrap gap20">
-                    <div class="card flex column" v-for="person in delegues" :key="person.id">
+                    <div class="conseillerCard flex column" v-for="person in conseillers" :key="person.id">
                         <div class="topBox centered">
                             <h2 class="name">
                                 {{ person.firstName }} {{ person.lastName }}
@@ -18,7 +18,7 @@
                         </div>
 
                         <div class="frame">
-                            <img class="objectFitCover" src="/images/equipe/Viviane-Moisan.jpg" alt="">
+                            <img class="objectFitCover" :src="`${directusAssets}${person.image}.jpg`" alt="">
                         </div>
                     </div>
                 </div>
@@ -34,103 +34,11 @@
 
 <script setup>
 
-
-const delegues = [
-
-
-    {
-        "id": 2,
-        "status": "published",
-        "user_created": "b372dfe1-f551-47c3-a8b9-57ffe4292cdb",
-        "date_created": "2023-02-13T11:09:22.677Z",
-        "user_updated": "b372dfe1-f551-47c3-a8b9-57ffe4292cdb",
-        "date_updated": "2023-02-13T11:42:12.517Z",
-        "firstName": "Viviane",
-        "lastName": "MOISAN",
-        "role": "déléguée",
-        "roleDetail": "Adjointe à l’urbanisme, au personnel et à l’école.",
-        "email": null,
-        "image": "c3e2d764-a1b7-4bd3-973a-c03775586c7a",
-        "slug": "{\"name\":\"DSQDS\"}"
-    },
-    {
-        "id": 2,
-        "status": "published",
-        "user_created": "b372dfe1-f551-47c3-a8b9-57ffe4292cdb",
-        "date_created": "2023-02-13T11:09:22.677Z",
-        "user_updated": "b372dfe1-f551-47c3-a8b9-57ffe4292cdb",
-        "date_updated": "2023-02-13T11:42:12.517Z",
-        "firstName": "Viviane",
-        "lastName": "MOISAN",
-        "role": "déléguée",
-        "roleDetail": "Adjointe à l’urbanisme, au personnel et à l’école.",
-        "email": null,
-        "image": "c3e2d764-a1b7-4bd3-973a-c03775586c7a",
-        "slug": "{\"name\":\"DSQDS\"}"
-    },
-    {
-        "id": 2,
-        "status": "published",
-        "user_created": "b372dfe1-f551-47c3-a8b9-57ffe4292cdb",
-        "date_created": "2023-02-13T11:09:22.677Z",
-        "user_updated": "b372dfe1-f551-47c3-a8b9-57ffe4292cdb",
-        "date_updated": "2023-02-13T11:42:12.517Z",
-        "firstName": "Viviane",
-        "lastName": "MOISAN",
-        "role": "déléguée",
-        "roleDetail": "Adjointe à l’urbanisme, au personnel et à l’école.",
-        "email": null,
-        "image": "c3e2d764-a1b7-4bd3-973a-c03775586c7a",
-        "slug": "{\"name\":\"DSQDS\"}"
-    },
-    {
-        "id": 2,
-        "status": "published",
-        "user_created": "b372dfe1-f551-47c3-a8b9-57ffe4292cdb",
-        "date_created": "2023-02-13T11:09:22.677Z",
-        "user_updated": "b372dfe1-f551-47c3-a8b9-57ffe4292cdb",
-        "date_updated": "2023-02-13T11:42:12.517Z",
-        "firstName": "Viviane",
-        "lastName": "MOISAN",
-        "role": "déléguée",
-        "roleDetail": "Adjointe à l’urbanisme, au personnel et à l’école.",
-        "email": null,
-        "image": "c3e2d764-a1b7-4bd3-973a-c03775586c7a",
-        "slug": "{\"name\":\"DSQDS\"}"
-    },
-    {
-        "id": 2,
-        "status": "published",
-        "user_created": "b372dfe1-f551-47c3-a8b9-57ffe4292cdb",
-        "date_created": "2023-02-13T11:09:22.677Z",
-        "user_updated": "b372dfe1-f551-47c3-a8b9-57ffe4292cdb",
-        "date_updated": "2023-02-13T11:42:12.517Z",
-        "firstName": "Viviane",
-        "lastName": "MOISAN",
-        "role": "déléguée",
-        "roleDetail": "Adjointe à l’urbanisme, au personnel et à l’école.",
-        "email": null,
-        "image": "c3e2d764-a1b7-4bd3-973a-c03775586c7a",
-        "slug": "{\"name\":\"DSQDS\"}"
-    },
-    {
-        "id": 2,
-        "status": "published",
-        "user_created": "b372dfe1-f551-47c3-a8b9-57ffe4292cdb",
-        "date_created": "2023-02-13T11:09:22.677Z",
-        "user_updated": "b372dfe1-f551-47c3-a8b9-57ffe4292cdb",
-        "date_updated": "2023-02-13T11:42:12.517Z",
-        "firstName": "Viviane",
-        "lastName": "MOISAN",
-        "role": "déléguée",
-        "roleDetail": "Adjointe à l’urbanisme, au personnel et à l’école.",
-        "email": null,
-        "image": "c3e2d764-a1b7-4bd3-973a-c03775586c7a",
-        "slug": "{\"name\":\"DSQDS\"}"
-    }
-
-
-]
+const props = defineProps({
+    conseillers: Array
+})
+const appConfig = useAppConfig();
+const directusAssets = appConfig.directus.assets;
 
 const headerData = {
     images: [
@@ -155,42 +63,44 @@ const headerData = {
 </script>
 
 <style>
-.conseillers .stripe .content .card {
+.conseillerCard {
     background-color: var(--brown);
     width: 20%;
     border-radius: 10px;
     box-shadow: var(--shadow);
     overflow: hidden;
+    width: 200px;
 }
 
-.conseillers .stripe .content .card .frame {
+.conseillerCard .frame {
     width: 100%;
     aspect-ratio: 1/1;
 }
 
-.conseillers .stripe .content .card .topBox,
-.conseillers .stripe .content .card .roleDetail {
+.conseillerCard .topBox,
+.conseillerCard .roleDetail {
     padding: 10px;
 }
 
-.conseillers .stripe .content .card .topBox .name,
-.conseillers .stripe .content .card .topBox .role,
-.conseillers .stripe .content .card .roleDetail {
+.conseillerCard .topBox .name,
+.conseillerCard .topBox .role,
+.conseillerCard .roleDetail {
     color: white;
+    text-align: center;
 }
 
-.conseillers .stripe .content .card .topBox .name {
-    font-size: 18px;
-    font-weight: 600;
+.conseillerCard .topBox .name {
+    font-size: 16px;
+    font-weight: 500;
 }
 
-.conseillers .stripe .content .card .topBox .role {
+.conseillerCard .topBox .role {
     font-size: 14px;
     font-weight: 300;
     font-style: italic;
 }
 
-.conseillers .stripe .content .card .roleDetail {
+.conseillerCard .roleDetail {
     font-size: 14px;
     font-weight: 300;
     text-align: center;
