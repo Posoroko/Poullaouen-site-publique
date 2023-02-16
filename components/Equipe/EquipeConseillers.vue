@@ -15,6 +15,7 @@
                             <h3 class="role">
                                 {{ person.role }}
                             </h3>
+
                         </div>
 
                         <div class="frame">
@@ -33,12 +34,13 @@
 </template>
 
 <script setup>
+const appConfig = useAppConfig();
+const directusAssets = appConfig.directus.assets;
 
 const props = defineProps({
     conseillers: Array
 })
-const appConfig = useAppConfig();
-const directusAssets = appConfig.directus.assets;
+
 
 const headerData = {
     images: [
@@ -76,7 +78,9 @@ const headerData = {
     width: 100%;
     aspect-ratio: 1/1;
 }
-
+.conseillerCard .frame img{
+    object-position: top;
+}
 .conseillerCard .topBox,
 .conseillerCard .roleDetail {
     padding: 10px;

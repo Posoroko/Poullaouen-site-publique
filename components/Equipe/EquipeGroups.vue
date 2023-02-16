@@ -1,75 +1,90 @@
 <template>
-    <section class="w100">
-        <section class="groups">
-            <SectionTitleBar :title="title" />
+    <button @click="getit">food</button>
+    <section class="w100" v-if="groups">
+        <div class="groups" v-for="type in groupTypes" :key="type.id" :id="type.id">
+            <SectionTitleBar :title="type.name" />
 
-            <div class="stripe marTop20 relative">
-                <!-- <SectionPieds /> -->
-                <div class="content mainWidth flex alignCenter justifyCenter wrap gap20">
-                    <div class="groupCard card flex column" v-for="group in data" :key="group.id">
-                        <div class="topBox centered">
-                            <h2 class="name">
-                                {{ group.name }}
-                            </h2>
+            <div class="content mainWidth flex alignCenter justifyCenter wrap gap20">
+                <div class="groupCard card flex column" v-for="group in groups[type.id]" :key="group.id">
+                    
+                    <div class="topBox centered">
+                        <h2 class="name">
+                            {{ group.name }}
+                        </h2>
 
-                            <h3 class="role">
-                                {{ group.boss }}
-                            </h3>
-                        </div>
+                        <h3 class="role">
+                            {{ group.boss }}
+                        </h3>
+                    </div>
 
-                        <div class="frame">
-                            <img class="objectFitCover" src="/images/equipe/Viviane-Moisan.jpg" alt="">
-                        </div>
+                    <div class="frame">
+                        <img class="objectFitCover" :src="`${directusAssets}${group.image}.jpg`" alt="">
+                    </div>
 
-                        <div class="bottomBox">
-                            <h4 class="centered">membres:</h4>
-                            <ul class="membersList">
-                                <li class="groupMember" v-for="(member, index) in group.members" :key="index">{{ member }}, </li>
-                            </ul>
-                        </div>
-                        
+                    <div class="bottomBox">
+                        <h4 class="centered">membres:</h4>
 
+                        <ul class="membersList">
+                            <li class="groupMember" v-for="(member, index) in group.members" :key="index">
+                                {{ member.Equipe_id.firstName }}  {{ member.Equipe_id.lastName }}, 
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
-
-
+        </div>
     </section>
-
-
-
 </template>
 
 <script setup>
 
-const props = defineProps({
-    title: String,
-    data: Object
-})
-
-
-
-
-const headerData = {
-    images: [
-        {
-            src: '/images/header/equipe/équipe-municipale-Poullaouën.jpg',
-            alt: 'mairie de Locmaria-Berrien',
-        }
-    ],
-    title: 'Equipe municipale',
-    path: [
-        {
-            text: 'accueil',
-            target: '/'
-        },
-        {
-            text: 'Equipe municipale',
-            target: '/ma-mairie/equipe-municipale'
-        }
-    ]
+const getit = () => {
+    console.log(groups.value)
 }
+const appConfig = useAppConfig();
+const directusItems = appConfig.directus.items;
+const directusAssets = appConfig.directus.assets;
+
+const groupTypes = ref([
+    {
+        name: 'Les commissions communales',
+        id: 'commission'
+    }, 
+    {
+        name: 'Les délégations aux structures intercommunales et autres collectivités',
+        id: 'delegation'
+    }
+])
+
+const fetchOptions = {
+    server: true,
+    params: {
+        fields: 'id, name, type, members.*.firstName, members.*.lastName, image',
+    }
+}
+
+const { data: groups } = await useAsyncData(
+    "groups",
+    async () => {
+        const items = await $fetch(`${directusItems}Delegations`, fetchOptions)
+        console.log(items.data)
+        const sortedGroups = {
+            delegation: [],
+            commission: [] 
+        }
+
+        items.data.forEach(item => {
+            sortedGroups[item.type].push(item)
+        })
+        console.log(sortedGroups)
+        return sortedGroups 
+    }
+    ,
+    { server: true }
+)
+
+ 
+
 
 </script>
 

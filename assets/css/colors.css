@@ -20,6 +20,7 @@
     /* transitions */
 
     --fadeQuick: 200ms ease;
+    --fade-quick: 200ms ease;
 }
 
 /* main colors */

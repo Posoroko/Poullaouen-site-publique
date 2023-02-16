@@ -2,7 +2,7 @@
     <HeaderMain :data="headerData" />
 
     <main class="docsMain w100 flex column" v-if="myData">
-        <p class="intro page-text mainWidth">
+        <p class="intro-text mainWidth">
             Le bulletin municipal réalisé par la commission communication relate l’essentiel de l’actualité de l’année.
         </p>
 
@@ -146,9 +146,7 @@ const headerData = {
 </script>
 
 <style>
-.intro {
-    height: 10vh;
-}
+
 .dashboard {
     gap: 50px;
 }

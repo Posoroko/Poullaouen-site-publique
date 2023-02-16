@@ -1,8 +1,10 @@
 <template>
     <div class="sectionTitleBox mainWidth">
         <h2 class="oleo">{{ title }}</h2>
-
+        
         <div class="titleStripe"></div>
+
+        <slot></slot>
     </div>
 </template>
 
@@ -29,7 +31,7 @@ const props = defineProps({
     height: max(8px, 0.7vw);
     background: linear-gradient(270deg, rgba(0, 47, 74, 1) 0%, rgba(147, 96, 55, 1) 100%);
     border-radius: 8px;
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
 /* .whiteSection appears in parent component */

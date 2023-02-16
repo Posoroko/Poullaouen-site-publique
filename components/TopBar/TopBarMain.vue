@@ -24,7 +24,7 @@ const links = {
         },
         {
             text: "Les salles municipales",
-            path: "/ma-mairie/salles-municipales"
+            path: "/ma-mairie/les-salles-municipales"
         },
         {
             text: "Les bulletins municipaux",
@@ -36,7 +36,7 @@ const links = {
         },
         {
             text: "Les publications réglementaires",
-            path: "/ma-mairie/publications-reglementaires"
+            path: "/ma-mairie/documents/publications-reglementaires"
         }
     ],
     quotidien: [

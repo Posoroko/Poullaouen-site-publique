@@ -73,7 +73,9 @@ const headerData = {
     width: 100%;
     aspect-ratio: 1/1;
 }
-
+.adjointCard .frame img {
+    object-position: top;
+}
 .adjointCard .topBox,
 .adjointCard .roleDetail {
     padding: 10px;

@@ -9,9 +9,7 @@
 
         <EquipeConseillers :conseillers="poullaouennais.conseillers"/>
 
-        <EquipeGroups title="Les commissions communales" :data="commissions" />
-
-        <EquipeGroups title="Les délégations aux structures intercommunales et autres collectivités" :data="delegations" />
+        <EquipeGroups />
 
     </main>
 
@@ -33,7 +31,6 @@ const { data: poullaouennais } = await useAsyncData(
     "equipe",
     async () => {
         const items = await $fetch(`${directusItems}Equipe`, fetchOptions)
-        console.log(items.data)
 
         const temp = {
             maire: items.data.filter(el => el.role == 'maire'),
