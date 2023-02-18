@@ -87,11 +87,11 @@
     background-color: var(--dark-blue);
 }
 
-.brownTallCards {
+.brownTallCard {
     background-color: var(--brown);
 }
 
 .blueTallCard *,
-.brownTallCards *{
+.brownTallCard *{
     color: white;
 }

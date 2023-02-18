@@ -6,12 +6,14 @@
         </div>
 
         <div class="frame">
-            <img :src="`${directusAssets}${cardImage}?key=card500`" :alt="imageAlt" class="objectFitCover">
+            <img :src="`${directusAssets}${cardImage}?key=card500`" :alt="cardImageAlt" class="objectFitCover" v-if="cardImage">
+
+            <div class="icon shopIcon objectFitCover centered" v-else>storefront</div>
             
         </div>
 
         <slot>
-
+            
         </slot>
     </div>
 </template>
@@ -66,9 +68,17 @@ const props = defineProps({
     padding-left: 50px;
 }
 
-.presBox {
-    width: 100%;
-    justify-content: flexStart;
-    gap: 30px
+.shopIcon {
+    font-size: 200px;
+    color: rgb(166, 175, 177);
+    background-color: #eaf0f1;
+}
+/* for eements passed in the slot */
+.tallCard .bottomBox .contentRow .textContent {
+    font-size: 14px;
+    white-space: pre-wrap;
+}
+.tallCard .bottomBox .contentRow {
+    gap: 10px;
 }
 </style>

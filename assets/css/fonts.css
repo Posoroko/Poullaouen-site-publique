@@ -19,7 +19,9 @@
 /* Text styles */
 
     /* main text font for classic pages */
-
+        .page-text-bold {
+            font-weight: 600;
+        }
 
         @media (max-width: 719px) {
             .page-text {

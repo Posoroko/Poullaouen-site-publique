@@ -1,10 +1,9 @@
 <template>
     <HeaderMain :data="headerData" />
-    <button @click="testit">eric</button>
 
     <main class="assoMain w100 flex column" ref="assoMain">
         <p class="intro-text mainWidth">
-            Grâce à ses commerces, ses artisans, ses entreprises Poullaouen vous offre tout ce dont vous avez besoin.
+            Grâce à ses commerces, ses artisans et ses entreprises, Poullaouen vous offre tout ce dont vous avez besoin.
         </p>
 
 
@@ -15,10 +14,10 @@
             <section class="w100" v-for="filter in itemsData.filters" :key="filter" :id="filter">
                 <SectionTitleBar :title="filter" />
 
-                <div class="mainWidth flex justifyEvenly alignCenter wrap">
+                <div class="mainWidth flex justifyEvenly wrap gap20">
 
                     <div v-for="item in itemsData.items[filter]" :key="item.id" >
-                        <CardsTallMain :title="item.name" :subtitle="item.subType[0]" :cardImage="item.image" :imageAlt="item.imageAlt">
+                        <CardsTallMain :title="item.name" :subtitle="item.subType[0]" :cardImage="item.image" :cardImageAlt="item.imageAlt">
                             
                             <div class="bottomBox flex column gap10 justifyCenter alignStart">
                                 <div class="contentRow flex" v-if="item.hours">
@@ -83,10 +82,6 @@ const moveSectionToFirstPosition = (filter) => {
     // console.log(assoMain.value)
 }
 
-const testit = () => {
-    // const dude = itemsData.value.assos.culture[0].presidents[0]
-    console.log(itemsData.value.items)
-}
 
 const appConfig = useAppConfig();
 const directusAssets = appConfig.directus.assets;
@@ -100,11 +95,11 @@ const fetchOptions = {
         fields: 'id, name, type, image, imageAlt, subType, subType, hours, adress, phone, email, website'
     }
 }
-
+// ?filter[image][_neq]=null
 const { data: itemsData } = await useAsyncData(
     "associations",
     async () => {
-        const itemsData = await $fetch(`${directusItems}Commerces?filter[image][_neq]=null`, fetchOptions) 
+        const itemsData = await $fetch(`${directusItems}Commerces`, fetchOptions) 
         const items = itemsData.data
 
         const temp = {
@@ -119,7 +114,6 @@ const { data: itemsData } = await useAsyncData(
             }
             temp.items[item.type].push(item)
         })
-        console.log(temp)
         return temp
     }
     ,
@@ -131,8 +125,8 @@ const { data: itemsData } = await useAsyncData(
 const headerData = {
     images: [
         {
-            src: `${directusAssets}a397abb9-ba05-479f-80b5-9f0a0dd4062f?key=header1500`,
-            alt: 'Vie associative à Poullaouen',
+            src: `${directusAssets}c2973c9d-0e19-473e-8224-01940b523bf1?key=header1500`,
+            alt: 'Commerce de proximité à Poullaouen',
         }
     ],
     title: 'Les commerces et entreprises',
@@ -154,11 +148,11 @@ const headerData = {
 const styleTallCards = () => {
 
     const cards = document.querySelectorAll('.tallCard');
-
-    for (let i = 1; i < cards.length; i = i + 4) {
+    console.log(cards)
+    for (let i = 0; i < cards.length; i = i + 3) {
         cards[i].classList.replace('whiteTallCard', 'blueTallCard')
     }
-    for (let i = 3; i < cards.length; i = i + 4) {
+    for (let i = 2; i < cards.length; i = i + 3) {
         cards[i].classList.replace('whiteTallCard', 'brownTallCard')
     }
 }
@@ -175,12 +169,6 @@ onMounted(() => {
     margin-top: 50px;
 }
 
-.tallCard .bottomBox .contentRow .textContent {
-    font-size: 14px;
-    white-space: pre-wrap;
-}
-.tallCard .bottomBox .contentRow {
-    gap: 10px;
-}
+
 
 </style>
