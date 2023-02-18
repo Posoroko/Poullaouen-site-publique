@@ -15,7 +15,7 @@
 
     --black: rgb(20, 20, 20);
 
-    --shadow: 2px 2px 4px rgba(0, 0, 0, 0.493);
+    --shadow: 1px 1px 10px rgba(0, 0, 0, 0.664);
 
     /* transitions */
 
@@ -79,3 +79,19 @@
         .shadow {
             box-shadow: var(--shadow);
         }
+
+
+/* tall cards (assos, business, delegations */
+
+.blueTallCard {
+    background-color: var(--dark-blue);
+}
+
+.brownTallCards {
+    background-color: var(--brown);
+}
+
+.blueTallCard *,
+.brownTallCards *{
+    color: white;
+}

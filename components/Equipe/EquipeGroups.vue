@@ -1,11 +1,11 @@
 <template>
-    <button @click="getit">food</button>
+
     <section class="w100" v-if="groups">
         <div class="groups" v-for="type in groupTypes" :key="type.id" :id="type.id">
             <SectionTitleBar :title="type.name" />
 
             <div class="content mainWidth flex alignCenter justifyCenter wrap gap20">
-                <div class="groupCard card flex column" v-for="group in groups[type.id]" :key="group.id">
+                <div class="groupCard tallCard card flex column" v-for="group in groups[type.id]" :key="group.id">
                     
                     <div class="topBox centered">
                         <h2 class="name">
@@ -38,9 +38,6 @@
 
 <script setup>
 
-const getit = () => {
-    console.log(groups.value)
-}
 const appConfig = useAppConfig();
 const directusItems = appConfig.directus.items;
 const directusAssets = appConfig.directus.assets;
@@ -76,7 +73,7 @@ const { data: groups } = await useAsyncData(
         items.data.forEach(item => {
             sortedGroups[item.type].push(item)
         })
-        console.log(sortedGroups)
+
         return sortedGroups 
     }
     ,
