@@ -7,7 +7,7 @@
         </p>
 
         <div v-for="salle in salles" :key="salle.id" >
-            <SectionMainSloted :data="{ title: salle.name, image: `${directusAssets}${salle.image}.jpg`, showTitle:true}">
+            <SectionMainSloted :data="{ title: salle.name, image: `${directusAssets}${salle.image}.jpg`}">
                 <div class="textBox flex column justifyBetween">
                     <h3 class="subtitle">{{ salle.address }}</h3>
 

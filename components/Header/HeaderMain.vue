@@ -1,7 +1,7 @@
 <template>
     <header class="">
         <div class="imageBox">
-            <img :src="currentImage.src" alt="">
+            <img :src="currentImage.src" :alt="currentImage.alt">
         </div>
 
         <HeaderPathBar :path="data.path"/>

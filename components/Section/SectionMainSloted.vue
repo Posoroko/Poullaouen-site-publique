@@ -1,9 +1,9 @@
 <template>
     <div class="sectionBoxSloted whiteSection w100">
-        <SectionTitleBar v-if="data.showTitle" :title="data.title" />
+        <SectionTitleBar v-if="data.title" :title="data.title" />
 
-        <div class="sectionContent sectionBox w100">
-            <div class="mainWidth flex alignCenter justifyCenter wrap">
+        <div class="sectionContent sectionBox w100 h100">
+            <div class="mainWidth h100 flex justifyCenter wrap">
                 <div class="shoeBox centered">
                     <SectionShoeBox :image="data.image" />
                 </div>
@@ -40,9 +40,11 @@ const props = defineProps({
     padding: 20px 0;
 }
 
-.shoeBox, .slotedContent {
+.shoeBox, 
+.slotedContent {
     width: min(100%, 700px);
-    height: 100%;
+    /* max-height: 100%; */
+    /* min-height: 350px; */
     padding: 20px;
 }
 

@@ -7,7 +7,7 @@
         </p>
 
 
-        <SectionMainSloted :data="{ title: 'Un accès gratuit à la culture', image: '/images/mediatheque/interieur2.jpg', showTitle: true }">
+        <SectionMainSloted :data="{ title: 'Un accès gratuit à la culture', image: '/images/mediatheque/interieur2.jpg'}">
             <p class="textBox page-text">
                 La médiathèque municipale de Poullaouën, ouverte depuis novembre
                 2010, est située derrière l’épicerie, rue du justiçou.
