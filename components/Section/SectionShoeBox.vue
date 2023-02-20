@@ -31,10 +31,10 @@ const props = defineProps({
     width: 100%;
 }
 .footFrame svg .pied{
-    height: 300px;
+    /* height: 300px; */
     width: 100%;
     object-fit: contain;
-    filter: drop-shadow(var(--shadow));
+    filter: drop-shadow(2px 2px 4px black);
 }
 
 .footFrame .imgFrame {
