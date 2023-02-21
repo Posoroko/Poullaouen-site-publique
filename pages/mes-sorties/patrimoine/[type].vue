@@ -16,7 +16,7 @@
                         </h2>
 
                         <p class="adress">
-                            {{ item.adress }}
+                            {{ item.adress }} 
                         </p>
                     </div>
 
@@ -39,7 +39,6 @@
 
 const route = useRoute()
 const activeType = ref(route.params.type)
-console.log(activeType.value)
 
 const foo = () => {
     useEric()
@@ -53,9 +52,9 @@ const directusItems = appConfig.directus.items;
 // fetch options for the type of item selected
 const typeFetchOptions = {
     server: true,
-    params: {
-        fields: 'id, displayName, slug, image,'
-    }
+    // params: {
+    //     fields: 'id, displayName, slug, image,'
+    // }
 }
 
 const { data: typeData } = await useAsyncData(
@@ -63,7 +62,7 @@ const { data: typeData } = await useAsyncData(
     async () => {
         console.log(activeType.value)
         const type = await $fetch(`${directusItems}Patrimoine_type?[filter][slug]=${activeType.value}`, typeFetchOptions)
-        console.log(type.data)
+        
         return type.data[0]
     }
     ,
@@ -73,7 +72,7 @@ const { data: typeData } = await useAsyncData(
 const itemsFetchOptions = {
     server: true,
     params: {
-        fields: 'id, title, subTitle, image, adress, content, moreInfo',
+        fields: "id, title, subTitle, image, adress, content, moreInfo",
     }
     
 }
@@ -81,7 +80,7 @@ const { data: itemsData } = await useAsyncData(
     "typeItems",
     async () => {
         const items = await $fetch(`${directusItems}Patrimoine?[filter][category][_eq]=${activeType.value}`, itemsFetchOptions)
-        console.log(items.data)
+        
         return items.data
     }
     , 
