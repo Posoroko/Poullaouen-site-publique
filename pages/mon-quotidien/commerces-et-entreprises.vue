@@ -16,7 +16,7 @@
 
                 <div class="mainWidth flex justifyEvenly wrap gap20">
 
-                    <div v-for="item in itemsData.items[filter]" :key="item.id" >
+                    <div v-for="item in itemsData.items[filter]" :key="item.id">
                         <CardsTallMain :title="item.name" :subtitle="item.subType[0]" :cardImage="item.image" :cardImageAlt="item.imageAlt">
                             
                             <div class="bottomBox flex column gap10 justifyCenter alignStart">

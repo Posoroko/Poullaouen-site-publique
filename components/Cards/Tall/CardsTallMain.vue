@@ -46,6 +46,7 @@ const props = defineProps({
 
 .tallCard .frame {
     aspect-ratio: 4/3;
+    overflow: hidden;
 }
 
 
