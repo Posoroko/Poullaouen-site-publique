@@ -1,13 +1,15 @@
 :root {
     --top-bar-height: 5vh;
-    --main-width: min(100%, 1100px);
+    --main-width: min(100%, 1300px);
 }
 
 
 
 .mainWidth {
     width: var(--main-width);
-    padding: 0 20px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px; 
 }
 
 main {

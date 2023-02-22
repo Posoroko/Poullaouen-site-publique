@@ -4,8 +4,12 @@
 
         <div class="sectionContent sectionBox w100 h100">
             <div class="mainWidth h100 flex justifyCenter wrap">
-                <div class="shoeBox centered">
+                <div class="shoeBox centered" v-if="data.localImage">
                     <SectionShoeBox :image="data.image" />
+                </div>
+
+                <div class="shoeBox centered" v-if="!data.localImage && data.image">
+                    <SectionShoeBox :image="`${directusAssets}${data.image}?key=card500`" />
                 </div>
                 
                 <div class="slotedContent">
@@ -23,7 +27,8 @@
 </template>
 
 <script setup>
-
+const appConfig = useAppConfig();
+const directusAssets = appConfig.directus.assets;
 
 const props = defineProps({
     data: Object
@@ -42,7 +47,7 @@ const props = defineProps({
 
 .shoeBox, 
 .slotedContent {
-    width: min(100%, 700px);
+    width: min(600px, 90vw);
     /* max-height: 100%; */
     /* min-height: 350px; */
     padding: 20px;

@@ -21,9 +21,14 @@ const props = defineProps({
 </script>
 
 <style scoped>
+
+.sectionTitleBox {
+    padding: 5px 30px;
+}
 .sectionTitleBox h2 {
     font-size: max(18px, 2vw);
     margin-top: max(30px, 3vw);
+    
 }
 
 .sectionTitleBox .titleStripe {

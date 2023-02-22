@@ -8,7 +8,9 @@
             Henri BERGSON.
         </p>
 
-        <img class="w100" src="/images/randonnee/les-chemins-de-randonnée-de-Poullaouen.jpg" alt="les chemins de randonnée de Poullaouen">
+        <div class="centered mapFrame">
+            <img class="mainWidth map" src="/images/randonnee/les-chemins-de-randonnée-de-Poullaouen.jpg" alt="les chemins de randonnée de Poullaouen">
+        </div>
 
         <SectionMainSloted :data="section1Data">
             <p class="subtitle">Circuit 1 : Le bois de Lemezec - Poullaouen</p>
@@ -144,7 +146,8 @@
 const section1Data = {
     title: "Les circuits de Poullaouen",
     image: "/images/randonnee/bois de lemezec.jpg",
-    imageAlt: "Cartes des chemins de randonnée de Poullaouen"
+    imageAlt: "Cartes des chemins de randonnée de Poullaouen",
+    localImage: true
 }
 const section1TopBoxData = {
     length: "5, 12 ou 14 km",
@@ -157,7 +160,8 @@ const section1TopBoxData = {
 const section2Data = {
     title: null,
     image: "/images/randonnee/circuit le petit train.jpg",
-    imageAlt: "Cartes circuit le petit train"
+    imageAlt: "Cartes circuit le petit train",
+    localImage: true
 }
 const section2TopBoxData = {
     length: "12 km",
@@ -170,7 +174,8 @@ const section2TopBoxData = {
 const section3Data = {
     title: "Les circuits de Locmaria-Berrien",
     image: "/images/randonnee/circuit Botvarec.jpg",
-    imageAlt: "circuit de randonnée de Locmaria-Berrien"
+    imageAlt: "circuit de randonnée de Locmaria-Berrien",
+    localImage: true
 }
 const section3TopBoxData = {
     length: "9 km",
@@ -183,7 +188,8 @@ const section3TopBoxData = {
 const section4Data = {
     title: null,
     image: "/images/randonnee/bois de lemezec.jpg",
-    imageAlt: "Cartes des chemins de randonnée de Poullaouen"
+    imageAlt: "Cartes des chemins de randonnée de Poullaouen",
+    localImage: true
 }
 const section4TopBoxData = {
     length: "5, 12 ou 14 kms",
@@ -233,6 +239,13 @@ onMounted(() => {
 </script>
 
 <style>
+
+.mapFrame .map {
+    /* width: min(900px, 95vw); */
+    height: 80vh;
+}
+
+
 .subtitle {
     font-weight: 700;
     color: var(--brown);
@@ -243,6 +256,7 @@ onMounted(() => {
     margin-top: 20px;
 }
 .randoList li {
+    font-size: 13px;
     list-style: disc;
 }
 </style>

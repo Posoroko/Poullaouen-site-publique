@@ -23,7 +23,8 @@ const props = defineProps({
 
 <style>
 .pathBox {
-    height: 5vh;
+    padding-top: 10px;
+    padding-bottom: 10px; 
 }
 
 .step .icon,

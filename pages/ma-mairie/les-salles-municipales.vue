@@ -7,7 +7,7 @@
         </p>
 
         <div v-for="salle in salles" :key="salle.id" >
-            <SectionMainSloted :data="{ title: salle.name, image: `${directusAssets}${salle.image}.jpg`}">
+            <SectionMainSloted :data="{ title: salle.name, image: salle.image}">
                 <div class="textBox flex column justifyBetween">
                     <h3 class="subtitle">{{ salle.address }}</h3>
 
@@ -80,8 +80,7 @@ const foo = () => {
 
 const sectionData_1 = {
     image: "/images/ccas/ccas-gym.jpg",
-    title: "Les activités",
-    showTitle: true
+    title: "Les activités"
 }
 
 const appConfig = useAppConfig();

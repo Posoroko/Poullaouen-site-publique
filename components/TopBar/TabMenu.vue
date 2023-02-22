@@ -108,7 +108,7 @@ const closeMenu = () => {
 
 <style>
 .tabBox .tab {
-    padding: 15px 25px;
+    padding: 10px 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -126,12 +126,12 @@ const closeMenu = () => {
 }
 
 .article {
-    font-size: max(16px, 1.5vw);
+    font-size: max(16px, 1vw);
     color: var(--light-blue);
 }
 .name {
     color: var(--dark-blue);
-    font-size: max(18px, 1.5vw);
+    font-size: max(18px, 1.2vw);
     font-weight: 700;
 }
 

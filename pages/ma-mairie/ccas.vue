@@ -57,6 +57,7 @@
 
 const sectionData_1 = {
     image: "/images/ccas/ccas-gym.jpg",
+    localImage: true,
     title: "Les activités"
 }
 

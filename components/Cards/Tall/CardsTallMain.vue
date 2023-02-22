@@ -6,9 +6,10 @@
         </div>
 
         <div class="frame">
-            <img :src="`${directusAssets}${cardImage}?key=card500`" :alt="cardImageAlt" class="objectFitCover" v-if="cardImage">
+            <img v-if="localImage && cardImage" :src="cardImage" :alt="cardImageAlt" class="objectFitCover">
+            <img v-if="!localImage && cardImage" :src="`${directusAssets}${cardImage}?key=card500`" :alt="cardImageAlt" class="objectFitCover">
 
-            <div class="icon shopIcon objectFitCover centered" v-else>storefront</div>
+            <div v-else class="icon shopIcon objectFitCover centered">storefront</div>
             
         </div>
 
@@ -27,6 +28,7 @@ const props = defineProps({
     title: String,
     subtitle: String,
     cardImage: String,
+    localImage: Boolean,
     cardImageAlt: String
 })
 
@@ -61,7 +63,7 @@ const props = defineProps({
 
 .tallCard .topBox,
 .tallCard .bottomBox {
-    padding: 20px 30px;
+    padding: 13px 30px;
 }
 
 .tallCard .bottomBox {

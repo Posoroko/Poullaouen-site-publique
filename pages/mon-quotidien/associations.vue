@@ -118,7 +118,7 @@ const { data: assosData } = await useAsyncData(
 const headerData = {
     images: [
         {
-            src: `${directusItems}a397abb9-ba05-479f-80b5-9f0a0dd4062f?key=header1500?key=header1500`,
+            src: `${directusAssets}a397abb9-ba05-479f-80b5-9f0a0dd4062f?key=header1500`,
             alt: 'Vie associative à Poullaouen',
         }
     ],

@@ -48,7 +48,7 @@
                 </div>
 
                 <div class="footBox absolutlyCentered">
-                    <SectionShoeBox />
+                    <SectionPieds />
                 </div>
 
             </div>

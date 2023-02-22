@@ -123,7 +123,7 @@ const links = {
 <style>
 .topBar {
     background-color: #fff;
-    padding: 10px;
+    padding: 5px;
     box-shadow: var(--shadow);
     position: sticky;
     top: 0;

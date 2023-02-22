@@ -33,7 +33,7 @@
         @media (min-width: 720px) {
             .page-text {
                 font-weight: 400;
-                font-size: 18px;
+                font-size: 16px;
                 line-height: 24px;
             }
         }
@@ -42,7 +42,7 @@
         .intro-text {
             font-weight: 500;
             color: var(--dark-blue);
-            margin: 20px 0;
+            padding: 50px 0;
         }
 
         @media (max-width: 719px) {

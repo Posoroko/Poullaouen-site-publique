@@ -8,7 +8,7 @@
         </p>
 
         <div v-for="item in equipementsData" :key="item.id">
-            <SectionMainSloted :data="{ title: item.title, image: `${directusAssets}${item.image}?key=card500` }">
+            <SectionMainSloted :data="{ title: item.title, image: item.image }">
                 <div class="slotedSectionTextBox flex column justifyBetween pad20">
                     <div class="topTextBox">
                         <h2 class="sectionSubtitle">

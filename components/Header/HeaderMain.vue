@@ -32,7 +32,7 @@ onMounted(() => {
 header .imageBox {
     width: 100%;
     
-    height: 69vh;
+    height: 75vh;
 }
 
 header .imageBox img {

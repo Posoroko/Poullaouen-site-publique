@@ -23,5 +23,6 @@ const props = defineProps({
     font-weight: 900;
     font-size: max(20px, 2vw);
     letter-spacing: 2px;
+    padding: 0 25px;
 }
 </style>

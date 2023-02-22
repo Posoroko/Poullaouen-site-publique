@@ -1,11 +1,6 @@
 .w100 {width: 100%;}
 .h100 {height: 100%;}
 
-.mainWidth {
-    width: min(100%, 1500px);
-    margin: auto;
-}
-
 .block {display: block;}
 .inline {display: inline;}
 
@@ -24,6 +19,7 @@
 .alignCenter {align-items: center;}
 .alignStart {align-items: flex-start;}
 .alignEnd {align-items: flex-end;}
+.alignStretch {align-items: stretch;}
 
 .gap5 {gap: 5px;}
 .gap10 {gap: 10px;}

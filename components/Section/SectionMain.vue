@@ -3,8 +3,8 @@
         <SectionTitleBar v-if="showTitle" :title="data.title"/>
 
         <div class="sectionContent w100">
-            <div class="mainWidth flex alignCenter justifyCenter wrap">
-                <SectionShoeBox :image="data.image" />
+            <div class="flex alignCenter justifyCenter wrap">
+                <SectionShoeBox :image="data.image" v-if="data.image"/>
                 
                 <SectionTextBoxActu v-if="type === 'actualites'" :data="data" />
                 
@@ -21,7 +21,7 @@
 
 const props = defineProps({
     data: Object,
-    //title, subtitle, moreInfo, file, image
+    //title, subtitle, moreInfo, file, image 
     type: String,
     showTitle: Boolean
 })

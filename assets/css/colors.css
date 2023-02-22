@@ -86,7 +86,9 @@
 .blueTallCard {
     background-color: var(--dark-blue);
 }
-
+.blueTallCard {
+    background-color: var(--dark-blue);
+}
 .brownTallCard {
     background-color: var(--brown);
 }
