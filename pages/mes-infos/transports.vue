@@ -219,7 +219,7 @@ const headerData = {
             alt: "L'entrée du bourg de Poullaouen",
         }
     ],
-    title: 'LEs trandports',
+    title: 'Les transports',
     path: [
         {
             text: 'accueil',
@@ -230,7 +230,7 @@ const headerData = {
             target: `/mes-infos/transports`
         },
         {
-            text: 'histoire',
+            text: 'transports',
             target: `/mes-infos/transports`
         }
     ]
