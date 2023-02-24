@@ -2,6 +2,9 @@
     <p class="r">
         {{ data }}
     </p>
+    <div class="modal">
+        
+    </div>
 </template>
 
 <script setup>

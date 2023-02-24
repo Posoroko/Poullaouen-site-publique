@@ -8,12 +8,29 @@
         </svg>
 
         <div class="imgFrame absolutlyCentered centered shadow">
-            <img class="objectFitCover" :src="image" alt="">
+            <img class="objectFitCover pointer" :src="image" alt="" @click="showInModal">
         </div>
     </div>
+
+    <!-- <dialog ref="modal" class="modal">
+        
+    </dialog> -->
 </template>
 
 <script setup>
+
+
+const showInModal = (e) => {
+    const modal = document.getElementById('masterModal')
+
+    while (modal.firstChild) {
+        modal.removeChild(modal.firstChild);
+    }
+
+    const img = e.currentTarget.cloneNode()
+    modal.appendChild(img)
+    modal.showModal()
+}
 
 const props = defineProps({
     image: String
@@ -43,4 +60,6 @@ const props = defineProps({
     border-radius: 5px;
     overflow: hidden;
 }
+
+
 </style>

@@ -4,6 +4,10 @@
     <slot />
 
     <FooterMain />
+
+    <dialog id="masterModal">
+        <span class="modalCloseBtn icon">close</span>
+    </dialog>
 </template>
 
 <script setup>
@@ -12,10 +16,23 @@
 </script>
 
 <style>
-/* .topBarBox {
-    height: 150px;
+#masterModal {
+    padding: 10vw;
+    margin: auto;
+    outline: none;
+    /* position: relative; */
 }
-main {
-    height: 200vh;
-} */
+.modalCloseBtn {
+    font-size: 30px;
+    font-weight: 300;
+    position: adsolute;
+    top: 0;
+    right: 0;
+}
+#masterModal * {
+    object-fit: contain;
+}
+#masterModal::backdrop {
+    background-color: rgba(0, 0, 0, 0.314);
+}
 </style>

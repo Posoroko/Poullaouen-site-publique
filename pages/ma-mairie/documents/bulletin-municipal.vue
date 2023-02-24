@@ -2,7 +2,7 @@
     <HeaderMain :data="headerData" />
 
     <main class="docsMain w100 flex column">
-        <p class="intro page-text mainWidth">
+        <p class="intro intro-text mainWidth">
             Le bulletin municipal réalisé par la commission communication relate l’essentiel de l’actualité de l’année.
         </p>
 

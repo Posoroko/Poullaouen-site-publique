@@ -6,7 +6,7 @@
             On rencontre les appellations suivantes : Ploelouen (vers 1330 et en 1386), Ploelouan (en 1349), Ploe Louan (au XIVème siècle), Poulaven
             (en 1591) et Poullaouen (en 1677).
         </p>
-
+        <button @click="openModal"> say hello to the guys</button>
         <div v-for="item in histoireData" :key="item.id">
             <SectionMainSloted :data="{ title: item.title, image: item.image, imageAlt: item.imageAlt }">
                 <div class="slotedSectionTextBox flex column justifyBetween pad20">
@@ -31,6 +31,7 @@
         </div>
     </main>
 </template>
+
 <script setup>
 
 const appConfig = useAppConfig();

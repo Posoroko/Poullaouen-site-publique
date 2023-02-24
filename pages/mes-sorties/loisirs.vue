@@ -54,7 +54,7 @@
                             et professionnel depuis plus de 25 ans et titulaire
                             de nombreux titres dont une médaille de bronze
                             aux championnats du monde en 2005, propose : <br>
-                            <ul>
+                            <ul class="loisirUL">
                                 <li>Baptêmes de l’air,</li>
                                 <li>Survol des Monts d’Arrée</li>
                                 <li>Photos Aériennes</li> 
@@ -220,7 +220,7 @@ onMounted(() => {
     height: 100%;
 }
 
-li {
+.loisirUL li {
     list-style: disc;
     margin-left: 40px;
 }

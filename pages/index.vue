@@ -2,6 +2,10 @@
     <HeaderMain :data="headerData"/>
     <main class="">
         <UnClickMain />
+
+        <SectionHomeDates limit="1" />
+
+        <SectionHomeActu />
     </main>
 </template>
 <script setup>
