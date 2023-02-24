@@ -2,20 +2,12 @@
     <HeaderMain :data="headerData" />
     <main class="">
 
-        <p class="introText mainWidth page-text">
+        <p class="intro-text mainWidth page-text">
             Vous souhaitez rester informé sur la vie de votre commune ? C’est ici.
         </p>
 
         <div class="actu">
-            <SectionMain type="actualites" :data="sectionData" showTitle="true"/>
-
-            <SectionMain type="actualites" :data="sectionData"  showTitle="true"/>
-            <SectionMain type="actualites" :data="sectionData"  showTitle="true"/>
-            <SectionMain type="actualites" :data="sectionData"  showTitle="true"/>
-            <SectionMain type="actualites" :data="sectionData"  showTitle="true"/>
-            <SectionMain type="actualites" :data="sectionData"  showTitle="true"/>
-            <SectionMain type="actualites" :data="sectionData"  showTitle="true"/>
-            <SectionMain type="actualites" :data="sectionData"  showTitle="true"/>
+            <SectionHomeActu limit="-1" :isHomePage="false" />
         </div>
         
     </main>
@@ -54,8 +46,17 @@ const sectionData = {
     file: "hello"
 }
 
+const applyStyleClasses_utils = () => {
 
+    const sections = document.querySelectorAll('.sectionBoxSloted')
 
+    for (let i = 1; i < sections.length; i = i + 4) {
+        sections[i].classList.replace('whiteSection', 'blueSection')
+    }
+    for (let i = 3; i < sections.length; i = i + 4) {
+        sections[i].classList.replace('whiteSection', 'brownSection')
+    }
+}
 onMounted(() => {
     applyStyleClasses_utils()
 })
