@@ -91,7 +91,7 @@
 
             <SectionMainSloted :data="{ title: 'Poher Plage', image: '/images/transports/plage.jpg', imageAlt: 'Poher plage', localImage: true }">
                 <div class="slotedSectionTextBox flex column justifyCenter pad20 gap10">
-                    <p>
+                    <p class="page-text">
                         Chaque été, Poher communauté prévoit des navettes gratuites à destination des belles plages de la région Bretagne. Les plages
                         proposées sont surveillées, à proximité des commodités (boutiques, restauration, etc.) et jamais loin d’un sentier côtier, ce qui permet à
                         tous de pouvoir bénéficier de la navette par tous les temps. En famille, seul ou entre amis, jeunes et moins jeunes, Poher communauté vous
@@ -172,7 +172,7 @@
                 <SectionMainSloted :data="{ title: null, image: '/images/transports/ouestgo.png', imageAlt: 'Covoiturage à Poullaouen', localImage: true }">
                     <div class="slotedSectionTextBox flex column justifyCenter pad20 gap10">
                         <h4>Ouestgo</h4>
-                        <p>
+                        <p class="page-text">
                             La nouvelle plateforme du covoiturage du quotidien en Bretagne et Pays de la Loire. Ouestgo vous permet d’effectuer une recherche sur le
                             trajet souhaité et de vous mettre en relation gratuitement avec d’autres covoitureurs. Le site dispose de 3 modules : covoiturage domicile –
                             travail, évènementiel ou solidaire, c’est vous qui choisissez comment vous souhaitez covoiturer !
@@ -183,22 +183,24 @@
                 <SectionMainSloted :data="{ title: null, image: '/images/transports/e-hop.jpg', imageAlt: 'Covoiturage à Poullaouen', localImage: true }">
                     <div class="slotedSectionTextBox flex column justifyCenter pad20 gap10">
                         <h4>Ehop</h4>
-                        <p>
+                        <p class="page-text">
                             Ehop est une association dont la mission est le développement du covoiturage du quotidien. Si aucun service de transport ne peut 
                             répondre à votre besoin de mobilité, l’association partenaire éhop vous accompagne dans la recherche d’un covoiturage.
                         </p>
+
+                        <div class="infoBox">
+                            <p> <span class="icon">call</span> 02 99 35 10 77</p>
+                            <p> <span class="icon">language</span> <a class="externalLink" href="https://www.ehopcovoiturons-nous.fr/">www.covoiturons-nous.fr</a></p>
+                        </div>
                     </div>
 
-                    <div class="infoBox">
-                        <p> <span class="icon">call</span> 02 99 35 10 77</p>
-                        <p> <span class="icon">language</span> <a class="externalLink" href="https://www.ehopcovoiturons-nous.fr/">www.covoiturons-nous.fr</a></p>
-                    </div>
+                    
                 </SectionMainSloted>
 
                 <SectionMainSloted :data="{ title: null, image: '/images/transports/covoiturage.jpg', imageAlt: 'Covoiturage à Poullaouen', localImage: true }">
                     <div class="slotedSectionTextBox flex column justifyCenter pad20 gap10">
                         <h4>Aires de covoiturage</h4>
-                        <p>
+                        <p class="page-text">
                             Ehop est une association dont la mission est le développement du covoiturage du quotidien. Si aucun service de transport ne peut répondre à votre besoin de mobilité, l’association partenaire éhop vous accompagne dans la recherche d’un covoiturage.
                         </p>
                     </div>
@@ -251,7 +253,7 @@ onMounted(() => {
 })
 </script>
 
-<style>
+<style scoped>
 .slotedSectionTextBox {
     height: 100%;
 }

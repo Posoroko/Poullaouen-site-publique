@@ -137,9 +137,8 @@ onMounted(() => {
 
 </script>
 
-<style>
-
-.stripe {
+<style scoped>
+.content {
     margin-top: 50px;
 }
 

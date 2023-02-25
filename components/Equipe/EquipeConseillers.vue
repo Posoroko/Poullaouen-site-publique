@@ -1,5 +1,5 @@
 <template>
-    <section class="w100">
+    <div class="w100">
         <section class="conseillers">
             <SectionTitleBar title="Les conseillers municipaux" />
 
@@ -25,12 +25,7 @@
                 </div>
             </div>
         </section>
-
-
-    </section>
-
-
-
+    </div>
 </template>
 
 <script setup>
@@ -64,7 +59,7 @@ const headerData = {
 
 </script>
 
-<style>
+<style scoped>
 .conseillerCard {
     background-color: var(--brown);
     width: 20%;

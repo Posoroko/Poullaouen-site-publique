@@ -61,7 +61,7 @@ const headerData = {
 
 </script>
 
-<style>
+<style scoped>
 .adjointCard {
     background-color: var(--dark-blue);
     border-radius: 10px;

@@ -86,7 +86,7 @@
                 :data="{ title: 'Le tri sélectif', image: '/images/dechets/consignes.jpg', imageAlt: 'Campagne Poullaouënaise', localImage: true }">
                 <div class="slotedSectionTextBox flex column justifyCenter alignStart pad20 gap10">
 
-                    <p>
+                    <p class="dechetParagraph">
                         Au sein de Poher communauté la collecte sélective s’effectue en sacs jaunes. Les déchets recyclables sont collectés le même mercredi que
                         la collecte des ordures ménagères (deux camions circulent, ils peuvent ne pas se suivre …).
                         <br>
@@ -336,11 +336,12 @@ onMounted(() => {
 })
 </script>
 
-<style>.slotedSectionTextBox {
+<style scoped>
+.slotedSectionTextBox {
     height: 100%;
 }
 
-li {
+.dechetParagraph ul li {
     list-style: disc;
     margin-left: 40px;
 }

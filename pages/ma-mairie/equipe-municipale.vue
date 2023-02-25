@@ -108,8 +108,8 @@ const headerData = {
 
 </script>
 
-<style>
+<style scoped>
 .equipeMain  {
-    gap: 200px;
+    gap: 50px;
 }
 </style>

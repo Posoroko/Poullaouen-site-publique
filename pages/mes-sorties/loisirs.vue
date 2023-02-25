@@ -8,7 +8,7 @@
 
         <div>
             <SectionMainSloted
-                :data="{ title: 'L’expérimentation de la tarification incitative', image: '/images/dechets/sacs.jpg', imageAlt: 'Reciclag à Poullaouën', localImage: true }">
+                :data="{ title: 'Le pass loisir', image: '/images/loisirs/cinema.jpg', imageAlt: 'Reciclag à Poullaouën', localImage: true }">
                 <div class="slotedSectionTextBox flex column justifyCenter pad20 gap10">
                     <p>
                         <h4>Profitez de tarifs réduits avec le «pass’ loisirs» !</h4>
@@ -46,7 +46,7 @@
 
             <SectionTitleBar title="A Locmaria-Berrien et Poullaouen" />
 
-            <div class="flex justifyCenter gap20 wrap">
+            <div class="loisirCardsBox flex justifyCenter gap20 wrap">
                 <CardsTallMain title="Aéro-Plass - ULM" cardImage="/images/loisirs/ULM.jpg" :localImage="true">
                     <div class="bottomBox">
                         <p class="paragraph">
@@ -90,36 +90,6 @@
                     </div>
                 </CardsTallMain>
             </div>
-
-            <section class="mainWidth marTop20">
-                <SectionTitleBar title="Foire aux questions sur la tarification incitative" />
-                <div class="flex column">
-                    <div class="questionBox flex column gap10 pointer" @click="handleClick" v-for="question in questions"
-                        :key="question.id" :data-questionid="`question${question.id}`">
-                        <p class="question flex alignCenter justifyBetween ">
-                            <span class="">{{ question.question }}</span>
-                            <span class="icon pointer"
-                                v-if="activeQuestion != `question${question.id}`">arrow_drop_up</span>
-                            <span class="icon pointer"
-                                v-if="activeQuestion == `question${question.id}`">arrow_drop_down</span>
-                        </p>
-                        <p class="answer" v-if="activeQuestion == `question${question.id}`">
-                            La quantité de déchets d’ordures ménagères sur le territoire du Poher est constante alors que
-                            les tonnages du tri (sacs jaunes) ont tendance à
-                            diminuer.
-                            L’objectif principal de la tarification incitative est de nous responsabiliser, nous usagers,
-                            par rapport à notre production d’ordures ménagères
-                            (donc de nous inciter à produire moins) et d’encourager les bons gestes à savoir le tri sélectif
-                            et également le compostage.
-                            Le nouveau dispositif de collecte mis en place sur Poullaouen offre un meilleur service de
-                            proximité. La dotation d’un bac individuel pour chaque
-                            foyer permet au service de collecter les ordures ménagères et sacs jaunes, au plus près de
-                            l’habitation et ainsi de supprimer les pollutions visuelles
-                            liées aux bacs collectifs encombrés et également aux dépôts sauvages
-                        </p>
-                    </div>
-                </div>
-            </section>
         </div>
     </main>
 </template>
@@ -218,6 +188,9 @@ onMounted(() => {
 <style>
 .slotedSectionTextBox {
     height: 100%;
+}
+.loisirCardsBox {
+    margin-top: 50px;
 }
 
 .loisirUL li {

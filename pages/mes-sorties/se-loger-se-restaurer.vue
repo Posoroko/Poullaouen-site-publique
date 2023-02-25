@@ -3,7 +3,7 @@
 
     <main class="assoMain w100 flex column" ref="assoMain">
         <p class="intro-text mainWidth">
-            Grâce à ses commerces, ses artisans et ses entreprises, Poullaouen vous offre tout ce dont vous avez besoin.
+            Envie de séjourner à la campagne? Découvrez nos différentes possibilités d’hébergement.
         </p>
 
 
@@ -14,7 +14,7 @@
             <section>
                 <SectionTitleBar title="Les gîtes" />
 
-                <div class="mainWidth flex justifyEvenly wrap gap20">
+                <!-- <div class="mainWidth flex justifyEvenly wrap gap20">
 
                     <div v-for="item in itemsData.Gîtes" :key="item.id">
                         <CardsTallMain :title="item.name" :subtitle="item.subType" :cardImage="item.image"
@@ -46,7 +46,7 @@
                         </CardsTallMain>
                     </div>
 
-                </div>
+                </div> -->
             </section>
         </div>
 
@@ -81,7 +81,7 @@ const fetchOptions = {
 const { data: itemsData } = await useAsyncData(
     "associations",
     async () => {
-        const itemsData = await $fetch(`${directusItems}Commerces?[filter][subType][_eq]="Gîtes"`, fetchOptions)
+        const itemsData = await $fetch(`${directusItems}Commerces?[filter][subType][_eq]=Gîtes`, fetchOptions)
         const items = itemsData.data
 
         const temp = {

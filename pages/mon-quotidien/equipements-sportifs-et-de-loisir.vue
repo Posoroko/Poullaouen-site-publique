@@ -9,7 +9,7 @@
 
         <div v-for="item in equipementsData" :key="item.id">
             <SectionMainSloted :data="{ title: item.title, image: item.image }">
-                <div class="slotedSectionTextBox flex column justifyBetween pad20">
+                <div class="slotedSectionTextBox flex column justifyCenter gap 20 pad20">
                     <div class="topTextBox">
                         <h2 class="sectionSubtitle">
                             <span v-if="item.subTitle">{{ item.subTitle }}</span>
@@ -20,7 +20,7 @@
                         </p>
                     </div>
 
-                    <p class="mainContent">
+                    <p class="mainContent page-text">
                         {{ item.content }}
                     </p>
 

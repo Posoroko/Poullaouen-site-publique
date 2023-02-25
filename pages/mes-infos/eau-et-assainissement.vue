@@ -127,7 +127,7 @@ onMounted(() => {
 })
 </script>
 
-<style>
+<style scoped>
 .slotedSectionTextBox {
     height: 100%;
 }
