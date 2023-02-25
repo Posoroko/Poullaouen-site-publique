@@ -87,7 +87,7 @@ const headerData = {
             target: "/mon-quotidien/ecole-municipale"
         },
         {
-            text: "eau et assainissement",
+            text: "école municipale",
             target: "/mon-quotidien/ecole-municipale"
         }
     ]
