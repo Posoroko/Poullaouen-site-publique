@@ -1,6 +1,5 @@
 <template>
     <HeaderMain :data="headerData" />
-    <button @click="testit">eric</button>
 
     <main class="assoMain w100 flex column"  ref="assoMain">
         <p class="intro-text mainWidth">
@@ -68,11 +67,6 @@ const moveSectionToFirstPosition = (filter) => {
 
     content.value.insertBefore(movingSection, firstChild)
     // console.log(assoMain.value)
-}
-
-const testit = () => {
-    // const dude = assosData.value.assos.culture[0].presidents[0]
-    console.log(assosData.value.assos)
 }
 
 const appConfig = useAppConfig();

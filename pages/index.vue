@@ -14,7 +14,7 @@ const headerData = {
     images: [
         {
             src: 'images/header/accueil/eglise-de-locmaria-berrien.jpg',
-            alt: 'mairie de Locmaria-Berrien',
+            alt: 'église de Locmaria-Berrien',
         }
     ],
     title: 'Bienvenue à Poullaouen',

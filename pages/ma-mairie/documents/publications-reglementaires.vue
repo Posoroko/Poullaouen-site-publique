@@ -1,6 +1,6 @@
 <template>
     <HeaderMain :data="headerData" />
-<button @click="testit">eric</button>
+
     <main class="docsMain w100 flex column" v-if="publications">
         <p class="intro-text mainWidth">
             Le bulletin municipal réalisé par la commission communication relate l’essentiel de l’actualité de l’année.
@@ -37,12 +37,7 @@
  
 <script setup>
 
-const testit = () => {
-    console.log(publications.value)
-}
-
 const appConfig = useAppConfig();
-// const directusAssets = appConfig.directus.assets;
 const directusItems = appConfig.directus.items;
 
 const pubTypes = ref([{
@@ -120,9 +115,10 @@ const headerData = {
 
 </script>
 
-<style>
+<style scoped>
 .dashboard {
     gap: 50px;
+    margin-top: 50px;
 }
 
 .dashboard .button {
@@ -131,10 +127,6 @@ const headerData = {
     padding: 0.6em 1.5em;
     color: white;
     border-radius: 50px;
-}
-
-.docsSection:nth-child(1n+4) {
-    padding-top: 100px;
 }
 
 .docsMain .docsSection .stripe {

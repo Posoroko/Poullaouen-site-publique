@@ -35,7 +35,7 @@ const handleFilterClick = (e) => {
 .filterStripe {
     background: linear-gradient(90deg, rgba(0, 47, 74, 1) 0%, rgba(146, 76, 2, 1) 100%);
     padding: 30px;
-    margin: 50px 0;
+    margin: 50px 0 0 0 ;
 }   
 .filter {
     padding: 5px 0;

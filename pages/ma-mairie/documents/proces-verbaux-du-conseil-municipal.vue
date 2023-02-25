@@ -145,9 +145,10 @@ const headerData = {
 
 </script>
 
-<style>
+<style scoped>
 
 .dashboard {
+    margin-top: 50px;
     gap: 50px;
 }
 .dashboard .button {
@@ -157,12 +158,9 @@ const headerData = {
     color: white;
     border-radius: 50px;
 }
-.docsSection:nth-child(1n+4) {
-    padding-top: 100px;
-}
+
 
 .docsMain .docsSection .stripe {
-    margin-top: 20px;
     z-index: 1;
 }
 

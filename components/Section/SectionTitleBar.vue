@@ -23,12 +23,10 @@ const props = defineProps({
 <style scoped>
 
 .sectionTitleBox {
-    padding: 5px 30px;
+    margin-top: 50px;
 }
 .sectionTitleBox h2 {
-    font-size: max(18px, 2vw);
-    margin-top: max(30px, 3vw);
-    
+    font-size: max(18px, 2vw);    
 }
 
 .sectionTitleBox .titleStripe {
@@ -36,7 +34,7 @@ const props = defineProps({
     height: max(8px, 0.7vw);
     background: linear-gradient(270deg, rgba(0, 47, 74, 1) 0%, rgba(147, 96, 55, 1) 100%);
     border-radius: 8px;
-    margin: 20px 0;
+    margin: 5px 0;
 }
 
 /* .whiteSection appears in parent component */
