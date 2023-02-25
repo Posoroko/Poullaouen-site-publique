@@ -1,27 +1,23 @@
 <template>
     <header class="">
         <div class="imageBox">
-            <img :src="currentImage.src" :alt="currentImage.alt">
+            <img :src="data.images[0].src" :alt="data.images[0].alt">
+        </div>
+
+        <div class="titleBox darkBlueBG centered">
+            <h1 class="pageTitle mainWidth">
+                {{ data.title }}
+            </h1>
         </div>
 
         <HeaderPathBar :path="data.path"/>
-        
-        <HeaderTitleBar :title="data.title"/>
     </header>  
 </template>
 
 <script setup>
 
-const pageTitle = 'Accueil'
 const props = defineProps({
     data: Object
-})
-
-const currentImage = ref({})
-let counter = 0
-
-onMounted(() => {
-    currentImage.value = props.data.images[counter]
 })
 
 </script>
@@ -39,6 +35,15 @@ header .imageBox img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.titleBox {
+    height: 11vh;
+}
+.pageTitle {
+    font-weight: 900;
+    font-size: max(20px, 2vw);
+    letter-spacing: 2px;
+    padding: 0 25px;
 }
 
 </style>

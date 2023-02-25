@@ -3,9 +3,9 @@
     <main class="">
         <UnClickMain />
 
-        <SectionHomeDates limit="1" />
+        <SectionHomeDates limit="3" />
 
-        <SectionHomeActu />
+        <SectionHomeActu limit="2" :isHomePage="true" />
     </main>
 </template>
 <script setup>

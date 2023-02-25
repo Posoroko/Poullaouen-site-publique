@@ -1,12 +1,12 @@
 <template>
     <section class="ActuSection">
-        <SectionTitleBar title="Actualités" />
+        <SectionTitleBar title="Actualités" v-if="isHomePage" />
         <div v-for="actu in actualites" :key="actu.id">
             <SectionMainSloted :data="{ image: actu.image, imageAlt: actu.imageAlt, localImage: false}" >
                 <div class="slottedContent h100 flex column justifyCenter gap20">
-                    <div>
+                    <div class="flex column gap10">
                         <h4 class="sectionContentTitle">{{ actu.title }}</h4>
-                        <p>{{ actu.date_published }}</p>
+                        <p>publié le: {{ new Date(actu.date_created).toLocaleDateString() }}</p>
                     </div>
 
                     <p class="actuContent r" v-html="actu.content">
@@ -30,6 +30,11 @@
 </template>
 <script setup>
 
+const props = defineProps({
+    limit: String,
+    isHomePage: Boolean
+})
+
 const appConfig = useAppConfig();
 const directusAssets = appConfig.directus.assets;
 const directusItems = appConfig.directus.items;
@@ -37,8 +42,8 @@ const directusItems = appConfig.directus.items;
 const fetchOptions = {
     server: true,
     params: {
-        fields: 'id, title, subtitle, content, image, imageAlt, moreInfo, date_published, file, fileName',
-        limit: 2
+        fields: 'id, title, subtitle, content, image, imageAlt, moreInfo, date_created, file, fileName',
+        limit: props.limit
     }
 }
 
