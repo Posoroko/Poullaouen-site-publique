@@ -8,7 +8,7 @@
 
         <div v-for="salle in salles" :key="salle.id" >
             <SectionMainSloted :data="{ title: salle.name, image: salle.image}">
-                <div class="textBox flex column justifyBetween">
+                <div class="textBox h100 flex column justifyCenter">
                     <h3 class="subtitle">{{ salle.address }}</h3>
 
                     <div class="page-text" v-html="salle.content"></div>
@@ -24,7 +24,7 @@
 
                         <h4 class="level0 marTop20">tarifs</h4>
                         <div class="moreinfo italic">
-                            <h5 class="intro-text level1">poullaouennais</h5>
+                            <h5 class="level1">poullaouennais</h5>
                             <ul>
                                 <li class="breadcrumbs-text level2"> 
                                     <span v-if="salle.locals1">1 jour: &nbsp {{ salle.locals1 }}€ sans cuisine</span>
@@ -44,7 +44,7 @@
                         </div>
 
                         <div class="moreinfo italic">
-                            <h5 class="intro-text level1">non poullaouennais</h5>
+                            <h5 class="level1">non poullaouennais</h5>
                             <li>
                                 <ul>
                                     <li class="breadcrumbs-text level2">
@@ -149,6 +149,7 @@ onMounted(() => {
     border-bottom: 1px solid green
 }
 .level1 {
+    padding: 10px 0;
     margin-left: 10px;
 }
 .level2 {

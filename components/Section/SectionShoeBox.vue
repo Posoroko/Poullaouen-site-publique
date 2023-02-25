@@ -42,13 +42,14 @@ const props = defineProps({
 .footFrame {
     height: 100%;
     width: 100%;
+
 }
 .footFrame svg {
     height: 100%;
     width: 100%;
+    overflow: visible;
 }
 .footFrame svg .pied{
-    /* height: 300px; */
     width: 100%;
     object-fit: contain;
     filter: drop-shadow(2px 2px 4px black);

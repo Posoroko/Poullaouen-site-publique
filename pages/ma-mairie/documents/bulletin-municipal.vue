@@ -47,9 +47,6 @@
                 </div>
             </div>
         </section>
-
-        <ModalMain :data="modalData" />
-
     </main>
 </template>
 
@@ -117,10 +114,6 @@ const headerData = {
 <style>
 .intro {
     height: 10vh;
-}
-
-.docsMain {
-    gap: 100px;
 }
 
 .docsMain .docsSection .stripe {
