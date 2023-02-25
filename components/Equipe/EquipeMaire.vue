@@ -22,28 +22,8 @@
                         </figure>
                     </div>
 
-                    <p class="text page-text">
-                        Mes chers amis, <br>
-                        Au- delà de ses fonctionnalités, le site internet de notre mairie est aussi une vitrine publique
-                        qui transmet une image et des valeurs. Un site institutionnel dynamique et interactif génère du lien entre la
-                        collectivité et ses administrés. Les habitants sont bien sûr les premiers concernés 
-                        par les informations de notre commune, mais il s’adresse à un public bien plus large : futurs ou anciens habitants, 
-                        parents d’élèves et leur famille, usagers des services médicaux, des commerces et des entreprises, touristes…
-                        <br>
-                        Le premier réflexe d’une personne qui veut se renseigner sur une commune est d’effectuer une
-                        recherche sur internet… le potentiel de visibilité d’un site de mairie est énorme.
-                        Le site internet de notre mairie a donc pour objectif :
-                        <br>
-                        Informer le public, dynamiser la vie de la commune, diffuser des actualités, démontrer le
-                        dynamisme de l’équipe municipale, annoncer les évènements, les projets, faciliter les démarches administratives,
-                        partager les comptes rendus des conseils municipaux, promouvoir les opportunités économiques, les aspects touristiques, sans
-                        oublier de raconter
-                        « l’histoire » de notre commune…
-                        <br>
-                        Je conclurais en remerciant et félicitant les membres de la commission communication, qui ont
-                        œuvré à l’élaboration du site et principalement Nicole Tanguy, maire adjointe en charge de la communication, pour son
-                        engagement sur ce chantier ô combien important. <br>
-                        Bonne visite…
+                    <p class="text page-text motDuMaire">
+                        {{ maire.motDuMaire }}
                     </p>
                 </div>
 
@@ -157,5 +137,8 @@ const headerData = {
 .sectionTitleBox {
     position: relative;
     z-index: -2;
+}
+.motDuMaire {
+    white-space: pre-wrap;
 }
 </style>
