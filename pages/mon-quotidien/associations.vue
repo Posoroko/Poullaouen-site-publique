@@ -3,7 +3,7 @@
 
     <main class="assoMain w100 flex column"  ref="assoMain">
         <p class="intro-text mainWidth">
-            Petite commune, mais très dynamique: les associations sportives, de loisirs, culturelles ne manquent pas.
+            Petite commune, mais très dynamique : les associations sportives, de loisirs, culturelles ne manquent pas.
         </p>
 
         
