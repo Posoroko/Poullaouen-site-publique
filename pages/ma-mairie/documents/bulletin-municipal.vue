@@ -88,7 +88,7 @@ const headerData = {
     images: [
         {
             src: '/images/header/bulletin.jpg',
-            alt: 'Bulletin minicipal de Poullaouën',
+            alt: 'Bulletin municipal de Poullaouën',
         }
     ],
     title: 'Bulletin municipal',
@@ -102,7 +102,7 @@ const headerData = {
             target: '/ma-mairie/documents/bulletin-municipal'
         },
         {
-            text: 'bulletin municipale',
+            text: 'bulletin municipal',
             target: '/ma-mairie/documents/bulletin-municipal'
         }
     ]
