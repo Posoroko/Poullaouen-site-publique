@@ -72,14 +72,14 @@ const { data: typeData } = await useAsyncData(
 const itemsFetchOptions = {
     server: true,
     params: {
-        fields: "id, title, subTitle, image, adress, content, moreInfo",
+        fields: "id, image, adress, imageAlt, content, title, type.slug, type.displayName"
     }
     
 }
 const { data: itemsData } = await useAsyncData( 
     "typeItems",
     async () => {
-        const items = await $fetch(`${directusItems}Patrimoine?[filter][category][_eq]=${activeType.value}`, itemsFetchOptions)
+        const items = await $fetch(`${directusItems}Patrimoine?[filter][type][slug][_eq]=${activeType.value}`, itemsFetchOptions)
         
         return items.data
     }
@@ -91,10 +91,10 @@ const headerData = {
     images: [
         {
             src: `${directusAssets}${typeData.value.image}?key=header1500`,
-            alt: 'Aire de loisir de Poullaouen',
+            alt: '',
         }
     ],
-    title: 'Les églises',
+    title: typeData.value.displayName,
     path: [
         {
             text: 'accueil',

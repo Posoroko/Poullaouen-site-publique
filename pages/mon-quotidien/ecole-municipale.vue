@@ -7,7 +7,7 @@
             <SectionMainSloted
                 :data="{ title: 'L’école maternelle et primaire Jules Ferry', image: '/images/ecole/enseignants.jpg', imageAlt: 'Eau et assainissement', localImage: true }">
                 <div class="slotedSectionTextBox flex column justifyCenter pad20 gap10">
-                    <p>
+                    <p class="page-text">
                         L’école Jules Ferry accueille les enfants dès l’âge de 2 ans révolus. A la rentrée de septembre 2022, 83 élèves sont répartis dans les différentes
                         classes de la maternelle au CM2. Une classe bilingue français/breton multi-niveaux (de la maternelle au CM2) existe depuis 2010.
                         La classe bilingue de Marie Miguet : 13 élèves La classe maternelle de Julia Keller et Priscilla Charles : 28 élèves
@@ -15,83 +15,51 @@
                     </p>
 
                     <div class="infoBox">
-                        <p> <span class="icon">location_on</span>Service client</p>
-                        <p> <span class="icon">call</span> 0969 323 529</p>
-                        <p> <span class="icon">schedule</span> 8h-18h du lundi au vendredi</p>
-                        <p> <span class="icon">emergency</span> Service urgence 7j/7 -24h/24</p>
-                        <p> <span class="icon">language</span> <a class="externalLink"
-                                href="https://www.alecob.jimdofree.com">www.alecob.jimdofree.com</a></p>
+                        <p> <b>directueur :</b> Anthony LE CAM - 02.98.93.55.06</p>
                     </div>
                 </div>
             </SectionMainSloted>
 
             <SectionMainSloted
-                :data="{ title: 'Assainissement collectif', image: '/images/eau/la lagune.jpg', imageAlt: 'Offisme de tourisme de Carhaix', localImage: true }">
-                <div class="slotedSectionTextBox flex column justifyCenter alignStart pad20 gap10">
-                    <p>
-                        L’assainissement est collectif lorsque les eaux usées sont collectées par le réseau public pour être
-                        traitées dans une station d’épuration, avant
-                        de retourner dans le milieu naturel. Le raccordement des installations privées à ce réseau est
-                        contrôlé par le service de la Mairie.
-                        <br>
-                        À ce jour, seules les habitations proches du centre-bourg sont reliées au réseau collectif. Pour les
-                        maisons reliées à l’assainissement
-                        collectif, un contrôle est effectué de manière périodique pour vérif ier la conformité des
-                        installations.
-                        <br>
-                        Pour toute information concernant l’assainissement collectif, vous pouvez contacter directement les
-                        services de la Mairie.
+                :data="{ title: 'La cantine', image: '/images/ecole/cantine.jpg', imageAlt: 'Eau et assainissement', localImage: true }">
+                <div class="slotedSectionTextBox flex column justifyCenter pad20 gap20">
+                    <p class="page-text">
+                        Une cantine municipale, avec une cuisinière aux petits soins pour les enfants.
                     </p>
 
-                    <div class="infoBox">
-                        <p> <span class="icon">location_on</span>Mairie de Poullaouen</p>
-                        <p> <span class="icon">call</span>02.98.93.50.76</p>
-                        <p> <span class="icon">location_on</span>Mairie de Locmaria-Berrien</p>
-                        <p> <span class="icon">call</span>02.98.99.73.09</p>
-                    </div>
+                    <p class="flex column gap10">
+                        <b>Les tarifs:</b>
+                        <span>
+                            Les tarifs varient en fonction du quotient familial des familles.
+                        </span>
+                    </p>
 
+                    
+
+                    <div class="infoBox">
+                        <p> <b>renseignements :</b> Marie - 02.98.93.50.76</p>
+                    </div>
                 </div>
             </SectionMainSloted>
+
+            <EcoleMenu />
 
             <SectionMainSloted
-                :data="{ title: 'Assainissement non-collectif', image: '/images/eau/manhole.jpg', imageAlt: 'Campagne Poullaouënaise', localImage: true }">
-                <div class="slotedSectionTextBox flex column justifyCenter alignStart pad20 gap10">
-
-                    <p>
-                        Les eaux usées de nos habitations nécessitent d’être évacuées puis restituées dans le milieu
-                        naturel, tout en préservant la santé publique
-                        et l’environnement.
-                        <br>
-                        Les polluants véhiculés par nos eaux usées (essentiellement matière organique, azote et phosphore)
-                        doivent être traités pour limiter leur
-                        impact sur les milieux aquatiques.
-                        <br>
-                        L’assainissement non-collectif (ANC), aussi appelé assainissement autonome ou individuel, constitue
-                        la solution technique et économique
-                        la mieux adaptée en milieu rural. Ce type d’assainissement concerne les maisons d’habitations
-                        individuelles non raccordées à un réseau
-                        public de collecte des eaux usées, soit 10% de la population française. Des visites périodiques des
-                        installations d’assainissement non collectif
-                        sont réalisées par le Service public d’assainissement non collectif (SPANC) de Poher communauté.
-                        <br>
-                        Ces visites af in de vérif ier le bon fonctionnement des installations et réaliser leur entretien se
-                        déroulent tous les sept ans. Pour permettre
-                        ces visites, tous les éléments de la filière d’assainissement - la fosse septique ou toutes eaux, le
-                        bac dégraisseur, le f iltre décolloïdeur, etc.
-                        doivent être accessibles.
+                :data="{ title: 'Le transport scolaire', image: '/images/ecole/transport.jpg', imageAlt: 'Eau et assainissement', localImage: true }">
+                <div class="slotedSectionTextBox flex column justifyCenter pad20 gap10">
+                    <p class="page-text">
+                        Le transport scolaire est assuré par Poher communauté.
                     </p>
 
-                    <div class="infoBox">
-                        <p> <span class="icon">location_on</span>SPANC - Maison des services au public - Carhaix</p>
-                        <p> <span class="icon">call</span>02.98.99.48.03</p>
-                        <p> <span class="icon">location_on</span><a class="externalLink"
-                                href="mailto:spanc@poher.bzh">spanc@poher.bzh</a></p>
-                        <p> <span class="icon">call</span><a class="externalLink"
-                                href="https://www.poher.bzh">www.poher.bzh</a></p>
+                    <div class="infoBox marTop20">
+                        <p> <span class="icon">call</span> 02.98.99.48.00</p>
+                        <p> <span class="icon">email</span> <a href="emailto: transport@poher.com"></a> </p>
+                        <p> <span class="icon">language</span> <a href="https://https://www.poher.bzh/accueil_poher/les_services/mobilites/le_transport_scolaire">poher communauté</a> </p>
                     </div>
-
                 </div>
             </SectionMainSloted>
+
+            
         </div>
     </main>
 </template>
