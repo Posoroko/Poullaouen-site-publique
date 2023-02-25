@@ -9,7 +9,7 @@
                         <p>{{ actu.date_published }}</p>
                     </div>
 
-                    <p class="actuContent" v-html="actu.content">
+                    <p class="actuContent r" v-html="actu.content">
                     </p>
                     
                     <div class="moreInfoBox">

@@ -2,11 +2,11 @@
     <HeaderMain :data="headerData" />
 
     <main class="mainRandonnee">
-        <p class="mainWidth intro-text">
-            « L’unique moyen de savoir jusqu’où l’on peut aller, c’est de se mettre à marcher. » 
+        <div class="mainWidth intro-text">
+            <p>« L’unique moyen de savoir jusqu’où l’on peut aller, c’est de se mettre à marcher. » </p>
             <br>
-            Henri BERGSON.
-        </p>
+            <p class="centered">Henri BERGSON.</p>
+        </div>
 
         <div class="centered mapFrame">
             <img class="mainWidth map" src="/images/randonnee/les-chemins-de-randonnée-de-Poullaouen.jpg" alt="les chemins de randonnée de Poullaouen">

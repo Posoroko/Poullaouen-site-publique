@@ -1,6 +1,6 @@
 <template>
     <section class="">
-        <SectionTitleBar title="En un click" />
+        <SectionTitleBar title="En un clic" />
 
         <nav class="buttonBox flex alignCenter justifyEvenly mainWidth wrap">
             <div class="blueBtn roundBtn pointer flex column alignCenter justifyCenter">
@@ -21,13 +21,13 @@
                 <p class="wayne">Horraire des commerces</p>
             </NuxtLink>
 
-            <NuxtLink class="brownBtn roundBtn pointer flex column alignCenter justifyCenter">
+            <NuxtLink to="/mes-sorties/chemins-de-randonnee" class="brownBtn roundBtn pointer flex column alignCenter justifyCenter">
                 <p class="icon">hiking</p>
                 
                 <p class="wayne">Chemins de randonnée</p>
             </NuxtLink>
 
-            <NuxtLink class="blueBtn roundBtn pointer flex column alignCenter justifyCenter">
+            <NuxtLink to="/actualites" class="blueBtn roundBtn pointer flex column alignCenter justifyCenter">
                 <p class="icon">feed</p>
                 
                 <p class="wayne">actualités</p>
