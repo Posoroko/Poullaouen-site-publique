@@ -8,7 +8,7 @@
 
         <div>
             <SectionMainSloted :data="{ title: 'Le transport scolaire', image: '/images/transports/transport-scolaire.jpg', imageAlt: 'transport scolaire Poullaouen', localImage: true }">
-                <div class="slotedSectionTextBox flex column justifyBetween pad20 gap10">
+                <div class="slotedSectionTextBox page-text flex column justifyBetween pad20 gap10">
                     <h4>Quand et comment s’inscrire ?</h4>
                     <p>
                         L’ensemble des élèves étudiant et résidant sur l’une des communes de
@@ -41,7 +41,7 @@
             </SectionMainSloted>
 
             <SectionMainSloted :data="{ title: 'Hep le Bus', image: '/images/transports/Hep-Le-Bus.jpg', imageAlt: 'hep le bus', localImage: true }">
-                <div class="slotedSectionTextBox flex column justifyCenter pad20 gap10">
+                <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap10">
                     <p>
                         Un service de transport urbain gratuit circule en ville de Carhaix. Il
                         fonctionne du lundi au samedi de 09h00 à 12h40 et de 14h00 à 18h40.
@@ -60,7 +60,7 @@
             </SectionMainSloted>
 
             <SectionMainSloted :data="{ title: 'Taxicom', image: '/images/transports/taxi-com.jpg', imageAlt: 'taxi com à Poullaouen', localImage: true }">
-                <div class="slotedSectionTextBox flex column justifyBetween pad20 gap10">
+                <div class="slotedSectionTextBox page-text flex column justifyBetween pad20 gap10">
                     <p>Le service de transport à la demande « Taxicom » fonctionne les :</p>
                     <ul>
                         <li>Mardi matin : 08h30 - 13h00</li>
@@ -90,7 +90,7 @@
             </SectionMainSloted>
 
             <SectionMainSloted :data="{ title: 'Poher Plage', image: '/images/transports/plage.jpg', imageAlt: 'Poher plage', localImage: true }">
-                <div class="slotedSectionTextBox flex column justifyCenter pad20 gap10">
+                <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap10">
                     <p>
                         Chaque été, Poher communauté prévoit des navettes gratuites à destination des belles plages de la région Bretagne. Les plages
                         proposées sont surveillées, à proximité des commodités (boutiques, restauration, etc.) et jamais loin d’un sentier côtier, ce qui permet à
@@ -103,7 +103,7 @@
             </SectionMainSloted>
 
             <SectionMainSloted :data="{ title: 'Les navettes Vieilles Charrues', image: '/images/transports/vieilles-charrues.jpg', imageAlt: 'Vue aérienne des vieilles charrues', localImage: true }">
-                <div class="slotedSectionTextBox flex column justifyCenter pad20 gap10">
+                <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap10">
                     <p>
                         A chaque édition du festival des vieilles charrues, des navettes gratuites au départ des communes de Poher communauté sont mises en place
                         par Poher communauté. Elles permettent de rapprocher les festivaliers du site l’après-midi et de les ramener durant la nuit.
@@ -118,7 +118,7 @@
             </SectionMainSloted>
 
             <SectionMainSloted :data="{ title: 'Le vélo', image: '/images/transports/vélo-électrique.jpg', imageAlt: 'vélo électrique', localImage: true }">
-                    <div class="slotedSectionTextBox flex column justifyCenter pad20 gap10">
+                    <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap10">
                         <p>
                             Vous habitez le territoire de Poher communauté et vous envisagez d’acquérir un vélo électrique : la communauté de communes vous accompagne !
                             <br>
@@ -139,7 +139,7 @@
                 </SectionMainSloted>
 
                 <SectionMainSloted :data="{ title: 'Le réseau de transport régional Breizhgo', image: '/images/transports/breizh-go.jpg', imageAlt: 'Breizh Go', localImage: true }">
-                    <div class="slotedSectionTextBox flex column justifyBetween pad20 gap10">
+                    <div class="slotedSectionTextBox page-text flex column justifyBetween pad20 gap10">
                         <h4>Se déplacer en train</h4>
                         <p>La ligne Carhaix-Guingamp</p>
                         <h4>Se déplacer en car</h4>
@@ -170,7 +170,7 @@
                 <h4 class="mainWidth">Le covoiturage est une solution alternative de transport à la voiture individuelle.</h4>
 
                 <SectionMainSloted :data="{ title: null, image: '/images/transports/ouestgo.png', imageAlt: 'Covoiturage à Poullaouen', localImage: true }">
-                    <div class="slotedSectionTextBox flex column justifyCenter pad20 gap10">
+                    <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap10">
                         <h4>Ouestgo</h4>
                         <p>
                             La nouvelle plateforme du covoiturage du quotidien en Bretagne et Pays de la Loire. Ouestgo vous permet d’effectuer une recherche sur le
@@ -181,7 +181,7 @@
                 </SectionMainSloted>
 
                 <SectionMainSloted :data="{ title: null, image: '/images/transports/e-hop.jpg', imageAlt: 'Covoiturage à Poullaouen', localImage: true }">
-                    <div class="slotedSectionTextBox flex column justifyCenter pad20 gap10">
+                    <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap10">
                         <h4>Ehop</h4>
                         <p>
                             Ehop est une association dont la mission est le développement du covoiturage du quotidien. Si aucun service de transport ne peut 
@@ -196,10 +196,11 @@
                 </SectionMainSloted>
 
                 <SectionMainSloted :data="{ title: null, image: '/images/transports/covoiturage.jpg', imageAlt: 'Covoiturage à Poullaouen', localImage: true }">
-                    <div class="slotedSectionTextBox flex column justifyCenter pad20 gap10">
+                    <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap10">
                         <h4>Aires de covoiturage</h4>
                         <p>
-                            Ehop est une association dont la mission est le développement du covoiturage du quotidien. Si aucun service de transport ne peut répondre à votre besoin de mobilité, l’association partenaire éhop vous accompagne dans la recherche d’un covoiturage.
+                            Poher communauté compte 3 aires de covoiturage recensées : La Villeneuve (Carhaix), Loch ar Lann (Kergloff) et Sainte Catherine 
+                            (Plounévézel) dont une, équipée d’une borne de recharge électrique (Villeneuve).
                         </p>
                     </div>
                 </SectionMainSloted>

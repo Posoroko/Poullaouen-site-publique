@@ -5,18 +5,18 @@
         <p class="mainWidth intro-text">
             Située à 10mn de Carhaix, 1 heure de Brest ou Quimper, Poullaouen vous offre la possibilité de vivre au calme à la
             campagne. Vous y trouverez tous les services de première nécessité, une école publique maternelle et primaire, une
-            bibliothèque-médiathèque, un médecin, une pharmacie, un cabinet infirmier, un bureau de poste, une supérette, des bars …
+            bibliothèque-médiathèque, un médecin, une pharmacie, un cabinet infirmier, un bureau de poste, une supérette, des bars…
         </p>
 
         <div>
             <SectionMainSloted
                 :data="{ title: 'Les notaires du Poher', image: '/images/se-loger/notaires.jpg', imageAlt: 'LEs notaires du Poher à Poullaouen', localImage: true }">
-                <div class="slotedSectionTextBox flex column justifyCenter pad20 gap10">
+                <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap10">
                     <p>
-                        L’off ice est installé en plein coeur du Centre Bretagne depuis plusieurs décénnies, anciennement étude de Maître Jean-Yves LE GAC puis
+                        L’office est installé en plein coeur du Centre Bretagne depuis plusieurs décénnies, anciennement étude de Maître Jean-Yves LE GAC puis
                         de Maîtres Catherine GARIGNON et Romuald LE GOHIC devenue récemment Les notaires du Poher.
                         Cet office composé de trois associés Maître Catherine MARTIN RAFFRAY (anciennement Catherine GARIGNON), Maître Romuald LE GOHIC et
-                        Maître Marine LE JEUNE, ainsi que de 15 collaborateurs, est au service des particuliers et professionnels af in d’apporter un service 
+                        Maître Marine LE JEUNE, ainsi que de 15 collaborateurs, est au service des particuliers et professionnels afin d’apporter un service 
                         de qualité couvrant les aspects juridiques, sociaux et fiscaux.
                     </p>
 
@@ -30,9 +30,9 @@
 
             <SectionMainSloted
                 :data="{ title: 'Office de Tourisme de Carhaix et du Poherr', image: '/images/se-loger/office-de-tourisme.jpg', imageAlt: 'Offisme de tourisme de Carhaix', localImage: true }">
-                <div class="slotedSectionTextBox flex column justifyCenter pad20 gap10">
+                <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap10">
                     <p>
-                        L’off ice met à disposition une liste de logements (vides et meublés) situés sur le territoire de Poher communauté
+                        L’office met à disposition une liste de logements (vides et meublés) situés sur le territoire de Poher communauté
                     </p>
 
                     <div class="infoBox">
@@ -45,7 +45,7 @@
 
             <SectionMainSloted
                 :data="{ title: 'ALECOB', image: '/images/se-loger/alécob.jpg', imageAlt: 'Alécob logo', localImage: true }">
-                <div class="slotedSectionTextBox flex column justifyCenter pad20 gap10">
+                <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap10">
                     <p>
                         Afin d’accompagner les particuliers dans leur réflexion, l’Etat, la Région
                         Bretagne et l’ADEME ont mis en place des services d’accompagnement
@@ -67,7 +67,7 @@
 
                     <div class="infoBox">
                         <p> <span class="icon">location_on</span> Maison des Services Publics - Place de la Tour d’Auvergne - Carhaix</p>
-                        <p> <span class="icon">call</span> 0 805 203 205 (appel gratuit depuis un poste f ixe)</p>
+                        <p> <span class="icon">call</span> 0 805 203 205 (appel gratuit depuis un poste fixe)</p>
                         <p> <span class="icon">language</span> <a class="externalLink" href="https://www.alecob.jimdofree.com">www.alecob.jimdofree.com</a></p>
                     </div>
                 </div>
@@ -75,12 +75,12 @@
 
             <SectionMainSloted
                     :data="{ title: 'SOLIHA', image: '/images/se-loger/soliha.jpg', imageAlt: 'Alécob logo', localImage: true }">
-                    <div class="slotedSectionTextBox flex column justifyCenter pad20 gap10">
+                    <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap10">
                         <p>
                             SOLIHA, anciennement réseau PACT et Réseau Habitat et
                             Développement, est une association privée au service de l’habitat.
                             Depuis 1942, elle intervient en faveur des personnes défavorisées,
-                            f ragiles ou vulnérables sur deux axes : le maintien et l’accès dans le
+                            fragiles ou vulnérables sur deux axes : le maintien et l’accès dans le
                             logement.
                         </p>
     

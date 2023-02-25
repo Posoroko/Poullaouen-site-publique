@@ -27,7 +27,7 @@ const links = {
             path: "/ma-mairie/les-salles-municipales"
         },
         {
-            text: "Les bulletins municipaux",
+            text: "Le bulletin municipal",
             path: "/ma-mairie/documents/bulletin-municipal"
         },
         {
@@ -53,7 +53,7 @@ const links = {
             path: "/mon-quotidien/mediatheque"
         },
         {
-            text: "Les equipements sportifs et loisir",
+            text: "Les équipements sportifs et de loisirs",
             path: "/mon-quotidien/equipements-sportifs-et-de-loisir"
         },
         {
@@ -79,7 +79,7 @@ const links = {
             path: "/mes-sorties/se-loger-se-restaurer"
         },
         {
-            text: "Vilage fleuri",
+            text: "Village fleuri",
             path: "/mes-sorties/village-fleuri"
         },
         {
@@ -89,7 +89,7 @@ const links = {
     ],
     infos: [
         {
-            text: "Les transport",
+            text: "Les transports",
             path: "/mes-infos/transports"
         },
         {

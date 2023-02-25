@@ -10,8 +10,8 @@
         <div>
             <SectionMainSloted
                 :data="{ title: 'Eau', image: '/images/eau/fontaine.jpg', imageAlt: 'Eau et assainissement', localImage: true }">
-                <div class="slotedSectionTextBox flex column justifyCenter pad20 gap10">
-                    <h4>Quel est le rôle du PLU?</h4>
+                <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap10">
+                    <h4>Quel est le rôle du PLU ?</h4>
                     <p>
                         <b>Véolia</b> est le délégataire choisi par Poullaouen pour le service eau.
                     </p>
@@ -20,7 +20,7 @@
                         <p> <span class="icon">location_on</span>Service client</p>
                         <p> <span class="icon">call</span> 0969 323 529</p>
                         <p> <span class="icon">schedule</span> 8h-18h du lundi au vendredi</p>
-                        <p> <span class="icon">emergency</span> Service urgence 7j/7 -24h/24</p>
+                        <p> <span class="icon">emergency</span> Service urgence 7j/7 - 24h/24</p>
                         <p> <span class="icon">language</span> <a class="externalLink" href="https://www.alecob.jimdofree.com">www.alecob.jimdofree.com</a></p>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
 
             <SectionMainSloted
                 :data="{ title: 'Assainissement collectif', image: '/images/eau/la lagune.jpg', imageAlt: 'Offisme de tourisme de Carhaix', localImage: true }">
-                <div class="slotedSectionTextBox flex column justifyCenter alignStart pad20 gap10">
+                <div class="slotedSectionTextBox page-text flex column justifyCenter alignStart pad20 gap10">
                     <p>
                         L’assainissement est collectif lorsque les eaux usées sont collectées par le réseau public pour être traitées dans une station d’épuration, avant
                         de retourner dans le milieu naturel. Le raccordement des installations privées à ce réseau est contrôlé par le service de la Mairie.
@@ -51,7 +51,7 @@
   
             <SectionMainSloted
                 :data="{ title: 'Assainissement non-collectif', image: '/images/eau/manhole.jpg', imageAlt: 'Campagne Poullaouënaise', localImage: true }">
-                <div class="slotedSectionTextBox flex column justifyCenter alignStart pad20 gap10">
+                <div class="slotedSectionTextBox page-text lex column justifyCenter alignStart pad20 gap10">
 
                     <p>
                         Les eaux usées de nos habitations nécessitent d’être évacuées puis restituées dans le milieu naturel, tout en préservant la santé publique

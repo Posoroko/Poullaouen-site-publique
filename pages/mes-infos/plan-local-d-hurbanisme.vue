@@ -2,19 +2,12 @@
     <HeaderMain :data="headerData" />
 
     <main class="mainHistoire">
-        <p class="mainWidth intro-text">
-            Située à 10mn de Carhaix, 1 heure de Brest ou Quimper, Poullaouen vous offre la possibilité de vivre au calme à
-            la
-            campagne. Vous y trouverez tous les services de première nécessité, une école publique maternelle et primaire,
-            une
-            bibliothèque-médiathèque, un médecin, une pharmacie, un cabinet infirmier, un bureau de poste, une supérette,
-            des bars …
-        </p>
+       
 
         <div>
             <SectionMainSloted
                 :data="{ title: 'Description', image: '/images/plu/statuts.jpg', imageAlt: 'Statuts Poullaouen', localImage: true }">
-                <div class="slotedSectionTextBox flex column justifyCenter pad20 gap10">
+                <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap10">
                     <h4>Quel est le rôle du PLU?</h4>
                     <p>
                         Le Plan Local d’Urbanisme (PLU) est un document d’urbanisme qui, à l’échelle de la commune, traduit un projet global d’aménagement
