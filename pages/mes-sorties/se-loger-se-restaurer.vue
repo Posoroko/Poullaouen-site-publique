@@ -97,7 +97,7 @@ const headerData = {
             target: '/mes-sorties/se-loger-se-restaurer'
         },
         {
-            text: 'Se loger, se restaurer',
+            text: 'se loger, se restaurer',
             target: '/mes-sorties/se-loger-se-restaurer'
         }
     ]

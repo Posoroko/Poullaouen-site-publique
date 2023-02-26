@@ -92,7 +92,7 @@ const headerData = {
             target: '/mo-quotidien/les-equipements-sportifs-et-de-loisir'
         },
         {
-            text: 'les équipements sportifs et de loisir',
+            text: 'équipements sportifs et de loisir',
             target: '/ma-mairie/les-equipements-sportifs-et-de-loisir'
         }
     ]

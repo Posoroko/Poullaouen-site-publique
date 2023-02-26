@@ -64,7 +64,7 @@ const headerData = {
             target: '/mmes-sorties/patrimoine'
         },
         {
-            text: 'les équipements srportifs et de loisir',
+            text: 'patrimoine',
             target: '/mes-sorties/patrimoine'
         }
     ]
