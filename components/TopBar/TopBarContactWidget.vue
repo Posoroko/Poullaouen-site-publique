@@ -13,7 +13,7 @@
         </div>
 
         <div class="locmaria flex justifyBetween alignCenter">
-            <p class="city">Locmarie-Berrien</p>
+            <p class="city">Locmaria-Berrien</p>
 
             <p class="iconBox">
                 <span class="icon">call</span>

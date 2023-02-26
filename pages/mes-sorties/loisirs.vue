@@ -49,6 +49,10 @@
             <div class="loisirCardsBox flex justifyCenter gap20 wrap">
                 <CardsTallMain title="Aéro-Plass - ULM" cardImage="/images/loisirs/ULM.jpg" :localImage="true">
                     <div class="bottomBox">
+                        <p class="contentRow flex">
+                                <span class="icon">location_on</span>
+                                <span class="textContent">Stancou - Poullaouen</span>
+                            </p>
                         <p class="paragraph">
                             Laurent PLASSART, pilote chevronné, instructeur
                             et professionnel depuis plus de 25 ans et titulaire
@@ -60,13 +64,10 @@
                                 <li>Photos Aériennes</li> 
                             </ul>
                         </p>
-                        <p class="contentRow flex">
-                            <span class="icon">location_on</span>
-                            <span class="textContent">Stancou - Poullaouen</span>
-                        </p>
+                        
                         <p class="contentRow flex">
                             <span class="icon">call</span>
-                            <span class="textContent">02.98.93.37.36</span>
+                            <span class="textContent">02 98 93 37 36</span>
                         </p>
                     </div>
                 </CardsTallMain>
@@ -85,7 +86,7 @@
                         </p>
                         <p class="contentRow flex">
                             <span class="icon">call</span>
-                            <span class="textContent">02.98.99.82.49</span>
+                            <span class="textContent">02 98 99 82 49</span>
                         </p>
                     </div>
                 </CardsTallMain>

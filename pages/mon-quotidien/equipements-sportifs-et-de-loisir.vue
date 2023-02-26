@@ -30,7 +30,7 @@
                         </p>
 
                         <div class="salleTouristiqueLinkBox" v-if="item.title == 'La salle touristique'">
-                            <p>informations et réservation :
+                            <p>Informations et réservation :
 
                                 <NuxtLink to="" class="externalLink">
                                     contacter la mairie de Poullaouen
