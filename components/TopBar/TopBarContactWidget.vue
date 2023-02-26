@@ -1,29 +1,30 @@
 <template>
-    <NuxtLink to="#footerInfo" class="contactWidgetBox flex column justifyCenter pointer">
+    <a href="#footerInfo" class="contactWidgetBox flex column justifyCenter pointer">
         <div class="poullaouen flex justifyBetween alignCenter">
             <p class="city">Poullaouen</p>
 
-            <div class="iconBox">
-                <a href="" class="icon">call</a>
+            <p class="iconBox">
+                <span class="icon">call</span>
 
-                <a href="" class="icon">mail</a>
+                <span class="icon">mail</span>
 
-                <a href="" class="icon">schedule</a>
-            </div>
+                <span class="icon">schedule</span>
+            </p>
         </div>
 
         <div class="locmaria flex justifyBetween alignCenter">
             <p class="city">Locmarie-Berrien</p>
 
-            <div class="iconBox">
-                <a href="" class="icon">call</a>
+            <p class="iconBox">
+                <span class="icon">call</span>
 
-                <a href="" class="icon">mail</a>
+                <span class="icon">mail</span>
 
-                <a href="" class="icon">schedule</a>
-            </div>
+                <span class="icon">schedule</span>
+            </p>
         </div>
-    </NuxtLink>
+    </a>
+
     <a href="#footerInfo" id="tinyWidget" class="icon tinyWidget">
         question_mark
     </a>

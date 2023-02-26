@@ -9,13 +9,13 @@
                 <span class="wayne">Menu de la cantine</span>
             </NuxtLink>
 
-            <NuxtLink class="brown_action roundBtn pointer flex column alignCenter justifyCenter">
+            <NuxtLink to="/ma-mairie/documents/bulletin-municipal" class="brown_action roundBtn pointer flex column alignCenter justifyCenter">
                 <span class="icon">newspaper</span>
                 
                 <span class="wayne">Bulletin <br> municipal</span>
             </NuxtLink>
 
-            <NuxtLink class="dark_blue_action roundBtn pointer flex column alignCenter justifyCenter">
+            <NuxtLink to="/mon-quotidien/commerces-et-entreprises" class="dark_blue_action roundBtn pointer flex column alignCenter justifyCenter">
                 <span class="icon">shopping_cart</span>
                 
                 <span class="wayne">Horraire des commerces</span>
