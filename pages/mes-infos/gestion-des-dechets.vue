@@ -295,7 +295,7 @@ const headerData = {
             target: `/mes-infos/gestion-des-dechets`
         },
         {
-            text: 'eau et assainissement',
+            text: 'gestion des déchets',
             target: `/mes-infos/gestion-des-dechets`
         }
     ]

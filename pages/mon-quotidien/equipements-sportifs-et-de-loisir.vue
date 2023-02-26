@@ -9,7 +9,7 @@
 
         <div v-for="item in equipementsData" :key="item.id">
             <SectionMainSloted :data="{ title: item.title, image: item.image }">
-                <div class="slotedSectionTextBox flex column justifyCenter gap 20 pad20">
+                <div class="slotedSectionTextBox flex column justifyBetween pad20">
                     <div class="topTextBox">
                         <h2 class="sectionSubtitle">
                             <span v-if="item.subTitle">{{ item.subTitle }}</span>
@@ -30,7 +30,7 @@
                         </p>
 
                         <div class="salleTouristiqueLinkBox" v-if="item.title == 'La salle touristique'">
-                            <p>informations et réservation:
+                            <p>informations et réservation :
 
                                 <NuxtLink to="" class="externalLink">
                                     contacter la mairie de Poullaouen
@@ -92,7 +92,7 @@ const headerData = {
             target: '/mo-quotidien/les-equipements-sportifs-et-de-loisir'
         },
         {
-            text: 'les équipements srportifs et de loisir',
+            text: 'les équipements sportifs et de loisir',
             target: '/ma-mairie/les-equipements-sportifs-et-de-loisir'
         }
     ]

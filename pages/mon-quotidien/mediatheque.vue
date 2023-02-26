@@ -107,7 +107,7 @@ const headerData = {
             target: '/mon-quetidien/mediatheque'
         },
         {
-            text: 'mon quotidien',
+            text: 'médiathèque',
             target: '/mon-quetidien/mediatheque'
         }
     ]

@@ -59,7 +59,7 @@ const headerData = {
             target: '/'
         },
         {
-            text: 'Equipe municipale',
+            text: 'équipe municipale',
             target: '/ma-mairie/equipe-municipale'
         }
     ]
@@ -67,7 +67,7 @@ const headerData = {
 
 </script>
 
-<style scoped>
+<style>
 .equipeMain  {
     gap: 50px;
 }
