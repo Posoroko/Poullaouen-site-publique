@@ -22,7 +22,7 @@
 
                     <div class="infoBox">
                         <p> <span class="icon">location_on</span> Avenue Général De Gaulle - Poullaouen</p>
-                        <p> <span class="icon">call</span> 02.98.93.55.90</p>
+                        <p> <span class="icon">call</span> 02 98 93 55 90</p>
                         <p> <span class="icon">language</span> <a class="externalLink" href="https://www.lesnotairesdupoher.notaires.fr">www.lesnotairesdupoher.notaires.fr</a></p>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
 
                     <div class="infoBox">
                         <p> <span class="icon">location_on</span> Avenue Général De Gaulle - Poullaouen </p>
-                        <p> <span class="icon">call</span> 02.98.93.04.42</p>
+                        <p> <span class="icon">call</span> 02 98 93 04 42</p>
                         <p> <span class="icon">language</span> <a class="externalLink" href="https://www.tourismecarhaix.poher.com">www.tourismecarhaix.poher.com</a></p>
                     </div>
                 </div>
@@ -86,7 +86,7 @@
     
                         <div class="infoBox">
                             <p> <span class="icon">location_on</span> Maison des Services Publics - Place de la Tour d’Auvergne - Carhaix</p>
-                            <p> <span class="icon">call</span> 02.98.95.99.54</p>
+                            <p> <span class="icon">call</span> 02 98 95 99 54</p>
                             <p> <span class="icon">language</span> <a class="externalLink" href="https://www.soliha.fr">www.soliha.fr</a></p>
                         </div>
                     </div>
@@ -118,7 +118,7 @@ const headerData = {
             target: `/mes-infos/se-loger`
         },
         {
-            text: 'Se loger',
+            text: 'se loger',
             target: `/mes-infos/se-loger`
         }
     ]
