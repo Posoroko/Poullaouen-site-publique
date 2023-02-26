@@ -19,7 +19,7 @@
 
         <SectionMainSloted  :data="sectionData_1">
             <div class="textBox  flex column justifyBetween">
-                <h3 class="subtitle">ce qu'ils font</h3>
+                <h3 class="subtitle">Ce qu'ils font</h3>
 
             
                 <p class="content page-text">
@@ -39,7 +39,7 @@
             
                 <div class="bottomContent">
                     <p class="moreinfo flex  italic">
-                        contact: 02 98 97 96 95
+                        Contact : 02 98 97 96 95
                     </p>
                 </div>
             </div>
