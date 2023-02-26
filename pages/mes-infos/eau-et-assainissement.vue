@@ -11,7 +11,7 @@
             <SectionMainSloted
                 :data="{ title: 'Eau', image: '/images/eau/fontaine.jpg', imageAlt: 'Eau et assainissement', localImage: true }">
                 <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap10">
-                    <h4>Quel est le rôle du PLU ?</h4>
+                    
                     <p>
                         <b>Véolia</b> est le délégataire choisi par Poullaouen pour le service eau.
                     </p>
@@ -41,9 +41,9 @@
 
                     <div class="infoBox">
                         <p> <span class="icon">location_on</span>Mairie de Poullaouen</p>
-                        <p> <span class="icon">call</span>02.98.93.50.76</p>
+                        <p> <span class="icon">call</span>02 98 93 50 76</p>
                         <p> <span class="icon">location_on</span>Mairie de Locmaria-Berrien</p>
-                        <p> <span class="icon">call</span>02.98.99.73.09</p>
+                        <p> <span class="icon">call</span>02 98 99 73 09</p>
                     </div>
 
                 </div>
@@ -72,7 +72,7 @@
 
                     <div class="infoBox">
                         <p> <span class="icon">location_on</span>SPANC - Maison des services au public - Carhaix</p>
-                        <p> <span class="icon">call</span>02.98.99.48.03</p>
+                        <p> <span class="icon">call</span>02 98 99 48 03</p>
                         <p> <span class="icon">location_on</span><a class="externalLink" href="mailto:spanc@poher.bzh">spanc@poher.bzh</a></p>
                         <p> <span class="icon">call</span><a class="externalLink" href="https://www.poher.bzh">www.poher.bzh</a></p>
                     </div>
