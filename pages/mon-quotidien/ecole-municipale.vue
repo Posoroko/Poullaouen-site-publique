@@ -63,6 +63,7 @@
         </div>
     </main>
 </template>
+
 <script setup>
 
 const appConfig = useAppConfig();
@@ -92,6 +93,7 @@ const headerData = {
         }
     ]
 }
+
 const applyStyleClasses_utils = () => {
 
     const sections = document.querySelectorAll('.sectionBoxSloted')

@@ -1,5 +1,5 @@
 <template>
-    <div class="tallCard whiteTallCard flex column">
+    <div class="tallCard whiteTallCard h100 flex column">
         <div class="topBox flex justifyCenter alignCenter column gap10">
             <h2 class="">{{ title }}</h2>
             <h3 class="">{{ subtitle }}</h3>
@@ -35,7 +35,7 @@ const props = defineProps({
 
 </script>
 
-<style>
+<style scoped>
 .tallCard {
     width: 400px;
     border-radius: 10px;
@@ -84,4 +84,5 @@ const props = defineProps({
 .tallCard .bottomBox .contentRow {
     gap: 10px;
 }
+
 </style>

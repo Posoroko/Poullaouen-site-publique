@@ -1,5 +1,5 @@
 <template>
-    <div class="contactWidgetBox flex column justifyCenter">
+    <NuxtLink to="#footerInfo" class="contactWidgetBox flex column justifyCenter pointer">
         <div class="poullaouen flex justifyBetween alignCenter">
             <p class="city">Poullaouen</p>
 
@@ -23,7 +23,7 @@
                 <a href="" class="icon">schedule</a>
             </div>
         </div>
-    </div>
+    </NuxtLink>
     <a href="#footerInfo" id="tinyWidget" class="icon tinyWidget">
         question_mark
     </a>

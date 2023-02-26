@@ -3,31 +3,31 @@
         <SectionTitleBar title="En un clic" />
 
         <nav class="buttonBox flex alignCenter justifyEvenly mainWidth wrap">
-            <div class="blueBtn roundBtn pointer flex column alignCenter justifyCenter">
+            <NuxtLink to="/mon-quotidien/menu-cantine" class="dark_blue_action roundBtn pointer flex column alignCenter justifyCenter">
                 <p class="icon">restaurant</p>
 
                 <p class="wayne">Menu de la cantine</p>
-            </div>
+            </NuxtLink>
 
-            <NuxtLink class="brownBtn roundBtn pointer flex column alignCenter justifyCenter">
+            <NuxtLink class="brown_action roundBtn pointer flex column alignCenter justifyCenter">
                 <p class="icon">newspaper</p>
                 
                 <p class="wayne">Bulletin <br> municipal</p>
             </NuxtLink>
 
-            <NuxtLink class="blueBtn roundBtn pointer flex column alignCenter justifyCenter">
+            <NuxtLink class="dark_blue_action roundBtn pointer flex column alignCenter justifyCenter">
                 <p class="icon">shopping_cart</p>
                 
                 <p class="wayne">Horraire des commerces</p>
             </NuxtLink>
 
-            <NuxtLink to="/mes-sorties/chemins-de-randonnee" class="brownBtn roundBtn pointer flex column alignCenter justifyCenter">
+            <NuxtLink to="/mes-sorties/chemins-de-randonnee" class="brown_action roundBtn pointer flex column alignCenter justifyCenter">
                 <p class="icon">hiking</p>
                 
                 <p class="wayne">Chemins de randonnée</p>
             </NuxtLink>
 
-            <NuxtLink to="/actualites" class="blueBtn roundBtn pointer flex column alignCenter justifyCenter">
+            <NuxtLink to="/actualites" class="dark_blue_action roundBtn pointer flex column alignCenter justifyCenter">
                 <p class="icon">feed</p>
                 
                 <p class="wayne">actualités</p>

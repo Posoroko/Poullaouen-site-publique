@@ -8,13 +8,13 @@
 
         
 
-        <FilterBarMain :filters="assosData.filters" @updateFilter="moveSectionToFirstPosition" />
+        <FilterBarMain :filters="assosData.filters" @updateFilter="moveSectionToFirstPosition" :slugged="false" />
 
         <div class="content flext column" ref="content">
             <section class="w100" v-for="filter in assosData.filters" :key="filter" :id="filter">
                 <SectionTitleBar :title="filter" />
             
-                <div class="mainWidth flex justifyEvenly alignCenter wrap">
+                <div class="mainWidth flex justifyEvenly alignStretch wrap">
                     <div class="assoCard tallCard whiteTallCard flex column" v-for="asso in assosData.assos[filter]" :key="asso.id">
                         <div class="topBox flex justifyCenter alignCenter column gap10">
                             <h2 class="">{{ asso.name }}</h2>
@@ -89,6 +89,7 @@ const { data: assosData } = await useAsyncData(
         const assos = items.data
         
         const temp = {
+            filterSlugs: [],
             filters: [],
             assos: {}
         }
