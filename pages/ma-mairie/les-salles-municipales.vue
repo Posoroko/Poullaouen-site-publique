@@ -17,8 +17,8 @@
                         <h4 class="level0 marTop20">capacité</h4>
 
                         <ul class="flex marTop20">
-                            <li v-if="salle.sittings" class="level2 page-text" vif="salle.sitings">assis:  <b>{{ salle.sittings }}</b></li>
-                            <li v-if="salle.standings" class="level2 page-text" vif="salle.standings">debout: <b>{{ salle.standings }}</b></li>
+                            <li v-if="salle.sittings" class="level2 page-text" vif="salle.sitings">assis :  <b>{{ salle.sittings }}</b></li>
+                            <li v-if="salle.standings" class="level2 page-text" vif="salle.standings">debout : <b>{{ salle.standings }}</b></li>
                         </ul>
 
 
@@ -27,14 +27,14 @@
                             <h5 class="level1">poullaouennais</h5>
                             <ul>
                                 <li class="breadcrumbs-text level2"> 
-                                    <span v-if="salle.locals1">1 jour: &nbsp {{ salle.locals1 }}€ sans cuisine</span>
+                                    <span v-if="salle.locals1">1 jour : &nbsp {{ salle.locals1 }}€ sans cuisine</span>
                                     <span v-if="salle.locals1 && salle.localsKitchen1">&nbsp / &nbsp</span>
                                     <span v-if="salle.localsKitchen1"> 
                                         {{ salle.localsKitchen1 }}€ avec cuisine
                                     </span>
                                 </li>
                                 <li class="breadcrumbs-text level2"> 
-                                    <span v-if="salle.locals2">2 jours: &nbsp {{ salle.locals2 }}€ sans cuisine</span>
+                                    <span v-if="salle.locals2">2 jours : &nbsp {{ salle.locals2 }}€ sans cuisine</span>
                                     <span v-if="salle.locals2 && salle.localsKitchen2">&nbsp / &nbsp</span>
                                     <span v-if="salle.localsKitchen2"> 
                                         {{ salle.localsKitchen2 }}€ avec cuisine
@@ -48,14 +48,14 @@
                             <li>
                                 <ul>
                                     <li class="breadcrumbs-text level2">
-                                        <span v-if="salle.externs1">1 jour: &nbsp {{ salle.externs1 }}€ sans cuisine</span>
+                                        <span v-if="salle.externs1">1 jour : &nbsp {{ salle.externs1 }}€ sans cuisine</span>
                                         <span v-if="salle.externs1 && salle.externsKitchen1">&nbsp / &nbsp</span>
                                         <span v-if="salle.externsKitchen1">
                                             {{ salle.externsKitchen1 }}€ avec cuisine
                                         </span>
                                     </li>
                                     <li class="breadcrumbs-text level2">
-                                        <span v-if="salle.externs2">1 jour: &nbsp {{ salle.externs2 }}€ sans cuisine</span>
+                                        <span v-if="salle.externs2">2 jours : &nbsp {{ salle.externs2 }}€ sans cuisine</span>
                                         <span v-if="salle.externs2 && salle.externsKitchen2">&nbsp / &nbsp</span>
                                         <span v-if="salle.externsKitchen2">
                                             {{ salle.externsKitchen2 }}€ avec cuisine
