@@ -1,6 +1,6 @@
 <template>
     <section class="">
-        <SectionTitleBar title="En un click" />
+        <SectionTitleBar title="En un clic" />
 
         <nav class="buttonBox flex alignCenter justifyEvenly mainWidth wrap">
             <NuxtLink to="/mon-quotidien/menu-cantine" class="dark_blue_action roundBtn pointer flex column alignCenter justifyCenter">
@@ -18,7 +18,7 @@
             <NuxtLink to="/mon-quotidien/commerces-et-entreprises" class="dark_blue_action roundBtn pointer flex column alignCenter justifyCenter">
                 <span class="icon">shopping_cart</span>
                 
-                <span class="wayne">Horraire des commerces</span>
+                <span class="wayne">Horaires des commerces</span>
             </NuxtLink>
 
             <NuxtLink to="/mes-sorties/chemins-de-randonnee" class="brown_action roundBtn pointer flex column alignCenter justifyCenter">
@@ -30,7 +30,7 @@
             <NuxtLink to="/actualites" class="dark_blue_action roundBtn pointer flex column alignCenter justifyCenter">
                 <span class="icon">feed</span>
                 
-                <span class="wayne">actualités</span>
+                <span class="wayne">Actualités</span>
             </NuxtLink>
 
         </nav>
