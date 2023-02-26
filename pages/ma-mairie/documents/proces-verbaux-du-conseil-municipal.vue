@@ -128,7 +128,7 @@ const headerData = {
             target: '/'
         },
         {
-            text: 'ma-mairie',
+            text: 'ma mairie',
             target: '/ma-mairie'
         },
         {
