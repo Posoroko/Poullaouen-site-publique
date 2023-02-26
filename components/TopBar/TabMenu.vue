@@ -1,39 +1,39 @@
 <template>        
     
     <ul class="tabBox flex alignCenter">
-        <li class="tab pointer" name="mairie" @click.prevent="openMenu">
+        <li class="tab pointer" data-name="mairie" @click.prevent="openMenu">
             <p class="article">MA</p>
             
             <p class="name">MAIRIE</p>
         </li>
 
-        <div class="line"></div>
+        <li class="line"></li>
     
-        <li class="tab pointer" name="quotidien" @click.prevent="openMenu">
+        <li class="tab pointer" data-name="quotidien" @click.prevent="openMenu">
             <p class="article">MON</p>
     
             <p class="name">QUOTIDIEN</p>
         </li>
 
-        <div class="line"></div>
+        <li class="line"></li>
     
-        <li class="tab pointer" name="sorties" @click.prevent="openMenu">
+        <li class="tab pointer" data-name="sorties" @click.prevent="openMenu">
             <p class="article">MES</p>
     
             <p class="name">SORTIES</p>
         </li>
 
-        <div class="line"></div>
+        <li class="line"></li>
     
-        <li class="tab pointer" name="infos" @click.prevent="openMenu">
+        <li class="tab pointer" data-name="infos" @click.prevent="openMenu">
             <p class="article">MES</p>
     
             <p class="name">INFOS</p>
         </li>
 
-        <div class="line"></div>
+        <li class="line"></li>
     
-        <li class="tab pointer" name="demarches" @click.prevent="openMenu">
+        <li class="tab pointer" data-name="demarches" @click.prevent="openMenu">
             <p class="article">MES</p>
     
             <p class="name">DEMARCHES</p>
@@ -72,8 +72,8 @@ const props = defineProps({
 
 
 const openMenu = (e) => {
-    menuContent.value = props.links[e.currentTarget.getAttribute('name')]  
-    menuImageRef.value = `/images/menu/${e.currentTarget.getAttribute('name')}.jpg`
+    menuContent.value = props.links[e.currentTarget.getAttribute('data-name')]  
+    menuImageRef.value = `/images/menu/${e.currentTarget.getAttribute('data-name')}.jpg`
 
     if(!menuIsOpen.value) {
         menuIsOpen.value = true
