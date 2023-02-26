@@ -25,7 +25,7 @@
 .modalCloseBtn {
     font-size: 30px;
     font-weight: 300;
-    position: adsolute;
+    position: absolute;
     top: 0;
     right: 0;
 }

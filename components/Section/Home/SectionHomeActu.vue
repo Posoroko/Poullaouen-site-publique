@@ -9,8 +9,8 @@
                         <p>publié le: {{ new Date(actu.date_created).toLocaleDateString() }}</p>
                     </div>
 
-                    <p class="actuContent" v-html="actu.content">
-                    </p>
+                    <div class="actuContent" v-html="actu.content">
+                    </div>
                     
                     <div class="moreInfoBox flex column justifyCenter">
                         <p class="moreInfo" v-if="actu.moreInfo">{{ actu.moreInfo }}</p>
