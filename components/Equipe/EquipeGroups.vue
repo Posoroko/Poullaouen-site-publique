@@ -9,7 +9,7 @@
                     <CardsTallMain  :title="group.name" :subtitle="group.boss" :cardImage="group.image" :localImage="false">
                         <div class="bottomBox">    
                            <div v-if="group.membresElus.length">
-                                <h4>élus:</h4>
+                                <h4>élus :</h4>
                                 <ul class="membersList flex wrap">
                                     <li v-for="member in group.membresElus" :key="member.id" class="groupMember">
                                         {{ member.Equipe_id.firstName.slice(0, 1) }}. {{ member.Equipe_id.lastName.toUpperCase() }}
@@ -18,7 +18,7 @@
                            </div>
 
                            <div v-if="group.membresNonElus.length">
-                                <h4>non-élus:</h4>
+                                <h4>non élus :</h4>
                                 <ul class="membersList flex wrap">
                                     <li v-for="member in group.membresNonElus" :key="member.id" class="groupMember">
                                         {{ member.Non_elu_id.firstName.slice(0, 1) }}. {{ member.Non_elu_id.lastName.toUpperCase() }}
@@ -48,7 +48,7 @@
 
                             <div class="flex justifyBetween">
                                 <div v-if="group.titulairesNonElus.length">
-                                    <h4>titulaire<span v-if="group.titulairesNonElus.length > 1">s</span>non élu<span v-if="group.titulairesNonElus.length > 1">s</span> :</h4>
+                                    <h4>titulaire<span v-if="group.titulairesNonElus.length > 1">s</span> non élu<span v-if="group.titulairesNonElus.length > 1">s</span> :</h4>
                                     <ul class="membersList flex wrap">
                                         <li v-for="member in group.titulairesNonElus" :key="member.id" class="groupMember">
                                             {{ member.Non_elu_id.firstName.slice(0, 1) }}. {{ member.Non_elu_id.lastName.toUpperCase() }}
@@ -57,7 +57,7 @@
                                 </div>
                                 
                                 <div v-if="group.suppleantsNonElus.length">
-                                    <h4>suppléant<span v-if="group.suppleantsNonElus.length > 1">s</span>non élu<span v-if="group.suppleantsNonElus.length > 1">s</span> :</h4>
+                                    <h4>suppléant<span v-if="group.suppleantsNonElus.length > 1">s</span> non élu<span v-if="group.suppleantsNonElus.length > 1">s</span> :</h4>
                                     <ul class="membersList flex wrap">
                                         <li v-for="member in group.suppleantsNonElus" :key="member.id" class="groupMember">
                                             {{ member.Non_elu_id.firstName.slice(0, 1) }}. {{ member.Non_elu_id.lastName.toUpperCase() }}

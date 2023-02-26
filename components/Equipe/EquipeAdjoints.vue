@@ -1,7 +1,7 @@
 <template>
     <section class="w100">
         <section class="adjoints">
-            <SectionTitleBar title="Les adjoints et déléguée municipaux" />
+            <SectionTitleBar title="Les adjoints et délégués municipaux" />
 
             <div class="stripe marTop20 relative">
                 <!-- <SectionPieds /> -->
@@ -53,7 +53,7 @@ const headerData = {
             target: '/'
         },
         {
-            text: 'Equipe municipale',
+            text: 'équipe municipale',
             target: '/ma-mairie/equipe-municipale'
         }
     ]
