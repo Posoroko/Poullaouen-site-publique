@@ -15,7 +15,7 @@
                     </p>
 
                     <div class="infoBox">
-                        <p> <b>directueur :</b> Anthony LE CAM - 02.98.93.55.06</p>
+                        <p> <b>Directeur :</b> Anthony LE CAM - 02 98 93 55 06</p>
                     </div>
                 </div>
             </SectionMainSloted>
@@ -28,7 +28,7 @@
                     </p>
 
                     <p class="flex column gap10">
-                        <b>Les tarifs:</b>
+                        <b>Les tarifs :</b>
                         <span>
                             Les tarifs varient en fonction du quotient familial des familles.
                         </span>
@@ -37,7 +37,7 @@
                     
 
                     <div class="infoBox">
-                        <p> <b>renseignements :</b> Marie - 02.98.93.50.76</p>
+                        <p> <b>Renseignements :</b> Marie - 02 98 93 50 76</p>
                     </div>
                 </div>
             </SectionMainSloted>
@@ -52,7 +52,7 @@
                     </p>
 
                     <div class="infoBox marTop20">
-                        <p> <span class="icon">call</span> 02.98.99.48.00</p>
+                        <p> <span class="icon">call</span> 02 98 99 48 00</p>
                         <p> <span class="icon">email</span> <a href="emailto: transport@poher.com"></a> </p>
                         <p> <span class="icon">language</span> <a href="https://https://www.poher.bzh/accueil_poher/les_services/mobilites/le_transport_scolaire">poher communauté</a> </p>
                     </div>
