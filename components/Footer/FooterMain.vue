@@ -1,111 +1,114 @@
 <template>
-    <footer class="relative">
-        <div class="mainWidth  flex justifyCenter alignStart gap20 h100">
-            <div class="leftBox" id="footerInfo">
-                    <address>
-                        <p class="poullaouen">
-                            Poullaouen
-                        </p>
+    <footer class="relative flex alignCenter r ">
+        <div class="mainWidth flex justifyCenter alignEvenly wrap h100 b">
+            <div class="phoneBox footerBox flex justifyCenter alignCenter wrap gap5">
+                <p class="phoneBtn flex column justifyCenter alignCenter">
+                    <span class="icon">call</span>
+                    <span class="city">Poullaouen</span>
+                </p>
 
-                        <p class="address flex alignCenter"> 
-                            <span class="icon adIcon">pin_drop</span> 
-                            <span>1 Place de la Mairie - 29246 Poullaouen</span>
-                        </p>
+                <p class="phoneBtn flex column justifyCenter alignCenter">
+                    <span class="icon">call</span>
+            
+                    <span class="city">Locmaria-Berrien</span>
+                </p>
 
-                        <p class="tel">
-                            <span class="icon adIcon">call</span>
-                            <span>02.98.93.50.76</span>
-                        </p>
+                <p class="phoneBtn flex column justifyCenter alignCenter">
+                    <span class="icon">mail</span>
+        
+                    <span class="city">Poullaouen</span>
+                </p>
+        
+                <p class="phoneBtn flex column justifyCenter alignCenter">
+                    <span class="icon">mail</span>
+        
+                    <span class="city">Locmaria-Berrien</span>
+                </p>
+            </div>
 
-                        <p class="mail"> 
-                            <span class="icon adIcon">alternate_email</span>
-                            <span>mairie-de-poullaouen@wanadoo.fr</span>
-                        </p>
+            <div class="leftBox r footerBox flex column justifyEnd" id="footerInfo">
+                <address>
+                    <p class="poullaouen">
+                        Poullaouen
+                    </p>
 
-                        <p class="horraire">
-                            <span class="icon adIcon">schedule</span>
-                            <span>Du lundi au vendredi de 8h30 à 12h et de 13h30 à 17h30</span>
-                             <br>
-                            <span>Fermée au public le mercredi après-midi</span>
-                        </p>
-                    </address>
-                </div>
+                    <p class="address flex alignCenter"> 
+                        <span class="icon adIcon">pin_drop</span> 
 
-                <div class="centerBox">
-                    <!-- <img class="logo" src="/images/logo-poullaouen.svg" alt="logo de la Commune de Poullaouën"> -->
+                        <span>1 Place de la Mairie - 29246 Poullaouen</span>
+                    </p>
 
-                    <div class="phoneBox flex wrap">
-                        <p class="phoneBtn">
-                            <span class="icon">call</span>
-                            <span class="city">Poullaouen</span>
-                        </p>
+                    <p class="tel">
+                        <span class="icon adIcon">call</span>
 
-                        <p class="phoneBtn">
-                            <span class="icon">call</span>
-                        
-                            <span class="city">Locmaria-Berrien</span>
-                        </p>
+                        <span>02.98.93.50.76</span>
+                    </p>
 
-                        <p class="phoneBtn">
-                            <span class="icon">mail</span>
-                    
-                            <span class="city">Poullaouen</span>
-                        </p>
-                    
-                        <p class="phoneBtn">
-                            <span class="icon">mail</span>
-                    
-                            <span class="city">Locmaria-Berrien</span>
-                        </p>
-                    </div>
+                    <p class="mail"> 
+                        <span class="icon adIcon">alternate_email</span>
 
-                    <a href="www.facebook.com/mairiedepoullaouen" class="button flex alignCenter justifyCenter faceBookBtn">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="width100 iconBox">
-                            <path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
-                        </svg>
-                        <span class="centered">Suivez-nous!</span>
-                    </a>
-                
-                    <a href="mailto:mairie-de-poullaouen@wanadoo.fr" class="button centered">
-                        Envoyer un mail
+                        <span>mairie-de-poullaouen@wanadoo.fr</span>
+                    </p>
 
-                    </a>
-                    <a href="www.poher-communauté.com" class="button centered">
-                        Poher communauté
-                    </a>
+                    <p class="horraire">
+                        <span class="icon adIcon">schedule</span>
 
-                </div>
+                        <span>Du lundi au vendredi de 8h30 à 12h et de 13h30 à 17h30</span>
+                            <!-- <br> -->
+                        <span>Fermée au public le mercredi après-midi</span>
+                    </p>
+                </address>
+            </div>
 
-                <div class="rightBox">
-                    <address>
-                        <p class="poullaouen">
-                            Locmaria-Berrien
-                        </p>
+            <div class="centerBox footerBox flex">
+                <!-- <img class="logo" src="/images/logo-poullaouen.svg" alt="logo de la Commune de Poullaouën"> -->
+                <a href="www.facebook.com/mairiedepoullaouen" class="button flex alignCenter justifyCenter faceBookBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="width100 iconBox">
+                        <path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
+                    </svg>
 
-                        <p class="address flex alignCenter">
-                            <span class="icon adIcon">pin_drop</span>
-                            <span>3 rue Ti Ker - 29690 Locmaria- Berrien</span>
-                        </p>
+                    <span class="centered">Suivez-nous!</span>
+                </a>
+            
+                <a href="mailto:mairie-de-poullaouen@wanadoo.fr" class="button centered">
+                    Envoyer un mail
 
-                        <p class="tel">
-                            <span class="icon adIcon">call</span>
-                            <span>02.98.99.73.09</span>
-                        </p>
+                </a>
 
-                        <p class="mail"> 
-                            <span class="icon adIcon">alternate_email</span>
-                            <span>mairie.locmaria-berrien@orange.fr</span>
-                        </p>
+                <a href="www.poher-communauté.com" class="button centered">
+                    Poher communauté
+                </a>
+            </div>
 
-                        <p class="horraire"> 
-                            <span class="icon adIcon">schedule</span>
-                            <span>Lundi de 8h30 à 12h</span>
-                            <br>
-                            <span>Jeudi de 13h30 à 17h30</span>
-                        </p>
-                    </address>
+            <div class="rightBox footerBox  flex column justifyEnd">
+                <address>
+                    <p class="poullaouen">
+                        Locmaria-Berrien
+                    </p>
 
-                </div>
+                    <p class="address flex alignCenter">
+                        <span class="icon adIcon">pin_drop</span>
+                        <span>3 rue Ti Ker - 29690 Locmaria- Berrien</span>
+                    </p>
+
+                    <p class="tel">
+                        <span class="icon adIcon">call</span>
+                        <span>02.98.99.73.09</span>
+                    </p>
+
+                    <p class="mail"> 
+                        <span class="icon adIcon">alternate_email</span>
+                        <span>mairie.locmaria-berrien@orange.fr</span>
+                    </p>
+
+                    <p class="horraire"> 
+                        <span class="icon adIcon">schedule</span>
+                        <span>Lundi de 8h30 à 12h</span>
+                        <br>
+                        <span>Jeudi de 13h30 à 17h30</span>
+                    </p>
+                </address>
+            </div>
         </div> 
         <img class="r absolute vague" src="/images/vague.svg">
     </footer>
@@ -125,10 +128,8 @@ footer section {
 }
 
 .phoneBox {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    flex-wrap: wrap;
+    width: 60%;
+    margin: 0 auto;
 }
 @media (min-width: 719px) {
     .phoneBox {
@@ -136,8 +137,7 @@ footer section {
     }
 }
 .phoneBox {
-    width: 60%;
-    margin: 0 auto;
+    
 }
 .phoneBox .phoneBtn {
     width: 150px;
@@ -146,11 +146,6 @@ footer section {
     background-color: var(--green);
     padding: 20px 0;
     border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* gap: 5px; */
 }
 .phoneBox .phoneBtn .icon {
     color: white;
@@ -162,19 +157,6 @@ footer section {
     color: white;
     font-size: 16px;
     text-align: center;
-}
-.leftBox,
-.rightBox {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-.leftBox *,
-.rightBox * {
-    color: var(--dark-blue);
-}
-.centerBox {
-    display: flex;
 }
 
 .poullaouen {
@@ -189,7 +171,7 @@ footer section {
 .horraire {
     font-size: 18px;
     font-style: normal;
-    padding-left: 50px;
+
     margin-top: 10px;
     display: block;
     position: relative;
@@ -197,15 +179,14 @@ footer section {
 
 .adIcon {
     font-style: normal;
-    position: absolute;
-    top: 0;
-    left: 0;
+    margin-right: 15px;
 }
 
 .centerBox .button {
-    height: 50px;
+    /* height: 50px; */
     color: white;
     background-color: var(--dark-blue);
+    padding: 10px 20px;
     border-radius: 25px;
     margin-top: 20px;
 }
@@ -286,7 +267,7 @@ footer section {
     .rightBox {
         width: 40%;
         order: 3;
-        padding-left: 40px;
+        /* padding-left: 40px; */
     }
 
     .logo {

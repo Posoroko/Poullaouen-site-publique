@@ -25,8 +25,9 @@
         </div>
     </a>
 
-    <a href="#footerInfo" id="tinyWidget" class="icon tinyWidget">
-        question_mark
+    <a href="#footerInfo" id="tinyWidget" class="tinyWidget flex gap10">
+        <span class="icon">call</span>
+        <span class="icon">email</span>
     </a>
  
 
@@ -57,20 +58,17 @@
     color: var(--light-blue);
     padding: 0 5px;
 }
-#tinyWidget {
-    color: white;
-}
+
 .tinyWidget {
-    height: 40px;
-    width: 40px;
+    
+    background-color: var(--dark-blue);
+    padding: 5px 7px;
+    border-radius: 10px;
+}
+.tinyWidget span {
     font-size: 20px;
     color: white;
-    background-color: var(--dark-blue);
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
 }
-
 @media (max-width: 999px) {
     .contactWidgetBox {
         display: none;
