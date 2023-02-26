@@ -9,7 +9,8 @@
             <img v-if="localImage && cardImage" :src="cardImage" :alt="cardImageAlt" class="objectFitCover">
             <img v-if="!localImage && cardImage" :src="`${directusAssets}${cardImage}?key=card500`" :alt="cardImageAlt" class="objectFitCover">
 
-            <div v-else class="icon shopIcon objectFitCover centered">storefront</div>
+            <div v-else class="icon placeholderIcon objectFitCover centered">storefront</div>
+            <!-- <div v-else class="icon placeholderIcon objectFitCover centered">diversity_3</div> -->
             
         </div>
 
@@ -29,7 +30,8 @@ const props = defineProps({
     subtitle: String,
     cardImage: String,
     localImage: Boolean,
-    cardImageAlt: String
+    cardImageAlt: String,
+    type: String
 })
 
 
@@ -71,7 +73,7 @@ const props = defineProps({
     padding-left: 50px;
 }
 
-.shopIcon {
+.placeholderIcon {
     font-size: 200px;
     color: rgb(166, 175, 177);
     background-color: #eaf0f1;

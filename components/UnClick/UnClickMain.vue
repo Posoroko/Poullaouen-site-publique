@@ -4,33 +4,33 @@
 
         <nav class="buttonBox flex alignCenter justifyEvenly mainWidth wrap">
             <NuxtLink to="/mon-quotidien/menu-cantine" class="dark_blue_action roundBtn pointer flex column alignCenter justifyCenter">
-                <p class="icon">restaurant</p>
+                <span class="icon">restaurant</span>
 
-                <p class="wayne">Menu de la cantine</p>
+                <span class="wayne">Menu de la cantine</span>
             </NuxtLink>
 
             <NuxtLink class="brown_action roundBtn pointer flex column alignCenter justifyCenter">
-                <p class="icon">newspaper</p>
+                <span class="icon">newspaper</span>
                 
-                <p class="wayne">Bulletin <br> municipal</p>
+                <span class="wayne">Bulletin <br> municipal</span>
             </NuxtLink>
 
             <NuxtLink class="dark_blue_action roundBtn pointer flex column alignCenter justifyCenter">
-                <p class="icon">shopping_cart</p>
+                <span class="icon">shopping_cart</span>
                 
-                <p class="wayne">Horraire des commerces</p>
+                <span class="wayne">Horraire des commerces</span>
             </NuxtLink>
 
             <NuxtLink to="/mes-sorties/chemins-de-randonnee" class="brown_action roundBtn pointer flex column alignCenter justifyCenter">
-                <p class="icon">hiking</p>
+                <span class="icon">hiking</span>
                 
-                <p class="wayne">Chemins de randonnée</p>
+                <span class="wayne">Chemins de randonnée</span>
             </NuxtLink>
 
             <NuxtLink to="/actualites" class="dark_blue_action roundBtn pointer flex column alignCenter justifyCenter">
-                <p class="icon">feed</p>
+                <span class="icon">feed</span>
                 
-                <p class="wayne">actualités</p>
+                <span class="wayne">actualités</span>
             </NuxtLink>
 
         </nav>

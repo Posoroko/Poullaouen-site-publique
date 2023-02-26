@@ -23,7 +23,9 @@
                         </div>
             
                         <div class="frame">
-                            <img :src="`${directusAssets}${asso.image}?key=card500`" :alt="asso.imageAlt" class="objectFitCover">
+                            <img v-if="asso.image" :src="`${directusAssets}${asso.image}?key=card500`" :alt="asso.imageAlt" class="objectFitCover">
+
+                            <div v-else class="icon shopIcon objectFitCover centered">diversity_3</div>
                         </div>
             
                         <div class="bottomBox flex column gap20 alignCenter justifyCenter">
@@ -153,6 +155,16 @@ onMounted(() => {
 </script>
 
 <style>
+
+/* 
+.public-view .container .title-box .logo img{
+    width: 100%;
+    
+    object-fit: cover;
+}
+
+*/
+
 .assoMain section {
     margin-top: 50px;
 }
@@ -192,5 +204,10 @@ onMounted(() => {
     width: 100%;
     justify-content: flexStart;
     gap: 30px
+}
+.placeholderIcon {
+    font-size: 200px;
+    color: rgb(166, 175, 177);
+    background-color: #eaf0f1;
 }
 </style>
