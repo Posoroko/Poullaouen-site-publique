@@ -1,6 +1,6 @@
 <template>
-    <footer class="relative flex alignCenter r ">
-        <div class="mainWidth flex justifyCenter alignEvenly wrap h100 b">
+    <footer class="relative flex">
+        <div class="footerContainer mainWidth flex justifyEvenly alignStart wrap h100 ">
             <div class="phoneBox footerBox flex justifyCenter alignCenter wrap gap5">
                 <p class="phoneBtn flex column justifyCenter alignCenter">
                     <span class="icon">call</span>
@@ -26,7 +26,7 @@
                 </p>
             </div>
 
-            <div class="leftBox r footerBox flex column justifyEnd" id="footerInfo">
+            <div class="leftBox footerBox flex column justifyEnd" id="footerInfo">
                 <address>
                     <p class="poullaouen">
                         Poullaouen
@@ -123,10 +123,6 @@ footer {
     padding-top: 300px;
     padding-bottom: 100px;
 }
-footer section {
-    gap: 40px;
-}
-
 .phoneBox {
     width: 60%;
     margin: 0 auto;
@@ -136,8 +132,8 @@ footer section {
         display: none;
     }
 }
-.phoneBox {
-    
+.footerContainer {
+    align-items: space-evenly;
 }
 .phoneBox .phoneBtn {
     width: 150px;
@@ -209,11 +205,6 @@ footer section {
         margin: auto;
     }
 
-    footer {
-        margin-top: 200px;
-        margin-bottom: 100px;
-    }
-
     .vague {
         display: none;
     }
@@ -245,14 +236,6 @@ footer section {
 }
 
 @media (min-width: 701px) and (max-width: 1199px) {
-    footer {
-        margin-top: 100px;
-    }
-
-    footer>section {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
 
     .vague {
         bottom: 0;
@@ -286,9 +269,6 @@ footer section {
 }
 
 @media (min-width: 1200px) {
-    footer {
-        margin-top: 100px;
-    }
 
     .vague {
         bottom: 0;
@@ -296,11 +276,7 @@ footer section {
 
     .leftBox,
     .rightBox {
-        width: 40%;
-    }
-
-    .rightBox {
-        padding-left: 40px;
+        width: 30%;
     }
 
     .centerBox {
