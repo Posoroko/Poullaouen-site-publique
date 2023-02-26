@@ -20,12 +20,17 @@
 .whiteSection  {
     fill: var(--brown);
 }
+.whiteSection .section-address-text {
+    color: var(--brown);
+}
 
 .sectionTitleBox {
     background-color: white;
 }
 
-
+.blueSection .section-address-text {
+    color: white;
+}
 .blueSection .sectionContent{
     background-color: var(--dark-blue);
 }
@@ -37,7 +42,9 @@
 }
 
 
-
+.brownSection .section-address-text {
+    color: white;
+}
 .brownSection .sectionContent{
     background-color: var(--brown);
 }
