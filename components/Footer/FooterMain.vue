@@ -41,7 +41,7 @@
                     <p class="tel">
                         <span class="icon adIcon">call</span>
 
-                        <span>02.98.93.50.76</span>
+                        <span>02 98 93 50 76</span>
                     </p>
 
                     <p class="mail"> 
@@ -93,7 +93,7 @@
 
                     <p class="tel">
                         <span class="icon adIcon">call</span>
-                        <span>02.98.99.73.09</span>
+                        <span>02 98 99 73 09</span>
                     </p>
 
                     <p class="mail"> 
