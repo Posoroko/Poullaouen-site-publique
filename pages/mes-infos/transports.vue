@@ -90,7 +90,7 @@
             </SectionMainSloted>
 
             <SectionMainSloted :data="{ title: 'Poher Plage', image: '/images/transports/plage.jpg', imageAlt: 'Poher plage', localImage: true }">
-                <div class="slotedSectionTextBox flex column justifyCenter pad20 gap10">
+                <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap10">
                     <p>
                         Chaque été, Poher communauté prévoit des navettes gratuites à destination des belles plages de la région Bretagne. Les plages
                         proposées sont surveillées, à proximité des commodités (boutiques, restauration, etc.) et jamais loin d’un sentier côtier, ce qui permet à
@@ -201,7 +201,8 @@
                     <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap10">
                         <h4>Aires de covoiturage</h4>
                         <p>
-                            Ehop est une association dont la mission est le développement du covoiturage du quotidien. Si aucun service de transport ne peut répondre à votre besoin de mobilité, l’association partenaire éhop vous accompagne dans la recherche d’un covoiturage.
+                            Poher communauté compte 3 aires de covoiturage recensées : La Villeneuve (Carhaix), Loch ar Lann (Kergloff) et Sainte Catherine 
+                            (Plounévézel) dont une, équipée d’une borne de recharge électrique (Villeneuve).
                         </p>
                     </div>
                 </SectionMainSloted>

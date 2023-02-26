@@ -9,7 +9,7 @@
         <div>
             <SectionMainSloted
                 :data="{ title: 'Le pass loisir', image: '/images/loisirs/cinema.jpg', imageAlt: 'Reciclag à Poullaouën', localImage: true }">
-                <div class="slotedSectionTextBox flex column justifyCenter pad20 gap10">
+                <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap10">
                     <p>
                         <h4>Profitez de tarifs réduits avec le «pass’ loisirs» !</h4>
                         Ce pass est accessible gratuitement à tous les habitants de Poher
