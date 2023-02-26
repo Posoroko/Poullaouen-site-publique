@@ -31,7 +31,7 @@ const links = {
             path: "/ma-mairie/documents/bulletin-municipal"
         },
         {
-            text: "Les procès verbaux du conseil muninicipal",
+            text: "Les procès verbaux du conseil municipal",
             path: "/ma-mairie/documents/proces-verbaux-du-conseil-municipal"
         },
         {
@@ -53,7 +53,7 @@ const links = {
             path: "/mon-quotidien/mediatheque"
         },
         {
-            text: "Les équipements sportifs et de loisirs",
+            text: "Les équipements sportifs et de loisir",
             path: "/mon-quotidien/equipements-sportifs-et-de-loisir"
         },
         {

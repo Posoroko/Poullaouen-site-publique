@@ -3,7 +3,7 @@
 
     <main class="mainPatrimoine">
         <p class="mainWidth intro-text">
-            La commune est riche en monuments historiques etpatrimoniaux. Vous pouvez les découvrir en parcourant les pages suivantes.
+            La commune est riche en monuments historiques et patrimoniaux. Vous pouvez les découvrir en parcourant les pages suivantes.
         </p>
 
         <nav class="patrimoineLinkBox flex wrap gap20 justifyEvenly mainWidth">

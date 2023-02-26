@@ -31,15 +31,15 @@
             </p>
         </SectionMainSloted>
 
-        <SectionMainSloted :data="{ title: 'Un accès gratuit à la culture', image: '/images/mediatheque/interieur2.jpg', localImage: true }">
+        <SectionMainSloted :data="{ title: 'Informations', image: '/images/mediatheque/interieur2.jpg', localImage: true }">
                 <div class="mediathequeBox flex column gap10 justifyCenter alignStart">
                                     <div class="contentRow w100 flex">
                                         <span class="icon">schedule</span>
     
                                         <ul class="textContent mediathequeSchedule w100 schedule">
-                                           <li class="w100"> <span>mercredi:</span> 10h30 - 12:30</li>
-                                           <li class="w100"><span>vendredi:</span> 16h30 - 18h30 (sauf suillet/aout)</li>
-                                           <li class="w100"><span>samedi:</span> 10h00 - 12h00</li> 
+                                           <li class="w100"> <span>Mercredi:</span> 10h30 - 12h30</li>
+                                           <li class="w100"><span>Vendredi:</span> 16h30 - 18h30 (sauf juillet/août)</li>
+                                           <li class="w100"><span>Samedi:</span> 10h00 - 12h00</li> 
                                         </ul>
                                     </div>
     
@@ -53,7 +53,7 @@
     
                                     <div class="contentRow flex">
                                         <span class="icon">call</span>
-                                            02.398.93.50.58
+                                            02 98 93 50 58
                                         <p class="textContent">
                                         </p>
                                     </div>
