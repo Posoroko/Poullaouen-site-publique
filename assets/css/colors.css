@@ -5,13 +5,13 @@
     --green-hovered: #4d7f02;
 
     --brown: #924c02;
-    --brown-hovered: #753d01;
+    --brown-hovered: #5f3100;
 
     --light-blue: #0183d5;
     --light-blue-hovered: #0069aa;
 
     --dark-blue: #002f4a;
-    --dark-blue-hovered: #014064;
+    --dark-blue-hovered: #065685;
 
     --black: rgb(20, 20, 20);
 
@@ -37,15 +37,29 @@
         box-shadow: var(--shadow);
         transition: var(--fadeQuick);
     }
+    .dark_blue_action {
+        background-color: var(--dark-blue);
+        transition: var(--fadeQuick);
+    }
+
+    .dark_blue_action:hover {
+        background-color: var(--dark-blue-hovered);
+        box-shadow: var(--shadow);
+        transition: var(--fadeQuick);
+    }
 
     .green_action {background-color: var(--green);}
     .green_action:hover {
         background-color: var(--green-hovered);
+        box-shadow: var(--shadow);
+        transition: var(--fadeQuick);
     }
 
     .brown_action {background-color: var(--brown);}
     .brown_action:hover {
         background-color: var(--brown-hovered);
+        box-shadow: var(--shadow);
+        transition: var(--fadeQuick);
     }
 
 

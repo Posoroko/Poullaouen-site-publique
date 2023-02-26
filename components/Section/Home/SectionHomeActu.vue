@@ -9,11 +9,11 @@
                         <p>publié le: {{ new Date(actu.date_created).toLocaleDateString() }}</p>
                     </div>
 
-                    <p class="actuContent r" v-html="actu.content">
-                    </p>
+                    <div class="actuContent" v-html="actu.content">
+                    </div>
                     
-                    <div class="moreInfoBox">
-                        <p class="moreInfo">{{ actu.moreInfo }}</p>
+                    <div class="moreInfoBox flex column justifyCenter">
+                        <p class="moreInfo" v-if="actu.moreInfo">{{ actu.moreInfo }}</p>
 
                         <div class="downloadBox" v-if="actu.file">
                             <p>
@@ -26,6 +26,11 @@
                 </div>
             </SectionMainSloted>
         </div>
+
+        <div class="centered agendaButtonBox">
+            <NuxtLink class="agendaButton mainWidth textAlignCenter brown_action" to="/actualites">voir toutes les actualités</NuxtLink>
+        </div>
+        
     </section>
 </template>
 <script setup>
@@ -91,6 +96,16 @@ onMounted(() => {
     padding: 5px;
     border-top: 1px solid var(--green);
     border-bottom: 1px solid var(--green);
-
 }
+
+.agendaButtonBox .agendaButton {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    transition: var(--fadeQuick);
+}
+
 </style>

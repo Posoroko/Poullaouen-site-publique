@@ -1,5 +1,5 @@
 <template>
-    <div class="tallCard whiteTallCard flex column">
+    <div class="tallCard whiteTallCard h100 flex column">
         <div class="topBox flex justifyCenter alignCenter column gap10">
             <h2 class="">{{ title }}</h2>
             <h3 class="">{{ subtitle }}</h3>
@@ -9,7 +9,8 @@
             <img v-if="localImage && cardImage" :src="cardImage" :alt="cardImageAlt" class="objectFitCover">
             <img v-if="!localImage && cardImage" :src="`${directusAssets}${cardImage}?key=card500`" :alt="cardImageAlt" class="objectFitCover">
 
-            <div v-else class="icon shopIcon objectFitCover centered">storefront</div>
+            <div v-else class="icon placeholderIcon objectFitCover centered">storefront</div>
+            <!-- <div v-else class="icon placeholderIcon objectFitCover centered">diversity_3</div> -->
             
         </div>
 
@@ -29,13 +30,14 @@ const props = defineProps({
     subtitle: String,
     cardImage: String,
     localImage: Boolean,
-    cardImageAlt: String
+    cardImageAlt: String,
+    type: String
 })
 
 
 </script>
 
-<style>
+<style scoped>
 .tallCard {
     width: 400px;
     border-radius: 10px;
@@ -71,7 +73,7 @@ const props = defineProps({
     padding-left: 50px;
 }
 
-.shopIcon {
+.placeholderIcon {
     font-size: 200px;
     color: rgb(166, 175, 177);
     background-color: #eaf0f1;
@@ -84,4 +86,5 @@ const props = defineProps({
 .tallCard .bottomBox .contentRow {
     gap: 10px;
 }
+
 </style>

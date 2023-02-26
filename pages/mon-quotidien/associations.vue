@@ -8,13 +8,13 @@
 
         
 
-        <FilterBarMain :filters="assosData.filters" @updateFilter="moveSectionToFirstPosition" />
+        <FilterBarMain :filters="assosData.filters" @updateFilter="moveSectionToFirstPosition" :slugged="false" />
 
         <div class="content flext column" ref="content">
             <section class="w100" v-for="filter in assosData.filters" :key="filter" :id="filter">
                 <SectionTitleBar :title="filter" />
             
-                <div class="mainWidth flex justifyEvenly alignCenter wrap">
+                <div class="mainWidth flex justifyEvenly alignStretch wrap">
                     <div class="assoCard tallCard whiteTallCard flex column" v-for="asso in assosData.assos[filter]" :key="asso.id">
                         <div class="topBox flex justifyCenter alignCenter column gap10">
                             <h2 class="">{{ asso.name }}</h2>
@@ -23,7 +23,9 @@
                         </div>
             
                         <div class="frame">
-                            <img :src="`${directusAssets}${asso.image}?key=card500`" :alt="asso.imageAlt" class="objectFitCover">
+                            <img v-if="asso.image" :src="`${directusAssets}${asso.image}?key=card500`" :alt="asso.imageAlt" class="objectFitCover">
+
+                            <div v-else class="icon shopIcon objectFitCover centered">diversity_3</div>
                         </div>
             
                         <div class="bottomBox flex column gap20 alignCenter justifyCenter">
@@ -89,6 +91,7 @@ const { data: assosData } = await useAsyncData(
         const assos = items.data
         
         const temp = {
+            filterSlugs: [],
             filters: [],
             assos: {}
         }
@@ -152,6 +155,16 @@ onMounted(() => {
 </script>
 
 <style>
+
+/* 
+.public-view .container .title-box .logo img{
+    width: 100%;
+    
+    object-fit: cover;
+}
+
+*/
+
 .assoMain section {
     margin-top: 50px;
 }
@@ -191,5 +204,10 @@ onMounted(() => {
     width: 100%;
     justify-content: flexStart;
     gap: 30px
+}
+.placeholderIcon {
+    font-size: 200px;
+    color: rgb(166, 175, 177);
+    background-color: #eaf0f1;
 }
 </style>

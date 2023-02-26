@@ -2,6 +2,17 @@
     <section class="filterStripe w100">
         <div class="mainWidth flex gap20 justifyEvenly alignCenter wrap">
             <div class="filter shadow pointer" 
+                v-if="slugged == true"
+                :name="filter.slug"
+                @click="handleFilterClick"
+                :class="{ active: activeFilter === filter.slug }"
+                v-for="filter in filters" 
+                :key="filter">
+                {{ filter.name }}
+            </div>
+
+            <div class="filter shadow pointer" 
+                v-if="slugged == false"
                 :name="filter"
                 @click="handleFilterClick"
                 :class="{ active: activeFilter === filter }"
@@ -17,7 +28,8 @@
 
 const props = defineProps({
     filters: Array,
-    activeFilter: String
+    activeFilter: String,
+    slugged: Boolean
 })
 
 const emit = defineEmits(['updateFilter'])

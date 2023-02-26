@@ -81,11 +81,11 @@ const headerData = {
         },
         {
             text: 'mes infos',
-            target: `/mes-infos/se-loger`
+            target: `/mes-infos/PLU`
         },
         {
-            text: 'Se loger',
-            target: `/mes-infos/se-loger`
+            text: 'PLU',
+            target: `/mes-infos/PLU`
         }
     ]
 }

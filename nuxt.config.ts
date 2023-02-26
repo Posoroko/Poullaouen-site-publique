@@ -28,7 +28,7 @@ export default defineNuxtConfig({
                     href: '/images/icon.png',
                 },
             ],
-            charset: 'utf-16',
+            charset: 'utf-8',
             viewport: 'width=500, initial-scale=1',
             title: 'Poullaouën',
             meta: [

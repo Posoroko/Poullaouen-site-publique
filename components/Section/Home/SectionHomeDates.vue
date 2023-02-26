@@ -26,7 +26,9 @@
                     </div>
                 </div>
             </div>
-            <NuxtLink to="/actualites">voir tout l'agenda</NuxtLink>
+            <div class="agendaButtonBox centered ">
+                <NuxtLink class="agendaButton mainWidth textAlignCenter" to="/agenda">voir tout l'agenda</NuxtLink>
+            </div>
         </div>
         
     </section>
@@ -76,47 +78,27 @@ onMounted(() => {
 
 </script>
 
-<style>
+<style scoped>
 .agendaStripe {
-    background: linear-gradient(90deg, rgba(0, 47, 74, 1) 0%, rgba(146, 76, 2, 1) 100%);
-    padding: 30px;
-}
+     background: linear-gradient(90deg, rgba(0, 47, 74, 1) 0%, rgba(146, 76, 2, 1) 100%);
+     padding: 30px;
+     margin-top: 30px;
+ }
 
-.dateCard {
-    width: 400px;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: var(--shadow);
-    border-radius: 10px;
-}
-.dateCard .topBox {
-    
-}
-.dateCard .topBox .title {
+.agendaButtonBox .agendaButton {
     font-size: 20px;
     font-weight: 600;
-}
-.dateCard .topBox .location,
-.dateCard .topBox .date,
-.dateCard .topBox .organiser {
-    font-size: 15px;
-    color: var(--brown);
-    padding-left: 5px;
-}
-.dateCard .middleBox {
-    margin: 10px 0;
-    aspect-ratio: 5/4;
+    color: var(--dark-blue);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    background-color: #fff;
+    transition: var(--fadeQuick);
 }
 
-.dateCard .middleBox .frame {
-    width: 100%;
-    height: 100%;
-}
-.dateCard .middleBox .frame img {
-    border-radius: 5px;
-    /* box-shadow: var(--shadow); */
-}
-.dateCard .bottom .content{
-    font-size: 14px;
+.agendaButtonBox .agendaButton:hover {
+    background-color: #a7bcca;
+    box-shadow: var(--shadow);
+    transition: var(--fadeQuick);
 }
 </style>

@@ -1,56 +1,28 @@
 <template>
     <HeaderMain :data="headerData" />
 
-    <main class="assoMain w100 flex column" ref="assoMain">
-        <p class="intro-text mainWidth">
-            Envie de séjourner à la campagne? Découvrez nos différentes possibilités d’hébergement.
-        </p>
+    <main>
 
+        <section v-for="filter in rooms.filters" :key="filter.id">
 
+            <SectionTitleBar  :title="filter.name" />
 
-        <FilterBarMain :filters="itemsData.filters" @updateFilter="moveSectionToFirstPosition" />
-
-        <div class="content flext column" ref="content">
-            <section>
-                <SectionTitleBar title="Les gîtes" />
-
-                <!-- <div class="mainWidth flex justifyEvenly wrap gap20">
-
-                    <div v-for="item in itemsData.Gîtes" :key="item.id">
-                        <CardsTallMain :title="item.name" :subtitle="item.subType" :cardImage="item.image"
-                            :cardImageAlt="item.imageAlt">
-
-                            <div class="bottomBox flex column gap10 justifyCenter alignStart">
-                                <div class="contentRow flex" v-if="item.hours">
-                                    <span class="icon">schedule</span>
-                                    <p class="textContent"> {{ item.hours }} </p>
-                                </div>
-                                <div class=" contentRow flex" v-if="item.adress">
-                                    <span class="icon">location_on</span>
-                                    <p class="textContent"> {{ item.adress }} </p> 
-                                </div>
-                                <div class="contentRow flex" v-if="item.phone">
-                                    <span class="icon">call</span>
-                                    <p class="textContent"> {{ item.phone }} </p>
-                                </div>
-                                <div class="contentRow flex" v-if="item.email">
-                                    <span class="icon">mail</span>
-                                    <p class="textContent"> {{ item.email }} </p>
-                                </div>
-                                <div class="contentRow flex" v-if="item.website">
-                                    <span class="icon">language</span>
-                                    <p class="textContent"> {{ item.website }} </p>
-                                </div>
-                            </div>
-
-                        </CardsTallMain>
+            <div class="roomsContent mainWidth flex justifyCenter wrap gap20">
+                <CardsTallMain v-for="room in rooms.items[filter.slug]" :key="room.id" :title="room.name" :cardImage="room.image" :cardImageAlt="room.imageAlt" :localImage="false">
+                    <div class="cardContent flex column gap10">
+                        <p> <span class="icon">location_on</span> <span>{{ room.adress }}</span> </p>
+                        <p> <span class="icon">call</span> <span>{{ room.phone }}</span> </p>
+                        <p> <span class="icon">email</span> <span>{{ room.email }}</span> </p>
+                        <p> <span class="icon">language</span> <a :href="`https://${room.website}`">{{ room.website }}</a> </p>
                     </div>
-
-                </div> -->
-            </section>
-        </div>
+                </CardsTallMain>
+            </div>
+            
+            
+        </section>
 
     </main>
+
 </template>
  
 <script setup>
@@ -74,29 +46,31 @@ const directusItems = appConfig.directus.items;
 const fetchOptions = {
     server: true,
     params: {
-        fields: 'id, name, type, image, imageAlt, subType, subType, hours, adress, phone, email, website'
+        fields: 'id, name, type, type.slug, type.displayType, image, imageAlt, hours, adress, phone, email, website, subType.slug, subType.displaySubtype' 
     }
 }
 // ?filter[image][_neq]=null
-const { data: itemsData } = await useAsyncData(
+const { data: rooms } = await useAsyncData(
     "associations",
     async () => {
-        const itemsData = await $fetch(`${directusItems}Commerces?[filter][subType][_eq]=Gîtes`, fetchOptions)
-        const items = itemsData.data
+        const _items = await $fetch(`${directusItems}Commerces?[filter][type][slug][_eq]=hebergement`, fetchOptions) 
+        const items = _items.data
 
         const temp = {
-            filters: [], 
+            slugs: [],
+            filters: [],
             items: {}
         }
+        
         items.forEach(item => {
-
-            if (!temp.filters.includes(item.subType)) {
-                temp.filters.push(item.subType)
-                temp.items[item.subType] = []
+            if (!temp.slugs.includes(item.subType.slug)) {
+                temp.slugs.push(item.subType.slug)
+                temp.filters.push({ name: item.subType.displaySubtype, slug: item.subType.slug })
+                temp.items[item.subType.slug] = []
             }
-            temp.items[item.subType].push(item) 
+            temp.items[item.subType.slug].push(item)  
         })
-        console.log(temp)
+
         return temp
     }
     ,
@@ -112,19 +86,19 @@ const headerData = {
             alt: 'Commerce de proximité à Poullaouen',
         }
     ],
-    title: 'Les commerces et entreprises',
+    title: 'Se loger, se restaurer',
     path: [
         {
             text: 'accueil',
             target: '/'
         },
         {
-            text: 'mon quotidien',
-            target: '/mon-quotidien/commerces-et-entreprises'
+            text: 'mes sorties',
+            target: '/mes-sorties/se-loger-se-restaurer'
         },
         {
-            text: 'commerces et entreprises',
-            target: '/mon-quotidien/commerces-et-entreprises'
+            text: 'Se loger, se restaurer',
+            target: '/mes-sorties/se-loger-se-restaurer'
         }
     ]
 }
@@ -147,8 +121,14 @@ onMounted(() => {
 
 </script>
 
-<style>
+<style scoped>
 .assoMain section {
     margin-top: 50px;
+}
+.roomsContent {
+    margin-top: 50px;
+}
+.cardContent {
+    padding: 20px;
 }
 </style>

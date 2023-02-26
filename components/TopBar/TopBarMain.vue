@@ -78,10 +78,10 @@ const links = {
             text: "Se loger, se restaurer",
             path: "/mes-sorties/se-loger-se-restaurer"
         },
-        {
-            text: "Village fleuri",
-            path: "/mes-sorties/village-fleuri"
-        },
+        // {
+        //     text: "Village fleuri",
+        //     path: "/mes-sorties/village-fleuri"
+        // },
         {
             text: "Loisirs",
             path: "/mes-sorties/loisirs"

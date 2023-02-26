@@ -8,16 +8,21 @@
 
 
 
-        <FilterBarMain :filters="itemsData.filters" @updateFilter="moveSectionToFirstPosition" />
+        <FilterBarMain :filters="itemsData.filters" @updateFilter="moveSectionToFirstPosition" :slugged="true" />
+
 
         <div class="content flext column" ref="content">
-            <section class="w100" v-for="filter in itemsData.filters" :key="filter" :id="filter">
-                <SectionTitleBar :title="filter" />
+            <section class="w100" v-for="filter in itemsData.filters" :key="filter.slug" :id="filter.slug">
+                <SectionTitleBar :title="filter.name" />
 
-                <div class="mainWidth flex justifyEvenly wrap gap20">
+                <div class="mainWidth flex justifyEvenly alignStretch wrap gap20 marTop20">
 
-                    <div v-for="item in itemsData.items[filter]" :key="item.id">
-                        <CardsTallMain :title="item.name" :subtitle="item.subType[0]" :cardImage="item.image" :cardImageAlt="item.imageAlt">
+                    <div v-for="item in itemsData.items[filter.slug]" :key="item.id">
+                        <CardsTallMain 
+                            :title="item.name" 
+                            :subtitle="item.subType[0]" 
+                            :cardImage="item.image" 
+                            :cardImageAlt="item.imageAlt">
                             
                             <div class="bottomBox flex column gap10 justifyCenter alignStart">
                                 <div class="contentRow flex" v-if="item.hours">
@@ -92,7 +97,7 @@ const directusItems = appConfig.directus.items;
 const fetchOptions = {
     server: true,
     params: {
-        fields: 'id, name, type, image, imageAlt, subType, subType, hours, adress, phone, email, website'
+        fields: 'id, name, type, type.displayType, type.slug, image, imageAlt, subType, subType, hours, adress, phone, email, website'
     }
 }
 // ?filter[image][_neq]=null
@@ -103,16 +108,21 @@ const { data: itemsData } = await useAsyncData(
         const items = itemsData.data
 
         const temp = {
+            filterSlugs: [],
             filters: [],
             items: {}
         }
         items.forEach(item => {
 
-            if (!temp.filters.includes(item.type)) {
-                temp.filters.push(item.type)
-                temp.items[item.type] = []
+            if (!temp.filterSlugs.includes(item.type.slug)) {
+                temp.filterSlugs.push(item.type.slug)
+                temp.filters.push({
+                    name: item.type.displayType,
+                    slug: item.type.slug
+                })
+                temp.items[item.type.slug] = []
             }
-            temp.items[item.type].push(item)
+            temp.items[item.type.slug].push(item)
         })
         return temp
     }
@@ -164,11 +174,13 @@ onMounted(() => {
 
 </script>
 
-<style>
+<style scoped>
 .assoMain section {
     margin-top: 50px;
 }
-
+.bottomBox {
+    padding: 20px;
+}
 
 
 </style>

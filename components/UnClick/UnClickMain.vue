@@ -3,34 +3,49 @@
         <SectionTitleBar title="En un click" />
 
         <nav class="buttonBox flex alignCenter justifyEvenly mainWidth wrap">
-            <div class="blueBtn roundBtn pointer flex column alignCenter justifyCenter">
-                <p class="icon">restaurant</p>
+            <NuxtLink to="/mon-quotidien/menu-cantine" class="dark_blue_action roundBtn pointer flex column alignCenter justifyCenter">
+                <span class="icon">restaurant</span>
 
-                <p class="wayne">Menu de la cantine</p>
-            </div>
-
-            <NuxtLink class="brownBtn roundBtn pointer flex column alignCenter justifyCenter">
-                <p class="icon">newspaper</p>
-                
-                <p class="wayne">Bulletin <br> municipal</p>
+                <span class="wayne">Menu de la cantine</span>
             </NuxtLink>
 
-            <NuxtLink class="blueBtn roundBtn pointer flex column alignCenter justifyCenter">
-                <p class="icon">shopping_cart</p>
+            <NuxtLink to="/ma-mairie/documents/bulletin-municipal" class="brown_action roundBtn pointer flex column alignCenter justifyCenter">
+                <span class="icon">newspaper</span>
                 
+<<<<<<< HEAD
                 <p class="wayne">Horaires des commerces</p>
             </NuxtLink>
 
             <NuxtLink class="brownBtn roundBtn pointer flex column alignCenter justifyCenter">
                 <p class="icon">hiking</p>
-                
-                <p class="wayne">Chemins de randonnée</p>
+=======
+                <span class="wayne">Bulletin <br> municipal</span>
             </NuxtLink>
 
+            <NuxtLink to="/mon-quotidien/commerces-et-entreprises" class="dark_blue_action roundBtn pointer flex column alignCenter justifyCenter">
+                <span class="icon">shopping_cart</span>
+>>>>>>> ceffb4e930b70cce61d782573c7f8c1bfa0f9f2b
+                
+                <span class="wayne">Horraire des commerces</span>
+            </NuxtLink>
+
+<<<<<<< HEAD
             <NuxtLink class="blueBtn roundBtn pointer flex column alignCenter justifyCenter">
                 <p class="icon">feed</p>
                 
                 <p class="wayne">Actualités</p>
+=======
+            <NuxtLink to="/mes-sorties/chemins-de-randonnee" class="brown_action roundBtn pointer flex column alignCenter justifyCenter">
+                <span class="icon">hiking</span>
+                
+                <span class="wayne">Chemins de randonnée</span>
+            </NuxtLink>
+
+            <NuxtLink to="/actualites" class="dark_blue_action roundBtn pointer flex column alignCenter justifyCenter">
+                <span class="icon">feed</span>
+                
+                <span class="wayne">actualités</span>
+>>>>>>> ceffb4e930b70cce61d782573c7f8c1bfa0f9f2b
             </NuxtLink>
 
         </nav>
