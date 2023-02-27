@@ -9,7 +9,7 @@
         <div v-for="salle in salles" :key="salle.id" >
             <SectionMainSloted :data="{ title: salle.name, image: salle.image}">
                 <div class="textBox h100 flex column justifyCenter">
-                    <h3 class="subtitle">{{ salle.address }}</h3>
+                    <h3 class="section-address-text">{{ salle.adress }}</h3>
 
                     <div class="page-text" v-html="salle.content"></div>
 
@@ -146,7 +146,7 @@ onMounted(() => {
 })
 </script>
 
-<style>
+<style scoped>
 .level0 {
     border-bottom: 1px solid green
 }
