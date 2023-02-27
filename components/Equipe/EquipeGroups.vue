@@ -3,72 +3,71 @@
     <section class="w100" v-if="groups">
         <div class="groups" v-for="type in groupTypes" :key="type.id" :id="type.id">
             <SectionTitleBar :title="type.name" />
+ 
+            <div class="content mainWidth flex justifyCenter wrap gap20">
+                <CardsTallMain  v-for="group in groups[type.id]" :key="group.id"  :title="group.name" :subtitle="group.boss" :cardImage="group.image" :localImage="false">
+                    <div class="tallCardBottomBox">    
+                        <div v-if="group.membresElus.length">
+                            <h4>élus :</h4>
+                            <ul class="membersList flex wrap">
+                                <li v-for="member in group.membresElus" :key="member.id" class="groupMember">
+                                    {{ member.Equipe_id.firstName.slice(0, 1) }}. {{ member.Equipe_id.lastName.toUpperCase() }}
+                                </li>
+                            </ul>
+                        </div>
 
-            <div class="content mainWidth flex justifyCenter alignStretch wrap gap20">
-                <div class="flex alignStretch" v-for="group in groups[type.id]" :key="group.id">
-                    <CardsTallMain  :title="group.name" :subtitle="group.boss" :cardImage="group.image" :localImage="false">
-                        <div class="bottomBox">    
-                           <div v-if="group.membresElus.length">
-                                <h4>élus :</h4>
+                        <div v-if="group.membresNonElus.length">
+                            <h4>non élus :</h4>
+                            <ul class="membersList flex wrap">
+                                <li v-for="member in group.membresNonElus" :key="member.id" class="groupMember">
+                                    {{ member.Non_elu_id.firstName.slice(0, 1) }}. {{ member.Non_elu_id.lastName.toUpperCase() }}
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="flex justifyBetween">
+                            <div v-if="group.titulairesElus.length">
+                                <h4>titulaire<span v-if="group.titulairesElus.length > 1">s</span> élu<span v-if="group.titulairesElus.length > 1">s</span> :</h4>
                                 <ul class="membersList flex wrap">
-                                    <li v-for="member in group.membresElus" :key="member.id" class="groupMember">
+                                    <li v-for="member in group.titulairesElus" :key="member.id" class="groupMember">
                                         {{ member.Equipe_id.firstName.slice(0, 1) }}. {{ member.Equipe_id.lastName.toUpperCase() }}
                                     </li>
                                 </ul>
-                           </div>
-
-                           <div v-if="group.membresNonElus.length">
-                                <h4>non élus :</h4>
+                            </div>
+                            
+                            <div v-if="group.suppleantsElus.length">
+                                <h4>suppléant<span v-if="group.suppleantsElus.length > 1">s</span> élu<span v-if="group.suppleantsElus.length > 1">s</span> :</h4>
                                 <ul class="membersList flex wrap">
-                                    <li v-for="member in group.membresNonElus" :key="member.id" class="groupMember">
+                                    <li v-for="member in group.suppleantsElus" :key="member.id" class="groupMember">
+                                        {{ member.Equipe_id.firstName.slice(0, 1) }}. {{ member.Equipe_id.lastName.toUpperCase() }}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="flex justifyBetween">
+                            <div v-if="group.titulairesNonElus.length">
+                                <h4>titulaire<span v-if="group.titulairesNonElus.length > 1">s</span> non élu<span v-if="group.titulairesNonElus.length > 1">s</span> :</h4>
+                                <ul class="membersList flex wrap">
+                                    <li v-for="member in group.titulairesNonElus" :key="member.id" class="groupMember">
                                         {{ member.Non_elu_id.firstName.slice(0, 1) }}. {{ member.Non_elu_id.lastName.toUpperCase() }}
                                     </li>
                                 </ul>
                             </div>
-
-                            <div class="flex justifyBetween">
-                                <div v-if="group.titulairesElus.length">
-                                    <h4>titulaire<span v-if="group.titulairesElus.length > 1">s</span> élu<span v-if="group.titulairesElus.length > 1">s</span> :</h4>
-                                    <ul class="membersList flex wrap">
-                                        <li v-for="member in group.titulairesElus" :key="member.id" class="groupMember">
-                                            {{ member.Equipe_id.firstName.slice(0, 1) }}. {{ member.Equipe_id.lastName.toUpperCase() }}
-                                        </li>
-                                    </ul>
-                                </div>
-                                
-                                <div v-if="group.suppleantsElus.length">
-                                    <h4>suppléant<span v-if="group.suppleantsElus.length > 1">s</span> élu<span v-if="group.suppleantsElus.length > 1">s</span> :</h4>
-                                    <ul class="membersList flex wrap">
-                                        <li v-for="member in group.suppleantsElus" :key="member.id" class="groupMember">
-                                            {{ member.Equipe_id.firstName.slice(0, 1) }}. {{ member.Equipe_id.lastName.toUpperCase() }}
-                                        </li>
-                                    </ul>
-                                </div>
+                            
+                            <div v-if="group.suppleantsNonElus.length">
+                                <h4>suppléant<span v-if="group.suppleantsNonElus.length > 1">s</span> non élu<span v-if="group.suppleantsNonElus.length > 1">s</span> :</h4>
+                                <ul class="membersList flex wrap">
+                                    <li v-for="member in group.suppleantsNonElus" :key="member.id" class="groupMember">
+                                        {{ member.Non_elu_id.firstName.slice(0, 1) }}. {{ member.Non_elu_id.lastName.toUpperCase() }}
+                                    </li>
+                                </ul>
                             </div>
-
-                            <div class="flex justifyBetween">
-                                <div v-if="group.titulairesNonElus.length">
-                                    <h4>titulaire<span v-if="group.titulairesNonElus.length > 1">s</span> non élu<span v-if="group.titulairesNonElus.length > 1">s</span> :</h4>
-                                    <ul class="membersList flex wrap">
-                                        <li v-for="member in group.titulairesNonElus" :key="member.id" class="groupMember">
-                                            {{ member.Non_elu_id.firstName.slice(0, 1) }}. {{ member.Non_elu_id.lastName.toUpperCase() }}
-                                        </li>
-                                    </ul>
-                                </div>
-                                
-                                <div v-if="group.suppleantsNonElus.length">
-                                    <h4>suppléant<span v-if="group.suppleantsNonElus.length > 1">s</span> non élu<span v-if="group.suppleantsNonElus.length > 1">s</span> :</h4>
-                                    <ul class="membersList flex wrap">
-                                        <li v-for="member in group.suppleantsNonElus" :key="member.id" class="groupMember">
-                                            {{ member.Non_elu_id.firstName.slice(0, 1) }}. {{ member.Non_elu_id.lastName.toUpperCase() }}
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                         
                         </div>
-                    </CardsTallMain>
-                </div>
+                        
+                    </div>
+                </CardsTallMain>
+
             </div>
         </div>
     </section>
@@ -102,7 +101,6 @@ const { data: groups } = await useAsyncData(
     "groups",
     async () => {
         const items = await $fetch(`${directusItems}Delegations`, fetchOptions)
-        console.log(items.data)
         const sortedGroups = {
             delegation: [],
             commission: [] 
@@ -141,41 +139,6 @@ onMounted(() => {
 .content {
     margin-top: 50px;
 }
-
-.groupCard {
-    width: min(95vw, 450px);
-}
-
-.groups .stripe .content .card {
-    width: min(480px, 95%);
-    
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-}
-
-
-.groups .stripe .content .card .frame {
-    width: 100%;
-    aspect-ratio: 1/1;
-}
-
-.groups .stripe .content .card .topBox,
-.groups .stripe .content .card .roleDetail {
-    padding: 10px;
-}
-
-
-
-.groups .stripe .content .card .topBox .name {
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.groups .stripe .content .card .topBox .role {
-    font-size: 14px;
-    font-weight: 300;
-    font-style: italic;
-}
 .bottomBox * h4 {
     font-size: 14px;
     font-weight: 500;
@@ -191,7 +154,7 @@ onMounted(() => {
     margin-right: 5px;
     display: inline;
 }
-.groupCard:nth-child(1),
+/* .groupCard:nth-child(1),
 .groupCard:nth-child(4) {
     background-color: var(--dark-blue);
 }
@@ -210,5 +173,5 @@ onMounted(() => {
 }
 .groupCard:nth-child(3) * {
     color: #fff;
-}
+} */
 </style>

@@ -34,15 +34,15 @@
                         </span>
                     </p>
 
-                    
-
                     <div class="infoBox">
                         <p> <b>Renseignements :</b> Marie - 02 98 93 50 76</p>
                     </div>
                 </div>
             </SectionMainSloted>
 
-            <EcoleMenu />
+            <EcoleMenu class="desktopMenu" />
+
+            <EcoleMenuTel class="telMenu" />
 
             <SectionMainSloted
                 :data="{ title: 'Le transport scolaire', image: '/images/ecole/transport.jpg', imageAlt: 'Eau et assainissement', localImage: true }">
@@ -117,4 +117,24 @@ onMounted(() => {
 li {
     list-style: disc;
     margin-left: 40px;
-}</style>
+}
+
+@media (max-width: 900px) {
+    .telMenu {
+        display: block;
+    }
+    .desktopMenu {
+        display: none;
+    }
+}
+@media (min-width: 900px) {
+    .telMenu {
+        display: none;
+    }
+    .desktopMenu {
+        display: block;
+    }
+}
+
+
+</style>

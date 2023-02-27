@@ -28,7 +28,7 @@
         </div>
 
         <div class="centered agendaButtonBox">
-            <NuxtLink class="agendaButton mainWidth textAlignCenter brown_action" to="/actualites">voir toutes les actualités</NuxtLink>
+            <NuxtLink class="agendaButton textAlignCenter brown_action" to="/actualites">voir toutes les actualités</NuxtLink>
         </div>
         
     </section>

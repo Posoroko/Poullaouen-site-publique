@@ -54,7 +54,7 @@
             </div>
 
 
-            <img class="menuBackdrop" src="/images/ecole/visuel-taches-de-peinture.svg" alt="">
+            <img class="menuBackdrop" src="/images/ecole/taches.png" alt="">
         </div>
         
     </section>
@@ -128,6 +128,9 @@ onMounted(() => {
 .menuSection {
     padding: 50px 0;
 }
+.menuBigBox {
+    padding: 30px;
+}
 .menuDashboard .button {
     color: white;
     background-color: var(--green);
@@ -154,10 +157,10 @@ onMounted(() => {
 
 .box {
     height: 50vh;
-    padding: 30px;
+    margin-bottom: 50px;
 }
 .menuCol {
-    width: 18%;
+    width: 17%;
     height: 100%;
 }
 .menuCol .cell {
@@ -189,6 +192,8 @@ onMounted(() => {
     position: absolute;
     top: 0;
     left: 0;
+    height: 100%;
+    width: 100%;
     z-index: -1;
     opacity: 0.9;
 }

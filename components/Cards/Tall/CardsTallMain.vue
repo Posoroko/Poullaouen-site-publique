@@ -39,7 +39,8 @@ const props = defineProps({
 
 <style scoped>
 .tallCard {
-    width: 400px;
+    width: min(100%, 400px);
+    min-height: 550px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: var(--shadow);
@@ -51,7 +52,9 @@ const props = defineProps({
     overflow: hidden;
 }
 
-
+.tallCard .topBox {
+    min-height: 80px;
+}
 .tallCard .topBox h2 {
     font-size: 20px;
     font-weight: 500;

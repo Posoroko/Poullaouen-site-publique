@@ -6,32 +6,38 @@
     <FooterMain />
 
     <dialog id="masterModal">
-        <span class="modalCloseBtn icon">close</span>
+        <span class="modalNode modalCloseBtn absolute icon pointer" @click="closeModal">
+            close
+        </span>
     </dialog>
 </template>
 
 <script setup>
-
+const closeModal = () => {
+    const modal = document.getElementById('masterModal')
+    modal.close()
+}
 
 </script>
 
 <style>
 #masterModal {
-    padding: 10vw;
+    max-width: 95vw;
+    max-height: 90vh;
+    padding: 3vw;
     margin: auto;
     outline: none;
     /* position: relative; */
 }
 .modalCloseBtn {
-    font-size: 30px;
-    font-weight: 300;
-    position: absolute;
-    top: 0;
-    right: 0;
+    font-size: 40px;
+    background-color: #fff;
+    top: 10px;
+    right: 10px;
 }
-#masterModal * {
+/* #masterModal * {
     object-fit: contain;
-}
+} */
 #masterModal::backdrop {
     background-color: rgba(0, 0, 0, 0.314);
 }

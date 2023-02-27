@@ -1,8 +1,8 @@
 <template>
     <HeaderMain :data="headerData" />
 
-    <main class="mainPatrimoine">
-        <p class="mainWidth intro-text">
+    <main class="mainPatrimoine w100">
+        <p class="mainWidth intro-text ">
             La commune est riche en monuments historiques et patrimoniaux. Vous pouvez les découvrir en parcourant les pages suivantes.
         </p>
 
@@ -85,10 +85,9 @@ onMounted(() => {
 </script>
 
 <style>
-.mainPatrimoine .intro-text {
-    margin: 100px 0;
+.patrimoineLinkBox {
+    margin-top: 50px;
 }
-
 .patrimoineLink .frame{
     width: 15vw;
     aspect-ratio: 1/1;

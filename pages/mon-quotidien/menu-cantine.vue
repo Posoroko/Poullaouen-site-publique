@@ -3,7 +3,9 @@
 
     <main class="mainEcole">
 
-        <EcoleMenu />
+        <EcoleMenu class="desktopMenu" />
+
+        <EcoleMenuTel class="telMenu" />
 
     </main>
 </template>
@@ -62,4 +64,23 @@ onMounted(() => {
 li {
     list-style: disc;
     margin-left: 40px;
-}</style>
+}
+
+@media (max-width: 900px) {
+    .telMenu {
+        display: block;
+    }
+    .desktopMenu {
+        display: none;
+    }
+}
+@media (min-width: 900px) {
+    .telMenu {
+        display: none;
+    }
+    .desktopMenu {
+        display: block;
+    }
+}
+
+</style>

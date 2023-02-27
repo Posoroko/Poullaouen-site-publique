@@ -23,7 +23,7 @@
                     <div class="infoBox">
                         <p> <span class="icon">location_on</span> Avenue Général De Gaulle - Poullaouen</p>
                         <p> <span class="icon">call</span> 02 98 93 55 90</p>
-                        <p> <span class="icon">language</span> <a class="externalLink" href="https://www.lesnotairesdupoher.notaires.fr">www.lesnotairesdupoher.notaires.fr</a></p>
+                        <p> <span class="icon">language</span> <a class="externalLink" href="https://lesnotairesdupoher.notaires.fr">www.lesnotairesdupoher.notaires.fr</a></p>
                     </div>
                 </div>
             </SectionMainSloted>

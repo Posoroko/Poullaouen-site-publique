@@ -41,16 +41,16 @@ const appConfig = useAppConfig();
 const directusItems = appConfig.directus.items;
 
 const pubTypes = ref([{
-    plur: 'arrêtés municipaux',
-    sing: 'arrêté municipal',
+    plur: 'Arrêtés municipaux',
+    sing: 'Arrêté municipal',
     id: 'arretes'
 }, {
-    plur: 'délibérations du conseil municipal',
-    sing: 'délibération du conseil municipal',
+    plur: 'Délibérations du conseil municipal',
+    sing: 'Délibération du conseil municipal',
     id: 'deliberations'
 }, {
-    plur: 'listes de délibérations',
-    sing: 'liste de délibérations',
+    plur: 'Listes de délibérations',
+    sing: 'Liste de délibérations',
     id: 'listes'
 }])
 

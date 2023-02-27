@@ -22,13 +22,21 @@
 
 const showInModal = (e) => {
     const modal = document.getElementById('masterModal')
+    let children = modal.children
+    console.table(children)
 
-    while (modal.firstChild) {
-        modal.removeChild(modal.firstChild);
+    for (const child of children) {
+        if (!child.classList.contains('modalNode')) {
+            modal.removeChild(child)
+        }
     }
 
-    const img = e.currentTarget.cloneNode()
-    modal.appendChild(img)
+    const _img = document.createElement('img')
+    _img.src = e.currentTarget.src.slice(0, e.currentTarget.src.indexOf("?"))
+    _img.style.maxWidth = "80vw"
+    _img.style.maxHeight = "80vh"
+
+    modal.appendChild(_img)
     modal.showModal()
 }
 

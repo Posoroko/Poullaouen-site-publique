@@ -129,3 +129,27 @@
  .dateCard .bottom .content {
      font-size: 14px;
  }
+
+ 
+
+ /* tall cards (assos, business, delegations */
+
+ .blueTallCard {
+     background-color: var(--dark-blue);
+ }
+
+ .blueTallCard {
+     background-color: var(--dark-blue);
+ }
+
+ .brownTallCard {
+     background-color: var(--brown);
+ }
+
+ .blueTallCard *,
+ .brownTallCard * {
+     color: white;
+ }
+ .tallCardBottomBox {
+     padding: 20px;
+ }

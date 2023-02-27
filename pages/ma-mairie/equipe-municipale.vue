@@ -69,6 +69,7 @@ const headerData = {
 
 <style>
 .equipeMain  {
+    padding-top: 50px;
     gap: 50px;
 }
 </style>

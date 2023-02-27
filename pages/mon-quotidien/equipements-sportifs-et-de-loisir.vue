@@ -15,7 +15,7 @@
                             <span v-if="item.subTitle">{{ item.subTitle }}</span>
                         </h2>
 
-                        <p class="address">
+                        <p class="address section-address-text">
                             {{ item.address }}
                         </p>
                     </div>

@@ -110,7 +110,7 @@
                 </address>
             </div>
         </div> 
-        <img class="r absolute vague" src="/images/vague.svg">
+        <img class="absolute vague" src="/images/vague.svg">
     </footer>
 </template>
 
@@ -196,6 +196,7 @@ footer {
     color: white;
 }
 .vague {
+    opacity: 0.7;
     z-index: -1;
 }
 

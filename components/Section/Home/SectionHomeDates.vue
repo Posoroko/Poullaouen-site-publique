@@ -13,9 +13,7 @@
                     </div>
 
                     <div class="middleBox centered w100">
-                        <div class="frame">
-                            <img class="objectFitContained" :src="`${directusAssets}${date.image}?key=card500`" :alt="date.imageAlt">
-                        </div>
+                        <img class="pointer" :src="`${directusAssets}${date.image}?key=full500`" :alt="date.imageAlt"  @click="showInModal">
                     </div>
 
                     <div class="bottomBox">
@@ -27,13 +25,32 @@
                 </div>
             </div>
             <div class="agendaButtonBox centered ">
-                <NuxtLink class="agendaButton mainWidth textAlignCenter" to="/agenda">voir tout l'agenda</NuxtLink>
+                <NuxtLink class="agendaButton textAlignCenter" to="/agenda">voir tout l'agenda</NuxtLink>
             </div>
         </div>
         
     </section>
 </template>
 <script setup>
+const showInModal = (e) => {
+    const modal = document.getElementById('masterModal')
+    let children = modal.children
+
+    for (const child of children) {
+        if (!child.classList.contains('modalNode')) {
+            modal.removeChild(child)
+        }
+    }
+
+    const _img = document.createElement('img')
+    _img.src = e.currentTarget.src
+    _img.src = e.currentTarget.src.slice(0, e.currentTarget.src.indexOf("?"))
+    _img.style.maxWidth = "80vw"
+    _img.style.maxHeight = "80vh"
+
+    modal.appendChild(_img)
+    modal.showModal()
+}
 
 const props = defineProps({
     limit: String
@@ -100,5 +117,17 @@ onMounted(() => {
     background-color: #a7bcca;
     box-shadow: var(--shadow);
     transition: var(--fadeQuick);
+}
+
+.dateCardFrame {
+    width: 100%;
+    height: 250px;
+}
+img {
+    max-width: 100%;
+    max-height: 250px;
+    /* object-fit: contain; */
+    border-radius: 5px;
+    box-shadow: var(--shadow);
 }
 </style>

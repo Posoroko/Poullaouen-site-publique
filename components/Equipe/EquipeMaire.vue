@@ -129,9 +129,12 @@ const headerData = {
 }
 
 .maire .stripe .footBox {
-    height: 150%;
-    width: 150%;
+    height: 135%;
+    width: 100%;
     z-index: -1;
+}
+.maire .stripe .footBox *{
+    fill: var(--brown);
 }
 
 .sectionTitleBox {
