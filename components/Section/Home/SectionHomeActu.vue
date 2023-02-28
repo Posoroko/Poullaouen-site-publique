@@ -6,7 +6,7 @@
                 <div class="slottedContent h100 flex column justifyCenter gap20">
                     <div class="flex column gap10">
                         <h4 class="sectionContentTitle">{{ actu.title }}</h4>
-                        <p>publié le: {{ new Date(actu.date_created).toLocaleDateString() }}</p>
+                        <p>Publié le : {{ new Date(actu.date_created).toLocaleDateString() }}</p>
                     </div>
 
                     <div class="actuContent" v-html="actu.content">
