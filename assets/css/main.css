@@ -1,6 +1,9 @@
 :root {
     --top-bar-height: 5vh;
     --main-width: min(100%, 1300px);
+
+    /* cell height for school schedule */
+    --shallow-height: 50px;
 }
 
 
@@ -157,5 +160,4 @@
  .topGreen {
      margin-top: 1px solid var(--green);
  }
-
 

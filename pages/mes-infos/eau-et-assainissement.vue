@@ -17,11 +17,11 @@
                     </p>
 
                     <div class="infoBox">
-                        <p> <span class="icon">location_on</span>Service client</p>
+                        <p> <span class="icon">location_on</span> Service client</p>
                         <p> <span class="icon">call</span> 0969 323 529</p>
                         <p> <span class="icon">schedule</span> 8h-18h du lundi au vendredi</p>
                         <p> <span class="icon">emergency</span> Service urgence 7j/7 - 24h/24</p>
-                        <p> <span class="icon">language</span> <a class="externalLink" href="https://alecob.jimdofree.com">www.alecob.jimdofree.com</a></p>
+                        <p> <span class="icon">language</span> <a class="noLineLink" href="https://alecob.jimdofree.com">www.alecob.jimdofree.com</a></p>
                     </div>
                 </div>
             </SectionMainSloted>
@@ -82,8 +82,8 @@
                     <div class="infoBox">
                         <p> <span class="icon">location_on</span>SPANC - Maison des services au public - Carhaix</p>
                         <p> <span class="icon">call</span>02 98 99 48 03</p>
-                        <p> <span class="icon">email</span><a class="externalLink" href="mailto:spanc@poher.bzh">spanc@poher.bzh</a></p>
-                        <p> <span class="icon">call</span><a class="externalLink" href="https://www.poher.bzh">www.poher.bzh</a></p>
+                        <p> <span class="icon">email</span><a class="noLineLink" href="mailto:spanc@poher.bzh">spanc@poher.bzh</a></p>
+                        <p> <span class="icon">call</span><a class="noLineLink" href="https://www.poher.bzh">www.poher.bzh</a></p>
                     </div>
 
                 </div>

@@ -132,20 +132,23 @@ onMounted(() => {
     padding: 30px;
 }
 .menuDashboard .button {
-    color: white;
-    background-color: var(--green);
+    background-color: var(--light-blue);
     padding: 10px 20px;
     border-radius: 50px;
     margin: 20px 0;
 }
-.menuDashboard .active {
-    background-color: rgb(1, 90, 1);
-    box-shadow: var(--shadow);
-}
+
 .menuDashboard .button *{
-    color: white;
+    color: rgb(148, 186, 218);
     font-size: 14px;
     user-select: none;
+}
+.menuDashboard .active {
+    background-color: var(--brown);
+    box-shadow: var(--shadow);
+}
+.menuDashboard .active *{
+    color: white;
 }
 .menuDashboard .button .span1{
     font-size: 18px;

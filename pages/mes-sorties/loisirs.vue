@@ -11,7 +11,7 @@
                 :data="{ title: 'Le pass loisir', image: '/images/loisirs/cinema.jpg', imageAlt: 'Reciclag à Poullaouën', localImage: true }">
                 <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap10">
                     <p class="flex column gap20">
-                        <h4 class="bottomGreen">Profitez de tarifs réduits avec le «pass’ loisirs» !</h4>
+                        <h4 class="">Profitez de tarifs réduits avec le «pass’ loisirs» !</h4>
                         Ce pass est accessible gratuitement à tous les habitants de Poher
                         communauté, sans limite d’âge. Il donne des réductions dans les
                         structures ci-dessous :
@@ -31,7 +31,7 @@
                         photo.
                     </p>
 
-                    <div class="infoBox topGreen">
+                    <div class="infoBox">
                         <p class="w100 flex justifyBetween alignCenter">
                             <span> <b>Flyer :</b></span>
                             <span class="flex alignCenter gap20">
@@ -46,7 +46,7 @@
 
             <SectionTitleBar title="A Locmaria-Berrien et Poullaouen" />
 
-            <div class="loisirCardsBox flex justifyCenter gap20 wrap">
+            <div class="loisirCardsBox flex justifyCenter gap50 wrap">
                 <CardsTallMain title="Aéro-Plass - ULM" cardImage="/images/loisirs/ULM.jpg" :localImage="true">
                     <div class="bottomBox flex column gap10">
                         <p class="contentRow flex">
@@ -187,6 +187,11 @@ onMounted(() => {
 </script>
 
 <style scoped>
+
+.tallCard {
+    min-height: 650px;
+}
+
 .slotedSectionTextBox {
     height: 100%;
 }

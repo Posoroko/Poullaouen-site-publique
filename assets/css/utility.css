@@ -3,6 +3,7 @@
 
 .block {display: block;}
 .inline {display: inline;}
+.inlineBlock {display: inline-block;}
 
 .flex {display: flex;}
 .column {flex-direction: column;}

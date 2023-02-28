@@ -6,7 +6,7 @@
         <div>
             <SectionMainSloted
                 :data="{ title: 'L’école maternelle et primaire Jules Ferry', image: '/images/ecole/enseignants.jpg', imageAlt: 'Eau et assainissement', localImage: true }">
-                <div class="slotedSectionTextBox flex column justifyCenter pad20 gap10">
+                <div class="slotedSectionTextBox flex column justifyCenter pad20 gap20">
                     <p class="page-text">
                         L’école Jules Ferry accueille les enfants dès l’âge de 2 ans révolus. A la rentrée de septembre 2022, 83 élèves sont répartis dans les différentes
                         classes de la maternelle au CM2. Une classe bilingue français/breton multi-niveaux (de la maternelle au CM2) existe depuis 2010.
@@ -17,10 +17,120 @@
                     <div class="infoBox">
                         <p> <b>Directeur :</b> Anthony LE CAM - 02 98 93 55 06</p>
                     </div>
+
+                    <div class="flex justifyEnd">
+                        <NuxtLink to="/galerie-photo/ecole" class="albumButton blueAlbumButton">Voir les albums</NuxtLink>
+                    </div>
+                </div>
+            </SectionMainSloted>
+
+            <EcoleSchedule />
+
+            <SectionMainSloted
+                :data="{ title: 'Les Temps d’Activité Périscolaire (TAP)', image: '/images/ecole/tap.jpg', imageAlt: 'Eau et assainissement', localImage: true }">
+                <div class="slotedSectionTextBox flex column justifyCenter pad20 gap20">
+                    <p class="page-text">
+                        Depuis le 2 septembre 2014, la commune a mis en place la réforme des rythmes scolaires. Cette réforme instaure une nouvelle orgasisation de la journée scolaire des enfants.
+                        Celle-ci est désormais répartie sur 9 demi-journées avec le mercredi matin travaillé.
+                    </p>
+
+                    <p class="flex column gap10">
+                        <b>Sur Poullaouen, les horaires des TAP dont les suivants :</b>
+                        <ul>
+                            <li>Lundi : 13h45 - 14h45</li>
+                            <li>Mardi : 13h45 - 14h45</li>
+                            <li>Vendredi : 13h45 - 14h45</li>
+                        </ul>
+                    </p>
+
+                    <p class="page-text">
+                        Le lundi, mardi, jeudi et vendredi, une garderie payante peut accueillir
+                        les enfants à partir de 7h30 le matin et jusqu’à 18h30 le soir. Le mercredi,
+                        un service de garderie est proposé gratuitement aux familles à partir
+                        de 7h30 le matin, et de 12h à 12h30.
+                    </p>
+
+                    <p class="page-text">
+                        Les enfants qui ne sont pas inscrits aux TAP doivent être pris en charge
+                        par leur famille. Le retour à l’école est possible à partir de 14h35 (accueil
+                        de classe).
+                    </p>
+
+                    <div class="flex justifyBetween">
+                        <p> <span class="icon">visibility</span> <b>Programme de l'année</b> </p>
+                        <NuxtLink to="/galerie-photo/ecole" class="albumButton blueAlbumButton">Voir les albums</NuxtLink>
+                    </div>
+                </div>
+            </SectionMainSloted>
+
+            <SectionMainSloted class="brownSection" :data="{ title: 'La maternelle dehors', image: '/images/ecole/tap.jpg', imageAlt: 'Eau et assainissement', localImage: true }">
+                <div class="slotedSectionTextBox flex column justifyCenter pad20 gap20">
+                    <p class="page-text">
+                        Depuis le mois de septembre, une matinée par semaine, les élèves de
+                        maternelle sortent de l’école pour faire classe en plein air : chaque lundi,
+                        ils chaussent leurs bottes pour se rendre sur un terrain communal à
+                        proximité immédiate .
+
+                        Au programme, plantations, jeux sportifs, chasse aux escargots,
+                        constitution d’un herbier, fabrication de mangeoire pour oiseaux, land
+                        art...qui permettront d’étudier le vivant, d’observer la succession des
+                        saisons et son impact sur le milieu, de développer la créativité, le sens
+                        de l’observation...
+
+                        Cette pratique, qui encourage l’attirance des enfants pour la nature,
+                        leur permet d’expérimenter, de manipuler, d’utiliser leur sens pour
+                        vivre les apprentissages. Dans cette «salle de classe» à ciel ouvert, les
+                        enfants peuvent courir, creuser la terre, marcher dans les flaques...
+                        Tenue adaptée indispensable !
+
+                        Ce concept est très développé dans les pays du nord de l’Europe
+                        notamment. Des études montrent les bienfaits du temps passé dans
+                        la nature pour le bien-être de l’enfant, sa santé, mais aussi la qualité
+                        de ses apprentissages.
+                    </p>
+
+                    <div class="flex justifyEnd">
+                        <NuxtLink to="/galerie-photo/ecole" class="albumButton whiteAlbumButton">Voir les albums</NuxtLink>
+                    </div>
                 </div>
             </SectionMainSloted>
 
             <SectionMainSloted
+                :data="{ title: 'La garderie', image: '/images/ecole/maternelle.jpg', imageAlt: 'Eau et assainissement', localImage: true }">
+                <div class="slotedSectionTextBox flex column justifyCenter pad20 gap20">
+                    <p class="page-text">
+                        Une garderie périscolaire est mise en place au sein de l’école.
+                    </p>
+
+                    <div class="flex column gap10">
+                        <b>Les horaires :</b>
+
+                        <p class="level1 flex alignCenter"> <span class="dot inlineBlock"></span> lundi, mardi, jeudi et vendredi :</p>
+                            <p class="level2">Le matin de 7h30 à 8h45</p>
+                            <p class="level2">Le soir de 16h45 à 18h30</p>
+
+                        <p class="level1 flex alignCenter"> <span class="dot inlineBlock"></span> Le mercredi :</p>
+                            <p class="level2">Le matin de 7h30 à 9h00</p>
+                            <p class="level2">Le midi de 12h00 à 12h30</p>
+                        
+                        <b>Les horaires :</b>
+                        
+                        <p class="level1 flex alignCenter"><span class="dot inlineBlock"></span>Garderie occasionnelle (jusqu’au 6ème jour) : 2.30 € par jour</p>
+                        <p class="level1" flex alignCenter> <span class="dot inlineBlock"></span> Garderie régulière (à partir du 7ème jour) :</p>
+                                <p class="level2"><span class="eric">1er enfant :</span> <span>23 € par mois</span></p>
+                                <p class="level2"><span class="eric">2ème enfant :</span> <span>15 € par mois</span></p>
+                                <p class="level2"><span class="eric">3ème enfant :</span> <span>12 € par mois</span></p>
+                        
+                    </div>
+
+                    <div class="flex justifyBetween">
+                        <p><b>Renseignements :</b> Marie - 02 98 93 50 76</p>
+                    </div>
+                </div>
+            </SectionMainSloted>
+
+            <SectionMainSloted
+            class="brownSection"
                 :data="{ title: 'La cantine', image: '/images/ecole/cantine.jpg', imageAlt: 'Eau et assainissement', localImage: true }">
                 <div class="slotedSectionTextBox flex column justifyCenter pad20 gap20">
                     <p class="page-text">
@@ -58,8 +168,6 @@
                     </div>
                 </div>
             </SectionMainSloted>
-
-            
         </div>
     </main>
 </template>
@@ -94,23 +202,52 @@ const headerData = {
     ]
 }
 
-const applyStyleClasses_utils = () => {
+// const applyStyleClasses_utils = () => {
 
-    const sections = document.querySelectorAll('.sectionBoxSloted')
+//     const sections = document.querySelectorAll('.sectionBoxSloted')
 
-    for (let i = 1; i < sections.length; i = i + 4) {
-        sections[i].classList.replace('whiteSection', 'blueSection')
-    }
-    for (let i = 3; i < sections.length; i = i + 4) {
-        sections[i].classList.replace('whiteSection', 'brownSection')
-    }
-}
-onMounted(() => {
-    applyStyleClasses_utils()
-})
+//     for (let i = 1; i < sections.length; i = i + 4) {
+//         sections[i].classList.replace('whiteSection', 'blueSection')
+//     }
+//     for (let i = 3; i < sections.length; i = i + 4) {
+//         sections[i].classList.replace('whiteSection', 'brownSection')
+//     }
+// }
+// onMounted(() => {
+//     applyStyleClasses_utils()
+// })
 </script>
 
 <style scoped>
+
+
+.dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--light-blue);
+    margin-right: 10px;
+}
+.eric {
+    display: inline-block;
+    width: 30%;
+}
+
+.albumButton{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px black;
+}
+.whiteAlbumButton{
+    background-color: white;
+    color: var(--brown);
+}
+.blueAlbumButton {
+    background-color: var(--dark-blue);
+    color: white;
+}
 .slotedSectionTextBox {
     height: 100%;
 }
@@ -139,7 +276,5 @@ li {
 
 .infoBox{
     padding: 5px;
-    border-top: 1px solid var(--green);
-    border-bottom: 1px solid var(--green);
 }
 </style>
