@@ -56,7 +56,7 @@ const headerData = {
     title: 'Equipe municipale',
     path: [
         {
-            text: 'accueil',
+            text: 'Accueil',
             target: '/'
         },
         {
