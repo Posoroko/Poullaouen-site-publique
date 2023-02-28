@@ -18,10 +18,7 @@
         </p>
 
         <SectionMainSloted  :data="sectionData_1">
-            <div class="textBox  flex column justifyBetween">
-                <h3 class="subtitle">Ce qu'ils font</h3>
-
-            
+            <div class="textBox h100 flex column justifyCenter gap20">            
                 <p class="content page-text">
                     Chaque année lors du dernier samedi de septembre, le CCAS invite
                     à un <b>repas</b> les <b>personnes âgées d’au moins 70 ans</b> et domiciliées
@@ -38,8 +35,9 @@
                 </p>
             
                 <div class="bottomContent">
-                    <p class="moreinfo flex  italic">
-                        Contact : 02 98 97 96 95
+                    <p class="moreinfo flex gap10 italic">
+                        <span class="icon">call</span>
+                        <span> 02 98 97 96 95</span>
                     </p>
                 </div>
             </div>

@@ -3,7 +3,9 @@
 
     <main class="docsMain w100 flex column" v-if="myData">
         <p class="intro-text mainWidth">
-            Le bulletin municipal réalisé par la commission communication relate l’essentiel de l’actualité de l’année.
+            Retrouvez les comptes-rendus du conseil municipal de janvier 2020 à juin 2022 dans cette rubrique. Depuis le 1er juillet 2022, en référence
+            à l’article L 2131-1 du Code Général des Collectivités Territoriales, le terme compte-rendu disparaît. Désormais, les procès-verbaux du
+            conseil municipal font l’objet d’une publication sous forme électronique.
         </p>
 
         <div class="dashboard w100 flex justifyCenter">

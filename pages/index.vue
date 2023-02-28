@@ -10,6 +10,8 @@
 </template>
 <script setup>
 
+
+
 const headerData = {
     images: [
         {

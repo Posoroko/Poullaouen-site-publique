@@ -3,6 +3,10 @@
 
     <main>
 
+        <p class="intro-text mainWidth">
+            Envie de séjourner à la campagne, découvrez nos différentes possibilités d’hébergement.
+        </p>
+
         <section v-for="filter in rooms.filters" :key="filter.id">
 
             <SectionTitleBar  :title="filter.name" />

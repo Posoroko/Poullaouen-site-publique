@@ -3,7 +3,8 @@
 
     <main class="docsMain w100 flex column" v-if="publications">
         <p class="intro-text mainWidth">
-            Le bulletin municipal réalisé par la commission communication relate l’essentiel de l’actualité de l’année.
+            Depuis le 1er juillet 2022, en référence à l’article L 2131-1 du Code Général des Collectivités Territoriales, les actes administratifs font
+            l’objet d’une publication électronique.
         </p>
 
         <div class="dashboard w100 flex justifyCenter">

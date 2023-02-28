@@ -2,11 +2,6 @@
     <HeaderMain :data="headerData" />
 
     <main class="mainPatrimoine">
-        <p class="mainWidth intro-text">
-            La commune vous propose plusieurs salles adaptées à vos évènements, pour tout renseignement vous pouvez
-            contacter la mairie de Poullaouen ou de Locmaria-Berrien.
-        </p>
-
         <div v-for="item in itemsData" :key="item.id">
             <SectionMainSloted :data="{ title: item.title, image: item.image }">
                 <div class="slotedSectionTextBox flex column justifyCenter gap20 pad20">

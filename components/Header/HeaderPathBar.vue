@@ -34,4 +34,9 @@ const props = defineProps({
 .stepLink:hover {
     color: rgb(149, 246, 253);
 }
+
+.step:nth-child(1) .icon {
+    display: none;
+}
+
 </style>

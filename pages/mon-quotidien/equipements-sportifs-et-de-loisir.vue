@@ -3,8 +3,7 @@
 
     <main class="mainCCAS">
         <p class="mainWidth intro-text">
-            La commune vous propose plusieurs salles adaptées à vos évènements, pour tout renseignement vous pouvez
-            contacter la mairie de Poullaouen ou de Locmaria-Berrien.
+            De 7 à 77 ans (ou avant et après !), chacun peut profiter d’équipements adaptés à son niveau.
         </p>
 
         <div v-for="item in equipementsData" :key="item.id">

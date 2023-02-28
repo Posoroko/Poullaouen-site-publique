@@ -28,7 +28,7 @@ const headerData = {
             target: '/'
         },
         {
-            text: 'acctualités',
+            text: 'actualités',
             target: '/actualités'
         }
     ]

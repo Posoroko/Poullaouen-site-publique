@@ -3,7 +3,7 @@
     <main class="">
 
         <p class="intro-text mainWidth page-text">
-            Toutes les événements à venirs sont listés ici. Dates importantes, manifestations, fêtes, etc.
+            Tout les événements à venirs sont listés ici. Dates importantes, manifestations, fêtes, etc.
         </p>
 
         <section v-for="month in dates.months" :key="month.index">
@@ -29,6 +29,7 @@
                             <p class="content">
                                 {{ date.content }}
                             </p>
+                            
                             <p class="moreInfo">{{ date.moreInfo }}</p>
                         </div>
                     </div>
