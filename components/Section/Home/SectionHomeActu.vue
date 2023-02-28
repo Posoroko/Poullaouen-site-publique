@@ -25,12 +25,7 @@
                     </div>
                 </div>
             </SectionMainSloted>
-        </div>
-
-        <div class="centered agendaButtonBox">
-            <NuxtLink class="agendaButton textAlignCenter brown_action" to="/actualites">Voir toutes les actualités</NuxtLink>
-        </div>
-        
+        </div>        
     </section>
 </template>
 <script setup>

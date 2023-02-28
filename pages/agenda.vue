@@ -9,7 +9,7 @@
         <section v-for="month in dates.months" :key="month.index">
             <SectionTitleBar :title="month.name" />
 
-            <div class="mainWidth flex justifyCenter wrap gap20">
+            <div class="mainWidth flex justifyCenter wrap gap20 marTop50">
                     <div class="dateCard" v-for="date in dates.dates[month.name]" :key="date.id">
                         <div class="topBox">
                             
@@ -40,6 +40,11 @@
 </template>
 
 <script setup>
+
+const props = defineProps({
+    limit: String
+})
+
 const toDayMonthYearFormat = (_date) => {
     const weekDays = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
     const months = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"]
@@ -58,7 +63,7 @@ const fetchOptions = {
     server: true,
     params: {
         fields: 'id, title, date, location, content, image, imageAlt, price, file, filename',
-        // limit: props.limit
+        limit: props.limit
     }
 }
 

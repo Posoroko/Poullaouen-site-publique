@@ -42,7 +42,10 @@
             </ul>
 
             <div class="moreInfo">
-                <p class="flex alignCenter gap10">Carte : <span class="icon"> visibility</span>  Consulter <span class="icon"> download</span> Télécharger</p>
+                <p class="flex alignCenter gap10">Carte : 
+                    <a class="flex alignCenter gap10" href="/images/randonnee/bois de lemezec.jpg" target="_blank"><span class="icon"> visibility</span> <span>Consulter</span></a>
+                    <a class="flex alignCenter gap10" href="/images/randonnee/bois de lemezec.jpg" download><span class="icon"> download</span> <span>Télécharger</span></a>
+                </p>
             </div>
         </SectionMainSloted>
 
@@ -67,8 +70,11 @@
                     <li>Rejoindre la voie de chemin de fer.</li>
                 </ul>
     
-                <div class="moreInfo ">
-                    <p class="flex alignCenter gap10">Carte : <span class="icon"> visibility</span>  Consulter <span class="icon"> download</span> Télécharger</p>
+                <div class="moreInfo">
+                    <p class="flex alignCenter gap10">Carte : 
+                        <a class="flex alignCenter gap10" href="/images/randonnee/circuit le petit train.jpg" target="_blank"><span class="icon"> visibility</span> <span>Consulter</span></a>
+                        <a class="flex alignCenter gap10" href="/images/randonnee/circuit le petit train.jpg" download><span class="icon"> download</span> <span>Télécharger</span></a>
+                    </p>
                 </div>
             </SectionMainSloted>
 
@@ -95,7 +101,10 @@
             </ul>
 
             <div class="moreInfo">
-                <p class="flex alignCenter gap10">Carte : <span class="icon"> visibility</span>  Consulter <span class="icon"> download</span> Télécharger</p>
+                <p class="flex alignCenter gap10">Carte : 
+                    <a class="flex alignCenter gap10" href="/images/randonnee/circuit Botvarec.jpg" target="_blank"><span class="icon"> visibility</span> <span>Consulter</span></a>
+                    <a class="flex alignCenter gap10" href="/images/randonnee/circuit Botvarec.jpg" download><span class="icon"> download</span> <span>Télécharger</span></a>
+                </p>
             </div>
         </SectionMainSloted>
     
@@ -135,8 +144,11 @@
                     rejoindre le bourg en suivant toujours le balisage GR rouge et blanc.</li>
             </ul>
 
-            <div class="moreInfo ">
-                <p class="flex alignCenter gap10">Carte : <span class="icon"> visibility</span>  Consulter <span class="icon"> download</span> Télécharger</p>
+            <div class="moreInfo">
+                <p class="flex alignCenter gap10">Carte : 
+                    <a class="flex alignCenter gap10" href="/images/randonnee/circuit LES 2 VALLées.jpg" target="_blank"><span class="icon"> visibility</span> <span>Consulter</span></a>
+                    <a class="flex alignCenter gap10" href="/images/randonnee/circuit LES 2 VALLées.jpg" download><span class="icon"> download</span> <span>Télécharger</span></a>
+                </p>
             </div>
         </SectionMainSloted>
     </main>

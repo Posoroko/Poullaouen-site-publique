@@ -1,5 +1,5 @@
 <template>
-    <footer class="relative">
+    <footer id="footer" class="relative">
         <div class="footerContainer mainWidth flex justifyEvenly alignStart wrap h100 ">
             <div class="phoneBox footerBox flex justifyCenter alignCenter wrap gap5">
                 <p class="phoneBtn flex column justifyCenter alignCenter">
@@ -78,7 +78,7 @@
 
                 </a>
 
-                <a href="www.poher-communauté.com" class="button centered">
+                <a href="https://www.poher.bzh/accueil_poher" class="button centered">
                     Poher communauté
                 </a>
             </div>
@@ -122,7 +122,7 @@
                 <div class="line"></div>
                 <NuxtLink class="bottomLink" to="/">PLAN DU SITE</NuxtLink>
                 <div class="line"></div>
-                <NuxtLink class="bottomLink" to="/">MENTIONS LEGALES</NuxtLink>
+                <NuxtLink class="bottomLink" to="/mentions-legales">MENTIONS LEGALES</NuxtLink>
                 <div class="line"></div>
                 <NuxtLink class="bottomLink" to="https://www.comkreiz.com/">WEB DESIGN : COM KREIZ</NuxtLink>
                 <div class="line"></div>
@@ -155,7 +155,7 @@
 }
 
 
-footer {
+#footer {
     padding-top: 300px;
 }
 .phoneBox {

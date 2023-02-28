@@ -7,6 +7,8 @@
             (en 1591) et Poullaouen (en 1677).
         </p>
 
+        <FilterBarMain :data="filterData" />
+
         <div v-for="item in histoireData" :key="item.id">
             <SectionMainSloted :data="{ title: item.title, image: item.image, imageAlt: item.imageAlt }">
                 <div class="slotedSectionTextBox flex column justifyCenter gap20 pad20">
@@ -93,6 +95,12 @@
 </template>
 
 <script setup>
+
+const filters = ref([
+    'Gavotte'
+])
+
+
 
 const appConfig = useAppConfig();
 const directusAssets = appConfig.directus.assets;

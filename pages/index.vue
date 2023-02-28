@@ -6,6 +6,10 @@
         <SectionHomeDates limit="3" />
 
         <SectionHomeActu limit="2" :isHomePage="true" />
+        
+        <div class="centered agendaButtonBox">
+            <NuxtLink class="agendaButton textAlignCenter brown_action" to="/actualites">Voir toutes les actualités</NuxtLink>
+        </div>
     </main>
 </template>
 <script setup>

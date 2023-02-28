@@ -58,7 +58,6 @@ const props = defineProps({
 .footFrame {
     height: 100%;
     width: 100%;
-
 }
 .footFrame svg {
     height: 100%;
@@ -73,7 +72,7 @@ const props = defineProps({
 
 .footFrame .imgFrame {
     width: 80%;
-    height: 70%;
+    height: min(70%, 350px);
     border-radius: 5px;
     overflow: hidden;
 }

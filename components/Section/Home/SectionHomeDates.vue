@@ -24,8 +24,9 @@
                     </div>
                 </div>
             </div>
-            <div class="agendaButtonBox centered ">
+            <div class="agendaButtonBox mainWidth flex justifyEvenly wrap">
                 <NuxtLink class="agendaButton textAlignCenter" to="/agenda">Voir tout l'agenda</NuxtLink>
+                <NuxtLink class="agendaButton textAlignCenter" to="/proposer-un-evenement">proposer un événement</NuxtLink>
             </div>
         </div>
         
