@@ -38,7 +38,7 @@
     color: white;
 }
 .blueSection * {
-    fill: var(--brown);
+    fill: white;
 }
 
 
@@ -53,7 +53,7 @@
 }
 
 .brownSection * {
-    fill: var(--dark-blue);
+    fill: white;
 }
 
 .brownSection .sectionContent .mainWidth, 
@@ -67,9 +67,15 @@
     display: inline-block;
     position: relative;
     font-weight: 600;
+    
+    border-width: 2px;
+    border-style: solid;
+    border-right: none;
+    border-left: none;
+    border-top: none;
 }
 
-.externalLink::after {
+/* .externalLink::after {
     content: '';
     width: 100%;
     height: 10px;
@@ -79,7 +85,7 @@
     position: absolute;
     z-index: -1;
     opacity: 0.7;
-}
+} */
 
 /* date card in agenda */
 
@@ -162,3 +168,5 @@
  .topGreen {
      margin-top: 1px solid var(--green);
  }
+
+

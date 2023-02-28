@@ -51,7 +51,7 @@
   
             <SectionMainSloted
                 :data="{ title: 'Assainissement non-collectif', image: '/images/eau/manhole.jpg', imageAlt: 'Campagne Poullaouënaise', localImage: true }">
-                <div class="slotedSectionTextBox page-text lex column justifyCenter alignStart pad20 gap10">
+                <div class="slotedSectionTextBox page-text lex column justifyCenter alignStart pad20 gap20">
 
                     <p>
                         Les eaux usées de nos habitations nécessitent d’être évacuées puis restituées dans le milieu naturel, tout en préservant la santé publique
@@ -135,4 +135,11 @@ onMounted(() => {
 li {
     list-style: disc;
     margin-left: 40px;
-}</style>
+}
+.infoBox {
+    margin-top: 10px;
+}
+.infoBox p .icon {
+    margin-right: 10px;
+}
+</style>

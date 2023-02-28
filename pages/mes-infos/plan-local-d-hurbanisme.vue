@@ -19,14 +19,13 @@
             <SectionMainSloted
                 :data="{ title: 'Consulter les plans', image: '/images/plu/entrée.jpg', imageAlt: 'Offisme de tourisme de Carhaix', localImage: true }">
                 <div class="slotedSectionTextBox flex column justifyCenter alignStart pad20 gap10">
-                    
-                    <a class="externalLink" href="https://www.tourismecarhaix.poher.com">Plan de zonage</a>
-                    <a class="externalLink" href="https://www.tourismecarhaix.poher.com">Servitudes d’utilité publique</a>
-                    <a class="externalLink" href="https://www.tourismecarhaix.poher.com">Droit de préemption</a>
-                    <a class="externalLink" href="https://www.tourismecarhaix.poher.com">Loi paysage</a>
-                    <a class="externalLink" href="https://www.tourismecarhaix.poher.com">Consulter le cadastre</a>
-                    <a class="externalLink" href="https://www.tourismecarhaix.poher.com">Consulter le geoportail de l’urbanisme</a>
-                    
+                    <a class="externalLink" href="/plu/1. Plan zonage.pdf" target="_blank" >Plan de zonage</a>
+                    <a class="externalLink" href="/plu/2. Plan servitudes d_utilité publique.pdf" target="_blank" >Servitudes d’utilité publique</a>
+                    <a class="externalLink" href="/plu/3. Plan droit de préemption urbain.pdf" target="_blank" >Droit de préemption</a>
+                    <a class="externalLink" href="/plu/4. Loi paysage.pdf" target="_blank" >Loi paysage</a>
+                    <div class="gap"></div>
+                    <a class="externalLink" href="https://www.cadastre.gouv.fr/scpc/accueil.do">Consulter le cadastre</a>
+                    <a class="externalLink" href="https://www.geoportail-urbanisme.gouv.fr/">Consulter le geoportail de l’urbanisme</a>
                 </div>
             </SectionMainSloted>
 
@@ -34,7 +33,7 @@
                 :data="{ title: 'Consulter le rapport de présentation', image: '/images/plu/chemin.jpg', imageAlt: 'Campagne Poullaouënaise', localImage: true }">
                 <div class="slotedSectionTextBox flex column justifyCenter alignStart pad20 gap10">
 
-                    <a class="externalLink" href="https://www.tourismecarhaix.poher.com">Rapport de présentation</a>
+                    <a class="externalLink" href="/plu/5. Rapport de présentation.pdf">Rapport de présentation</a>
 
                 </div>
             </SectionMainSloted>
@@ -43,15 +42,15 @@
                 :data="{ title: 'Consulter le règlement, le projet d’aménagement et les annexes', image: '/images/plu/tractopelle.jpg', imageAlt: 'Alécob logo', localImage: true }">
                 <div class="slotedSectionTextBox flex column justifyCenter alignStart pad20 gap10">
                     
-                    <a class="externalLink" href="https://www.tourismecarhaix.poher.com">Règlement</a>
-                    <a class="externalLink" href="https://www.tourismecarhaix.poher.com">Orientations d’aménagement</a>
-                    <a class="externalLink" href="https://www.tourismecarhaix.poher.com">Projet d’aménagement et de développement durable</a>
-                    <a class="externalLink" href="https://www.tourismecarhaix.poher.com">Annexe Carrière Le Goasq</a>
-                    <a class="externalLink" href="https://www.tourismecarhaix.poher.com">Annexe périmètres miniers</a>
-                    <a class="externalLink" href="https://www.tourismecarhaix.poher.com">Annexes sanitaires</a>
-
-                    <a class="externalLink" href="https://www.tourismecarhaix.poher.com">Consulter</a>
-                    <a class="externalLink" href="https://www.tourismecarhaix.poher.com">Consulter le geoportail de l’urbanisme</a>
+                    <a class="externalLink" href="/plu/6. Règlement.pdf">Règlement</a>
+                    <a class="externalLink" href="/plu/7. Orientation d_aménagement.pdf">Orientations d’aménagement</a>
+                    <a class="externalLink" href="/plu/8. Projet d_aménagement et de développement durable.pdf">Projet d’aménagement et de développement durable</a>
+                    <a class="externalLink" href="/plu/9. Annexe carriere le goasq.pdf">Annexe Carrière Le Goasq</a>
+                    <a class="externalLink" href="/plu/10. Annexe périmètres miniers.pdf">Annexe périmètres miniers</a>
+                    <a class="externalLink" href="/plu/11. Annexes sanitaires.pdf">Annexes sanitaires</a>
+                    <div class="gap"></div>
+                    <a class="externalLink" href="https://www.cadastre.gouv.fr/scpc/accueil.do">Consulter le cadastre</a>
+                    <a class="externalLink" href="https://www.geoportail-urbanisme.gouv.fr/">Consulter le geoportail de l’urbanisme</a>
                     
                 </div>
             </SectionMainSloted>
@@ -112,4 +111,8 @@ onMounted(() => {
 li {
     list-style: disc;
     margin-left: 40px;
-}</style>
+}
+.gap {
+    height: 40px;
+}
+</style>

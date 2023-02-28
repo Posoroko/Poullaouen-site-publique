@@ -11,10 +11,14 @@
             
             <div class="stripe relative" v-if="documents">
                 <div class="w100 flex darkBlueBG justifyCenter gap20  relative wrap">
-                    <article class="bulletinCard pointer" v-for="doc in documents.splice(0, 4)" :key="doc.id">
-                        <figure class="frame">
+                    <article class="bulletinCard" v-for="doc in documents.splice(0, 4)" :key="doc.id">
+                        <figure class="frame relative">
                             <img class="objectFitCover" :src="`${directusAssets}${doc.image}.jpg`" 
                             :alt="`Bulletin municipal de Poullaouën ${doc.datePublication}`" @click.prevent="openModal">
+
+                            <div class="downloaderFrame absoluteFull">
+                                <DocsDownloadWidget :doc="doc" />
+                            </div>
                         </figure>
                     
                         <figCaption class="centered">
@@ -34,15 +38,21 @@
         
             <div class="stripe relative" v-if="documents">
                 <div class="flex justifyCenter gap20  relative wrap">
-                    <article class="bulletinCard pointer" v-for="doc in documents" :key="doc.id">
-                        <figure class="frame">
+                    <article class="bulletinCard pointer " v-for="doc in documents" :key="doc.id">
+                        <figure class="frame relative">
                             <img class="objectFitCover" :src="`${directusAssets}${doc.image}.jpg`" 
                             :alt="`Bulletin municipal de Poullaouën ${doc.datePublication}`" @click.prevent="openModal">
+
+                            <div class="downloaderFrame absoluteFull">
+                                <DocsDownloadWidget :doc="doc" />
+                            </div>
                         </figure>
         
                         <figCaption class="centered">
                             {{ doc.datePublication }}
                         </figCaption>
+
+                        
                     </article>
                 </div>
             </div>

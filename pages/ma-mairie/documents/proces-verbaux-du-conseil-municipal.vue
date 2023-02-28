@@ -17,7 +17,7 @@
             
             <div class="stripe darkBlueBG w100">
                 <div class="content mainWidth w100 flex justifyCenter wrap">
-                    <article class="procesCard flex column justifyCenter alignCenter" v-for="doc in myData.docs[year]" :key="doc.id">
+                    <article class="procesCard flex column justifyCenter alignCenter relative" v-for="doc in myData.docs[year]" :key="doc.id">
                         <figure class="">
                             <img src="/images/logo.png" alt="">
                         </figure>
@@ -26,6 +26,10 @@
                             <h5> Procès verbal du </h5>
                   
                             <p>{{ new Date(doc.datePublication).toLocaleString().slice(0, 11)  }}</p>
+                        </div>
+
+                        <div class="downloaderFrame absoluteFull">
+                            <DocsDownloadWidget :link="`${directusAssets}${doc.file}`" />
                         </div>
                     </article>
                 </div>
@@ -41,7 +45,7 @@ const handleit = () => {
 }
 
 const appConfig = useAppConfig();
-// const directusAssets = appConfig.directus.assets;
+const directusAssets = appConfig.directus.assets;
 const directusItems = appConfig.directus.items;
 
 const activeYears = []
