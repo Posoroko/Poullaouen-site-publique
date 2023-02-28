@@ -1,9 +1,9 @@
 <template>
-    <div class="w100">
+    <div class="w100 marTop100">
         <section class="conseillers">
             <SectionTitleBar title="Les conseillers municipaux" />
 
-            <div class="stripe marTop20 relative">
+            <div class="stripe marTop100 relative">
                 <!-- <SectionPieds /> -->
                 <div class="content mainWidth flex alignCenter justifyCenter wrap gap20">
                     <div class="conseillerCard flex column" v-for="person in conseillers" :key="person.id">
@@ -58,6 +58,7 @@ const headerData = {
 .conseillerCard {
     background-color: var(--brown);
     width: 20%;
+    margin: 15px 20px;
     border-radius: 10px;
     box-shadow: var(--shadow);
     overflow: hidden;

@@ -75,20 +75,10 @@
     border-top: none;
 }
 
-/* .externalLink::after {
-    content: '';
-    width: 100%;
-    height: 10px;
-    background: linear-gradient(180deg, rgba(0, 128, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);
-    display: block;
-    top: 75%;
-    position: absolute;
-    z-index: -1;
-    opacity: 0.7;
-} */
-
-/* date card in agenda */
-
+.noLineLink {
+    font-weight: 600;
+    font-style: italic;
+}
 
  
 
@@ -109,7 +99,6 @@
  .dateCard .topBox .organiser {
      font-size: 15px;
      color: var(--brown);
-     padding-left: 5px;
  }
  .dateCard .topBox .date {
     font-size: 16px;

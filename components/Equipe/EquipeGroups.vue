@@ -1,10 +1,21 @@
 <template>
 
     <section class="w100" v-if="groups">
-        <div class="groups" v-for="type in groupTypes" :key="type.id" :id="type.id">
+        <div class="groups marTop100" v-for="type in groupTypes" :key="type.id" :id="type.id">
             <SectionTitleBar :title="type.name" />
+
+            <p class="mainWidth intro-text" v-if="type.id == 'commission'">
+                Elles sont désignées par le conseil municipal suite à l’élection du Maire et des Adjoints. Ce sont des groupes de travail qui se réunissent pour
+                étudier les dossiers avant leur présentation au conseil.
+            </p>
+
+            <p class="mainWidth intro-text" v-if="type.id == 'delegation'">
+                Le conseil municipal, après l’élection du Maire et des adjoints, désigne les élus et/ou les membres associatifs qui représenteront la commune au
+                sein des syndicats et autres structures.
+            </p>
+
  
-            <div class="content mainWidth flex justifyEvenly alignStretch wrap gap20">
+            <div class="content mainWidth flex justifyEvenly alignStretch wrap gap50 marTop100">
                 <CardsTallMain  v-for="group in groups[type.id]" :key="group.id"  :title="group.name" :subtitle="group.boss" :cardImage="group.image" :localImage="false">
                     <div class="tallCardBottomBox">    
                         <div v-if="group.membresElus.length">
@@ -136,9 +147,7 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.content {
-    margin-top: 50px;
-}
+
 .bottomBox * h4 {
     font-size: 14px;
     font-weight: 500;

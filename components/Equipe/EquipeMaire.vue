@@ -3,7 +3,7 @@
         <section class="maire">
             <SectionTitleBar title="Le Maire" />
 
-            <div class="stripe marTop20 relative">
+            <div class="stripe marTop150 relative">
                 <!-- <SectionPieds /> -->
                 <div class="content mainWidth flex alignCenter justifyCenter">
                     <div class="maireCard flex column">

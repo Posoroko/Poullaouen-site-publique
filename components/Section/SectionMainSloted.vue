@@ -4,12 +4,8 @@
 
         <div class="sectionContent sectionBox w100 h100">
             <div class="mainWidth h100 flex justifyCenter wrap">
-                <div class="shoeBox centered" v-if="data.localImage">
-                    <SectionShoeBox :image="data.image" />
-                </div>
-
-                <div class="shoeBox centered" v-if="!data.localImage && data.image">
-                    <SectionShoeBox :image="`${directusAssets}${data.image}?key=card500`" />
+                <div class="shoeBox centered" v-if="data.image">
+                    <SectionShoeBox :image="data.image" :localImage="data.localImage"/>
                 </div>
                 
                 <div class="slotedContent">

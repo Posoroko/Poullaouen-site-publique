@@ -7,20 +7,20 @@
             <path class="pied rightFoot" d="M294.7,150.3L399.5,126l87.3,376.6l184.8-42.9l20.5,88.3l-289.6,67.2L294.7,150.3z" />
         </svg>
 
-        <div class="imgFrame absolutlyCentered centered shadow">
-            <img class="objectFitCover pointer" :src="image" alt="" @click="showInModal">
+        <div  class="imgFrame absolutlyCentered centered shadow">
+            <img v-if="!localImage" class="objectFitCover pointer" :src="`${directusAssets}${image}?key=card500`" alt="" @click="showInModal">
+
+            <img v-else class="objectFitCover pointer" :src="image" alt="" @click="showInModal">
         </div>
     </div>
-
-    <!-- <dialog ref="modal" class="modal">
-        
-    </dialog> -->
 </template>
 
 <script setup>
-
+const appConfig = useAppConfig();
+const directusAssets = appConfig.directus.assets;
 
 const showInModal = (e) => {
+    console.log("eric")
     const modal = document.getElementById('masterModal')
     let children = modal.children
     console.table(children)
@@ -32,7 +32,13 @@ const showInModal = (e) => {
     }
 
     const _img = document.createElement('img')
-    _img.src = e.currentTarget.src.slice(0, e.currentTarget.src.indexOf("?"))
+
+    if(props.localImage) {
+        _img.src = props.image
+    } else {
+        _img.src = `${directusAssets}${props.image}`
+    }
+
     _img.style.maxWidth = "80vw"
     _img.style.maxHeight = "80vh"
 
@@ -41,8 +47,10 @@ const showInModal = (e) => {
 }
 
 const props = defineProps({
-    image: String
+    image: String,
+    localImage: Boolean
 })
+
 
 </script>
 
