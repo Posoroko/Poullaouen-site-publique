@@ -83,7 +83,6 @@ onMounted(() => {
 .sectionContentTitle {
     font-size: 20px;
     font-weight: 600;
-    border-bottom: 1px solid var(--green);
 }
 .slottedContent .actuContent {
     padding: 20px 0;
@@ -94,8 +93,6 @@ onMounted(() => {
 }
 .moreInfoBox {
     padding: 5px;
-    border-top: 1px solid var(--green);
-    border-bottom: 1px solid var(--green);
 }
 
 .agendaButtonBox .agendaButton {

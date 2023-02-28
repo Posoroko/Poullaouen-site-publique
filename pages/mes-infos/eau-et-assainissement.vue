@@ -10,7 +10,7 @@
         <div>
             <SectionMainSloted
                 :data="{ title: 'Eau', image: '/images/eau/fontaine.jpg', imageAlt: 'Eau et assainissement', localImage: true }">
-                <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap10">
+                <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap20">
                     
                     <p>
                         <b>Véolia</b> est le délégataire choisi par Poullaouen pour le service eau.
@@ -26,7 +26,7 @@
                 </div>
             </SectionMainSloted>
 
-            <SectionTitleBar :title="`Assainissement collectif`" />
+            <SectionTitleBar :title="`Assainissement`" />
 
             <p class="intro-text mainWidth">
                 Chaque maison doit obligatoirement être raccordée au réseau d’assainissement collectif ou équipée d’un système d’assainissement in-
@@ -35,8 +35,9 @@
 
             <SectionMainSloted
                 :data="{ title: null, image: '/images/eau/la lagune.jpg', imageAlt: 'Offisme de tourisme de Carhaix', localImage: true }">
-                <div class="slotedSectionTextBox page-text flex column justifyCenter alignStart pad20 gap10">
-                    <p>
+                <div class="slotedSectionTextBox page-text h100 flex column justifyCenter alignStart pad20 gap10">
+                    <p class="flex column gap10">
+                        <h4>Assainissement collectif</h4>
                         L’assainissement est collectif lorsque les eaux usées sont collectées par le réseau public pour être traitées dans une station d’épuration, avant
                         de retourner dans le milieu naturel. Le raccordement des installations privées à ce réseau est contrôlé par le service de la Mairie.
                         <br>
@@ -60,7 +61,7 @@
                 :data="{ title: null, image: '/images/eau/manhole.jpg', imageAlt: 'Campagne Poullaouënaise', localImage: true }">
                 <div class="slotedSectionTextBox page-text lex column justifyCenter alignStart pad20 gap20">
 
-                    <p>
+                    <p class="flex column gap10">
                         <h4>Assainissement non-collectif</h4>
                         Les eaux usées de nos habitations nécessitent d’être évacuées puis restituées dans le milieu naturel, tout en préservant la santé publique
                         et l’environnement.

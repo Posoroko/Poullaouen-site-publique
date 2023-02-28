@@ -1,9 +1,9 @@
 <template>
-    <section class="w100">
-        <section class="adjoints">
+    <div class="w100">
+        <section class="adjoints marTop150">
             <SectionTitleBar title="Les adjoints et délégués municipaux" />
 
-            <div class="stripe marTop20 relative">
+            <div class="stripe marTop100 relative">
                 <!-- <SectionPieds /> -->
                 <div class="content mainWidth flex justifyCenter wrap gap20">
                     <div class="adjointCard flex column" v-for="person in delegues" :key="person.id">
@@ -27,7 +27,7 @@
                 </div>
             </div>
         </section>
-    </section>
+    </div>
 </template>
 
 <script setup>
@@ -64,6 +64,7 @@ const headerData = {
 <style scoped>
 .adjointCard {
     background-color: var(--dark-blue);
+    margin: 15px 20px;
     border-radius: 10px;
     box-shadow: var(--shadow);
     width: 300px;

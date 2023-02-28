@@ -27,10 +27,10 @@
                 <span class="wayne">Chemins de randonnée</span>
             </NuxtLink>
 
-            <NuxtLink to="/actualites" class="dark_blue_action roundBtn pointer flex column alignCenter justifyCenter">
-                <span class="icon">feed</span>
+            <NuxtLink to="/galerie-photo" class="dark_blue_action roundBtn pointer flex column alignCenter justifyCenter">
+                <span class="icon">photo_library</span>
                 
-                <span class="wayne">Actualités</span>
+                <span class="wayne">Galerie Photo</span>
             </NuxtLink>
 
         </nav>

@@ -113,6 +113,8 @@ const headerData = {
     overflow: hidden;
 }
 
-
+.galerieMain {
+    margin-top: 100px;
+}
 
 </style>

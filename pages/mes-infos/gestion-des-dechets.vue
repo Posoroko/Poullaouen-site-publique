@@ -51,23 +51,23 @@
                         aux Publics située Place de la Tour d’Auvergne à Carhaix.
                     </p>
 
-                    <div class="infoBox">
-                        <p class="w100 flex justifyBetween alignCenter">
-                            <span> <b>Poullaouen :</b> Liste des villages - semaines paires</span>
+                    <div class="infoBox ramassageInfoBox">
+                        <p class="w100 flex justifyBetween alignCenter gap10">
+                            <span class="flex gap10"> <b>Poullaouen :</b> Liste des villages - semaines paires</span>
+                            <span class="flex alignCenter gap5">
+                                <span class="icon">visibility</span>
+                                <a href="">Consulter</a>
+                            </span>
+                        </p>
+                        <p class="w100 flex justifyBetween gap10">
+                            <span class="flex gap10"> <b>Poullaouen :</b> Liste des villages - semaines impaires</span>
                             <span class="flex alignCenter gap5">
                                 <span class="icon">visibility</span>
                                 <a href="">Consulter</a>
                             </span>
                         </p>
                         <p class="w100 flex justifyBetween">
-                            <span> <b>Poullaouen :</b> Liste des villages - semaines impaires</span>
-                            <span class="flex alignCenter gap5">
-                                <span class="icon">visibility</span>
-                                <a href="">Consulter</a>
-                            </span>
-                        </p>
-                        <p class="w100 flex justifyBetween">
-                            <span> <b>Locmaria-Berrien :</b> Liste des villages</span>
+                            <span class="flex gap10"> <b>Locmaria-Berrien :</b> Liste des villages</span>
                             <span class="flex alignCenter gap5">
                                 <span class="icon">visibility</span>
                                 <a href="">Consulter</a>
@@ -106,11 +106,19 @@
                             
                             <span class="flex alignCenter gap10">
                                 <span class="icon">visibility</span>
+<<<<<<< HEAD
                                 <a class="externalLink" href="https://www.poher.bzh">Consulter</a>
                             </span>
                             <span class="flex alignCenter gap10">
                                 <span class="icon">download</span>
                                 <a class="externalLink" href="https://www.poher.bzh">Télécharger</a>
+=======
+                                <a class="noLineLink" href="https://www.poher.bzh">consulter</a>
+                            </span>
+                            <span class="flex alignCenter gap10">
+                                <span class="icon">download</span>
+                                <a class="noLineLink" href="https://www.poher.bzh">télécharger</a>
+>>>>>>> be1040973a8e8a1093fe57adbe445e183935137a
                             </span>
                         </p>
                     </div>
@@ -164,15 +172,20 @@
                             au composteur.
                         </p>
 
-                        <div class="infoBox w100">
+                        <div class="infoBox flex column gap5 w100">
                             <p>Pour se procurer un composteur ou un bio-seau :</p>
                             <p><span class="icon">call</span>02 98 99 84 43 / 06 45 47 39 62</p>
-                            <p><span class="icon">mail</span><a class="externalLink" href="mailto: tri@poher.bzh">tri@poher.bzh</a></p>
-                            <p class="flex justifyBetween alignCenter"> 
+                            <p><span class="icon">mail</span><a class="noLineLink" href="mailto: tri@poher.bzh">tri@poher.bzh</a></p>
+                            <p class="flex justifyStart gap20"> 
                                 <span>Guide de compostage</span>
                                 <span class="flex alignCenter gap10">
+<<<<<<< HEAD
                                     <span class="icon">visibility</span>
                                     <a class="externalLink" href="https://www.poher.bzh">Consulter</a>
+=======
+                                    <span class="icon">visibility</span> <a class="noLineLink" target="blank" href="https://www.poher.bzh">consulter</a>
+                                    <span class="icon">download</span> <a class="noLineLink" download href="https://www.poher.bzh">télécharger</a>
+>>>>>>> be1040973a8e8a1093fe57adbe445e183935137a
                                 </span>
                                 
                             </p>
@@ -180,7 +193,7 @@
                     </div>
                 </SectionMainSloted>
 
-                <div class="flex justifyCenter gap20 wrap cardSection">
+                <div class="flex justifyCenter gap50 wrap cardSection">
                     <CardsTallMain  title="Déchetterie de Carhaix" cardImage="/images/dechets/Déchetterie Carhaix.jpg" :localImage="true">
                         <div class="bottomBox flex column gap10">
                             <p class="contentRow flex">
@@ -218,7 +231,7 @@
 
                 <section class="mainWidth marTop20 faqSection">
                     <SectionTitleBar title="Foire aux questions sur la tarification incitative" />
-                    <div class="flex column marTop20">
+                    <div class="flex column marTop50">
                         <div class="questionBox flex column gap10 pointer" @click="handleClick" v-for="question in questions" :key="question.id" :data-questionid="`question${question.id}`">
                             <p class="question flex alignCenter justifyBetween ">
                                 <span class="">{{ question.question }}</span>
@@ -342,11 +355,15 @@ onMounted(() => {
     background-color: #0184d525;
     transition: 300ms ease;
 }
-.question {
-    color: var(--brown);
+.questionBox .question {
+    
     border-bottom: 1px solid var(--green);
     padding: 5px 10px;
     user-select: none;
+}
+.questionBox .question *{
+    font-weight: 500;
+    color: var(--brown);
 }
 .answer {
     padding: 20px 40px;
@@ -361,5 +378,9 @@ onMounted(() => {
 .cardSection,
 .faqSection {
     margin-top: 100px;
+}
+
+.ramassageInfoBox * {
+    font-size: 14px;
 }
 </style>

@@ -108,7 +108,9 @@ const closeMenu = () => {
 
 <style>
 .tabBox .tab {
-    padding: 10px 25px;
+    padding: 5px;
+    margin: 10px 25px;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -116,10 +118,13 @@ const closeMenu = () => {
 }
     
 .tabBox .tab:hover {
-    background-color: #0184d525;
+    background-color: var(--dark-blue);
     transition: 300ms ease;
+    box-shadow: var(--shadow);
 }
-
+.tab:hover * {
+    color: white;
+}
 .tabBox .line {
     height: 30px;
     border: 1px solid var(--brown);

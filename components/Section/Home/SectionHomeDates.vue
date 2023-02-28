@@ -7,7 +7,7 @@
                 <div class="dateCard" v-for="date in dates" :key="date.id">
                     <div class="topBox">
                         <p class="title">{{ date.title }}</p>
-                        <p class="date italic">{{ date.date }} <span v-if="date.time">à {{ date.time }}</span> </p>
+                        <p class="date italic">{{new Date(date.date).toLocaleDateString()}} <span v-if="date.time">à {{ date.time }}</span> </p>
                         <p class="location italic">{{ date.location }}</p>
                         <p class="organiser">{{ date.organiser }}</p>
                     </div>
