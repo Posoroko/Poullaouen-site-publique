@@ -21,7 +21,7 @@
                         <p> <span class="icon">call</span> 0969 323 529</p>
                         <p> <span class="icon">schedule</span> 8h-18h du lundi au vendredi</p>
                         <p> <span class="icon">emergency</span> Service urgence 7j/7 - 24h/24</p>
-                        <p> <span class="icon">language</span> <a class="externalLink" href="https://www.alecob.jimdofree.com">www.alecob.jimdofree.com</a></p>
+                        <p> <span class="icon">language</span> <a class="externalLink" href="https://alecob.jimdofree.com">www.alecob.jimdofree.com</a></p>
                     </div>
                 </div>
             </SectionMainSloted>

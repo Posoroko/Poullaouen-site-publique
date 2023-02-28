@@ -68,7 +68,7 @@
                     <div class="infoBox  topGreen bottomGreen">
                         <p> <span class="icon">location_on</span> Maison des Services Publics - Place de la Tour d’Auvergne - Carhaix</p>
                         <p> <span class="icon">call</span> 0 805 203 205 (appel gratuit depuis un poste fixe)</p>
-                        <p> <span class="icon">language</span> <a class="externalLink" href="https://www.alecob.jimdofree.com">www.alecob.jimdofree.com</a></p>
+                        <p> <span class="icon">language</span> <a class="externalLink" href="https://alecob.jimdofree.com">www.alecob.jimdofree.com</a></p>
                     </div>
                 </div>
             </SectionMainSloted>

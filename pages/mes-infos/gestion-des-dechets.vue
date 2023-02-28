@@ -56,21 +56,21 @@
                             <span class="flex gap10"> <b>Poullaouen :</b> Liste des villages - semaines paires</span>
                             <span class="flex alignCenter gap5">
                                 <span class="icon">visibility</span>
-                                <a href="">consulter</a>
+                                <a href="">Consulter</a>
                             </span>
                         </p>
                         <p class="w100 flex justifyBetween gap10">
                             <span class="flex gap10"> <b>Poullaouen :</b> Liste des villages - semaines impaires</span>
                             <span class="flex alignCenter gap5">
                                 <span class="icon">visibility</span>
-                                <a href="">consulter</a>
+                                <a href="">Consulter</a>
                             </span>
                         </p>
                         <p class="w100 flex justifyBetween">
                             <span class="flex gap10"> <b>Locmaria-Berrien :</b> Liste des villages</span>
                             <span class="flex alignCenter gap5">
                                 <span class="icon">visibility</span>
-                                <a href="">consulter</a>
+                                <a href="">Consulter</a>
                             </span>
                         </p>
                     </div>
@@ -106,11 +106,19 @@
                             
                             <span class="flex alignCenter gap10">
                                 <span class="icon">visibility</span>
+<<<<<<< HEAD
+                                <a class="externalLink" href="https://www.poher.bzh">Consulter</a>
+                            </span>
+                            <span class="flex alignCenter gap10">
+                                <span class="icon">download</span>
+                                <a class="externalLink" href="https://www.poher.bzh">Télécharger</a>
+=======
                                 <a class="noLineLink" href="https://www.poher.bzh">consulter</a>
                             </span>
                             <span class="flex alignCenter gap10">
                                 <span class="icon">download</span>
                                 <a class="noLineLink" href="https://www.poher.bzh">télécharger</a>
+>>>>>>> be1040973a8e8a1093fe57adbe445e183935137a
                             </span>
                         </p>
                     </div>
@@ -171,8 +179,13 @@
                             <p class="flex justifyStart gap20"> 
                                 <span>Guide de compostage</span>
                                 <span class="flex alignCenter gap10">
+<<<<<<< HEAD
+                                    <span class="icon">visibility</span>
+                                    <a class="externalLink" href="https://www.poher.bzh">Consulter</a>
+=======
                                     <span class="icon">visibility</span> <a class="noLineLink" target="blank" href="https://www.poher.bzh">consulter</a>
                                     <span class="icon">download</span> <a class="noLineLink" download href="https://www.poher.bzh">télécharger</a>
+>>>>>>> be1040973a8e8a1093fe57adbe445e183935137a
                                 </span>
                                 
                             </p>
