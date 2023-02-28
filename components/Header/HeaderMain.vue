@@ -4,13 +4,13 @@
             <img :src="data.images[0].src" :alt="data.images[0].alt">
         </div>
 
+        <HeaderPathBar :path="data.path"/>
+
         <div class="titleBox darkBlueBG centered">
             <h1 class="pageTitle mainWidth">
                 {{ data.title }}
             </h1>
         </div>
-
-        <HeaderPathBar :path="data.path"/>
     </header>  
 </template>
 
