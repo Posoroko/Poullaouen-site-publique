@@ -80,15 +80,15 @@ const headerData = {
     title: "L'école municipale",
     path: [
         {
-            text: "accueil",
+            text: "Accueil",
             target: "/"
         },
         {
-            text: "mon quotidien",
+            text: "Mon quotidien",
             target: "/mon-quotidien/ecole-municipale"
         },
         {
-            text: "école municipale",
+            text: "Ecole municipale",
             target: "/mon-quotidien/ecole-municipale"
         }
     ]

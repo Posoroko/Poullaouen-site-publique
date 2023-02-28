@@ -92,15 +92,15 @@ const headerData = {
     title: typeData.value.displayName,
     path: [
         {
-            text: 'accueil',
+            text: 'Accueil',
             target: '/'
         },
         {
-            text: 'mes sorties',
+            text: 'Mes sorties',
             target: `/mes-sorties/`
         },
         {
-            text: 'patrimoine',
+            text: 'Patrimoine',
             target: `/mes-sorties/patrimoine`
         },
         {

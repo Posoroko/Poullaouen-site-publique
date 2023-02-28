@@ -281,15 +281,15 @@ const headerData = {
     title: 'Gestion des déchets',
     path: [
         {
-            text: 'accueil',
+            text: 'Accueil',
             target: '/'
         },
         {
-            text: 'mes infos',
+            text: 'Mes infos',
             target: `/mes-infos/gestion-des-dechets`
         },
         {
-            text: 'gestion des déchets',
+            text: 'Gestion des déchets',
             target: `/mes-infos/gestion-des-dechets`
         }
     ]

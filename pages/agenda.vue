@@ -106,11 +106,11 @@ const headerData = {
     title: 'Agenda',
     path: [
         {
-            text: 'accueil',
+            text: 'Accueil',
             target: '/'
         },
         {
-            text: 'agenda',
+            text: 'Agenda',
             target: '/agenda'
         }
     ]

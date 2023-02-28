@@ -99,19 +99,19 @@ const headerData = {
     title: 'Publications réglémentaires',
     path: [
         {
-            text: 'accueil',
+            text: 'Accueil',
             target: '/'
         },
         {
-            text: 'ma mairie',
+            text: 'Ma mairie',
             target: '/ma-mairie'
         },
         {
-            text: 'documents',
+            text: 'Documents',
             target: '/ma-mairie/documents/publications-reglementaires'
         },
         {
-            text: 'publications réglementaires',
+            text: 'Publications réglementaires',
             target: '/ma-mairie/documents/publications-reglementaires'
         }
     ]

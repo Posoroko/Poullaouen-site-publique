@@ -110,15 +110,15 @@ const headerData = {
     title: 'Se loger',
     path: [
         {
-            text: 'accueil',
+            text: 'Accueil',
             target: '/'
         },
         {
-            text: 'mes infos',
+            text: 'Mes infos',
             target: `/mes-infos/se-loger`
         },
         {
-            text: 'se loger',
+            text: 'Se loger',
             target: `/mes-infos/se-loger`
         }
     ]

@@ -99,15 +99,15 @@ const headerData = {
     title: 'La médiathèque',
     path: [
         {
-            text: 'accueil',
+            text: 'Accueil',
             target: '/'
         },
         {
-            text: 'mon quotidien',
+            text: 'Mon quotidien',
             target: '/mon-quetidien/mediatheque'
         },
         {
-            text: 'médiathèque',
+            text: 'Médiathèque',
             target: '/mon-quetidien/mediatheque'
         }
     ]

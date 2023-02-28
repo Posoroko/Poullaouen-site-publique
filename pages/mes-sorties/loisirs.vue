@@ -141,15 +141,15 @@ const headerData = {
     title: 'Loisirs',
     path: [
         {
-            text: 'accueil',
+            text: 'Accueil',
             target: '/'
         },
         {
-            text: 'mes sorties',
+            text: 'Mes sorties',
             target: `/mes-sorties/loisirs`
         },
         {
-            text: 'loisirs',
+            text: 'Loisirs',
             target: `/mes-sorties/loisirs`
         }
     ]

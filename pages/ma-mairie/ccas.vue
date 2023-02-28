@@ -69,15 +69,15 @@ const headerData = {
     title: 'Centre Communal d’Action Sociale',
     path: [
         {
-            text: 'accueil',
+            text: 'Accueil',
             target: '/'
         },
         {
-            text: 'ma mairie',
+            text: 'Ma mairie',
             target: '/ccas'
         },
         {
-            text: 'ccas',
+            text: 'Ccas',
             target: '/ccas'
         }
     ]

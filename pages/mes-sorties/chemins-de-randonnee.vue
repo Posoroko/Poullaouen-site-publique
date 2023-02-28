@@ -209,15 +209,15 @@ const headerData = {
     title: 'Les chemins de randonnée',
     path: [
         {
-            text: 'accueil',
+            text: 'Accueil',
             target: '/'
         },
         {
-            text: 'mes sorties',
+            text: 'Mes sorties',
             target: `/mes-sorties/`
         },
         {
-            text: "les chemins de randonnée",
+            text: "Les chemins de randonnée",
             target: `/mes-sorties/chemins-de-randonnee`
         }
     ]
