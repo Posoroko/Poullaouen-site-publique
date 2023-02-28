@@ -11,7 +11,7 @@
                 <div class="textBox h100 flex column justifyCenter">
                     <h3 class="section-address-text">{{ salle.adress }}</h3>
 
-                    <div class="page-text" v-html="salle.content"></div>
+                    <div class="page-text marTop20" v-html="salle.content"></div>
 
                     <div class="bottomContent">
                         <h4 class="level0 marTop20">Capacité</h4>
@@ -147,9 +147,7 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.level0 {
-    border-bottom: 1px solid green
-}
+
 .level1 {
     padding: 10px 0;
     margin-left: 10px;

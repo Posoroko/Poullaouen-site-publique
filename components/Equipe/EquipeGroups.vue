@@ -130,7 +130,7 @@ const { data: groups } = await useAsyncData(
 const styleTallCards = () => {
 
     const cards = document.querySelectorAll('.tallCard');
-    console.log(cards)
+
     for (let i = 0; i < cards.length; i = i + 3) {
         cards[i].classList.replace('whiteTallCard', 'blueTallCard')
     }

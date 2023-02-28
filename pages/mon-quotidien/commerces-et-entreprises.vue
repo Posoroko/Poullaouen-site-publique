@@ -56,13 +56,13 @@
                                 </p>
                             </div>
 
-                            <div class="contentRow flex" v-if="item.website">
+                            <NuxtLink :to="`https://${item.website}`" class="contesflex" v-if="item.website">
                                 <span class="icon">language</span>
 
                                 <p class="textContent">
                                     {{ item.website }}
                                 </p>
-                            </div>
+                            </NuxtLink>
                         </div>
                     
                     </CardsTallMain>
