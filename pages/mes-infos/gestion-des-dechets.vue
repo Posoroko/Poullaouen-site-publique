@@ -180,7 +180,7 @@
                     </div>
                 </SectionMainSloted>
 
-                <div class="flex justifyCenter gap20 wrap">
+                <div class="flex justifyCenter gap20 wrap cardSection">
                     <CardsTallMain  title="Déchetterie de Carhaix" cardImage="/images/dechets/Déchetterie Carhaix.jpg" :localImage="true">
                         <div class="bottomBox flex column gap10">
                             <p class="contentRow flex">
@@ -216,9 +216,9 @@
                     </CardsTallMain>
                 </div>
 
-                <section class="mainWidth marTop20">
+                <section class="mainWidth marTop20 faqSection">
                     <SectionTitleBar title="Foire aux questions sur la tarification incitative" />
-                    <div class="flex column">
+                    <div class="flex column marTop20">
                         <div class="questionBox flex column gap10 pointer" @click="handleClick" v-for="question in questions" :key="question.id" :data-questionid="`question${question.id}`">
                             <p class="question flex alignCenter justifyBetween ">
                                 <span class="">{{ question.question }}</span>
@@ -357,5 +357,9 @@ onMounted(() => {
 }
 .contentRow .icon {
     margin-right: 10px;
+}
+.cardSection,
+.faqSection {
+    margin-top: 100px;
 }
 </style>
