@@ -10,8 +10,8 @@
             <SectionMainSloted
                 :data="{ title: 'Le pass loisir', image: '/images/loisirs/cinema.jpg', imageAlt: 'Reciclag à Poullaouën', localImage: true }">
                 <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap10">
-                    <p>
-                        <h4>Profitez de tarifs réduits avec le «pass’ loisirs» !</h4>
+                    <p class="flex column gap20">
+                        <h4 class="bottomGreen">Profitez de tarifs réduits avec le «pass’ loisirs» !</h4>
                         Ce pass est accessible gratuitement à tous les habitants de Poher
                         communauté, sans limite d’âge. Il donne des réductions dans les
                         structures ci-dessous :
@@ -31,7 +31,7 @@
                         photo.
                     </p>
 
-                    <div class="infoBox">
+                    <div class="infoBox topGreen">
                         <p class="w100 flex justifyBetween alignCenter">
                             <span> <b>flyer:</b></span>
                             <span class="flex alignCenter gap20">
@@ -48,11 +48,11 @@
 
             <div class="loisirCardsBox flex justifyCenter gap20 wrap">
                 <CardsTallMain title="Aéro-Plass - ULM" cardImage="/images/loisirs/ULM.jpg" :localImage="true">
-                    <div class="bottomBox">
+                    <div class="bottomBox flex column gap10">
                         <p class="contentRow flex">
-                                <span class="icon">location_on</span>
-                                <span class="textContent">Stancou - Poullaouen</span>
-                            </p>
+                            <span class="icon">location_on</span>
+                            <span class="textContent">Stancou - Poullaouen</span>
+                        </p>
                         <p class="paragraph">
                             Laurent PLASSART, pilote chevronné, instructeur
                             et professionnel depuis plus de 25 ans et titulaire
@@ -186,10 +186,16 @@ onMounted(() => {
 })
 </script>
 
-<style>
+<style scoped>
 .slotedSectionTextBox {
     height: 100%;
 }
+
+.bottomBox {
+    padding: 20px;
+}
+
+
 .loisirCardsBox {
     margin-top: 50px;
 }

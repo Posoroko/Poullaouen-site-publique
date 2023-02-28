@@ -95,3 +95,9 @@
         }
 
 
+.bottomGreen {
+    border-bottom: 1px solid var(--green);
+}
+.topGreen {
+    border-top: 1px solid var(--green);
+}

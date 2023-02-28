@@ -1,7 +1,7 @@
 <template>
     <HeaderMain :data="headerData" />
 
-    <main class="mainEcole">
+    <main class="mainCantine">
 
         <EcoleMenu class="desktopMenu" />
 
@@ -57,13 +57,8 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.slotedSectionTextBox {
-    height: 100%;
-}
-
-li {
-    list-style: disc;
-    margin-left: 40px;
+.mainCantine {
+    padding-top: 100px;
 }
 
 @media (max-width: 900px) {

@@ -32,7 +32,7 @@
                         domicile de l’élève jusqu’à l’école.
                     </p>
 
-                    <div class="infoBox">
+                    <div class="infoBox topGreen bottomGreen">
                         <p> <span class="icon">location_on</span> Maison des Services Publics - Place de la Tour d’Auvergne - Carhaix</p>
                         <p> <span class="icon">call</span> 02 98 99 48 00</p>
                         <p> <span class="icon">language</span> <a class="externalLink" href="https://www.poher.bzh/accueil_poher">www.poher.bzh</a></p>
@@ -51,7 +51,7 @@
                         appelant le 0 820 029 270 et dans la mesure du possible.
                     </p>
 
-                    <div class="infoBox">
+                    <div class="infoBox topGreen bottomGreen">
                         <p> <span class="icon">location_on</span> Maison des Services Publics - Place de la Tour d’Auvergne - Carhaix</p>
                         <p> <span class="icon">call</span> 02 98 99 48 00</p>
                         <p> <span class="icon">language</span> <a class="externalLink" href="https://www.poher.bzh/accueil_poher">www.poher.bzh</a></p>
@@ -83,7 +83,7 @@
                         Pour utiliser Taxicom, il suff it de réserver au 02 98 99 38 61. Le standard téléphonique est ouvert du lundi au vendredi..
                     </p>
 
-                    <div class="infoBox">
+                    <div class="infoBox topGreen bottomGreen">
                         <p> <span class="icon">call</span> 02 98 99 38 61</p>
                     </div>
                 </div>
@@ -130,7 +130,7 @@
                             demandeur ne pourra faire la demande qu’une seule fois, sera majeur et domicilié sur le territoire de Poher communauté.
                         </p>
     
-                        <div class="infoBox">
+                        <div class="infoBox topGreen bottomGreen">
                             <p> <span class="icon">location_on</span> Maison des Services Publics - Place de la Tour d’Auvergne - Carhaix</p>
                             <p> <span class="icon">call</span> 02 98 99 48 00</p>
                             <p> <span class="icon">language</span> <a class="externalLink" href="https://www.poher.bzh/accueil_poher">www.poher.bzh</a></p>
@@ -159,7 +159,7 @@
                             d’itinéraires en transports collectifs.
                         </p>
     
-                        <div class="infoBox">
+                        <div class="infoBox topGreen bottomGreen">
                             <p> <span class="icon">call</span> 02 98 99 48 00</p>
                             <p> <span class="icon">language</span> <a class="externalLink" href="https://www.mobibreizh.bzh/">www.mobibreizh.bzh</a></p>
                         </div>
@@ -188,7 +188,7 @@
                             répondre à votre besoin de mobilité, l’association partenaire éhop vous accompagne dans la recherche d’un covoiturage.
                         </p>
 
-                        <div class="infoBox">
+                        <div class="infoBox topGreen bottomGreen">
                             <p> <span class="icon">call</span> 02 99 35 10 77</p>
                             <p> <span class="icon">language</span> <a class="externalLink" href="https://www.ehopcovoiturons-nous.fr/">www.covoiturons-nous.fr</a></p>
                         </div>
@@ -257,6 +257,10 @@ onMounted(() => {
 <style scoped>
 .slotedSectionTextBox {
     height: 100%;
+}
+
+.infoBox {
+    padding: 10px;
 }
 
 li {

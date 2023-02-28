@@ -11,64 +11,61 @@
         <FilterBarMain :filters="itemsData.filters" @updateFilter="moveSectionToFirstPosition" :slugged="true" />
 
 
-        <div class="content flext column" ref="content">
+        <div class="content flex justifyCenter wrap" ref="content">
             <section class="w100" v-for="filter in itemsData.filters" :key="filter.slug" :id="filter.slug">
                 <SectionTitleBar :title="filter.name" />
 
-                <div class="mainWidth flex justifyEvenly alignStretch wrap gap20 marTop20">
-
-                    <div v-for="item in itemsData.items[filter.slug]" :key="item.id">
-                        <CardsTallMain 
-                            :title="item.name" 
-                            :subtitle="item.subType[0]" 
-                            :cardImage="item.image" 
-                            :cardImageAlt="item.imageAlt">
-                            
-                            <div class="bottomBox flex column gap10 justifyCenter alignStart">
-                                <div class="contentRow flex" v-if="item.hours">
-                                    <span class="icon">schedule</span>
-
-                                    <p class="textContent">
-                                        {{ item.hours }}
-                                    </p>
-                                </div>
-
-                                <div class=" contentRow flex" v-if="item.adress">
-                                    <span class="icon">location_on</span>
-
-                                    <p class="textContent">
-                                        {{ item.adress }}
-                                    </p>
-                                </div>
-
-                                <div class="contentRow flex" v-if="item.phone">
-                                    <span class="icon">call</span>
-
-                                    <p class="textContent">
-                                        {{ item.phone }}
-                                    </p>
-                                </div>
-
-                                <div class="contentRow flex" v-if="item.email">
-                                    <span class="icon">mail</span>
-
-                                    <p class="textContent">
-                                        {{ item.email }}
-                                    </p>
-                                </div>
-
-                                <div class="contentRow flex" v-if="item.website">
-                                    <span class="icon">language</span>
-
-                                    <p class="textContent">
-                                        {{ item.website }}
-                                    </p>
-                                </div>
-                            </div>
+                <div class="mainWidth flex justifyCenter alignStretch wrap gap20 marTop20">
+                    <CardsTallMain 
+                        v-for="item in itemsData.items[filter.slug]" :key="item.id"
+                        :title="item.name" 
+                        :subtitle="item.subType[0]" 
+                        :cardImage="item.image" 
+                        :cardImageAlt="item.imageAlt">
                         
-                        </CardsTallMain>
-                    </div>
+                        <div class="bottomBox flex column gap10 justifyCenter alignStart">
+                            <div class="contentRow flex" v-if="item.hours">
+                                <span class="icon">schedule</span>
+
+                                <p class="textContent">
+                                    {{ item.hours }}
+                                </p>
+                            </div>
+
+                            <div class=" contentRow flex" v-if="item.adress">
+                                <span class="icon">location_on</span>
+
+                                <p class="textContent">
+                                    {{ item.adress }}
+                                </p>
+                            </div>
+
+                            <div class="contentRow flex" v-if="item.phone">
+                                <span class="icon">call</span>
+
+                                <p class="textContent">
+                                    {{ item.phone }}
+                                </p>
+                            </div>
+
+                            <div class="contentRow flex" v-if="item.email">
+                                <span class="icon">mail</span>
+
+                                <p class="textContent">
+                                    {{ item.email }}
+                                </p>
+                            </div>
+
+                            <div class="contentRow flex" v-if="item.website">
+                                <span class="icon">language</span>
+
+                                <p class="textContent">
+                                    {{ item.website }}
+                                </p>
+                            </div>
+                        </div>
                     
+                    </CardsTallMain>
                 </div>
             </section>
         </div>

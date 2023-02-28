@@ -1,5 +1,5 @@
 <template>
-    <div class="randoTopBo">
+    <div class="randoTopBox topGreen bottomGreen">
         <div class="firstRow flex justifyBetween">
             <div class="flex gap5">
                 <span class="icon">swap_horiz</span>
@@ -24,8 +24,8 @@
         </p>
 
         <p class="thirdRow">
-                <span class="icon">flag</span> <span class="randoInfo">{{ data.start }}</span>
-            </p>
+            <span class="icon">flag</span> <span class="randoInfo">{{ data.start }}</span>
+        </p>
 
     </div>
 </template>
@@ -42,7 +42,7 @@ const props = defineProps({
 
 </script>
 
-<style>
+<style scoped>
 .randoTopBox * {
     font-size: 14px;
 }

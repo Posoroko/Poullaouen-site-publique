@@ -9,7 +9,7 @@
 
         <div v-for="item in equipementsData" :key="item.id">
             <SectionMainSloted :data="{ title: item.title, image: item.image }">
-                <div class="slotedSectionTextBox flex column justifyBetween pad20">
+                <div class="slotedSectionTextBox flex column justifyCenter gap20 pad20">
                     <div class="topTextBox">
                         <h2 class="sectionSubtitle">
                             <span v-if="item.subTitle">{{ item.subTitle }}</span>
@@ -112,7 +112,11 @@ onMounted(() => {
 })
 </script>
 
-<style>
+<style scoped>
+
+.topTextBox{
+    border-bottom: 1px solid green
+}
 .slotedSectionTextBox {
     height: 100%;
 }

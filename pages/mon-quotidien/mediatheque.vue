@@ -32,48 +32,48 @@
         </SectionMainSloted>
 
         <SectionMainSloted :data="{ title: 'Informations', image: '/images/mediatheque/interieur2.jpg', localImage: true }">
-                <div class="mediathequeBox flex column gap10 justifyCenter alignStart">
-                                    <div class="contentRow w100 flex">
-                                        <span class="icon">schedule</span>
-    
-                                        <ul class="textContent mediathequeSchedule w100 schedule">
-                                           <li class="w100"> <span>Mercredi:</span> 10h30 - 12h30</li>
-                                           <li class="w100"><span>Vendredi:</span> 16h30 - 18h30 (sauf juillet/août)</li>
-                                           <li class="w100"><span>Samedi:</span> 10h00 - 12h00</li> 
-                                        </ul>
-                                    </div>
-    
-                                    <div class=" contentRow flex">
-                                        <span class="icon">accessible</span>
-                                        
-                                        <p class="textContent">
-                                            Accessible aux personnes à mobilité réduite
-                                        </p>
-                                    </div>
-    
-                                    <div class="contentRow flex">
-                                        <span class="icon">call</span>
-                                            02 98 93 50 58
-                                        <p class="textContent">
-                                        </p>
-                                    </div>
-    
-                                    <div class="contentRow flex">
-                                        <span class="icon">mail</span>
-                                            mediatheque.poullaouen@yahoo.fr
-                                        <p class="textContent">
-                                        </p>
-                                    </div>
-    
-                                    <div class="contentRow flex">
-                                        <span class="icon">language</span>
-    
-                                        <p class="textContent">
-                                            catalogue de la médiathèque
-                                        </p>
-                                    </div>
-                                </div>
-            </SectionMainSloted>
+            <div class="mediathequeBox h100 flex column justifyCenter gap10">
+                <div class="contentRow w100 flex">
+                    <span class="icon">schedule</span>
+
+                    <ul class="textContent mediathequeSchedule w100 schedule">
+                        <li class="w100"> <span>Mercredi:</span> 10h30 - 12h30</li>
+                        <li class="w100"><span>Vendredi:</span> 16h30 - 18h30 (sauf juillet/août)</li>
+                        <li class="w100"><span>Samedi:</span> 10h00 - 12h00</li> 
+                    </ul>
+                </div>
+
+                <div class=" contentRow flex">
+                    <span class="icon">accessible</span>
+                    
+                    <p class="textContent">
+                        Accessible aux personnes à mobilité réduite
+                    </p>
+                </div>
+
+                <div class="contentRow flex">
+                    <span class="icon">call</span>
+                        02 98 93 50 58
+                    <p class="textContent">
+                    </p>
+                </div>
+
+                <div class="contentRow flex">
+                    <span class="icon">mail</span>
+                        mediatheque.poullaouen@yahoo.fr
+                    <p class="textContent">
+                    </p>
+                </div>
+
+                <div class="contentRow flex">
+                    <span class="icon">language</span>
+
+                    <p class="textContent">
+                        catalogue de la médiathèque
+                    </p>
+                </div>
+            </div>
+        </SectionMainSloted>
 
     </main>
 </template>

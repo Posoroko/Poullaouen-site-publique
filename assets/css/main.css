@@ -12,9 +12,11 @@
     padding-right: 25px; 
 }
 
-/* main {
-    padding-top: 50px;
+
+/* .sectionTitleBox {
+    background-color: white;
 } */
+
 
 
 .whiteSection  {
@@ -24,9 +26,7 @@
     color: var(--brown);
 }
 
-.sectionTitleBox {
-    background-color: white;
-}
+
 
 .blueSection .section-address-text {
     color: white;
@@ -53,7 +53,7 @@
 }
 
 .brownSection * {
-    fill: white;
+    fill: var(--dark-blue);
 }
 
 .brownSection .sectionContent .mainWidth, 
@@ -152,4 +152,13 @@
  }
  .tallCardBottomBox {
      padding: 20px;
+ }
+
+
+ .bottomGreen {
+     margin-bottom: 1px solid var(--green);
+ }
+
+ .topGreen {
+     margin-top: 1px solid var(--green);
  }

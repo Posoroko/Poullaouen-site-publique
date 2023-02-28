@@ -153,7 +153,8 @@ const closeMenu = () => {
 }
 .menuPanel .linkList .link {
     font-size: 20px;
-    padding: 4px 5px;
+    font-weight: 500;
+    padding: 7px 5px;
     border-bottom: 1px solid var(--brown);
     transition: 300ms ease;
 }

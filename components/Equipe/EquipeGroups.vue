@@ -4,7 +4,7 @@
         <div class="groups" v-for="type in groupTypes" :key="type.id" :id="type.id">
             <SectionTitleBar :title="type.name" />
  
-            <div class="content mainWidth flex justifyCenter wrap gap20">
+            <div class="content mainWidth flex justifyEvenly alignStretch wrap gap20">
                 <CardsTallMain  v-for="group in groups[type.id]" :key="group.id"  :title="group.name" :subtitle="group.boss" :cardImage="group.image" :localImage="false">
                     <div class="tallCardBottomBox">    
                         <div v-if="group.membresElus.length">
@@ -154,24 +154,5 @@ onMounted(() => {
     margin-right: 5px;
     display: inline;
 }
-/* .groupCard:nth-child(1),
-.groupCard:nth-child(4) {
-    background-color: var(--dark-blue);
-}
-.groupCard:nth-child(1) *,
-.groupCard:nth-child(4) *{
-    color:#fff;
-}
-.groupCard:nth-child(2) {
-    background-color: #fff;
-}
-.groupCard:nth-child(2) * {
-    color: var(--dark-blue);
-}
-.groupCard:nth-child(3) {
-    background-color: var(--brown);
-}
-.groupCard:nth-child(3) * {
-    color: #fff;
-} */
+
 </style>

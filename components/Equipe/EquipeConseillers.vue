@@ -11,11 +11,6 @@
                             <h2 class="name">
                                 {{ person.firstName }} {{ person.lastName }}
                             </h2>
-
-                            <h3 class="role">
-                                {{ person.role }}
-                            </h3>
-
                         </div>
 
                         <div class="frame">
@@ -76,14 +71,11 @@ const headerData = {
 .conseillerCard .frame img{
     object-position: top;
 }
-.conseillerCard .topBox,
-.conseillerCard .roleDetail {
+.conseillerCard .topBox {
     padding: 10px;
 }
 
-.conseillerCard .topBox .name,
-.conseillerCard .topBox .role,
-.conseillerCard .roleDetail {
+.conseillerCard .topBox .name {
     color: white;
     text-align: center;
 }
@@ -93,15 +85,4 @@ const headerData = {
     font-weight: 500;
 }
 
-.conseillerCard .topBox .role {
-    font-size: 14px;
-    font-weight: 300;
-    font-style: italic;
-}
-
-.conseillerCard .roleDetail {
-    font-size: 14px;
-    font-weight: 300;
-    text-align: center;
-}
 </style>

@@ -41,7 +41,7 @@
                     vers le point de jonction G.</li>
             </ul>
 
-            <div class="moreInfo">
+            <div class="moreInfo topGreen">
                 <p class="flex alignCenter gap10">carte: <span class="icon"> visibility</span>  consulter <span class="icon"> download</span> télécharger</p>
             </div>
         </SectionMainSloted>
@@ -67,7 +67,7 @@
                     <li>Rejoindre la voie de chemin de fer.</li>
                 </ul>
     
-                <div class="moreInfo">
+                <div class="moreInfo topGreen">
                     <p class="flex alignCenter gap10">carte: <span class="icon"> visibility</span>  consulter <span class="icon"> download</span> télécharger</p>
                 </div>
             </SectionMainSloted>
@@ -94,7 +94,7 @@
                 <li>Rester sur la route jusqu’au bourg, mis à part le petit chemin très ombragé, à droite, à hauteur du lac qui évite le virage en épingle.</li>
             </ul>
 
-            <div class="moreInfo">
+            <div class="moreInfo topGreen">
                 <p class="flex alignCenter gap10">carte: <span class="icon"> visibility</span>  consulter <span class="icon"> download</span> télécharger</p>
             </div>
         </SectionMainSloted>
@@ -135,7 +135,7 @@
                     rejoindre le bourg en suivant toujours le balisage GR rouge et blanc.</li>
             </ul>
 
-            <div class="moreInfo">
+            <div class="moreInfo topGreen">
                 <p class="flex alignCenter gap10">carte: <span class="icon"> visibility</span>  consulter <span class="icon"> download</span> télécharger</p>
             </div>
         </SectionMainSloted>

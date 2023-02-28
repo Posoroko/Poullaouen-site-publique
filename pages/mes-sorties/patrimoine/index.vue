@@ -8,10 +8,10 @@
 
         <nav class="patrimoineLinkBox flex wrap gap20 justifyEvenly mainWidth">
             <NuxtLink class="patrimoineLink flex column alignCenter" :to="`/mes-sorties/patrimoine/${type.slug}`" v-for="type in typesData" :key="type.id">
-                <div class="frame">
+                <div class="frame shadow">
                     <img class="objectFitCover" :src="`${directusAssets}${type.image}?key=square400`" alt="">
                 </div>
-                <h2>{{ type.displayName }}</h2>
+                <h2 class="marTop20">{{ type.displayName }}</h2>
             </NuxtLink>
         </nav>
     </main>
@@ -84,7 +84,7 @@ onMounted(() => {
 })
 </script>
 
-<style>
+<style scoped>
 .patrimoineLinkBox {
     margin-top: 50px;
 }

@@ -9,7 +9,7 @@
 
         <SectionTitleBar title="Le rôle CCAS"/>
 
-        <p class="mainWidth page-text">
+        <p class="mainWidth intro-text marTop20">
             Le CCAS assure une mission d’aide à la population. 
             Il apporte une aide pour les demandes d’APA, d’aide sociale (service d’aide ménagère 
             et prise en charge des frais d’hébergement en maison de retraite ou foyer logement), 
@@ -89,8 +89,6 @@ const headerData = {
 
 <style>
 /* blue feet */
-.mainCCAS * {
-    fill: var(--dark-blue);
-}
+
 
 </style>
