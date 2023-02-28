@@ -14,17 +14,17 @@
                     <div class="page-text" v-html="salle.content"></div>
 
                     <div class="bottomContent">
-                        <h4 class="level0 marTop20">capacité</h4>
+                        <h4 class="level0 marTop20">Capacité</h4>
 
                         <ul class="flex marTop20">
-                            <li v-if="salle.sittings" class="level2 page-text" vif="salle.sitings">assis :  <b>{{ salle.sittings }}</b></li>
-                            <li v-if="salle.standings" class="level2 page-text" vif="salle.standings">debout : <b>{{ salle.standings }}</b></li>
+                            <li v-if="salle.sittings" class="level2 page-text" vif="salle.sitings">Assis :  <b>{{ salle.sittings }}</b></li>
+                            <li v-if="salle.standings" class="level2 page-text" vif="salle.standings">Debout : <b>{{ salle.standings }}</b></li>
                         </ul>
 
 
                         <h4 class="level0 marTop20">tarifs</h4>
                         <div class="moreinfo italic">
-                            <h5 class="level1">poullaouennais</h5>
+                            <h5 class="level1">Poullaouennais</h5>
                             <ul>
                                 <li class="breadcrumbs-text level2">
                                     <span>1 jour : &nbsp</span>
@@ -46,7 +46,7 @@
                         </div>
 
                         <div class="moreinfo italic">
-                            <h5 class="level1">non poullaouennais</h5>
+                            <h5 class="level1">Non poullaouennais</h5>
                             <li>
                                 <ul>
                                     <li class="breadcrumbs-text level2">
