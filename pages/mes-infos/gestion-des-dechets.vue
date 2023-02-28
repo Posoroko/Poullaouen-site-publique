@@ -56,21 +56,21 @@
                             <span> <b>Poullaouen :</b> Liste des villages - semaines paires</span>
                             <span class="flex alignCenter gap5">
                                 <span class="icon">visibility</span>
-                                <a href="">consulter</a>
+                                <a href="">Consulter</a>
                             </span>
                         </p>
                         <p class="w100 flex justifyBetween">
                             <span> <b>Poullaouen :</b> Liste des villages - semaines impaires</span>
                             <span class="flex alignCenter gap5">
                                 <span class="icon">visibility</span>
-                                <a href="">consulter</a>
+                                <a href="">Consulter</a>
                             </span>
                         </p>
                         <p class="w100 flex justifyBetween">
                             <span> <b>Locmaria-Berrien :</b> Liste des villages</span>
                             <span class="flex alignCenter gap5">
                                 <span class="icon">visibility</span>
-                                <a href="">consulter</a>
+                                <a href="">Consulter</a>
                             </span>
                         </p>
                     </div>
@@ -106,11 +106,11 @@
                             
                             <span class="flex alignCenter gap10">
                                 <span class="icon">visibility</span>
-                                <a class="externalLink" href="https://www.poher.bzh">consulter</a>
+                                <a class="externalLink" href="https://www.poher.bzh">Consulter</a>
                             </span>
                             <span class="flex alignCenter gap10">
                                 <span class="icon">download</span>
-                                <a class="externalLink" href="https://www.poher.bzh">télécharger</a>
+                                <a class="externalLink" href="https://www.poher.bzh">Télécharger</a>
                             </span>
                         </p>
                     </div>
@@ -172,7 +172,7 @@
                                 <span>Guide de compostage</span>
                                 <span class="flex alignCenter gap10">
                                     <span class="icon">visibility</span>
-                                    <a class="externalLink" href="https://www.poher.bzh">consulter</a>
+                                    <a class="externalLink" href="https://www.poher.bzh">Consulter</a>
                                 </span>
                                 
                             </p>

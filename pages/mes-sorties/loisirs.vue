@@ -33,11 +33,11 @@
 
                     <div class="infoBox topGreen">
                         <p class="w100 flex justifyBetween alignCenter">
-                            <span> <b>flyer:</b></span>
+                            <span> <b>Flyer :</b></span>
                             <span class="flex alignCenter gap20">
-                                <a class="flex alignCenter gap5" href=""><span class="icon">visibility</span>consulter</a>
+                                <a class="flex alignCenter gap5" href=""><span class="icon">visibility</span>Consulter</a>
                         
-                                <a class="flex alignCenter gap5" href=""><span class="icon">download</span> télécharger</a>       
+                                <a class="flex alignCenter gap5" href=""><span class="icon">download</span> Télécharger</a>       
                             </span>
                         </p>
                     </div>
