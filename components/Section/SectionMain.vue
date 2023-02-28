@@ -4,7 +4,7 @@
 
         <div class="sectionContent w100">
             <div class="flex alignCenter justifyCenter wrap">
-                <SectionShoeBox :image="data.image" v-if="data.image"/>
+                <SectionShoeBox :image="data.image"/>
                 
                 <SectionTextBoxActu v-if="type === 'actualites'" :data="data" />
                 

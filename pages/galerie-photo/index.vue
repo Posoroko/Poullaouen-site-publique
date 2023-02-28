@@ -8,8 +8,8 @@
             </div>
 
             <div class="infoBox flex column justifyEnd gap10">
-                <h4> {{ cat }}</h4>
-                <p class="albumCount">{{ galeryData.albums[cat].length }} albums<span v-if="galeryData.albums[cat].length > 1">s</span> </p>
+                <h4 class="catTitle"> {{ cat }}</h4>
+                <p class="albumCount">{{ galeryData.albums[cat].length }} album<span v-if="galeryData.albums[cat].length > 1">s</span> </p>
             </div>
 
 
@@ -102,9 +102,10 @@ const headerData = {
 .catBar .infoBox {
     padding-left: 30px;*transition: 300ms ease;
 }
-.catBar .infoBox h4 {
-    font-size: 30px;
+.catBar .infoBox .catTitle {
+    font-size: 70px;
     font-weight: 600;
+    opacity: 0.8;
 }
 .catBar .frame {
     width: 200px;

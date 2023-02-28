@@ -1,11 +1,10 @@
 <template>
     <!-- <HeaderMain :data="headerData" /> -->
     <main class="galerieMain flex column">
-
-        <h2 class="mainWidth"> {{ album.albumName }}</h2>
+        <h2 class="mainWidth">{{ album.albumName }}</h2>
         <p class="mainWidth intro-text">{{ album.content }}</p>
 
-        <div class="mainWidth boxOfPhotos flex justifyCenter gap20 wrap">
+        <div class="mainWidth boxOfPhotos flex justifyCenter gap20 wrap marTop50">
             <div class="frame" v-for="photo in album.images" :key="photo.id">
                 <img class="objectFitCover" :src="`${directusAssets}${photo.directus_files_id}?key=card500`" alt="">
             </div>
@@ -74,6 +73,7 @@ const headerData = {
 </script>
 
 <style>
+
 .boxOfPhotos .frame {
     width: 200px;
     aspect-ratio: 1/1;

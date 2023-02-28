@@ -68,9 +68,9 @@
                 <div class="contentRow flex">
                     <span class="icon">language</span>
 
-                    <p class="textContent">
+                    <a href="https://poullaouen-pom.c3rb.org/" class="externalLink">
                         Catalogue de la médiathèque
-                    </p>
+                    </a>
                 </div>
             </div>
         </SectionMainSloted>

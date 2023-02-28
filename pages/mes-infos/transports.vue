@@ -133,7 +133,7 @@
                         <div class="infoBox topGreen bottomGreen">
                             <p> <span class="icon">location_on</span> Maison des Services Publics - Place de la Tour d’Auvergne - Carhaix</p>
                             <p> <span class="icon">call</span> 02 98 99 48 00</p>
-                            <p> <span class="icon">language</span> <a class="externalLink" href="https://www.poher.bzh/accueil_poher">www.poher.bzh</a></p>
+                            <p> <span class="icon">language</span> <a class="noLineLink" href="https://www.poher.bzh/accueil_poher/les_services/mobilites/covoiturage?fbclid=IwAR0HDgrsKefyNGKnVy8Lf7OjuDKOE7T7GvW3r2aPUC-izuisYpfHm9PyABI">www.poher.bzh</a></p>
                         </div>
                     </div>
                 </SectionMainSloted>

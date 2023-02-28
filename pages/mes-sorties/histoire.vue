@@ -29,6 +29,66 @@
                 </div>
             </SectionMainSloted>
         </div>
+
+        <div class="whiteSection mainWidth flex alignCenter customSection">
+            <div class="leftSectionBox box h100">
+                <SectionShoeBox image="/images/histoire/maison de la mine.jpg" :localImage="true" />
+
+                <div class="bottomBox flex column gap10 marTop50">
+                    Pour plus de renseignements concernant ces mines, vous pouvez
+                    contacter les organismes suivants :
+                    <br><br>
+                    ASAM (association de sauvegarde de l’ancienne mine) organise, à la
+                    demande, des visites guidées pour des groupes
+                    <br>
+                    <p class="sectionMoreInfo flex alignCenter"> <span class="icon">language</span> <a href="http://minelocmariaberrien.com">minelocmariaberrien.com</a> </p>
+                    <p class="sectionMoreInfo"> <span class="icon">email</span> <a href="emailto: asamlb@hotmail.fr">asamlb@hotmail.fr</a> </p>
+                    <p>Mairie Locmaria-Berrien : 02.98.99.73.09</p>
+                    <p>Mairie Poullaouen : 02.98.93.50.76</p>
+                </div>
+            </div>
+
+            <div class="rightSectionBox box h100 flex column justifyCenter gap20">
+                <div class="toptBox">
+                    <h2 class="sectionSubtitle"> Les mines aujourd’hui. </h2>
+                </div>
+
+                <p class="page-text">
+                    En raison de l’essor du réseau ferré, les mines ferment les unes après
+                    les autres : en 1866 à Poullaouen, en 1873 à Huelgoat.
+
+                    Des tentatives de réexploitation furent réalisées par la Société des
+                    Mines de Pontpéan en 1906, puis par la Société de Pontgibaud, et
+                    par celle de Congolin. Cependant, l’exploitation ne reprendra jamais
+                    significativement.
+
+                    L’arrêt définitif survient en 1934.
+
+                    Aujourd’hui, les communes de Poullaouen et Huelgoat ne disposent
+                    plus d’aucune trace de minerais.
+
+                    Les mines de plomb argentifère de Poullaouen, Locmaria-Berrien et
+                    Huelgoat font désormais partie du patrimoine historique du centre
+                    finistère. Ces communes ne disposent actuellement que de quelques
+                    traces de ces mines, vestiges que l’Association de sauvergarde de
+                    l’ancienne mine (l’ASAM) à Locmaria-Berrien et quelques passionnés,
+                    cherchent à sauvegarder.
+
+                    Des expositions, des maquettes et de nombreux documents d’archives
+                    donnent vie aux vestiges, eux-mêmes bien conservés.
+
+                    Bibliographie :
+
+                    Les Mines de Poullaouen - Huelgoat - Locmaria Berrien : Jacques LE
+                    BOULANGER - septembre 1994
+                    Les Mines de Huelgoat - Poullaouen : Michel PENVEN (Association «sur
+                    les traces de François JONCOUR») - Mars 1989
+                    Revue MICHERIOUZ KOZ : magazine des vieux métiers de Bretagne
+                    - «Les mineurs de Poullaouen & de Locmaria-Berrien» - 1er numéro :
+                    octobre, novembre, décembre 2002
+                </p>
+            </div>
+        </div>
     </main>
 </template>
 
@@ -97,6 +157,13 @@ onMounted(() => {
 </script>
 
 <style scoped>
+
+.customSection .box {
+    width: 50%;
+    height: 100%;
+    padding: 30px;
+}
+
 .sectionSubtitle {
     border-bottom: 1px solid var(--green);
 }

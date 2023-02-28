@@ -1,10 +1,10 @@
 <template>
-    <HeaderMain :data="headerData" />
+    <!-- <HeaderMain :data="headerData" /> -->
     <main class="galerieMain flex column">
         
-        <h2 class="mainWidth">Albums de la catégorie {{ activeCategory }}</h2>
+        <h2 class="mainWidth">Albums de la catégorie {{ albums[0].categoryName.displayName }}</h2>
 
-        <NuxtLink :to="`/galerie-photo/${activeCategory}/${album.slug}`" class="catBar pointer mainWidth flex"
+        <NuxtLink :to="`/galerie-photo/${activeCategory}/${album.slug}`" class="catBar pointer mainWidth flex marTop50"
             v-for="album in albums" :key="album.id">
             <div class="frame shadow">
                 <img class="objectFitCover"
@@ -44,8 +44,6 @@ const { data: albums } = await useAsyncData(
     async () => {
         const albums = await $fetch(`${directusItems}Albums_photo?[filter][categoryName][slug][_eq]=${activeCategory}`, fetchOptions)
         
-
-
         return albums.data
     }
     ,

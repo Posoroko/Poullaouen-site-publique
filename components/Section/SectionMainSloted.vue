@@ -4,7 +4,7 @@
 
         <div class="sectionContent sectionBox w100 h100">
             <div class="mainWidth h100 flex justifyCenter wrap">
-                <div class="shoeBox centered" v-if="data.image">
+                <div class="shoeBox centered">
                     <SectionShoeBox :image="data.image" :localImage="data.localImage"/>
                 </div>
                 
