@@ -18,8 +18,8 @@
             <div class="content mainWidth flex justifyEvenly alignStretch wrap gap50 marTop100">
                 <CardsTallMain  v-for="group in groups[type.id]" :key="group.id"  :title="group.name" :subtitle="group.boss" :cardImage="group.image" :localImage="false">
                     <div class="tallCardBottomBox">    
-                        <div v-if="group.membresElus.length">
-                            <h4>Elus :</h4>
+                        <div class="w100" v-if="group.membresElus.length">
+                            <h4>Membres élus :</h4>
                             <ul class="membersList flex wrap">
                                 <li v-for="member in group.membresElus" :key="member.id" class="groupMember">
                                     {{ member.Equipe_id.firstName.slice(0, 1) }}. {{ member.Equipe_id.lastName.toUpperCase() }}
@@ -27,8 +27,8 @@
                             </ul>
                         </div>
 
-                        <div v-if="group.membresNonElus.length">
-                            <h4>Non élus :</h4>
+                        <div class="w100" v-if="group.membresNonElus.length">
+                            <h4>Membres non élus :</h4>
                             <ul class="membersList flex wrap">
                                 <li v-for="member in group.membresNonElus" :key="member.id" class="groupMember">
                                     {{ member.Non_elu_id.firstName.slice(0, 1) }}. {{ member.Non_elu_id.lastName.toUpperCase() }}
@@ -36,8 +36,8 @@
                             </ul>
                         </div>
 
-                        <div class="flex justifyBetween">
-                            <div v-if="group.titulairesElus.length">
+                        <div class="flex">
+                            <div class="w50" v-if="group.titulairesElus.length">
                                 <h4>Titulaire<span v-if="group.titulairesElus.length > 1">s</span> élu<span v-if="group.titulairesElus.length > 1">s</span> :</h4>
                                 <ul class="membersList flex wrap">
                                     <li v-for="member in group.titulairesElus" :key="member.id" class="groupMember">
@@ -46,7 +46,7 @@
                                 </ul>
                             </div>
                             
-                            <div v-if="group.suppleantsElus.length">
+                            <div class="w50" v-if="group.suppleantsElus.length">
                                 <h4>Suppléant<span v-if="group.suppleantsElus.length > 1">s</span> élu<span v-if="group.suppleantsElus.length > 1">s</span> :</h4>
                                 <ul class="membersList flex wrap">
                                     <li v-for="member in group.suppleantsElus" :key="member.id" class="groupMember">
@@ -56,8 +56,8 @@
                             </div>
                         </div>
 
-                        <div class="flex justifyBetween">
-                            <div v-if="group.titulairesNonElus.length">
+                        <div class="flex">
+                            <div class="w50" v-if="group.titulairesNonElus.length">
                                 <h4>Titulaire<span v-if="group.titulairesNonElus.length > 1">s</span> non élu<span v-if="group.titulairesNonElus.length > 1">s</span> :</h4>
                                 <ul class="membersList flex wrap">
                                     <li v-for="member in group.titulairesNonElus" :key="member.id" class="groupMember">
@@ -66,7 +66,7 @@
                                 </ul>
                             </div>
                             
-                            <div v-if="group.suppleantsNonElus.length">
+                            <div class="w50" v-if="group.suppleantsNonElus.length">
                                 <h4>Suppléant<span v-if="group.suppleantsNonElus.length > 1">s</span> non élu<span v-if="group.suppleantsNonElus.length > 1">s</span> :</h4>
                                 <ul class="membersList flex wrap">
                                     <li v-for="member in group.suppleantsNonElus" :key="member.id" class="groupMember">
@@ -158,8 +158,8 @@ onMounted(() => {
     text-align: center;
 }
 .groupMember{
-    font-size: 12px;
-    font-weight: 300;
+    font-size: 14px;
+    font-weight: 400;
     margin-right: 5px;
     display: inline;
 }

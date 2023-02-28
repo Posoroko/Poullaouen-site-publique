@@ -43,6 +43,8 @@
                                     </span>
                                 </li>
                             </ul>
+                            
+                            
                         </div>
 
                         <div class="moreinfo italic">
@@ -67,6 +69,7 @@
                             </li>
                         </div>
 
+                        <p class="page-text marTop20" v-if="salle.name == 'La salle des fêtes'">Possibilité de location de sono.</p>
                         
                     </div>
                 </div>

@@ -24,7 +24,7 @@ const closeModal = () => {
 #masterModal {
     max-width: 95vw;
     max-height: 90vh;
-    padding: 3vw;
+    /* padding: 3vw; */
     margin: auto;
     outline: none;
     /* position: relative; */
