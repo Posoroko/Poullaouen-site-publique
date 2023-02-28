@@ -17,7 +17,7 @@
 
             <SectionRandoTopBox :data="section1TopBoxData" />
 
-            <ul class="randoList flex column gap5">
+            <ul class="randoList page-text flex column gap5">
                 <li>Départ de Lemezec (avant le pont), prendre le chemin forestier
                     qui longue l’Aulne, quitter le chemin qui monte vers Lemezec
                     Huella.</li>
@@ -42,7 +42,7 @@
             </ul>
 
             <div class="moreInfo topGreen">
-                <p class="flex alignCenter gap10">carte: <span class="icon"> visibility</span>  consulter <span class="icon"> download</span> télécharger</p>
+                <p class="flex alignCenter gap10">Carte : <span class="icon"> visibility</span>  Consulter <span class="icon"> download</span> Télécharger</p>
             </div>
         </SectionMainSloted>
 
@@ -50,7 +50,7 @@
                 <p class="subtitle">Circuit 2 : Le petit train - Poullaouen</p>
                 <SectionRandoTopBox :data="section2TopBoxData" />
     
-                <ul class="randoList flex column gap5">
+                <ul class="randoList page-text flex column gap5">
                     <li>Quitter la place de l’église par la rue du Pont Pierre.
                         Au stop, prendre à droite sur quelques mètres et emprunter à droite
                         l’ancienne voie ferrée désaffectée depuis 1967. Continuer jusqu’au
@@ -68,7 +68,7 @@
                 </ul>
     
                 <div class="moreInfo topGreen">
-                    <p class="flex alignCenter gap10">carte: <span class="icon"> visibility</span>  consulter <span class="icon"> download</span> télécharger</p>
+                    <p class="flex alignCenter gap10">Carte : <span class="icon"> visibility</span>  Consulter <span class="icon"> download</span> Télécharger</p>
                 </div>
             </SectionMainSloted>
 
@@ -77,7 +77,7 @@
 
             <SectionRandoTopBox :data="section3TopBoxData" />
 
-            <ul class="randoList flex column gap5">
+            <ul class="randoList page-text flex column gap5">
                 <li>Prendre la rue des lavandières en passant devant le lavoir.</li>
                 <li>Monter en haut du bourg, puis prendre le chemin d’exploitation à droite.</li>
                 <li>Descendre jusqu’à la Départementale, la traverser, passer devant l’ancienne «Auberge de la Truite « pour accéder à la Gare.</li>
@@ -95,7 +95,7 @@
             </ul>
 
             <div class="moreInfo topGreen">
-                <p class="flex alignCenter gap10">carte: <span class="icon"> visibility</span>  consulter <span class="icon"> download</span> télécharger</p>
+                <p class="flex alignCenter gap10">Carte : <span class="icon"> visibility</span>  Consulter <span class="icon"> download</span> Télécharger</p>
             </div>
         </SectionMainSloted>
     
@@ -104,7 +104,7 @@
 
             <SectionRandoTopBox :data="section4TopBoxData" />
 
-            <ul class="randoList flex column gap5">
+            <ul class="randoList flex page-text column gap5">
                 <li>Prendre la rue des lavandières en passant devant le lavoir.</li>
                 <li>Monter en haut du bourg, puis prendre le chemin d’exploitation à droite.</li>
                 <li>Descendre jusqu’à la Départementale, la traverser, passer devant l’ancienne «Auberge de la Truite» pour accéder à la Gare.</li>
@@ -136,7 +136,7 @@
             </ul>
 
             <div class="moreInfo topGreen">
-                <p class="flex alignCenter gap10">carte: <span class="icon"> visibility</span>  consulter <span class="icon"> download</span> télécharger</p>
+                <p class="flex alignCenter gap10">Carte : <span class="icon"> visibility</span>  Consulter <span class="icon"> download</span> Télécharger</p>
             </div>
         </SectionMainSloted>
     </main>
@@ -209,15 +209,15 @@ const headerData = {
     title: 'Les chemins de randonnée',
     path: [
         {
-            text: 'accueil',
+            text: 'Accueil',
             target: '/'
         },
         {
-            text: 'mes sorties',
+            text: 'Mes sorties',
             target: `/mes-sorties/`
         },
         {
-            text: "les chemins de randonnée",
+            text: "Les chemins de randonnée",
             target: `/mes-sorties/chemins-de-randonnee`
         }
     ]

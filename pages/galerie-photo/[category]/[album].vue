@@ -58,11 +58,11 @@ const headerData = {
     title: 'Galerie-photo',
     path: [
         {
-            text: 'accueil',
+            text: 'Accueil',
             target: '/'
         },
         {
-            text: 'galerie photo',
+            text: 'Galerie photo',
             target: '/galerie-photo'
         }
     ]

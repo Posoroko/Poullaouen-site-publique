@@ -2,12 +2,12 @@
     <div class="downloadWidget column justifyEvenly alignCenter" id="downloadWidget">
         <a :href="link" target="_blank" class="downloaderLine pointer" >
             <span class="downloaderIcon icon centered">visibility</span>
-            <span class="downloaderText">consulter</span> 
+            <span class="downloaderText">Consulter</span> 
         </a>
 
         <a :href="link" :download="link" class="downloaderLine pointer">
             <span class="downloaderIcon icon">download</span>
-            <span class="downloaderText">télécharger</span>
+            <span class="downloaderText">Télécharger</span>
         </a>
     </div>
 </template>

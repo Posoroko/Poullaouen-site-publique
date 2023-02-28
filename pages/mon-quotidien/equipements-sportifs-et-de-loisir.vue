@@ -83,15 +83,15 @@ const headerData = {
     title: 'Les équipements sportifs et de loisir',
     path: [
         {
-            text: 'accueil',
+            text: 'Accueil',
             target: '/'
         },
         {
-            text: 'mon quotidien',
+            text: 'Mon quotidien',
             target: '/mo-quotidien/les-equipements-sportifs-et-de-loisir'
         },
         {
-            text: 'équipements sportifs et de loisir',
+            text: 'Equipements sportifs et de loisir',
             target: '/ma-mairie/les-equipements-sportifs-et-de-loisir'
         }
     ]

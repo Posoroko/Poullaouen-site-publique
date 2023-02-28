@@ -26,15 +26,15 @@ const headerData = {
     title: "Le menu de la cantine",
     path: [
         {
-            text: "accueil",
+            text: "Accueil",
             target: "/"
         },
         {
-            text: "mon quotidien",
+            text: "Mon quotidien",
             target: "/mon-quotidien/menu-cantine"
         },
         {
-            text: "menu de la cantine",
+            text: "Menu de la cantine",
             target: "/mon-quotidien/menu-cantine"
         }
     ]

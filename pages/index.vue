@@ -22,7 +22,7 @@ const headerData = {
     title: 'Bienvenue à Poullaouen',
     path: [
         {
-            text: 'accueil',
+            text: 'Accueil',
             target: '/'
         }
     ]

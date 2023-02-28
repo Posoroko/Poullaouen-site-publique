@@ -107,15 +107,15 @@ const headerData = {
     title: 'Eau et assainissement',
     path: [
         {
-            text: 'accueil',
+            text: 'Accueil',
             target: '/'
         },
         {
-            text: 'mes infos',
+            text: 'Mes infos',
             target: `/mes-infos/eau-et-assainissement`
         },
         {
-            text: 'eau et assainissement',
+            text: 'Eau et assainissement',
             target: `/mes-infos/eau-et-assainissement`
         }
     ]

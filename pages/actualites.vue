@@ -24,11 +24,11 @@ const headerData = {
     title: 'Actualités',
     path: [
         {
-            text: 'accueil',
+            text: 'Accueil',
             target: '/'
         },
         {
-            text: 'actualités',
+            text: 'Actualités',
             target: '/actualités'
         }
     ]

@@ -55,11 +55,15 @@ const headerData = {
     title: 'Equipe municipale',
     path: [
         {
-            text: 'accueil',
+            text: 'Accueil',
             target: '/'
         },
         {
-            text: 'équipe municipale',
+            text: 'Ma mairie',
+            target: '/ccas'
+        },
+        {
+            text: 'Equipe municipale',
             target: '/ma-mairie/equipe-municipale'
         }
     ]

@@ -56,15 +56,15 @@ const headerData = {
     title: 'Patrimoine',
     path: [
         {
-            text: 'accueil',
+            text: 'Accueil',
             target: '/'
         },
         {
-            text: 'mes sorties',
+            text: 'Mes sorties',
             target: '/mmes-sorties/patrimoine'
         },
         {
-            text: 'patrimoine',
+            text: 'Patrimoine',
             target: '/mes-sorties/patrimoine'
         }
     ]

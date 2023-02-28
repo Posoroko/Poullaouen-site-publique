@@ -75,11 +75,11 @@ const headerData = {
     title: 'Le Plan Local d’Urbanisme (PLU)',
     path: [
         {
-            text: 'accueil',
+            text: 'Accueil',
             target: '/'
         },
         {
-            text: 'mes infos',
+            text: 'Mes infos',
             target: `/mes-infos/PLU`
         },
         {

@@ -139,15 +139,15 @@ const headerData = {
     title: 'Les commerces et entreprises',
     path: [
         {
-            text: 'accueil',
+            text: 'Accueil',
             target: '/'
         },
         {
-            text: 'mon quotidien',
+            text: 'Mon quotidien',
             target: '/mon-quotidien/commerces-et-entreprises'
         },
         {
-            text: 'commerces et entreprises',
+            text: 'Commerces et entreprises',
             target: '/mon-quotidien/commerces-et-entreprises'
         }
     ]

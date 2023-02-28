@@ -3,7 +3,7 @@
     <main class="">
 
         <p class="intro-text mainWidth page-text">
-            Tout les événements à venirs sont listés ici. Dates importantes, manifestations, fêtes, etc.
+            Tous les événements à venirs sont listés ici. Dates importantes, manifestations, fêtes, etc.
         </p>
 
         <section v-for="month in dates.months" :key="month.index">
@@ -106,11 +106,11 @@ const headerData = {
     title: 'Agenda',
     path: [
         {
-            text: 'accueil',
+            text: 'Accueil',
             target: '/'
         },
         {
-            text: 'agenda',
+            text: 'Agenda',
             target: '/agenda'
         }
     ]

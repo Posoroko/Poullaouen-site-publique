@@ -104,15 +104,19 @@ const headerData = {
     title: 'Bulletin municipal',
     path: [
         {
-            text: 'accueil',
+            text: 'Accueil',
             target: '/'
         },
         {
-            text: 'documents',
+            text: 'Ma mairie',
+            target: '/ma-mairie'
+        },
+        {
+            text: 'Documents',
             target: '/ma-mairie/documents/bulletin-municipal'
         },
         {
-            text: 'bulletin municipal',
+            text: 'Bulletin municipal',
             target: '/ma-mairie/documents/bulletin-municipal'
         }
     ]

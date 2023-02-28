@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="agendaButtonBox centered ">
-                <NuxtLink class="agendaButton textAlignCenter" to="/agenda">voir tout l'agenda</NuxtLink>
+                <NuxtLink class="agendaButton textAlignCenter" to="/agenda">Voir tout l'agenda</NuxtLink>
             </div>
         </div>
         

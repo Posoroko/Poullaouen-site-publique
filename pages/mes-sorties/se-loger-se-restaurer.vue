@@ -93,15 +93,15 @@ const headerData = {
     title: 'Se loger, se restaurer',
     path: [
         {
-            text: 'accueil',
+            text: 'Accueil',
             target: '/'
         },
         {
-            text: 'mes sorties',
+            text: 'Mes sorties',
             target: '/mes-sorties/se-loger-se-restaurer'
         },
         {
-            text: 'se loger, se restaurer',
+            text: 'Se loger, se restaurer',
             target: '/mes-sorties/se-loger-se-restaurer'
         }
     ]

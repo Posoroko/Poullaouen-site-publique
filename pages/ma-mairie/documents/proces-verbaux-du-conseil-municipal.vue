@@ -130,19 +130,19 @@ const headerData = {
     title: 'Procès verbaux du conseil municipal',
     path: [
         {
-            text: 'accueil',
+            text: 'Accueil',
             target: '/'
         },
         {
-            text: 'ma mairie',
+            text: 'Ma mairie',
             target: '/ma-mairie'
         },
         {
-            text: 'documents',
+            text: 'Documents',
             target: '/ma-mairie/documents/proces-verbaux-du-conseil-municipal'
         },
         {
-            text: 'procès verbaux du conseil municipal',
+            text: 'Procès verbaux du conseil municipal',
             target: '/ma-mairie/documents/proces-verbaux-du-conseil-municipal'
         }
     ]

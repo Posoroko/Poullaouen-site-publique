@@ -67,15 +67,15 @@ const headerData = {
     title: 'Histoire',
     path: [
         {
-            text: 'accueil',
+            text: 'Accueil',
             target: '/'
         },
         {
-            text: 'mes sorties',
+            text: 'Mes sorties',
             target: `/mes-sorties/histoire`
         },
         {
-            text: 'histoire',
+            text: 'Histoire',
             target: `/mes-sorties/histoire`
         }
     ]

@@ -12,6 +12,7 @@
     "nuxt": "^3.1.2"
   },
   "dependencies": {
+    "npm": "^9.5.1",
     "nuxt-directus": "^3.2.2"
   }
 }

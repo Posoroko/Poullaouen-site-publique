@@ -225,15 +225,15 @@ const headerData = {
     title: 'Les transports',
     path: [
         {
-            text: 'accueil',
+            text: 'Accueil',
             target: '/'
         },
         {
-            text: 'mes infos',
+            text: 'Mes infos',
             target: `/mes-infos/transports`
         },
         {
-            text: 'transports',
+            text: 'Transports',
             target: `/mes-infos/transports`
         }
     ]

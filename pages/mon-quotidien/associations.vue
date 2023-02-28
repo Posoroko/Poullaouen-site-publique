@@ -122,15 +122,15 @@ const headerData = {
     title: 'Les associations',
     path: [
         {
-            text: 'accueil',
+            text: 'Accueil',
             target: '/'
         },
         {
-            text: 'mon quotidien',
+            text: 'Mon quotidien',
             target: '/mon-quotidien/associations'
         },
         {
-            text: 'associations',
+            text: 'Associations',
             target: '/mon-quotidien/associations'
         }
     ]
