@@ -54,7 +54,7 @@
                     <div class="infoBox marTop20">
                         <p> <span class="icon">call</span> 02 98 99 48 00</p>
                         <p> <span class="icon">email</span> <a href="emailto: transport@poher.com"></a> </p>
-                        <p> <span class="icon">language</span> <a href="https://https://www.poher.bzh/accueil_poher/les_services/mobilites/le_transport_scolaire">poher communauté</a> </p>
+                        <p> <span class="icon">language</span> <a href="https://www.poher.bzh/accueil_poher/les_services/mobilites/le_transport_scolaire/annee_scolaire_2022_2023">Poher communauté</a> </p>
                     </div>
                 </div>
             </SectionMainSloted>

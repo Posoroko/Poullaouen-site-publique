@@ -69,7 +69,7 @@
                     <span class="icon">language</span>
 
                     <p class="textContent">
-                        catalogue de la médiathèque
+                        Catalogue de la médiathèque
                     </p>
                 </div>
             </div>
