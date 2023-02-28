@@ -182,7 +182,7 @@
 
                 <div class="flex justifyCenter gap20 wrap">
                     <CardsTallMain  title="Déchetterie de Carhaix" cardImage="/images/dechets/Déchetterie Carhaix.jpg" :localImage="true">
-                        <div class="bottomBox">
+                        <div class="bottomBox flex column gap10">
                             <p class="contentRow flex">
                                 <span class="icon">location_on</span>
                                 <span class="textContent">Kervoazon</span>
@@ -226,13 +226,7 @@
                                 <span class="icon pointer" v-if="activeQuestion == `question${question.id}`">arrow_drop_down</span>
                             </p>
                             <p class="answer" v-if="activeQuestion == `question${question.id}`">
-                                La quantité de déchets d’ordures ménagères sur le territoire du Poher est constante alors que les tonnages du tri (sacs jaunes) ont tendance à
-                                diminuer.
-                                L’objectif principal de la tarification incitative est de nous responsabiliser, nous usagers, par rapport à notre production d’ordures ménagères
-                                (donc de nous inciter à produire moins) et d’encourager les bons gestes à savoir le tri sélectif et également le compostage.
-                                Le nouveau dispositif de collecte mis en place sur Poullaouen offre un meilleur service de proximité. La dotation d’un bac individuel pour chaque
-                                foyer permet au service de collecter les ordures ménagères et sacs jaunes, au plus près de l’habitation et ainsi de supprimer les pollutions visuelles
-                                liées aux bacs collectifs encombrés et également aux dépôts sauvages
+                                {{ question.answer }}
                             </p>
                         </div>
                     </div>
@@ -358,5 +352,10 @@ onMounted(() => {
     padding: 20px 40px;
     border-bottom: 1px solid var(--green);
 }
-
+.bottomBox {
+    padding: 20px;
+}
+.contentRow .icon {
+    margin-right: 10px;
+}
 </style>

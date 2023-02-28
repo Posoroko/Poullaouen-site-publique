@@ -26,8 +26,15 @@
                 </div>
             </SectionMainSloted>
 
+            <SectionTitleBar :title="`Assainissement collectif`" />
+
+            <p class="intro-text mainWidth">
+                Chaque maison doit obligatoirement être raccordée au réseau d’assainissement collectif ou équipée d’un système d’assainissement in-
+                dividuel. L’assainissement collectif est assuré par la commune de Poullaouen et l’assainissement non collectif est assuré par le SPANC de Poher Communauté.
+            </p>
+
             <SectionMainSloted
-                :data="{ title: 'Assainissement collectif', image: '/images/eau/la lagune.jpg', imageAlt: 'Offisme de tourisme de Carhaix', localImage: true }">
+                :data="{ title: null, image: '/images/eau/la lagune.jpg', imageAlt: 'Offisme de tourisme de Carhaix', localImage: true }">
                 <div class="slotedSectionTextBox page-text flex column justifyCenter alignStart pad20 gap10">
                     <p>
                         L’assainissement est collectif lorsque les eaux usées sont collectées par le réseau public pour être traitées dans une station d’épuration, avant
@@ -50,10 +57,11 @@
             </SectionMainSloted>
   
             <SectionMainSloted
-                :data="{ title: 'Assainissement non-collectif', image: '/images/eau/manhole.jpg', imageAlt: 'Campagne Poullaouënaise', localImage: true }">
+                :data="{ title: null, image: '/images/eau/manhole.jpg', imageAlt: 'Campagne Poullaouënaise', localImage: true }">
                 <div class="slotedSectionTextBox page-text lex column justifyCenter alignStart pad20 gap20">
 
                     <p>
+                        <h4>Assainissement non-collectif</h4>
                         Les eaux usées de nos habitations nécessitent d’être évacuées puis restituées dans le milieu naturel, tout en préservant la santé publique
                         et l’environnement.
                         <br>
@@ -73,7 +81,7 @@
                     <div class="infoBox">
                         <p> <span class="icon">location_on</span>SPANC - Maison des services au public - Carhaix</p>
                         <p> <span class="icon">call</span>02 98 99 48 03</p>
-                        <p> <span class="icon">location_on</span><a class="externalLink" href="mailto:spanc@poher.bzh">spanc@poher.bzh</a></p>
+                        <p> <span class="icon">email</span><a class="externalLink" href="mailto:spanc@poher.bzh">spanc@poher.bzh</a></p>
                         <p> <span class="icon">call</span><a class="externalLink" href="https://www.poher.bzh">www.poher.bzh</a></p>
                     </div>
 
