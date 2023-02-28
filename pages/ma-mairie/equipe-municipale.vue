@@ -33,11 +33,11 @@ const { data: poullaouennais } = await useAsyncData(
         const items = await $fetch(`${directusItems}Equipe`, fetchOptions)
 
         const temp = {
-            maire: items.data.filter(el => el.role == 'maire'),
-            adjoints: items.data.filter(el => el.role.includes('adj') || el.role.includes('delegue')),
-            conseillers: items.data.filter(el => el.role.includes('conseil'))
+            maire: items.data.filter(el => el.role == 'Maire'),
+            adjoints: items.data.filter(el => el.role.includes('Adj') || el.role.includes('gu')),
+            conseillers: items.data.filter(el => el.role.includes('Conseil'))
         }
-
+        console.log(temp)
         return temp
     }
     ,

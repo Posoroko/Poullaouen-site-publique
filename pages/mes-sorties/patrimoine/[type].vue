@@ -10,7 +10,7 @@
                             <span class="bottomGreen" v-if="item.subTitle">{{ item.subTitle }}</span>
                         </h2>
 
-                        <p class="adress section-address-text bottomGreen">
+                        <p class="address section-address-text bottomGreen">
                             {{ item.adress }} 
                         </p>
                     </div>
@@ -127,7 +127,7 @@ onMounted(() => {
 
 <style scoped>
 
-.adress {
+.address {
     border-bottom: 1px solid var(--green);
 }
 .slotedSectionTextBox {

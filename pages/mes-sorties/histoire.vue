@@ -30,7 +30,7 @@
             </SectionMainSloted>
         </div>
 
-        <div class="whiteSection mainWidth flex alignCenter customSection">
+        <div class="blueSection mainWidth flex alignCenter customSection">
             <div class="leftSectionBox box h100">
                 <SectionShoeBox image="/images/histoire/maison de la mine.jpg" :localImage="true" />
 

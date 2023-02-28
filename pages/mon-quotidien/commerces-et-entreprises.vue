@@ -19,7 +19,7 @@
                     <CardsTallMain 
                         v-for="item in itemsData.items[filter.slug]" :key="item.id"
                         :title="item.name" 
-                        :subtitle="item.subType[0]" 
+                        :subtitle="item.subType.displaySubtype" 
                         :cardImage="item.image" 
                         :cardImageAlt="item.imageAlt">
                         
@@ -27,7 +27,7 @@
                             <div class="contentRow flex" v-if="item.hours">
                                 <span class="icon">schedule</span>
 
-                                <p class="textContent">
+                                <p class="textContent horaires">
                                     {{ item.hours }}
                                 </p>
                             </div>
@@ -56,7 +56,7 @@
                                 </p>
                             </div>
 
-                            <NuxtLink :to="`https://${item.website}`" class="contesflex" v-if="item.website">
+                            <NuxtLink :to="`https://${item.website}`" class="contesflex flex gap10" v-if="item.website">
                                 <span class="icon">language</span>
 
                                 <p class="textContent">
@@ -94,7 +94,7 @@ const directusItems = appConfig.directus.items;
 const fetchOptions = {
     server: true,
     params: {
-        fields: 'id, name, type, type.displayType, type.slug, image, imageAlt, subType, subType, hours, adress, phone, email, website'
+        fields: 'id, name, type, type.displayType, type.slug, image, imageAlt, subType, subType.displaySubtype, hours, adress, phone, email, website'
     }
 }
 // ?filter[image][_neq]=null
@@ -178,6 +178,8 @@ onMounted(() => {
 .bottomBox {
     padding: 20px;
 }
-
+.horaires {
+    white-space: pre-wrap;
+}
 
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div class="randoTopBox topGreen bottomGreen">
+    <div class="randoTopBox">
         <div class="firstRow flex justifyBetween">
             <div class="flex gap5">
                 <span class="icon">swap_horiz</span>

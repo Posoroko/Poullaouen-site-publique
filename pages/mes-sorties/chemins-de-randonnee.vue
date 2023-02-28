@@ -41,7 +41,7 @@
                     vers le point de jonction G.</li>
             </ul>
 
-            <div class="moreInfo topGreen">
+            <div class="moreInfo">
                 <p class="flex alignCenter gap10">Carte : <span class="icon"> visibility</span>  Consulter <span class="icon"> download</span> Télécharger</p>
             </div>
         </SectionMainSloted>
@@ -67,7 +67,7 @@
                     <li>Rejoindre la voie de chemin de fer.</li>
                 </ul>
     
-                <div class="moreInfo topGreen">
+                <div class="moreInfo ">
                     <p class="flex alignCenter gap10">Carte : <span class="icon"> visibility</span>  Consulter <span class="icon"> download</span> Télécharger</p>
                 </div>
             </SectionMainSloted>
@@ -94,7 +94,7 @@
                 <li>Rester sur la route jusqu’au bourg, mis à part le petit chemin très ombragé, à droite, à hauteur du lac qui évite le virage en épingle.</li>
             </ul>
 
-            <div class="moreInfo topGreen">
+            <div class="moreInfo">
                 <p class="flex alignCenter gap10">Carte : <span class="icon"> visibility</span>  Consulter <span class="icon"> download</span> Télécharger</p>
             </div>
         </SectionMainSloted>
@@ -135,7 +135,7 @@
                     rejoindre le bourg en suivant toujours le balisage GR rouge et blanc.</li>
             </ul>
 
-            <div class="moreInfo topGreen">
+            <div class="moreInfo ">
                 <p class="flex alignCenter gap10">Carte : <span class="icon"> visibility</span>  Consulter <span class="icon"> download</span> Télécharger</p>
             </div>
         </SectionMainSloted>
@@ -167,7 +167,7 @@ const section2TopBoxData = {
     length: "12 km",
     time: "3h",
     types: ["hiking", "horse", "pedal_bike"],
-    legend: "balises Jaunes",
+    legend: "Balises jaunes",
     start: "Place de l’église"
 
 }
