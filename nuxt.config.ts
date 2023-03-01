@@ -35,7 +35,7 @@ export default defineNuxtConfig({
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
                 { name: 'description', content: 'Site de la Mairie de Poullaouën.' },
                 { name: "og:description", content: 'Site de la Mairie de Poullaouën.' },
-                { name: "og:site_name", content: "Mairie de Poullaouën" },
+                { name: "og:site_name", content: "Mairie de Poullaouen" },
                 { name: "og:type", content: "website" },
                 { name: "og:image", content: "@carine_leduc" },
                 { name: "og:url", content: "https://mairie-poullaouen.fr" },

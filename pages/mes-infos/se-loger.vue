@@ -20,7 +20,7 @@
                         de qualité couvrant les aspects juridiques, sociaux et fiscaux.
                     </p>
 
-                    <div class="infoBox  topGreen bottomGreen">
+                    <div class="infoBox   ">
                         <p> <span class="icon">location_on</span> Avenue Général De Gaulle - Poullaouen</p>
                         <p> <span class="icon">call</span> 02 98 93 55 90</p>
                         <p> <span class="icon">language</span> <a class="externalLink" href="https://lesnotairesdupoher.notaires.fr">www.lesnotairesdupoher.notaires.fr</a></p>
@@ -35,7 +35,7 @@
                         L’office met à disposition une liste de logements (vides et meublés) situés sur le territoire de Poher communauté
                     </p>
 
-                    <div class="infoBox  topGreen bottomGreen">
+                    <div class="infoBox  ">
                         <p> <span class="icon">location_on</span> Avenue Général De Gaulle - Poullaouen </p>
                         <p> <span class="icon">call</span> 02 98 93 04 42</p>
                         <p> <span class="icon">language</span> <a class="externalLink" href="https://www.tourismecarhaix.poher.com">www.tourismecarhaix.poher.com</a></p>
@@ -65,7 +65,7 @@
                         réduire sa facture énergétique.
                     </p>
 
-                    <div class="infoBox  topGreen bottomGreen">
+                    <div class="infoBox  ">
                         <p> <span class="icon">location_on</span> Maison des Services Publics - Place de la Tour d’Auvergne - Carhaix</p>
                         <p> <span class="icon">call</span> 0 805 203 205 (appel gratuit depuis un poste fixe)</p>
                         <p> <span class="icon">language</span> <a class="externalLink" href="https://alecob.jimdofree.com">www.alecob.jimdofree.com</a></p>
@@ -84,7 +84,7 @@
                             logement.
                         </p>
     
-                        <div class="infoBox topGreen bottomGreen">
+                        <div class="infoBox ">
                             <p> <span class="icon">location_on</span> Maison des Services Publics - Place de la Tour d’Auvergne - Carhaix</p>
                             <p> <span class="icon">call</span> 02 98 95 99 54</p>
                             <p> <span class="icon">language</span> <a class="externalLink" href="https://www.soliha.fr">www.soliha.fr</a></p>

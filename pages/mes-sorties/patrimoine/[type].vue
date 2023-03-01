@@ -126,10 +126,6 @@ onMounted(() => {
 </script>
 
 <style scoped>
-
-.address {
-    border-bottom: 1px solid var(--green);
-}
 .slotedSectionTextBox {
     height: 100%;
 }

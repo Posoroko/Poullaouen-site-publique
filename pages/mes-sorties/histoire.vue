@@ -172,10 +172,6 @@ onMounted(() => {
     padding: 30px;
 }
 
-.sectionSubtitle {
-    border-bottom: 1px solid var(--green);
-}
-
 .slotedSectionTextBox {
     height: 100%;
 }

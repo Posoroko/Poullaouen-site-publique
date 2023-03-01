@@ -113,9 +113,6 @@ onMounted(() => {
 
 <style scoped>
 
-.topTextBox{
-    border-bottom: 1px solid green
-}
 .slotedSectionTextBox {
     height: 100%;
 }
