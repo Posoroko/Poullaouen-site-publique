@@ -56,8 +56,11 @@
                         <div>
                             <p>Du lundi au vendredi : <br>
                                  de 8h30 à 12h et de 13h30 à 17h30</p>
-                                <!-- <br> -->
-                            <p>Fermée au public le mercredi après-midi</p>
+
+                            <p>
+                                Fermée au public le lundi matin
+                                et le jeudi après-midi
+                            </p>
                         </div>
                     </div>
                 </address>
