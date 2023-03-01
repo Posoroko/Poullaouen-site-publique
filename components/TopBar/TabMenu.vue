@@ -162,10 +162,13 @@ const closeMenu = () => {
     padding: 7px 5px;
     border-bottom: 1px solid var(--brown);
     transition: 300ms ease;
+    
 }
 .menuPanel .linkList .link:hover {
-    background-color: #0184d525;
+    color: white;
+    background-color: var(--dark-blue);
     transition: 300ms ease;
+    border-radius: 5px;
 }
 .menuPanel .icon {
     font-size: 24px;

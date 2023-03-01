@@ -1,9 +1,9 @@
 <template>
     <header class="">
         <div class="imageBox relative">
-            <img :src="data.images[0].src" :alt="data.images[0].alt">
+            <img :src="data.images[activeImageIndex].src" :alt="data.images[activeImageIndex].alt">
 
-            <div class="dotNavBox absolute">
+            <div v-if="isHomePage" class="dotNavBox absolute flex w100 justifyCenter">
                 <div class="dot" v-for="(image, index) in data.images" :key="index">
                     
                     <div v-if="activeImageIndex == index" class="icon headerDot">radio_button_checked</div>
@@ -11,11 +11,11 @@
                 </div>
             </div>
 
-            <div class="leftArrowBox absolute icon headerIcon headerChevron">
+            <div v-if="isHomePage" class="leftArrowBox absolute icon headerIcon headerChevron pointer" @click="swipeLeft">
                 chevron_left
             </div>
 
-            <div class="rightArrowBox absolute icon headerIcon headerChevron">
+            <div v-if="isHomePage" class="rightArrowBox absolute icon headerIcon headerChevron pointer" @click="swipeRignt">
                 chevron_right
             </div>
         </div>
@@ -27,9 +27,6 @@
                 {{ data.title }}
             </h1>
         </div>
-
-        
-
     </header>  
 </template>
 
@@ -40,8 +37,36 @@ const displayedImage = computed(() => {
     return data.images[activeImageIndex.value]
 })
 
+const swipeLeft = () => {
+    console.log('swipeLeft')
+    if (activeImageIndex.value > 0) {
+        activeImageIndex.value--
+    } else {
+        activeImageIndex.value = props.data.images.length - 1
+    }
+}
+const swipeRignt = () => {
+    if (activeImageIndex.value < props.data.images.length - 1) {
+        activeImageIndex.value++
+    } else {
+        activeImageIndex.value = 0
+    }
+}
+
+onMounted(() => {
+    if (props.isHomePage) {
+        setInterval(() => {
+            swipeRignt()
+        }, 10000)
+    }
+})
+
+
+
+
 const props = defineProps({
-    data: Object
+    data: Object,
+    isHomePage: Boolean
 })
 
 </script>
@@ -95,7 +120,7 @@ header .imageBox img {
     background-color: rgba(0, 0, 0, 0.425);
 }
 .headerDot {
-    color: white;
-    font-size: 30px;
+    color: rgba(255, 255, 255, 0.521);
+    font-size: 25px;
 }
 </style>

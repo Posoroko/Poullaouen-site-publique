@@ -6,7 +6,7 @@
             La commune vous propose plusieurs salles adaptées à vos évènements, pour tout renseignement vous pouvez contacter la mairie de Poullaouen ou de Locmaria-Berrien.
         </p>
 
-        <div v-for="salle in salles" :key="salle.id" >
+        <div v-for="(salle, index) in salles" :key="salle.id" >
             <SectionMainSloted :data="{ title: salle.name, image: salle.image}">
                 <div class="textBox h100 flex column justifyCenter">
                     <h3 class="section-address-text">{{ salle.adress }}</h3>
@@ -70,6 +70,11 @@
                         </div>
 
                         <p class="page-text marTop20" v-if="salle.name == 'La salle des fêtes'">Possibilité de location de sono.</p>
+
+                        <div class="buttonBox flex justifyEnd">
+                            <NuxtLink :to="`/galerie-photo/les-salles-municipales/${salle.slug}`" class="albumButton" 
+                            :class="{ blueAlbumButton : index == 0 || index == 2, whiteAlbumButton : index == 1 || index == 3}">Voir l'album</NuxtLink>
+                        </div>
                         
                     </div>
                 </div>
@@ -157,5 +162,21 @@ onMounted(() => {
 }
 .level2 {
     margin-left: 40px;
+}
+
+.albumButton{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px black;
+}
+.whiteAlbumButton{
+    background-color: white;
+    color: var(--brown);
+}
+.blueAlbumButton {
+    background-color: var(--dark-blue);
+    color: white;
 }
 </style>
