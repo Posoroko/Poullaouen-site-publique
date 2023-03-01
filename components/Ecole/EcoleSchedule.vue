@@ -63,6 +63,10 @@
 
             <img class="scheduleBackdrop" src="/images/ecole/taches.png" alt="">
         </div>
+
+        <div class="mainWidth flex justifyStart">
+            <NuxtLink to="https://www.education.gouv.fr/calendrier-scolaire-100148" class="albumButton whiteAlbumButton flex alignCenter gap10"> <span class="icon">visibility</span> <b>Calendrier scolaire</b> </NuxtLink>
+        </div>
     </section>
 </template>
 

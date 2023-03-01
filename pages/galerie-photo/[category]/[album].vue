@@ -1,7 +1,11 @@
 <template>
-    <!-- <HeaderMain :data="headerData" /> -->
+    <header>
+        <HeaderPathBar :path="path" />
+        <HeaderTItleBar :title="`Album ${album.albumName}`" />
+    </header>
+
     <main class="galerieMain flex column marTop100">
-        <h2 class="mainWidth">{{ album.albumName }}</h2>
+        <!-- <h2 class="mainWidth">{{ album.albumName }}</h2> -->
         <p class="mainWidth intro-text">{{ album.content }}</p>
 
         <div class="mainWidth boxOfPhotos flex justifyCenter gap20 wrap marTop50">
@@ -47,6 +51,7 @@ const showInModal = (link) => {
 
 
 
+
 const fetchOptions = {
     server: true,
     params: {
@@ -67,33 +72,21 @@ const { data: album } = await useAsyncData(
     { server: true }
 )
 
-
-
-
-
-
-const headerData = {
-    images: [
-        {
-            src: 'images/header/accueil/eglise-de-locmaria-berrien.jpg',
-            alt: 'mairie de Locmaria-Berrien',
-        }
-    ],
-    title: 'Galerie-photo',
-    path: [
-        {
-            text: 'Accueil',
-            target: '/'
-        },
-        {
-            text: 'Galerie photo',
-            target: '/galerie-photo'
-        }
-    ]
-}
-
-
-
+const path = [
+    {
+        text: 'Accueil',
+        target: '/'
+    },
+    {
+        text: 'Galerie photo',
+        target: '/galerie-photo'
+    },
+    {
+        text: album.value.albumName,
+        // target: `/galerie-photo`
+        target: `/galerie-photo/${route.params.category}/${route.params.album}`
+    }
+]
 
 </script>
 

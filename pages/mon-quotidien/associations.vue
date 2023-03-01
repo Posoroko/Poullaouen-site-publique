@@ -14,7 +14,7 @@
             <section class="w100" v-for="filter in assosData.filters" :key="filter" :id="filter">
                 <SectionTitleBar :title="filter" />
             
-                <div class="mainWidth flex justifyEvenly alignStretch wrap">
+                <div class="mainWidth flex justifyCenter alignStretch gap50 marTop100 wrap">
                     <div class="assoCard tallCard whiteTallCard flex column" v-for="asso in assosData.assos[filter]" :key="asso.id">
                         <div class="topBox flex justifyCenter alignCenter column gap10">
                             <h2 class="">{{ asso.name }}</h2>
@@ -25,11 +25,11 @@
                         <div class="frame">
                             <img v-if="asso.image" :src="`${directusAssets}${asso.image}?key=card500`" :alt="asso.imageAlt" class="objectFitCover">
 
-                            <div v-else class="icon shopIcon objectFitCover centered">diversity_3</div>
+                            <div v-else class="icon placeholderIcon objectFitCover centered">diversity_3</div>
                         </div>
             
                         <div class="bottomBox flex column gap20 alignCenter justifyCenter">
-                            <div class="flex presBox">
+                            <div class="flex presBox" v-if="asso.presidents.length > 0">
                                 <span class="icon">person</span>
                                 <ul class="flex column justifyCenter gap5">
                                     <li> <b>Président-e<span v-if="asso.presidents.length > 1">-s</span>:</b>  </li>
@@ -40,14 +40,14 @@
                                 </ul>
                             </div>
 
-                            <div class="flex presBox">
+                            <div class="flex presBox"  v-if="asso.contacts.length > 0">
                                 <span class="icon">call</span>
 
                                 <ul>
                                     <li v-for="dude in asso.contacts" :key="dude.Contacts_id.id">
-                            
-                                        {{ dude.Contacts_id.firstName.slice(0,1)}} &nbsp {{ dude.Contacts_id.lastName}} {{
-                                        dude.Contacts_id.telephone }}
+                                        <span v-if="dude.Contacts_id.firstName">{{ dude.Contacts_id.firstName[0]}}.</span>
+                                        <span v-if="dude.Contacts_id.lastName">{{ dude.Contacts_id.lastName }}&nbsp : </span>
+                                        <span v-if="dude.Contacts_id.telephone">{{ dude.Contacts_id.telephone }}</span>
                                     </li>
                                 </ul>
                             </div>
@@ -139,10 +139,10 @@ const styleTallCards = () => {
 
     const cards = document.querySelectorAll('.tallCard');
 
-    for (let i = 1; i < cards.length; i = i + 4) {
+    for (let i = 0; i < cards.length; i = i + 3) {
         cards[i].classList.replace('whiteTallCard', 'blueTallCard')
     }
-    for (let i = 3; i < cards.length; i = i + 4) {
+    for (let i = 2; i < cards.length; i = i + 3) {
         cards[i].classList.replace('whiteTallCard', 'brownTallCard')
     }
 }
@@ -156,14 +156,9 @@ onMounted(() => {
 
 <style>
 
-/* 
-.public-view .container .title-box .logo img{
-    width: 100%;
-    
-    object-fit: cover;
+.assoCard {
+    min-height: 500px;
 }
-
-*/
 
 .assoMain section {
     margin-top: 50px;
@@ -203,7 +198,7 @@ onMounted(() => {
 .presBox {
     width: 100%;
     justify-content: flexStart;
-    gap: 30px
+    gap: 10px
 }
 .placeholderIcon {
     font-size: 200px;

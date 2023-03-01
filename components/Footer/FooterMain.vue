@@ -1,5 +1,5 @@
 <template>
-    <footer id="footer" class="relative">
+    <footer id="footer" class="relative r">
         <div class="footerContainer mainWidth flex justifyEvenly alignStart wrap h100 ">
             <div class="phoneBox footerBox flex justifyCenter alignCenter wrap gap5">
                 <p class="phoneBtn flex column justifyCenter alignCenter">
@@ -156,7 +156,8 @@
 
 
 #footer {
-    padding-top: 300px;
+    margin-top: 50vh;
+    /* min-height: 100vh; */
 }
 .phoneBox {
     width: 60%;

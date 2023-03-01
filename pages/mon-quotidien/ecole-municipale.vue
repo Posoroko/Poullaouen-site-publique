@@ -19,7 +19,7 @@
                     </div>
 
                     <div class="flex justifyEnd">
-                        <NuxtLink to="/galerie-photo/ecole" class="albumButton blueAlbumButton">Voir les albums</NuxtLink>
+                        <NuxtLink to="/galerie-photo/ecole/ecole-maternelle" class="albumButton blueAlbumButton">Voir l'albums</NuxtLink>
                     </div>
                 </div>
             </SectionMainSloted>
@@ -57,7 +57,7 @@
                     </p>
 
                     <div class="flex justifyBetween">
-                        <p> <span class="icon">visibility</span> <b>Programme de l'année</b> </p>
+                        <p class="flex alignCenter gap10"> <span class="icon">visibility</span> <b>Programme de l'année</b> </p>
                         <NuxtLink to="/galerie-photo/ecole" class="albumButton blueAlbumButton">Voir les albums</NuxtLink>
                     </div>
                 </div>
@@ -145,7 +145,7 @@
                     </p>
 
                     <div class="infoBox">
-                        <p> <b>Renseignements :</b> Marie - 02 98 93 50 76</p>
+                        <p> <b>Renseignements :</b> Maire - 02 98 93 50 76</p>
                     </div>
                 </div>
             </SectionMainSloted>
@@ -161,10 +161,10 @@
                         Le transport scolaire est assuré par Poher communauté.
                     </p>
 
-                    <div class="infoBox marTop20">
-                        <p> <span class="icon">call</span> 02 98 99 48 00</p>
-                        <p> <span class="icon">email</span> <a href="emailto: transport@poher.com"></a> </p>
-                        <p> <span class="icon">language</span> <a href="https://www.poher.bzh/accueil_poher/les_services/mobilites/le_transport_scolaire/annee_scolaire_2022_2023">Poher communauté</a> </p>
+                    <div class="infoBox marTop20 flex column gap5">
+                        <p class="flex alignCenter gap10"> <span class="icon">call</span> 02 98 99 48 00</p>
+                        <p class="flex alignCenter gap5"><span class="icon">email</span><a href="emailto: transport@poher.com"></a>transport@poher.com</p>
+                        <p class="flex alignCenter gap10"> <span class="icon">language</span> <a href="https://www.poher.bzh/accueil_poher/les_services/mobilites/le_transport_scolaire/annee_scolaire_2022_2023">Poher communauté</a> </p>
                     </div>
                 </div>
             </SectionMainSloted>

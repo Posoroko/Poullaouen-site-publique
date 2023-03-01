@@ -12,7 +12,7 @@
             </div>
 
             <ul class="tabList flex column alignEnd w100 alignCenter" v-if="!tabIsSelected">
-                <li class="tab flex pointer" name="mairie" @click.prevent="openTab">
+                <li class="tab pointer" name="mairie" @click.prevent="openTab">
                     <p class="article">MA</p>
                     
                     <p class="name">MAIRIE</p>
