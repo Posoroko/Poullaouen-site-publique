@@ -120,6 +120,9 @@ onMounted(() => {
     transition: var(--fadeQuick);
 }
 
+.dateCard {
+    min-height: 500px;
+}
 .dateCardFrame {
     width: 100%;
     height: 250px;

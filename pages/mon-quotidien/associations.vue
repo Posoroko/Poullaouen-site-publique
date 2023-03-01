@@ -157,7 +157,7 @@ onMounted(() => {
 <style>
 
 .assoCard {
-    min-height: 500px;
+    min-height: 550px;
 }
 
 .assoMain section {

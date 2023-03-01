@@ -178,10 +178,6 @@ const headerData = {
 }
 
 
-.docsMain .docsSection .stripe {
-    /* z-index: 1; */
-}
-
 .docsMain .docsSection .stripe .flex {
     color: white;
     padding-top: 30px;
