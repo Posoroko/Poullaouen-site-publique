@@ -74,11 +74,11 @@ const headerData = {
         },
         {
             text: 'Ma mairie',
-            target: '/ccas'
+            target: '/ma-mairie/ccas'
         },
         {
             text: 'Ccas',
-            target: '/ccas'
+            target: '/ma-mairie/ccas'
         }
     ]
 }

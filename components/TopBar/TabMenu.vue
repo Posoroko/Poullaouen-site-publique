@@ -144,9 +144,10 @@ const closeMenu = () => {
     background-color: white;
     padding: 10px;
     padding-right: 30px;
-    border-radius: 5px;
-    margin-top: 30px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.589);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 0px;
+    /* box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.589); */
     top: 100%;
     left: 50%;
     transform: translateX(-50%);

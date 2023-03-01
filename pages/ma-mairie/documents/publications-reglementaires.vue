@@ -7,37 +7,58 @@
             l’objet d’une publication électronique.
         </p>
 
-        <div class="dashboard w100 flex justifyCenter">
+        <!-- <div class="dashboard w100 flex justifyCenter">
             <NuxtLink :to="`#${type.id}`" class="button green_action pointer shadow" v-for="type in pubTypes" :key="type.id">
                 {{ type.plur }}
             </NuxtLink>
-        </div>
-        
-        <section class="docsSection docsLatestsSection relative" v-for="type in pubTypes" :key="type.id" :id="type.id">
-            <SectionTitleBar class="titleComp" :title="type.plur" />
-            
-            <div class="stripe darkBlueBG w100">
-                <div class="content mainWidth w100 flex justifyCenter wrap">
-                    <article class="procesCard flex column justifyCenter alignCenter relative" v-for="doc in publications[type.id]" :key="doc.id">
-                        <figure class="">
-                            <img src="/images/logo.png" alt="">
-                        </figure>
-            
-                        <div class="bottomBox">
-                            <h5> {{ type.sing }} </h5>
-            
-                            <p>{{ new Date(doc.date).toLocaleString().slice(0, 11) }}</p>
-                        </div>
+        </div> -->
 
-                        <div class="downloaderFrame absoluteFull">
-                                <DocsDownloadWidget :link="`${directusAssets}${doc.file}`" />
-                            </div>
-                    </article>
-                </div>
+    <section class="docsSection docsLatestsSection relative marTop150">        
+        <div class="stripe darkBlueBG w100 ">
+            <div class="content mainWidth w100 flex justifyCenter wrap">
+                <article class="procesCard flex column justifyCenter alignCenter relative" v-for="doc in publications.latests" :key="doc.id">
+                    <figure class="">
+                        <img src="/images/logo.png" alt="">
+                    </figure>
+
+                    <div class="bottomBox flex column gap10">
+                        <p>{{types[doc.publicationType]}}</p>
+                        <p>{{ new Date(doc.date).toLocaleString().slice(0, 11) }}</p>
+                    </div>
+
+                    <div class="downloaderFrame absoluteFull">
+                        <DocsDownloadWidget :link="`${directusAssets}${doc.file}`" />
+                    </div>
+                </article>
             </div>
-        </section>
-        
-    </main>
+
+        </div>
+        <div class="piedBox absolute">
+            <SectionPieds />
+        </div>
+    </section>
+    
+    <section class="marTop150">
+        <div class="stripe w100">
+            <div class="content mainWidth w100 flex justifyCenter wrap">
+                <article class="procesCard flex column justifyCenter alignCenter relative" v-for="doc in publications.rest" :key="doc.id">
+                    <figure class="">
+                        <img src="/images/logo.png" alt="">
+                    </figure>
+
+                    <div class="bottomBox flex column gap10">
+                        <p>{{ types[doc.publicationType] }}</p>
+                        <p>{{ new Date(doc.date).toLocaleString().slice(0, 11) }}</p>
+                    </div>
+
+                    <div class="downloaderFrame absoluteFull">
+                        <DocsDownloadWidget :link="`${directusAssets}${doc.file}`" />
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>        
+</main>
 </template>
  
 <script setup>
@@ -45,44 +66,30 @@
 const appConfig = useAppConfig();
 const directusItems = appConfig.directus.items;
 
-const pubTypes = ref([{
-    plur: 'Arrêtés municipaux',
-    sing: 'Arrêté municipal',
-    id: 'arretes'
-}, {
-    plur: 'Délibérations du conseil municipal',
-    sing: 'Délibération du conseil municipal',
-    id: 'deliberations'
-}, {
-    plur: 'Listes de délibérations',
-    sing: 'Liste de délibérations',
-    id: 'listes'
-}])
+const types = {
+    arrete: 'Arrêté municipal',
+    deliberation: 'Délibération du conseil municipal',
+    liste: 'Liste de délibérations'
+
+}
+
 
 const fetchOptions = {
     server: true,
-    // params: {
-    //     sort: '-date',
-    //     fields: 'id, date, publicationType, date, file,'
-    // }
 }
-
 const { data: publications } = await useAsyncData(
     "Publications",
     async () => {
-        const items = await $fetch(`${directusItems}publications`, fetchOptions)
-        console.log(items.data[0].publicationType)
-        const sortedDocs = {
-            arretes: [],
-            deliberations: [],
-            listes: []
-        }
+        const _items = await $fetch(`${directusItems}publications`, fetchOptions)
 
-        items.data.forEach(item => {
-            sortedDocs[`${item.publicationType}s`].push(item)
-        })
-        console.log(sortedDocs)
-        return sortedDocs
+        const items = _items.data
+
+        const temp = {
+            latests: items.splice(0, 2), 
+            rest: items
+        }
+        console.log(temp)
+        return temp
     }
     ,
     { server: true }
@@ -104,10 +111,6 @@ const headerData = {
         },
         {
             text: 'Ma mairie',
-            target: '/ma-mairie'
-        },
-        {
-            text: 'Documents',
             target: '/ma-mairie/documents/publications-reglementaires'
         },
         {
@@ -121,6 +124,18 @@ const headerData = {
 </script>
 
 <style scoped>
+
+.piedBox {
+    height: 600px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -10;
+}
+.piedBox * {
+    fill: var(--brown);
+}
 .dashboard {
     gap: 50px;
     margin-top: 50px;
@@ -152,6 +167,7 @@ const headerData = {
     background-color: #fff;
     padding: 10px;
     border-radius: 5px;
+    box-shadow: var(--shadow);
 }
 
 .procesCard figure {

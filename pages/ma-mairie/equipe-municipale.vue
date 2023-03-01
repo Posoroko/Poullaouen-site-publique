@@ -60,7 +60,7 @@ const headerData = {
         },
         {
             text: 'Ma mairie',
-            target: '/ccas'
+            target: '/ma-mairie/equipe-municipale'
         },
         {
             text: 'Equipe municipale',

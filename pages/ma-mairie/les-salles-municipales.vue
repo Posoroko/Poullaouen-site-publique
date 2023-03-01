@@ -22,7 +22,7 @@
                         </ul>
 
 
-                        <h4 class="level0 marTop20">tarifs</h4>
+                        <h4 class="level0 marTop20">Tarifs</h4>
                         <div class="moreinfo italic">
                             <h5 class="level1">Poullaouennais</h5>
                             <ul>

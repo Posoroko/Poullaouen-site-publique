@@ -26,7 +26,7 @@
             </div>
             <div class="agendaButtonBox mainWidth flex justifyEvenly wrap">
                 <NuxtLink class="agendaButton textAlignCenter" to="/agenda">Voir tout l'agenda</NuxtLink>
-                <NuxtLink class="agendaButton textAlignCenter" to="/proposer-un-evenement">proposer un événement</NuxtLink>
+                <NuxtLink class="agendaButton textAlignCenter" to="/proposer-un-evenement">Proposer un événement</NuxtLink>
             </div>
         </div>
         

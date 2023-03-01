@@ -9,9 +9,9 @@
         <section class="docsSection docsLatestsSection relative">
             <SectionTitleBar class="titleComp" title="Les plus récents" />
             
-            <div class="stripe relative" v-if="documents">
+            <div class="stripe relative marTop150" v-if="documents">
                 <div class="w100 flex darkBlueBG justifyCenter gap20  relative wrap">
-                    <article class="bulletinCard" v-for="doc in documents.splice(0, 4)" :key="doc.id">
+                    <article class="bulletinCard" v-for="doc in documents.latests" :key="doc.id">
                         <figure class="frame relative">
                             <img class="objectFitCover" :src="`${directusAssets}${doc.image}.jpg`" 
                             :alt="`Bulletin municipal de Poullaouën ${doc.datePublication}`" @click.prevent="openModal">
@@ -39,7 +39,7 @@
         
             <div class="stripe relative" v-if="documents">
                 <div class="flex justifyCenter gap20  relative wrap">
-                    <article class="bulletinCard pointer " v-for="doc in documents" :key="doc.id">
+                    <article class="bulletinCard pointer " v-for="doc in documents.rest" :key="doc.id">
                         <figure class="frame relative">
                             <img class="objectFitCover" :src="`${directusAssets}${doc.image}.jpg`" 
                             :alt="`Bulletin municipal de Poullaouën ${doc.datePublication}`" @click.prevent="openModal">
@@ -65,13 +65,6 @@
 
 const modalData = ref('')
 
-
-
-
-
-
-
-
 const appConfig = useAppConfig();
 const directusAssets = appConfig.directus.assets;
 const directusItems = appConfig.directus.items;
@@ -87,8 +80,15 @@ const fetchOptions = {
 const { data: documents } = await useAsyncData(
     "bulletin",
     async () => {
-        const items = await $fetch(`${directusItems}Bulletins`, fetchOptions)
-        return items.data
+        const _items = await $fetch(`${directusItems}Bulletins`, fetchOptions)
+        const items = _items.data
+
+        const temp = {
+            latests: items.splice(0, 4),
+            rest: items
+        }
+        console.log(temp)
+        return temp
     }
     ,
     { server: true }
@@ -110,11 +110,7 @@ const headerData = {
         },
         {
             text: 'Ma mairie',
-            target: '/ma-mairie'
-        },
-        {
-            text: 'Documents',
-            target: '/ma-mairie/documents/bulletin-municipal'
+            target: '/documents/bulletin-municipal'
         },
         {
             text: 'Bulletin municipal',
@@ -132,7 +128,6 @@ const headerData = {
 }
 
 .docsMain .docsSection .stripe {
-    margin-top: 20px;
     z-index: 1;
 }
 .docsMain .docsSection .stripe .flex{

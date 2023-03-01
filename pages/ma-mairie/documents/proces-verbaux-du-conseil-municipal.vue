@@ -9,15 +9,15 @@
         </p>
 
         <div class="dashboard w100 flex justifyCenter">
-            <NuxtLink :to="`#section${year}`" class="button green_action pointer shadow" v-for="year in myData.years" :key="year">
+            <NuxtLink :to="`#section${year}`" class="button brown_action pointer shadow" v-for="year in myData.years" :key="year">
                 {{ year }}    
             </NuxtLink>
         </div>
 
-        <section class="docsSection docsLatestsSection relative" v-for="year in myData.years" :key="year" :id="`section${year}`">
+        <section class="docsSection docsLatestsSection relative" v-for="(year, index) in myData.years" :key="year" :id="`section${year}`">
             <SectionTitleBar class="titleComp" :title="year" />
             
-            <div class="stripe darkBlueBG w100">
+            <div class="stripe  w100 marTop100" :class="{ darkBlueBG : index == 0}">
                 <div class="content mainWidth w100 flex justifyCenter wrap">
                     <article class="procesCard flex column justifyCenter alignCenter relative" v-for="doc in myData.docs[year]" :key="doc.id">
                         <figure class="">
@@ -35,6 +35,10 @@
                         </div>
                     </article>
                 </div>
+            </div>
+
+            <div class="piedBox absolute" v-if="index == 0">
+                <SectionPieds />
             </div>
         </section>
     </main>
@@ -135,10 +139,6 @@ const headerData = {
         },
         {
             text: 'Ma mairie',
-            target: '/ma-mairie'
-        },
-        {
-            text: 'Documents',
             target: '/ma-mairie/documents/proces-verbaux-du-conseil-municipal'
         },
         {
@@ -152,6 +152,18 @@ const headerData = {
 </script>
 
 <style scoped>
+
+.piedBox {
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    top: calc(50% + 100px);
+    transform: translate(-50%, -50%);
+    z-index: -10;
+}
+.piedBox * {
+    fill: var(--brown);
+}
 
 .dashboard {
     margin-top: 50px;
@@ -167,7 +179,7 @@ const headerData = {
 
 
 .docsMain .docsSection .stripe {
-    z-index: 1;
+    /* z-index: 1; */
 }
 
 .docsMain .docsSection .stripe .flex {
@@ -182,6 +194,7 @@ const headerData = {
     background-color: #fff;
     padding: 10px;
     border-radius: 5px;
+    box-shadow: var(--shadow);
 }
 .procesCard figure {
     width: 100%;
