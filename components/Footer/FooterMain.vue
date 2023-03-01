@@ -1,5 +1,5 @@
 <template>
-    <footer id="footer" class="relative r">
+    <footer id="footer" class="relative">
         <div class="footerContainer mainWidth flex justifyEvenly alignStart wrap h100 ">
             <div class="phoneBox footerBox flex justifyCenter alignCenter wrap gap5">
                 <p class="phoneBtn flex column justifyCenter alignCenter">

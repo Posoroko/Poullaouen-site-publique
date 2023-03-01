@@ -45,7 +45,7 @@
 
 </script>
 
-<style>
+<style scoped>
 .contactWidgetBox {
     margin-right: 20px;
 }
