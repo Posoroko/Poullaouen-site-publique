@@ -127,10 +127,7 @@ onMounted(() => {
 })
 </script>
 
-<style>
-.level0 {
-    border-bottom: 1px solid green
-}
+<style scoped>
 
 .level1 {
     margin-left: 10px;

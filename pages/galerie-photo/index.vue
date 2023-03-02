@@ -2,14 +2,14 @@
     <HeaderMain :data="headerData" />
     <main class="galerieMain flex column">
         
-        <NuxtLink :to="`/galerie-photo/${cat.toLowerCase()}`" class="catBar pointer mainWidth flex" v-for="cat in galeryData.categories" :key="cat">
+        <NuxtLink :to="`/galerie-photo/${cat.slug}`" class="catBar pointer mainWidth flex" v-for="cat in galeryData.categories" :key="cat">
             <div class="frame shadow">
-                <img class="objectFitCover" :src="`${directusAssets}${galeryData.albums[cat][0].images[0].directus_files_id}?key=card500`" alt="">
+                <img class="objectFitCover" :src="`${directusAssets}${galeryData.albums[cat.ref][0].images[0].directus_files_id}?key=card500`" alt="">
             </div>
 
             <div class="infoBox flex column justifyEnd gap10">
-                <h4 class="catTitle"> {{ cat }}</h4>
-                <p class="albumCount">{{ galeryData.albums[cat].length }} album<span v-if="galeryData.albums[cat].length > 1">s</span> </p>
+                <h4 class="catTitle"> {{ cat.name }}</h4>
+                <p class="albumCount">{{ galeryData.albums[cat.ref].length }} album<span v-if="galeryData.albums[cat.ref].length > 1">s</span> </p>
             </div>
 
 
@@ -30,7 +30,7 @@ const directusItems = appConfig.directus.items;
 const fetchOptions = {
     server: true,
     params: {
-        fields: 'id, albumName, content, categoryName.displayName, images, images.directus_files_id'
+        fields: 'id, albumName, content, categoryName.displayName, categoryName.slug, categoryName.ref, images, images.directus_files_id'
     }
 }
 
@@ -41,19 +41,21 @@ const { data: galeryData } = await useAsyncData(
         const albums = items.data
 
         const temp = {
+            catRef: [], //to avoid duplicate
             categories: [],
             albums: {}
         }
         albums.forEach(album => {
-
-            if (!temp.categories.includes(album.categoryName.displayName)) {
-                temp.categories.push(album.categoryName.displayName)
-                temp.albums[album.categoryName.displayName] = []
+            console.log(album.categoryName.ref)
+            if (!temp.catRef.includes(album.categoryName.ref)) {
+                temp.catRef.push(album.categoryName.ref)
+                temp.categories.push({name: album.categoryName.displayName, slug: album.categoryName.slug, ref: album.categoryName.ref})
+                temp.albums[album.categoryName.ref] = []
             }
-            temp.albums[album.categoryName.displayName].push(album)
+            temp.albums[album.categoryName.ref].push(album)
         })
         
-
+        console.log(temp)
         return temp
     }
     ,

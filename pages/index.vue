@@ -1,5 +1,5 @@
 <template>
-    <HeaderMain :data="headerData" isHomePage="true"/>
+    <HeaderMain :data="headerData" :isHomePage="true"/>
     <main class="">
         <UnClickMain />
 

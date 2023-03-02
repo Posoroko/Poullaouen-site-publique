@@ -130,10 +130,10 @@ const handleSubmit = async () => {
 
     await createItems(data)
         .then(res => {
-            message.value = "Super! Vous êtes inscrit à la newsletter!"
+            message.value = "Super! Votre événement a bien été envoyé. Il sera publié après validation par l'équipe de l'association."
 
             showInModal(message.value)
-
+            form.value.reset()
         }).catch(err => {
             showInModal(err.message)
         })
@@ -150,6 +150,7 @@ const showInModal = (message) => {
     }
 
     const _h1 = document.createElement('h1')
+    _h1.style.margin = "40px"
     _h1.innerText = message
 
     modal.appendChild(_h1)
