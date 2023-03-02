@@ -1,7 +1,7 @@
 <template>        
     
     <ul class="tabBox flex alignCenter">
-        <li class="tab pointer" data-name="mairie" @click.prevent="openMenu">
+        <li class="tab tabBasic pointer" data-name="mairie" @click.prevent="openMenu">
             <p class="article">MA</p>
             
             <p class="name">MAIRIE</p>
@@ -9,7 +9,7 @@
 
         <li class="line"></li>
     
-        <li class="tab pointer" data-name="quotidien" @click.prevent="openMenu">
+        <li class="tab tabBasic pointer" data-name="quotidien" @click.prevent="openMenu">
             <p class="article">MON</p>
     
             <p class="name">QUOTIDIEN</p>
@@ -17,7 +17,7 @@
 
         <li class="line"></li>
     
-        <li class="tab pointer" data-name="sorties" @click.prevent="openMenu">
+        <li class="tab tabBasic pointer" data-name="sorties" @click.prevent="openMenu">
             <p class="article">MES</p>
     
             <p class="name">SORTIES</p>
@@ -25,18 +25,23 @@
 
         <li class="line"></li>
     
-        <li class="tab pointer" data-name="infos" @click.prevent="openMenu">
+        <li class="tab tabBasic pointer" data-name="infos" @click.prevent="openMenu">
             <p class="article">MES</p>
     
             <p class="name">INFOS</p>
         </li>
+    
+        <li class="tab pointer tabDemarches relative" data-name="demarches">
+            <NuxtLink to="https://www.service-public.fr/particuliers/vosdroits/comment-faire-si">
+                <p class="article">MES</p>
+    
+                <p class="name">DEMARCHES</p>
 
-        <li class="line"></li>
-    
-        <li class="tab pointer" data-name="demarches" @click.prevent="openMenu">
-            <p class="article">MES</p>
-    
-            <p class="name">DEMARCHES</p>
+                <div class="info">
+                    <p>Cliquez ici pour accéder à toutes les démarches en ligne</p>
+                    <img src="/images/Service-public-logo.png" alt="">
+                </div>
+            </NuxtLink>
         </li>
     </ul>
 
@@ -106,10 +111,9 @@ const closeMenu = () => {
 
 </script>
 
-<style>
+<style scoped>
 .tabBox .tab {
     padding: 5px;
-    margin: 10px 25px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -117,28 +121,93 @@ const closeMenu = () => {
     transition: 300ms ease;
 }
     
-.tabBox .tab:hover {
+.tabBox .tabBasic:hover {
     background-color: var(--dark-blue);
     transition: 300ms ease;
     box-shadow: var(--shadow);
 }
-.tab:hover * {
+.tabBox .tabBasic:hover * {
     color: white;
 }
+.tabBasic{
+    margin: 10px 25px;
+}
+.tabBasic .article {
+    font-size: max(16px, 1vw);
+    color: var(--light-blue);
+}
+.tabBasic .name {
+    color: var(--dark-blue);
+    font-size: max(18px, 1.2vw);
+    font-weight: 700;
+}
+
+
+.tabDemarches {
+    margin: 10px 25px 10px 100px;
+    background-color: var(--light-blue);
+ }
+ .tabDemarches:hover {
+    background-color: var(--dark-blue);
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    transition: 300ms ease;
+    box-shadow: var(--shadow);
+ }
+.tabDemarches .article {
+    font-size: max(16px, 1vw);
+    color: white;
+}
+.tabDemarches .name {
+    color: white;
+    font-size: max(18px, 1.2vw);
+    font-weight: 700;
+}
+.tabDemarches .info * {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+.tabDemarches .info {
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    /* transform: translateX(-50%); */
+    background-color: var(--dark-blue);
+    padding: 10px;
+    border-radius: 5px;
+    border-top-right-radius: 0px;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    visibility: hidden;
+    transition: 300ms ease;
+}
+.tabDemarches:hover .info {
+    opacity: 1;
+    visibility: visible;
+    transition: 300ms ease;
+}
+.tabDemarches .info img {
+    margin-top: 5px;
+    width: 300px;
+}
+
+.tabBasic .article {
+    font-size: max(16px, 1vw);
+    color: var(--light-blue);
+}
+.tabBasic .name {
+    color: var(--dark-blue);
+    font-size: max(18px, 1.2vw);
+    font-weight: 700;
+}
+
 .tabBox .line {
     height: 30px;
     border: 1px solid var(--brown);
 }
 
-.article {
-    font-size: max(16px, 1vw);
-    color: var(--light-blue);
-}
-.name {
-    color: var(--dark-blue);
-    font-size: max(18px, 1.2vw);
-    font-weight: 700;
-}
+
 
 .menuPanel {
     background-color: white;
