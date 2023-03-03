@@ -1,6 +1,10 @@
 <template>
-    <!-- <HeaderMain :data="headerData" /> -->
-    <main class="galerieMain flex column">
+    <header >
+        <HeaderPathBar :path="path" />
+        <HeaderTItleBar :title="`Catégorie : ${albums[0].categoryName.displayName}`" />
+    </header>
+
+    <main class="galerieMain flex column marTop100">
         
         <h2 class="mainWidth">Albums de la catégorie {{ albums[0].categoryName.displayName }}</h2>
 
@@ -50,31 +54,20 @@ const { data: albums } = await useAsyncData(
     { server: true }
 )
 
-
-
-
-
-
-const headerData = {
-    images: [
-        {
-            src: 'images/header/accueil/eglise-de-locmaria-berrien.jpg',
-            alt: 'mairie de Locmaria-Berrien',
-        }
-    ],
-    title: 'Galerie-photo',
-    path: [
-        {
-            text: 'Accueil',
-            target: '/'
-        },
-        {
-            text: 'Galerie photo',
-            target: '/galerie-photo'
-        }
-    ]
-}
-
+const path = [
+    {
+        text: 'Accueil',
+        target: '/'
+    },
+    {
+        text: 'Galerie photo',
+        target: '/galerie-photo'
+    },
+    {
+        text: `Catégorie : ${albums.value[0].categoryName.displayName}`,
+        target: `/galerie-photo/${route.params.category}`
+    }
+]
 
 
 

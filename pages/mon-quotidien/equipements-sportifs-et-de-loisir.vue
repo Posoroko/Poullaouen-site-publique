@@ -118,7 +118,7 @@ onMounted(() => {
 }
 .slotedSectionTextBox .topTextBox .sectionSubtitle {
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 700;
 }
 .slotedSectionTextBox .topTextBox .sectionAddress, 
 .slotedSectionTextBox .topTextBox .sectionMoreInfo {

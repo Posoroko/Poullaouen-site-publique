@@ -134,7 +134,7 @@ const { data: questions } = await useAsyncData(
 const headerData = {
     images: [
         {
-            src: `${directusAssets}e5a79bfd-1d27-48bd-b294-5d66701bb0f8.JPG?key=header1500`,
+            src: `${directusAssets}ac9db841-7428-4505-9ce1-511a4ee788f6.JPG?key=header1500`,
             alt: "Le musé de la mine",
         }
     ],

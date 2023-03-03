@@ -240,6 +240,10 @@ const headerData = {
 const applyStyleClasses_utils = () => {
 
     const sections = document.querySelectorAll('.sectionBoxSloted')
+    // color of horse icon in white section
+    for (let i = 0; i < sections.length; i = i + 2) {
+        sections[i].querySelector('.horseIcon').style.fill = "var(--dark-blue)"
+    }
 
     for (let i = 1; i < sections.length; i = i + 4) {
         sections[i].classList.replace('whiteSection', 'blueSection')

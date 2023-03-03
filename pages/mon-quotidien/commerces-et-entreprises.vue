@@ -8,7 +8,7 @@
 
 
 
-        <FilterBarMain :filters="itemsData.filters" @updateFilter="moveSectionToFirstPosition" :slugged="true" />
+        <FilterBarMain :filters="itemsData.filters" @updateFilter="moveSectionToFirstPosition" :slugged="true" text="Filtrer les résultats par thème" />
 
 
         <div class="content flex justifyCenter wrap" ref="content">

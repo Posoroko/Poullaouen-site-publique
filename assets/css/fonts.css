@@ -40,7 +40,7 @@
         }
 
         /* intro text at top of pages */
-        .intro-text { font-weight: 500; color: var(--dark-blue); padding: 50px 0 0 0; }
+        .intro-text { font-weight: 600; color: var(--dark-blue); padding: 50px 0 0 0; }
 
         @media (max-width: 719px) {
             .intro-text { font-size: 18px; }

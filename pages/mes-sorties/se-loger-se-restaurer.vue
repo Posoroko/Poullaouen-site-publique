@@ -8,21 +8,18 @@
         </p>
 
         <section v-for="filter in rooms.filters" :key="filter.id">
-
             <SectionTitleBar  :title="filter.name" />
 
             <div class="roomsContent mainWidth flex justifyCenter wrap gap20">
                 <CardsTallMain v-for="room in rooms.items[filter.slug]" :key="room.id" :title="room.name" :cardImage="room.image" :cardImageAlt="room.imageAlt" :localImage="false">
                     <div class="cardContent flex column gap10">
-                        <p> <span class="icon">location_on</span> <span>{{ room.adress }}</span> </p>
-                        <p> <span class="icon">call</span> <span>{{ room.phone }}</span> </p>
-                        <p> <span class="icon">email</span> <span>{{ room.email }}</span> </p>
-                        <p> <span class="icon">language</span> <a :href="`https://${room.website}`">{{ room.website }}</a> </p>
+                        <p class="flex alignCenter gap10" v-if="room.adress"> <span class="icon">location_on</span> <span>{{ room.adress }}</span> </p>
+                        <p class="flex alignCenter gap10" v-if="room.phone"> <span class="icon">call</span> <span>{{ room.phone }}</span> </p>
+                        <p class="flex alignCenter gap10" v-if="room.email"> <span class="icon">email</span> <span>{{ room.email }}</span> </p>
+                        <p class="flex alignCenter gap10" v-if="room.website"> <span class="icon">language</span> <a :href="`https://${room.website}`">{{ room.website }}</a> </p>
                     </div>
                 </CardsTallMain>
             </div>
-            
-            
         </section>
 
     </main>
@@ -57,7 +54,7 @@ const fetchOptions = {
 const { data: rooms } = await useAsyncData(
     "associations",
     async () => {
-        const _items = await $fetch(`${directusItems}Commerces?[filter][type][slug][_eq]=hebergement`, fetchOptions) 
+        const _items = await $fetch(`${directusItems}Commerces?[filter][type][slug][_in]=hebergement,bars_et_restaurants`, fetchOptions) 
         const items = _items.data
 
         const temp = {
@@ -80,7 +77,6 @@ const { data: rooms } = await useAsyncData(
     ,
     { server: true }
 )
-
 
 
 const headerData = {

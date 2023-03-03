@@ -1,5 +1,8 @@
 <template>
     <section class="filterStripe w100">
+        <p class="mainWidth filterText">
+            Filtrer les résultats par thème
+        </p>
         <div class="mainWidth flex gap20 justifyEvenly alignCenter wrap">
             <div class="filter shadow pointer" 
                 v-if="slugged == true"
@@ -29,7 +32,8 @@
 const props = defineProps({
     filters: Array,
     activeFilter: String,
-    slugged: Boolean
+    slugged: Boolean,
+    text: String
 })
 
 const emit = defineEmits(['updateFilter'])
@@ -48,13 +52,25 @@ const handleFilterClick = (e) => {
     background: linear-gradient(90deg, rgba(0, 47, 74, 1) 0%, rgba(146, 76, 2, 1) 100%);
     padding: 30px;
     margin: 50px 0 0 0 ;
-}   
+}
+.filterText{
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+}
 .filter {
     padding: 5px 0;
     font-weight: 600;
     background-color: white;
     border-radius: 5px;
     text-align: center;
+    transition: 300ms ease;
+}
+.filter:hover {
+    background-color: var(--light-blue);
+    color: white;
+    transition: 300ms ease;
 }
 
 @media (max-width: 768px) {

@@ -95,29 +95,27 @@ const fetchOptions = {
 const { data: myData } = await useAsyncData(
     "proces",
     async () => {
-        const items = await $fetch(`${directusItems}Proces`, fetchOptions)
-        const activeYears = []
-        const sortedDocs = {}
+        const _items = await $fetch(`${directusItems}Proces`, fetchOptions)
+        const items = _items.data
 
-        for (let i = 0; i < items.data.length; i++) {
+        const temp = {
+            years: [],
+            docs: {}
+        }
 
-            if (!activeYears.includes(items.data[i].year)) {
-                activeYears.push(items.data[i].year)
+        items.forEach(item => {
+            const year = new Date(item.datePublication).getFullYear()
+
+            if(!temp.years.includes(year)) {
+                temp.years.push(year)
+                temp.docs[year] = []
             }
-        }
 
-        activeYears.forEach( year => {
-            sortedDocs[year] = []
+            temp.docs[year].push(item)
         })
+
+        return temp
         
-        items.data.forEach( item => {
-            sortedDocs[item.year].push(item)
-        })
-            
-        return {
-            years: activeYears,
-            docs: sortedDocs
-        }
     }
     ,
     { server: true }

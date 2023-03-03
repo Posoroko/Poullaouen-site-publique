@@ -28,7 +28,9 @@
 .whiteSection .section-address-text {
     color: var(--brown);
 }
-
+.whiteSection .slotedSectionTextBox .topTextBox h2 span{
+    color: var(--brown);
+}
 
 
 .blueSection .section-address-text {

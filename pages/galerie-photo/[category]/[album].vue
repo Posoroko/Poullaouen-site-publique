@@ -1,7 +1,7 @@
 <template>
     <header>
         <HeaderPathBar :path="path" />
-        <HeaderTItleBar :title="`Album ${album.albumName}`" />
+        <HeaderTItleBar :title="`Album : ${album.albumName}`" />
     </header>
 
     <main class="galerieMain flex column marTop100">
