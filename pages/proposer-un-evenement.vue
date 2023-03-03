@@ -111,22 +111,14 @@ const handleSubmit = async () => {
                 location: form.value.eventPlace.value,
                 content: form.value.eventDescription.value,
                 organiser: form.value.organiser.value,
-                status: "pending",
                 userName: form.value.name.value,
                 userEmail: form.value.email.value,
                 userPhone: form.value.telephone.value,
+                userCreated: true,
                 // image: null
             }
         ]
     }
-
-    console.log(useDirectusFiles())
-    // await createFiles(form.value.eventImage.value).then(res => {
-    //     console.log(res.data)
-    //     // data.items[0].image = res.data[0].id
-    // }).catch(err => {
-    //     console.log(err)
-    // })
 
     await createItems(data)
         .then(res => {

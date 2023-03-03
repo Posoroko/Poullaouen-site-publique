@@ -11,43 +11,45 @@
                 <span class="closeBurger icon pointer" @click="closeMenu">close</span>
             </div>
 
-            <ul class="tabList flex column alignEnd w100 alignCenter" v-if="!tabIsSelected">
-                <li class="tab pointer" name="mairie" @click.prevent="openTab">
+            <ul class="tabList flex column alignEnd gap10" v-if="!tabIsSelected">
+                <li class="tab tabBasic pointer" name="mairie" @click.prevent="openTab">
                     <p class="article">MA</p>
                     
                     <p class="name">MAIRIE</p>
                 </li>
 
-                <div class="line"></div>
+                <li class="line"></li>
             
-                <li class="tab pointer" name="quotidien" @click.prevent="openTab">
+                <li class="tab tabBasic pointer" name="quotidien" @click.prevent="openTab">
                     <p class="article">MON</p>
             
                     <p class="name">QUOTIDIEN</p>
                 </li>
 
-                <div class="line"></div>
+                <li class="line"></li>
             
-                <li class="tab pointer" name="sorties" @click.prevent="openTab">
+                <li class="tab tabBasic pointer" name="sorties" @click.prevent="openTab">
                     <p class="article">MES</p>
             
                     <p class="name">SORTIES</p>
                 </li>
 
-                <div class="line"></div>
+                <li class="line"></li>
             
-                <li class="tab pointer" name="infos" @click.prevent="openTab">
+                <li class="tab tabBasic pointer" name="infos" @click.prevent="openTab">
                     <p class="article">MES</p>
             
                     <p class="name">INFOS</p>
                 </li>
 
-                <div class="line"></div>
+                <li class="line"></li>
             
-                <li class="tab pointer" name="demarches" @click.prevent="openTab">
+                <li class="tab tabDemarches pointer" name="demarches" @click.prevent="openTab">
                     <p class="article">MES</p>
             
                     <p class="name">DEMARCHES</p>
+
+                    <img class="w100 marTop20" src="/images/Service-public-logo.png" alt="">
                 </li>
             </ul>
 
@@ -90,7 +92,7 @@ const closeTab = () => {
 }
 </script>
 
-<style>
+<style scoped>
 .menuButton {
     font-size: 20px;
     font-weight: 800;
@@ -100,6 +102,7 @@ const closeTab = () => {
     position: relative;
 }
 .burgerMenuPanel {
+    width: min(95vw, 275px);
     background-color: #fff;
     padding: 15px;
     border-radius: 10px;
@@ -117,18 +120,69 @@ const closeTab = () => {
 .invisible {
     opacity: 0;
 }
+.line {
+    width: 100%;
+    border: 1px solid var(--dark-blue);
+
+}
 
 .tabList .tab {
-    font-size: 20px;
-    width: 50vw;
+    width: 100%;
     text-align: right;
-    padding: 5px;
-    border-bottom: 2px solid var(--dark-blue);
+    padding: 8px;
+    border-radius: 10px;
 }
 .tabList .tab:hover {
-    background-color: #0184d525;
+    background-color: var(--dark-blue);
     transition: 300ms ease;
 }
+.tabList .tab:hover * {
+    color: white;
+    transition: 300ms ease;
+}
+.article {
+    font-size: 20px;
+}
+
+.name {
+    font-size: 24;
+    font-weight: 700;
+}
+
+
+.tabBasic .article {
+    color: var(--light-blue);
+}
+.tabBasic .name {
+    color: var(--dark-blue);
+}
+.tabDemarches * {
+    color: white;
+}
+.tabDemarches {
+    background-color: var(--light-blue);
+    border-radius: 10px;
+    /* margin-top: 20px; */
+    transition: 300ms ease;
+}
+.tabDemarches:hover {
+    background-color: var(--dark-blue);
+    border-radius: 10px;
+    transition: 300ms ease;
+}
+
+.tabDemarches img {
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
 
 .burgerMenuPanel .linkList {
     width: min(80vw, 300px);

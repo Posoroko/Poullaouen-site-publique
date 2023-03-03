@@ -51,7 +51,6 @@ const { data: actualites } = await useAsyncData(
     "latestActu",
     async () => {
         const items = await $fetch(`${directusItems}Actualites`, fetchOptions)
-
         return items.data
     }
     ,

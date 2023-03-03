@@ -137,7 +137,6 @@ const closeMenu = () => {
     color: var(--light-blue);
 }
 .tabBasic .name {
-    color: var(--dark-blue);
     font-size: max(18px, 1.2vw);
     font-weight: 700;
 }
@@ -188,8 +187,9 @@ const closeMenu = () => {
     transition: 300ms ease;
 }
 .tabDemarches .info img {
-    margin-top: 5px;
     width: 300px;
+    margin-top: 5px;
+    border-radius: 5px;
 }
 
 .tabBasic .article {

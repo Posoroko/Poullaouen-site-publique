@@ -112,7 +112,7 @@ const links = {
     demarches: [
         {
             text: "Vos démarches",
-            path: "/mes-demarches/toutes-les-demarches"
+            path: "https://www.service-public.fr/particuliers/vosdroits/comment-faire-si"
         }
     ]
 }
@@ -120,7 +120,7 @@ const links = {
 
 </script>
 
-<style>
+<style scoped>
 .topBar {
     background-color: #fff;
     padding: 5px;

@@ -155,6 +155,9 @@
 </template>
 <script setup>
 
+const appConfig = useAppConfig();
+const directusAssets = appConfig.directus.assets;
+
 const section1Data = {
     title: "Les circuits de Poullaouen",
     image: "/images/randonnee/bois de lemezec.jpg",
@@ -214,7 +217,7 @@ const section4TopBoxData = {
 const headerData = {
     images: [
         {
-            src: "/images/header/randonnee/randonnee1.jpg",
+            src: `${directusAssets}04dffc25-d414-4851-926b-1e547f556979.jpg?key=header1500`,
             alt: 'Aire de loisir de Poullaouen',
         }
     ],
