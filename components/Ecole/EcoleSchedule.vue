@@ -21,7 +21,7 @@
                     <p class="scheduleCell deep"> Enseignement</p>
                     <p class="scheduleCell shallow">APC <br> (aide personnalisée)</p>
                     <p class="scheduleCell shallow">pause</p>
-                    <p class="scheduleCell shallow">Tap</p>
+                    <p class="scheduleCell shallow">TAP</p>
                     <p class="scheduleCell medium"> Enseignement </p>
                 </div>
 

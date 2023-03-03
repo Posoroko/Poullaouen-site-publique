@@ -24,7 +24,9 @@
                 </div>
             </SectionMainSloted>
 
-            <EcoleSchedule />
+            <EcoleSchedule class="desktopSchedule" />
+
+            <EcoleScheduleTel class="telSchedule" />
 
             <SectionMainSloted
                 :data="{ title: 'Les Temps d’Activité Périscolaire (TAP)', image: '/images/ecole/tap.jpg', imageAlt: 'Eau et assainissement', localImage: true }">
@@ -257,19 +259,24 @@ li {
     margin-left: 40px;
 }
 
+
 @media (max-width: 900px) {
-    .telMenu {
+    .telMenu,
+    .telSchedule {
         display: block;
     }
-    .desktopMenu {
+    .desktopMenu,
+    .desktopSchedule {
         display: none;
     }
 }
 @media (min-width: 900px) {
-    .telMenu {
+    .telMenu,
+    .telSchedule{
         display: none;
     }
-    .desktopMenu {
+    .desktopMenu,
+    .desktopSchedule {
         display: block;
     }
 }
