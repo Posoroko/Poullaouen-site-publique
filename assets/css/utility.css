@@ -60,6 +60,7 @@
 
 .objectFitCover {width: 100%; height: 100%; object-fit: cover; object-position: center;}
 .objectFitContained {width: 100%; height: 100%; object-fit: contain;}
+.objectFitContain {width: 100%;height: 100%;object-fit: contain;}
 
 
 .marTop20 {margin-top: 20px;}

@@ -1,6 +1,25 @@
 <template>
     <HeaderMain :data="headerData" />
     <main class="galerieMain flex column">
+
+        <GaleriePhotoDesktop />
+
+        <p class="mainWidth intro-text">
+            Retrouvez, en images, tous les événements de votre commune.
+        </p>
+
+        <nav class="albumsFilterBox horizontalGradient">
+            <p class="mainWidth page-text">filtrer les résultats par thème.</p>
+
+            <div class="mainWidth flex justifyCenter wrap gap20">
+                <div class="filterButton pointer" @click="filterItems" data-filter="all"
+                    :class="{ activeBtn: activeBtn == 'all' }">Tout le patrimoine</div>
+                
+                <div class="filterButton pointer" @click="filterItems" :data-filter="filter" v-for="filter in filters" :class="{ activeBtn: activeBtn == filter }">
+                    {{ filter }}
+                </div>
+            </div>
+        </nav>
         
         <NuxtLink :to="`/galerie-photo/${cat.slug}`" class="catBar pointer mainWidth flex" v-for="cat in galeryData.categories" :key="cat">
             <div class="frame shadow">
@@ -11,15 +30,21 @@
                 <h4 class="catTitle"> {{ cat.name }}</h4>
                 <p class="albumCount">{{ galeryData.albums[cat.ref].length }} album<span v-if="galeryData.albums[cat.ref].length > 1">s</span> </p>
             </div>
-
-
         </NuxtLink>
+
 
     </main>
 </template>
 <script setup>
+const filterItems = (e) => {
+    activeBtn.value = null
+    setTimeout(() => {
+        activeBtn.value = e.target.getAttribute('data-filter')
+    }, 10)
+}
 
-
+const activeBtn = ref('all')
+const filters = ref(['ecole', 'associations', 'mediatheque', 'ccas'])
 
 const appConfig = useAppConfig();
 const directusAssets = appConfig.directus.assets;
@@ -93,6 +118,34 @@ const headerData = {
 </script>
 
 <style>
+
+.albumsFilterBox {
+    background: linear-gradient(90deg, rgba(0, 47, 74, 1) 0%, rgba(146, 76, 2, 1) 100%);
+    padding: 30px;
+    margin-top: 50px;
+}
+.albumsFilterBox p{
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.filterButton {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dark-blue);
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+.filterButton:hover,
+.activeBtn {
+    background-color: var(--light-blue);
+    color: #fff;
+}
+
+
 .catBar {
     padding: 20px 20px;
     border-bottom: 2px solid var(--green);
