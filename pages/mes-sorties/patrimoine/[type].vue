@@ -7,7 +7,7 @@
                 <div class="slotedSectionTextBox flex column justifyCenter gap20 pad20">
                     <div class="topTextBox">
                         <h2 class="sectionSubtitle">
-                            <span class="bottomGreen" v-if="item.subTitle">{{ item.subTitle }}</span>
+                            <span class="" v-if="item.subTitle">{{ item.subTitle }}</span>
                         </h2>
 
                         <p class="address section-address-text bottomGreen">

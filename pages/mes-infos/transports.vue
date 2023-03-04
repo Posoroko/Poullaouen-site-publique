@@ -171,7 +171,7 @@
                 </SectionMainSloted>
 
                 <SectionTitleBar title="Le covoiturage" />
-                <h4 class="mainWidth">Le covoiturage est une solution alternative de transport à la voiture individuelle.</h4>
+                <h4 class="mainWidth marTop20">Le covoiturage est une solution alternative de transport à la voiture individuelle.</h4>
 
                 <SectionMainSloted :data="{ title: null, image: '/images/transports/ouestgo.png', imageAlt: 'Covoiturage à Poullaouen', localImage: true }">
                     <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap10">
@@ -229,7 +229,7 @@
                             Il y a actuellement 4 bornes de recharge sur le territoire de Poher communauté.
                         </p>
                         <div class="infoBox">
-                            <p class="flex alignCenter gap10"> voir ici : <a class="noLineLink" href="https://fr.chargemap.com/map">chargemap.com</a></p>
+                            <p class="flex alignCenter gap10"> voir ici : <a class="externalLink" href="https://fr.chargemap.com/map">chargemap.com</a></p>
                         </div>
                     </div>
                 </SectionMainSloted>
