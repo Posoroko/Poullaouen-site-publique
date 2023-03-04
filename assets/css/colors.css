@@ -25,7 +25,9 @@
 
 /* main colors */
     
-
+.horizontalGradient {
+    background: linear-gradient(90deg, rgba(0, 47, 74, 1) 0%, rgba(146, 76, 2, 1) 100%);
+}
 
 /* Components that react to user actions */
     .blue_action {

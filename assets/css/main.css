@@ -31,7 +31,9 @@
 .whiteSection .slotedSectionTextBox .topTextBox h2 span{
     color: var(--brown);
 }
-
+.whiteSection .mainWidth .slotedContent .patrimoineSectionContent .patrimoineTopBox * {
+    color: var(--brown);
+}
 
 .blueSection .section-address-text {
     color: white;

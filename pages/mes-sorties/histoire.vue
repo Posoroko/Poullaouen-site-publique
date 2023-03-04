@@ -8,6 +8,8 @@
         </p>
 
         <nav class="histoireFilterBox">
+            <p class="mainWidth page-text">filtrer les résultats par thème.</p>
+
             <div class="mainWidth flex justifyCenter wrap gap20">
                 <div class="filterButton pointer" @click="activeBtn = 'all'" :class="{ activeBtn : activeBtn == 'all'}">Toute l'histoire</div>
                 <div class="filterButton pointer" @click="activeBtn = 'poullaouen'" :class="{ activeBtn: activeBtn == 'poullaouen' }">Poullaouen</div>
@@ -107,6 +109,13 @@ onMounted(() => {
     padding: 30px;
     margin-top: 50px;
 }
+.histoireFilterBox p{
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+}
+
 .filterButton {
     font-size: 18px;
     font-weight: 600;
