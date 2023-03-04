@@ -48,7 +48,7 @@ const { data: poullaouennais } = await useAsyncData(
 const headerData = {
     images: [
         {
-            src: '/images/header/equipe/équipe-municipale-Poullaouën.jpg',
+            src: `${directusAssets}9c6455a5-c179-4686-84e4-ea42c2838cb2.JPG?key=header1500`,
             alt: 'mairie de Locmaria-Berrien',
         }
     ],

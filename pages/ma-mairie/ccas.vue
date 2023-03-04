@@ -52,6 +52,8 @@
     </main>
 </template>
 <script setup>
+const appConfig = useAppConfig();
+const directusAssets = appConfig.directus.assets;
 
 const sectionData_1 = {
     image: "/images/ccas/ccas-gym.jpg",
@@ -62,7 +64,7 @@ const sectionData_1 = {
 const headerData = {
     images: [
         {
-            src: '/images/header/ccas.jpg',
+            src: `${directusAssets}9f56bf4f-f538-48bc-821f-d68eabf979e9.JPG?key=header1500`,
             alt: 'Centre Communal d’Action Sociale de Poullaouen',
         }
     ],

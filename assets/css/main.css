@@ -31,7 +31,8 @@
 .whiteSection .slotedSectionTextBox .topTextBox h2 span{
     color: var(--brown);
 }
-.whiteSection .mainWidth .slotedContent .patrimoineSectionContent .patrimoineTopBox * {
+.whiteSection .mainWidth .slotedContent .patrimoineSectionContent .patrimoineTopBox *,
+.whiteSection .sectionContent .mainWidth .slotedContent .histoireSectionContent .histoireSubtitle {
     color: var(--brown);
 }
 
