@@ -65,7 +65,7 @@ const { data: equipementsData } = await useAsyncData(
     "equipements",
     async () => {
         const items = await $fetch(`${directusItems}Equipements_sportifs`, fetchOptions)
-        console.log(items.data)
+
         return items.data
     }
     ,
@@ -98,7 +98,7 @@ const headerData = {
 }
 const applyStyleClasses_utils = () => {
     const sections = document.querySelectorAll('.sectionBoxSloted')
-    console.log(sections)
+
     for (let i = 1; i < sections.length; i = i + 4) {
         sections[i].classList.replace('whiteSection', 'blueSection')
     }

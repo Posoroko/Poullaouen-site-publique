@@ -1,7 +1,7 @@
 <template>
     <HeaderMain :data="headerData" />
-    <main class="galerieMain flex column">
 
+    <main class="galerieMain flex column">
         <p class="mainWidth intro-text">
             Retrouvez, en images, tous les événements de votre commune.
         </p>
@@ -10,7 +10,7 @@
             <p class="mainWidth page-text">filtrer les résultats par thème.</p>
 
             <div class="mainWidth flex justifyCenter alignCenter wrap gap20">
-                <div class="filterButton pointer" @click="filterItems" data-filter="all"
+                <div class="defaultFilterButton pointer" @click="filterItems" data-filter="all"
                     :class="{ activeDefaultFilterButton: activeFilter == 'all' }">Tous les albums</div>
         
                 <div class="defaultFilterButton pointer" v-for="cat in galeryData.categories" :key="cat.ref"  @click="filterItems" :data-filter="cat.ref" :class="{ activeDefaultFilterButton: activeFilter == cat.ref }">
@@ -33,10 +33,6 @@
                 </div>
             </SectionMainSloted>
         </div>
-        
-
-
-
     </main>
 </template>
 <script setup>

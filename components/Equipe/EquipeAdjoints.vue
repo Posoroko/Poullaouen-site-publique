@@ -17,8 +17,8 @@
                             </h3>
                         </div>
 
-                        <div class="frame">
-                            <img class="objectFitCover" :src="`${directusAssets}${person.image}.jpg`" alt="">
+                        <div class="adjointFrame centered">
+                            <img class="adjointImg" :src="`${directusAssets}${person.image}.jpg`" alt="">
                         </div>
 
                         <p class="roleDetail">{{ person.roleDetail }}</p>
@@ -70,12 +70,15 @@ const headerData = {
     width: 300px;
 }
 
-.adjointCard .frame {
+.adjointFrame {
     width: 100%;
     aspect-ratio: 1/1;
+    overflow: hidden;
 }
-.adjointCard .frame img {
-    object-position: top;
+.adjointImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .adjointCard .topBox,
 .adjointCard .roleDetail {

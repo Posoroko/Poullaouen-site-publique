@@ -68,7 +68,6 @@ const moveSectionToFirstPosition = (filter) => {
     const firstChild = content.value.firstElementChild
 
     content.value.insertBefore(movingSection, firstChild)
-    // console.log(assoMain.value)
 }
 
 const appConfig = useAppConfig();

@@ -82,15 +82,5 @@
     font-size: 20px;
     color: white;
 }
-@media (max-width: 999px) {
-    .contactWidgetBox {
-        display: none;
-    }
-}
 
-@media (min-width: 1000px) {
-    .tinyWidget {
-        display: none;
-    }
-}
 </style>

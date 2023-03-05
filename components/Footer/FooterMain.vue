@@ -1,29 +1,33 @@
 <template>
     <footer id="footer" class="relative">
         <div class="footerContainer mainWidth flex justifyEvenly alignStart wrap h100 ">
-            <div class="phoneBox footerBox flex justifyCenter alignCenter wrap gap5">
-                <p class="phoneBtn flex column justifyCenter alignCenter">
-                    <span class="icon">call</span>
-                    <span class="city">Poullaouen</span>
-                </p>
+            <div class="phoneBox w100 footerBox flex justifyCenter alignCenter wrap gap5">
+                <div class="flex gap5">
+                    <p class="phoneBtn flex column justifyCenter alignCenter">
+                        <span class="icon">call</span>
+                        <span class="city">Poullaouen</span>
+                    </p>
 
-                <p class="phoneBtn flex column justifyCenter alignCenter">
-                    <span class="icon">call</span>
+                    <p class="phoneBtn flex column justifyCenter alignCenter">
+                        <span class="icon">call</span>
             
-                    <span class="city">Locmaria-Berrien</span>
-                </p>
+                        <span class="city">Locmaria-Berrien</span>
+                    </p>
+                </div>
 
-                <p class="phoneBtn flex column justifyCenter alignCenter">
-                    <span class="icon">mail</span>
+                <div class="flex gap5">
+                    <p class="phoneBtn flex column justifyCenter alignCenter">
+                        <span class="icon">mail</span>
         
-                    <span class="city">Poullaouen</span>
-                </p>
+                        <span class="city">Poullaouen</span>
+                    </p>
         
-                <p class="phoneBtn flex column justifyCenter alignCenter">
-                    <span class="icon">mail</span>
+                    <p class="phoneBtn flex column justifyCenter alignCenter">
+                        <span class="icon">mail</span>
         
-                    <span class="city">Locmaria-Berrien</span>
-                </p>
+                        <span class="city">Locmaria-Berrien</span>
+                    </p>
+                </div>
             </div>
 
             <div class="leftBox footerBox flex column justifyEnd" id="footerInfo">
@@ -157,13 +161,10 @@
     text-decoration: underline;
 }
 
-
 #footer {
-    margin-top: 50vh;
-    /* min-height: 100vh; */
+    margin-top: 25vw;
 }
 .phoneBox {
-    width: 60%;
     margin: 0 auto;
 }
 @media (min-width: 719px) {
@@ -175,7 +176,7 @@
     align-items: space-evenly;
 }
 .phoneBox .phoneBtn {
-    width: 150px;
+    width: 125px;
     aspect-ratio: 1/1;
     color: white;
     background-color: var(--green);
@@ -185,7 +186,7 @@
 .phoneBox .phoneBtn .icon {
     color: white;
     aspect-ratio: 1/1;
-    font-size: 50px;
+    font-size: 40px;
     text-align: center;
 }
 .phoneBox .phoneBtn .city {

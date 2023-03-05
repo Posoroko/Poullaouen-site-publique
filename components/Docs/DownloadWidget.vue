@@ -18,9 +18,6 @@
 const props = defineProps({
     link: String
 })
-onMounted(() => {
-    console.log(props.link)
-})
 
 </script>
 

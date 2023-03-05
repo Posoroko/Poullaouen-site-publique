@@ -7,15 +7,9 @@
             l’objet d’une publication électronique.
         </p>
 
-        <!-- <div class="dashboard w100 flex justifyCenter">
-            <NuxtLink :to="`#${type.id}`" class="button green_action pointer shadow" v-for="type in pubTypes" :key="type.id">
-                {{ type.plur }}
-            </NuxtLink>
-        </div> -->
-
     <section class="docsSection docsLatestsSection relative marTop150">        
-        <div class="stripe darkBlueBG w100 ">
-            <div class="content mainWidth w100 flex justifyCenter wrap">
+        <div class="stripe darkBlueBG w100">
+            <div class="content mainWidth w100 flex justifyCenter wrap gap20">
                 <article class="procesCard flex column justifyCenter alignCenter relative" v-for="doc in publications.latests" :key="doc.id">
                     <figure class="">
                         <img src="/images/logo.png" alt="">
@@ -26,9 +20,9 @@
                         <p>{{ new Date(doc.date).toLocaleString().slice(0, 11) }}</p>
                     </div>
 
-                    <div class="downloaderFrame absoluteFull">
+                    <!-- <div class="downloaderFrame absoluteFull">
                         <DocsDownloadWidget :link="`${directusAssets}${doc.file}`" />
-                    </div>
+                    </div> -->
                 </article>
             </div>
 
@@ -42,7 +36,7 @@
         <div class="stripe w100">
             <div class="content mainWidth w100 flex justifyCenter wrap">
                 <article class="procesCard flex column justifyCenter alignCenter relative" v-for="doc in publications.rest" :key="doc.id">
-                    <figure class="">
+                    <figure class="frame">
                         <img src="/images/logo.png" alt="">
                     </figure>
 
@@ -51,9 +45,9 @@
                         <p>{{ new Date(doc.date).toLocaleString().slice(0, 11) }}</p>
                     </div>
 
-                    <div class="downloaderFrame absoluteFull">
+                    <!-- <div class="downloaderFrame absoluteFull">
                         <DocsDownloadWidget :link="`${directusAssets}${doc.file}`" />
-                    </div>
+                    </div> -->
                 </article>
             </div>
         </div>
@@ -88,7 +82,7 @@ const { data: publications } = await useAsyncData(
             latests: items.splice(0, 2), 
             rest: items
         }
-        console.log(temp)
+        
         return temp
     }
     ,
@@ -126,7 +120,7 @@ const headerData = {
 <style scoped>
 
 .piedBox {
-    height: 600px;
+    width: 600px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -150,26 +144,22 @@ const headerData = {
 }
 
 .docsMain .docsSection .stripe {
-    margin-top: 20px;
+    padding: 50px 0;
     z-index: 1;
 }
 
 .docsMain .docsSection .stripe .flex {
     color: white;
-    padding-top: 30px;
-    padding-bottom: 20px;
-    gap: 20px;
 }
 
 .procesCard {
     width: 210px;
-    /* height: 248px; */
     background-color: #fff;
-    padding: 10px;
+    padding: 5px;
     border-radius: 5px;
     box-shadow: var(--shadow);
+    gap: 20px;
 }
-
 .procesCard figure {
     width: 100%;
     height: 40%;
@@ -183,10 +173,9 @@ const headerData = {
 
 .procesCard * {
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
     color: var(--dark-blue);
-
 }
 
 

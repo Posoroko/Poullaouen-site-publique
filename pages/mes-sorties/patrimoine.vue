@@ -12,28 +12,27 @@
             <p class="mainWidth page-text">filtrer les résultats par thème.</p>
 
             <div class="mainWidth flex justifyCenter wrap gap20">
-                <div class="filterButton pointer" @click="filterItems" data-filter="all" :class="{ activeBtn: activeBtn == 'all' }">Tout le patrimoine</div>
-                <div class="filterButton pointer" @click="filterItems" data-filter="naturel" :class="{ activeBtn: activeBtn == 'naturel' }">naturel</div>
-                <div class="filterButton pointer" @click="filterItems" data-filter="religieux" :class="{ activeBtn: activeBtn == 'religieux' }">religieux</div>
-                <div class="filterButton pointer" @click="filterItems" data-filter="bati" :class="{ activeBtn: activeBtn == 'bati' }">bâti</div>
-                <div class="filterButton pointer" @click="filterItems" data-filter="industriel" :class="{ activeBtn: activeBtn == 'industriel' }">industriel</div>                
-                
+                <div class="defaultFilterButton pointer" @click="filterItems" data-filter="all" :class="{ activeDefaultFilterButton: activeDefaultFilterButton == 'all' }">Tout le patrimoine</div>
+                <div class="defaultFilterButton pointer" @click="filterItems" data-filter="naturel" :class="{ activeDefaultFilterButton: activeDefaultFilterButton == 'naturel' }">naturel</div>
+                <div class="defaultFilterButton pointer" @click="filterItems" data-filter="religieux" :class="{ activeDefaultFilterButton: activeDefaultFilterButton == 'religieux' }">religieux</div>
+                <div class="defaultFilterButton pointer" @click="filterItems" data-filter="bati" :class="{ activeDefaultFilterButton: activeDefaultFilterButton == 'bati' }">bâti</div>
+                <div class="defaultFilterButton pointer" @click="filterItems" data-filter="industriel" :class="{ activeDefaultFilterButton: activeDefaultFilterButton == 'industriel' }">industriel</div>
             </div>
         </nav>
 
-        <PatrimoineEglises v-if="activeBtn == 'religieux' || activeBtn == 'all'" />
-        <PatrimoineChapelles v-if="activeBtn == 'religieux' || activeBtn == 'all'" />
-        <PatrimoineCalvaires v-if="activeBtn == 'religieux' || activeBtn == 'all'" />
-        <PatrimoineStele v-if="activeBtn == 'religieux' || activeBtn == 'all'" />
-        <PatrimoineVoieVerte v-if="activeBtn == 'naturel' || activeBtn == 'all'" />
-        <PatrimoineChenes v-if="activeBtn == 'naturel' || activeBtn == 'all'" />
-        <PatrimoineLavoirsFontaines v-if="activeBtn == 'bati' || activeBtn == 'all'" />
-        <PatrimoineFour v-if="activeBtn == 'bati' || activeBtn == 'all'" />
-        <PatrimoineChateau v-if="activeBtn == 'bati' || activeBtn == 'all'" />
-        <PatrimoineManoirs v-if="activeBtn == 'bati' || activeBtn == 'all'" />
-        <PatrimoinePonts v-if="activeBtn == 'bati' || activeBtn == 'all'" />
-        <PatrimoineGare v-if="activeBtn == 'industriel' || activeBtn == 'all'" />
-        <PatrimoineMineDePlomb v-if="activeBtn == 'industriel' || activeBtn == 'all'" />
+        <PatrimoineEglises v-if="activeDefaultFilterButton == 'religieux' || activeDefaultFilterButton == 'all'" />
+        <PatrimoineChapelles v-if="activeDefaultFilterButton == 'religieux' || activeDefaultFilterButton == 'all'" />
+        <PatrimoineCalvaires v-if="activeDefaultFilterButton == 'religieux' || activeDefaultFilterButton == 'all'" />
+        <PatrimoineStele v-if="activeDefaultFilterButton == 'religieux' || activeDefaultFilterButton == 'all'" />
+        <PatrimoineVoieVerte v-if="activeDefaultFilterButton == 'naturel' || activeDefaultFilterButton == 'all'" />
+        <PatrimoineChenes v-if="activeDefaultFilterButton == 'naturel' || activeDefaultFilterButton == 'all'" />
+        <PatrimoineLavoirsFontaines v-if="activeDefaultFilterButton == 'bati' || activeDefaultFilterButton == 'all'" />
+        <PatrimoineFour v-if="activeDefaultFilterButton == 'bati' || activeDefaultFilterButton == 'all'" />
+        <PatrimoineChateau v-if="activeDefaultFilterButton == 'bati' || activeDefaultFilterButton == 'all'" />
+        <PatrimoineManoirs v-if="activeDefaultFilterButton == 'bati' || activeDefaultFilterButton == 'all'" />
+        <PatrimoinePonts v-if="activeDefaultFilterButton == 'bati' || activeDefaultFilterButton == 'all'" />
+        <PatrimoineGare v-if="activeDefaultFilterButton == 'industriel' || activeDefaultFilterButton == 'all'" />
+        <PatrimoineMineDePlomb v-if="activeDefaultFilterButton == 'industriel' || activeDefaultFilterButton == 'all'" />
         
 
     </main>
@@ -41,13 +40,13 @@
 
 <script setup>
 const filterItems = (e) => {
-    activeBtn.value = null
+    activeDefaultFilterButton.value = null
     setTimeout(() => {
-        activeBtn.value = e.target.getAttribute('data-filter')
+        activeDefaultFilterButton.value = e.target.getAttribute('data-filter')
     }, 10)
 }
 
-const activeBtn = ref('all')
+const activeDefaultFilterButton = ref('all')
 
 const appConfig = useAppConfig();
 const directusAssets = appConfig.directus.assets;
@@ -139,7 +138,7 @@ onMounted(() => {
 }
 
 .filterButton:hover,
-.activeBtn {
+.activeDefaultFilterButton {
     background-color: var(--light-blue);
     color: #fff;
 }

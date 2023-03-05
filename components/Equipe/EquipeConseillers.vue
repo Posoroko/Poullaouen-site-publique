@@ -13,8 +13,8 @@
                             </h2>
                         </div>
 
-                        <div class="frame">
-                            <img class="objectFitCover" :src="`${directusAssets}${person.image}.jpg`" alt="">
+                        <div class="conseillerFrame">
+                            <img class="conseillerImg" :src="`${directusAssets}${person.image}.jpg`" alt="">
                         </div>
                     </div>
                 </div>
@@ -65,12 +65,13 @@ const headerData = {
     width: 200px;
 }
 
-.conseillerCard .frame {
+.conseillerFrame {
     width: 100%;
     aspect-ratio: 1/1;
+    overflow: hidden;
 }
-.conseillerCard .frame img{
-    object-position: top;
+.conseillerImg {
+    width: 100%;
 }
 .conseillerCard .topBox {
     padding: 10px;

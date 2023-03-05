@@ -242,9 +242,5 @@ const closeMenu = () => {
     font-size: 24px;
     margin: 10px;
 }
-@media (max-width: 719px) {
-    .tabBox {
-        display: none;
-    }
-}
+
 </style>

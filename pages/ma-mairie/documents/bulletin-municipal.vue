@@ -87,7 +87,7 @@ const { data: documents } = await useAsyncData(
             latests: items.splice(0, 4),
             rest: items
         }
-        console.log(temp)
+
         return temp
     }
     ,

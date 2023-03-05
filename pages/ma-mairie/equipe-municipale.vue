@@ -37,7 +37,7 @@ const { data: poullaouennais } = await useAsyncData(
             adjoints: items.data.filter(el => el.role.includes('Adj') || el.role.includes('gu')),
             conseillers: items.data.filter(el => el.role.includes('Conseil'))
         }
-        console.log(temp)
+
         return temp
     }
     ,

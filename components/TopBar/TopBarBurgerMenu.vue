@@ -84,7 +84,6 @@ const closeMenu = () => {
 
 const openTab = (e) => {
     tabIsSelected.value = true
-    console.log(e.currentTarget.getAttribute('name'))
     menuContent.value = props.links[e.currentTarget.getAttribute('name')]
 }
 const closeTab = () => {
@@ -175,15 +174,6 @@ const closeTab = () => {
     border-radius: 5px;
 }
 
-
-
-
-
-
-
-
-
-
 .burgerMenuPanel .linkList {
     width: min(80vw, 300px);
     font-size: 24px;
@@ -195,9 +185,5 @@ const closeTab = () => {
     border-bottom: 2px solid var(--dark-blue);
 }
 
-@media (min-width: 720px) {
-    .burger {
-            display: none;
-        }
-}
+
 </style>

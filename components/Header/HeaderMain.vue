@@ -38,7 +38,6 @@ const displayedImage = computed(() => {
 })
 
 const swipeLeft = () => {
-    console.log('swipeLeft')
     if (activeImageIndex.value > 0) {
         activeImageIndex.value--
     } else {

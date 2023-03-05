@@ -68,7 +68,7 @@ const directusAssets = appConfig.directus.assets;
 const headerData = {
     images: [
         {
-            src: `${directusAssets}8671f5a3-3612-4213-8a54-52eaba057f82.JPG?key=header1500`,
+            src: `${directusAssets}3f214142-02e6-4995-87a4-b374ead7feaa.jpg`,
             alt: "L'entrée du bourg de Poullaouen",
         }
     ],

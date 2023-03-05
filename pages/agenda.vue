@@ -94,11 +94,11 @@ const { data: dates } = await useAsyncData(
             date.displayDate = toDayMonthYearFormat(date.date) 
             temp.dates[monthNames[month]].push(date) 
         })
-        console.log(temp) 
+
         return temp
     }
     ,
-    { server: true }
+    { server: true } 
 )
 
 const headerData = {

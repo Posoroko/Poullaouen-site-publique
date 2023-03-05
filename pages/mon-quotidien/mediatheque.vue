@@ -31,7 +31,7 @@
             </p>
         </SectionMainSloted>
 
-        <SectionMainSloted :data="{ title: 'Informations', image: '/images/mediatheque/interieur2.jpg', localImage: true }">
+        <SectionMainSloted :data="{ title: 'Informations', image: '/images/mediatheque/interieur1.jpg', localImage: true }">
             <div class="mediathequeBox h100 flex column justifyCenter gap10">
                 <div class="contentRow w100 flex">
                     <span class="icon">schedule</span>
@@ -114,7 +114,7 @@ const headerData = {
 }
 const applyStyleClasses_utils = () => {
     const sections = document.querySelectorAll('.sectionBoxSloted')
-    console.log(sections)
+
     for (let i = 1; i < sections.length; i = i + 4) {
         sections[i].classList.replace('whiteSection', 'blueSection')
     }

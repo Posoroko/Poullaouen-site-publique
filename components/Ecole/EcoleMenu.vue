@@ -116,10 +116,8 @@ const { data: menus } = await useAsyncData(
 )
 onMounted(() => {
     activeButton.value = `id${menus.value[0].id}`
-    console.log(activeButton.value)
-    menu.value = menus.value[0]
 
-    
+    menu.value = menus.value[0]    
 })
 
 </script>

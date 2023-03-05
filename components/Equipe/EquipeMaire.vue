@@ -17,7 +17,7 @@
                             </h3>
                         </div>
 
-                        <figure class="frame">
+                        <figure class="maireFrame centered">
                             <img class="objectFitCover" src="/images/equipe/Didier-Goubil.jpg" alt="">
                         </figure>
                     </div>
@@ -30,14 +30,9 @@
                 <div class="footBox absolutlyCentered">
                     <SectionPieds />
                 </div>
-
             </div>
         </section>
-
     </section>
-
-
-
 </template>
 
 <script setup>
@@ -87,8 +82,9 @@ const headerData = {
     overflow: hidden;
 }
 
-.maireCard .frame {
+.maireCard .maireFrame {
     width: min(95vw, 375px);
+    aspect-ratio: 1/1;
 }
 .maireCard .titleBox {
     padding: 10px;

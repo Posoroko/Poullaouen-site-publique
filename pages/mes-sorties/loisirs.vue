@@ -134,7 +134,7 @@ const { data: questions } = await useAsyncData(
 const headerData = {
     images: [
         {
-            src: `${directusAssets}ac9db841-7428-4505-9ce1-511a4ee788f6.JPG?key=header1500`,
+            src: `${directusAssets}f4246d57-f7e1-41cc-928a-eaad77d66a7d.JPG`,
             alt: "Le musé de la mine",
         }
     ],
@@ -172,7 +172,7 @@ onMounted(() => {
 const styleTallCards = () => {
 
     const cards = document.querySelectorAll('.tallCard');
-    console.log(cards)
+
     for (let i = 0; i < cards.length; i = i + 3) {
         cards[i].classList.replace('whiteTallCard', 'blueTallCard')
     }

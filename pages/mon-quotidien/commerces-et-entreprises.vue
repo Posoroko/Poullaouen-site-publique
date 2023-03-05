@@ -78,7 +78,6 @@ const moveSectionToFirstPosition = (filter) => {
     const firstChild = content.value.firstElementChild
 
     content.value.insertBefore(movingSection, firstChild)
-    // console.log(assoMain.value)
 }
 
 
@@ -129,7 +128,7 @@ const { data: itemsData } = await useAsyncData(
 const headerData = {
     images: [
         {
-            src: `${directusAssets}c2973c9d-0e19-473e-8224-01940b523bf1?key=header1500`,
+            src: `https://findstable.net/assets/253870e4-fa4e-4993-bbfe-026723a57bef.JPG`,
             alt: 'Commerce de proximité à Poullaouen',
         }
     ],
@@ -152,7 +151,7 @@ const headerData = {
 const styleTallCards = () => {
 
     const cards = document.querySelectorAll('.tallCard');
-    console.log(cards)
+
     for (let i = 0; i < cards.length; i = i + 3) {
         cards[i].classList.replace('whiteTallCard', 'blueTallCard')
     }

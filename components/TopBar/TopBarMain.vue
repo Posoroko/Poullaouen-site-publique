@@ -1,6 +1,6 @@
 <template>
     <nav class="topBar flex justifyBetween alignCenter sticky top relative">
-        <TopBarSiteIcon/>
+        <TopBarSiteIcon />
 
         <TopBarTabMenu :links="links"/>
         
@@ -120,7 +120,7 @@ const links = {
 
 </script>
 
-<style scoped>
+<style>
 .topBar {
     background-color: #fff;
     padding: 5px;
@@ -129,22 +129,22 @@ const links = {
     top: 0;
     z-index: 10000;
 }
-@media (max-width: 349px) {
 
-
+@media (max-width: 1199px) {
+    .tabBox {
+        display: none;
+    }
+    .contactWidgetBox {
+        display: none;
+    }
 }
 
-@media (min-width: 350px) and (max-width: 699px) {
-
-}
-
-@media (max-width: 700px) and (max-width: 999px) {
-
-
-}
-
-@media (min-width: 1000px){
-
-
+@media (min-width: 1200px) {
+    .burger {
+        display: none;
+    }
+    .tinyWidget {
+        display: none;
+    }
 }
 </style>

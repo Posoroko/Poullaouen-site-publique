@@ -17,8 +17,8 @@
         <section class="docsSection docsLatestsSection relative" v-for="(year, index) in myData.years" :key="year" :id="`section${year}`">
             <SectionTitleBar class="titleComp" :title="year" />
             
-            <div class="stripe  w100 marTop100" :class="{ darkBlueBG : index == 0}">
-                <div class="content mainWidth w100 flex justifyCenter wrap">
+            <div class="stripe w100 marTop100" :class="{ darkBlueBG : index == 0}">
+                <div class="content mainWidth flex justifyCenter wrap">
                     <article class="procesCard flex column justifyCenter alignCenter relative" v-for="doc in myData.docs[year]" :key="doc.id">
                         <figure class="">
                             <img src="/images/logo.png" alt="">
@@ -45,11 +45,6 @@
 </template>
  
 <script setup>
-
-const handleit = () => {
-    console.log(myData.value.docs)
-}
-
 const appConfig = useAppConfig();
 const directusAssets = appConfig.directus.assets;
 const directusItems = appConfig.directus.items;

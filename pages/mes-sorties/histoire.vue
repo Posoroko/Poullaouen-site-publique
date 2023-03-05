@@ -7,46 +7,46 @@
             (en 1591) et Poullaouen (en 1677).
         </p>
 
-        <nav class="histoireFilterBox">
+        <nav class="defaultFilterBox">
             <p class="mainWidth page-text">filtrer les résultats par thème.</p>
 
             <div class="mainWidth flex justifyCenter wrap gap20">
-                <div class="filterButton pointer" @click="activeBtn = 'all'" :class="{ activeBtn : activeBtn == 'all'}">Toute l'histoire</div>
-                <div class="filterButton pointer" @click="activeBtn = 'poullaouen'" :class="{ activeBtn: activeBtn == 'poullaouen' }">Poullaouen</div>
-                <div class="filterButton pointer" @click="activeBtn = 'locmaria'" :class="{ activeBtn: activeBtn == 'locmaria' }">locmaria-Berrien</div>
-                <div class="filterButton pointer" @click="activeBtn = 'mines'" :class="{ activeBtn: activeBtn == 'mines' }">Les mines</div>
+                <div class="defaultFilterButton pointer" @click="activeFilter = 'all'" :class="{ activeDefaultFilterButton : activeFilter == 'all'}">Toute l'histoire</div>
+                <div class="defaultFilterButton pointer" @click="activeFilter = 'poullaouen'" :class="{ activeDefaultFilterButton: activeFilter == 'poullaouen' }">Poullaouen</div>
+                <div class="defaultFilterButton pointer" @click="activeFilter = 'locmaria'" :class="{ activeDefaultFilterButton: activeFilter == 'locmaria' }">locmaria-Berrien</div>
+                <div class="defaultFilterButton pointer" @click="activeFilter = 'mines'" :class="{ activeDefaultFilterButton: activeFilter == 'mines' }">Les mines</div>
             </div>
         </nav>
 
-        <HistoireGavotte v-if="activeBtn == 'poullaouen' || activeBtn == 'all'" />
-        <HistoireOrigines v-if="activeBtn == 'poullaouen' || activeBtn == 'all'" />
-        <HistoireMoyenAge v-if="activeBtn == 'poullaouen' || activeBtn == 'all'" />
-        <HistoireBonnetsRouges v-if="activeBtn == 'poullaouen' || activeBtn == 'all'" />
+        <HistoireGavotte v-if="activeFilter == 'poullaouen' || activeFilter == 'all'" />
+        <HistoireOrigines v-if="activeFilter == 'poullaouen' || activeFilter == 'all'" />
+        <HistoireMoyenAge v-if="activeFilter == 'poullaouen' || activeFilter == 'all'" />
+        <HistoireBonnetsRouges v-if="activeFilter == 'poullaouen' || activeFilter == 'all'" />
 
-        <p class="mainWidth intro-text" v-if="activeBtn == 'locmaria' || activeBtn == 'all'">
+        <p class="mainWidth intro-text" v-if="activeFilter == 'locmaria' || activeFilter == 'all'">
             Locmaria vient du breton Lok qui signifie «lieu saint» et de Maria, « lieu dédié à Marie ». Le suffixe Berrien, du nom de l’ancienne paroisse-
             mère, a été ajouté en 1955 pour différencier la commune des nombreux autres Locmaria bretons.
         </p>
 
-        <HistoireOriginesLocmaria v-if="activeBtn == 'locmaria' || activeBtn == 'all'" />
-        <HistoireMinesDePlombs v-if="activeBtn == 'locmaria' || activeBtn == 'all'" />
-        <HistoireArchitecture v-if="activeBtn == 'locmaria' || activeBtn == 'all'" />
-        <HistoireForet v-if="activeBtn == 'locmaria' || activeBtn == 'all'" />
+        <HistoireOriginesLocmaria v-if="activeFilter == 'locmaria' || activeFilter == 'all'" />
+        <HistoireMinesDePlombs v-if="activeFilter == 'locmaria' || activeFilter == 'all'" />
+        <HistoireArchitecture v-if="activeFilter == 'locmaria' || activeFilter == 'all'" />
+        <HistoireForet v-if="activeFilter == 'locmaria' || activeFilter == 'all'" />
 
-        <HistoireLaMine v-if="activeBtn == 'mines' || activeBtn == 'all'" />
-        <HistoireLaMine2 v-if="activeBtn == 'mines' || activeBtn == 'all'" />
-        <HistoireLaMine3 v-if="activeBtn == 'mines' || activeBtn == 'all'" />
-        <HistoireLaMine4 v-if="activeBtn == 'mines' || activeBtn == 'all'" />
-        <HistoireLaMine5 v-if="activeBtn == 'mines' || activeBtn == 'all'" />
-        <HistoireLaMine6 v-if="activeBtn == 'mines' || activeBtn == 'all'" />
-        <HistoireLaMine7 v-if="activeBtn == 'mines' || activeBtn == 'all'" />
-        <HistoireLaMine8 v-if="activeBtn == 'mines' || activeBtn == 'all'" />
+        <HistoireLaMine v-if="activeFilter == 'mines' || activeFilter == 'all'" />
+        <HistoireLaMine2 v-if="activeFilter == 'mines' || activeFilter == 'all'" />
+        <HistoireLaMine3 v-if="activeFilter == 'mines' || activeFilter == 'all'" />
+        <HistoireLaMine4 v-if="activeFilter == 'mines' || activeFilter == 'all'" />
+        <HistoireLaMine5 v-if="activeFilter == 'mines' || activeFilter == 'all'" />
+        <HistoireLaMine6 v-if="activeFilter == 'mines' || activeFilter == 'all'" />
+        <HistoireLaMine7 v-if="activeFilter == 'mines' || activeFilter == 'all'" />
+        <HistoireLaMine8 v-if="activeFilter == 'mines' || activeFilter == 'all'" />
 
-        <section class="poullaouen" v-if="activeBtn == 'locmaria' || activeBtn == 'all'">
+        <section class="poullaouen" v-if="activeFilter == 'locmaria' || activeFilter == 'all'">
             
         </section>
 
-        <section class="poullaouen" v-if="activeBtn == 'mines' || activeBtn == 'all'">
+        <section class="poullaouen" v-if="activeFilter == 'mines' || activeFilter == 'all'">
             
         </section>
 
@@ -55,7 +55,7 @@
 
 <script setup>
 
-const activeBtn = ref('all')
+const activeFilter = ref('poullaouen')
 
 const appConfig = useAppConfig();
 const directusAssets = appConfig.directus.assets;
@@ -104,32 +104,6 @@ onMounted(() => {
 </script>
 
 <style>
-.histoireFilterBox {
-    background: linear-gradient(90deg, rgba(0, 47, 74, 1) 0%, rgba(146, 76, 2, 1) 100%);
-    padding: 30px;
-    margin-top: 50px;
-}
-.histoireFilterBox p{
-    font-size: 18px;
-    font-weight: 600;
-    color: white;
-    margin-bottom: 20px;
-}
-
-.filterButton {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--dark-blue);
-    background-color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-}
-.filterButton:hover,
-.activeBtn {
-    background-color: var(--light-blue);
-    color: #fff;
-}
-
 .sectionSubtitle {
     font-size: 18px;
     font-weight: 600;
