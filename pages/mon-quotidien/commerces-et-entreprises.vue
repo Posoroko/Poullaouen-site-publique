@@ -6,16 +6,13 @@
             Grâce à ses commerces, ses artisans et ses entreprises, Poullaouen vous offre tout ce dont vous avez besoin.
         </p>
 
-
-
         <FilterBarMain :filters="itemsData.filters" @updateFilter="moveSectionToFirstPosition" :slugged="true" text="Filtrer les résultats par thème" />
-
 
         <div class="content flex justifyCenter wrap" ref="content">
             <section class="w100" v-for="filter in itemsData.filters" :key="filter.slug" :id="filter.slug">
                 <SectionTitleBar :title="filter.name" />
-
-                <div class="mainWidth flex justifyCenter alignStretch wrap gap20 marTop20">
+                <div class="marTop50"></div>
+                <div class="mainWidth flex justifyCenter alignStretch wrap gap50 marTop20">
                     <CardsTallMain 
                         v-for="item in itemsData.items[filter.slug]" :key="item.id"
                         :title="item.name" 
@@ -24,7 +21,7 @@
                         :cardImageAlt="item.imageAlt">
                         
                         <div class="bottomBox flex column gap10 justifyCenter alignStart">
-                            <div class="contentRow flex" v-if="item.hours">
+                            <div class="contentRow flex gap10 gap10" v-if="item.hours">
                                 <span class="icon">schedule</span>
 
                                 <p class="textContent horaires">
@@ -32,7 +29,7 @@
                                 </p>
                             </div>
 
-                            <div class=" contentRow flex" v-if="item.adress">
+                            <div class=" contentRow flex gap10" v-if="item.adress">
                                 <span class="icon">location_on</span>
 
                                 <p class="textContent">
@@ -40,7 +37,7 @@
                                 </p>
                             </div>
 
-                            <div class="contentRow flex" v-if="item.phone">
+                            <div class="contentRow flex gap10" v-if="item.phone">
                                 <span class="icon">call</span>
 
                                 <p class="textContent">
@@ -48,7 +45,7 @@
                                 </p>
                             </div>
 
-                            <div class="contentRow flex" v-if="item.email">
+                            <div class="contentRow flex gap10" v-if="item.email">
                                 <span class="icon">mail</span>
 
                                 <p class="textContent">

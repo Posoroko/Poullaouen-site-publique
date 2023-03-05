@@ -140,10 +140,8 @@ const closeMenu = () => {
     font-size: max(18px, 1.2vw);
     font-weight: 700;
 }
-
-
 .tabDemarches {
-    margin: 10px 25px 10px 100px;
+    margin: 10px 25px 10px 75px;
     background-color: var(--light-blue);
  }
  .tabDemarches:hover {

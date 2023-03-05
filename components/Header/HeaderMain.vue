@@ -11,11 +11,11 @@
                 </div>
             </div>
 
-            <div v-if="isHomePage" class="leftArrowBox absolute icon headerIcon headerChevron pointer" @click="swipeLeft">
+            <div v-if="isHomePage" class="homeLeftArrowBox homeArrowBox absolute icon headerIcon headerChevron pointer" @click="swipeLeft">
                 chevron_left
             </div>
 
-            <div v-if="isHomePage" class="rightArrowBox absolute icon headerIcon headerChevron pointer" @click="swipeRignt">
+            <div v-if="isHomePage" class="homeRightArrowBox homeArrowBox absolute icon headerIcon headerChevron pointer" @click="swipeRignt">
                 chevron_right
             </div>
         </div>
@@ -95,15 +95,17 @@ header .imageBox img {
     padding: 0 25px;
 }
 
-
-.leftArrowBox {
+.homeArrowBox {
+    border-radius: 10px;
+}
+.homeLeftArrowBox {
     top: 50%;
-    left: 0;
+    left: 10px;
     transform: translateY(-50%);
 }
-.rightArrowBox {
+.homeRightArrowBox {
     top: 50%;
-    right: 0;
+    right: 0px;
     transform: translateY(-50%);
 }
 

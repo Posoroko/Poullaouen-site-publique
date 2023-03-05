@@ -159,3 +159,36 @@
  .topGreen {
      margin-top: 1px solid var(--green);
  }
+
+
+ /*  filter bar */
+
+.defaultFilterBox {
+    background: linear-gradient(90deg, rgba(0, 47, 74, 1) 0%, rgba(146, 76, 2, 1) 100%);
+    padding: 30px;
+    margin-top: 50px;
+}
+
+.defaultFilterBox p {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.defaultFilterButton {
+    width: 300px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dark-blue);
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.defaultFilterButton:hover,
+.activeDefaultFilterButton {
+    background-color: var(--light-blue);
+    color: #fff;
+}

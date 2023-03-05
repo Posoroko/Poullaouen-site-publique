@@ -20,10 +20,9 @@ const appConfig = useAppConfig();
 const directusAssets = appConfig.directus.assets;
 
 const showInModal = (e) => {
-    console.log("eric")
+
     const modal = document.getElementById('masterModal')
     let children = modal.children
-    console.table(children)
 
     for (const child of children) {
         if (!child.classList.contains('modalNode')) {

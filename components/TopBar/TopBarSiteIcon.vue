@@ -10,12 +10,11 @@
 const icon = 'icon'
 </script>
 
-<style>
+<style scoped>
 .logoBox{
     width: 100px;
-
+    padding-left: 20px;
 }
-
 .logo {
     width: clamp(50px, 5vw, 75px);
 }

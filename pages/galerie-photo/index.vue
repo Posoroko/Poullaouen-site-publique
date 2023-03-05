@@ -6,21 +6,21 @@
             Retrouvez, en images, tous les événements de votre commune.
         </p>
 
-        <nav class="albumsFilterBox horizontalGradient">
+        <nav class="defaultFilterBox horizontalGradient">
             <p class="mainWidth page-text">filtrer les résultats par thème.</p>
 
-            <div class="mainWidth flex justifyCenter wrap gap20">
+            <div class="mainWidth flex justifyCenter alignCenter wrap gap20">
                 <div class="filterButton pointer" @click="filterItems" data-filter="all"
-                    :class="{ activeBtn: activeCategory == 'all' }">Tous les albums</div>
-                
-                <div class="filterButton pointer" v-for="cat in galeryData.categories" :key="cat.ref"  @click="filterItems" :data-filter="cat.ref" :class="{ activeBtn: activeCategory == cat.ref }">
+                    :class="{ activeDefaultFilterButton: activeFilter == 'all' }">Tous les albums</div>
+        
+                <div class="defaultFilterButton pointer" v-for="cat in galeryData.categories" :key="cat.ref"  @click="filterItems" :data-filter="cat.ref" :class="{ activeDefaultFilterButton: activeFilter == cat.ref }">
                     {{ cat.name }}
                 </div>
             </div>
         </nav>
 
-        <div class="galaryContent">
-            <SectionMainSloted v-for="album in galeryData.albums[activeCategory]" :key="album.id" :data="{ title: album.albumName, image: album.images[0].directus_files_id, localImage: false }">
+        <div class="galeryContent">
+            <SectionMainSloted v-for="album in galeryData.albums[activeFilter]" :key="album.id" :data="{ title: album.albumName, image: album.images[0].directus_files_id, localImage: false }">
                 <div class="galerySectionContent h100 flex column justifyCenter gap10">
                     <div class="galeryTopBox">
                         <p class="albumDate">{{ new Date(album.date_created).toLocaleString().slice(0, 10) }}</p>
@@ -42,16 +42,17 @@
 <script setup>
 
 const filterItems = (e) => {
-    activeCategory.value = null
+    activeFilter.value = null
     setTimeout(() => {
-        activeCategory.value = e.target.getAttribute('data-filter')
+        activeFilter.value = e.target.getAttribute('data-filter')
     }, 10)
 }
 
-const activeCategory = ref(null)
+const activeFilter = ref(null)
 
 const appConfig = useAppConfig();
 const directusItems = appConfig.directus.items;
+const directusAssets = appConfig.directus.assets;
 
 
  
@@ -98,7 +99,7 @@ const { data: galeryData } = await useAsyncData(
 const headerData = {
     images: [
         {
-            src: 'images/header/accueil/eglise-de-locmaria-berrien.jpg',
+            src: `${directusAssets}7f6743b0-2d74-47af-a9ab-1a6f68a58fb8.jpg?key=header1500`,
             alt: 'mairie de Locmaria-Berrien',
         }
     ],
@@ -131,7 +132,7 @@ onUpdated(() => {
 
 onMounted(() => {
     applyStyleClasses_utils()
-    activeCategory.value = galeryData.value.categories[0].ref
+    activeFilter.value = galeryData.value.categories[0].ref
 })
 
 
@@ -139,7 +140,7 @@ onMounted(() => {
 </script>
 
 <style>
-.galaryContent{
+.galeryContent{
     min-height: 100vh;
 }
 .galeryAlbumButton {
@@ -164,34 +165,7 @@ onMounted(() => {
     font-size: 16px;
     font-weight: 600;
     font-style: italic;
-}
-
-.albumsFilterBox {
-    background: linear-gradient(90deg, rgba(0, 47, 74, 1) 0%, rgba(146, 76, 2, 1) 100%);
-    padding: 30px;
-    margin-top: 50px;
-}
-.albumsFilterBox p{
-    font-size: 18px;
-    font-weight: 600;
-    color: white;
-    margin-bottom: 20px;
-}
-
-.filterButton {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--dark-blue);
-    background-color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-}
-.filterButton:hover,
-.activeBtn {
-    background-color: var(--light-blue);
-    color: #fff;
-}
-
+}s
 
 .catBar {
     padding: 20px 20px;

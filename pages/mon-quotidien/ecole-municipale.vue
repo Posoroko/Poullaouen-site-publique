@@ -19,7 +19,7 @@
                     </div>
 
                     <div class="flex justifyEnd">
-                        <NuxtLink to="/galerie-photo/ecole/ecole-maternelle" class="albumButton blueAlbumButton">Voir l'albums</NuxtLink>
+                        <NuxtLink to="/galerie-photo/ecole-maternelle" class="albumButton blueAlbumButton">Voir l'albums</NuxtLink>
                     </div>
                 </div>
             </SectionMainSloted>
@@ -60,7 +60,7 @@
 
                     <div class="flex justifyBetween">
                         <p class="flex alignCenter gap10"> <span class="icon">visibility</span> <b>Programme de l'année</b> </p>
-                        <NuxtLink to="/galerie-photo/ecole" class="albumButton blueAlbumButton">Voir les albums</NuxtLink>
+                        <NuxtLink to="/galerie-photo/ecole-jules-ferry" class="albumButton blueAlbumButton">Voir l'album</NuxtLink>
                     </div>
                 </div>
             </SectionMainSloted>
@@ -92,7 +92,7 @@
                     </p>
 
                     <div class="flex justifyEnd">
-                        <NuxtLink to="/galerie-photo/ecole" class="albumButton whiteAlbumButton">Voir les albums</NuxtLink>
+                        <NuxtLink to="/galerie-photo/ecole-jules-ferry" class="albumButton whiteAlbumButton">Voir l'album</NuxtLink>
                     </div>
                 </div>
             </SectionMainSloted>
@@ -119,9 +119,9 @@
                         
                         <p class="level1 flex alignCenter"><span class="dot inlineBlock"></span>Garderie occasionnelle (jusqu’au 6ème jour) : 2.30 € par jour</p>
                         <p class="level1" flex alignCenter> <span class="dot inlineBlock"></span> Garderie régulière (à partir du 7ème jour) :</p>
-                                <p class="level2"><span class="eric">1er enfant :</span> <span>23 € par mois</span></p>
-                                <p class="level2"><span class="eric">2ème enfant :</span> <span>15 € par mois</span></p>
-                                <p class="level2"><span class="eric">3ème enfant :</span> <span>12 € par mois</span></p>
+                        <p class="level2"><span class="eric">1er enfant :</span> <span>23 € par mois</span></p>
+                        <p class="level2"><span class="eric">2ème enfant :</span> <span>15 € par mois</span></p>
+                        <p class="level2"><span class="eric">3ème enfant :</span> <span>12 € par mois</span></p>
                         
                     </div>
 

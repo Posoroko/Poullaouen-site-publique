@@ -7,16 +7,30 @@
             Envie de séjourner à la campagne, découvrez nos différentes possibilités d’hébergement.
         </p>
 
-        <section v-for="filter in rooms.filters" :key="filter.id">
+        <!-- <nav class="defaultFilterBox horizontalGradient">
+            <p class="mainWidth page-text">filtrer les résultats par thème.</p>
+
+            <div class="mainWidth flex justifyCenter alignCenter wrap gap20">
+                <div class="filterButton pointer" @click="filterItems" data-filter="all"
+                    :class="{ activeDefaultFilterButton: activeFilter == 'all' }">Tous les albums</div>
+            
+                <div class="defaultFilterButton pointer" v-for="filter in itemsData.filters" :key="filter.ref"  
+                        @click="filterItems" :data-filter="filter.ref" :class="{ activeDefaultFilterButton: activeFilter == filter.ref }">
+                    {{ filter.name }}
+                </div>
+            </div>
+        </nav> -->
+
+        <section v-for="filter in itemsData.filters" :key="filter.id">
             <SectionTitleBar  :title="filter.name" />
 
-            <div class="roomsContent mainWidth flex justifyCenter wrap gap20">
-                <CardsTallMain v-for="room in rooms.items[filter.slug]" :key="room.id" :title="room.name" :cardImage="room.image" :cardImageAlt="room.imageAlt" :localImage="false">
+            <div class="roomsContent mainWidth flex justifyCenter wrap gap50">
+                <CardsTallMain v-for="item in itemsData.items[filter.slug]" :key="item.id" :title="item.name" :cardImage="item.image" :cardImageAlt="item.imageAlt" :localImage="false">
                     <div class="cardContent flex column gap10">
-                        <p class="flex alignCenter gap10" v-if="room.adress"> <span class="icon">location_on</span> <span>{{ room.adress }}</span> </p>
-                        <p class="flex alignCenter gap10" v-if="room.phone"> <span class="icon">call</span> <span>{{ room.phone }}</span> </p>
-                        <p class="flex alignCenter gap10" v-if="room.email"> <span class="icon">email</span> <span>{{ room.email }}</span> </p>
-                        <p class="flex alignCenter gap10" v-if="room.website"> <span class="icon">language</span> <a :href="`https://${room.website}`">{{ room.website }}</a> </p>
+                        <p class="flex alignCenter gap10" v-if="item.adress"> <span class="icon">location_on</span> <span>{{ item.adress }}</span> </p>
+                        <p class="flex alignCenter gap10" v-if="item.phone"> <span class="icon">call</span> <span>{{ item.phone }}</span> </p>
+                        <p class="flex alignCenter gap10" v-if="item.email"> <span class="icon">email</span> <span>{{ item.email }}</span> </p>
+                        <p class="flex alignCenter gap10" v-if="item.website"> <span class="icon">language</span> <a :href="`https://${item.website}`">{{ item.website }}</a> </p>
                     </div>
                 </CardsTallMain>
             </div>
@@ -27,16 +41,14 @@
 </template>
  
 <script setup>
-const content = ref(null)
 
-const moveSectionToFirstPosition = (filter) => {
-    const movingSection = document.getElementById(filter)
-    const firstChild = content.value.firstElementChild
-
-    content.value.insertBefore(movingSection, firstChild)
-    // console.log(assoMain.value)
-}
-
+// const activeFilter = ref(null)
+// const filterItems = (e) => {
+//     activeFilter.value = null
+//     setTimeout(() => {
+//         activeFilter.value = e.target.getAttribute('data-filter')
+//     }, 10)
+// }
 
 const appConfig = useAppConfig();
 const directusAssets = appConfig.directus.assets;
@@ -51,7 +63,7 @@ const fetchOptions = {
     }
 }
 // ?filter[image][_neq]=null
-const { data: rooms } = await useAsyncData(
+const { data: itemsData } = await useAsyncData(
     "associations",
     async () => {
         const _items = await $fetch(`${directusItems}Commerces?[filter][type][slug][_in]=hebergement,bars_et_restaurants`, fetchOptions) 
@@ -60,7 +72,9 @@ const { data: rooms } = await useAsyncData(
         const temp = {
             slugs: [],
             filters: [],
-            items: {}
+            items: {
+                all: []
+            }
         }
         
         items.forEach(item => {
@@ -69,7 +83,8 @@ const { data: rooms } = await useAsyncData(
                 temp.filters.push({ name: item.subType.displaySubtype, slug: item.subType.slug })
                 temp.items[item.subType.slug] = []
             }
-            temp.items[item.subType.slug].push(item)  
+            temp.items[item.subType.slug].push(item)
+            temp.items.all.push(item)
         })
 
         return temp
@@ -82,7 +97,7 @@ const { data: rooms } = await useAsyncData(
 const headerData = {
     images: [
         {
-            src: `${directusAssets}c2973c9d-0e19-473e-8224-01940b523bf1?key=header1500`,
+            src: `${directusAssets}0f3f2f74-8ae8-46ea-8092-0ea189088e81.JPG?key=header1500`,
             alt: 'Commerce de proximité à Poullaouen',
         }
     ],
@@ -105,7 +120,7 @@ const headerData = {
 const styleTallCards = () => {
 
     const cards = document.querySelectorAll('.tallCard');
-    console.log(cards)
+
     for (let i = 0; i < cards.length; i = i + 3) {
         cards[i].classList.replace('whiteTallCard', 'blueTallCard')
     }
@@ -116,6 +131,7 @@ const styleTallCards = () => {
 
 onMounted(() => {
     styleTallCards()
+    // activeFilter.value = itemsData.value.filters[0].ref
 })
 
 
