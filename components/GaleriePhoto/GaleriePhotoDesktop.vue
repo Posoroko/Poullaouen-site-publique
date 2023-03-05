@@ -53,7 +53,7 @@ const swipeLeft = () => {
 
 }
 const swipeRignt = () => {
-    console.log(imagesNodes.value)
+
     if(imagesNodes.value[0].classList[0] == 'pos1102') {
         return
     }
@@ -86,21 +86,8 @@ const swipeRignt = () => {
                 }
         }
     }
-
-    console.log(imagesNodes.value)
 }
 
-
-const albumData = [ 
-    'bar associatif 2.JPG',
-'chasse.JPG',
-'comité des fetes.JPG',
-'dans tro.JPG', 
-'DSCN8133.JPG',
-'fnaca poullaouen.JPG', 
-'grand prix mine.JPG', 
-'IMG_0692.JPG' 
-]
 const imagesNodes = ref(null)
 
 const viewerInit = (images) => {
@@ -129,7 +116,6 @@ const viewerInit = (images) => {
 }
 onMounted(() => {
     viewerInit(props.albumData)
-    // console.log(props.albumData)
     imagesNodes.value = document.querySelectorAll('.photoCard')
 })
 </script>

@@ -15,13 +15,6 @@
     padding-right: 25px; 
 }
 
-
-/* .sectionTitleBox {
-    background-color: white;
-} */
-
-
-
 .whiteSection  {
     fill: var(--brown);
 }
@@ -32,6 +25,7 @@
     color: var(--brown);
 }
 .whiteSection .mainWidth .slotedContent .patrimoineSectionContent .patrimoineTopBox *,
+.whiteSection .mainWidth .slotedContent .galerySectionContent .galeryTopBox *,
 .whiteSection .sectionContent .mainWidth .slotedContent .histoireSectionContent .histoireSubtitle {
     color: var(--brown);
 }

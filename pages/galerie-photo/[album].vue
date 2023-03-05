@@ -4,16 +4,10 @@
         <HeaderTItleBar :title="`Album : ${album.albumName}`" />
     </header>
 
-    <main class="galerieMain flex column marTop100">
+    <main class="galerieMain flex column marTop50">
         <p class="mainWidth intro-text">{{ album.content }}</p>
-
+        <div class="marTop50"></div>
         <GaleriePhotoDesktop :albumData="album.images" />
-
-        <!-- <div class="mainWidth boxOfPhotos flex justifyCenter gap20 wrap marTop50">
-            <div class="frame" v-for="photo in album.images" :key="photo.id">
-                <img class="objectFitCover pointer" :src="`${directusAssets}${photo.directus_files_id}?key=card500`" alt=""  @click="showInModal(`${directusAssets}${photo.directus_files_id}`)">
-            </div>
-        </div> -->
         
     </main>
 </template>
@@ -23,33 +17,7 @@ const activeAlbum = route.params.album
 
 const appConfig = useAppConfig();
 const directusAssets = appConfig.directus.assets;
-const directusItems = appConfig.directus.items;
-
-const showInModal = (link) => {
-
-    const modal = document.getElementById('masterModal')
-    let children = modal.children
-
-
-    for (const child of children) {
-        if (!child.classList.contains('modalNode')) {
-            modal.removeChild(child)
-        }
-    }
-
-    const _img = document.createElement('img')
-
-
-    _img.src = `${link}?key=header1500`
-    
-
-    _img.style.maxWidth = "80vw"
-    _img.style.maxHeight = "80vh"
-
-    modal.appendChild(_img)
-    modal.showModal()
-}
-
+const directusItems = appConfig.directus.items; 
 
 
 
@@ -64,8 +32,6 @@ const { data: album } = await useAsyncData(
     "galery",
     async () => {
         const album = await $fetch(`${directusItems}Albums_photo?[filter][slug][_eq]=${activeAlbum}`, fetchOptions)
-
-        console.log(album.data) 
 
         return album.data[0]
     }

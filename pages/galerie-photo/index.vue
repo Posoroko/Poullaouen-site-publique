@@ -11,50 +11,55 @@
 
             <div class="mainWidth flex justifyCenter wrap gap20">
                 <div class="filterButton pointer" @click="filterItems" data-filter="all"
-                    :class="{ activeBtn: activeBtn == 'all' }">Tout le patrimoine</div>
+                    :class="{ activeBtn: activeCategory == 'all' }">Tous les albums</div>
                 
-                <div class="filterButton pointer" @click="filterItems" :data-filter="filter" v-for="filter in filters" :class="{ activeBtn: activeBtn == filter }">
-                    {{ filter }}
+                <div class="filterButton pointer" v-for="cat in galeryData.categories" :key="cat.ref"  @click="filterItems" :data-filter="cat.ref" :class="{ activeBtn: activeCategory == cat.ref }">
+                    {{ cat.name }}
                 </div>
             </div>
         </nav>
-        
-        <NuxtLink :to="`/galerie-photo/${cat.slug}`" class="catBar pointer mainWidth flex" v-for="cat in galeryData.categories" :key="cat">
-            <div class="frame shadow">
-                <img class="objectFitCover" :src="`${directusAssets}${galeryData.albums[cat.ref][0].images[0].directus_files_id}?key=card500`" alt="">
-            </div>
 
-            <div class="infoBox flex column justifyEnd gap10">
-                <h4 class="catTitle"> {{ cat.name }}</h4>
-                <p class="albumCount">{{ galeryData.albums[cat.ref].length }} album<span v-if="galeryData.albums[cat.ref].length > 1">s</span> </p>
-            </div>
-        </NuxtLink>
+        <div class="galaryContent">
+            <SectionMainSloted v-for="album in galeryData.albums[activeCategory]" :key="album.id" :data="{ title: album.albumName, image: album.images[0].directus_files_id, localImage: false }">
+                <div class="galerySectionContent h100 flex column justifyCenter gap10">
+                    <div class="galeryTopBox">
+                        <p class="albumDate">{{ new Date(album.date_created).toLocaleString().slice(0, 10) }}</p>
+                    </div>
+                    <p class="page-text">{{ album.content }}</p>
+                
+                    <div class="galeryBottomBox flex justifyEnd">
+                        <NuxtLink :to="`/galerie-photo/${album.slug}`" class="galeryAlbumButton">Voir l'albums</NuxtLink> 
+                    </div>
+                </div>
+            </SectionMainSloted>
+        </div>
+        
+
 
 
     </main>
 </template>
 <script setup>
+
 const filterItems = (e) => {
-    activeBtn.value = null
+    activeCategory.value = null
     setTimeout(() => {
-        activeBtn.value = e.target.getAttribute('data-filter')
+        activeCategory.value = e.target.getAttribute('data-filter')
     }, 10)
 }
 
-const activeBtn = ref('all')
-const filters = ref(['ecole', 'associations', 'mediatheque', 'ccas'])
+const activeCategory = ref(null)
 
 const appConfig = useAppConfig();
-const directusAssets = appConfig.directus.assets;
 const directusItems = appConfig.directus.items;
 
 
-
+ 
 const fetchOptions = {
     server: true,
     params: {
-        fields: 'id, albumName, content, categoryName.displayName, categoryName.slug, categoryName.ref, images, images.directus_files_id'
-    }
+        fields: 'id, date_created, albumName, slug, content, categoryName.displayName, categoryName.slug, categoryName.ref, images, images.directus_files_id'
+    } 
 }
 
 const { data: galeryData } = await useAsyncData(
@@ -66,19 +71,19 @@ const { data: galeryData } = await useAsyncData(
         const temp = {
             catRef: [], //to avoid duplicate
             categories: [],
-            albums: {}
+            albums: {
+                all: []
+            }
         }
         albums.forEach(album => {
-            console.log(album.categoryName.ref)
             if (!temp.catRef.includes(album.categoryName.ref)) {
                 temp.catRef.push(album.categoryName.ref)
                 temp.categories.push({name: album.categoryName.displayName, slug: album.categoryName.slug, ref: album.categoryName.ref})
                 temp.albums[album.categoryName.ref] = []
             }
             temp.albums[album.categoryName.ref].push(album)
+            temp.albums.all.push(album)
         })
-        
-        console.log(temp)
         return temp
     }
     ,
@@ -109,13 +114,57 @@ const headerData = {
         }
     ]
 }
+const applyStyleClasses_utils = () => {
 
+    const sections = document.querySelectorAll('.sectionBoxSloted')
+
+    for (let i = 1; i < sections.length; i = i + 4) {
+        sections[i].classList.replace('whiteSection', 'blueSection')
+    }
+    for (let i = 3; i < sections.length; i = i + 4) {
+        sections[i].classList.replace('whiteSection', 'brownSection')
+    }
+}
+onUpdated(() => {
+    applyStyleClasses_utils()
+})
+
+onMounted(() => {
+    applyStyleClasses_utils()
+    activeCategory.value = galeryData.value.categories[0].ref
+})
 
 
 
 </script>
 
 <style>
+.galaryContent{
+    min-height: 100vh;
+}
+.galeryAlbumButton {
+    padding: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+}
+.whiteSection .mainWidth .slotedContent .galerySectionContent .galeryBottomBox .galeryAlbumButton {
+    background-color: var(--dark-blue);
+    color: #fff;
+}
+.blueSection .mainWidth .slotedContent .galerySectionContent .galeryBottomBox .galeryAlbumButton,
+.brownSection .mainWidth .slotedContent .galerySectionContent .galeryBottomBox .galeryAlbumButton {
+    background-color: white;
+    color: var(--dark-blue);
+}
+
+
+.albumDate{
+    font-size: 16px;
+    font-weight: 600;
+    font-style: italic;
+}
 
 .albumsFilterBox {
     background: linear-gradient(90deg, rgba(0, 47, 74, 1) 0%, rgba(146, 76, 2, 1) 100%);
