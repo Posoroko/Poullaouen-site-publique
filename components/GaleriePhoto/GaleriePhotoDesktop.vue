@@ -1,60 +1,92 @@
 <template>
     <section class="photoViewerMain relative">
         <div ref="viewerBox" class="mainWidth viewerBox relative h100">
-            <div class="photoCard">
+            <div class="viewerArrowBox viewerLeftArrowBox absolute icon headerIcon headerChevron pointer" @click="swipeLeft"> chevron_left </div>
 
-            </div>
-
-            <div class="viewerArrowBox leftArrowBox absolute icon headerIcon headerChevron pointer" @click="swipeLeft"> chevron_left </div>
-
-            <div class="viewerArrowBox rightArrowBox absolute icon headerIcon headerChevron pointer" @click="swipeRignt"> chevron_right  </div>
+            <div class="viewerArrowBox viewerRightArrowBox absolute icon headerIcon headerChevron pointer" @click="swipeRignt"> chevron_right  </div>
         </div>
-
-
-        
     </section>
 </template>
 
 <script setup>
 const viewerBox = ref(null)
-
 const appConfig = useAppConfig();
 const directusAssets = appConfig.directus.assets;
 
+const props = defineProps({
+    albumData: Array
+})
+
 const swipeLeft = () => {
+     if (imagesNodes.value[imagesNodes.value.length -1].classList[0] == 'pos1102') {
+        return
+    }
+
     let newOne = false
 
     imagesNodes.value.forEach((image) => {
-        
-        let nodePos =image.classList[0].slice(-4)
-
-        if(nodePos == 1100) {
-            image.classList.replace('pos1100', 'pos1000')
-        } else if(nodePos > 1100 && nodePos < 1105) {
-            image.classList.replace('pos' + nodePos, 'pos' + (nodePos - 1))
-        } else if(newOne == false && nodePos == 2000) {
-            image.classList.replace('pos2000', 'pos1104')
-            newOne = true
+        let nodePos =image.classList[0]
+        switch(nodePos) {
+            case'pos1100':
+                image.classList.replace('pos1100', 'pos1000')
+                break;
+            case'pos1101':
+                image.classList.replace('pos1101', 'pos1100')
+                break;
+            case'pos1102':
+                image.classList.replace('pos1102', 'pos1101')
+                break;
+            case'pos1103':  
+                image.classList.replace('pos1103', 'pos1102')
+                break;
+            case'pos1104':
+                image.classList.replace('pos1104', 'pos1103')
+                break;
+            case'pos2000':
+                if(!newOne) {
+                    image.classList.replace('pos2000', 'pos1104')
+                    newOne = true
+                }
+                break;
         }
     })
-    console.log(imagesNodes.value)
+
 }
 const swipeRignt = () => {
-    let newOne = false
+    console.log(imagesNodes.value)
+    if(imagesNodes.value[0].classList[0] == 'pos1102') {
+        return
+    }
 
-    imagesNodes.value.forEach((image) => {
+    let newOne = false
+    
+    for(let i = imagesNodes.value.length -1; i >= 0; i--) {
         
-        const nodePos = parseInt(image.classList[0].slice(-4))
-        
-        if (nodePos == 1104) {
-            image.classList.replace('pos1104', 'pos2000')
-        } else if (nodePos > 1099 && nodePos < 1104) {
-            image.classList.replace('pos' + nodePos, 'pos' + (nodePos + 1))
-        } else if (newOne == false && nodePos == 1000) {
-            image.classList.replace('pos1000', 'pos1100')
-            newOne = true
+        let nodePos = imagesNodes.value[i].classList[0]
+        switch (nodePos) {
+            case 'pos1104':
+                imagesNodes.value[i].classList.replace('pos1104', 'pos2000')
+                break;
+            case 'pos1103':
+                imagesNodes.value[i].classList.replace('pos1103', 'pos1104')
+                break;
+            case 'pos1102':
+                imagesNodes.value[i].classList.replace('pos1102', 'pos1103')
+                break;
+            case 'pos1101':
+                imagesNodes.value[i].classList.replace('pos1101', 'pos1102')
+                break;
+            case 'pos1100':
+                imagesNodes.value[i].classList.replace('pos1100', 'pos1101')
+                break;
+            case 'pos1000':
+                if (!newOne) {
+                    imagesNodes.value[i].classList.replace('pos1000', 'pos1100')
+                    newOne = true
+                }
         }
-    })
+    }
+
     console.log(imagesNodes.value)
 }
 
@@ -83,12 +115,11 @@ const viewerInit = (images) => {
             num = 2000
         }
         photoCard.classList.add('pos' + num)
-
+        photoCard.classList.add('centered')
 
         photoCard.classList.add('photoCard')
             const img = document.createElement('img')
-            img.src = '/images/albums/' + image
-            img.classList.add('objectFitContain')
+            img.src = `${directusAssets}${image.directus_files_id}?key=viewer750`
             
         photoCard.appendChild(img)
         viewerBox.value.appendChild(photoCard)
@@ -97,9 +128,9 @@ const viewerInit = (images) => {
 
 }
 onMounted(() => {
-    viewerInit(albumData)
+    viewerInit(props.albumData)
+    // console.log(props.albumData)
     imagesNodes.value = document.querySelectorAll('.photoCard')
-    console.log(imagesNodes.value)
 })
 </script>
 
@@ -108,27 +139,46 @@ onMounted(() => {
 <style>
 .photoViewerMain {
     height: 60vh;
-    background-color: gray;
+    background-color: var(--dark-blue);
+    /* margin: 100px 0; */
 }
 .photoCard {
-    height: 500px; 
-    width: 500px;
+    height: min(500px, 70vw); 
+    aspect-ratio: 1/1;
     position: absolute;
     opacity: 1;
     transition: 300ms ease;
     top: 50%;
 }
+.photoCard img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 3px;
+    box-shadow: 2px 2px 4px black;
+}
 
 .pos1000 { left: 1%; transform: translate(0%, -50%) scale(100%); z-index: 1000; opacity: 0; transition: 300ms ease;}
-.pos2000 { right: 1%; transform: translate(0%, -50%) scale(100%); z-index: 2000; opacity: 0; transition: 300ms ease;}
+.pos2000 { left: 99%; transform: translate(-100%, -50%) scale(100%); z-index: 1000; opacity: 0; transition: 300ms ease;}
 
-.pos1100 { left: 1%; transform: translate(0%, -50%) scale(100%); z-index: 1100;}
-.pos1101 { left: 30%; transform: translate(-50%, -50%) scale(115%); z-index: 1102;}
-.pos1102 { left: 50%; transform: translate(-50%, -50%) scale(130%); z-index: 1103;}
-.pos1103 { right: 30%; transform: translate(50%, -50%) scale(115%); z-index: 1102;}
-.pos1104 { right: 1%; transform: translate(0%, -50%) scale(100%); z-index: 1100;}
+.pos1100 { left: 1%; transform: translate(0%, -50%) scale(100%); z-index: 1100; filter: brightness(25%);}
+.pos1101 { left: 30%; transform: translate(-50%, -50%) scale(115%); z-index: 1200; filter: brightness(50%);}
+.pos1102 { left: 50%; transform: translate(-50%, -50%) scale(130%); z-index: 1300;}
+.pos1103 { left: 70%; transform: translate(-50%, -50%) scale(115%); z-index: 1200; filter: brightness(50%);}
+.pos1104 { left: 99%; transform: translate(-100%, -50%) scale(100%); z-index: 1100; filter: brightness(25%);}
 
+.viewerLeftArrowBox {
+    left: 1%;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+.viewerRightArrowBox {
+    right: 1%;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
 .viewerArrowBox {
+    user-select: none;
     z-index: 10000;
 }
+
 </style>

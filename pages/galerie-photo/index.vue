@@ -2,8 +2,6 @@
     <HeaderMain :data="headerData" />
     <main class="galerieMain flex column">
 
-        <GaleriePhotoDesktop />
-
         <p class="mainWidth intro-text">
             Retrouvez, en images, tous les événements de votre commune.
         </p>

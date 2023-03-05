@@ -5,14 +5,15 @@
     </header>
 
     <main class="galerieMain flex column marTop100">
-        <!-- <h2 class="mainWidth">{{ album.albumName }}</h2> -->
         <p class="mainWidth intro-text">{{ album.content }}</p>
 
-        <div class="mainWidth boxOfPhotos flex justifyCenter gap20 wrap marTop50">
+        <GaleriePhotoDesktop :albumData="album.images" />
+
+        <!-- <div class="mainWidth boxOfPhotos flex justifyCenter gap20 wrap marTop50">
             <div class="frame" v-for="photo in album.images" :key="photo.id">
                 <img class="objectFitCover pointer" :src="`${directusAssets}${photo.directus_files_id}?key=card500`" alt=""  @click="showInModal(`${directusAssets}${photo.directus_files_id}`)">
             </div>
-        </div>
+        </div> -->
         
     </main>
 </template>
