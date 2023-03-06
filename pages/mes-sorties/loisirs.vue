@@ -10,8 +10,8 @@
             <SectionMainSloted
                 :data="{ title: 'Le pass loisir', image: '/images/loisirs/cinema.jpg', imageAlt: 'Reciclag à Poullaouën', localImage: true }">
                 <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap10">
+                    <h4 class="whiteText">Profitez de tarifs réduits avec le «pass’ loisirs» !</h4>
                     <p class="flex column gap20 whiteText">
-                        <h4 class="whiteText">Profitez de tarifs réduits avec le «pass’ loisirs» !</h4>
                         Ce pass est accessible gratuitement à tous les habitants de Poher
                         communauté, sans limite d’âge. Il donne des réductions dans les
                         structures ci-dessous :
@@ -43,10 +43,10 @@
                     </div>
                 </div>
             </SectionMainSloted>
-
+        </div>
             <SectionTitleBar title="A Locmaria-Berrien et Poullaouen" />
 
-            <div class="loisirCardsBox flex justifyCenter gap50 wrap">
+            <div class="loisirCardsBox mainWidth flex justifyCenter gap50 wrap">
                 <CardsTallMain title="Aéro-Plass - ULM" cardImage="/images/loisirs/ULM.jpg" :localImage="true">
                     <div class="bottomBox flex column gap10">
                         <p class="paragraph column">
@@ -81,7 +81,7 @@
                     </div>
                 </CardsTallMain>
   
-                <CardsTallMain title="Maison de la Mine" cardImage="/images/dechets/Déchetterie Locmaria.jpg"
+                <CardsTallMain title="Maison de la Mine" cardImage="/images/loisirs/musée de la mine intérieur.jpg"
                     :localImage="true">
                     <div class="bottomBox flex column gap10 justifyCenter alignStart">
                         <p class="paragraph">
@@ -111,7 +111,7 @@
                         </p>
                     </div>
                 </CardsTallMain>
-                <CardsTallMain title="L'aire de loisirs" cardImage="/images/dechets/Déchetterie Locmaria.jpg"
+                <CardsTallMain title="L'aire de loisirs" cardImage="/images/loisirs/aire de loisirs.jpg"
                     :localImage="true">
                     <div class="bottomBox flex column gap10 justifyCenter alignStart">
                         <p class="paragraph">
@@ -131,7 +131,7 @@
                         </p>
                         <p class="contentRow flex gap10">
                             <span class="icon">email</span>
-                            <a href="mailto:mairie-de-poullaouen@wanadoo.f r" class="textContent">mairie-de-poullaouen@wanadoo.f r</a>
+                            <a href="mailto:mairie-de-poullaouen@wanadoo.fr" class="textContent">mairie-de-poullaouen@wanadoo.fr</a>
                         </p>
                         <p class="contentRow flex gap10">
                             <span class="icon">language</span>
@@ -139,8 +139,232 @@
                         </p>
                     </div>
                 </CardsTallMain>
+
+                <SectionTitleBar title="A Carhaix - 10km" />
+
+                <CardsTallMain title="Centre d’interprétation archéologique virtuel Vorgium" cardImage="/images/loisirs/vorgium.jpg"
+                        :localImage="true">
+                        <div class="bottomBox flex column gap10 justifyCenter alignStart">
+                            <p class="paragraph">
+                                En plein coeur de Carhaix, un musée virtuel et
+                                un jardin archéologique pour une expérience
+                                immersive et interactive.
+                            </p>
+                            <p class="contentRow flex gap10">
+                                <span class="icon">location_on</span>
+                                <span class="textContent">5 rue du Docteur Menguy - Carhaix</span>
+                            </p>
+
+                            <p class="contentRow flex gap10">
+                                <span class="icon">call</span>
+                                <span class="textContent">02.98.17.53.07</span>
+                            </p>
+                            <p class="contentRow flex gap10">
+                                <span class="icon">email</span>
+                                <a href="mailto:accueil.vorgium@poher.bzh" class="textContent">accueil.vorgium@poher.bzh</a>
+                            </p>
+                            <p class="contentRow flex gap10">
+                                <span class="icon">language</span>
+                                <a href="www.vorgium.bzh" class="textContent">www.mairie-poullaouen.fr</a>
+                            </p>
+                        </div>
+                    </CardsTallMain>
+                <CardsTallMain title="Park Aqualudique Plijadour" cardImage="/images/loisirs/piscine.jpg" :localImage="true">
+                    <div class="bottomBox flex column gap10 justifyCenter alignStart">
+                        <p class="paragraph">
+                            La piscine municipale Plijadour dispose
+                            d’espaces intérieurs et extérieurs avec bassins de
+                            nage et d’apprentissage, équipements ludiques,
+                            toboggans, saunas, hammam… C’est une des
+                            piscines du Finistère les mieux équipées. Ouverte
+                            tous les jours, elle propose des activités variées
+                            : aquabike, aquagym, natation prénatale, bébés
+                            nageurs, cours de natation.
+                        </p>
+                        <p class="contentRow flex gap10">
+                            <span class="icon">location_on</span>
+                            <span class="textContent">rue de la Piscine - Carhaix</span>
+                        </p>
+
+                        <p class="contentRow flex gap10">
+                            <span class="icon">call</span>
+                            <span class="textContent">02.98.99.39.50</span>
+                        </p>
+                        <p class="contentRow flex gap10">
+                            <span class="icon">email</span>
+                            <a href="mailto:mairie-de-poullaouen@wanadoo.fr" class="textContent">mairie-de-poullaouen@wanadoo.fr</a>
+                        </p>
+                        <p class="contentRow flex gap10">
+                            <span class="icon">language</span>
+                            <a href="www.plijadour.poher.bzh" class="textContent">www.plijadour.poher.bzh</a>
+                        </p>
+                    </div>
+                </CardsTallMain>
+                <CardsTallMain title="Espace Culturel Glenmor" cardImage="/images/loisirs/espace_glenmor_1.jpg" :localImage="true">
+                    <div class="bottomBox flex column gap10 justifyCenter alignStart">
+                        <p class="paragraph">
+                            L’Espace Glenmor – centre de congrès est situé
+                            dans un magnifique environnement paysagé : le
+                            parc de Kerampuilh. Avec un espace de 2000 m²
+                            modulable en plusieurs salles, cet équipement
+                            esthétique, chaleureux et fonctionnel vous
+                            propose une configuration unique, adaptée à
+                            l’accueil de vos manifestations.
+                        </p>
+                        <p class="contentRow flex gap10">
+                            <span class="icon">location_on</span>
+                            <span class="textContent">rue Jean Monnet - Carhaix</span>
+                        </p>
+
+                        <p class="contentRow flex gap10">
+                            <span class="icon">call</span>
+                            <span class="textContent">02.98.99.37.50</span>
+                        </p>
+                        <p class="contentRow flex gap10">
+                            <span class="icon">email</span>
+                            <a href="mailto:mairie-de-poullaouen@wanadoo.fr" class="textContent">mairie-de-poullaouen@wanadoo.fr</a>
+                        </p>
+                        <p class="contentRow flex gap10">
+                            <span class="icon">language</span>
+                            <a href="https://www.glenmor.com" class="textContent">www.glenmor.com</a>
+                        </p>
+                    </div>
+                </CardsTallMain>
+                <CardsTallMain title="Labyrinthe Végétal Karaez Adrénaline et le Parc Aventure" cardImage="/images/loisirs/DSC02140.jpg" :localImage="true">
+                    <div class="bottomBox flex column gap10 justifyCenter alignStart">
+                        <p class="paragraph">
+                            Karaez Adrenaline est un parc de loisirs et
+                            d’aventures situé dans la Vallée de l’Hyères, qui
+                            propose : un labyrinthe végétal (le plus grand
+                            de Bretagne), un parcours d’accrobranche avec
+                            la plus grande tyrolienne de Bretagne , un
+                            espace loisirs avec entre autres, jeux gonflables,
+                            manège, kart à pédales, luge sur bouée...
+                        </p>
+                        <p class="contentRow flex gap10">
+                            <span class="icon">location_on</span>
+                            <span class="textContent">Vallée de l’Hyères - Carhaix</span>
+                        </p>
+
+                        <p class="contentRow flex gap10">
+                            <span class="icon">call</span>
+                            <span class="textContent">06.50.19.15.98</span>
+                        </p>
+                        <p class="contentRow flex gap10">
+                            <span class="icon">email</span>
+                            <a href="mailto:parc-aventure@karaezadrenaline.com" class="textContent">parc-aventure@karaezadrenaline.com</a>
+                        </p>
+                        <p class="contentRow flex gap10">
+                            <span class="icon">language</span>
+                            <a href="https://www.karaezadrenaline.com" class="textContent">www.karaezadrenaline.com</a>
+                        </p>
+                    </div>
+                </CardsTallMain>
+                <CardsTallMain title="Carhaix Golf" cardImage="/images/loisirs/Carhaix golf.jpg" :localImage="true">
+                    <div class="bottomBox flex column gap10 justifyCenter alignStart">
+                        <p class="paragraph">
+                            Un golf convivial au coeur de la nature, un golf
+                            pour tous. Les golfeurs expérimentés profiteront
+                            du parcours 9 trous pour exprimer leur talent.
+                        </p>
+                        <p class="contentRow flex gap10">
+                            <span class="icon">location_on</span>
+                            <span class="textContent">route de Kerniguez - Carhaix</span>
+                        </p>
+
+                        <p class="contentRow flex gap10">
+                            <span class="icon">call</span>
+                            <span class="textContent">02.98.93.79.19</span>
+                        </p>
+                        <p class="contentRow flex gap10">
+                            <span class="icon">email</span>
+                            <a href="mailto:carhaix.golf@wanadoo.fr" class="textContent">carhaix.golf@wanadoo.fr</a>
+                        </p>
+                        <p class="contentRow flex gap10">
+                            <span class="icon">language</span>
+                            <a href="https://www.carhaixgolf.com" class="textContent">www.carhaixgolf.com</a>
+                        </p>
+                    </div>
+                </CardsTallMain>
+                <CardsTallMain title="Cinéma Le Grand Bleu" cardImage="/images/loisirs/cinema.jpg" :localImage="true">
+                    <div class="bottomBox flex column gap10 justifyCenter alignStart">
+                        <p class="paragraph">
+                            Le Grand Bleu est situé dans le complexe de
+                            l’Espace Glenmor depuis sa création en 2001.
+                            La salle dispose d’un écran de 12 mètres et d’un
+                            son système Ovation Trinnov en 7.1. La jauge est
+                            de 209 sièges et 6 emplacements réservés aux
+                            fauteuils roulants.
+                        </p>
+                        <p class="contentRow flex gap10">
+                            <span class="icon">location_on</span>
+                            <span class="textContent">rue Jean Monnet - Carhaix</span>
+                        </p>
+
+                        <p class="contentRow flex gap10">
+                            <span class="icon">call</span>
+                            <span class="textContent">02.98.93.32.64</span>
+                        </p>
+                        <p class="contentRow flex gap10">
+                            <span class="icon">email</span>
+                            <a href="mailto:carhaix.legrandbleu@orange.f r" class="textContent">carhaix.legrandbleu@orange.f r</a>
+                        </p>
+                        <p class="contentRow flex gap10">
+                            <span class="icon">language</span>
+                            <a href="https://www.cinemalegrandbleu.fr " class="textContent">www.cinemalegrandbleu.fr </a>
+                        </p>
+                    </div>
+                </CardsTallMain>
             </div>
-        </div>
+                <SectionMainSloted
+                    :data="{ title: 'A Huelgoat - 10km', image: '/images/loisirs/Entrée du site légendaire Huelgoat.jpg', imageAlt: 'Entrée du site légendaire Huelgoat', localImage: true }">
+                    <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap10">
+                        <h4 class="">Le Bois d’Huelgoat</h4>
+
+                        <p class="flex column gap20 ">
+                            Nichée au coeur du Parc Naturel Régional d’Armorique la forêt
+                            légendaire d’Huelgoat réserve mille surprises au promeneur qui s’y
+                            aventure…
+                        </p>
+
+                        <div class="flex justifyBetween">
+                            <a href="https://www.montsdarreetourisme.bzh/" class="externalLink">Office de Tourisme des Monts d’Arrée</a>
+                        </div>
+                    </div>
+                </SectionMainSloted>
+                <div class="marTop50"></div>
+                <SectionMainSloted :data="{ title: 'A Carnoët - 10km', image: '/images/loisirs/WEB _ Vallée des Saints _ Saint Malo (par Patrice Le Guen) et la chapelle St Gildas.jpg', imageAlt: 'WEB _ Vallée des Saints _ Saint Malo (par Patrice Le Guen) et la chapelle St Gildas', localImage: true }">
+                    <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap10">
+                        <h4 class="">La Vallée des Saints</h4>
+
+                        <p class="flex column gap20 ">
+                            La Vallée des Saints, un pari fou pour l’éternité.
+                            Il y a de la magie dans ce site hors norme. Un peu comme sur l’île
+                            de Pâques… mais à la manière bretonne ! Implantée au coeur de la
+                            Bretagne, à Carnoët (22), la Vallée des Saints est un site artistique et
+                            éducatif gratuit et unique au monde où se dressent 169 géants en
+                            granit breton à l’eff igie des saints bretons.
+                        </p>
+                        <p class="flex column gap20 ">
+                            A terme, 1000 saints, des géants de pierre, peupleront cette somptueuse
+                            galerie d’art monumental à ciel ouvert, qui, depuis sa création, a
+                            accueilli plus de deux millions et demi de visiteurs. L’idée originelle
+                            un peu folle est devenue réalité, faisant d’un site exceptionnel l’un des
+                            hauts lieux de Bretagne.
+                        </p>
+                        <p class="flex column gap20 ">
+                            Face aux Montagnes Noires et aux Monts d’Arrée, les visiteurs sont
+                            invités à un voyage intemporel et artistique au coeur d’un site qui
+                            s’inscrit pour l’éternité.
+                        </p>
+
+                        <div class="flex justifyBetween">
+                            <a href="https://www.lavalleedessaints.com/" class="externalLink">La vallée des Saints</a>
+                        </div>
+                    </div>
+                </SectionMainSloted>
+            
+        
     </main>
 </template>
 <script setup>
@@ -206,9 +430,18 @@ const headerData = {
 const applyStyleClasses_utils = () => {
 
     const sections = document.querySelectorAll('.sectionBoxSloted')
-
+    sections[0].classList.remove('whiteSection')
     const stripe = sections[0].querySelector('.sectionBox')
     stripe.classList.add('horizontalGradient')
+
+    sections[1].classList.replace('whiteSection', 'blueSection')
+
+    const pieds = sections[0].querySelectorAll('.pied')
+
+    for(let i = 0; i < pieds.length; i++) {
+        pieds[i].style.fill = 'var(--brown)'
+    }
+ 
 
 }
 onMounted(() => {
@@ -234,13 +467,13 @@ onMounted(() => {
 
 <style scoped>
 
-.gradSection::deep * {
-    color: white;
+.brownFoot {
+    fill: var(--brown);
 }
 
 
 .tallCard {
-    min-height: 650px;
+    min-height: 700px;
 }
 
 .slotedSectionTextBox {
