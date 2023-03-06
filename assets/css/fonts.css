@@ -11,6 +11,9 @@
     font-family: 'Montserrat', sans-serif;
     color: var(--dark-blue);
 }
+.whiteText {
+    color: white;
+}
 
 .oleo {
     font-family: 'Oleo Script', cursive;

@@ -6,12 +6,12 @@
             Grâce à votre Pass loisirs, bénéficiez de réductions pour vos diverses activités.
         </p>
 
-        <div>
+        <div class="gradSection">
             <SectionMainSloted
                 :data="{ title: 'Le pass loisir', image: '/images/loisirs/cinema.jpg', imageAlt: 'Reciclag à Poullaouën', localImage: true }">
                 <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap10">
-                    <p class="flex column gap20">
-                        <h4 class="">Profitez de tarifs réduits avec le «pass’ loisirs» !</h4>
+                    <p class="flex column gap20 whiteText">
+                        <h4 class="whiteText">Profitez de tarifs réduits avec le «pass’ loisirs» !</h4>
                         Ce pass est accessible gratuitement à tous les habitants de Poher
                         communauté, sans limite d’âge. Il donne des réductions dans les
                         structures ci-dessous :
@@ -32,12 +32,12 @@
                     </p>
 
                     <div class="infoBox">
-                        <p class="w100 flex justifyBetween alignCenter">
-                            <span> <b>Flyer :</b></span>
-                            <span class="flex alignCenter gap20">
-                                <a class="flex alignCenter gap5" href=""><span class="icon">visibility</span>Consulter</a>
+                        <p class="w100 flex justifyBetween alignCenter whiteText">
+                            <span class="whiteText"> <b class="whiteText">Flyer :</b></span>
+                            <span class="flex alignCenter gap20 whiteText">
+                                <a class="flex alignCenter gap5" target="_blank" href="/loisirs/new pass loisirs.pdf"><span class="icon whiteText">visibility</span>Consulter</a>
                         
-                                <a class="flex alignCenter gap5" href=""><span class="icon">download</span> Télécharger</a>       
+                                <a class="flex alignCenter gap5" href="/loisirs/new pass loisirs.pdf" download><span class="icon whiteText">download</span> Télécharger</a>       
                             </span>
                         </p>
                     </div>
@@ -49,44 +49,93 @@
             <div class="loisirCardsBox flex justifyCenter gap50 wrap">
                 <CardsTallMain title="Aéro-Plass - ULM" cardImage="/images/loisirs/ULM.jpg" :localImage="true">
                     <div class="bottomBox flex column gap10">
-                        <p class="contentRow flex">
-                            <span class="icon">location_on</span>
-                            <span class="textContent">Stancou - Poullaouen</span>
-                        </p>
-                        <p class="paragraph">
+                        <p class="paragraph column">
                             Laurent PLASSART, pilote chevronné, instructeur
                             et professionnel depuis plus de 25 ans et titulaire
                             de nombreux titres dont une médaille de bronze
                             aux championnats du monde en 2005, propose : <br>
-                            <ul class="loisirUL">
-                                <li>Baptêmes de l’air,</li>
-                                <li>Survol des Monts d’Arrée</li>
-                                <li>Photos Aériennes</li> 
-                            </ul>
+                            
+                        </p>
+                        <ul class="loisirUL">
+                            <li>Baptêmes de l’air,</li>
+                            <li>Survol des Monts d’Arrée</li>
+                            <li>Photos Aériennes</li> 
+                        </ul>
+                        <p class="contentRow flex gap10">
+                            <span class="icon">location_on</span>
+                            <span class="textContent">Stancou - Poullaouen</span>
                         </p>
                         
-                        <p class="contentRow flex">
+                        <p class="contentRow flex gap10">
                             <span class="icon">call</span>
                             <span class="textContent">02 98 93 37 36</span>
                         </p>
+                        <p class="contentRow flex gap10">
+                            <span class="icon">email</span>
+                            <a href="mailto:laurent@plassart.net" class="textContent">laurent@plassart.net</a>
+                        </p>
+                        <p class="contentRow flex gap10">
+                            <span class="icon">language</span>
+                            <a href="https://www.aero-plass.com" class="textContent">www.aero-plass.com</a>
+                        </p>
                     </div>
                 </CardsTallMain>
-
+  
                 <CardsTallMain title="Maison de la Mine" cardImage="/images/dechets/Déchetterie Locmaria.jpg"
                     :localImage="true">
                     <div class="bottomBox flex column gap10 justifyCenter alignStart">
-                        <p class="contentRow flex">
+                        <p class="paragraph">
+                            L’Association pour la Sauvegarde de l’Ancienne
+                            Mine de plomb et d’argent vous fait découvrir
+                            dans son espace muséal le passé minier du site
+                            de Huelgoat, Locmaria-Berrien et Poullaouën,
+                            l’un des plus importants en France au 18ème et
+                            19ème siècle.
+                        </p>
+                        <p class="contentRow flex gap10">
                             <span class="icon">location_on</span>
-                            <span class="textContent">ZA du Vieux Tronc</span>
+                            <span class="textContent">Le Bourg - Locmaria-Berrien</span>
                         </p>
-                        <p class="contentRow flex">
-                            <span class="icon">schedule</span>
-                            <span class="textContent">Du lundi au samedi de 9h15 à 12h et de 14h à 17h45. Fermée le lundi
-                                après-midi et le mardi toute la journée</span>
-                        </p>
-                        <p class="contentRow flex">
+
+                        <p class="contentRow flex gap10">
                             <span class="icon">call</span>
-                            <span class="textContent">02 98 99 82 49</span>
+                            <span class="textContent">06.85.25.07.08</span>
+                        </p>
+                        <p class="contentRow flex gap10">
+                            <span class="icon">email</span>
+                            <a href="mailto:asamlb@hotmail.fr" class="textContent">asamlb@hotmail.fr</a>
+                        </p>
+                        <p class="contentRow flex gap10">
+                            <span class="icon">language</span>
+                            <span class="textContent">www.minelocmariaberrien.com/</span>
+                        </p>
+                    </div>
+                </CardsTallMain>
+                <CardsTallMain title="L'aire de loisirs" cardImage="/images/dechets/Déchetterie Locmaria.jpg"
+                    :localImage="true">
+                    <div class="bottomBox flex column gap10 justifyCenter alignStart">
+                        <p class="paragraph">
+                            L’aire de loisirs de Poullaouen permet à chacun
+                            de trouver son bonheur : basket, foot, hand, volley,
+                            tennis, deux couloirs d’athlétisme, balançoire,
+                            toboggan, cheval à bascule ...
+                        </p>
+                        <p class="contentRow flex gap10">
+                            <span class="icon">location_on</span>
+                            <span class="textContent">Av. du Général de Gaulle - Poullaouen</span>
+                        </p>
+
+                        <p class="contentRow flex gap10">
+                            <span class="icon">call</span>
+                            <span class="textContent">02.98.93.50.73</span>
+                        </p>
+                        <p class="contentRow flex gap10">
+                            <span class="icon">email</span>
+                            <a href="mailto:mairie-de-poullaouen@wanadoo.f r" class="textContent">mairie-de-poullaouen@wanadoo.f r</a>
+                        </p>
+                        <p class="contentRow flex gap10">
+                            <span class="icon">language</span>
+                            <a href="www.mairie-poullaouen.fr" class="textContent">www.mairie-poullaouen.fr</a>
                         </p>
                     </div>
                 </CardsTallMain>
@@ -158,12 +207,9 @@ const applyStyleClasses_utils = () => {
 
     const sections = document.querySelectorAll('.sectionBoxSloted')
 
-    for (let i = 1; i < sections.length; i = i + 4) {
-        sections[i].classList.replace('whiteSection', 'blueSection')
-    }
-    for (let i = 3; i < sections.length; i = i + 4) {
-        sections[i].classList.replace('whiteSection', 'brownSection')
-    }
+    const stripe = sections[0].querySelector('.sectionBox')
+    stripe.classList.add('horizontalGradient')
+
 }
 onMounted(() => {
     applyStyleClasses_utils()
@@ -187,6 +233,11 @@ onMounted(() => {
 </script>
 
 <style scoped>
+
+.gradSection::deep * {
+    color: white;
+}
+
 
 .tallCard {
     min-height: 650px;
