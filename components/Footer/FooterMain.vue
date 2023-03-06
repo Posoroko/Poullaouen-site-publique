@@ -3,30 +3,30 @@
         <div class="footerContainer mainWidth flex justifyEvenly alignStart wrap h100 ">
             <div class="phoneBox w100 footerBox flex justifyCenter alignCenter wrap gap5">
                 <div class="flex gap5">
-                    <p class="phoneBtn flex column justifyCenter alignCenter">
+                    <a href="call:+33298935076" class="phoneBtn flex column justifyCenter alignCenter">
                         <span class="icon">call</span>
                         <span class="city">Poullaouen</span>
-                    </p>
+                    </a>
 
-                    <p class="phoneBtn flex column justifyCenter alignCenter">
+                    <a href="call:+33298997309" class="phoneBtn flex column justifyCenter alignCenter">
                         <span class="icon">call</span>
             
                         <span class="city">Locmaria-Berrien</span>
-                    </p>
+                    </a>
                 </div>
 
                 <div class="flex gap5">
-                    <p class="phoneBtn flex column justifyCenter alignCenter">
+                    <a href="mailto:mairie-de-poullaouen@wanadoo.fr" class="phoneBtn flex column justifyCenter alignCenter">
                         <span class="icon">mail</span>
         
                         <span class="city">Poullaouen</span>
-                    </p>
+                    </a>
         
-                    <p class="phoneBtn flex column justifyCenter alignCenter">
+                    <a href="mailto:mailto:mairie.locmaria-berrien@orange.fr" class="phoneBtn flex column justifyCenter alignCenter">
                         <span class="icon">mail</span>
         
                         <span class="city">Locmaria-Berrien</span>
-                    </p>
+                    </a>
                 </div>
             </div>
 
@@ -71,7 +71,9 @@
             </div>
 
             <div class="centerBox footerBox flex">
-                <!-- <img class="logo" src="/images/logo-poullaouen.svg" alt="logo de la Commune de Poullaouën"> -->
+                <div class="w100 flex justifyCenter marTop20">
+                    <img class="footerLogo" src="/images/logo-poullaouen.svg" alt="logo de la Commune de Poullaouën">
+                </div>
                 <a href="https://www.facebook.com/profile.php?id=100064790073995" class="button flex alignCenter justifyCenter faceBookBtn">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="iconBox">
                         <path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
@@ -145,6 +147,10 @@
 </script>
 
 <style scoped>
+.footerLogo {
+    width: 200px;
+    margin: auto;
+}
 
 .bottomBar{
     color: white;
