@@ -20,14 +20,14 @@
                 régulièrement, notamment le mois du film documentaire qui a lieu en
                 novembre.
                 <br> <br>
-                Un point cyber avec un accès internet est également mis à la disposition
+                Un <b>point cyber</b> avec un accès internet est également mis à la disposition
                 du public.
                 <br> <br>
                 Une journée par semaine est consacrée à l’accueil de classes de l’école
                 Jules Ferry.
                 <br> <br>
-                La collection disponible au sein de la médiathèque comprend 4000
-                imprimés (livres, magazines, presse), 150 DVD et 70 CD.
+                La collection disponible au sein de la médiathèque comprend <b>4000
+                    imprimés</b> (livres, magazines, presse), 150 DVD et 70 CD.
             </p>
         </SectionMainSloted>
 
