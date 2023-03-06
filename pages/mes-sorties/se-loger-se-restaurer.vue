@@ -36,6 +36,20 @@
             </div>
         </section>
 
+        <section>
+            <SectionTitleBar  title="L'aire de camping-car" />
+
+            <div class="roomsContent mainWidth flex justifyCenter wrap gap50">
+                <CardsTallMain title="L'aire" cardImage="/images/se-loger/aire de camping car(1).jpg" cardImageAlt="L'aire de camping car de Poullaouen" :localImage="true">
+                    <div class="cardContent flex column gap10">
+                        <p class="flex alignCenter gap10" > <span class="icon">location_on</span> <span>Rue du Ty Meur - Poullaouen</span> </p>
+                        <p> L’aire de camping-car est dotée d’un kiosque qui se veut être un lieu de rassemblement, permettant rencontres et partages entre les voyageurs. </p>
+                    </div>
+                </CardsTallMain>
+            </div>
+        </section>
+
+
     </main>
 
 </template>
