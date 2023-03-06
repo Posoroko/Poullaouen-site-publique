@@ -19,7 +19,7 @@
                     </div>
 
                     <div class="flex justifyEnd">
-                        <NuxtLink to="/galerie-photo/ecole-maternelle" class="albumButton blueAlbumButton">Voir l'albums</NuxtLink>
+                        <NuxtLink to="/galerie-photo/ecole-maternelle" class="albumButton blueAlbumButton">Voir l'album</NuxtLink>
                     </div>
                 </div>
             </SectionMainSloted>
