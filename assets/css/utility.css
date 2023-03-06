@@ -5,6 +5,7 @@
 .block {display: block;}
 .inline {display: inline;}
 .inlineBlock {display: inline-block;}
+.inlineFlex {display: inline-flex;}
 
 .flex {display: flex;}
 .column {flex-direction: column;}

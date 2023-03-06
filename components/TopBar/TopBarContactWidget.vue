@@ -1,21 +1,20 @@
 <template>
-    <a href="#footerInfo" class="contactWidgetBox flex column justifyCenter pointer">
+    <div class="contactWidgetBox flex column justifyCenter ">
         <div class="poullaouen flex justifyBetween alignCenter">
             <p class="city">Poullaouen</p>
 
             <p class="iconBox flex">
-                
-                <span class="icon">call</span>
-
-                <span class="icon">mail</span>
-
-                <span class="icon">schedule</span>
-
-                <span class="flex alignCenter">
+                <a class="icon flex alignCenter" href="https://www.facebook.com/profile.php?id=100064790073995">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="facebook">
                         <path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
                     </svg>
-                </span>
+                </a>
+                
+                <a href="#footer" class="icon">call</a>
+
+                <a href="mailto:mairie-de-poullaouen@wanadoo.fr" class="icon">mail</a>
+
+                <a href="#footer" class="icon">schedule</a>                
             </p>
         </div>
 
@@ -23,14 +22,14 @@
             <p class="city">Locmaria-Berrien</p>
 
             <p class="iconBox">
-                <span class="icon">call</span>
+                <a href="#footer" class="icon">call</a>
 
-                <span class="icon">mail</span>
+                <a href="mailto:mairie.locmaria-berrien@orange.fr" class="icon">mail</a>
 
-                <span class="icon">schedule</span>
+                <a href="#footer" class="icon">schedule</a>
             </p>
         </div>
-    </a>
+    </div>
 
     <a href="#footerInfo" id="tinyWidget" class="tinyWidget flex gap10">
         <span class="icon">call</span>

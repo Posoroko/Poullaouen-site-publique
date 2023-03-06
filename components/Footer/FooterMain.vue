@@ -3,30 +3,30 @@
         <div class="footerContainer mainWidth flex justifyEvenly alignStart wrap h100 ">
             <div class="phoneBox w100 footerBox flex justifyCenter alignCenter wrap gap5">
                 <div class="flex gap5">
-                    <p class="phoneBtn flex column justifyCenter alignCenter">
+                    <a href="call:+33298935076" class="phoneBtn flex column justifyCenter alignCenter">
                         <span class="icon">call</span>
                         <span class="city">Poullaouen</span>
-                    </p>
+                    </a>
 
-                    <p class="phoneBtn flex column justifyCenter alignCenter">
+                    <a href="call:+33298997309" class="phoneBtn flex column justifyCenter alignCenter">
                         <span class="icon">call</span>
             
                         <span class="city">Locmaria-Berrien</span>
-                    </p>
+                    </a>
                 </div>
 
                 <div class="flex gap5">
-                    <p class="phoneBtn flex column justifyCenter alignCenter">
+                    <a href="mailto:mairie-de-poullaouen@wanadoo.fr" class="phoneBtn flex column justifyCenter alignCenter">
                         <span class="icon">mail</span>
         
                         <span class="city">Poullaouen</span>
-                    </p>
+                    </a>
         
-                    <p class="phoneBtn flex column justifyCenter alignCenter">
+                    <a href="mailto:mailto:mairie.locmaria-berrien@orange.fr" class="phoneBtn flex column justifyCenter alignCenter">
                         <span class="icon">mail</span>
         
                         <span class="city">Locmaria-Berrien</span>
-                    </p>
+                    </a>
                 </div>
             </div>
 
