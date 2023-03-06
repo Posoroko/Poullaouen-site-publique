@@ -8,12 +8,15 @@
                 Les vestiges de 4 camps subsistent au Justissou, à Rosquijeau, au
                 Fréau et à Saint-Sébastien, prouvant une occupation ancienne de la
                 commune.
+            </p>
+
+            <p class="page-text">
                 La commune est également traversée par 3 voies romaines menant
                 depuis Vorgium (Carhaix) à l’Aber-Wrac’h, Morlaix et Lanmeur. La voie
                 romaine de Morlaix à Vorgium passait par Le Cloître, Treusquilly et
                 Poullaouen où elle traversait l’Aulne à Pont-Ar-Gorret, nom qui rappelle
                 une ancienne pêcherie
-            </p>
+                </p>
         </div>
     </SectionMainSloted>
 </template>

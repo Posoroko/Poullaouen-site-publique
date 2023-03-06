@@ -8,6 +8,8 @@
                 Les mines sont redécouvertes au XVI ème siècle. Dès lors, l’exploitation
                 s’intensifie et les mines deviennent, à la fin du XVIIème siècle, les plus
                 importantes du royaume de France.
+            </p>
+            <p class="page-text">
                 Employant à son apogée près de 3000 personnes, une grande partie de
                 la population rurale de manière régulière, en complément de l’activité
                 agricole.

@@ -72,7 +72,7 @@
                         <p class="page-text marTop20" v-if="salle.name == 'La salle des fêtes'">Possibilité de location de sono.</p>
 
                         <div class="buttonBox flex justifyEnd">
-                            <NuxtLink :to="`/galerie-photo/les-salles-municipales/${salle.slug}`" class="albumButton" 
+                            <NuxtLink :to="`/galerie-photo/${salle.slug}`" class="albumButton" 
                             :class="{ blueAlbumButton : index == 0 || index == 2, whiteAlbumButton : index == 1 || index == 3}">Voir l'album</NuxtLink>
                         </div>
                         

@@ -19,8 +19,8 @@
                     <div class="infoBox">
                         <p class="flex alignCenter"> <span class="icon">location_on</span> Service client</p>
                         <p class="flex alignCenter"> <span class="icon">call</span> 0969 323 529</p>
-                        <p class="flex alignCenter"> <span class="icon">schedule</span> 8h-18h du lundi au vendredi</p>
-                        <p class="flex alignCenter"> <span class="icon">emergency</span> Service urgence 7j/7 - 24h/24</p>
+                        <p class="flex alignCenter"> <span class="whiteIcon">schedule</span> 8h-18h du lundi au vendredi</p>
+                        <p class="flex alignCenter"> <span class="whiteIcon">emergency</span> Service urgence 7j/7 - 24h/24</p>
                         <p class="flex alignCenter"> <span class="icon">language</span> <a class="noLineLink" href="https://www.eau.veolia.fr">www.eau.veolia.fr</a></p>
                         <br>
                         <p class="flex alignCenter"> <span class="icon">location_on</span>Mairie de Poullaouen</p>
@@ -155,6 +155,12 @@ li {
     margin-top: 10px;
 }
 .infoBox p .icon {
+    margin-right: 10px;
+}
+.whiteIcon {
+    color: white;
+    /* user-select: none; */
+    font-family: 'Material Icons';
     margin-right: 10px;
 }
 </style>

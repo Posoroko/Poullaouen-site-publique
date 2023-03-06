@@ -102,7 +102,6 @@ const viewerInit = (images) => {
             num = 2000
         }
         photoCard.classList.add('pos' + num)
-        photoCard.classList.add('centered')
 
         photoCard.classList.add('photoCard')
             const img = document.createElement('img')
@@ -137,8 +136,14 @@ onMounted(() => {
     top: 50%;
 }
 .photoCard img {
-    max-width: 100%;
+    
     max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
     border-radius: 3px;
     box-shadow: 2px 2px 4px black;
 }
@@ -153,6 +158,7 @@ onMounted(() => {
 .pos1104 { left: 99%; transform: translate(-100%, -50%) scale(100%); z-index: 1100; filter: brightness(25%);}
 
 .viewerLeftArrowBox {
+    
     left: 1%;
     top: 50%;
     transform: translate(0%, -50%);
@@ -163,6 +169,7 @@ onMounted(() => {
     transform: translate(0%, -50%);
 }
 .viewerArrowBox {
+    border-radius: 8px;
     user-select: none;
     z-index: 10000;
 }

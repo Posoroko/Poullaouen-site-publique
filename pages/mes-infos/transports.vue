@@ -56,9 +56,9 @@
                     </p>
 
                     <div class="infoBox">
-                        <p class="flex alignCenter gap10"> <span class="icon">location_on</span> Maison des Services Publics - Place de la Tour d’Auvergne - Carhaix</p>
+                        <!-- <p class="flex alignCenter gap10"> <span class="icon">location_on</span> Maison des Services Publics - Place de la Tour d’Auvergne - Carhaix</p> -->
                         <p class="flex alignCenter gap10"> <span class="icon">call</span> 02 98 99 48 00</p>
-                        <p class="flex alignCenter gap10"> <span class="icon">language</span> <a class="externalLink" href="https://www.poher.bzh/accueil_poher">www.poher.bzh</a></p>
+                        <!-- <p class="flex alignCenter gap10"> <span class="icon">language</span> <a class="externalLink" href="https://www.poher.bzh/accueil_poher">www.poher.bzh</a></p> -->
                     </div>
                 </div>
             </SectionMainSloted>
