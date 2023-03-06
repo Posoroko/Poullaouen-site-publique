@@ -168,6 +168,12 @@ onMounted(() => {
 </script>
 
 <style scoped>
+
+.content::v-deep(.tallCard) {
+    min-height: 600px;
+}
+
+
 .assoMain section {
     margin-top: 50px;
 }
