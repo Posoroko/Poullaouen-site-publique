@@ -35,6 +35,7 @@
 }
 .blueSection .sectionContent{
     background-color: var(--dark-blue);
+    box-shadow: var(--shadow);
 }
 .blueSection .sectionContent * {
     color: white;

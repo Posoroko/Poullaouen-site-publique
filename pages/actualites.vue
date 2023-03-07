@@ -13,11 +13,13 @@
     </main>
 </template>
 <script setup>
+const appConfig = useAppConfig();
+const directusAssets = appConfig.directus.assets;
 
 const headerData = {
     images: [
         {
-            src: 'images/header/accueil/eglise-de-locmaria-berrien.jpg',
+            src: `${directusAssets}1eb989c2-0aaa-43e1-bb2e-892a479110ca.JPG?key=header1500`,
             alt: 'mairie de Locmaria-Berrien',
         }
     ],

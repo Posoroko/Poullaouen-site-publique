@@ -35,7 +35,7 @@ const showInModal = (e) => {
     if(props.localImage) {
         _img.src = props.image
     } else {
-        _img.src = `${directusAssets}${props.image}`
+        _img.src = `${directusAssets}${props.image}?key=header1500`
     }
 
     _img.style.maxWidth = "80vw"

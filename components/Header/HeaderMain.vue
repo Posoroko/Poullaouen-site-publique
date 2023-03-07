@@ -99,12 +99,12 @@ header .imageBox img {
 }
 .homeLeftArrowBox {
     top: 50%;
-    left: 10px;
+    left: 5px;
     transform: translateY(-50%);
 }
 .homeRightArrowBox {
     top: 50%;
-    right: 0px;
+    right: 5px;
     transform: translateY(-50%);
 }
 

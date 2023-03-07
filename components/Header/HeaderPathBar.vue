@@ -2,7 +2,7 @@
     <div class="pathBox brownBG centered">
         <div class="path mainWidth flex alignCenter">
             <span class="step flex alignCenter" v-for="step in path" :key="step">
-                <span class="icon">arrow_right</span>
+                <span class="icon">chevron_right</span>
 
                 <nuxtLink :to="step.target" class="italic stepLink flex alignCenter">
                     {{ step.text }}
@@ -26,7 +26,9 @@ const props = defineProps({
     padding-top: 10px;
     padding-bottom: 10px; 
 }
-
+.step .icon{
+    color: var(--dark-blue);
+}
 .step .icon,
 .step .stepLink {
     margin-right: 20px;

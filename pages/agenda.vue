@@ -104,7 +104,7 @@ const { data: dates } = await useAsyncData(
 const headerData = {
     images: [
         {
-            src: `${directusAssets}d07704d8-8cc7-4f30-936a-7d35d689077d.JPG?key=header1500`,
+            src: `${directusAssets}56e72194-4d38-4bab-a018-67a01abd8461.JPG?key=header1500`,
             alt: 'mairie de Locmaria-Berrien',
         }
     ],

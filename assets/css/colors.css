@@ -15,7 +15,7 @@
 
     --black: rgb(20, 20, 20);
 
-    --shadow: 1px 1px 10px rgba(0, 0, 0, 0.664);
+    --shadow: 2px 2px 5px rgb(0, 0, 0);
 
     /* transitions */
 
@@ -27,6 +27,7 @@
     
 .horizontalGradient {
     background: linear-gradient(90deg, rgba(0, 47, 74, 1) 0%, rgba(146, 76, 2, 1) 100%);
+    box-shadow: var(--shadow);
 }
 
 /* Components that react to user actions */
