@@ -6,7 +6,7 @@
                 <div class="slottedContent h100 flex column justifyCenter gap20">
                     <div class="flex column gap10">
                         <h4 class="sectionContentTitle">{{ actu.title }}</h4>
-                        <p>Publié le : {{ new Date(actu.date_created).toLocaleDateString() }}</p>
+                        <p>Le {{ toDayMonthYearFormat(actu.date_created) }}</p>
                     </div>
 
                     <div class="actuContent" v-html="actu.content">
@@ -29,6 +29,17 @@
     </section>
 </template>
 <script setup>
+
+const toDayMonthYearFormat = (_date) => {
+    const weekDays = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+    const months = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"]
+    let date = new Date(_date)
+    const weekDay = weekDays[date.getDay()]
+    let day = ("0" + date.getDate()).slice(-2)
+    const month = months[date.getMonth()]
+    if(day == '01') {day = "1er"}
+    return `${weekDay} ${day} ${month}`;
+}
 
 const props = defineProps({
     limit: String,

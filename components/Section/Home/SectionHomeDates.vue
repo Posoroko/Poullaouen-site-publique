@@ -7,7 +7,8 @@
                 <div class="dateCard" v-for="date in dates" :key="date.id">
                     <div class="topBox">
                         <p class="title">{{ date.title }}</p>
-                        <p class="date italic">{{new Date(date.date).toLocaleDateString()}} <span v-if="date.time">à {{ date.time }}</span> </p>
+                        <p class="date italic">{{ todayDDMMFormat(date.date) }} <span v-if="date.time">à {{ date.time }}</span> </p>
+
                         <p class="location italic">{{ date.location }}</p>
                         <p class="organiser">{{ date.organiser }}</p>
                     </div>
@@ -25,14 +26,26 @@
                 </div>
             </div>
             <div class="agendaButtonBox mainWidth flex justifyEvenly wrap">
-                <NuxtLink class="agendaButton textAlignCenter" to="/agenda">Voir tout l'agenda</NuxtLink>
-                <NuxtLink class="agendaButton textAlignCenter" to="/proposer-un-evenement">Proposer un événement</NuxtLink>
+                <NuxtLink class="italic shadow agendaButton textAlignCenter" to="/agenda">Voir tout l'agenda</NuxtLink>
+                <NuxtLink class="italic shadow agendaButton textAlignCenter" to="/proposer-un-evenement">Proposer un événement</NuxtLink>
             </div>
         </div>
         
     </section>
 </template>
 <script setup>
+// dayDDMM
+const todayDDMMFormat = (_date) => {
+    const weekDays = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+
+    let date = new Date(_date)
+    const weekDay = weekDays[date.getDay()]
+    const day = ("0" + date.getDate()).slice(-2)
+    const month = date.getMonth()
+    console.log(`${weekDay} ${day} ${month}`)
+    return `${weekDay} ${day}/${month}`;
+}
+
 const showInModal = (e) => {
     const modal = document.getElementById('masterModal')
     let children = modal.children
@@ -104,6 +117,7 @@ onMounted(() => {
  }
 
 .agendaButtonBox .agendaButton {
+    width: 45%;
     font-size: 20px;
     font-weight: 600;
     color: var(--dark-blue);

@@ -15,6 +15,9 @@
 .oleo {
     font-family: 'Oleo Script', cursive;
 }
+.brownText {
+    color: var(--brown);
+}
 
 /* Text styles */
 

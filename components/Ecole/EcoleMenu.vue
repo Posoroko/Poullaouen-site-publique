@@ -63,27 +63,19 @@
 <script setup>
 
 const activeButton = ref(null)
+const menu = ref(null)
 
 const selectWeek = (e) => {
     activeButton.value = e.currentTarget.getAttribute('data-id')
     menu.value = menus.value.find(menu => menu.id == e.currentTarget.getAttribute('data-id').slice(2))
 }
-
-const menu = ref(null)
-
 const toDayMonthYearFormat = (_date) => {
     const weekDays = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
     const months = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"]
-
     let date = new Date(_date)
     const weekDay = weekDays[date.getDay()]
-
     const day = ("0" + date.getDate()).slice(-2)
-
     const month = months[date.getMonth()]
-
-
-
     return `${weekDay} ${day} ${month}`;
 }
 

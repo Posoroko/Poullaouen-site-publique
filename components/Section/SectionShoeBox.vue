@@ -7,10 +7,16 @@
             <path class="pied rightFoot" d="M294.7,150.3L399.5,126l87.3,376.6l184.8-42.9l20.5,88.3l-289.6,67.2L294.7,150.3z" />
         </svg>
 
-        <div v-if="image" class="imgFrame absolutlyCentered centered shadow">
+        <div v-if="image && !containedImage" class="imgFrame absolutlyCentered centered shadow">
             <img v-if="image && !localImage" class="objectFitCover pointer" :src="`${directusAssets}${image}?key=card500`" alt="" @click="showInModal">
 
             <img v-if="image && localImage" class="objectFitCover pointer" :src="image" alt="" @click="showInModal">
+        </div>
+
+        <div v-if="image && containedImage" class="imgFrame absolutlyCentered centered ">
+            <img v-if="image && !localImage" class="objectFitContained pointer shadow" :src="`${directusAssets}${image}?key=card500`" alt="" @click="showInModal">
+
+            <img v-if="image && localImage" class="objectFitContained pointer shadow" :src="image" alt="" @click="showInModal">
         </div>
     </div>
 </template>
@@ -47,7 +53,8 @@ const showInModal = (e) => {
 
 const props = defineProps({
     image: String,
-    localImage: Boolean
+    localImage: Boolean,
+    containedImage: Boolean
 })
 
 

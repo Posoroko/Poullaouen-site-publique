@@ -3,56 +3,45 @@
     <main class="">
 
         <p class="intro-text mainWidth page-text">
-            Tous les événements à venirs sont listés ici. Dates importantes, manifestations, fêtes, etc.
+            Pour être sûr de ne pas vous ennuyer, consultez la liste de nos manifestations et festivités.
         </p>
 
-        <section v-for="month in dates.months" :key="month.index">
-            <SectionTitleBar :title="month.name" />
-
-            <div class="mainWidth flex justifyCenter wrap gap20 marTop50">
-                    <div class="dateCard" v-for="date in dates.dates[month.name]" :key="date.id">
+        <section v-if="dates" class="flex column">
+            <div v-for="date in dates" :key="date.id">
+                <SectionMainSloted :data="{ title: date.title, image: date.image, imageAlt: date.imageAlt, localImage: false, containedImage: true }" >
+                    <div class="slottedContent h100 flex column justifyCenter gap20">
                         <div class="topBox">
+                            <h3 class="italic brownText">{{ todayDDMMFormat(date.date) }}</h3>
                             
-                            <p class="date italic">{{ date.displayDate }} <span v-if="date.time">à {{ date.time }}</span> </p>
-                            <p class="title">{{ date.title }}</p>
-                            <p class="location italic">{{ date.location }}</p>
-                            <p class="organiser">{{ date.organiser }}</p>
+                            <p class="brownText">{{ date.location }}</p>
                         </div>
 
-                        <div class="middleBox centered w100">
-                            <div class="frame">
-                                <img class="objectFitContained" :src="`${directusAssets}${date.image}?key=card500`" :alt="date.imageAlt">
-                            </div>
-                        </div>
+                        <p class="page-text dateContent">
+                            {{ date.content }}
+                        </p>
 
-                        <div class="bottomBox">
-                            <p class="content">
-                                {{ date.content }}
-                            </p>
-                            
-                            <p class="moreInfo">{{ date.moreInfo }}</p>
-                        </div>
+                        <p v-if="date.organiser"> <b class="">organisé par </b> <span>{{ date.organiser }}</span> </p>
+                        
+                        <p v-if="date.price"> <b class="">tarif : </b> <span>{{ date.price }}</span> </p>
+                        
+                        <p v-if="date.moreInfo"> <b class="">plus d'info : </b> <span>{{ date.moreInfo }}</span> </p>
                     </div>
-                </div>
+                </SectionMainSloted>
+            </div>
         </section>
-
     </main>
 </template>
 
 <script setup>
 
-const props = defineProps({
-    limit: String
-})
-
-const toDayMonthYearFormat = (_date) => {
+const todayDDMMFormat = (_date) => {
     const weekDays = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
-    const months = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"]
     let date = new Date(_date)
     const weekDay = weekDays[date.getDay()]
     const day = ("0" + date.getDate()).slice(-2)
-    const month = months[date.getMonth()]
-    return `${weekDay} ${day} ${month}`;
+    const month = date.getMonth()
+    console.log(`${weekDay} ${day} ${month}`)
+    return `${weekDay} ${day}/${month}`;
 }
 
 const appConfig = useAppConfig();
@@ -62,8 +51,7 @@ const directusItems = appConfig.directus.items;
 const fetchOptions = {
     server: true,
     params: {
-        fields: 'id, title, date, location, content, image, imageAlt, price, file, filename',
-        limit: props.limit
+        fields: 'id, title, date, location, content, organiser, image, imageAlt, price, file, filename'
     }
 }
 
@@ -71,31 +59,8 @@ const { data: dates } = await useAsyncData(
     "agenda",
     async () => {
         const _dates = await $fetch(`${directusItems}Agenda`, fetchOptions)
-        const dates = _dates.data
 
-        const monthNames = [ "Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre" ];
-
-        const temp = {
-            monthsRef: [],  //array of months index (0-11)
-            months: [], //array of objects with month display name
-            dates: {}   //one array for every month present in dates
-        }
-
-        dates.forEach(date => {
-            const month = new Date(date.date).getMonth()
-            if(!temp.monthsRef.includes(month)){
-                temp.monthsRef.push(month)
-                temp.months.push({
-                    name: monthNames[month],
-                    index: month
-                })
-                temp.dates[monthNames[month]] = []
-            }
-            date.displayDate = toDayMonthYearFormat(date.date) 
-            temp.dates[monthNames[month]].push(date) 
-        })
-
-        return temp
+        return _dates.data
     }
     ,
     { server: true } 
@@ -120,9 +85,27 @@ const headerData = {
         }
     ]
 }
+const applyStyleClasses_utils = () => {
 
+    const sections = document.querySelectorAll('.sectionBoxSloted')
+
+    for (let i = 1; i < sections.length; i = i + 4) {
+        sections[i].classList.replace('whiteSection', 'blueSection')
+    }
+    for (let i = 3; i < sections.length; i = i + 4) {
+        sections[i].classList.replace('whiteSection', 'brownSection')
+    }
+}
+
+onMounted(() => {
+    applyStyleClasses_utils()
+})
 
 
 </script>
 
-<style></style>
+<style>
+.dateContent {
+    white-space: pre-wrap;
+}
+</style>
