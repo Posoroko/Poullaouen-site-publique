@@ -55,7 +55,7 @@
                 </div>
             </SectionMainSloted>
             <br>
-            <h4 class="mainWidth">Retrouvez l’ensemble du Plan Local d’Urbanisme sur le site du Géoportail de l’urbanisme.</h4>
+            <h4 class="mainWidth">Retrouvez l’ensemble du Plan Local d’Urbanisme sur le site du <a class="externalLink" href="https://www.geoportail-urbanisme.gouv.fr/">géoportail de l’urbanisme</a>.</h4>
         </div>
     </main>
 </template>
@@ -68,7 +68,7 @@ const directusAssets = appConfig.directus.assets;
 const headerData = {
     images: [
         {
-            src: `${directusAssets}3f214142-02e6-4995-87a4-b374ead7feaa.jpg`,
+            src: `${directusAssets}3f214142-02e6-4995-87a4-b374ead7feaa.jpg?key=header1500`,
             alt: "L'entrée du bourg de Poullaouen",
         }
     ],

@@ -40,8 +40,8 @@
                         La collecte est divisée en deux secteurs géographiques sur Poullaouen
                         (semaines paires et impaires).
                         <br> <br>
-                        Chaque foyer est doté d’un bac individuel. Le bac doit être sorti
-                        impérativement avant 8 heures (ou la veille au soir) devant la maison
+                        Chaque foyer est doté d’un <b>bac</b> individuel. Le bac doit être <b>sorti</b>
+                        impérativement <b>avant 8 heures</b> (ou la veille au soir) devant la maison
                         ou à l’emplacement du point de rapprochement situé au bord de la
                         route, la poignée tournée vers la route (pour faciliter la prise en main
                         par les agents).
@@ -168,7 +168,7 @@
                             <p><span class="icon">call</span>02 98 99 84 43 / 06 45 47 39 62</p>
                             <p><span class="icon">mail</span><a class="noLineLink" href="mailto: tri@poher.bzh">tri@poher.bzh</a></p>
                             <p class="flex justifyStart gap20"> 
-                                <span>Guide de compostage</span>
+                                <b>Guide de compostage</b>
                                 <span class="flex alignCenter gap10">
                                     <span class="icon">visibility</span> <a class="noLineLink" target="_blank" href="/dechets/leguideducompostage.pdf">Consulter</a>
                                     <span class="icon">download</span> <a class="noLineLink" download href="/dechets/leguideducompostage.pdf">Télécharger</a>
@@ -178,6 +178,8 @@
                         </div>
                     </div>
                 </SectionMainSloted>
+
+                <SectionTitleBar title="Les déchetteries" />
 
                 <div class="flex justifyCenter gap50 wrap cardSection">
                     <CardsTallMain  title="Déchetterie de Carhaix" cardImage="/images/dechets/Déchetterie Carhaix.jpg" :localImage="true">
