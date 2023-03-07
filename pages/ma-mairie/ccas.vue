@@ -84,6 +84,16 @@ const headerData = {
         }
     ]
 }
+const applyStyleClasses_utils = () => {
+
+    const section = document.querySelector('.sectionBoxSloted')
+
+    section.classList.replace('whiteSection', 'blueSection')
+
+}
+onMounted(() => {
+    applyStyleClasses_utils()
+})
 
 </script>
 

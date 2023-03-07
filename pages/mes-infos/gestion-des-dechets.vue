@@ -338,13 +338,13 @@ onMounted(() => {
     transition: 300ms ease;
 }
 .questionBox:hover {
-    background-color: #0184d525;
+    background-color: #0184d523;
     transition: 300ms ease;
 }
 .questionBox .question {
     
-    border-bottom: 1px solid var(--green);
-    padding: 5px 10px;
+    border-bottom: 1px solid var(--dark-blue);
+    padding: 10px 10px;
     user-select: none;
 }
 .questionBox .question *{
@@ -352,8 +352,9 @@ onMounted(() => {
     color: var(--brown);
 }
 .answer {
+    line-height: 23px;
     padding: 20px 40px;
-    border-bottom: 1px solid var(--green);
+    border-bottom: 1px solid var(--dark-blue);
 }
 .bottomBox {
     padding: 20px;

@@ -9,8 +9,20 @@
                     <p class="page-text">
                         L’école Jules Ferry accueille les enfants dès l’âge de 2 ans révolus. A la rentrée de septembre 2022, 83 élèves sont répartis dans les différentes
                         classes de la maternelle au CM2. Une classe bilingue français/breton multi-niveaux (de la maternelle au CM2) existe depuis 2010.
-                        La classe bilingue de Marie Miguet : 13 élèves La classe maternelle de Julia Keller et Priscilla Charles : 28 élèves
-                        La classe CP, CE1, CE2 de Marie Le Doaré : 23 élèves La classe CM1, CM2 d’Anthony Le Cam et Chloé Camus (le mardi) : 19 élèves
+
+                        
+                    </p>
+                    <p class="page-text">
+                        La classe bilingue de Marie Miguet : 13 élèves
+                    </p>
+                    <p class="page-text">
+                        La classe maternelle de Julia Keller et Priscilla Charles : 28 élèves
+                    </p>
+                    <p class="page-text">
+                        La classe CP, CE1, CE2 de Marie Le Doaré : 23 élèves
+                    </p>
+                    <p class="page-text">
+                        La classe CM1, CM2 d’Anthony Le Cam et Chloé Camus (le mardi) : 19 élèves
                     </p>
 
                     <div class="infoBox">
@@ -58,33 +70,37 @@
                     </p>
 
                     <div class="flex justifyBetween">
-                        <p class="flex alignCenter gap10"> <span class="icon">visibility</span> <b>Programme de l'année</b> </p>
+                        <!-- <p class="flex alignCenter gap10"> <span class="icon">visibility</span> <b>Programme de l'année</b> </p> -->
+                        <div></div>
                         <NuxtLink to="/galerie-photo/ecole-jules-ferry" class="albumButton blueAlbumButton">Voir l'album</NuxtLink>
                     </div>
                 </div>
             </SectionMainSloted>
 
-            <SectionMainSloted class="brownSection" :data="{ title: 'La maternelle dehors', image: '/images/ecole/tap.jpg', imageAlt: 'Eau et assainissement', localImage: true }">
+            <SectionMainSloted class="brownSection" :data="{ title: 'La maternelle dehors', image: '/images/ecole/activite.jpg', imageAlt: 'Eau et assainissement', localImage: true }">
                 <div class="slotedSectionTextBox flex column justifyCenter pad20 gap20">
                     <p class="page-text">
                         Depuis le mois de septembre, une matinée par semaine, les élèves de
                         maternelle sortent de l’école pour faire classe en plein air : chaque lundi,
                         ils chaussent leurs bottes pour se rendre sur un terrain communal à
-                        proximité immédiate .
-
+                        proximité immédiate.
+                    </p>
+                    <p class="page-text">
                         Au programme, plantations, jeux sportifs, chasse aux escargots,
                         constitution d’un herbier, fabrication de mangeoire pour oiseaux, land
                         art...qui permettront d’étudier le vivant, d’observer la succession des
                         saisons et son impact sur le milieu, de développer la créativité, le sens
                         de l’observation...
-
+                    </p>
+                    <p class="page-text">
                         Cette pratique, qui encourage l’attirance des enfants pour la nature,
                         leur permet d’expérimenter, de manipuler, d’utiliser leur sens pour
                         vivre les apprentissages. Dans cette «salle de classe» à ciel ouvert, les
                         enfants peuvent courir, creuser la terre, marcher dans les flaques...
                         Tenue adaptée indispensable !
-
-                        Ce concept est très développé dans les pays du nord de l’Europe
+                    </p>
+                    <p class="page-text">
+                       Ce concept est très développé dans les pays du nord de l’Europe
                         notamment. Des études montrent les bienfaits du temps passé dans
                         la nature pour le bien-être de l’enfant, sa santé, mais aussi la qualité
                         de ses apprentissages.

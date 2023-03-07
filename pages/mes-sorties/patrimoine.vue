@@ -46,7 +46,7 @@ const filterItems = (e) => {
     }, 10)
 }
 
-const activeDefaultFilterButton = ref('all')
+const activeDefaultFilterButton = ref('religieux')
 
 const appConfig = useAppConfig();
 const directusAssets = appConfig.directus.assets;

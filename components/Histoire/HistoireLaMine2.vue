@@ -1,5 +1,5 @@
 <template>
-    <SectionMainSloted :data="{ title: null, image: null, localImage: true }">
+    <SectionMainSloted :data="{ title: null, image: '/images/histoire/page mine.jpg', localImage: true }">
 
         <div class="histoireSectionContent h100 flex column justifyCenter gap20 pad20">
             <h2 class="histoireSubtitle">Une exploitation minière en plein essor au XVIIIè et XIXè siècle avec la Compagnie des Mines de Basse-Bretagne. </h2>
