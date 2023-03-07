@@ -59,6 +59,7 @@
 
 const appConfig = useAppConfig();
 const directusItems = appConfig.directus.items;
+const directusAssets = appConfig.directus.assets;
 
 const types = {
     arrete: 'Arrêté municipal',
