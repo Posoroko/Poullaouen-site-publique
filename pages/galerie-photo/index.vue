@@ -7,7 +7,7 @@
         </p>
 
         <nav class="defaultFilterBox horizontalGradient">
-            <p class="mainWidth page-text">filtrer les résultats par thème.</p>
+            <p class="mainWidth page-text">Filtrer les résultats par thème</p>
 
             <div class="mainWidth flex justifyCenter alignCenter wrap gap20">
                 <div class="defaultFilterButton pointer" @click="filterItems" data-category="all"
@@ -34,13 +34,13 @@
 
                     <div class="galerySectionContent h100 flex column justifyCenter gap10">
                     <div class="galeryTopBox">
-                        <p class="albumDate">{{ new Date(album.date_created).toLocaleString().slice(0, 10) }}</p>
+                        <p class="albumDate">{{ toMonthYearFormat(album.date_created) }}</p>
                     </div>
 
                     <p class="page-text">{{ album.content }}</p>
                 
                     <div class="galeryBottomBox flex justifyEnd">
-                        <NuxtLink :to="`/galerie-photo/${album.slug}`" class="galeryAlbumButton">Voir l'albums</NuxtLink> 
+                        <NuxtLink :to="`/galerie-photo/${album.slug}`" class="galeryAlbumButton shadow">Voir l'album</NuxtLink> 
                     </div>
                 </div>
                 </SectionMainSloted>
@@ -90,7 +90,16 @@ const filterAlbumName = (e) => {
     }, 10)
 }
 
+const toMonthYearFormat = (_date) => {
 
+    const months = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"]
+    let date = new Date(_date)
+    let day = ("0" + date.getDate()).slice(-2)
+    const month = months[date.getMonth()]
+    const year = date.getFullYear()
+    if (day == '01') { day = "1er" }
+    return `${day} ${month} ${year}`;
+}
 
 
 

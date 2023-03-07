@@ -6,8 +6,6 @@
             Petite commune, mais très dynamique : les associations sportives, de loisirs, culturelles ne manquent pas.
         </p>
 
-        
-
         <FilterBarMain :filters="assosData.filters" @updateFilter="moveSectionToFirstPosition" :slugged="false" />
 
         <div class="content flext column" ref="content">

@@ -35,9 +35,9 @@
                         <p class="w100 flex justifyBetween alignCenter">
                             <span> <b>Flyer :</b></span>
                             <span class="flex alignCenter gap20">
-                                <a class="flex alignCenter gap5" href=""><span class="icon">visibility</span>Consulter</a>
+                                <a class="flex alignCenter gap5 externalLink" href=""><span class="icon">visibility</span>Consulter</a>
                         
-                                <a class="flex alignCenter gap5" href=""><span class="icon">download</span> Télécharger</a>       
+                                <a class="flex alignCenter gap5 externalLink" href=""><span class="icon">download</span> Télécharger</a>       
                             </span>
                         </p>
                     </div>
@@ -134,7 +134,7 @@ const { data: questions } = await useAsyncData(
 const headerData = {
     images: [
         {
-            src: `${directusAssets}f4246d57-f7e1-41cc-928a-eaad77d66a7d.JPG`,
+            src: `${directusAssets}f4246d57-f7e1-41cc-928a-eaad77d66a7d.JPG?key=header1500`,
             alt: "Le musé de la mine",
         }
     ],

@@ -9,7 +9,7 @@
                     :data-id="`id${menu.id}`"
                     @click="selectWeek">
 
-                    <span class="Span1">semaine du :</span>
+                    <span class="Span1">Semaine du :</span>
                     <span class="span2">{{ toDayMonthYearFormat(menu.date) }}</span>
                 </div>
             </div>

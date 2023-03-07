@@ -6,13 +6,13 @@
             <div class="stripe marTop150 relative">
                 <!-- <SectionPieds /> -->
                 <div class="content mainWidth flex alignCenter justifyCenter">
-                    <div class="maireCard flex column">
+                    <div class="maireCard flex column shadow">
                         <div class="titleBox centered">
                             <h2>
                                 {{ maire.firstName }} {{ maire.lastName }}
                             </h2>
 
-                            <h3>
+                            <h3 class="italic">
                                 {{ maire.role }}
                             </h3>
                         </div>

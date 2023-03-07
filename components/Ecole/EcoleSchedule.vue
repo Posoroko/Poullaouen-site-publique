@@ -65,7 +65,7 @@
         </div>
 
         <div class="mainWidth flex justifyStart">
-            <NuxtLink to="https://www.education.gouv.fr/calendrier-scolaire-100148" class="albumButton whiteAlbumButton flex alignCenter gap10"> <span class="icon">visibility</span> <b>Calendrier scolaire</b> </NuxtLink>
+            <NuxtLink to="https://www.education.gouv.fr/calendrier-scolaire-100148" class="externalLink albumButton whiteAlbumButton flex alignCenter gap10"> <span class="icon">visibility</span> <b>Calendrier scolaire</b> </NuxtLink>
         </div>
     </section>
 </template>

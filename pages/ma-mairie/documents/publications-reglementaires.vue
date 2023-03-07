@@ -6,11 +6,11 @@
             Depuis le 1er juillet 2022, en référence à l’article L 2131-1 du Code Général des Collectivités Territoriales, les actes administratifs font
             l’objet d’une publication électronique.
         </p>
-
+    <div class="marTop50"></div>
     <section class="docsSection docsLatestsSection relative marTop150">        
         <div class="stripe darkBlueBG w100">
             <div class="content mainWidth w100 flex justifyCenter wrap gap20">
-                <article class="procesCard flex column justifyCenter alignCenter relative" v-for="doc in publications.latests" :key="doc.id">
+                <article class="procesCard flex column justifyCenter  relative" v-for="doc in publications.latests" :key="doc.id">
                     <figure class="">
                         <img src="/images/logo.png" alt="">
                     </figure>
@@ -20,9 +20,9 @@
                         <p>{{ new Date(doc.date).toLocaleString().slice(0, 11) }}</p>
                     </div>
 
-                    <!-- <div class="downloaderFrame absoluteFull">
+                    <div class="downloaderFrame absoluteFull">
                         <DocsDownloadWidget :link="`${directusAssets}${doc.file}`" />
-                    </div> -->
+                    </div>
                 </article>
             </div>
 
@@ -31,7 +31,7 @@
             <SectionPieds />
         </div>
     </section>
-    
+    <div class="marTop50"></div>
     <section class="marTop150">
         <div class="stripe w100">
             <div class="content mainWidth w100 flex justifyCenter wrap">
@@ -120,7 +120,8 @@ const headerData = {
 <style scoped>
 
 .piedBox {
-    width: 600px;
+    width: 100%;
+    height: 150%;
     position: absolute;
     left: 50%;
     top: 50%;

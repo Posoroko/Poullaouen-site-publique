@@ -8,7 +8,7 @@
         </p>
 
         <nav class="defaultFilterBox">
-            <p class="mainWidth page-text">filtrer les résultats par thème.</p>
+            <p class="mainWidth page-text">Filtrer les résultats par thème</p>
 
             <div class="mainWidth flex justifyCenter wrap gap20">
                 <div class="defaultFilterButton pointer" @click="activeFilter = 'all'" :class="{ activeDefaultFilterButton : activeFilter == 'all'}">Toute l'histoire</div>

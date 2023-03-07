@@ -3,7 +3,7 @@
 
     <main class="mainCCAS">
         <p class="mainWidth intro-text">
-            La commune vous propose plusieurs salles adaptées à vos évènements, pour tout renseignement vous pouvez contacter la mairie de Poullaouen ou de Locmaria-Berrien.
+            La commune vous propose plusieurs salles adaptées à vos évènements, pour tout renseignement vous pouvez contacter la mairie de Poullaouen au 02.98.93.50.76 ou de Locmaria-Berrien au 02.98.99.73.09.
         </p>
 
         <div v-for="(salle, index) in salles" :key="salle.id" >
@@ -27,7 +27,7 @@
                             <h5 class="level1">Poullaouennais</h5>
                             <ul>
                                 <li class="breadcrumbs-text level2">
-                                    <span>1 jour : &nbsp</span>
+                                    <span>location 1 jour : &nbsp</span>
                                     <span v-if="salle.locals1">{{ salle.locals1 }}€ sans cuisine</span>
                                     <span v-if="salle.locals1 && salle.localsKitchen1">&nbsp / &nbsp</span>
                                     <span v-if="salle.localsKitchen1"> 
@@ -35,7 +35,7 @@
                                     </span>
                                 </li>
                                 <li class="breadcrumbs-text level2">
-                                    <span>2 jours : &nbsp</span>
+                                    <span>location 2 jours : &nbsp</span>
                                     <span v-if="salle.locals2">{{ salle.locals2 }}€ sans cuisine</span>
                                     <span v-if="salle.locals2 && salle.localsKitchen2">&nbsp / &nbsp</span>
                                     <span v-if="salle.localsKitchen2"> 
@@ -52,13 +52,13 @@
                             <li>
                                 <ul>
                                     <li class="breadcrumbs-text level2">
-                                        <span>1 jour : &nbsp</span>
+                                        <span>location 1 jour : &nbsp</span>
                                         <span v-if="salle.externs1">{{ salle.externs1 }}€ sans cuisine</span>
                                         <span v-if="salle.externs1 && salle.externsKitchen1">&nbsp / &nbsp</span>
                                         <span v-if="salle.externsKitchen1"> {{ salle.externsKitchen1 }}€ avec cuisine </span>
                                     </li>
                                     <li class="breadcrumbs-text level2">
-                                        <span>2 jours : &nbsp</span>
+                                        <span>location 2 jours : &nbsp</span>
                                         <span v-if="salle.externs2">{{ salle.externs2 }}€ sans cuisine</span>
                                         <span v-if="salle.externs2 && salle.externsKitchen2">&nbsp / &nbsp</span>
                                         <span v-if="salle.externsKitchen2">

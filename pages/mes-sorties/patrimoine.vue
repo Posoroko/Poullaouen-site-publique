@@ -9,14 +9,14 @@
         </p>
 
         <nav class="patrimoineFilterBox">
-            <p class="mainWidth page-text">filtrer les résultats par thème.</p>
+            <p class="mainWidth page-text">Filtrer les résultats par thème</p>
 
             <div class="mainWidth flex justifyCenter wrap gap20">
-                <div class="defaultFilterButton pointer" @click="filterItems" data-filter="all" :class="{ activeDefaultFilterButton: activeDefaultFilterButton == 'all' }">Tout le patrimoine</div>
-                <div class="defaultFilterButton pointer" @click="filterItems" data-filter="naturel" :class="{ activeDefaultFilterButton: activeDefaultFilterButton == 'naturel' }">naturel</div>
-                <div class="defaultFilterButton pointer" @click="filterItems" data-filter="religieux" :class="{ activeDefaultFilterButton: activeDefaultFilterButton == 'religieux' }">religieux</div>
-                <div class="defaultFilterButton pointer" @click="filterItems" data-filter="bati" :class="{ activeDefaultFilterButton: activeDefaultFilterButton == 'bati' }">bâti</div>
-                <div class="defaultFilterButton pointer" @click="filterItems" data-filter="industriel" :class="{ activeDefaultFilterButton: activeDefaultFilterButton == 'industriel' }">industriel</div>
+                <div class="defaultFilterButton pointer shadow" @click="filterItems" data-filter="all" :class="{ activeDefaultFilterButton: activeDefaultFilterButton == 'all' }">Tout le patrimoine</div>
+                <div class="defaultFilterButton pointer shadow" @click="filterItems" data-filter="naturel" :class="{ activeDefaultFilterButton: activeDefaultFilterButton == 'naturel' }">Naturel</div>
+                <div class="defaultFilterButton pointer shadow" @click="filterItems" data-filter="religieux" :class="{ activeDefaultFilterButton: activeDefaultFilterButton == 'religieux' }">Religieux</div>
+                <div class="defaultFilterButton pointer shadow" @click="filterItems" data-filter="bati" :class="{ activeDefaultFilterButton: activeDefaultFilterButton == 'bati' }">Bâti</div>
+                <div class="defaultFilterButton pointer shadow" @click="filterItems" data-filter="industriel" :class="{ activeDefaultFilterButton: activeDefaultFilterButton == 'industriel' }">Industriel</div>
             </div>
         </nav>
 

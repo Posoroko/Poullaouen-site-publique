@@ -2,7 +2,7 @@
     <div class="tallCard whiteTallCard h100 flex column">
         <div class="topBox flex justifyCenter alignCenter column gap10">
             <h2 class="">{{ title }}</h2>
-            <h3 class="">{{ subtitle }}</h3>
+            <h3 class="italic">{{ subtitle }}</h3>
         </div>
 
         <div class="frame">

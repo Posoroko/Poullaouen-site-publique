@@ -6,7 +6,7 @@
                 <div class="button pointer flex column alignCenter" :class="{ active: activeButton == `id${menu.id}` }"
                     v-for="menu in menus" :key="menu.id" :data-id="`id${menu.id}`" @click="selectWeek">
 
-                    <span class="Span1">semaine du :</span>
+                    <span class="Span1">Semaine du :</span>
                     <span class="span2">{{ toDayMonthYearFormat(menu.date) }}</span>
                 </div>
             </div>

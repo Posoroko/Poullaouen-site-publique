@@ -2,7 +2,6 @@
     <HeaderMain :data="headerData" />
 
     <main class="mainEcole">
-
         <div>
             <SectionMainSloted
                 :data="{ title: 'L’école maternelle et primaire Jules Ferry', image: '/images/ecole/enseignants.jpg', imageAlt: 'Eau et assainissement', localImage: true }">
@@ -166,7 +165,7 @@
                     <div class="infoBox marTop20 flex column gap5">
                         <p class="flex alignCenter gap10"> <span class="icon">call</span> 02 98 99 48 00</p>
                         <p class="flex alignCenter gap5"><span class="icon">email</span><a href="emailto: transport@poher.com"></a>transport@poher.com</p>
-                        <p class="flex alignCenter gap10"> <span class="icon">language</span> <a href="https://www.poher.bzh/accueil_poher/les_services/mobilites/le_transport_scolaire/annee_scolaire_2022_2023">Poher communauté</a> </p>
+                        <p class="flex alignCenter gap10"> <span class="icon">language</span> <a class="externalLink" href="https://www.poher.bzh/accueil_poher/les_services/mobilites/le_transport_scolaire/annee_scolaire_2022_2023">Poher communauté</a> </p>
                     </div>
                 </div>
             </SectionMainSloted>
@@ -204,20 +203,6 @@ const headerData = {
     ]
 }
 
-// const applyStyleClasses_utils = () => {
-
-//     const sections = document.querySelectorAll('.sectionBoxSloted')
-
-//     for (let i = 1; i < sections.length; i = i + 4) {
-//         sections[i].classList.replace('whiteSection', 'blueSection')
-//     }
-//     for (let i = 3; i < sections.length; i = i + 4) {
-//         sections[i].classList.replace('whiteSection', 'brownSection')
-//     }
-// }
-// onMounted(() => {
-//     applyStyleClasses_utils()
-// })
 </script>
 
 <style scoped>

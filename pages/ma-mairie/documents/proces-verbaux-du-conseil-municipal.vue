@@ -13,7 +13,7 @@
                 {{ year }}    
             </NuxtLink>
         </div>
-
+        <div class="marTop50"></div>
         <section class="docsSection docsLatestsSection relative" v-for="(year, index) in myData.years" :key="year" :id="`section${year}`">
             <SectionTitleBar class="titleComp" :title="year" />
             
@@ -147,7 +147,8 @@ const headerData = {
 <style scoped>
 
 .piedBox {
-    height: 500px;
+    height: 110%;
+    width: 100%;
     position: absolute;
     left: 50%;
     top: calc(50% + 100px);
