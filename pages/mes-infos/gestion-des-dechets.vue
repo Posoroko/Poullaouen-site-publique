@@ -101,7 +101,7 @@
                     </p>
 
                     <div class="infoBox w100">
-                        <p class="flex justifyBetween alignCenter"> 
+                        <p class="flex alignCenter gap10"> 
                             <b>Consigne du tri sélectif</b> 
                             
                             <span class="flex alignCenter gap10">
@@ -165,8 +165,8 @@
 
                         <div class="infoBox flex column gap5 w100">
                             <p>Pour se procurer un composteur ou un bio-seau :</p>
-                            <p><span class="icon">call</span>02 98 99 84 43 / 06 45 47 39 62</p>
-                            <p><span class="icon">mail</span><a class="noLineLink" href="mailto: tri@poher.bzh">tri@poher.bzh</a></p>
+                            <p class="flex alignCenter gap10"><span class="icon">call</span>02 98 99 84 43 / 06 45 47 39 62</p>
+                            <p class="flex alignCenter gap10"><span class="icon alignCenter gap10">mail</span><a class="noLineLink alignCenter" href="mailto: tri@poher.bzh">tri@poher.bzh</a></p>
                             <p class="flex justifyStart gap20"> 
                                 <b>Guide de compostage</b>
                                 <span class="flex alignCenter gap10">

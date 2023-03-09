@@ -38,7 +38,7 @@
                     <div class="infoBox  ">
                         <p> <span class="icon">location_on</span> Avenue Général De Gaulle - Poullaouen </p>
                         <p> <span class="icon">call</span> 02 98 93 04 42</p>
-                        <p> <span class="icon">language</span> <a class="externalLink" href="https://www.tourismecarhaix.poher.com">www.tourismecarhaix.poher.com</a></p>
+                        <p> <span class="icon">language</span> <a class="externalLink" href="https://www.carhaixpohertourisme.bzh/">www.carhaixpohertourisme.bzh</a></p>
                     </div>
                 </div>
             </SectionMainSloted>

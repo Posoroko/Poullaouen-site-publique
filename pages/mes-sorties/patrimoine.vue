@@ -30,6 +30,7 @@
         <PatrimoineFour v-if="activeDefaultFilterButton == 'bati' || activeDefaultFilterButton == 'all'" />
         <PatrimoineChateau v-if="activeDefaultFilterButton == 'bati' || activeDefaultFilterButton == 'all'" />
         <PatrimoineManoirs v-if="activeDefaultFilterButton == 'bati' || activeDefaultFilterButton == 'all'" />
+        <PatrimoineLaTruite v-if="activeDefaultFilterButton == 'bati' || activeDefaultFilterButton == 'all'" />
         <PatrimoinePonts v-if="activeDefaultFilterButton == 'bati' || activeDefaultFilterButton == 'all'" />
         <PatrimoineGare v-if="activeDefaultFilterButton == 'industriel' || activeDefaultFilterButton == 'all'" />
         <PatrimoineMineDePlomb v-if="activeDefaultFilterButton == 'industriel' || activeDefaultFilterButton == 'all'" />

@@ -41,6 +41,8 @@
         <HistoireLaMine6 v-if="activeFilter == 'mines' || activeFilter == 'all'" />
         <HistoireLaMine7 v-if="activeFilter == 'mines' || activeFilter == 'all'" />
         <HistoireLaMine8 v-if="activeFilter == 'mines' || activeFilter == 'all'" />
+        <HistoireVieilleNouvelle v-if="activeFilter == 'mines' || activeFilter == 'all'" />
+        <HistoireMineAujourdhui v-if="activeFilter == 'mines' || activeFilter == 'all'" />
 
         <section class="poullaouen" v-if="activeFilter == 'locmaria' || activeFilter == 'all'">
             

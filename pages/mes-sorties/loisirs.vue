@@ -8,7 +8,7 @@
 
         <div class="gradSection">
             <SectionMainSloted
-                :data="{ title: 'Le pass loisir', image: '/images/loisirs/cinema.jpg', imageAlt: 'Reciclag à Poullaouën', localImage: true }">
+                :data="{ title: 'Le pass loisir', image: '/images/loisirs/A-Prg1020644-maison de la mine.jpg', imageAlt: 'Reciclag à Poullaouën', localImage: true }">
                 <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap10">
                     <h4 class="whiteText">Profitez de tarifs réduits avec le «pass’ loisirs» !</h4>
                     <p class="flex column gap20 whiteText">
@@ -35,9 +35,9 @@
                         <p class="w100 flex justifyBetween alignCenter whiteText">
                             <span class="whiteText"> <b class="whiteText">Flyer :</b></span>
                             <span class="flex alignCenter gap20 whiteText">
-                                <a class="flex alignCenter gap5 externalLink" target="_blank" href="/loisirs/new pass loisirs.pdf"><span class="icon whiteText">visibility</span>Consulter</a>
+                                <a class="flex alignCenter gap5" target="_blank" href="/loisirs/new pass loisirs.pdf"><span class="icon whiteText">visibility</span>Consulter</a>
                         
-                                <a class="flex alignCenter gap5 externalLink" href="/loisirs/new pass loisirs.pdf" download><span class="icon whiteText">download</span> Télécharger</a>       
+                                <a class="flex alignCenter gap5" href="/loisirs/new pass loisirs.pdf" download><span class="icon whiteText">download</span> Télécharger</a>       
                             </span>
                         </p>
                     </div>
@@ -315,6 +315,9 @@
                         </p>
                     </div>
                 </CardsTallMain>
+                <div class="mainWidth centered">
+                    <a class="officeButton" href="https://www.carhaixpohertourisme.bzh/">Office de Tourisme de Carhaix et du Poher</a>
+                </div>
             </div>
                 <SectionMainSloted
                     :data="{ title: 'A Huelgoat - 10km', image: '/images/loisirs/Entrée du site légendaire Huelgoat.jpg', imageAlt: 'Entrée du site légendaire Huelgoat', localImage: true }">
@@ -466,7 +469,14 @@ onMounted(() => {
 </script>
 
 <style scoped>
-
+.officeButton{
+    font-size: 18px;
+    color: white;
+    background-color: var(--dark-blue);
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
 .brownFoot {
     fill: var(--brown);
 }
