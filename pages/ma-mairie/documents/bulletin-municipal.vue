@@ -45,7 +45,7 @@
                             :alt="`Bulletin municipal de Poullaouën ${doc.datePublication}`" @click.prevent="openModal">
 
                             <div class="downloaderFrame absoluteFull">
-                                <DocsDownloadWidget :doc="doc" />
+                                <DocsDownloadWidget :link="`${directusAssets}${doc.file}`" />
                             </div>
                         </figure>
         

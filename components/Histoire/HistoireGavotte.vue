@@ -15,6 +15,10 @@
         <p class="page-text">
             L’association DANS TRO organise les Nuits de la gavotte tous les ans, le 3ème week-end de septembre.
         </p>
+
+        <p class="bottomBox">
+            <p>photo: © Eric Legret</p>
+        </p>
     </div>
 </SectionMainSloted>
 </template>

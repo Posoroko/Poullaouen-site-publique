@@ -19,13 +19,13 @@
             
             <div class="stripe w100 marTop100" :class="{ darkBlueBG : index == 0}">
                 <div class="content mainWidth flex justifyCenter wrap">
-                    <article class="procesCard flex column justifyCenter alignCenter relative" v-for="doc in myData.docs[year]" :key="doc.id">
+                    <article class="mairieDocCard relative" v-for="doc in myData.docs[year]" :key="doc.id">
                         <figure class="">
                             <img src="/images/logo.png" alt="">
                         </figure>
                   
                         <div class="bottomBox">
-                            <h5> Procès verbal du </h5>
+                            <p> Procès verbal du </p>
                   
                             <p>{{ new Date(doc.datePublication).toLocaleString().slice(0, 11)  }}</p>
                         </div>
@@ -145,7 +145,42 @@ const headerData = {
 </script>
 
 <style scoped>
+.mairieDocCard {
+    width: 210px;
+    height: 248px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
 
+.mairieDocCard figure {
+    width: 100px;
+    margin: auto;
+}
+
+.mairieDocCard figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.mairieDocCard * {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--dark-blue);
+}
+.mairieDocCard .bottomBox {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 .piedBox {
     height: 110%;
     width: 100%;
@@ -178,31 +213,7 @@ const headerData = {
     padding-bottom: 20px;
     gap: 20px;
 }
-.procesCard {
-    width: 210px;
-    height: 248px;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: var(--shadow);
-}
-.procesCard figure {
-    width: 100%;
-    height: 50%;
-}
-.procesCard figure img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
 
-.procesCard * { 
-    text-align: center;
-    font-size: 24px;
-    font-weight: 400;
-    color: var(--dark-blue);
-    
-}
 
 
 .docsMain .docsLatestsSection .stripe .footBox {

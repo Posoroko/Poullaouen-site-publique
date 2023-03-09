@@ -13,7 +13,7 @@
             <div class="mainWidth flex justifyCenter wrap gap20">
                 <div class="defaultFilterButton pointer" @click="activeFilter = 'all'" :class="{ activeDefaultFilterButton : activeFilter == 'all'}">Toute l'histoire</div>
                 <div class="defaultFilterButton pointer" @click="activeFilter = 'poullaouen'" :class="{ activeDefaultFilterButton: activeFilter == 'poullaouen' }">Poullaouen</div>
-                <div class="defaultFilterButton pointer" @click="activeFilter = 'locmaria'" :class="{ activeDefaultFilterButton: activeFilter == 'locmaria' }">locmaria-Berrien</div>
+                <div class="defaultFilterButton pointer" @click="activeFilter = 'locmaria'" :class="{ activeDefaultFilterButton: activeFilter == 'locmaria' }">Locmaria-Berrien</div>
                 <div class="defaultFilterButton pointer" @click="activeFilter = 'mines'" :class="{ activeDefaultFilterButton: activeFilter == 'mines' }">Les mines</div>
             </div>
         </nav>

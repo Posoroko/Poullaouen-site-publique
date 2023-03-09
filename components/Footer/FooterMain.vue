@@ -132,9 +132,9 @@
                 <div class="line"></div>
                 <NuxtLink class="bottomLink" to="/mentions-legales">MENTIONS LEGALES</NuxtLink>
                 <div class="line"></div>
-                <NuxtLink class="bottomLink" to="https://www.comkreiz.com/">WEB DESIGN : COM KREIZ</NuxtLink>
+                <NuxtLink class="bottomLink" to="https://www.comkreiz.com/" target="_blank">WEB DESIGN : COM KREIZ</NuxtLink>
                 <div class="line"></div>
-                <NuxtLink class="bottomLink" to="https://www.posoroko.com/">DEVELOPPEMENT :  STUDIO POSOROKO</NuxtLink>
+                <NuxtLink class="bottomLink" to="https://www.posoroko.com/" target="_blank" >DEVELOPPEMENT :  STUDIO POSOROKO</NuxtLink>
             </div>
         </div>
         <img class="absolute vague" src="/images/vague.svg">
@@ -147,7 +147,7 @@
 
 <style scoped>
 .footerLogo {
-    width: 200px;
+    max-width: 400px;
     margin: auto;
 }
 
@@ -179,6 +179,10 @@
 }
 .footerContainer {
     align-items: space-evenly;
+}
+
+.leftBox, .rightBox {
+    margin-top: 10vw;
 }
 .phoneBox .phoneBtn {
     width: 125px;
@@ -317,7 +321,7 @@
 @media (min-width: 1200px) {
 
     .vague {
-        bottom: 0;
+        bottom: 30vh;
     }
 
     .leftBox,

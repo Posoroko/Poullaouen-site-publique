@@ -13,44 +13,30 @@
                 <SectionTitleBar :title="filter" />
             
                 <div class="mainWidth flex justifyCenter alignStretch gap50 marTop100 wrap">
-                    <div class="assoCard tallCard whiteTallCard flex column" v-for="asso in assosData.assos[filter]" :key="asso.id">
-                        <div class="topBox flex justifyCenter alignCenter column gap10">
-                            <h2 class="">{{ asso.name }}</h2>
-                            <h3 class="">{{ asso.definition }}</h3>
-            
-                        </div>
-            
-                        <div class="frame">
-                            <img v-if="asso.image" :src="`${directusAssets}${asso.image}?key=card500`" :alt="asso.imageAlt" class="objectFitCover">
+                    <CardsTallMain 
+                            v-for="asso in assosData.assos[filter]" :key="asso.id"
+                            :title="asso.name" 
+                            :subtitle="asso.definition" 
+                            :cardImage="asso.image" 
+                            :cardImageAlt="asso.imageAlt">
+                        
+                            <div class="assoBottomBox flex column gap10 justifyCenter alignStart">
+                                <div class="flex assoPresBox" v-if="asso.presidents">
+                                    <span class="icon">person</span>
+                                
+                                    <ul class="assoPresUl flex column justifyCenter gap5">
+                                        <li> <b>Président-e<span v-if="asso.presidents.length > 1">-s</span>:</b>  </li>
 
-                            <div v-else class="icon placeholderIcon objectFitCover centered">diversity_3</div>
-                        </div>
-            
-                        <div class="bottomBox flex column gap20 alignCenter justifyCenter">
-                            <div class="flex presBox" v-if="asso.presidents.length > 0">
-                                <span class="icon">person</span>
-                                <ul class="flex column justifyCenter gap5">
-                                    <li> <b>Président-e<span v-if="asso.presidents.length > 1">-s</span>:</b>  </li>
-                                    <li v-for="pres in asso.presidents" :key="pres.Non_elu_id.id">
+                                        <li v-for="pres in asso.presidents" :key="pres.Contacts_id.id" class="assoPresLi flex column">
+                                            <span>{{ pres.Contacts_id.firstName.slice(0, 1) }}.{{ pres.Contacts_id.lastName.toUpperCase() }}</span>
 
-                                        {{pres.Non_elu_id.firstName}} &nbsp {{pres.Non_elu_id.lastName}}
-                                    </li>
-                                </ul>
+                                            <span class="assoPresTelephone">{{ pres.Contacts_id.telephone }}</span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-
-                            <div class="flex presBox"  v-if="asso.contacts.length > 0">
-                                <span class="icon">call</span>
-
-                                <ul>
-                                    <li v-for="dude in asso.contacts" :key="dude.Contacts_id.id">
-                                        <span v-if="dude.Contacts_id.firstName">{{ dude.Contacts_id.firstName[0]}}.</span>
-                                        <span v-if="dude.Contacts_id.lastName">{{ dude.Contacts_id.lastName }}&nbsp : </span>
-                                        <span v-if="dude.Contacts_id.telephone">{{ dude.Contacts_id.telephone }}</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    
+                        </CardsTallMain>
                 </div>
             </section>
         </div>
@@ -77,7 +63,7 @@ const directusItems = appConfig.directus.items;
 const fetchOptions = {
     server: true,
     params: {
-        fields: 'id, name, definition, type, image, imageAlt, presidents.Non_elu_id.firstName, presidents.Non_elu_id.lastName, presidents.Non_elu_id.id, contacts.Contacts_id.id, contacts.Contacts_id.firstName, contacts.Contacts_id.lastName, contacts.Contacts_id.telephone'
+        fields: 'id, name, definition, type, image, imageAlt, presidents, presidents.Contacts_id.firstName, presidents.Contacts_id.lastName, presidents.Contacts_id.id, presidents.Contacts_id.telephone'
     }
 }
 
@@ -151,7 +137,7 @@ onMounted(() => {
 
 </script>
 
-<style>
+<style scoped>
 
 .assoCard {
     min-height: 550px;
@@ -160,42 +146,16 @@ onMounted(() => {
 .assoMain section {
     margin-top: 50px;
 }
-
-.assoCard {
-    width: 400px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
+.assoBottomBox {
+    padding: 20px;
 }
-
-
-.assoCard .frame {
-    aspect-ratio: 4/3;
-}
-
-
-.assoCard .topBox h2 {
-    font-size: 20px;
-    font-weight: 500;
-    text-align: center;
-}
-.assoCard .topBox h3 {
-    font-size: 18px;
-    font-weight: 300;
-    text-align: center;
-}
-
-.assoCard .topBox,
-.assoCard .bottomBox {
-    padding: 20px 30px;
-}
-.assoCard .bottomBox {
-    padding-left: 50px;
-}
-.presBox {
+.assoPresBox {
     width: 100%;
     justify-content: flexStart;
     gap: 10px
+}
+.assoPresTelephone {
+    padding-left: 30px;
 }
 .placeholderIcon {
     font-size: 200px;

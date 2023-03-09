@@ -141,7 +141,7 @@
                     </div>
 
                     <div class="flex justifyBetween">
-                        <p><b>Renseignements :</b> Marie - 02 98 93 50 76</p>
+                        <p><b>Renseignements :</b> Mairie - 02 98 93 50 76</p>
                     </div>
                 </div>
             </SectionMainSloted>

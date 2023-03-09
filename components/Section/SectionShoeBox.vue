@@ -14,7 +14,7 @@
         </div>
 
         <div v-if="image && containedImage" class="imgFrame absolutlyCentered centered ">
-            <img v-if="image && !localImage" class="objectFitContained pointer shadow" :src="`${directusAssets}${image}?key=card500`" alt="" @click="showInModal">
+            <img v-if="image && !localImage" class="objectFitContained pointer shadow" :src="`${directusAssets}${image}?key=agenda500`" alt="" @click="showInModal">
 
             <img v-if="image && localImage" class="objectFitContained pointer shadow" :src="image" alt="" @click="showInModal">
         </div>

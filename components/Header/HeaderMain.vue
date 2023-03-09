@@ -6,9 +6,12 @@
             <div v-if="isHomePage" class="dotNavBox absolute flex w100 justifyCenter">
                 <div class="dot" v-for="(image, index) in data.images" :key="index">
                     
-                    <div v-if="activeImageIndex == index" class="icon headerDot">radio_button_checked</div>
-                    <div v-else class="icon headerDot">radio_button_unchecked</div>
+                    <div v-if="activeImageIndex == index" class="icon headerDot pointer">radio_button_checked</div>
+                    <div v-else class="icon headerDot pointer" @click="activeImageIndex = index" >radio_button_unchecked</div>
+                    
                 </div>
+
+                <p v-if="activeImageIndex == 6" class="copyRightsBox absolute"> © Eric Legret </p>
             </div>
 
             <div v-if="isHomePage" class="homeLeftArrowBox homeArrowBox absolute icon headerIcon headerChevron pointer" @click="swipeLeft">
@@ -18,6 +21,8 @@
             <div v-if="isHomePage" class="homeRightArrowBox homeArrowBox absolute icon headerIcon headerChevron pointer" @click="swipeRignt">
                 chevron_right
             </div>
+
+            
         </div>
 
         <HeaderPathBar :path="data.path"/>
@@ -71,6 +76,15 @@ const props = defineProps({
 </script>
 
 <style>
+.copyRightsBox {
+    color: rgba(255, 255, 255, 0.507);
+    background-color: #00000069;
+    padding: 5px;
+    border-radius: 5px;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
 
 
 header .imageBox {

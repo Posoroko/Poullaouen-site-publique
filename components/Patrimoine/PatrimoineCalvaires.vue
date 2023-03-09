@@ -1,19 +1,21 @@
 <template>
-    <section class="calvairesSection horizontalGradient">
+    <section class="calvairesSection">
         <SectionTitleBar title="Les calvaires" />
 
-        <div class="calvairesContent mainWidth flex justifyCenter wrap">
-            <div class="calvaireCard flex column gap10" v-for="item in items" :key="item.id">
-                <div class="calvaireCardTopBox flex column">
-                    <b>{{ item.title }}</b>
-                    <p>{{ item.adress }}</p>
-                </div>
-                <div class="calvaireCardFrame shadow w100">
-                    <img class="objectFitCover" :src="`/images/patrimoine/${item.image}.JPG`" :alt="item.imageAlt" />
-                </div>
+        <div class="horizontalGradient marTop50">
+            <div class="calvairesContent mainWidth flex justifyCenter wrap">
+                <div class="calvaireCard flex column gap10" v-for="item in items" :key="item.id">
+                    <div class="calvaireCardTopBox flex column">
+                        <b>{{ item.title }}</b>
+                        <p>{{ item.adress }}</p>
+                    </div>
+                    <div class="calvaireCardFrame shadow w100">
+                        <img class="objectFitCover" :src="`/images/patrimoine/${item.image}.JPG`" :alt="item.imageAlt" />
+                    </div>
 
-                <div class="calvaireCardBottomBox">
-                    <p v-html="item.content"></p>
+                    <div class="calvaireCardBottomBox">
+                        <p v-html="item.content"></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -61,9 +63,9 @@ const items = [
     },
     {
         "id": 12,
-        "adress": "Saint-Ambroise - Locmaria Berrien",
+        "adress": "St-Ambroise - Locmaria Berrien",
         "image": "9e41720f-d818-4dde-942e-cbbcf5576117",
-        "imageAlt": "Le calvaire de Saint-Ambroise",
+        "imageAlt": "Le calvaire de St-Ambroise",
         "slug": null,
         "content": "La croix de Saint Ambroise date du 16ème siècle et porte sur la face ouest un christ en croix et sur la face opposé une sainte femme. Une importante restauration a été effectuée en 1997 par les soins de Mr  Olivier DANICAN, sculpteur et peintre de Landeleau.",
         "title": "Calvaire de Saint Ambroise"
@@ -78,6 +80,7 @@ const items = [
     padding-bottom: 80px;
 }
 .calvairesContent {
+    padding: 30px 0;
     gap: 50px;
 }
 .calvaireCard {

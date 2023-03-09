@@ -1,6 +1,6 @@
 <template>
     <section>
-        <SectionTitleBar title="Les ponts" />
+        <SectionTitleBar title="Les gares" />
 
         <SectionMainSloted v-for="item in items"
             :data="{ title: null, image: `/images/patrimoine/${item.image}.JPG`, localImage: true }">

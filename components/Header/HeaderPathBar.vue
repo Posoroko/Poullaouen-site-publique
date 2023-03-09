@@ -26,9 +26,7 @@ const props = defineProps({
     padding-top: 10px;
     padding-bottom: 10px; 
 }
-.step .icon{
-    color: var(--dark-blue);
-}
+
 .step .icon,
 .step .stepLink {
     margin-right: 20px;

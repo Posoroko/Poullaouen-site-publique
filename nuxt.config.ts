@@ -30,7 +30,7 @@ export default defineNuxtConfig({
             ],
             charset: 'utf-8',
             viewport: 'width=500, initial-scale=1',
-            title: 'Poullaouën',
+            title: 'Poullaouen',
             meta: [
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
                 { name: 'description', content: 'Site de la Mairie de Poullaouën.' },

@@ -24,41 +24,31 @@
                             <div class="contentRow flex gap10 gap10" v-if="item.hours">
                                 <span class="icon">schedule</span>
 
-                                <p class="textContent horaires">
-                                    {{ item.hours }}
-                                </p>
+                                <p class="textContent horaires"> {{ item.hours }} </p>
                             </div>
 
                             <div class=" contentRow flex gap10" v-if="item.adress">
                                 <span class="icon">location_on</span>
 
-                                <p class="textContent">
-                                    {{ item.adress }}
-                                </p>
+                                <p class="textContent"> {{ item.adress }} </p>
                             </div>
 
                             <div class="contentRow flex gap10" v-if="item.phone">
                                 <span class="icon">call</span>
 
-                                <p class="textContent">
-                                    {{ item.phone }}
-                                </p>
+                                <p class="textContent"> {{ item.phone }} </p>
                             </div>
 
                             <div class="contentRow flex gap10" v-if="item.email">
                                 <span class="icon">mail</span>
 
-                                <p class="textContent">
-                                    {{ item.email }}
-                                </p>
+                                <p class="textContent"> {{ item.email }}  </p>
                             </div>
 
                             <NuxtLink :to="`https://${item.website}`" class="contesflex flex gap10" v-if="item.website">
                                 <span class="icon">language</span>
 
-                                <p class="textContent">
-                                    {{ item.website }}
-                                </p>
+                                <span class="textContent externalLink"> visiter le site web </span>
                             </NuxtLink>
                         </div>
                     

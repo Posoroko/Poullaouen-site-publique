@@ -1,6 +1,6 @@
 <template>
     <div class="tallCard whiteTallCard h100 flex column">
-        <div class="topBox flex justifyCenter alignCenter column gap10">
+        <div class="topBox flex justifyCenter alignCenter column gap5">
             <h2 class="">{{ title }}</h2>
             <h3 class="italic">{{ subtitle }}</h3>
         </div>
@@ -46,23 +46,22 @@ const props = defineProps({
     box-shadow: var(--shadow);
 }
 
-
 .tallCard .frame {
     aspect-ratio: 4/3;
     overflow: hidden;
 }
 
 .tallCard .topBox {
-    min-height: 80px;
+    min-height: 100px;
 }
 .tallCard .topBox h2 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     text-align: center;
 }
 
 .tallCard .topBox h3 {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
     text-align: center;
 }

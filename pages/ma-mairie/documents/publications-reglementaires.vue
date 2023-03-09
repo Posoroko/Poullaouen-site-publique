@@ -8,14 +8,14 @@
         </p>
     <div class="marTop50"></div>
     <section class="docsSection docsLatestsSection relative marTop150">        
-        <div class="stripe darkBlueBG w100">
+        <div class="stripe darkBlueBG">
             <div class="content mainWidth w100 flex justifyCenter wrap gap20">
-                <article class="procesCard flex column justifyCenter  relative" v-for="doc in publications.latests" :key="doc.id">
+                <article class="mairieDocCard relative w100" v-for="doc in publications.latests" :key="doc.id">
                     <figure class="">
                         <img src="/images/logo.png" alt="">
                     </figure>
 
-                    <div class="bottomBox flex column gap10">
+                    <div class="bottomBox">
                         <p>{{types[doc.publicationType]}}</p>
                         <p>{{ new Date(doc.date).toLocaleString().slice(0, 11) }}</p>
                     </div>
@@ -35,7 +35,7 @@
     <section class="marTop150">
         <div class="stripe w100">
             <div class="content mainWidth w100 flex justifyCenter wrap">
-                <article class="procesCard flex column justifyCenter alignCenter relative" v-for="doc in publications.rest" :key="doc.id">
+                <article class="mairieDocCard relative" v-for="doc in publications.rest" :key="doc.id">
                     <figure class="frame">
                         <img src="/images/logo.png" alt="">
                     </figure>
@@ -45,9 +45,9 @@
                         <p>{{ new Date(doc.date).toLocaleString().slice(0, 11) }}</p>
                     </div>
 
-                    <!-- <div class="downloaderFrame absoluteFull">
+                    <div class="downloaderFrame absoluteFull">
                         <DocsDownloadWidget :link="`${directusAssets}${doc.file}`" />
-                    </div> -->
+                    </div>
                 </article>
             </div>
         </div>
@@ -119,7 +119,42 @@ const headerData = {
 </script>
 
 <style scoped>
+.mairieDocCard {
+    width: 210px;
+    height: 248px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
 
+.mairieDocCard figure {
+    width: 100px;
+    margin: auto;
+}
+
+.mairieDocCard figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.mairieDocCard * {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--dark-blue);
+}
+.mairieDocCard .bottomBox {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 .piedBox {
     width: 100%;
     height: 150%;
@@ -154,31 +189,6 @@ const headerData = {
     color: white;
 }
 
-.procesCard {
-    width: 210px;
-    background-color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    box-shadow: var(--shadow);
-    gap: 20px;
-}
-.procesCard figure {
-    width: 100%;
-    height: 40%;
-}
-
-.procesCard figure img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.procesCard * {
-    text-align: center;
-    font-size: 20px;
-    font-weight: 400;
-    color: var(--dark-blue);
-}
 
 
 .docsMain .docsLatestsSection .stripe .footBox {
