@@ -11,7 +11,7 @@
         </span>
     </dialog>
 
-    <a href="#header" class="icon " id="homeButton">home</a>
+    <a href="#header" class="icon " id="homeButton">arrow_upward</a>
 </template>
 
 <script setup>
