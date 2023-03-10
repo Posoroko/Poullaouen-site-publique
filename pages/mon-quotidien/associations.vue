@@ -28,7 +28,7 @@
                                         <li> <b>Président-e<span v-if="asso.presidents.length > 1">-s</span>:</b>  </li>
 
                                         <li v-for="pres in asso.presidents" :key="pres.Contacts_id.id" class="assoPresLi flex column">
-                                            <span>{{ pres.Contacts_id.firstName.slice(0, 1) }}.{{ pres.Contacts_id.lastName.toUpperCase() }}</span>
+                                            <span>{{ pres.Contacts_id.firstName}} {{ pres.Contacts_id.lastName.toUpperCase() }}</span>
 
                                             <span class="assoPresTelephone">{{ pres.Contacts_id.telephone }}</span>
                                         </li>
