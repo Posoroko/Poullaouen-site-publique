@@ -56,21 +56,21 @@
                             <span class="flex gap10"> <b>Poullaouen :</b> Liste des villages - semaines paires</span>
                             <span class="flex alignCenter gap5">
                                 <span class="icon">visibility</span>
-                                <a href="/dechets/Poullaouen Semaines Paires.png">Consulter</a>
+                                <a href="/dechets/Poullaouen Semaines Paires.png" target="_blank">Consulter</a>
                             </span>
                         </p>
                         <p class="w100 flex justifyBetween gap10">
                             <span class="flex gap10"> <b>Poullaouen :</b> Liste des villages - semaines impaires</span>
                             <span class="flex alignCenter gap5">
                                 <span class="icon">visibility</span>
-                                <a href="/dechets/Poullaouen Semaines Impaires.png">Consulter</a>
+                                <a href="/dechets/Poullaouen Semaines Impaires.png" target="_blank">Consulter</a>
                             </span>
                         </p>
                         <p class="w100 flex justifyBetween">
                             <span class="flex gap10"> <b>Locmaria-Berrien :</b> Liste des villages</span>
                             <span class="flex alignCenter gap5">
                                 <span class="icon">visibility</span>
-                                <a href="/dechets/Zones de collecte Locmaria.png">Consulter</a>
+                                <a href="/dechets/Zones de collecte Locmaria.png" target="_blank">Consulter</a>
                             </span>
                         </p>
                     </div>
@@ -106,7 +106,7 @@
                             
                             <span class="flex alignCenter gap10">
                                 <span class="icon">visibility</span>
-                                <a class="noLineLink" href="/dechets/consignes tri.png">Consulter</a>
+                                <a class="noLineLink" href="/dechets/consignes tri.png" target="_blank">Consulter</a>
                             </span>
                             <span class="flex alignCenter gap10">
                                 <span class="icon">download</span>
@@ -170,8 +170,8 @@
                             <p class="flex justifyStart gap20"> 
                                 <b>Guide de compostage</b>
                                 <span class="flex alignCenter gap10">
-                                    <span class="icon">visibility</span> <a class="noLineLink" target="_blank" href="/dechets/leguideducompostage.pdf">Consulter</a>
-                                    <span class="icon">download</span> <a class="noLineLink" download href="/dechets/leguideducompostage.pdf">Télécharger</a>
+                                    <span class="icon">visibility</span> <a class="noLineLink" href="/dechets/leguideducompostage.pdf" target="_blank">Consulter</a>
+                                    <span class="icon">download</span> <a class="noLineLink" href="/dechets/leguideducompostage.pdf" download>Télécharger</a>
                                 </span>
                                 
                             </p>

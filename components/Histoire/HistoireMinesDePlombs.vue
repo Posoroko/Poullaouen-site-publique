@@ -16,7 +16,7 @@
             </p>
 
             <div>
-                <a class="externalLink" href="https://minelocmariaberrien.com/index1.htm">Site de l’Association de Sauvegarde de l’Ancienne Mine.</a>
+                <a class="externalLink" href="https://minelocmariaberrien.com/index1.htm" target="_blank">Site de l’Association de Sauvegarde de l’Ancienne Mine.</a>
             </div>
         </div>
     </SectionMainSloted>

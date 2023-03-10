@@ -18,7 +18,7 @@
                         </p>
 
                         <div class="flex column gap5">
-                            <p class="flex alignCenter gap10"> <span class="icon">language</span><a class="externalLink" href="https://minelocmariaberrien.com">minelocmariaberrien.com</a> </p>
+                            <p class="flex alignCenter gap10"> <span class="icon">language</span><a class="externalLink" target="_blank" href="https://minelocmariaberrien.com">minelocmariaberrien.com</a> </p>
 
                             
                             <p class="flex alignCenter gap10"> <span class="icon">mail</span><a class="" href="mailto:asamlb@hotmail.fr">asamlb@hotmail.fr</a> </p>

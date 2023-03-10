@@ -16,7 +16,7 @@
 
  
             <div class="content mainWidth flex justifyEvenly alignStretch wrap gap50 marTop100">
-                <CardsTallMain  v-for="group in groups[type.id]" :key="group.id"  :title="group.name" :subtitle="group.boss" :cardImage="group.image" :localImage="false">
+                <CardsTallMain  v-for="group in groups[type.id]" :key="group.id" :title="group.name" :subtitle="group.boss" :cardImage="group.image" :localImage="false">
                     <div class="tallCardBottomBox">    
                         <div class="w100" v-if="group.membresElus.length">
                             <h4>Membres élus :</h4>
@@ -147,19 +147,20 @@ onMounted(() => {
 </script>
 
 <style scoped>
-
-.bottomBox * h4 {
-    font-size: 14px;
-    font-weight: 500;
-    margin-top: 10px;
+.content:v-deep(.tallCard) {
+    min-height: 800px;
 }
+.tallCardBottomBox {
+    min-height: 180px;
+}
+
 .membersList {
     padding: 5px;
     text-align: center;
 }
 .groupMember{
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 13px;
+    font-weight: 300;
     margin-right: 5px;
     display: inline;
 }

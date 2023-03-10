@@ -17,7 +17,7 @@
                     <p class="page-text">
                         L’ensemble des élèves étudiant et résidant sur l’une des communes de
                         Poher communauté est invité à s’inscrire auprès des services de Poher
-                        communauté en passant par le nouveau portail numérique : <a class="externalLink" href="https://www.espace-citoyens.net/familles-poher">l’Espace Familles Carhaix-Poher</a>
+                        communauté en passant par le nouveau portail numérique : <a class="externalLink" href="https://www.espace-citoyens.net/familles-poher" target="_blank">l’Espace Familles Carhaix-Poher</a>
                     </p>
                     <h4>Tarifs.</h4>
                     <p class="page-text"> Des tarifs en fonction du quotient familial des familles. Les abonnements
@@ -39,7 +39,7 @@
                     <div class="infoBox">
                         <p class="flex alignCenter gap10"> <span class="icon">location_on</span> Maison des Services Publics - Place de la Tour d’Auvergne - Carhaix</p>
                         <p class="flex alignCenter gap10"> <span class="icon">call</span> 02 98 99 48 00</p>
-                        <p class="flex alignCenter gap10"> <span class="icon">language</span> <a class="externalLink" href="https://www.poher.bzh/accueil_poher">www.poher.bzh</a></p>
+                        <p class="flex alignCenter gap10"> <span class="icon">language</span> <a class="externalLink" href="https://www.poher.bzh/accueil_poher" target="_blank">www.poher.bzh</a></p>
                     </div>
                 </div>
             </SectionMainSloted>
@@ -137,7 +137,7 @@
                         <div class="infoBox">
                             <p class="flex alignCenter gap10"> <span class="icon">location_on</span> Maison des Services Publics - Place de la Tour d’Auvergne - Carhaix</p>
                             <p class="flex alignCenter gap10"> <span class="icon">call</span> 02 98 99 48 00</p>
-                            <p class="flex alignCenter gap10"> <span class="icon">language</span> <a class="externalLink" href="https://www.poher.bzh/accueil_poher/les_services/mobilites/covoiturage?fbclid=IwAR0HDgrsKefyNGKnVy8Lf7OjuDKOE7T7GvW3r2aPUC-izuisYpfHm9PyABI">www.poher.bzh</a></p>
+                            <p class="flex alignCenter gap10"> <span class="icon">language</span> <a class="externalLink" href="https://www.poher.bzh/accueil_poher/les_services/mobilites/covoiturage?fbclid=IwAR0HDgrsKefyNGKnVy8Lf7OjuDKOE7T7GvW3r2aPUC-izuisYpfHm9PyABI" target="_blank">www.poher.bzh</a></p>
                         </div>
                     </div>
                 </SectionMainSloted>
@@ -165,7 +165,7 @@
     
                         <div class="infoBox">
                             <p class="flex alignCenter gap10"> <span class="icon">call</span> 02 98 99 48 00</p>
-                            <p class="flex alignCenter gap10"> <span class="icon">language</span> <a class="externalLink" href="https://www.mobibreizh.bzh/">www.mobibreizh.bzh</a></p>
+                            <p class="flex alignCenter gap10"> <span class="icon">language</span> <a class="externalLink" href="https://www.mobibreizh.bzh/" target="_blank">www.mobibreizh.bzh</a></p>
                         </div>
                     </div>
                 </SectionMainSloted>
@@ -194,7 +194,7 @@
 
                         <div class="infoBox  ">
                             <p class="flex alignCenter gap10"> <span class="icon">call</span> 02 99 35 10 77</p>
-                            <p class="flex alignCenter gap10"> <span class="icon">language</span> <a class="externalLink" href="https://www.ehopcovoiturons-nous.fr/">www.covoiturons-nous.fr</a></p>
+                            <p class="flex alignCenter gap10"> <span class="icon">language</span> <a class="externalLink" href="https://www.ehopcovoiturons-nous.fr/" target="_blank">www.covoiturons-nous.fr</a></p>
                         </div>
                     </div>
 
@@ -229,7 +229,7 @@
                             Il y a actuellement 4 bornes de recharge sur le territoire de Poher communauté.
                         </p>
                         <div class="infoBox">
-                            <p class="flex alignCenter gap10"> voir ici : <a class="externalLink" href="https://fr.chargemap.com/map">chargemap.com</a></p>
+                            <p class="flex alignCenter gap10"> voir ici : <a class="externalLink" href="https://fr.chargemap.com/map" target="_blank">chargemap.com</a></p>
                         </div>
                     </div>
                 </SectionMainSloted>

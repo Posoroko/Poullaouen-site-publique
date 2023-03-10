@@ -35,7 +35,7 @@
                         <p class="w100 flex justifyBetween alignCenter whiteText">
                             <span class="whiteText"> <b class="whiteText">Flyer :</b></span>
                             <span class="flex alignCenter gap20 whiteText">
-                                <a class="flex alignCenter gap5" target="_blank" href="/loisirs/new pass loisirs.pdf"><span class="icon whiteText">visibility</span>Consulter</a>
+                                <a class="flex alignCenter gap5" href="/loisirs/new pass loisirs.pdf" target="_blank"><span class="icon whiteText">visibility</span>Consulter</a>
                         
                                 <a class="flex alignCenter gap5" href="/loisirs/new pass loisirs.pdf" download><span class="icon whiteText">download</span> Télécharger</a>       
                             </span>
@@ -76,7 +76,7 @@
                         </p>
                         <p class="contentRow flex gap10">
                             <span class="icon">language</span>
-                            <a href="https://www.aero-plass.com" class="textContent">www.aero-plass.com</a>
+                            <a href="https://www.aero-plass.com" target="_blank" class="textContent">www.aero-plass.com</a>
                         </p>
                     </div>
                 </CardsTallMain>
@@ -107,7 +107,7 @@
                         </p>
                         <p class="contentRow flex gap10">
                             <span class="icon">language</span>
-                            <span class="textContent">www.minelocmariaberrien.com/</span>
+                            <a href="https://www.minelocmariaberrien.com" target="_blank" class="textContent">www.minelocmariaberrien.com</a>
                         </p>
                     </div>
                 </CardsTallMain>
@@ -135,7 +135,7 @@
                         </p>
                         <p class="contentRow flex gap10">
                             <span class="icon">language</span>
-                            <a href="www.mairie-poullaouen.fr" class="textContent">www.mairie-poullaouen.fr</a>
+                            <a href="www.mairie-poullaouen.fr" target="_blank" class="textContent">www.mairie-poullaouen.fr</a>
                         </p>
                     </div>
                 </CardsTallMain>
@@ -165,7 +165,7 @@
                             </p>
                             <p class="contentRow flex gap10">
                                 <span class="icon">language</span>
-                                <a href="www.vorgium.bzh" class="textContent">www.mairie-poullaouen.fr</a>
+                                <a href="www.vorgium.bzh" target="_blank" class="textContent">www.vorgium.bzh</a>
                             </p>
                         </div>
                     </CardsTallMain>
@@ -196,7 +196,7 @@
                         </p>
                         <p class="contentRow flex gap10">
                             <span class="icon">language</span>
-                            <a href="www.plijadour.poher.bzh" class="textContent">www.plijadour.poher.bzh</a>
+                            <a href="www.plijadour.poher.bzh" target="_blank" class="textContent">www.plijadour.poher.bzh</a>
                         </p>
                     </div>
                 </CardsTallMain>
@@ -226,7 +226,7 @@
                         </p>
                         <p class="contentRow flex gap10">
                             <span class="icon">language</span>
-                            <a href="https://www.glenmor.com" class="textContent">www.glenmor.com</a>
+                            <a href="https://www.glenmor.com" target="_blank" class="textContent">www.glenmor.com</a>
                         </p>
                     </div>
                 </CardsTallMain>
@@ -256,7 +256,7 @@
                         </p>
                         <p class="contentRow flex gap10">
                             <span class="icon">language</span>
-                            <a href="https://www.karaezadrenaline.com" class="textContent">www.karaezadrenaline.com</a>
+                            <a href="https://www.karaezadrenaline.com" target="_blank" class="textContent">www.karaezadrenaline.com</a>
                         </p>
                     </div>
                 </CardsTallMain>
@@ -282,7 +282,7 @@
                         </p>
                         <p class="contentRow flex gap10">
                             <span class="icon">language</span>
-                            <a href="https://www.carhaixgolf.com" class="textContent">www.carhaixgolf.com</a>
+                            <a href="https://www.carhaixgolf.com" target="_blank" class="textContent">www.carhaixgolf.com</a>
                         </p>
                     </div>
                 </CardsTallMain>
@@ -311,7 +311,7 @@
                         </p>
                         <p class="contentRow flex gap10">
                             <span class="icon">language</span>
-                            <a href="https://www.cinemalegrandbleu.fr " class="textContent">www.cinemalegrandbleu.fr </a>
+                            <a href="https://www.cinemalegrandbleu.fr " target="_blank" class="textContent">www.cinemalegrandbleu.fr </a>
                         </p>
                     </div>
                 </CardsTallMain>
@@ -331,7 +331,7 @@
                         </p>
 
                         <div class="flex justifyBetween">
-                            <a href="https://www.montsdarreetourisme.bzh/" class="externalLink">Office de Tourisme des Monts d’Arrée</a>
+                            <a href="https://www.montsdarreetourisme.bzh/" target="_blank" class="externalLink">Office de Tourisme des Monts d’Arrée</a>
                         </div>
                     </div>
                 </SectionMainSloted>
@@ -362,7 +362,7 @@
                         </p>
 
                         <div class="flex justifyBetween">
-                            <a href="https://www.lavalleedessaints.com/" class="externalLink">La vallée des Saints</a>
+                            <a href="https://www.lavalleedessaints.com/" target="_blank" class="externalLink">La vallée des Saints</a>
                         </div>
                     </div>
                 </SectionMainSloted>
