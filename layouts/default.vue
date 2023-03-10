@@ -30,6 +30,8 @@ const closeModal = () => {
     border-radius: 10px;
     color: white;
     background-color: var(--dark-blue);
+    border: 1px solid rgba(255, 255, 255, 0.281);
+    box-shadow: var(--shadow);
     bottom: 2vw;
     right: 2vw;
 }
