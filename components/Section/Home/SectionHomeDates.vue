@@ -41,8 +41,7 @@ const todayDDMMFormat = (_date) => {
     let date = new Date(_date)
     const weekDay = weekDays[date.getDay()]
     const day = ("0" + date.getDate()).slice(-2)
-    const month = date.getMonth()
-    console.log(`${weekDay} ${day} ${month}`)
+    const month = ("0" + (date.getMonth() + 1)).slice(-2)
     return `${weekDay} ${day}/${month}`;
 }
 
@@ -78,14 +77,15 @@ const fetchOptions = {
     server: true,
     params: {
         fields: 'id, title, date, location, content, image, imageAlt, price, file, filename',
-        limit: props.limit
+        limit: props.limit,
+        // sort: 'date'
     }
 }
 
 const { data: dates } = await useAsyncData(
     "agenda",
     async () => {
-        const items = await $fetch(`${directusItems}Agenda`, fetchOptions)
+        const items = await $fetch(`${directusItems}Agenda?sort[]=date`, fetchOptions) 
 
         return items.data
     }
