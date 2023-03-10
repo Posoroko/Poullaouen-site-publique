@@ -36,8 +36,8 @@
                                 </div>
 
                                 <div class="infoBox flex column gap10">
-                                    <p class="flex elignCenter gap10"> <span class="icon">language</span> <a class="externalLink" :href="asso.website">visiter le site web</a> </p>
-                                    <p class="flex alignCenter gap10"> <span class="icon">mail</span> <a :href="`emailto:${asso.email}`">{{ asso.email }}</a> </p>
+                                    <p class="flex alignCenter gap10" v-if="asso.email"> <span class="icon">mail</span> <a :href="`emailto:${asso.email}`">{{ asso.email }}</a> </p>
+                                    <p class="flex elignCenter gap10" v-if="asso.website"> <span class="icon">language</span> <a class="externalLink" :href="asso.website">Visiter le site web</a> </p>
                                 </div>
                             </div>
                     

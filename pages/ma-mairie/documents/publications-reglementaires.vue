@@ -59,7 +59,7 @@
 const toDayMonthYearFormat = (_date) => {
     let date = new Date(_date)
     let day = ("0" + date.getDate()).slice(-2)
-    const month = ("0" + date.getMonth()).slice(-2)
+    const month = ("0" + (date.getMonth() + 1)).slice(-2)
     const year = date.getFullYear()
     return `${day}-${month}-${year}`;
 }
@@ -87,7 +87,7 @@ const { data: publications } = await useAsyncData(
         const items = _items.data
 
         const temp = {
-            latests: items.splice(0, 2), 
+            latests: items.splice(0, 5), 
             rest: items
         }
         

@@ -181,7 +181,6 @@ onMounted(() => {
     margin: auto;
     background-color: transparent;
     border: none;
-    padding: 50px;
 }
 
 

@@ -42,14 +42,14 @@
                             <div class="contentRow flex gap10" v-if="item.email">
                                 <span class="icon">mail</span>
 
-                                <p class="textContent"> {{ item.email }}  </p>
+                                <a :href="`mailto:${item.email}`" class="textContent"> {{ item.email }}  </a>
                             </div>
 
-                            <NuxtLink :to="`${item.website}`" target="_blank" class="contesflex flex gap10" v-if="item.website">
+                            <div class="contesflex flex gap10" v-if="item.website">
                                 <span class="icon">language</span>
 
-                                <span class="textContent externalLink"> Visiter le site web </span>
-                            </NuxtLink>
+                                <a :href="`${item.website}`" target="_blank" class="textContent externalLink"> Visiter le site web </a>
+                            </div>
                         </div>
                     
                     </CardsTallMain>
