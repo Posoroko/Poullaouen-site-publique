@@ -1,5 +1,5 @@
 <template>
-    <header class="">
+    <header id="header">
         <div class="imageBox relative">
             <img :src="data.images[activeImageIndex].src" :alt="data.images[activeImageIndex].alt">
 

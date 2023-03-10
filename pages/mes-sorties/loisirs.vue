@@ -316,7 +316,7 @@
                     </div>
                 </CardsTallMain>
                 <div class="mainWidth centered">
-                    <a class="officeButton" href="https://www.carhaixpohertourisme.bzh/">Office de Tourisme de Carhaix et du Poher</a>
+                    <a class="loisirLinkButton" href="https://www.carhaixpohertourisme.bzh/">Office de Tourisme de Carhaix et du Poher</a>
                 </div>
             </div>
                 <SectionMainSloted
@@ -362,7 +362,7 @@
                         </p>
 
                         <div class="flex justifyBetween">
-                            <a href="https://www.lavalleedessaints.com/" target="_blank" class="externalLink">La vallée des Saints</a>
+                            <a class="loisirLinkButton" href="https://www.lavalleedessaints.com/" target="_blank">La vallée des Saints</a>
                         </div>
                     </div>
                 </SectionMainSloted>
@@ -469,11 +469,11 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.officeButton{
+.loisirLinkButton{
     font-size: 18px;
     color: white;
     background-color: var(--dark-blue);
-    padding: 10px 15px;
+    padding: 10px 30px;
     border-radius: 10px;
     box-shadow: var(--shadow);
 }

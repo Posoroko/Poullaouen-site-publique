@@ -10,6 +10,8 @@
             close
         </span>
     </dialog>
+
+    <a href="#header" class="icon " id="homeButton">home</a>
 </template>
 
 <script setup>
@@ -21,6 +23,17 @@ const closeModal = () => {
 </script>
 
 <style scoped>
+#homeButton {
+    font-size: 50px;
+    position: fixed;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    background-color: var(--dark-blue);
+    bottom: 2vw;
+    right: 2vw;
+}
+
 #masterModal {
     /* max-width: 95vw;
     max-height: 90vh; */

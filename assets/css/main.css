@@ -6,7 +6,9 @@
     --shallow-height: 50px;
 }
 
-
+html {
+    position: relative;
+}
 
 .mainWidth {
     width: var(--main-width);
