@@ -72,8 +72,11 @@
                         <p class="page-text marTop20" v-if="salle.name == 'La salle des fêtes'">Possibilité de location de sono.</p>
 
                         <div class="buttonBox flex justifyEnd">
-                            <NuxtLink :to="`/galerie-photo/${salle.slug}`" class="albumButton" 
-                            :class="{ blueAlbumButton : index == 0 || index == 2, whiteAlbumButton : index == 1 || index == 3}">Voir l'album</NuxtLink>
+                            <div class="albumButton pointer" 
+                                :data-album="salle.slug"
+                                :class="{ blueAlbumButton : index == 0 || index == 2, whiteAlbumButton : index == 1 || index == 3}" 
+                                @click="openModal">Voir l'album
+                            </div>
                         </div>
                         
                     </div>
@@ -81,12 +84,39 @@
             </SectionMainSloted>
         </div>
     </main>
+
+    <dialog id="carouselModal">
+        <GaleriePhotoDesktop v-if="selectedAlbum" :albumData="selectedAlbum" />
+        <span class="modalNode modalCloseBtn absolute icon pointer flex alignCenter justifyCenter" @click="closeModal">
+            close
+        </span>
+        
+    </dialog>
+
+
 </template>
 <script setup>
 
-const foo = () => {
-    useEric()
+const selectedAlbum = ref(null)
+let modal = null
+
+const openModal = async (e) => {
+    
+    const slug = e.target.getAttribute('data-album')
+    console.log(slug)
+
+    const album = await $fetch(`${directusItems}Albums_photo?filter[slug][_eq]=${slug}&fields=images.directus_files_id`)
+    modal = document.getElementById('carouselModal')
+    selectedAlbum.value = album.data[0].images
+
+    modal.showModal()
 }
+
+const closeModal = () => {
+    modal.close()
+    selectedAlbum.value = null
+}
+
 
 const sectionData_1 = {
     image: "/images/ccas/ccas-gym.jpg",
@@ -155,7 +185,30 @@ onMounted(() => {
 </script>
 
 <style scoped>
+#carouselModal {
+    width: 95vw;
+    margin: auto;
+    background-color: transparent;
+    border: none;
+    padding: 50px;
+}
 
+
+.modalCloseBtn {
+    width: 45px;
+    height: 45px;
+    font-size: 40px;
+    color: white;
+    background-color: #00000031;
+    border-radius: 10px;
+    top: 10px;
+    right: 10px;
+    line-height: 40px;
+}
+
+#carouselModal::backdrop {
+    background-color: rgba(0, 0, 0, 0.76);
+}
 .level1 {
     padding: 10px 0;
     margin-left: 10px;

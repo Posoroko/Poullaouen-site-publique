@@ -125,7 +125,6 @@ onMounted(() => {
 .photoViewerMain {
     height: 60vh;
     background-color: var(--dark-blue);
-    /* margin: 100px 0; */
 }
 .photoCard {
     height: min(500px, 70vw); 
@@ -171,7 +170,7 @@ onMounted(() => {
 .viewerArrowBox {
     border-radius: 8px;
     user-select: none;
-    z-index: 10000;
+    z-index: 2000;
 }
 
 </style>
