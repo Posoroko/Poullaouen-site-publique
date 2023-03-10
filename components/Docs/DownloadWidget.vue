@@ -26,7 +26,7 @@ const props = defineProps({
 #downloadWidget {
     width: 100%;
     height: 100%;
-    background-color: #000000be;
+    background-color: #000000d3;
     display: none;
 }
 .downloaderFrame:hover #downloadWidget{
@@ -48,10 +48,10 @@ const props = defineProps({
     color: rgb(110, 162, 221);
 }
 #downloadWidget .downloaderLine .downloaderIcon{
-    font-size: 40px;
+    font-size: 30px;
 }
 #downloadWidget .downloaderLine .downloaderText{
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 700;
 }
 </style>

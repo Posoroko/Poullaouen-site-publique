@@ -16,8 +16,18 @@
                     </figure>
 
                     <div class="bottomBox">
-                        <p>{{types[doc.publicationType]}}</p>
-                        <p>{{ toDayMonthYearFormat(doc.date) }}</p>
+                        <b class="docType">{{types[doc.publicationType]}}</b>
+
+                        <div class="smallText flex column gap10">
+                            <div>
+                                <p>Publication :</p>
+                                <p>{{ toDayMonthYearFormat(doc.date) }}</p>
+                            </div>
+                            <div>
+                                <p>Mise en ligne : </p>
+                                <p>{{ toDayMonthYearFormat(doc.date_created) }}</p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="downloaderFrame absoluteFull">
@@ -40,9 +50,19 @@
                         <img src="/images/logo.png" alt="">
                     </figure>
 
-                    <div class="bottomBox flex column gap10">
-                        <p>{{ types[doc.publicationType] }}</p>
-                        <p>{{ toDayMonthYearFormat(doc.date) }}</p>
+                     <div class="bottomBox">
+                        <b class="docType">{{ types[doc.publicationType] }}</b>
+
+                        <div class="smallText flex column gap10">
+                            <div>
+                                <p>Publication :</p>
+                                <p>{{ toDayMonthYearFormat(doc.date) }}</p>
+                            </div>
+                            <div>
+                                <p>Mise en ligne : </p>
+                                <p>{{ toDayMonthYearFormat(doc.date_created) }}</p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="downloaderFrame absoluteFull">
@@ -128,7 +148,7 @@ const headerData = {
 <style scoped>
 .mairieDocCard {
     width: 210px;
-    height: 248px;
+    height: 310px;
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
@@ -161,6 +181,12 @@ const headerData = {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+.mairieDocCard .bottomBox .docType {
+    font-weight: 600;
+}
+.mairieDocCard .bottomBox .smallText * {
+    font-size: 14px;
 }
 .piedBox {
     width: 100%;

@@ -15,7 +15,7 @@
         </div>
         <div class="marTop50"></div>
         <section class="docsSection docsLatestsSection relative" v-for="(year, index) in myData.years" :key="year" :id="`section${year}`">
-            <SectionTitleBar class="titleComp" :title="year" />
+            <SectionTitleBar class="titleComp" :title="year + ' '" />
             
             <div class="stripe w100 marTop100" :class="{ darkBlueBG : index == 0}">
                 <div class="content mainWidth flex justifyCenter wrap">
@@ -25,9 +25,18 @@
                         </figure>
                   
                         <div class="bottomBox">
-                            <p> Procès verbal du </p>
-                  
-                            <p>{{ toDayMonthYearFormat(doc.datePublication)  }}</p>
+                            <b class="docType">Procès verbal</b>
+
+                            <div class="smallText flex column gap10">
+                                <div>
+                                    <p>Publication :</p>
+                                    <p>{{ toDayMonthYearFormat(doc.datePublication) }}</p>
+                                </div>
+                                <div>
+                                    <p>Mise en ligne : </p>
+                                    <p>{{ toDayMonthYearFormat(doc.date_created) }}</p>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="downloaderFrame absoluteFull">
@@ -155,7 +164,7 @@ const headerData = {
 <style scoped>
 .mairieDocCard {
     width: 210px;
-    height: 248px;
+    height: 300px;
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
@@ -188,6 +197,12 @@ const headerData = {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+.mairieDocCard .bottomBox .docType {
+    font-weight: 600;
+}
+.mairieDocCard .bottomBox .smallText * {
+    font-size: 14px;
 }
 .piedBox {
     height: 110%;

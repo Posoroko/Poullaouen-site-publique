@@ -128,7 +128,7 @@
             <div class="mainWidth flex justifyEvenly wrap">
                 <NuxtLink class="bottomLink" to="/">ACCUEIL</NuxtLink>
                 <!-- <div class="line"></div> -->
-                <NuxtLink class="bottomLink" to="/">PLAN DU SITE</NuxtLink>
+                <NuxtLink class="bottomLink" to="/plan-du-site">PLAN DU SITE</NuxtLink>
                 <!-- <div class="line"></div> -->
                 <NuxtLink class="bottomLink" to="/mentions-legales">MENTIONS LEGALES</NuxtLink>
                 <!-- <div class="line"></div> -->
