@@ -118,7 +118,7 @@ const { data: itemsData } = await useAsyncData(
 const headerData = {
     images: [
         {
-            src: `https://findstable.net/assets/253870e4-fa4e-4993-bbfe-026723a57bef.JPG`,
+            src: `${directusAssets}6069ded5-693f-4fd7-92fe-7d8e2db8294a.jpg?key=header1500`,
             alt: 'Commerce de proximité à Poullaouen',
         }
     ],

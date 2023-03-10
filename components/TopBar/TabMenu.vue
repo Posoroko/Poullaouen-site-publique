@@ -45,7 +45,7 @@
         </li>
     </ul>
 
-    <nav class="menuPanel absolute" v-if="menuIsOpen">
+    <nav class="menuPanel absolute" v-show="menuIsOpen">
         <div class="imageBox">
             <img class="objectFitCover" :src="menuImageRef" alt="mairie de Poullaouën">
         </div>
