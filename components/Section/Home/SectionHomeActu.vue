@@ -84,7 +84,7 @@ onMounted(() => {
 
 </script>
 
-<style>
+<style scoped>
 .sectionContentTitle {
     font-size: 20px;
     font-weight: 600;

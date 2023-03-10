@@ -3,12 +3,12 @@
         <div class="footerContainer mainWidth flex justifyEvenly alignStart wrap h100 ">
             <div class="phoneBox w100 footerBox flex justifyCenter alignCenter wrap gap5">
                 <div class="flex gap5">
-                    <a href="call:+33298935076" class="phoneBtn flex column justifyCenter alignCenter">
+                    <a href="tel:+33298935076" class="phoneBtn flex column justifyCenter alignCenter">
                         <span class="icon">call</span>
                         <span class="city">Poullaouen</span>
                     </a>
 
-                    <a href="call:+33298997309" class="phoneBtn flex column justifyCenter alignCenter">
+                    <a href="tel:+33298997309" class="phoneBtn flex column justifyCenter alignCenter">
                         <span class="icon">call</span>
             
                         <span class="city">Locmaria-Berrien</span>
@@ -82,7 +82,7 @@
                     <b class="centered">Suivez-nous !</b>
                 </a>
             
-                <a href="mailto:mairie-de-poullaouen@wanadoo.fr" class="button centered">
+                <a href="mailto:mairie-de-poullaouen@wanadoo.fr" class="button centered " id="envoyerUnMail">
                     Envoyer un mail
                 </a>
 
@@ -124,16 +124,16 @@
             </div>
         </div> 
 
-        <div class="bottomBar w100">
-            <div class="mainWidth flex justifyEvenly">
+        <div class="bottomBar w100 ">
+            <div class="mainWidth flex justifyEvenly wrap">
                 <NuxtLink class="bottomLink" to="/">ACCUEIL</NuxtLink>
-                <div class="line"></div>
+                <!-- <div class="line"></div> -->
                 <NuxtLink class="bottomLink" to="/">PLAN DU SITE</NuxtLink>
-                <div class="line"></div>
+                <!-- <div class="line"></div> -->
                 <NuxtLink class="bottomLink" to="/mentions-legales">MENTIONS LEGALES</NuxtLink>
-                <div class="line"></div>
+                <!-- <div class="line"></div> -->
                 <NuxtLink class="bottomLink" to="https://www.comkreiz.com/" target="_blank">WEB DESIGN : COM KREIZ</NuxtLink>
-                <div class="line"></div>
+                <!-- <div class="line"></div> -->
                 <NuxtLink class="bottomLink" to="https://www.posoroko.com/" target="_blank" >DEVELOPPEMENT :  STUDIO POSOROKO</NuxtLink>
             </div>
         </div>
@@ -171,6 +171,11 @@
 }
 .phoneBox {
     margin: 0 auto;
+}
+@media (max-width: 719px) {
+    #envoyerUnMail {
+        display: none;
+    }
 }
 @media (min-width: 719px) {
     .phoneBox {

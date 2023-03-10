@@ -26,7 +26,7 @@ const props = defineProps({
     margin-top: 50px;
 }
 .sectionTitleBox h2 {
-    font-size: max(18px, 2vw);    
+    font-size: max(30px, 2vw);    
 }
 
 .sectionTitleBox .titleStripe {

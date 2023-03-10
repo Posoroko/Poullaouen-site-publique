@@ -25,7 +25,7 @@
                     </div>
                 </div>
             </div>
-            <div class="agendaButtonBox mainWidth flex justifyEvenly wrap">
+            <div class="agendaButtonBox mainWidth flex justifyEvenly wrap gap20">
                 <NuxtLink class="italic shadow agendaButton textAlignCenter" to="/agenda">Voir tout l'agenda</NuxtLink>
                 <NuxtLink class="italic shadow agendaButton textAlignCenter" to="/proposer-un-evenement">Proposer un événement</NuxtLink>
             </div>
@@ -115,21 +115,23 @@ onMounted(() => {
      padding: 30px;
      margin-top: 30px;
  }
-
+.agendaButtonBox{
+    padding: 30px 0;
+}
 .agendaButtonBox .agendaButton {
-    width: 45%;
+    width: min(100%, 600px);
     font-size: 20px;
     font-weight: 600;
     color: var(--dark-blue);
     padding: 10px 20px;
     border-radius: 10px;
-    margin-top: 30px;
     background-color: #fff;
     transition: var(--fadeQuick);
 }
 
 .agendaButtonBox .agendaButton:hover {
-    background-color: #a7bcca;
+    color: white;
+    background-color: var(--dark-blue);
     box-shadow: var(--shadow);
     transition: var(--fadeQuick);
 }

@@ -72,7 +72,7 @@
 }
 
 .tinyWidget {
-    
+    margin-right: 15px;
     background-color: var(--dark-blue);
     padding: 5px 7px;
     border-radius: 10px;
