@@ -30,7 +30,7 @@
                     </div>
 
                     <div class="flex justifyEnd">
-                        <NuxtLink to="/galerie-photo/ecole-maternelle" class="albumButton blueAlbumButton">Voir l'album</NuxtLink>
+                        <div data-album="ecole-maternelle" class="albumButton blueAlbumButton pointer" @click="openModal" >Voir l'album</div>
                     </div>
                 </div>
             </SectionMainSloted>
@@ -72,7 +72,7 @@
                     <div class="flex justifyBetween">
                         <!-- <p class="flex alignCenter gap10"> <span class="icon">visibility</span> <b>Programme de l'année</b> </p> -->
                         <div></div>
-                        <NuxtLink to="/galerie-photo/ecole-jules-ferry" class="albumButton blueAlbumButton">Voir l'album</NuxtLink>
+                        <div data-album="temps-d-activite-periscolaire" class="albumButton blueAlbumButton pointer" @click="openModal" >Voir l'album</div>
                     </div>
                 </div>
             </SectionMainSloted>
@@ -107,7 +107,7 @@
                     </p>
 
                     <div class="flex justifyEnd">
-                        <NuxtLink to="/galerie-photo/ecole-jules-ferry" class="albumButton whiteAlbumButton">Voir l'album</NuxtLink>
+                        <div data-album="la-maternelle-dehors" class="albumButton blueAlbumButton pointer" @click="openModal" >Voir l'album</div>
                     </div>
                 </div>
             </SectionMainSloted>
@@ -162,7 +162,7 @@
                     </p>
 
                     <div class="infoBox">
-                        <p> <b>Renseignements :</b> Maire - 02 98 93 50 76</p>
+                        <p> <b>Renseignements :</b> Mairie - 02 98 93 50 76</p>
                     </div>
                 </div>
             </SectionMainSloted>
@@ -187,13 +187,37 @@
             </SectionMainSloted>
         </div>
     </main>
+
+    <dialog id="ecoleCarouselModal">
+        <GaleriePhotoDesktop v-if="selectedAlbum" :albumData="selectedAlbum" />
+        <span class="modalNode modalCloseBtn absolute icon pointer flex alignCenter justifyCenter" @click="closeModal">
+            close
+        </span>
+    </dialog>
 </template>
 
 <script setup>
+const selectedAlbum = ref(null)
+let modal = null
+
+const openModal = async (e) => {
+    const slug = e.target.getAttribute('data-album')
+    const album = await $fetch(`${directusItems}Albums_photo?filter[slug][_eq]=${slug}&fields=images.directus_files_id`)
+    modal = document.getElementById('ecoleCarouselModal')
+    selectedAlbum.value = album.data[0].images
+
+    modal.showModal()
+}
+
+const closeModal = () => {
+    modal.close()
+    selectedAlbum.value = null
+}
+
 
 const appConfig = useAppConfig();
 const directusAssets = appConfig.directus.assets;
-
+const directusItems = appConfig.directus.items;
 
 const headerData = {
     images: [
@@ -222,7 +246,30 @@ const headerData = {
 </script>
 
 <style scoped>
+#ecoleCarouselModal {
+    width: 95vw;
+    margin: auto;
+    background-color: transparent;
+    border: none;
+    padding: 50px;
+}
 
+
+.modalCloseBtn {
+    width: 45px;
+    height: 45px;
+    font-size: 40px;
+    color: white;
+    background-color: #00000031;
+    border-radius: 10px;
+    top: 10px;
+    right: 10px;
+    line-height: 40px;
+}
+
+#ecoleCarouselModal::backdrop {
+    background-color: rgba(0, 0, 0, 0.76);
+}
 
 .dot {
     width: 15px;

@@ -13,10 +13,10 @@
 
             <div class="mainWidth flex justifyCenter wrap gap20">
                 <div class="defaultFilterButton pointer shadow" @click="filterItems" data-filter="all" :class="{ activeDefaultFilterButton: activeDefaultFilterButton == 'all' }">Tout le patrimoine</div>
-                <div class="defaultFilterButton pointer shadow" @click="filterItems" data-filter="naturel" :class="{ activeDefaultFilterButton: activeDefaultFilterButton == 'naturel' }">Naturel</div>
-                <div class="defaultFilterButton pointer shadow" @click="filterItems" data-filter="religieux" :class="{ activeDefaultFilterButton: activeDefaultFilterButton == 'religieux' }">Religieux</div>
                 <div class="defaultFilterButton pointer shadow" @click="filterItems" data-filter="bati" :class="{ activeDefaultFilterButton: activeDefaultFilterButton == 'bati' }">Bâti</div>
                 <div class="defaultFilterButton pointer shadow" @click="filterItems" data-filter="industriel" :class="{ activeDefaultFilterButton: activeDefaultFilterButton == 'industriel' }">Industriel</div>
+                <div class="defaultFilterButton pointer shadow" @click="filterItems" data-filter="naturel" :class="{ activeDefaultFilterButton: activeDefaultFilterButton == 'naturel' }">Naturel</div>
+                <div class="defaultFilterButton pointer shadow" @click="filterItems" data-filter="religieux" :class="{ activeDefaultFilterButton: activeDefaultFilterButton == 'religieux' }">Religieux</div>
             </div>
         </nav>
 

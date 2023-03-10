@@ -21,7 +21,7 @@
                             :cardImageAlt="asso.imageAlt">
                         
                             <div class="assoBottomBox flex column gap10 justifyCenter alignStart">
-                                <div class="flex assoPresBox" v-if="asso.presidents">
+                                <div class="flex assoPresBox" v-if="asso.presidents.length">
                                     <span class="icon">person</span>
                                 
                                     <ul class="assoPresUl flex column justifyCenter gap5">
@@ -33,6 +33,11 @@
                                             <span class="assoPresTelephone">{{ pres.Contacts_id.telephone }}</span>
                                         </li>
                                     </ul>
+                                </div>
+
+                                <div class="infoBox flex column gap10">
+                                    <p class="flex elignCenter gap10"> <span class="icon">language</span> <a class="externalLink" :href="asso.website">visiter le site web</a> </p>
+                                    <p class="flex alignCenter gap10"> <span class="icon">mail</span> <a :href="`emailto:${asso.email}`">{{ asso.email }}</a> </p>
                                 </div>
                             </div>
                     
@@ -63,14 +68,14 @@ const directusItems = appConfig.directus.items;
 const fetchOptions = {
     server: true,
     params: {
-        fields: 'id, name, definition, type, image, imageAlt, presidents, presidents.Contacts_id.firstName, presidents.Contacts_id.lastName, presidents.Contacts_id.id, presidents.Contacts_id.telephone'
+        fields: 'id, name, definition, type, email, website, image, imageAlt, presidents, presidents.Contacts_id.firstName, presidents.Contacts_id.lastName, presidents.Contacts_id.id, presidents.Contacts_id.telephone'
     }
 }
 
 const { data: assosData } = await useAsyncData(
     "associations",
     async () => {
-        const items = await $fetch(`${directusItems}Associations`, fetchOptions)
+        const items = await $fetch(`${directusItems}Associations?sort[]=type`, fetchOptions)
         const assos = items.data
         
         const temp = {
@@ -139,8 +144,8 @@ onMounted(() => {
 
 <style scoped>
 
-.assoCard {
-    min-height: 550px;
+.assoBottomBox {
+    min-height: 200px;
 }
 
 .assoMain section {

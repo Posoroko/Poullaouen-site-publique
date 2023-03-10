@@ -85,7 +85,7 @@
         </div>
     </main>
 
-    <dialog id="carouselModal">
+    <dialog id="salleCarouselModal">
         <GaleriePhotoDesktop v-if="selectedAlbum" :albumData="selectedAlbum" />
         <span class="modalNode modalCloseBtn absolute icon pointer flex alignCenter justifyCenter" @click="closeModal">
             close
@@ -101,12 +101,9 @@ const selectedAlbum = ref(null)
 let modal = null
 
 const openModal = async (e) => {
-    
     const slug = e.target.getAttribute('data-album')
-    console.log(slug)
-
     const album = await $fetch(`${directusItems}Albums_photo?filter[slug][_eq]=${slug}&fields=images.directus_files_id`)
-    modal = document.getElementById('carouselModal')
+    modal = document.getElementById('salleCarouselModal')
     selectedAlbum.value = album.data[0].images
 
     modal.showModal()
@@ -115,12 +112,6 @@ const openModal = async (e) => {
 const closeModal = () => {
     modal.close()
     selectedAlbum.value = null
-}
-
-
-const sectionData_1 = {
-    image: "/images/ccas/ccas-gym.jpg",
-    title: "Les activités"
 }
 
 const appConfig = useAppConfig();
@@ -185,7 +176,7 @@ onMounted(() => {
 </script>
 
 <style scoped>
-#carouselModal {
+#salleCarouselModal {
     width: 95vw;
     margin: auto;
     background-color: transparent;
@@ -206,7 +197,7 @@ onMounted(() => {
     line-height: 40px;
 }
 
-#carouselModal::backdrop {
+#salleCarouselModal::backdrop {
     background-color: rgba(0, 0, 0, 0.76);
 }
 .level1 {

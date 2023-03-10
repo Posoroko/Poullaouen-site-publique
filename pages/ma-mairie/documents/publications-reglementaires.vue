@@ -17,7 +17,7 @@
 
                     <div class="bottomBox">
                         <p>{{types[doc.publicationType]}}</p>
-                        <p>{{ new Date(doc.date).toLocaleString().slice(0, 11) }}</p>
+                        <p>{{ toDayMonthYearFormat(doc.date) }}</p>
                     </div>
 
                     <div class="downloaderFrame absoluteFull">
@@ -42,7 +42,7 @@
 
                     <div class="bottomBox flex column gap10">
                         <p>{{ types[doc.publicationType] }}</p>
-                        <p>{{ new Date(doc.date).toLocaleString().slice(0, 11) }}</p>
+                        <p>{{ toDayMonthYearFormat(doc.date) }}</p>
                     </div>
 
                     <div class="downloaderFrame absoluteFull">
@@ -56,6 +56,13 @@
 </template>
  
 <script setup>
+const toDayMonthYearFormat = (_date) => {
+    let date = new Date(_date)
+    let day = ("0" + date.getDate()).slice(-2)
+    const month = ("0" + date.getMonth()).slice(-2)
+    const year = date.getFullYear()
+    return `${day}-${month}-${year}`;
+}
 
 const appConfig = useAppConfig();
 const directusItems = appConfig.directus.items;

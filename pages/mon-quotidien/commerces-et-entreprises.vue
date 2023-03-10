@@ -45,10 +45,10 @@
                                 <p class="textContent"> {{ item.email }}  </p>
                             </div>
 
-                            <NuxtLink :to="`https://${item.website}`" target="_blank" class="contesflex flex gap10" v-if="item.website">
+                            <NuxtLink :to="`${item.website}`" target="_blank" class="contesflex flex gap10" v-if="item.website">
                                 <span class="icon">language</span>
 
-                                <span class="textContent externalLink"> visiter le site web </span>
+                                <span class="textContent externalLink"> Visiter le site web </span>
                             </NuxtLink>
                         </div>
                     
@@ -87,7 +87,7 @@ const fetchOptions = {
 const { data: itemsData } = await useAsyncData(
     "associations",
     async () => {
-        const itemsData = await $fetch(`${directusItems}Commerces`, fetchOptions) 
+        const itemsData = await $fetch(`${directusItems}Commerces?sort[]=type`, fetchOptions) 
         const items = itemsData.data
 
         const temp = {

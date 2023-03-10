@@ -491,6 +491,7 @@ onMounted(() => {
 }
 
 .bottomBox {
+    min-height: 350px;
     padding: 20px;
 }
 

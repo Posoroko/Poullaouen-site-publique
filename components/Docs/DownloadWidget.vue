@@ -1,7 +1,6 @@
 <template>
     <div class="downloadWidget column justifyEvenly alignCenter" id="downloadWidget">
         <a :href="link" target="_blank" class="downloaderLine pointer" >
-            
             <span class="downloaderIcon icon centered">visibility</span>
             <span class="downloaderText">Consulter</span> 
         </a>
@@ -14,6 +13,8 @@
 </template>
 
 <script setup>
+const appConfig = useAppConfig();
+const directusAssets = appConfig.directus.assets;
 
 const props = defineProps({
     link: String
