@@ -85,6 +85,7 @@ const headerData = {
 .maireCard .maireFrame {
     width: min(95vw, 375px);
     aspect-ratio: 1/1;
+    background-color: black;
 }
 .maireCard .titleBox {
     padding: 10px;

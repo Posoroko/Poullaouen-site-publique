@@ -20,11 +20,13 @@
                             {{ date.content }}
                         </p>
 
-                        <p v-if="date.organiser"> <b class="">organisé par </b> <span>{{ date.organiser }}</span> </p>
+                        <div class="flex column gap10">
+                            <p v-if="date.organiser"> <b class="">Organisé par </b> <span>{{ date.organiser }}</span> </p>
                         
-                        <p v-if="date.price"> <b class="">tarif : </b> <span>{{ date.price }}</span> </p>
+                            <p v-if="date.price"> <b class="">Tarif : </b> <span>{{ date.price }}</span> </p>
                         
-                        <p v-if="date.moreInfo"> <b class="">plus d'info : </b> <span>{{ date.moreInfo }}</span> </p>
+                            <p v-if="date.moreInfo"> <b class="">Plus d'info : </b> <span>{{ date.moreInfo }}</span> </p>
+                        </div>
                     </div>
                 </SectionMainSloted>
             </div>
@@ -51,7 +53,7 @@ const directusItems = appConfig.directus.items;
 const fetchOptions = {
     server: true,
     params: {
-        fields: 'id, title, date, location, content, organiser, image, imageAlt, price, file, filename'
+        fields: 'id, title, date, location, content, organiser, moreInfo, image, imageAlt, price, file, filename'
     }
 }
 

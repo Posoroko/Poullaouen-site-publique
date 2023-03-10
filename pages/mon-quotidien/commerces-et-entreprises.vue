@@ -45,7 +45,7 @@
                                 <p class="textContent"> {{ item.email }}  </p>
                             </div>
 
-                            <NuxtLink :to="`https://${item.website}`" class="contesflex flex gap10" v-if="item.website">
+                            <NuxtLink :to="`https://${item.website}`" target="_blank" class="contesflex flex gap10" v-if="item.website">
                                 <span class="icon">language</span>
 
                                 <span class="textContent externalLink"> visiter le site web </span>

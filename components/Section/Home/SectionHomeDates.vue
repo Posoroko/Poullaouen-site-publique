@@ -25,7 +25,7 @@
                     </div>
                 </div>
             </div>
-            <div class="agendaButtonBox mainWidth flex justifyEvenly wrap">
+            <div class="agendaButtonBox mainWidth flex justifyEvenly wrap gap20">
                 <NuxtLink class="italic shadow agendaButton textAlignCenter" to="/agenda">Voir tout l'agenda</NuxtLink>
                 <NuxtLink class="italic shadow agendaButton textAlignCenter" to="/proposer-un-evenement">Proposer un événement</NuxtLink>
             </div>
@@ -41,8 +41,7 @@ const todayDDMMFormat = (_date) => {
     let date = new Date(_date)
     const weekDay = weekDays[date.getDay()]
     const day = ("0" + date.getDate()).slice(-2)
-    const month = date.getMonth()
-    console.log(`${weekDay} ${day} ${month}`)
+    const month = ("0" + (date.getMonth() + 1)).slice(-2)
     return `${weekDay} ${day}/${month}`;
 }
 
@@ -78,14 +77,15 @@ const fetchOptions = {
     server: true,
     params: {
         fields: 'id, title, date, location, content, image, imageAlt, price, file, filename',
-        limit: props.limit
+        limit: props.limit,
+        // sort: 'date'
     }
 }
 
 const { data: dates } = await useAsyncData(
     "agenda",
     async () => {
-        const items = await $fetch(`${directusItems}Agenda`, fetchOptions)
+        const items = await $fetch(`${directusItems}Agenda?sort[]=date`, fetchOptions) 
 
         return items.data
     }
@@ -115,21 +115,23 @@ onMounted(() => {
      padding: 30px;
      margin-top: 30px;
  }
-
+.agendaButtonBox{
+    padding: 30px 0;
+}
 .agendaButtonBox .agendaButton {
-    width: 45%;
+    width: min(100%, 600px);
     font-size: 20px;
     font-weight: 600;
     color: var(--dark-blue);
     padding: 10px 20px;
     border-radius: 10px;
-    margin-top: 30px;
     background-color: #fff;
     transition: var(--fadeQuick);
 }
 
 .agendaButtonBox .agendaButton:hover {
-    background-color: #a7bcca;
+    color: white;
+    background-color: var(--dark-blue);
     box-shadow: var(--shadow);
     transition: var(--fadeQuick);
 }

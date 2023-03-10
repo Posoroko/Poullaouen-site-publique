@@ -3,12 +3,12 @@
         <div class="footerContainer mainWidth flex justifyEvenly alignStart wrap h100 ">
             <div class="phoneBox w100 footerBox flex justifyCenter alignCenter wrap gap5">
                 <div class="flex gap5">
-                    <a href="call:+33298935076" class="phoneBtn flex column justifyCenter alignCenter">
+                    <a href="tel:+33298935076" class="phoneBtn flex column justifyCenter alignCenter">
                         <span class="icon">call</span>
                         <span class="city">Poullaouen</span>
                     </a>
 
-                    <a href="call:+33298997309" class="phoneBtn flex column justifyCenter alignCenter">
+                    <a href="tel:+33298997309" class="phoneBtn flex column justifyCenter alignCenter">
                         <span class="icon">call</span>
             
                         <span class="city">Locmaria-Berrien</span>
@@ -74,7 +74,7 @@
                 <div class="w100 flex justifyCenter marTop20">
                     <img class="footerLogo" src="/images/logo-poullaouen.svg" alt="logo de la Commune de Poullaouën">
                 </div>
-                <a href="https://www.facebook.com/profile.php?id=100064790073995" class="button flex alignCenter justifyCenter faceBookBtn">
+                <a href="https://www.facebook.com/profile.php?id=100064790073995" target="_blank" class="button flex alignCenter justifyCenter faceBookBtn">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="iconBox">
                         <path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
                     </svg>
@@ -82,11 +82,11 @@
                     <b class="centered">Suivez-nous !</b>
                 </a>
             
-                <a href="mailto:mairie-de-poullaouen@wanadoo.fr" class="button centered">
+                <a href="mailto:mairie-de-poullaouen@wanadoo.fr" class="button centered " id="envoyerUnMail">
                     Envoyer un mail
                 </a>
 
-                <a href="https://www.poher.bzh/accueil_poher" class="button centered">
+                <a href="https://www.poher.bzh/accueil_poher" target="_blank" class="button centered">
                     Poher communauté
                 </a>
             </div>
@@ -124,16 +124,16 @@
             </div>
         </div> 
 
-        <div class="bottomBar w100">
-            <div class="mainWidth flex justifyEvenly">
+        <div class="bottomBar w100 ">
+            <div class="mainWidth flex justifyEvenly wrap">
                 <NuxtLink class="bottomLink" to="/">ACCUEIL</NuxtLink>
-                <div class="line"></div>
+                <!-- <div class="line"></div> -->
                 <NuxtLink class="bottomLink" to="/">PLAN DU SITE</NuxtLink>
-                <div class="line"></div>
+                <!-- <div class="line"></div> -->
                 <NuxtLink class="bottomLink" to="/mentions-legales">MENTIONS LEGALES</NuxtLink>
-                <div class="line"></div>
+                <!-- <div class="line"></div> -->
                 <NuxtLink class="bottomLink" to="https://www.comkreiz.com/" target="_blank">WEB DESIGN : COM KREIZ</NuxtLink>
-                <div class="line"></div>
+                <!-- <div class="line"></div> -->
                 <NuxtLink class="bottomLink" to="https://www.posoroko.com/" target="_blank" >DEVELOPPEMENT :  STUDIO POSOROKO</NuxtLink>
             </div>
         </div>
@@ -171,6 +171,11 @@
 }
 .phoneBox {
     margin: 0 auto;
+}
+@media (max-width: 719px) {
+    #envoyerUnMail {
+        display: none;
+    }
 }
 @media (min-width: 719px) {
     .phoneBox {

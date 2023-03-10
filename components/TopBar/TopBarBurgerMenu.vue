@@ -2,7 +2,7 @@
     <div class="burger">
         <span class="menuButton pointer" @click.prevent="openMenu">menu</span>
 
-        <div class="burgerMenuPanel" v-if="menuIsOpen">
+        <div class="burgerMenuPanel shadow" v-if="menuIsOpen">
             <div class="navBox flex justifyBetween">
                 <span class="icon pointer" 
                 :class="{ invisible : !tabIsSelected}"
@@ -53,7 +53,7 @@
                 </li>
             </ul>
 
-            <ul class="linkList flex column alignEnd" v-if="tabIsSelected">
+            <ul class="linkList flex column alignEnd w100" v-if="tabIsSelected">
                 <li class="link pointer" v-for="link in menuContent">
                     <nuxt-link class="block w100" :to="link.path" @click="closeMenu">
                         {{ link.text }}
@@ -105,6 +105,7 @@ const closeTab = () => {
     background-color: #fff;
     padding: 15px;
     border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.164);
     position: absolute;
     top: 110%;
     left: 50%;
@@ -175,8 +176,7 @@ const closeTab = () => {
 }
 
 .burgerMenuPanel .linkList {
-    width: min(80vw, 300px);
-    font-size: 24px;
+    font-size: 20px;
 }
 .burgerMenuPanel .linkList .link {
     width: 100%;
