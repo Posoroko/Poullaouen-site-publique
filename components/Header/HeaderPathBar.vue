@@ -1,7 +1,7 @@
 <template>
     <div class="pathBox brownBG centered">
-        <div class="path mainWidth flex alignCenter">
-            <span class="step flex alignCenter" v-for="step in path" :key="step">
+        <div class="path mainWidth flex alignCenter wrap gap10">
+            <span class="step flex alignCenter gap10" v-for="step in path" :key="step">
                 <span class="icon">chevron_right</span>
 
                 <nuxtLink :to="step.target" class="italic stepLink flex alignCenter">
@@ -29,7 +29,8 @@ const props = defineProps({
 
 .step .icon,
 .step .stepLink {
-    margin-right: 20px;
+    font-size: 14px;
+    /* margin-right: 20px; */
 }
 .stepLink:hover {
     color: rgb(149, 246, 253);
@@ -38,4 +39,5 @@ const props = defineProps({
 .path .step:nth-child(1) .icon {
     display: none;
 }
+
 </style>

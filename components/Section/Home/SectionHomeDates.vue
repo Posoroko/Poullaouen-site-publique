@@ -120,7 +120,7 @@ onMounted(() => {
 }
 .agendaButtonBox .agendaButton {
     width: min(100%, 600px);
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     color: var(--dark-blue);
     padding: 10px 20px;

@@ -9,7 +9,7 @@
 
         <SectionTitleBar title="Le rôle CCAS"/>
 
-        <p class="mainWidth page-text marTop20">
+        <p class="mainWidth page-text marTop50">
             Le <b>CCAS</b> assure une mission d’ <b>aide à la population</b>. 
             Il apporte une aide pour les demandes d’APA, d’aide sociale (service d’aide ménagère 
             et prise en charge des frais d’hébergement en maison de retraite ou foyer logement), 
@@ -45,7 +45,7 @@
 
         <SectionTitleBar title="Les organismes partenaires" />
         
-        <p class="mainWidth intro-text">
+        <p class="mainWidth page-text marTop50">
             Pour obtenir des informations concernant ces aides, vous pouvez contacter <a class="externalLink" href="https://www.poher.bzh/accueil_poher/les_services/maison_france_services">la Maison des Services au Public</a> à Poher
             Communauté.
         </p>

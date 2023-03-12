@@ -71,7 +71,7 @@
             </div>
 
             <div class="centerBox footerBox flex">
-                <div class="w100 flex justifyCenter marTop20">
+                <div class="w100 flex justifyCenter marTop100">
                     <img class="footerLogo" src="/images/logo-poullaouen-trimmed.svg" alt="logo de la Commune de Poullaouën">
                 </div>
                 <a href="https://www.facebook.com/profile.php?id=100064790073995" target="_blank" class="button flex alignCenter justifyCenter faceBookBtn">
@@ -147,7 +147,6 @@
 
 <style scoped>
 .footerLogo {
-    max-width: 400px;
     margin: auto;
 }
 
@@ -255,9 +254,8 @@
 }
 
 @media (max-width: 700px) {
-    .logo {
-        width: 60%;
-        margin: auto;
+    .footerLogo {
+        width: 200px;
     }
 
     .vague {
@@ -291,7 +289,9 @@
 }
 
 @media (min-width: 701px) and (max-width: 1199px) {
-
+    .footerLogo {
+        width: 300px;
+    }
     .vague {
         bottom: 0;
         display: none;
@@ -325,6 +325,9 @@
 
 @media (min-width: 1200px) {
 
+    .footerLogo {
+        width: 100%;
+    }
     .vague {
         bottom: 30vh;
     }
