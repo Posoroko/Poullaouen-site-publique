@@ -7,27 +7,30 @@
         </p>
 
         <nav class="defaultFilterBox horizontalGradient">
-            <p class="mainWidth page-text">Filtrer les résultats par thème</p>
+            <p class="mainWidth">Filtrer les résultats par thème</p>
 
-            <div class="mainWidth flex justifyCenter alignCenter wrap gap20">
-                <div class="defaultFilterButton pointer" @click="filterItems" data-category="all"
+            <div class="mainWidth flex justifyCenter alignCenter wrap gap10">
+                <div class="defaultFilterButton pointer" @click="setActiveCategory" data-category="all"
                     :class="{ activeDefaultFilterButton: activeCategory == 'all' }">Tous les albums</div>
         
-                <div    class="defaultFilterButton pointer" v-for="cat in galeryData.categories" :key="cat.ref"  
-                        @click="filterItems" :data-category="cat.ref" :class="{ activeDefaultFilterButton: activeCategory == cat.ref }">
+                <div class="defaultFilterButton pointer" v-for="cat in galeryData.categories" :key="cat.ref"
+                        @click="setActiveCategory" :data-category="cat.ref" :data-hasSubCats="cat.hasSubCats" :class="{ activeDefaultFilterButton: activeCategory == cat.ref }">
                     {{ cat.name }}
                 </div>
             </div>
 
-            <div class="mainWidth flex justifyCenter alignCenter wrap gap20 marTop20" v-if="albumsOfActiveCategory">
-                <div    class="defaultFilterButton pointer" v-for="album in albumsOfActiveCategory" :key="album.id"  
-                        @click="filterAlbumName" :data-albumId="`album${album.id}`" :class="{ activeDefaultFilterButton: activeAlbumId == `album${album.id}` }">
-                    {{ album.albumName }}
+            <div class="mainWidth flex justifyCenter alignCenter wrap marTop20" v-if="catWithSubCats">
+                <p class="w100 marTop20">Sélectionnez une sous-catégorie :</p>
+                <div class="flex justifyCenter wrap gap10">
+                    <div  class="defaultFilterButton pointer flex justifyCenter alignCenter gap20" v-for="subCat in galeryData.subCategories[activeCategory].subCats" :subCat="subCat.ref"  
+                          @click="setActiveSubCategory" :data-subCategory="subCat.ref" :class="{ activeDefaultFilterButton: activeSubCategory == subCat.ref }">
+                        <span class="icon">group</span> <span>{{ subCat.name }}</span>
+                    </div>
                 </div>
             </div>
         </nav>
 
-        <div class="galeryContent" v-if="albumListOn">
+        <div class="galeryContent">
             <div  v-for="album in displayedAlbums" :key="album.id">
 
                 <SectionMainSloted :data="{ title: album.albumName, image: album.images[0].directus_files_id, localImage: false }">
@@ -48,47 +51,67 @@
         </div>
     </main>
 </template>
-<script setup>
-const activeCategory = ref(null)
-const filterItems = (e) => {
-    albumListOn.value = false
-    activeCategory.value = null
-    const cat = e.target.getAttribute('data-category')
 
-    if(cat == 'all') {
-        albumsOfActiveCategory.value = []
-        displayedAlbums.value = galeryData.value.albums.all
-        activeAlbumId.value = 'all'
-    } else {
-        //ex: ecole
-        albumsOfActiveCategory.value = galeryData.value.albums[cat]
-        displayedAlbums.value = albumsOfActiveCategory.value
-        activeAlbumId.value = 'all'
-    }
-    activeCategory.value = cat
-    setTimeout(() => {
-        
-        albumListOn.value = true
-    }, 10)
-}
-const albumListOn = ref(false)
-const albumsOfActiveCategory = ref(null)
-const activeAlbumId = ref('all')
+<script setup>
+
+const appConfig = useAppConfig();
+const directusItems = appConfig.directus.items;
+const directusAssets = appConfig.directus.assets;
+
+const activeCategory = ref(null)
+const catWithSubCats = ref(false)
+const activeSubCategory = ref(null)
 
 const displayedAlbums = ref(null)
 
-const filterAlbumName = (e) => {
+const setActiveCategory = (e) => {
+    if(activeCategory.value == e.currentTarget.getAttribute('data-category')) {
+        return
+    }
 
-    albumListOn.value = false
-    const albumId = e.currentTarget.getAttribute('data-albumId')
+    activeCategory.value = e.currentTarget.getAttribute('data-category')
+    activeSubCategory.value = null
 
-    displayedAlbums.value = albumsOfActiveCategory.value.filter(album => `album${album.id}` == albumId )
-
-    activeAlbumId.value = albumId
-    setTimeout(() => {
-        albumListOn.value = true
-    }, 10)
+    if(e.currentTarget.getAttribute('data-hasSubCats') == 'true') {
+        catWithSubCats.value = true
+        activeCategory.value = e.currentTarget.getAttribute('data-category')
+    } else {
+        catWithSubCats.value = false
+    }
+    filterAlbums()
 }
+
+const setActiveSubCategory = (e) => {
+    console.log(e.currentTarget.getAttribute('data-subCategory'))
+    if(activeSubCategory.value == e.currentTarget.getAttribute('data-subCategory')) {
+        return
+    }
+
+    activeSubCategory.value = e.currentTarget.getAttribute('data-subCategory')
+    filterAlbums()
+}
+
+const filterAlbums = () => {
+    if(activeCategory.value == 'all') {
+        displayedAlbums.value = galeryData.value.albums
+        return
+    }
+    if(!activeSubCategory.value) {
+        displayedAlbums.value = galeryData.value.albums.filter(album => {
+            const matchingCat = album.categoryName.ref == activeCategory.value
+            if (matchingCat) return true
+        })
+
+    }else {
+        displayedAlbums.value = galeryData.value.albums.filter(album => {
+            const matchingCat = album.categoryName.ref == activeCategory.value
+            const matchingSubCat = album.subCatRef == activeSubCategory.value
+            if (matchingCat && matchingSubCat) return true
+        })
+    }
+}
+
+console.log()
 
 const toMonthYearFormat = (_date) => {
 
@@ -101,20 +124,11 @@ const toMonthYearFormat = (_date) => {
     return `${day} ${month} ${year}`;
 }
 
-
-
-
-
-const appConfig = useAppConfig();
-const directusItems = appConfig.directus.items;
-const directusAssets = appConfig.directus.assets;
-
-
  
 const fetchOptions = {
     server: true,
     params: {
-        fields: 'id, date_created, albumName, slug, content, categoryName.displayName, categoryName.slug, categoryName.ref, images, images.directus_files_id'
+        fields: 'id, date_created, albumName, slug, ref, content, categoryName.displayName, categoryName.slug, categoryName.ref, categoryName.subCategoryRef, categoryName.hasSubCats , images, images.directus_files_id, subCatRef, subCatName, subCatSlug'
     } 
 }
 
@@ -125,21 +139,42 @@ const { data: galeryData } = await useAsyncData(
         const albums = items.data
 
         const temp = {
-            catRef: [], //to avoid duplicate
-            categories: [],
-            albums: {
-                all: []
-            }
-        }
+            catRefs: [], //to avoid duplicate
+            categories: [], // array of catData objects
+            subCatRefs: [], //to avoid duplicate
+            subCategories: {
+                // associations: {
+                //     subCatRefs: [],
+                //     subCats: [] // array of subCatData objects
+                // }
+            }, 
+            albums: albums
+        } 
+
         albums.forEach(album => {
-            if (!temp.catRef.includes(album.categoryName.ref)) {
-                temp.catRef.push(album.categoryName.ref)
-                temp.categories.push({name: album.categoryName.displayName, slug: album.categoryName.slug, ref: album.categoryName.ref})
-                temp.albums[album.categoryName.ref] = []
+            
+            const catData = { name: album.categoryName.displayName, slug: album.categoryName.slug, ref: album.categoryName.ref, hasSubCats: album.categoryName.hasSubCats }
+            
+            if(!temp.catRefs.includes(catData.ref)) { 
+                temp.categories.push(catData)
+                temp.catRefs.push(catData.ref)
             }
-            temp.albums[album.categoryName.ref].push(album)
-            temp.albums.all.push(album)
+            if(album.subCatRef) { 
+                const subCatData = { name: album.subCatName, slug: album.sunCatSlug, ref: album.subCatRef }
+
+                if(!temp.subCategories[catData.ref]) {
+                    temp.subCategories[catData.ref] = {
+                        subCatRefs: [],
+                        subCats: []
+                    }
+                }
+                if(!temp.subCategories[catData.ref].subCatRefs.includes(subCatData.ref)) {
+                    temp.subCategories[catData.ref].subCatRefs.push(subCatData.ref)
+                    temp.subCategories[catData.ref].subCats.push(subCatData)
+                }
+            }
         })
+
         return temp
     }
     ,
@@ -151,7 +186,7 @@ const { data: galeryData } = await useAsyncData(
 
 
 
-const headerData = {
+const headerData = { 
     images: [
         {
             src: `${directusAssets}7f6743b0-2d74-47af-a9ab-1a6f68a58fb8.jpg?key=header1500`,
@@ -170,6 +205,8 @@ const headerData = {
         }
     ]
 }
+
+ 
 const applyStyleClasses_utils = () => {
 
     const sections = document.querySelectorAll('.sectionBoxSloted')
@@ -181,16 +218,16 @@ const applyStyleClasses_utils = () => {
         sections[i].classList.replace('whiteSection', 'brownSection')
     }
 }
+
 onUpdated(() => {
     applyStyleClasses_utils()
-})
+    
+}) 
 
 onMounted(() => {
     applyStyleClasses_utils()
-    activeCategory.value = galeryData.value.categories[0].ref
-    albumsOfActiveCategory.value = galeryData.value.albums[galeryData.value.categories[0].ref]
-    displayedAlbums.value = albumsOfActiveCategory.value
-    albumListOn.value = true
+    activeCategory.value = 'all'
+    filterAlbums()
 })
 
 
