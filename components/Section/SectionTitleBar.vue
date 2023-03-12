@@ -1,6 +1,6 @@
 <template>
     <div class="sectionTitleBox mainWidth">
-        <h2 class="oleo">{{ title }}</h2>
+        <h2 class="oleo"> {{ title }}</h2>
         
         <div class="titleStripe"></div>
 
@@ -24,9 +24,11 @@ const props = defineProps({
 
 .sectionTitleBox {
     margin-top: 50px;
+    padding-left: 20px; 
 }
 .sectionTitleBox h2 {
-    font-size: max(30px, 2vw);    
+    font-size: max(30px, 2vw);
+    
 }
 
 .sectionTitleBox .titleStripe {

@@ -3,7 +3,7 @@
         <SectionTitleBar v-if="data.title" :title="data.title" />
 
         <div class="sectionContent sectionBox w100 h100">
-            <div class="mainWidth h100 flex justifyCenter wrap">
+            <div class="mainWidth h100 flex justifyCenter gap20 wrap">
                 <div class="shoeBox centered">
                     <SectionShoeBox :image="data.image" :localImage="data.localImage" :containedImage="data.containedImage" />
                 </div>
@@ -42,9 +42,6 @@ const props = defineProps({
 .shoeBox, 
 .slotedContent {
     width: min(600px, 90vw);
-    /* max-height: 100%; */
-    /* min-height: 350px; */
-    padding: 20px;
 }
 
 

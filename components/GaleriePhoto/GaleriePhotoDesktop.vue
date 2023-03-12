@@ -1,9 +1,9 @@
 <template>
     <section class="photoViewerMain relative">
-        <div ref="viewerBox" class="mainWidth viewerBox relative h100">
-            <div class="viewerArrowBox viewerLeftArrowBox absolute icon headerIcon headerChevron pointer" @click="swipeLeft"> chevron_left </div>
+        <div ref="viewerBox" class=" viewerBox relative h100">
+            <div class="viewerArrowBox viewerLeftArrowBox absolute icon headerIcon carouselChevron pointer" @click="swipeLeft"> chevron_left </div>
 
-            <div class="viewerArrowBox viewerRightArrowBox absolute icon headerIcon headerChevron pointer" @click="swipeRignt"> chevron_right  </div>
+            <div class="viewerArrowBox viewerRightArrowBox absolute icon headerIcon carouselChevron pointer" @click="swipeRignt"> chevron_right  </div>
         </div>
     </section>
 </template>
@@ -18,6 +18,7 @@ const props = defineProps({
 })
 
 const swipeLeft = () => {
+
      if (imagesNodes.value[imagesNodes.value.length -1].classList[0] == 'pos1102') {
         return
     }
@@ -53,7 +54,7 @@ const swipeLeft = () => {
 
 }
 const swipeRignt = () => {
-
+    
     if(imagesNodes.value[0].classList[0] == 'pos1102') {
         return
     }
@@ -126,6 +127,10 @@ onMounted(() => {
     height: 60vh;
     background-color: var(--dark-blue);
 }
+.viewerBox {
+    width: min(1200px, 100%);
+    margin: auto;
+}
 .photoCard {
     height: min(500px, 70vw); 
     aspect-ratio: 1/1;
@@ -172,5 +177,10 @@ onMounted(() => {
     user-select: none;
     z-index: 2000;
 }
-
+.carouselChevron {
+    font-size: 35px;
+    line-height: 35px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.425);
+}
 </style>

@@ -2,8 +2,8 @@
     <section>
         <SectionTitleBar title="Les manoirs" />
         <div class="horizontalGradient marTop50 manoirsContent">
-            <div class="mainWidth  flex">
-                <div class="manoirsLeftCol page-text w50 manoirsCol flex column gap10">
+            <div class="mainWidth  flex wrap">
+                <div class="manoirsLeftCol page-text manoirsCol flex column gap10">
                     <h3>Le manoir du Tymeur</h3>
                     <i>Propriété privée - Poullaouen</i>
                     <p>Le MANOIR DU TYMEUR comprend les vestiges de l’ancien château du Tymeur datant du XIII ème sciècle, siège de la Baronnie de Kergorlay et berceau de la famille de Ploeuc.</p>
@@ -27,7 +27,7 @@
                     </p>
                 </div>
 
-                <div class="manoirsRightCol page-text w50 manoirsCol flex column gap10">
+                <div class="manoirsRightCol page-text manoirsCol flex column gap10">
                     <p>tissage du lin et du chanvre. La mare à rouir, ou Poul-in, nécessaire à cette activité, a été en partie comblée par la suite.</p>
 
                     <h3>Le manoir de Lallunec</h3>
@@ -65,6 +65,7 @@
 }
 
 .manoirsCol {
+    width: min(550px, 100%);
     padding: 20px;
 }
 </style>

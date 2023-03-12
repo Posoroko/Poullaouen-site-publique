@@ -8,7 +8,7 @@
         
         <div class="marTop50"></div>
 
-        <form ref="form" class="smallWidth flex column">
+        <form ref="form" class="form smallWidth flex column">
             <label for="firstName">Votre nom complet</label>
             <input name="name" type="text" id="name">
 
@@ -41,6 +41,18 @@
 <!-- 
             <label for="eventImage">Image de l'événement</label>
             <input type="file" id="eventImage"> -->
+             
+            <div class="flex column gap10 pad20">
+                
+                <label class="checkBoxLabel" for="acceptTerms">
+                    J'accepte que la mairie de Poullaouen conserve les informations que 
+                    j'ai fournis plus haut et je confirma avoir le les 
+                    <NuxtLink to="/mentions-legales" class="externalLink">
+                        les mentions légales. 
+                    </NuxtLink>  
+                </label>
+                <input type="checkbox" id="acceptTerms">
+            </div>
 
             <div class="centered marTop50">
                 <button class="formButton" @click.prevent="handleSubmit">Envoyer</button>
@@ -169,6 +181,7 @@ const path = ref([
 .smallWidth {
     width: min(100%, 600px);
     margin: auto;
+    padding: 10px;
 }
 label {
     margin-top: 20px;
@@ -202,5 +215,13 @@ textarea {
 .formButton:hover {
     background-color: rgb(10, 65, 148);
 }
+.checkBoxLabel{
+    font-size: 14px;
+}
 
+input[type=checkbox] {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.1;
+}
 </style>

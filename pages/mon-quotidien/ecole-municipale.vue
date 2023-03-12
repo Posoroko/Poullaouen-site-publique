@@ -30,7 +30,7 @@
                     </div>
 
                     <div class="flex justifyEnd">
-                        <div data-album="ecole-maternelle" class="albumButton blueAlbumButton pointer" @click="openModal" >Voir l'album</div>
+                        <NuxtLink to="/galerie-photo?categorie=ecole&sous-categorie=ecole-jules-ferry" class="albumButton blueAlbumButton pointer" >Voir les albums</NuxtLink>
                     </div>
                 </div>
             </SectionMainSloted>
@@ -72,7 +72,7 @@
                     <div class="flex justifyBetween">
                         <!-- <p class="flex alignCenter gap10"> <span class="icon">visibility</span> <b>Programme de l'année</b> </p> -->
                         <div></div>
-                        <div data-album="temps-d-activite-periscolaire" class="albumButton blueAlbumButton pointer" @click="openModal" >Voir l'album</div>
+                        <NuxtLink to="/galerie-photo?categorie=ecole&sous-categorie=tap" class="albumButton blueAlbumButton pointer" >Voir les albums</NuxtLink >
                     </div>
                 </div>
             </SectionMainSloted>
@@ -122,18 +122,18 @@
                     <div class="flex column gap10">
                         <b>Les horaires :</b>
 
-                        <p class="level1 flex alignCenter"> <span class="dot inlineBlock"></span> lundi, mardi, jeudi et vendredi :</p>
+                        <p class="level1 flex alignCenter gap10"> <span class="dot inlineBlock"></span> lundi, mardi, jeudi et vendredi :</p>
                             <p class="level2">Le matin de 7h30 à 8h45</p>
                             <p class="level2">Le soir de 16h45 à 18h30</p>
 
-                        <p class="level1 flex alignCenter"> <span class="dot inlineBlock"></span> Le mercredi :</p>
+                        <p class="level1 flex alignCenter gap10"> <span class="dot inlineBlock"></span> Le mercredi :</p>
                             <p class="level2">Le matin de 7h30 à 9h00</p>
                             <p class="level2">Le midi de 12h00 à 12h30</p>
                         
                         <b>Les horaires :</b>
                         
-                        <p class="level1 flex alignCenter"><span class="dot inlineBlock"></span>Garderie occasionnelle (jusqu’au 6ème jour) : 2.30 € par jour</p>
-                        <p class="level1" flex alignCenter> <span class="dot inlineBlock"></span> Garderie régulière (à partir du 7ème jour) :</p>
+                        <p class="level1 flex alignCenter gap10"><span class="dot inlineBlock"></span>Garderie occasionnelle (jusqu’au 6ème jour) : 2.30 € par jour</p>
+                        <p class="level1 flex alignCenter gap10" > <span class="dot inlineBlock"></span> Garderie régulière (à partir du 7ème jour) :</p>
                         <p class="level2"><span class="eric">1er enfant :</span> <span>23 € par mois</span></p>
                         <p class="level2"><span class="eric">2ème enfant :</span> <span>15 € par mois</span></p>
                         <p class="level2"><span class="eric">3ème enfant :</span> <span>12 € par mois</span></p>
@@ -162,7 +162,7 @@
                     </p>
 
                     <div class="infoBox">
-                        <p> <b>Renseignements :</b> Mairie - 02 98 93 50 76</p>
+                        <p><b>Renseignements :</b> Mairie - 02 98 93 50 76</p>
                     </div>
                 </div>
             </SectionMainSloted>
@@ -247,11 +247,11 @@ const headerData = {
 
 <style scoped>
 #ecoleCarouselModal {
-    width: 95vw;
+    width: 100%;
     margin: auto;
     background-color: transparent;
     border: none;
-    padding: 50px;
+    /* padding: 50px; */
 }
 
 
@@ -272,11 +272,10 @@ const headerData = {
 }
 
 .dot {
-    width: 15px;
+    min-width: 15px;
     height: 15px;
-    border-radius: 50%;
+    border-radius: 15px;
     background-color: var(--light-blue);
-    margin-right: 10px;
 }
 .eric {
     display: inline-block;
@@ -284,7 +283,7 @@ const headerData = {
 }
 
 .albumButton{
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     padding: 10px 15px;
     border-radius: 10px;
@@ -329,7 +328,4 @@ li {
     }
 }
 
-.infoBox{
-    padding: 5px;
-}
 </style>

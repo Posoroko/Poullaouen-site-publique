@@ -22,9 +22,9 @@
             <div class="mainWidth flex justifyCenter alignCenter wrap marTop20" v-if="catWithSubCats">
                 <p class="w100 marTop20">Sélectionnez une sous-catégorie :</p>
                 <div class="flex justifyCenter wrap gap10">
-                    <div  class="defaultFilterButton pointer flex justifyCenter alignCenter gap20" v-for="subCat in galeryData.subCategories[activeCategory].subCats" :subCat="subCat.ref"  
+                    <div  class="defaultFilterButton pointer flex justifyCenter alignCenter gap5" v-for="subCat in galeryData.subCategories[activeCategory].subCats" :subCat="subCat.ref"  
                           @click="setActiveSubCategory" :data-subCategory="subCat.ref" :class="{ activeDefaultFilterButton: activeSubCategory == subCat.ref }">
-                        <span class="icon">group</span> <span>{{ subCat.name }}</span>
+                        <span class="">{{ subCat.name }}</span>
                     </div>
                 </div>
             </div>
@@ -58,6 +58,8 @@ const appConfig = useAppConfig();
 const directusItems = appConfig.directus.items;
 const directusAssets = appConfig.directus.assets;
 
+const route = useRoute();
+
 const activeCategory = ref(null)
 const catWithSubCats = ref(false)
 const activeSubCategory = ref(null)
@@ -82,7 +84,7 @@ const setActiveCategory = (e) => {
 }
 
 const setActiveSubCategory = (e) => {
-    console.log(e.currentTarget.getAttribute('data-subCategory'))
+
     if(activeSubCategory.value == e.currentTarget.getAttribute('data-subCategory')) {
         return
     }
@@ -221,12 +223,24 @@ const applyStyleClasses_utils = () => {
 
 onUpdated(() => {
     applyStyleClasses_utils()
-    
 }) 
 
 onMounted(() => {
     applyStyleClasses_utils()
-    activeCategory.value = 'all'
+
+    if (route.query['sous-categorie']) {
+        activeCategory.value = route.query.categorie.replaceAll('-', '_')
+        catWithSubCats.value = true
+        activeSubCategory.value = route.query['sous-categorie'].replaceAll('-', '_')
+    }else if(route.query.categorie) {
+        activeCategory.value = route.query.categorie
+        catWithSubCats.value = true
+    } else {
+        activeCategory.value = 'all'
+    }
+
+    console.log(activeSubCategory.value)
+
     filterAlbums()
 })
 

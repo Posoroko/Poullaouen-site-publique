@@ -3,9 +3,9 @@
         <SectionTitleBar title="La mine aujourd'hui." />
 
          <div class="sectionContent sectionBox w100 marTop50">
-            <div class="mainWidth flex gap20">
+            <div class="mainWidth flex justifyCenter wrap gap20">
                 
-                <div class="w50 flex column gap20">
+                <div class="sectionBlock flex column gap20">
                     <div class="marTop20"></div>
                     <SectionShoeBox image="/images/histoire/musée 1.jpg" :localImage="true" />
 
@@ -36,7 +36,7 @@
                     <div class="marTop20"></div>
                 </div>
 
-                <div class="w50">
+                <div class="sectionBlock">
                     <div class="marTop20"></div>
                     <p class="longText page-text h100">
                         En raison de l’essor du réseau ferré, les mines ferment les unes après
@@ -87,5 +87,8 @@
 <style scoped>
 .longText {
     padding: 20px;
+}
+.sectionBlock {
+    width: min(550px, 100%);
 }
 </style>

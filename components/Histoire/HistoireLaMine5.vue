@@ -3,8 +3,8 @@
             <SectionTitleBar title="L’utilisation de techniques minières perfectionnées." />
 
             <div class="sectionContent sectionBox w100 marTop50">
-                <div class="mainWidth flex gap20">
-                    <div class="w50 flex column gap20">
+                <div class="mainWidth flex justifyCenter wrap gap20">
+                    <div class="sectionBlock flex column gap20">
                         <SectionShoeBox image="/images/histoire/musée 1.jpg" :localImage="true" />
                         <h2 class="histoireSubtitle">L’utilisation de techniques minières perfectionnées.</h2>
                         <p class="page-text pad20">
@@ -29,7 +29,7 @@
                         
                     </div>
             
-                    <div class="w50">
+                    <div class="sectionBlock">
                         <p class="page-text pad20">
                             Elles sont actionnées par des machines hydrauliques, dont certaines
                             sont exceptionnelles par leur taille et leur technicité, avec des roues
@@ -89,4 +89,9 @@
 
 </script>
 
-<style scoped></style>
+<style scoped>
+.sectionBlock {
+    width: min(550px, 100%);
+}
+
+</style>

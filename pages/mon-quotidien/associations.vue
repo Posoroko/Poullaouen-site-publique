@@ -21,15 +21,12 @@
                             :cardImageAlt="asso.imageAlt">
                         
                             <div class="assoBottomBox flex column gap10 justifyCenter alignStart">
-                                <div class="flex assoPresBox" v-if="asso.presidents.length">
-                                    <span class="icon">person</span>
-                                
-                                    <ul class="assoPresUl flex column justifyCenter gap5">
-                                        <li> <b>Président-e<span v-if="asso.presidents.length > 1">-s</span>:</b>  </li>
-
-                                        <li v-for="pres in asso.presidents" :key="pres.Contacts_id.id" class="assoPresLi flex column">
-                                            <span>{{ pres.Contacts_id.firstName}} {{ pres.Contacts_id.lastName.toUpperCase() }}</span>
-
+                                <div class="flex assoPresBox column" v-if="asso.presidents.length">
+                                    <p class="flex alignCenter gap10"><span class="icon">person</span><b>Président-e<span v-if="asso.presidents.length > 1">-s</span>:</b></p>
+                                    
+                                    <ul class="assoPresUl flex column justifyCenter gap100">
+                                        <li v-for="pres in asso.presidents" :key="pres.Contacts_id.id" class="assoPresLi flex column gap5">
+                                            <b>{{ pres.Contacts_id.firstName}} {{ pres.Contacts_id.lastName.toUpperCase() }}</b>
                                             <span class="assoPresTelephone">{{ pres.Contacts_id.telephone }}</span>
                                         </li>
                                     </ul>
@@ -152,16 +149,14 @@ onMounted(() => {
     margin-top: 50px;
 }
 .assoBottomBox {
-    padding: 20px;
+    padding: 20px 20px;
 }
 .assoPresBox {
     width: 100%;
     justify-content: flexStart;
     gap: 10px
 }
-.assoPresTelephone {
-    padding-left: 30px;
-}
+
 .placeholderIcon {
     font-size: 200px;
     color: rgb(166, 175, 177);
