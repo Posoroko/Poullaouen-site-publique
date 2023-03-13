@@ -53,6 +53,8 @@ html {
     fill: white;
 }
 
+
+
 .brownSection .section-address-text {
     color: white;
 }
@@ -65,6 +67,14 @@ html {
 
 .brownSection * {
     fill: white;
+}
+/* horse icon */
+.brownSection .sectionContent div div div .horseIcon path {
+    fill: white;
+}
+/* feet in school brown section */
+.brownSection .sectionContent div div div svg path {
+    fill: var(--dark-blue);
 }
 
 .brownSection .sectionContent .mainWidth, 
