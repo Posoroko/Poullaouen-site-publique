@@ -72,10 +72,6 @@ html {
 .brownSection .sectionContent div div div .horseIcon path {
     fill: white;
 }
-/* feet in school brown section */
-.brownSection .sectionContent div div div svg path {
-    fill: var(--dark-blue);
-}
 
 .brownSection .sectionContent .mainWidth, 
 .blueSection .sectionContent .mainWidth{
