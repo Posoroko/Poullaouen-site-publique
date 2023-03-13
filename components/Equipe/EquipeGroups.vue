@@ -15,7 +15,7 @@
             </p>
 
  
-            <div class="content mainWidth flex justifyEvenly alignStretch wrap gap50 marTop100">
+            <div class="tallCardBox content mainWidth flex justifyCenter alignStretch wrap gap50 marTop100">
                 <CardsTallMain  v-for="group in groups[type.id]" :key="group.id" :title="group.name" :subtitle="group.boss" :cardImage="group.image" :localImage="false">
                     <div class="tallCardBottomBox">    
                         <div class="w100" v-if="group.membresElus.length">
@@ -136,6 +136,26 @@ const styleTallCards = () => {
     }
     for (let i = 2; i < cards.length; i = i + 3) {
         cards[i].classList.replace('whiteTallCard', 'brownTallCard')
+    }
+
+       const tallCardBoxes = document.querySelectorAll('.tallCardBox')
+
+    tallCardBoxes.forEach(box => {
+        if ((box.children.length) % 2 != 0) {
+            const placeholder = document.createElement('div')
+            placeholder.classList.add('fakeTallCard')
+            placeholder.classList.add('iLikeToMoveIt')
+            box.appendChild(placeholder)
+        }
+    })
+
+    const tallCards = document.querySelectorAll('.iLikeToMoveIt')
+
+    for (let i = 0; i < tallCards.length; i = i + 4) {
+        tallCards[i].classList.add('leftPushedTallCard')
+    }
+    for (let i = 3; i < tallCards.length; i = i + 4) {
+        tallCards[i].classList.add('rightPushedTallCard')
     }
 }
 

@@ -10,7 +10,7 @@
         <section>
             <SectionTitleBar  title="Les gîtes" />
 
-            <div class="roomsContent mainWidth flex justifyCenter wrap gap50">
+            <div class="tallCardBox roomsContent mainWidth flex justifyCenter wrap gap50">
                 <CardsTallMain v-for="item in items.filter(item => item.subType.slug == 'gites' || item.subType.slug == 'chambres_d_hotes')" :key="item.id" :title="item.name" :subtitle="item.subType.displaySubtype" :cardImage="item.image" :cardImageAlt="item.imageAlt" :localImage="false">
                     <div class="cardContent flex column gap10">
                         <p class="flex alignCenter gap10" v-if="item.adress"> <span class="icon">location_on</span> <span>{{ item.adress }}</span> </p>
@@ -25,7 +25,7 @@
         <section>
             <SectionTitleBar  title="Les chambres d'hôtes" />
 
-            <div class="roomsContent mainWidth flex justifyCenter wrap gap50">
+            <div class="tallCardBox roomsContent mainWidth flex justifyCenter wrap gap50">
                 <CardsTallMain v-for="item in items.filter(item => item.subType.slug == 'chambres_d_hotes')" :key="item.id" :title="item.name" :subtitle="item.subType.displaySubtype" :cardImage="item.image" :cardImageAlt="item.imageAlt" :localImage="false">
                     <div class="cardContent flex column gap10">
                         <p class="flex alignCenter gap10" v-if="item.adress"> <span class="icon">location_on</span> <span>{{ item.adress }}</span> </p>
@@ -40,7 +40,7 @@
         <section>
             <SectionTitleBar  title="L'aire de camping-car" />
 
-            <div class="roomsContent mainWidth flex justifyCenter wrap gap50">
+            <div class="tallCardBox roomsContent mainWidth flex justifyCenter wrap gap50">
                 <CardsTallMain title="L'aire" cardImage="/images/se-loger/aire de camping car(1).jpg" cardImageAlt="L'aire de camping car de Poullaouen" :localImage="true">
                     <div class="cardContent flex column gap10">
                         <p class="flex alignCenter gap10" > <span class="icon">location_on</span> <span>Rue du Ty Meur - Poullaouen</span> </p>
@@ -53,7 +53,7 @@
         <section>
             <SectionTitleBar  title="Bars et restaurants" />
 
-            <div class="roomsContent mainWidth flex justifyCenter wrap gap50">
+            <div class="tallCardBox roomsContent mainWidth flex justifyCenter wrap gap50">
                 <CardsTallMain v-for="item in items.filter(item => item.type.slug == 'bars_et_restaurants')" :key="item.id" :title="item.name" :subtitle="item.subType.displaySubtype" :cardImage="item.image" :cardImageAlt="item.imageAlt" :localImage="false">
                     <div class="cardContent flex column gap10">
                         <p class="flex alignCenter gap10" v-if="item.adress"> <span class="icon">location_on</span> <span>{{ item.adress }}</span> </p>
@@ -68,7 +68,7 @@
         <section>
             <SectionTitleBar  title="Alimentation" />
 
-            <div class="roomsContent mainWidth flex justifyCenter wrap gap50">
+            <div class="tallCardBox roomsContent mainWidth flex justifyCenter wrap gap50">
                 <CardsTallMain v-for="item in items.filter(item => item.type.slug == 'alimentation')" :key="item.id" :title="item.name" :cardImage="item.image" :subtitle="item.subType.displaySubtype" :cardImageAlt="item.imageAlt" :localImage="false">
                     <div class="cardContent flex column gap10">
                         <p class="flex alignCenter gap10" v-if="item.adress"> <span class="icon">location_on</span> <span>{{ item.adress }}</span> </p>
@@ -142,6 +142,30 @@ const styleTallCards = () => {
     }
     for (let i = 2; i < cards.length; i = i + 3) {
         cards[i].classList.replace('whiteTallCard', 'brownTallCard')
+    }
+
+        if (window.innerWidth < 1075) {
+        return
+    }
+
+    const tallCardBoxes = document.querySelectorAll('.tallCardBox')
+
+    tallCardBoxes.forEach(box => {
+        if ((box.children.length) % 2 != 0) {
+            const placeholder = document.createElement('div')
+            placeholder.classList.add('fakeTallCard')
+            placeholder.classList.add('iLikeToMoveIt')
+            box.appendChild(placeholder)
+        }
+    })
+
+    const tallCards = document.querySelectorAll('.iLikeToMoveIt')
+
+    for (let i = 0; i < tallCards.length; i = i + 4) {
+        tallCards[i].classList.add('leftPushedTallCard')
+    }
+    for (let i = 3; i < tallCards.length; i = i + 4) {
+        tallCards[i].classList.add('rightPushedTallCard')
     }
 }
 

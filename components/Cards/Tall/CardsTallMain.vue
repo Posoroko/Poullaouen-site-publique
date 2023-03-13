@@ -1,5 +1,5 @@
 <template>
-    <div class="tallCard whiteTallCard h100 flex column">
+    <div class="tallCard iLikeToMoveIt whiteTallCard h100 flex column">
         <div class="topBox flex justifyCenter alignCenter column gap5">
             <h2 class="">{{ title }}</h2>
             <h3 class="italic">{{ subtitle }}</h3>
@@ -38,6 +38,7 @@ const props = defineProps({
 </script>
 
 <style scoped>
+
 .tallCard {
     width: min(100%, 400px);
     min-height: 550px;

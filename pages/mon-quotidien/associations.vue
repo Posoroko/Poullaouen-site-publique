@@ -12,33 +12,32 @@
             <section class="w100" v-for="filter in assosData.filters" :key="filter" :id="filter">
                 <SectionTitleBar :title="filter" />
             
-                <div class="mainWidth flex justifyCenter alignStretch gap50 marTop100 wrap">
+                <div class="tallCardBox mainWidth flex justifyCenter alignStretch gap50 marTop100 wrap">
                     <CardsTallMain 
-                            v-for="asso in assosData.assos[filter]" :key="asso.id"
-                            :title="asso.name" 
-                            :subtitle="asso.definition" 
-                            :cardImage="asso.image" 
-                            :cardImageAlt="asso.imageAlt">
-                        
-                            <div class="assoBottomBox flex column gap10 justifyStart alignStart">
-                                <div class="flex assoPresBox column" v-if="asso.presidents.length">
-                                    <p class="flex alignCenter gap10"><span class="icon">person</span><b>Président-e<span v-if="asso.presidents.length > 1">-s</span>:</b></p>
-                                    
-                                    <ul class="assoPresUl flex column justifyCenter gap100">
-                                        <li v-for="pres in asso.presidents" :key="pres.Contacts_id.id" class="assoPresLi flex column gap5">
-                                            <b>{{ pres.Contacts_id.firstName}} {{ pres.Contacts_id.lastName.toUpperCase() }}</b>
-                                            <span class="assoPresTelephone">{{ pres.Contacts_id.telephone }}</span>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="infoBox flex column gap10">
-                                    <p class="flex alignCenter gap10" v-if="asso.email"> <span class="icon">mail</span> <a :href="`emailto:${asso.email}`">{{ asso.email }}</a> </p>
-                                    <p class="flex elignCenter gap10" v-if="asso.website"> <span class="icon">language</span> <a class="externalLink" :href="asso.website">Visiter le site web</a> </p>
-                                </div>
-                            </div>
+                        v-for="asso in assosData.assos[filter]" :key="asso.id"
+                        :title="asso.name" 
+                        :subtitle="asso.definition" 
+                        :cardImage="asso.image" 
+                        :cardImageAlt="asso.imageAlt">
                     
-                        </CardsTallMain>
+                        <div class="assoBottomBox flex column gap10 justifyStart alignStart">
+                            <div class="flex assoPresBox column" v-if="asso.presidents.length">
+                                <p class="flex alignCenter gap10"><span class="icon">person</span><b>Président-e<span v-if="asso.presidents.length > 1">-s</span>:</b></p>
+                                
+                                <ul class="assoPresUl flex column justifyCenter gap100">
+                                    <li v-for="pres in asso.presidents" :key="pres.Contacts_id.id" class="assoPresLi flex column gap5">
+                                        <b>{{ pres.Contacts_id.firstName}} {{ pres.Contacts_id.lastName.toUpperCase() }}</b>
+                                        <span class="assoPresTelephone">{{ pres.Contacts_id.telephone }}</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="infoBox flex column gap10">
+                                <p class="flex alignCenter gap10" v-if="asso.email"> <span class="icon">mail</span> <a :href="`emailto:${asso.email}`">{{ asso.email }}</a> </p>
+                                <p class="flex elignCenter gap10" v-if="asso.website"> <span class="icon">language</span> <a class="externalLink" :href="asso.website" target="_blank">Visiter le site web</a> </p>
+                            </div>
+                        </div>
+                    </CardsTallMain>
                 </div>
             </section>
         </div>
@@ -130,6 +129,31 @@ const styleTallCards = () => {
     for (let i = 2; i < cards.length; i = i + 3) {
         cards[i].classList.replace('whiteTallCard', 'brownTallCard')
     }
+
+    if(window.innerWidth < 1075) {
+        return
+    }
+
+    const tallCardBoxes = document.querySelectorAll('.tallCardBox') 
+    
+    tallCardBoxes.forEach(box => { 
+        if((box.children.length) % 2 != 0) {
+            const placeholder = document.createElement('div')
+            placeholder.classList.add('fakeTallCard')
+            placeholder.classList.add('iLikeToMoveIt')
+            box.appendChild(placeholder)
+        }
+    })
+
+    const tallCards = document.querySelectorAll('.iLikeToMoveIt')
+
+    for (let i = 0; i < tallCards.length; i = i + 4) {
+        tallCards[i].classList.add('leftPushedTallCard')
+    }
+    for (let i = 3; i < tallCards.length; i = i + 4) {
+        tallCards[i].classList.add('rightPushedTallCard')
+    }
+
 }
 
 onMounted(() => {

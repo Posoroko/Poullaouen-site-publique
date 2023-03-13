@@ -12,7 +12,7 @@
             <section class="w100" v-for="filter in itemsData.filters" :key="filter.slug" :id="filter.slug">
                 <SectionTitleBar :title="filter.name" />
                 <div class="marTop50"></div>
-                <div class="mainWidth flex justifyCenter alignStretch wrap gap50 marTop20">
+                <div class="tallCardBox mainWidth flex justifyCenter alignStretch wrap gap50 marTop20">
                     <CardsTallMain 
                         v-for="item in itemsData.items[filter.slug]" :key="item.id"
                         :title="item.name" 
@@ -147,6 +147,29 @@ const styleTallCards = () => {
     }
     for (let i = 2; i < cards.length; i = i + 3) {
         cards[i].classList.replace('whiteTallCard', 'brownTallCard')
+    }
+    if (window.innerWidth < 1075) {
+        return
+    }
+
+    const tallCardBoxes = document.querySelectorAll('.tallCardBox')
+
+    tallCardBoxes.forEach(box => {
+        if ((box.children.length) % 2 != 0) {
+            const placeholder = document.createElement('div')
+            placeholder.classList.add('fakeTallCard')
+            placeholder.classList.add('iLikeToMoveIt')
+            box.appendChild(placeholder)
+        }
+    })
+
+    const tallCards = document.querySelectorAll('.iLikeToMoveIt')
+
+    for (let i = 0; i < tallCards.length; i = i + 4) {
+        tallCards[i].classList.add('leftPushedTallCard')
+    }
+    for (let i = 3; i < tallCards.length; i = i + 4) {
+        tallCards[i].classList.add('rightPushedTallCard')
     }
 }
 

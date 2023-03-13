@@ -166,14 +166,9 @@ html {
      padding: 20px;
  }
 
+/*  décalage des crates */
 
- .bottomGreen {
-     margin-bottom: 1px solid var(--green);
- }
 
- .topGreen {
-     margin-top: 1px solid var(--green);
- }
 
 
  /*  filter bar */
@@ -246,4 +241,18 @@ html {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+
+
+
+.fakeTallCard {
+    height: 1px;
+    width: min(100%, 400px);
+}
+.leftPushedTallCard {
+    margin-left: 150px;
+}
+.rightPushedTallCard {
+    margin-right: 150px;
 }
