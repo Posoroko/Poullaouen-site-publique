@@ -76,7 +76,7 @@
                         </p>
                         <p class="contentRow flex gap10">
                             <span class="icon">language</span>
-                            <a href="https://www.aero-plass.com" target="_blank" class="textContent">www.aero-plass.com</a>
+                            <a href="https://www.aero-plass.com" target="_blank" class="externalLink">Voir le site web</a>
                         </p>
                     </div>
                 </CardsTallMain>
@@ -107,7 +107,7 @@
                         </p>
                         <p class="contentRow flex gap10">
                             <span class="icon">language</span>
-                            <a href="https://www.minelocmariaberrien.com" target="_blank" class="textContent">www.minelocmariaberrien.com</a>
+                            <a href="https://www.minelocmariaberrien.com" target="_blank" class="externalLink">Voir le site web</a>
                         </p>
                     </div>
                 </CardsTallMain>
@@ -135,7 +135,7 @@
                         </p>
                         <p class="contentRow flex gap10">
                             <span class="icon">language</span>
-                            <a href="www.mairie-poullaouen.fr" target="_blank" class="textContent">www.mairie-poullaouen.fr</a>
+                            <a href="www.mairie-poullaouen.fr" target="_blank" class="externalLink">Voir le site web</a>
                         </p>
                     </div>
                 </CardsTallMain>
@@ -165,7 +165,7 @@
                             </p>
                             <p class="contentRow flex gap10">
                                 <span class="icon">language</span>
-                                <a href="www.vorgium.bzh" target="_blank" class="textContent">www.vorgium.bzh</a>
+                                <a href="www.vorgium.bzh" target="_blank" class="externalLink">Voir le site web</a>
                             </p>
                         </div>
                     </CardsTallMain>
@@ -196,7 +196,7 @@
                         </p>
                         <p class="contentRow flex gap10">
                             <span class="icon">language</span>
-                            <a href="www.plijadour.poher.bzh" target="_blank" class="textContent">www.plijadour.poher.bzh</a>
+                            <a href="www.plijadour.poher.bzh" target="_blank" class="externalLink">Voir le site web</a>
                         </p>
                     </div>
                 </CardsTallMain>
@@ -226,7 +226,7 @@
                         </p>
                         <p class="contentRow flex gap10">
                             <span class="icon">language</span>
-                            <a href="https://www.glenmor.com" target="_blank" class="textContent">www.glenmor.com</a>
+                            <a href="https://www.glenmor.com" target="_blank" class="externalLink">Voir le site web</a>
                         </p>
                     </div>
                 </CardsTallMain>
@@ -256,7 +256,7 @@
                         </p>
                         <p class="contentRow flex gap10">
                             <span class="icon">language</span>
-                            <a href="https://www.karaezadrenaline.com" target="_blank" class="textContent">www.karaezadrenaline.com</a>
+                            <a href="https://www.karaezadrenaline.com" target="_blank" class="externalLink">Voir le site web</a>
                         </p>
                     </div>
                 </CardsTallMain>
@@ -282,7 +282,7 @@
                         </p>
                         <p class="contentRow flex gap10">
                             <span class="icon">language</span>
-                            <a href="https://www.carhaixgolf.com" target="_blank" class="textContent">www.carhaixgolf.com</a>
+                            <a href="https://www.carhaixgolf.com" target="_blank" class="externalLink">Voir le site web</a>
                         </p>
                     </div>
                 </CardsTallMain>
@@ -307,11 +307,11 @@
                         </p>
                         <p class="contentRow flex gap10">
                             <span class="icon">email</span>
-                            <a href="mailto:carhaix.legrandbleu@orange.f r" class="textContent">carhaix.legrandbleu@orange.f r</a>
+                            <a href="mailto:carhaix.legrandbleu@orange.f r" class="textContent">Voir le site web</a>
                         </p>
                         <p class="contentRow flex gap10">
                             <span class="icon">language</span>
-                            <a href="https://www.cinemalegrandbleu.fr " target="_blank" class="textContent">www.cinemalegrandbleu.fr </a>
+                            <a href="https://www.cinemalegrandbleu.fr " target="_blank" class="externalLink">Voir le site web</a>
                         </p>
                     </div>
                 </CardsTallMain>
