@@ -6,8 +6,8 @@
             Plusieurs types de transports sont organisés sur le territoire :
         </p>
 
-        <div class="mapBox centered marTop50">
-            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84863.83080909404!2d-3.715181197404181!3d48.34140694592831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48110d2aa85302b1%3A0x40ca5cd36e56380!2sPoullaouen!5e0!3m2!1sen!2sfr!4v1677604123754!5m2!1sen!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="mapBox mainWidth centered marTop50">
+            <iframe class="map w100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84863.83080909404!2d-3.715181197404181!3d48.34140694592831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48110d2aa85302b1%3A0x40ca5cd36e56380!2sPoullaouen!5e0!3m2!1sen!2sfr!4v1677604123754!5m2!1sen!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         </div>
         <div>
@@ -282,9 +282,7 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.map {
-    margin: auto;
-}
+
 .slotedSectionTextBox {
     height: 100%;
 }

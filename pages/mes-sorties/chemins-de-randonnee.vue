@@ -8,8 +8,8 @@
             <p class="centered">Henri BERGSON.</p>
         </div>
 
-        <div class="centered mapFrame">
-            <img class="mainWidth map" src="/images/randonnee/les-chemins-de-randonnée-de-Poullaouen.jpg" alt="les chemins de randonnée de Poullaouen">
+        <div class="centered mapFrame mainWidth">
+            <img class="w100 map" src="/images/randonnee/les-chemins-de-randonnée-de-Poullaouen.jpg" alt="les chemins de randonnée de Poullaouen">
         </div>
 
         <SectionMainSloted :data="section1Data">
@@ -260,8 +260,8 @@ onMounted(() => {
 <style>
 
 .mapFrame .map {
-    /* width: min(900px, 95vw); */
-    height: 80vh;
+    max-height: 80vh;
+    margin-top: 25px;
 }
 
 

@@ -41,7 +41,7 @@ const todayDDMMFormat = (_date) => {
     let date = new Date(_date)
     const weekDay = weekDays[date.getDay()]
     const day = ("0" + date.getDate()).slice(-2)
-    const month = date.getMonth()
+    const month = ( "0" + (date.getMonth() + 1)).slice(-2)
     console.log(`${weekDay} ${day} ${month}`)
     return `${weekDay} ${day}/${month}`;
 }
