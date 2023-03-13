@@ -46,7 +46,7 @@
         <SectionTitleBar title="Les organismes partenaires" />
         
         <p class="mainWidth page-text marTop50">
-            Pour obtenir des informations concernant ces aides, vous pouvez contacter <a class="externalLink" href="https://www.poher.bzh/accueil_poher/les_services/maison_france_services">la Maison des Services au Public</a> à Poher
+            Pour obtenir des informations concernant ces aides, vous pouvez contacter <a class="externalLink" href="https://www.poher.bzh/accueil_poher/les_services/maison_france_services" target="-blank">la Maison des Services au Public</a> à Poher
             Communauté.
         </p>
     </main>

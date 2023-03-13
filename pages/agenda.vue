@@ -60,7 +60,7 @@ const fetchOptions = {
 const { data: dates } = await useAsyncData(
     "agenda",
     async () => {
-        const _dates = await $fetch(`${directusItems}Agenda`, fetchOptions)
+        const _dates = await $fetch(`${directusItems}Agenda?sort[]=date`, fetchOptions)
 
         return _dates.data
     }

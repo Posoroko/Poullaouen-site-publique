@@ -13,7 +13,7 @@
                         <p class="organiser">{{ date.organiser }}</p>
                     </div>
 
-                    <div class="middleBox centered w100">
+                    <div class="middleBox centered w100" v-if="date.image">
                         <img class="pointer" :src="`${directusAssets}${date.image}?key=full500`" :alt="date.imageAlt"  @click="showInModal">
                     </div>
 
@@ -78,7 +78,6 @@ const fetchOptions = {
     params: {
         fields: 'id, title, date, location, content, image, imageAlt, price, file, filename',
         limit: props.limit,
-        // sort: 'date'
     }
 }
 

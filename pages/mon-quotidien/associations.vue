@@ -20,7 +20,7 @@
                             :cardImage="asso.image" 
                             :cardImageAlt="asso.imageAlt">
                         
-                            <div class="assoBottomBox flex column gap10 justifyCenter alignStart">
+                            <div class="assoBottomBox flex column gap10 justifyStart alignStart">
                                 <div class="flex assoPresBox column" v-if="asso.presidents.length">
                                     <p class="flex alignCenter gap10"><span class="icon">person</span><b>Président-e<span v-if="asso.presidents.length > 1">-s</span>:</b></p>
                                     
@@ -142,7 +142,7 @@ onMounted(() => {
 <style scoped>
 
 .assoBottomBox {
-    min-height: 200px;
+    min-height: 225px;
 }
 
 .assoMain section {

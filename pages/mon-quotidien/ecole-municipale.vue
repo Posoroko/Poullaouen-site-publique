@@ -30,7 +30,7 @@
                     </div>
 
                     <div class="flex justifyEnd">
-                        <NuxtLink to="/galerie-photo?categorie=ecole&sous-categorie=ecole-jules-ferry" class="albumButton blueAlbumButton pointer" >Voir les albums</NuxtLink>
+                        <div data-album="jules-ferry-page-ecole" class="albumButton blueAlbumButton pointer" @click="openModal" >Voir l'album</div>
                     </div>
                 </div>
             </SectionMainSloted>
@@ -107,7 +107,7 @@
                     </p>
 
                     <div class="flex justifyEnd">
-                        <div data-album="la-maternelle-dehors" class="albumButton blueAlbumButton pointer" @click="openModal" >Voir l'album</div>
+                        <NuxtLink to="/galerie-photo?categorie=ecole&sous-categorie=la-maternelle-dehors" class="albumButton blueAlbumButton pointer" >Voir l'album</NuxtLink >
                     </div>
                 </div>
             </SectionMainSloted>
@@ -201,7 +201,7 @@ const selectedAlbum = ref(null)
 let modal = null
 
 const openModal = async (e) => {
-    const slug = e.target.getAttribute('data-album')
+    const slug = e.currentTarget.getAttribute('data-album')
     const album = await $fetch(`${directusItems}Albums_photo?filter[slug][_eq]=${slug}&fields=images.directus_files_id`)
     modal = document.getElementById('ecoleCarouselModal')
     selectedAlbum.value = album.data[0].images

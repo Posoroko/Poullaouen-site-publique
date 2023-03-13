@@ -316,7 +316,7 @@
                     </div>
                 </CardsTallMain>
                 <div class="mainWidth centered">
-                    <a class="loisirLinkButton" href="https://www.carhaixpohertourisme.bzh/">Office de Tourisme de Carhaix et du Poher</a>
+                    <a class="loisirLinkButton blueButton" href="https://www.carhaixpohertourisme.bzh/">Office de Tourisme de Carhaix et du Poher</a>
                 </div>
             </div>
                 <SectionMainSloted
@@ -331,7 +331,7 @@
                         </p>
 
                         <div class="flex justifyBetween">
-                            <a href="https://www.montsdarreetourisme.bzh/" target="_blank" class="externalLink">Office de Tourisme des Monts d’Arrée</a>
+                            <a href="https://www.montsdarreetourisme.bzh/" target="_blank" class="loisirLinkButton whiteButton">Office de Tourisme des Monts d’Arrée</a>
                         </div>
                     </div>
                 </SectionMainSloted>
@@ -362,7 +362,7 @@
                         </p>
 
                         <div class="flex justifyBetween">
-                            <a class="loisirLinkButton" href="https://www.lavalleedessaints.com/" target="_blank">La vallée des Saints</a>
+                            <a class="loisirLinkButton blueButton" href="https://www.lavalleedessaints.com/" target="_blank">La vallée des Saints</a>
                         </div>
                     </div>
                 </SectionMainSloted>
@@ -471,12 +471,20 @@ onMounted(() => {
 <style scoped>
 .loisirLinkButton{
     font-size: 18px;
-    color: white;
-    background-color: var(--dark-blue);
     padding: 10px 30px;
     border-radius: 10px;
     box-shadow: var(--shadow);
 }
+.blueButton {
+    color: white;
+    background-color: var(--dark-blue);
+}
+.whiteButton {
+    background-color: white;
+    color: var(--dark-blue);
+}
+
+
 .brownFoot {
     fill: var(--brown);
 }

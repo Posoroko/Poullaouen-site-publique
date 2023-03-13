@@ -32,7 +32,7 @@
         </li>
     
         <li class="tab pointer tabDemarches relative" data-name="demarches">
-            <NuxtLink to="https://www.service-public.fr/particuliers/vosdroits/comment-faire-si">
+            <a href="https://www.service-public.fr/particuliers/vosdroits/comment-faire-si" target="_blank">
                 <p class="article">MES</p>
     
                 <p class="name">DEMARCHES</p>
@@ -41,7 +41,7 @@
                     <p>Cliquez ici pour accéder à toutes les démarches en ligne</p>
                     <img src="/images/Service-public-logo.png" alt="">
                 </div>
-            </NuxtLink>
+            </a>
         </li>
     </ul>
 

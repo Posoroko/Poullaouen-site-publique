@@ -5,10 +5,10 @@
 
         <SectionHomeDates limit="3" />
 
-        <SectionHomeActu limit="2" :isHomePage="true" />
+        <SectionHomeActu limit="3" :isHomePage="true" />
         
-        <div class="mainWidth centered agendaButtonBox">
-            <NuxtLink class="mainWidth shadow agendaButton textAlignCenter brown_action" to="/actualites">Voir toutes les actualités</NuxtLink>
+        <div class="mainWidth centered agendaButtonBox marTop50">
+            <NuxtLink class="mainWidth shadow actuButton textAlignCenter brown_action" to="/actualites">Voir toutes les actualités</NuxtLink>
         </div>
     </main>
 </template>
@@ -62,6 +62,16 @@ const headerData = {
 
 </script>
 
-<style>
+<style scoped>
+    .actuButton {
+        width: min(100%, 600px);
+        font-size: 18px;
+        font-weight: 600;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 10px;
+        background-color: var(--dark-blue);
+        transition: var(--fadeQuick);
+    }
 
 </style>

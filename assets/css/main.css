@@ -49,7 +49,9 @@ html {
 .blueSection * {
     fill: var(--brown);
 }
-
+.blueSection div div .slotedContent .randoTopBox div div span .horseIcon path{
+    fill: white;
+}
 
 .brownSection .section-address-text {
     color: white;

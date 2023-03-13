@@ -50,18 +50,20 @@ const appConfig = useAppConfig();
 const directusAssets = appConfig.directus.assets;
 const directusItems = appConfig.directus.items;
 
+const fetchingParams = `?fields=id,title,subtitle,content,image,imageAlt,moreInfo,date_created,file,fileName&sort[]=-date_created&limit=${props.limit}`
+
 const fetchOptions = {
     server: true,
     params: {
         fields: 'id, title, subtitle, content, image, imageAlt, moreInfo, date_created, file, fileName',
-        limit: props.limit
+        // limit: props.limit
     }
 }
 
 const { data: actualites } = await useAsyncData(
     "latestActu",
     async () => {
-        const items = await $fetch(`${directusItems}Actualites`, fetchOptions)
+        const items = await $fetch(`${directusItems}Actualites${fetchingParams}`, fetchOptions)
         return items.data
     }
     ,
