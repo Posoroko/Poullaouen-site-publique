@@ -6,7 +6,7 @@
     <FooterMain />
 
     <dialog id="masterModal">
-        <span class="modal masterModalCloseBtn modalCloseBtn absolute icon pointer flex alignCenter justifyCenter" @click="closeModal">
+        <span class="modal modalNode masterModalCloseBtn modalCloseBtn absolute icon pointer flex alignCenter justifyCenter" @click="closeModal">
             close
         </span>
     </dialog>
@@ -15,7 +15,7 @@
         <object class="pdfReader " id="pdfReader"
             data="https://findstable.net/assets/71c2e97e-0345-4fa8-8ed3-6f056ac55fc8.pdf">
         </object>
-        <span class="modal pdfModalCloseBtn modalCloseBtn absolute icon pointer flex alignCenter justifyCenter" @click="closePdfModal">
+        <span class="modal modalNode pdfModalCloseBtn modalCloseBtn absolute icon pointer flex alignCenter justifyCenter" @click="closePdfModal">
             close
         </span>
     </dialog>
