@@ -312,7 +312,7 @@
                         </p>
                         <p class="contentRow flex gap10">
                             <span class="icon">email</span>
-                            <a href="mailto:carhaix.legrandbleu@orange.f r" class="textContent">Voir le site web</a>
+                            <a href="mailto:carhaix.legrandbleu@orange.f r" class="textContent">carhaix.legrandbleu@orange.fr</a>
                         </p>
                         <p class="contentRow flex gap10">
                             <span class="icon">language</span>
