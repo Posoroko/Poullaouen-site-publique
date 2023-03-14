@@ -10,25 +10,24 @@
     <section class="docsSection docsLatestsSection relative marTop150">        
         <div class="stripe darkBlueBG">
             <div class="content mainWidth w100 flex justifyCenter wrap gap20">
-                <article class="mairieDocCard relative w100" v-for="doc in publications.latests" :key="doc.id">
-                    <figure class="">
-                        <img src="/images/logo.png" alt="">
+                <article class="publicationDocCard relative w100" v-for="doc in publications.latests" :key="doc.id">
+                    <figure class="publicationDocCardFigure">
+                        <img class="publicationDocCardFigureImg" src="/images/logo.png" alt="">
                     </figure>
 
-                    <div class="bottomBox">
-                        <b class="docType">{{types[doc.publicationType]}}</b>
+                    <b class="docType">{{ types[doc.publicationType] }}</b>
 
-                        <div class="smallText flex column gap10">
-                            <div>
-                                <p>Publication :</p>
-                                <p>{{ toDayMonthYearFormat(doc.date) }}</p>
-                            </div>
-                            <div>
-                                <p>Mise en ligne : </p>
-                                <p>{{ toDayMonthYearFormat(doc.date_created) }}</p>
-                            </div>
-                        </div>
-                    </div>
+                    <p class="bottomBox">
+                        <span class="bottomBoxRow">
+                            <span>Publication :</span>
+                            <span class="date">{{ toDayMonthYearFormat(doc.date) }}</span>
+                        </span>
+            
+                        <span class="bottomBoxRow">
+                            <span>Mise en ligne : </span>
+                            <span class="date">{{ toDayMonthYearFormat(doc.date_created) }}</span>
+                        </span>
+                    </p>
 
                     <div class="downloaderFrame absoluteFull">
                         <DocsDownloadWidget :link="`${directusAssets}${doc.file}`" />
@@ -45,25 +44,24 @@
     <section class="marTop150">
         <div class="stripe w100">
             <div class="content mainWidth w100 flex justifyCenter wrap">
-                <article class="mairieDocCard relative" v-for="doc in publications.rest" :key="doc.id">
+                <article class="publicationDocCard relative" v-for="doc in publications.rest" :key="doc.id">
                     <figure class="frame">
                         <img src="/images/logo.png" alt="">
                     </figure>
 
-                     <div class="bottomBox">
-                        <b class="docType">{{ types[doc.publicationType] }}</b>
+                    <b class="docType">{{ types[doc.publicationType] }}</b>
 
-                        <div class="smallText flex column gap10">
-                            <div>
-                                <p>Publication :</p>
-                                <p>{{ toDayMonthYearFormat(doc.date) }}</p>
-                            </div>
-                            <div>
-                                <p>Mise en ligne : </p>
-                                <p>{{ toDayMonthYearFormat(doc.date_created) }}</p>
-                            </div>
-                        </div>
-                    </div>
+                    <p class="bottomBox">
+                        <span class="bottomBoxRow">
+                            <span>Publication :</span>
+                            <span class="date">{{ toDayMonthYearFormat(doc.date) }}</span>
+                        </span>
+                
+                        <span class="bottomBoxRow">
+                            <span>Mise en ligne : </span>
+                            <span class="date">{{ toDayMonthYearFormat(doc.date_created) }}</span>
+                        </span>
+                    </p>
 
                     <div class="downloaderFrame absoluteFull">
                         <DocsDownloadWidget :link="`${directusAssets}${doc.file}`" />
@@ -99,10 +97,11 @@ const types = {
 const fetchOptions = {
     server: true,
 }
+
 const { data: publications } = await useAsyncData(
     "Publications",
     async () => {
-        const _items = await $fetch(`${directusItems}publications`, fetchOptions)
+        const _items = await $fetch(`${directusItems}publications?sort[]=-date_created`, fetchOptions)
 
         const items = _items.data
 
@@ -146,48 +145,61 @@ const headerData = {
 </script>
 
 <style scoped>
-.mairieDocCard {
+.publicationDocCard {
     width: 210px;
     height: 310px;
     background-color: #fff;
-    padding: 20px;
+    padding: 20px 20px;
     border-radius: 5px;
     box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
+    justify-content: space-between;
 }
 
-.mairieDocCard figure {
+/* .publicationDocCard .publicationDocCardFigure {
     width: 100px;
     margin: auto;
-}
+} */
 
-.mairieDocCard figure img {
-    width: 100%;
-    height: 100%;
+.publicationDocCard .publicationDocCardFigure .publicationDocCardFigureImg {
+    width: 100px;
+    /* height: 100%; */
     object-fit: contain;
 }
 
-.mairieDocCard * {
+.publicationDocCard * {
     text-align: center;
     font-size: 20px;
     font-weight: 400;
     color: var(--dark-blue);
 }
-.mairieDocCard .bottomBox {
+
+.publicationDocCard .bottomBox {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.mairieDocCard .bottomBox .docType {
-    font-weight: 600;
+
+.publicationDocCard .docType {
+    font-weight: 500;
 }
-.mairieDocCard .bottomBox .smallText * {
+
+.publicationDocCard .bottomBox .bottomBoxRow {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.publicationDocCard .bottomBox .bottomBoxRow * {
     font-size: 14px;
 }
+
+.publicationDocCard .bottomBox .bottomBoxRow .date {
+    font-weight: 500;
+}
+
 .piedBox {
     width: 100%;
     height: 150%;

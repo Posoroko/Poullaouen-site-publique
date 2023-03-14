@@ -19,25 +19,24 @@
             
             <div class="stripe w100 marTop100" :class="{ darkBlueBG : index == 0}">
                 <div class="content mainWidth flex justifyCenter wrap">
-                    <article class="mairieDocCard relative" v-for="doc in myData.docs[year]" :key="doc.id">
-                        <figure class="">
-                            <img src="/images/logo.png" alt="">
+                    <article class="publicationDocCard relative w100" v-for="doc in myData.docs[year]" :key="doc.id">
+                        <figure class="publicationDocCardFigure">
+                            <img class="publicationDocCardFigureImg" src="/images/logo.png" alt="">
                         </figure>
-                  
-                        <div class="bottomBox">
-                            <b class="docType">Procès verbal</b>
 
-                            <div class="smallText flex column gap10">
-                                <div>
-                                    <p>Publication :</p>
-                                    <p>{{ toDayMonthYearFormat(doc.datePublication) }}</p>
-                                </div>
-                                <div>
-                                    <p>Mise en ligne : </p>
-                                    <p>{{ toDayMonthYearFormat(doc.date_created) }}</p>
-                                </div>
-                            </div>
-                        </div>
+                        <b class="docType">Procès verbal</b>
+
+                        <p class="bottomBox">
+                            <span class="bottomBoxRow">
+                                <span>Publication :</span>
+                                <span class="date">{{ toDayMonthYearFormat(doc.datePublication) }}</span>
+                            </span>
+            
+                            <span class="bottomBoxRow">
+                                <span>Mise en ligne : </span>
+                                <span class="date">{{ toDayMonthYearFormat(doc.date_created) }}</span>
+                            </span>
+                        </p>
 
                         <div class="downloaderFrame absoluteFull">
                             <DocsDownloadWidget :link="`${directusAssets}${doc.file}`" />
@@ -56,7 +55,7 @@
 <script setup>
 const toDayMonthYearFormat = (_date) => {
     let date = new Date(_date)
-    let day = ("0" + date.getDate()).slice(-2) 
+    let day = ("0" + date.getDate()).slice(-2)
     const month = ("0" + (date.getMonth() + 1)).slice(-2)
     const year = date.getFullYear()
     return `${day}-${month}-${year}`;
@@ -162,47 +161,59 @@ const headerData = {
 </script>
 
 <style scoped>
-.mairieDocCard {
+.publicationDocCard {
     width: 210px;
-    height: 300px;
+    height: 310px;
     background-color: #fff;
-    padding: 20px;
+    padding: 20px 20px;
     border-radius: 5px;
     box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
 }
 
-.mairieDocCard figure {
+/* .publicationDocCard .publicationDocCardFigure {
     width: 100px;
     margin: auto;
-}
+} */
 
-.mairieDocCard figure img {
-    width: 100%;
-    height: 100%;
+.publicationDocCard .publicationDocCardFigure .publicationDocCardFigureImg {
+    width: 100px;
+    /* height: 100%; */
     object-fit: contain;
 }
 
-.mairieDocCard * {
+.publicationDocCard * {
     text-align: center;
     font-size: 20px;
     font-weight: 400;
     color: var(--dark-blue);
 }
-.mairieDocCard .bottomBox {
+
+.publicationDocCard .bottomBox {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.mairieDocCard .bottomBox .docType {
-    font-weight: 600;
+
+.publicationDocCard .docType {
+    font-weight: 500;
 }
-.mairieDocCard .bottomBox .smallText * {
+
+.publicationDocCard .bottomBox .bottomBoxRow {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.publicationDocCard .bottomBox .bottomBoxRow * {
     font-size: 14px;
+}
+
+.publicationDocCard .bottomBox .bottomBoxRow .date {
+    font-weight: 500;
 }
 .piedBox {
     height: 110%;
