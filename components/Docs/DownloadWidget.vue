@@ -1,9 +1,13 @@
 <template>
     <div class="downloadWidget column justifyEvenly alignCenter" id="downloadWidget">
-        <a :href="link" target="_blank" class="downloaderLine pointer" >
+        <!-- <a :href="link" target="_blank" class="downloaderLine pointer" >
             <span class="downloaderIcon icon centered">visibility</span>
             <span class="downloaderText">Consulter</span> 
-        </a>
+        </a> -->
+        <span class="downloaderLine pointer" @click="openInPdfModal">
+            <span class="downloaderIcon icon centered">visibility</span>
+            <span class="downloaderText">Consulter</span> 
+        </span>
 
         <a :href="link" download class="downloaderLine pointer">
             <span class="downloaderIcon icon">download</span>
@@ -13,6 +17,17 @@
 </template>
 
 <script setup>
+
+const openInPdfModal = (e) => {
+    const pdfModal = document.getElementById('pdfModal')
+    const pdfReader = document.getElementById('pdfReader')
+    pdfReader.setAttribute('data', props.link)
+    pdfModal.showModal()
+}
+
+
+
+
 const appConfig = useAppConfig();
 const directusAssets = appConfig.directus.assets;
 

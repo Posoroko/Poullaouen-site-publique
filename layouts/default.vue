@@ -6,7 +6,16 @@
     <FooterMain />
 
     <dialog id="masterModal">
-        <span class="modalNode modalCloseBtn absolute icon pointer flex alignCenter justifyCenter" @click="closeModal">
+        <span class="modal masterModalCloseBtn modalCloseBtn absolute icon pointer flex alignCenter justifyCenter" @click="closeModal">
+            close
+        </span>
+    </dialog>
+
+    <dialog id="pdfModal" class="pdfModal">
+        <object class="pdfReader " id="pdfReader"
+            data="https://findstable.net/assets/71c2e97e-0345-4fa8-8ed3-6f056ac55fc8.pdf">
+        </object>
+        <span class="modal pdfModalCloseBtn modalCloseBtn absolute icon pointer flex alignCenter justifyCenter" @click="closePdfModal">
             close
         </span>
     </dialog>
@@ -19,10 +28,27 @@ const closeModal = () => {
     const modal = document.getElementById('masterModal')
     modal.close()
 }
-
+const closePdfModal = () => {
+    const modal = document.getElementById('pdfModal')
+    modal.close()
+}
 </script>
 
 <style scoped>
+
+.pdfModal {
+    width: min(100%, 1200px);
+    height: 90vh;
+    margin: auto;
+}
+.pdfModal::backdrop {
+    background-color: rgba(0, 0, 0, 0.829);
+}
+.pdfReader{
+    width: 100%;
+    height: 100%;
+}
+
 #homeButton {
     font-size: 50px;
     position: fixed;
@@ -49,13 +75,20 @@ const closeModal = () => {
     width: 45px;
     height: 45px;
     font-size: 40px;
-    background-color: #ffffff79;
+    color: white;
+    background-color: #000000;
     border-radius: 10px;
-    top: 10px;
+    
     right: 10px;
     line-height: 40px;
 }
 
+.pdfModalCloseBtn {
+    top: 40px;
+}
+.masterModalCloseBtn {
+    top: 10px;
+}
 #masterModal::backdrop {
     background-color: rgba(0, 0, 0, 0.76);
 }
