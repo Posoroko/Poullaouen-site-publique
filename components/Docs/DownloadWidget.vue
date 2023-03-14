@@ -1,6 +1,6 @@
 <template>
     <div class="downloadWidget column justifyEvenly alignCenter" id="downloadWidget">
-        <a :href="link" target="_blank" class="downloaderLine pointer classicOpenPdfLink" >
+        <a :href="link" class="downloaderLine pointer classicOpenPdfLink" >
             <span class="downloaderIcon icon centered">visibility</span>
             <span class="downloaderText">Consulter</span> 
         </a>
@@ -82,11 +82,6 @@ const props = defineProps({
     background-color: #00000079;
  }
 }
-
-.classicOpenPdfLink {
-
-}
-
 
 @media (max-width: 999px) {
     .classicOpenPdfLink {
