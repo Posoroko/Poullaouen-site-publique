@@ -5,7 +5,7 @@
 
             <div class="stripe marTop100 relative">
                 <!-- <SectionPieds /> -->
-                <div class="content mainWidth flex alignCenter justifyCenter wrap gap20">
+                <div class="content mainWidth flex alignCenter justifyCenter wrap">
                     <div class="conseillerCard flex column" v-for="person in conseillers" :key="person.id">
                         <div class="topBox centered">
                             <h2 class="name">
@@ -57,8 +57,8 @@ const headerData = {
 <style scoped>
 .conseillerCard {
     background-color: var(--brown);
-    width: 20%;
-    margin: 15px 20px;
+    /* width: 25%; */
+    margin: 15px 30px;
     border-radius: 10px;
     box-shadow: var(--shadow);
     overflow: hidden;

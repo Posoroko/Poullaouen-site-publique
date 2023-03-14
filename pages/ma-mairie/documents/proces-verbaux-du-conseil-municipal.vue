@@ -56,7 +56,7 @@
 <script setup>
 const toDayMonthYearFormat = (_date) => {
     let date = new Date(_date)
-    let day = ("0" + (date.getDate() + 1)).slice(-2) 
+    let day = ("0" + date.getDate()).slice(-2) 
     const month = ("0" + (date.getMonth() + 1)).slice(-2)
     const year = date.getFullYear()
     return `${day}-${month}-${year}`;

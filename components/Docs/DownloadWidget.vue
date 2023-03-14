@@ -26,9 +26,6 @@ const openInPdfModal = (e) => {
     pdfModal.showModal()
 }
 
-
-
-
 const appConfig = useAppConfig();
 const directusAssets = appConfig.directus.assets;
 
