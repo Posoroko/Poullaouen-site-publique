@@ -60,7 +60,7 @@ const fetchOptions = {
 const { data: actualites } = await useAsyncData(
     "latestActu",
     async () => {
-        const items = await $fetch(`${directusItems}Actualites`, fetchOptions)
+        const items = await $fetch(`${directusItems}Actualites?sort[]=-date_created`, fetchOptions)
         return items.data
     }
     ,

@@ -146,8 +146,7 @@
                 </div>
             </SectionMainSloted>
 
-            <SectionMainSloted
-            class="brownSection"
+            <SectionMainSloted class="blueSection"
                 :data="{ title: 'La cantine', image: '/images/ecole/cantine.jpg', imageAlt: 'Eau et assainissement', localImage: true }">
                 <div class="slotedSectionTextBox flex column justifyCenter pad20 gap20">
                     <p class="page-text">

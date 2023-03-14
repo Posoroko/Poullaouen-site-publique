@@ -135,7 +135,7 @@
                         </p>
                         <p class="contentRow flex gap10">
                             <span class="icon">language</span>
-                            <a href="www.mairie-poullaouen.fr" target="_blank" class="externalLink">Voir le site web</a>
+                            <NuxtLink to="/mon-quotidien/equipements-sportifs-et-de-loisir" target="_blank" class="externalLink">Voir le site web</NuxtLink>
                         </p>
                     </div>
                 </CardsTallMain>
@@ -165,7 +165,7 @@
                             </p>
                             <p class="contentRow flex gap10">
                                 <span class="icon">language</span>
-                                <a href="www.vorgium.bzh" target="_blank" class="externalLink">Voir le site web</a>
+                                <a href="https://www.vorgium.bzh/" target="_blank" class="externalLink">Voir le site web</a>
                             </p>
                         </div>
                     </CardsTallMain>
@@ -196,7 +196,7 @@
                         </p>
                         <p class="contentRow flex gap10">
                             <span class="icon">language</span>
-                            <a href="www.plijadour.poher.bzh" target="_blank" class="externalLink">Voir le site web</a>
+                            <a href="https://plijadour.poher.bzh/accueil_plijadour" target="_blank" class="externalLink">Voir le site web</a>
                         </p>
                     </div>
                 </CardsTallMain>
@@ -316,7 +316,7 @@
                     </div>
                 </CardsTallMain>
                 <div class="mainWidth centered">
-                    <a class="loisirLinkButton blueButton" href="https://www.carhaixpohertourisme.bzh/">Office de Tourisme de Carhaix et du Poher</a>
+                    <a class="loisirLinkButton blueButton" href="https://www.carhaixpohertourisme.bzh/" target="_blank">Office de Tourisme de Carhaix et du Poher</a>
                 </div>
             </div>
                 <SectionMainSloted
@@ -330,7 +330,7 @@
                             aventure…
                         </p>
 
-                        <div class="flex justifyBetween">
+                        <div class="flex justifyBetween marTop20">
                             <a href="https://www.montsdarreetourisme.bzh/" target="_blank" class="loisirLinkButton whiteButton">Office de Tourisme des Monts d’Arrée</a>
                         </div>
                     </div>

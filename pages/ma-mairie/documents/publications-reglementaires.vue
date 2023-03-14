@@ -19,7 +19,7 @@
 
                     <p class="bottomBox">
                         <span class="bottomBoxRow">
-                            <span>Publication :</span>
+                            <span>Date :</span>
                             <span class="date">{{ toDayMonthYearFormat(doc.date) }}</span>
                         </span>
             
@@ -53,7 +53,7 @@
 
                     <p class="bottomBox">
                         <span class="bottomBoxRow">
-                            <span>Publication :</span>
+                            <span>Date :</span>
                             <span class="date">{{ toDayMonthYearFormat(doc.date) }}</span>
                         </span>
                 

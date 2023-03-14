@@ -144,13 +144,13 @@ onMounted(() => {
 }
 
 .menuDashboard .button {
-    background-color: var(--green);
+    background-color: var(--brown);
     padding: 10px 20px;
     border-radius: 50px;
     margin: 20px 0;
 }
 .menuDashboard .active {
-    background-color: rgb(1, 90, 1);
+    background-color: rgb(114, 61, 0);
     box-shadow: var(--shadow);
 }
 .menuDashboard .button * {
@@ -171,13 +171,13 @@ onMounted(() => {
     font-size: 14px;
     font-weight: 600;
     color: white;
-    background-color: var(--green);
+    background-color: var(--brown);
     padding: 5px 8px;
     border-radius: 20px;
 }
 
 .daySelector .activeDayBtn {
-    background-color: rgb(1, 90, 1);
+    background-color: rgb(58, 31, 0);
 }
 .columnBox {
     height: 50vh;

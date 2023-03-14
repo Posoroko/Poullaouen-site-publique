@@ -122,7 +122,7 @@ onMounted(() => {
     padding: 30px;
 }
 .menuDashboard .button {
-    background-color: var(--light-blue);
+    background-color: var(--brown);
     padding: 10px 20px;
     border-radius: 50px;
     margin: 20px 0;
@@ -134,7 +134,7 @@ onMounted(() => {
     user-select: none;
 }
 .menuDashboard .active {
-    background-color: var(--brown);
+    background-color: rgb(114, 61, 0);
     box-shadow: var(--shadow);
 }
 .menuDashboard .active *{

@@ -39,7 +39,7 @@
                     <div class="infoBox">
                         <p class="flex alignCenter gap10"> <span class="icon">location_on</span> Maison des Services Publics - Place de la Tour d’Auvergne - Carhaix</p>
                         <p class="flex alignCenter gap10"> <span class="icon">call</span> 02 98 99 48 00</p>
-                        <p class="flex alignCenter gap10"> <span class="icon">language</span> <a class="externalLink" href="https://www.poher.bzh/accueil_poher" target="_blank">www.poher.bzh</a></p>
+                        <p class="flex alignCenter gap10"> <span class="icon">language</span> <a class="externalLink" href="https://www.poher.bzh/accueil_poher/les_services/mobilites/le_transport_scolaire/annee_scolaire_2022_2023" target="_blank">www.poher.bzh</a></p>
                     </div>
                 </div>
             </SectionMainSloted>
@@ -181,6 +181,10 @@
                             trajet souhaité et de vous mettre en relation gratuitement avec d’autres covoitureurs. Le site dispose de 3 modules : covoiturage domicile –
                             travail, évènementiel ou solidaire, c’est vous qui choisissez comment vous souhaitez covoiturer !
                         </p>
+
+                        <div class="infoBox">
+                            <a href="https://www.ouestgo.fr/et wimoov aussi https://wimoov.org/" target="_blank" class="externalLink">voir le site web</a>
+                        </div>
                     </div>
                 </SectionMainSloted>
 
@@ -219,6 +223,7 @@
                         </p>
                         <div class="infoBox">
                             <p class="flex alignCenter gap10"> <span class="icon">call</span> 02 98 73 53 17</p>
+                            <a href="https://wimoov.org/" target="_blank" class="externalLink">voir le site web</a>
                         </div>
                     </div>
                 </SectionMainSloted>

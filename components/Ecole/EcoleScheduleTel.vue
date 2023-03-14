@@ -110,14 +110,14 @@ const selectDay = (e) => {
     font-size: 14px;
     font-weight: 600;
     color: white;
-    background-color: var(--green);
+    background-color: var(--brown);
     padding: 5px 8px;
     border: none;
     border-radius: 20px;
 }
 
 .daySelector .activeDayBtn {
-    background-color: rgb(1, 90, 1);
+    background-color: rgb(58, 31, 0);
 }
 .col1 {
     width: 30%;

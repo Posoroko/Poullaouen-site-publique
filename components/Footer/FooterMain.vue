@@ -1,36 +1,9 @@
 <template>
     <footer id="footer" class="relative">
         <div class="footerContainer mainWidth flex justifyEvenly alignStart wrap h100 ">
-            <div class="phoneBox w100 footerBox flex justifyCenter alignCenter wrap gap5">
-                <div class="flex gap5">
-                    <a href="tel:+33298935076" class="phoneBtn flex column justifyCenter alignCenter">
-                        <span class="icon">call</span>
-                        <span class="city">Poullaouen</span>
-                    </a>
-
-                    <a href="tel:+33298997309" class="phoneBtn flex column justifyCenter alignCenter">
-                        <span class="icon">call</span>
             
-                        <span class="city">Locmaria-Berrien</span>
-                    </a>
-                </div>
 
-                <div class="flex gap5">
-                    <a href="mailto:mairie-de-poullaouen@wanadoo.fr" class="phoneBtn flex column justifyCenter alignCenter">
-                        <span class="icon">mail</span>
-        
-                        <span class="city">Poullaouen</span>
-                    </a>
-        
-                    <a href="mailto:mailto:mairie.locmaria-berrien@orange.fr" class="phoneBtn flex column justifyCenter alignCenter">
-                        <span class="icon">mail</span>
-        
-                        <span class="city">Locmaria-Berrien</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="leftBox footerBox flex column justifyEnd" id="footerInfo">
+            <div class="leftBox footerBox flex column justifyEnd gap20" id="footerInfo">
                 <address class="flex column gap10">
                     <p class="poullaouen">
                         Poullaouen
@@ -68,7 +41,24 @@
                         </div>
                     </div>
                 </address>
+
+                <div class="phoneBox w100 footerBox flex justifyCenter alignCenter wrap gap5">
+                    <div class="flex gap5">
+                        <a href="tel:+33298935076" class="phoneBtn flex column justifyCenter alignCenter">
+                            <span class="icon">call</span>
+                            <span class="city">Poullaouen</span>
+                        </a>
+
+                        <a href="tel:+33298997309" class="phoneBtn flex column justifyCenter alignCenter">
+                            <span class="icon">call</span>
+    
+                            <span class="city">Locmaria-Berrien</span>
+                        </a>
+                    </div>
+                </div>
             </div>
+
+            
 
             <div class="centerBox footerBox flex">
                 <div class="w100 flex justifyCenter marTop100">
@@ -91,7 +81,7 @@
                 </a>
             </div>
 
-            <div class="rightBox footerBox  flex column justifyEnd">
+            <div class="rightBox footerBox  flex column justifyEnd gap20">
                 <address class="flex column gap10">
                     <p class="poullaouen">
                         Locmaria-Berrien
@@ -121,8 +111,27 @@
                         </div>
                     </div>
                 </address>
+
+                <div class="phoneBox w100 footerBox flex justifyCenter alignCenter wrap gap5">
+                    <div class="flex gap5">
+                        <a href="mailto:mairie-de-poullaouen@wanadoo.fr" class="phoneBtn flex column justifyCenter alignCenter">
+                            <span class="icon">mail</span>
+
+                            <span class="city">Poullaouen</span>
+                        </a>
+
+                        <a href="mailto:mailto:mairie.locmaria-berrien@orange.fr" class="phoneBtn flex column justifyCenter alignCenter">
+                            <span class="icon">mail</span>
+
+                            <span class="city">Locmaria-Berrien</span>
+                        </a>
+                    </div>
+                </div>
             </div>
+
+            
         </div> 
+        
 
         <div class="bottomBar w100 ">
             <div class="mainWidth flex justifyEvenly wrap">
@@ -192,7 +201,7 @@
     width: 125px;
     aspect-ratio: 1/1;
     color: white;
-    background-color: var(--green);
+    background-color: var(--dark-blue);
     padding: 20px 0;
     border-radius: 15px;
 }
