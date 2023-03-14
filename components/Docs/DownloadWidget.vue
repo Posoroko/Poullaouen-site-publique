@@ -1,10 +1,11 @@
 <template>
     <div class="downloadWidget column justifyEvenly alignCenter" id="downloadWidget">
-        <!-- <a :href="link" target="_blank" class="downloaderLine pointer" >
+        <a :href="link" target="_blank" class="downloaderLine pointer classicOpenPdfLink" >
             <span class="downloaderIcon icon centered">visibility</span>
             <span class="downloaderText">Consulter</span> 
-        </a> -->
-        <span class="downloaderLine pointer" @click="openInPdfModal">
+        </a>
+
+        <span class="downloaderLine pointer openInObjectButton" @click="openInPdfModal">
             <span class="downloaderIcon icon centered">visibility</span>
             <span class="downloaderText">Consulter</span> 
         </span>
@@ -49,7 +50,7 @@ const props = defineProps({
  }
 
 #downloadWidget .downloaderLine {
-    display: flex;
+    
     align-items: center;
     gap: 10px;
     cursor: pointer;
@@ -80,5 +81,29 @@ const props = defineProps({
     display: flex;
     background-color: #00000079;
  }
+}
+
+.classicOpenPdfLink {
+
+}
+
+
+@media (max-width: 999px) {
+    .classicOpenPdfLink {
+        display: flex;
+    }
+
+    .openInObjectButton {
+        display: none;
+    }
+}
+@media (min-width: 1000px) {
+    .classicOpenPdfLink {
+        display: none;
+    }
+
+    .openInObjectButton {
+        display: flex;
+    }
 }
 </style>
