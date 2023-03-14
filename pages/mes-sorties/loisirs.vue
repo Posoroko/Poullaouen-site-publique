@@ -46,9 +46,9 @@
         </div>
             <SectionTitleBar title="A Locmaria-Berrien et Poullaouen" />
 
-            <div class="loisirCardsBox mainWidth flex justifyCenter gap50 wrap">
+            <div class="tallCardBox loisirCardsBox mainWidth flex justifyCenter gap50 wrap">
                 <CardsTallMain title="Aéro-Plass - ULM" cardImage="/images/loisirs/ULM.jpg" :localImage="true">
-                    <div class="bottomBox flex column gap10">
+                    <div class="bottomBox flex column justifyStart alignStart gap10">
                         <p class="paragraph column">
                             Laurent PLASSART, pilote chevronné, instructeur
                             et professionnel depuis plus de 25 ans et titulaire
@@ -83,7 +83,7 @@
   
                 <CardsTallMain title="Maison de la Mine" cardImage="/images/loisirs/musée de la mine intérieur.jpg"
                     :localImage="true">
-                    <div class="bottomBox flex column gap10 justifyCenter alignStart">
+                    <div class="bottomBox flex column gap10 justifyStart alignStart">
                         <p class="paragraph">
                             L’Association pour la Sauvegarde de l’Ancienne
                             Mine de plomb et d’argent vous fait découvrir
@@ -113,7 +113,7 @@
                 </CardsTallMain>
                 <CardsTallMain title="L'aire de loisirs" cardImage="/images/loisirs/aire de loisirs.jpg"
                     :localImage="true">
-                    <div class="bottomBox flex column gap10 justifyCenter alignStart">
+                    <div class="bottomBox flex column gap10 justifyStart alignStart">
                         <p class="paragraph">
                             L’aire de loisirs de Poullaouen permet à chacun
                             de trouver son bonheur : basket, foot, hand, volley,
@@ -140,11 +140,16 @@
                     </div>
                 </CardsTallMain>
 
-                <SectionTitleBar title="A Carhaix - 10km" />
+            </div>
+
+            <SectionTitleBar title="A Carhaix - 10km" />
+            
+            <div class="tallCardBox loisirCardsBox mainWidth flex justifyCenter gap50 wrap">
+                
 
                 <CardsTallMain title="Centre d’interprétation archéologique virtuel Vorgium" cardImage="/images/loisirs/vorgium.jpg"
                         :localImage="true">
-                        <div class="bottomBox flex column gap10 justifyCenter alignStart">
+                        <div class="bottomBox flex column gap10 justifyStart alignStart">
                             <p class="paragraph">
                                 En plein coeur de Carhaix, un musée virtuel et
                                 un jardin archéologique pour une expérience
@@ -170,7 +175,7 @@
                         </div>
                     </CardsTallMain>
                 <CardsTallMain title="Park Aqualudique Plijadour" cardImage="/images/loisirs/piscine.jpg" :localImage="true">
-                    <div class="bottomBox flex column gap10 justifyCenter alignStart">
+                    <div class="bottomBox flex column gap10 justifyStart alignStart">
                         <p class="paragraph">
                             La piscine municipale Plijadour dispose
                             d’espaces intérieurs et extérieurs avec bassins de
@@ -201,7 +206,7 @@
                     </div>
                 </CardsTallMain>
                 <CardsTallMain title="Espace Culturel Glenmor" cardImage="/images/loisirs/espace_glenmor_1.jpg" :localImage="true">
-                    <div class="bottomBox flex column gap10 justifyCenter alignStart">
+                    <div class="bottomBox flex column gap10 justifyStart alignStart">
                         <p class="paragraph">
                             L’Espace Glenmor – centre de congrès est situé
                             dans un magnifique environnement paysagé : le
@@ -231,7 +236,7 @@
                     </div>
                 </CardsTallMain>
                 <CardsTallMain title="Labyrinthe Végétal Karaez Adrénaline et le Parc Aventure" cardImage="/images/loisirs/DSC02140.jpg" :localImage="true">
-                    <div class="bottomBox flex column gap10 justifyCenter alignStart">
+                    <div class="bottomBox flex column gap10 justifyStart alignStart">
                         <p class="paragraph">
                             Karaez Adrenaline est un parc de loisirs et
                             d’aventures situé dans la Vallée de l’Hyères, qui
@@ -261,7 +266,7 @@
                     </div>
                 </CardsTallMain>
                 <CardsTallMain title="Carhaix Golf" cardImage="/images/loisirs/Carhaix golf.jpg" :localImage="true">
-                    <div class="bottomBox flex column gap10 justifyCenter alignStart">
+                    <div class="bottomBox flex column gap10 justifyStart alignStart">
                         <p class="paragraph">
                             Un golf convivial au coeur de la nature, un golf
                             pour tous. Les golfeurs expérimentés profiteront
@@ -287,7 +292,7 @@
                     </div>
                 </CardsTallMain>
                 <CardsTallMain title="Cinéma Le Grand Bleu" cardImage="/images/loisirs/cinema.jpg" :localImage="true">
-                    <div class="bottomBox flex column gap10 justifyCenter alignStart">
+                    <div class="bottomBox flex column gap10 justifyStart alignStart">
                         <p class="paragraph">
                             Le Grand Bleu est situé dans le complexe de
                             l’Espace Glenmor depuis sa création en 2001.
@@ -458,6 +463,26 @@ const styleTallCards = () => {
     }
     for (let i = 2; i < cards.length; i = i + 3) {
         cards[i].classList.replace('whiteTallCard', 'brownTallCard')
+    }
+
+    const tallCardBoxes = document.querySelectorAll('.tallCardBox')
+
+    tallCardBoxes.forEach(box => {
+        if ((box.children.length) % 2 != 0) {
+            const placeholder = document.createElement('div')
+            placeholder.classList.add('fakeTallCard')
+            placeholder.classList.add('iLikeToMoveIt')
+            box.appendChild(placeholder)
+        }
+    })
+
+    const tallCards = document.querySelectorAll('.iLikeToMoveIt')
+
+    for (let i = 0; i < tallCards.length; i = i + 4) {
+        tallCards[i].classList.add('leftPushedTallCard')
+    }
+    for (let i = 3; i < tallCards.length; i = i + 4) {
+        tallCards[i].classList.add('rightPushedTallCard')
     }
 }
 
