@@ -49,7 +49,7 @@
             
                     <p class="name">DEMARCHES</p>
 
-                    <img class="w100 marTop20" src="/images/Service-public-logo.png" alt="">
+                    <!-- <img class="w100 marTop20" src="/images/Service-public-logo.png" alt=""> -->
                 </li>
             </ul>
 

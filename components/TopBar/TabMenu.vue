@@ -37,10 +37,10 @@
     
                 <p class="name">DEMARCHES</p>
 
-                <div class="info">
+                <!-- <div class="info">
                     <p>Cliquez ici pour accéder à toutes les démarches en ligne</p>
                     <img src="/images/Service-public-logo.png" alt="">
-                </div>
+                </div> -->
             </a>
         </li>
     </ul>

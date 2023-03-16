@@ -10,7 +10,6 @@
                         L’école Jules Ferry accueille les enfants dès l’âge de 2 ans révolus. A la rentrée de septembre 2022, 83 élèves sont répartis dans les différentes
                         classes de la maternelle au CM2. Une classe bilingue français/breton multi-niveaux (de la maternelle au CM2) existe depuis 2010.
 
-                        
                     </p>
                     <p class="page-text">
                         La classe bilingue de Marie Miguet : 13 élèves
@@ -48,7 +47,7 @@
                     </p>
 
                     <p class="flex column gap10">
-                        <b>Sur Poullaouen, les horaires des TAP dont les suivants :</b>
+                        <b>Sur Poullaouen, les horaires des TAP sont les suivants :</b>
                         <ul>
                             <li>Lundi : 13h45 - 14h45</li>
                             <li>Mardi : 13h45 - 14h45</li>

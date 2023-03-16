@@ -231,7 +231,7 @@
                         </p>
                         <p class="contentRow flex gap10">
                             <span class="icon">language</span>
-                            <a href="https://www.glenmor.com" target="_blank" class="externalLink">Voir le site web</a>
+                            <a href="http://glenmor.bzh/index.php/fr/" target="_blank" class="externalLink">Voir le site web</a>
                         </p>
                     </div>
                 </CardsTallMain>
@@ -335,7 +335,7 @@
                             aventure…
                         </p>
 
-                        <div class="flex justifyBetween marTop20">
+                        <div class="flex justifyBetween marTop100">
                             <a href="https://www.montsdarreetourisme.bzh/" target="_blank" class="loisirLinkButton whiteButton">Office de Tourisme des Monts d’Arrée</a>
                         </div>
                     </div>
@@ -366,7 +366,7 @@
                             s’inscrit pour l’éternité.
                         </p>
 
-                        <div class="flex justifyBetween">
+                        <div class="flex justifyBetween marTop50">
                             <a class="loisirLinkButton blueButton" href="https://www.lavalleedessaints.com/" target="_blank">La vallée des Saints</a>
                         </div>
                     </div>

@@ -85,11 +85,13 @@ html {
     position: relative;
     font-weight: 600;
     font-style: italic;
-    border-width: 2px;
+    text-decoration: underline;
+    /* border-width: 2px;
     border-style: solid;
     border-right: none;
     border-left: none;
-    border-top: none;
+    border-top: none; */
+    /* outline: 3px solid green; */
 }
 
 .noLineLink {
