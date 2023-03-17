@@ -5,10 +5,10 @@
             <span class="downloaderText">Consulter</span> 
         </a>
 
-        <span class="downloaderLine pointer openInObjectButton" @click="openInPdfModal">
+        <!-- <span class="downloaderLine pointer openInObjectButton" @click="openInPdfModal">
             <span class="downloaderIcon icon centered">visibility</span>
             <span class="downloaderText">Consulter</span> 
-        </span>
+        </span> -->
 
         <a :href="link" download class="downloaderLine pointer">
             <span class="downloaderIcon icon">download</span>
@@ -19,12 +19,12 @@
 
 <script setup>
 
-const openInPdfModal = (e) => {
-    const pdfModal = document.getElementById('pdfModal')
-    const pdfReader = document.getElementById('pdfReader')
-    pdfReader.setAttribute('data', props.link)
-    pdfModal.showModal()
-}
+// const openInPdfModal = (e) => {
+//     const pdfModal = document.getElementById('pdfModal')
+//     const pdfReader = document.getElementById('pdfReader')
+//     pdfReader.setAttribute('data', props.link)
+//     pdfModal.showModal()
+// }
 
 const appConfig = useAppConfig();
 const directusAssets = appConfig.directus.assets;
