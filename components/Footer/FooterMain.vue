@@ -112,7 +112,7 @@
                     </div>
                 </address>
 
-                <div class="phoneBox w100 footerBox flex justifyCenter alignCenter wrap gap5">
+                <div class="phoneBox w100 footerBox flex justifyCenter alignCenter wrap ">
                     <div class="flex column w100 gap5">
                         <a href="tel:+33298997309" class="phoneBtn flex gap10 justifyCenter alignCenter">
                             <span class="icon">call</span>
@@ -203,11 +203,12 @@
     background-color: var(--dark-blue);
     padding: 10px 0;
     border-radius: 15px;
+    margin-top: 15px;
 }
 .phoneBox .phoneBtn .icon {
     color: white;
     aspect-ratio: 1/1;
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
 }
 .phoneBox .phoneBtn .city {
