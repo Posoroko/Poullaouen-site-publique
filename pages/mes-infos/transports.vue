@@ -183,7 +183,7 @@
                         </p>
 
                         <div class="infoBox">
-                            <p class="flex alignCenter gap10"> <span class="icon">language</span> <a href="https://www.ouestgo.fr/" target="_blank" class="externalLink">voir le site web</a></p>
+                            <p class="flex alignCenter gap10"> <span class="icon">language</span> <a href="https://www.ouestgo.fr/" target="_blank" class="externalLink">www.ouestgo.fr</a></p>
                         </div>
                     </div>
                 </SectionMainSloted>
@@ -223,7 +223,7 @@
                         </p>
                         <div class="infoBox">
                             <p class="flex alignCenter gap10"> <span class="icon">call</span> 02 98 73 53 17</p>
-                            <p class="flex alignCenter gap10"> <span class="icon">language</span><a href="https://wimoov.org/" target="_blank" class="externalLink">voir le site web</a></p>
+                            <p class="flex alignCenter gap10"> <span class="icon">language</span><a href="https://wimoov.org/" target="_blank" class="externalLink">wimoov.org</a></p>
                         </div>
                     </div>
                 </SectionMainSloted>
