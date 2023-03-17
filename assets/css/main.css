@@ -81,17 +81,19 @@ html {
 /* external links */
 
 .externalLink {
-    display: inline-block;
+    /* display: inline-block; */
+    /* display: inline; */
     position: relative;
     font-weight: 600;
     font-style: italic;
     text-decoration: underline;
+    text-decoration-thickness: 2px;
+    line-height: 1.3rem
     /* border-width: 2px;
     border-style: solid;
     border-right: none;
     border-left: none;
     border-top: none; */
-    /* outline: 3px solid green; */
 }
 
 .noLineLink {
