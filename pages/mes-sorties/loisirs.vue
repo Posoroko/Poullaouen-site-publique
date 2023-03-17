@@ -465,6 +465,10 @@ const styleTallCards = () => {
         cards[i].classList.replace('whiteTallCard', 'brownTallCard')
     }
 
+    if (window.innerWidth < 1075) {
+        return
+    }
+
     const tallCardBoxes = document.querySelectorAll('.tallCardBox')
 
     tallCardBoxes.forEach(box => {
