@@ -32,6 +32,9 @@ const props = defineProps({
     font-size: 14px;
     /* margin-right: 20px; */
 }
+.step:last-child .stepLink {
+    border-bottom: 1px solid white;
+}
 .stepLink:hover {
     color: rgb(149, 246, 253);
 }
