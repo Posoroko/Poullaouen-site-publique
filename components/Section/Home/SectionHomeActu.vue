@@ -18,7 +18,7 @@
                         <div class="downloadBox" v-if="actu.file">
                             <p>
                                 <span>{{ actu.fileName }}</span>
-                                <a href=""><span class="icon">visibility_on</span>consulter</a> 
+                                <!-- <a href=""><span class="icon">visibility_on</span>consulter</a>  -->
                                 <a href=""><span class="icon">download</span>télécharger</a> 
                             </p>     
                         </div>

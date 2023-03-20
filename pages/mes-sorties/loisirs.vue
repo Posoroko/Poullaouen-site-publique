@@ -32,10 +32,10 @@
                     </p>
 
                     <div class="infoBox">
-                        <p class="w100 flex justifyBetween alignCenter whiteText">
+                        <p class="w100 flex justifyStart gap20 alignCenter whiteText">
                             <span class="whiteText"> <b class="whiteText">Flyer :</b></span>
                             <span class="flex alignCenter gap20 whiteText">
-                                <a class="flex alignCenter gap5" href="/loisirs/new pass loisirs.pdf" target="_blank"><span class="icon whiteText">visibility</span>Consulter</a>
+                                <!-- <a class="flex alignCenter gap5" href="/loisirs/new pass loisirs.pdf" target="_blank"><span class="icon whiteText">visibility</span>Consulter</a> -->
                         
                                 <a class="flex alignCenter gap5" href="/loisirs/new pass loisirs.pdf" download><span class="icon whiteText">download</span> Télécharger</a>       
                             </span>

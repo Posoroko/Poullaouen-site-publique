@@ -230,7 +230,7 @@ const headerData = {
 
 .dashboard {
     margin-top: 50px;
-    gap: 50px;
+    gap: 20px;
 }
 .dashboard .button {
     font-size: 18px;

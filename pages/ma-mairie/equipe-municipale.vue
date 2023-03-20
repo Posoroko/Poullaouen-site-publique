@@ -56,15 +56,18 @@ const headerData = {
     path: [
         {
             text: 'Accueil',
-            target: '/'
+            target: '/',
+            active: true
         },
         {
             text: 'Ma mairie',
-            target: '/ma-mairie/equipe-municipale'
+            target: '/ma-mairie/equipe-municipale',
+            active: false
         },
         {
             text: 'Equipe municipale',
-            target: '/ma-mairie/equipe-municipale'
+            target: '/ma-mairie/equipe-municipale',
+            active: true
         }
     ]
 }

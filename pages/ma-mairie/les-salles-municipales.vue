@@ -194,6 +194,7 @@ onMounted(() => {
     top: 10px;
     right: 10px;
     line-height: 40px;
+    z-index: 100000;
 }
 
 #salleCarouselModal::backdrop {

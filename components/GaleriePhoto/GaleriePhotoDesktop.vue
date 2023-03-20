@@ -1,5 +1,5 @@
 <template>
-    <section class="photoViewerMain centered relative">
+    <section class="photoViewerMain centered relative marTop20">
         <div ref="viewerBox" class=" viewerBox relative h100">
             <div class="viewerArrowBox viewerLeftArrowBox absolute icon headerIcon carouselChevron pointer" @click="swipeLeft"> chevron_left </div>
 
@@ -124,7 +124,7 @@ onMounted(() => {
 
 <style>
 .photoViewerMain {
-    min-height: 80vh;
+    min-height: 60vh;
     background-color: var(--dark-blue);
     border-radius: 10px;
 }

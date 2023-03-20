@@ -106,7 +106,7 @@
                             
                             <span class="flex alignCenter gap10">
                                 <span class="icon">visibility</span>
-                                <a class="noLineLink" href="/dechets/consignes tri.png" target="_blank">Consulter</a>
+                                <!-- <a class="noLineLink" href="/dechets/consignes tri.png" target="_blank">Consulter</a> -->
                             </span>
                             <span class="flex alignCenter gap10">
                                 <span class="icon">download</span>
@@ -170,7 +170,7 @@
                             <p class="flex justifyStart gap20"> 
                                 <b>Guide de compostage</b>
                                 <span class="flex alignCenter gap10">
-                                    <span class="icon">visibility</span> <a class="noLineLink" href="/dechets/leguideducompostage.pdf" target="_blank">Consulter</a>
+                                    <!-- <span class="icon">visibility</span> <a class="noLineLink" href="/dechets/leguideducompostage.pdf" target="_blank">Consulter</a> -->
                                     <span class="icon">download</span> <a class="noLineLink" href="/dechets/leguideducompostage.pdf" download>Télécharger</a>
                                 </span>
                                 
@@ -223,7 +223,7 @@
                         <div class="questionBox flex column gap10 pointer" @click="handleClick" v-for="question in questions" :key="question.id" :data-questionid="`question${question.id}`">
                             <p class="question flex alignCenter justifyBetween ">
                                 <span class="">{{ question.question }}</span>
-                                <span class="icon pointer" v-if="activeQuestion != `question${question.id}`">arrow_drop_up</span>
+                                <span class="icon pointer" v-if="activeQuestion != `question${question.id}`">arrow_left</span>
                                 <span class="icon pointer" v-if="activeQuestion == `question${question.id}`">arrow_drop_down</span>
                             </p>
                             <p class="answer" v-if="activeQuestion == `question${question.id}`">

@@ -1,16 +1,16 @@
 <template>
     <div class="downloadWidget column justifyEvenly alignCenter" id="downloadWidget">
-        <a :href="link" class="downloaderLine pointer classicOpenPdfLink" >
+        <!-- <a :href="link" class="downloaderLine pointer classicOpenPdfLink" >
             <span class="downloaderIcon icon centered">visibility</span>
             <span class="downloaderText">Consulter</span> 
-        </a>
+        </a> -->
 
         <!-- <span class="downloaderLine pointer openInObjectButton" @click="openInPdfModal">
             <span class="downloaderIcon icon centered">visibility</span>
             <span class="downloaderText">Consulter</span> 
         </span> -->
 
-        <a :href="link" download class="downloaderLine pointer">
+        <a :href="link" download class="downloaderLine pointer flex alignCenter">
             <span class="downloaderIcon icon">download</span>
             <span class="downloaderText">Télécharger</span>
         </a>

@@ -5,7 +5,7 @@
 
     <FooterMain />
 
-    <dialog id="masterModal">
+    <dialog id="masterModal relative">
         <span class="modal modalNode masterModalCloseBtn modalCloseBtn absolute icon pointer flex alignCenter justifyCenter" @click="closeModal">
             close
         </span>
@@ -78,7 +78,7 @@ const closePdfModal = () => {
     color: white;
     background-color: #000000;
     border-radius: 10px;
-    
+    z-index: 100000000000;
     right: 10px;
     line-height: 40px;
 }

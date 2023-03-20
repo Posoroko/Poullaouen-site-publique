@@ -27,8 +27,8 @@
                         <p class="scheduleCell scheduleDay shallow">Lundi</p>
 
                         <p class="scheduleCell deep"> Enseignement</p>
-                        <p class="scheduleCell shallow">APC <br> (aide personnalisée)</p>
-                        <p class="scheduleCell shallow">pause</p>
+                        <p class="scheduleCell shallow smallFont">APC <br> (aide personnalisée)</p>
+                        <p class="scheduleCell shallow">Pause</p>
                         <p class="scheduleCell shallow">TAP</p>
                         <p class="scheduleCell medium"> Enseignement </p>
                     </div>
@@ -53,7 +53,7 @@
                         <p class="scheduleCell scheduleDay shallow">Jeudi</p>
 
                         <p class="scheduleCell deep">Enseignement</p>
-                        <p class="scheduleCell shallow">APC <br> (aide personnalisée)</p>
+                        <p class="scheduleCell shallow smallFont">APC <br> (aide personnalisée)</p>
                         <p class="scheduleCell shallow">Pause</p>
                         <p class="scheduleCell shallow">TAP</p>
                         <p class="scheduleCell medium">Enseignement</p>
@@ -131,7 +131,9 @@ const selectDay = (e) => {
 .scheduleTime {
     font-weight: 500;
 }
-
+.smallFont{
+    font-size: 14px;
+}
 /* schedule */
 
 
@@ -139,7 +141,6 @@ const selectDay = (e) => {
     display: grid;
     place-items: center;
     text-align: center;
-    /* padding: 5px; */
 }
 
 .shallow {

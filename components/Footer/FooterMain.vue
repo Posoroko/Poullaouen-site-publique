@@ -15,17 +15,17 @@
                         <p>1 Place de la Mairie - 29246 Poullaouen</p>
                     </div>
 
-                    <p class="tel">
+                    <a href="tel:+33298935076" class="tel">
                         <span class="icon adIcon">call</span>
 
                         <span>02 98 93 50 76</span>
-                    </p>
+                    </a>
 
-                    <p class="mail"> 
+                    <a href="mailto:mairie-de-poullaouen@wanadoo.fr" class="mail"> 
                         <span class="icon adIcon">alternate_email</span>
 
                         <span>mairie-de-poullaouen@wanadoo.fr</span>
-                    </p>
+                    </a>
 
                     <div class="horraire flex">
                         <p class="icon adIcon">schedule</p>
@@ -42,7 +42,7 @@
                     </div>
                 </address>
 
-                <div class="phoneBox w100 footerBox flex justifyCenter alignCenter wrap gap5">
+                <!-- <div class="phoneBox w100 footerBox flex justifyCenter alignCenter wrap gap5">
                     <div class="flex column gap5 w100">
                         <a href="mailto:mairie-de-poullaouen@wanadoo.fr" class="phoneBtn gap10 flex justifyCenter alignCenter">
                             <span class="icon">mail</span>
@@ -55,7 +55,7 @@
                             <span class="city">Poullaouen</span>
                         </a>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             
@@ -92,15 +92,20 @@
                         <span>3 rue Ti Ker - 29690 Locmaria- Berrien</span>
                     </p>
 
-                    <p class="tel">
+                    <a href="tel:+33298997309" class="tel">
                         <span class="icon adIcon">call</span>
                         <span>02 98 99 73 09</span>
-                    </p>
+                    </a>
 
-                    <p class="mail"> 
+                    <a href="mailto:mailto:mairie.locmaria-berrien@orange.fr" class="mail"> 
                         <span class="icon adIcon">alternate_email</span>
                         <span>mairie.locmaria-berrien@orange.fr</span>
-                    </p>
+                    </a>
+
+                    <!-- <p class="mail"> 
+                        <span class="icon adIcon">alternate_email</span>
+                        <span>mairie.locmaria-berrien@orange.fr</span>
+                    </p> -->
 
                     <div class="horraire flex"> 
                         <span class="icon adIcon">schedule</span>
@@ -112,7 +117,7 @@
                     </div>
                 </address>
 
-                <div class="phoneBox w100 footerBox flex justifyCenter alignCenter wrap ">
+                <!-- <div class="phoneBox w100 footerBox flex justifyCenter alignCenter wrap ">
                     <div class="flex column w100 gap5">
                         <a href="tel:+33298997309" class="phoneBtn flex gap10 justifyCenter alignCenter">
                             <span class="icon">call</span>
@@ -126,7 +131,7 @@
                             <span class="city">Locmaria-Berrien</span>
                         </a>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             
@@ -268,7 +273,9 @@
     }
 
     .vague {
-        display: none;
+        top: 0;
+        /* display: none; */
+        /* opacity: 0.5; */
     }
 
     footer {
@@ -302,8 +309,9 @@
         width: 300px;
     }
     .vague {
-        bottom: 0;
-        display: none;
+        top: 0;
+        /* display: none; */
+        opacity: 0.5;
     }
 
     .leftBox {

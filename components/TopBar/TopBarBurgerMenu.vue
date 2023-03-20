@@ -44,10 +44,12 @@
 
                 <li class="line"></li>
             
-                <li class="tab tabDemarches pointer" name="demarches" @click.prevent="openTab">
-                    <p class="article">MES</p>
+                <li class="tab tabDemarches pointer" name="demarches">
+                    <a href="https://www.service-public.fr/particuliers/vosdroits/comment-faire-si" target="_blank">
+                        <p class="article">MES</p>
             
-                    <p class="name">DEMARCHES</p>
+                        <p class="name">DEMARCHES</p>
+                    </a>
 
                     <!-- <img class="w100 marTop20" src="/images/Service-public-logo.png" alt=""> -->
                 </li>

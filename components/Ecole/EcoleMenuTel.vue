@@ -180,12 +180,8 @@ onMounted(() => {
     background-color: rgb(58, 31, 0);
 }
 .columnBox {
-    height: 50vh;
+    height: 60vh;
 }
-
-
-
-
 
 .box {
     margin-bottom: 50px;
@@ -197,8 +193,8 @@ onMounted(() => {
 
 .menuCol .cell {
     height: 25%;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 400;
     color: white;
     background-color: #002f4aa4;
     padding: 3px 5px;

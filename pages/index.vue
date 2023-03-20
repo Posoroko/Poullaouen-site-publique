@@ -18,10 +18,10 @@
 
 const headerData = {
     images: [
-        // {
-        //     src: 'images/header/accueil/eglise-de-locmaria-berrien.jpg',
-        //     alt: 'église de Locmaria-Berrien',
-        // },
+        {
+            src: 'images/header/accueil/eglise-de-locmaria-berrien.jpg',
+            alt: 'église de Locmaria-Berrien',
+        },
         {
             src: 'images/header/accueil/aire de loisirs.jpg',
             alt: 'église de Locmaria-Berrien',
