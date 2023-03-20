@@ -16,40 +16,40 @@
 
             <div class="box flex justifyCenter" v-if="menu">
                 <div class="menuCol col1">
-                    <div class="cell"></div>
-                    <div class="cell">Entrée</div>
-                    <div class="cell">Plat</div>
-                    <div class="cell">Dessert</div>
+                    <div class="cell cellTable"></div>
+                    <div class="cell cellTable">Entrée</div>
+                    <div class="cell cellTable">Plat</div>
+                    <div class="cell cellTable">Dessert</div>
                 </div>
                
 
                 <div class="menuCol colDay">
-                    <div class="cell">Lundi {{ menu.monday }}</div>
-                    <div class="cell">{{menu.mondayStarter}}</div>
-                    <div class="cell">{{ menu.mondayDish }}</div>
-                    <div class="cell">{{ menu.mondayDessert }}</div>
+                    <div class="cell cellTable">Lundi {{ menu.monday }}</div>
+                    <div class="cell cellFood">{{menu.mondayStarter}}</div>
+                    <div class="cell cellFood">{{ menu.mondayDish }}</div>
+                    <div class="cell cellFood">{{ menu.mondayDessert }}</div>
                     
                 </div>
 
                 <div class="menuCol colDay">
-                    <div class="cell">Mardi {{ menu.tuesday }}</div>
-                    <div class="cell">{{ menu.tuesdayStarter }}</div>
-                    <div class="cell">{{ menu.tuesdayDish }}</div>
-                    <div class="cell">{{ menu.tuesdayDessert }}</div>
+                    <div class="cell cellTable">Mardi {{ menu.tuesday }}</div>
+                    <div class="cell cellFood">{{ menu.tuesdayStarter }}</div>
+                    <div class="cell cellFood">{{ menu.tuesdayDish }}</div>
+                    <div class="cell cellFood">{{ menu.tuesdayDessert }}</div>
                 </div>
 
                 <div class="menuCol colDay">
-                    <div class="cell">Jeudi {{ menu.thursday }}</div>
-                    <div class="cell">{{ menu.thursdayStarter }}</div>
-                    <div class="cell">{{ menu.thursdayDish }}</div>
-                    <div class="cell">{{ menu.thursdayDessert }}</div>
+                    <div class="cell cellTable">Jeudi {{ menu.thursday }}</div>
+                    <div class="cell cellFood">{{ menu.thursdayStarter }}</div>
+                    <div class="cell cellFood">{{ menu.thursdayDish }}</div>
+                    <div class="cell cellFood">{{ menu.thursdayDessert }}</div>
                 </div>
 
                 <div class="menuCol colDay">
-                    <div class="cell">Vendredi {{ menu.friday }}</div>
-                    <div class="cell">{{ menu.fridayStarter }}</div>
-                    <div class="cell">{{ menu.fridayDish }}</div>
-                    <div class="cell">{{ menu.fridayDessert }}</div>
+                    <div class="cell cellTable">Vendredi {{ menu.friday }}</div>
+                    <div class="cell cellFood">{{ menu.fridayStarter }}</div>
+                    <div class="cell cellFood">{{ menu.fridayDish }}</div>
+                    <div class="cell cellFood">{{ menu.fridayDessert }}</div>
                 </div>
             </div>
 
@@ -149,7 +149,7 @@ onMounted(() => {
 }
 
 .box {
-    height: 50vh;
+    height: 500px;
     margin-bottom: 50px;
 }
 .menuCol {
@@ -158,8 +158,7 @@ onMounted(() => {
 }
 .menuCol .cell {
     height: 25%;
-    font-size: 18px;
-    font-weight: 600;
+
     color: white;
     background-color: #002f4aa4;
     padding: 3px 5px;
@@ -168,8 +167,16 @@ onMounted(() => {
     place-items: center;
     text-align: center;
 }
-.col1 .cell {
+.cellTable {
     font-size: 18px;
+    font-weight: 600;
+}
+.cellFood {
+    font-size: 16px;
+    font-weight: 400;
+}
+.col1 .cell {
+    font-size: 16px;
     font-weight: 700;
 }
 
