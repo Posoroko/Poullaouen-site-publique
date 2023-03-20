@@ -104,10 +104,10 @@
                         <p class="flex alignCenter gap10"> 
                             <b>Consigne du tri sélectif</b> 
                             
-                            <span class="flex alignCenter gap10">
+                            <!-- <span class="flex alignCenter gap10">
                                 <span class="icon">visibility</span>
-                                <!-- <a class="noLineLink" href="/dechets/consignes tri.png" target="_blank">Consulter</a> -->
-                            </span>
+                                <a class="noLineLink" href="/dechets/consignes tri.png" target="_blank">Consulter</a>
+                            </span> -->
                             <span class="flex alignCenter gap10">
                                 <span class="icon">download</span>
                                 <a class="noLineLink" href="/dechets/consignes tri.png" download>Télécharger</a>
