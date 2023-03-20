@@ -41,21 +41,6 @@
                         </div>
                     </div>
                 </address>
-
-                <!-- <div class="phoneBox w100 footerBox flex justifyCenter alignCenter wrap gap5">
-                    <div class="flex column gap5 w100">
-                        <a href="mailto:mairie-de-poullaouen@wanadoo.fr" class="phoneBtn gap10 flex justifyCenter alignCenter">
-                            <span class="icon">mail</span>
-
-                            <span class="city">Poullaouen</span>
-                        </a>
-
-                        <a href="tel:+33298935076" class="phoneBtn flex gap10 justifyCenter alignCenter">
-                            <span class="icon">call</span>
-                            <span class="city">Poullaouen</span>
-                        </a>
-                    </div>
-                </div> -->
             </div>
 
             
@@ -102,11 +87,6 @@
                         <span>mairie.locmaria-berrien@orange.fr</span>
                     </a>
 
-                    <!-- <p class="mail"> 
-                        <span class="icon adIcon">alternate_email</span>
-                        <span>mairie.locmaria-berrien@orange.fr</span>
-                    </p> -->
-
                     <div class="horraire flex"> 
                         <span class="icon adIcon">schedule</span>
                         <div>
@@ -116,22 +96,6 @@
                         </div>
                     </div>
                 </address>
-
-                <!-- <div class="phoneBox w100 footerBox flex justifyCenter alignCenter wrap ">
-                    <div class="flex column w100 gap5">
-                        <a href="tel:+33298997309" class="phoneBtn flex gap10 justifyCenter alignCenter">
-                            <span class="icon">call</span>
-
-                            <span class="city">Locmaria-Berrien</span>
-                        </a>
-
-                        <a href="mailto:mailto:mairie.locmaria-berrien@orange.fr" class="phoneBtn flex gap10 justifyCenter alignCenter">
-                            <span class="icon">mail</span>
-
-                            <span class="city">Locmaria-Berrien</span>
-                        </a>
-                    </div>
-                </div> -->
             </div>
 
             
@@ -199,9 +163,20 @@
     align-items: space-evenly;
 }
 
-.leftBox, .rightBox {
-    margin-top: 10vw;
+
+
+@media (max-width: 1199px) {
+    .leftBox, .rightBox {
+        margin-top: 3vw;
+    }   
 }
+@media (min-width: 1200px) {
+    .leftBox, .rightBox {
+        margin-top: 10vw;
+    }   
+}
+
+
 .phoneBox .phoneBtn {
     width: min(100%, 500px);
     color: white;
