@@ -258,11 +258,12 @@ const headerData = {
     height: 45px;
     font-size: 40px;
     color: white;
-    background-color: #00000031;
+    background-color: #0000007a;
     border-radius: 10px;
     top: 10px;
     right: 10px;
     line-height: 40px;
+    z-index: 100000000;
 }
 
 #ecoleCarouselModal::backdrop {

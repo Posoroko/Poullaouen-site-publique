@@ -5,7 +5,7 @@
 
     <FooterMain />
 
-    <dialog id="masterModal relative">
+    <dialog id="masterModal">
         <span class="modal modalNode masterModalCloseBtn modalCloseBtn absolute icon pointer flex alignCenter justifyCenter" @click="closeModal">
             close
         </span>
