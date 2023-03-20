@@ -258,15 +258,18 @@ const headerData = {
     path: [
         {
             text: 'Accueil',
-            target: '/'
+            target: '/',
+            active: true
         },
         {
             text: 'Mes infos',
-            target: `/mes-infos/transports`
+            target: `/mes-infos/transports`,
+            active: false
         },
         {
             text: 'Transports',
-            target: `/mes-infos/transports`
+            target: `/mes-infos/transports`,
+            active: false
         }
     ]
 }

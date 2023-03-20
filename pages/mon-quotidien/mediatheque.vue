@@ -100,15 +100,18 @@ const headerData = {
     path: [
         {
             text: 'Accueil',
-            target: '/'
+            target: '/',
+            active: true
         },
         {
             text: 'Mon quotidien',
-            target: '/mon-quetidien/mediatheque'
+            target: '/mon-quetidien/mediatheque',
+            active: false
         },
         {
             text: 'Médiathèque',
-            target: '/mon-quetidien/mediatheque'
+            target: '/mon-quetidien/mediatheque',
+            active: false
         }
     ]
 }

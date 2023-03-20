@@ -79,11 +79,13 @@ const headerData = {
     path: [
         {
             text: 'Accueil',
-            target: '/'
+            target: '/',
+            active: true
         },
         {
             text: 'Agenda',
-            target: '/agenda'
+            target: '/agenda',
+            active: false
         }
     ]
 }

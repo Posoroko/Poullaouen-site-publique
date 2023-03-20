@@ -283,15 +283,18 @@ const headerData = {
     path: [
         {
             text: 'Accueil',
-            target: '/'
+            target: '/',
+            active: true
         },
         {
             text: 'Mes infos',
-            target: `/mes-infos/gestion-des-dechets`
+            target: `/mes-infos/gestion-des-dechets`,
+            active: false
         },
         {
             text: 'Gestion des déchets',
-            target: `/mes-infos/gestion-des-dechets`
+            target: `/mes-infos/gestion-des-dechets`,
+            active: false
         }
     ]
 }

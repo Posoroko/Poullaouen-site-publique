@@ -67,7 +67,7 @@ const headerData = {
         {
             text: 'Equipe municipale',
             target: '/ma-mairie/equipe-municipale',
-            active: true
+            active: false
         }
     ]
 }

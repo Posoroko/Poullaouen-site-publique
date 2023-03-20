@@ -71,11 +71,13 @@
 const path = ref([
     {
         text: "Accueil",
-        link: "/"
+        link: "/",
+        active: true
     },
     {
         text: "Plan du site",
-        link: "/plan-du-site"
+        link: "/plan-du-site",
+        active: false
     }
 ])
 

@@ -128,15 +128,18 @@ const headerData = {
     path: [
         {
             text: 'Accueil',
-            target: '/'
+            target: '/',
+            active: true
         },
         {
             text: 'Ma mairie',
-            target: '/ma-mairie/documents/publications-reglementaires'
+            target: '/ma-mairie/documents/publications-reglementaires',
+            active: false
         },
         {
             text: 'Publications réglementaires',
-            target: '/ma-mairie/documents/publications-reglementaires'
+            target: '/ma-mairie/documents/publications-reglementaires',
+            active: false
         }
     ]
 }

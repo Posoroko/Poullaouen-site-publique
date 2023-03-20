@@ -61,16 +61,19 @@ const { data: album } = await useAsyncData(
 const path = [
     {
         text: 'Accueil',
-        target: '/'
+        target: '/',
+        active: true
     },
     {
         text: 'Galerie photo',
-        target: '/galerie-photo'
+        target: '/galerie-photo',
+        active: false
     },
     {
         text: album.value.albumName,
         // target: `/galerie-photo`
-        target: `/galerie-photo/${route.params.category}/${route.params.album}`
+        target: `/galerie-photo/${route.params.category}/${route.params.album}`,
+        active: false
     }
 ]
 

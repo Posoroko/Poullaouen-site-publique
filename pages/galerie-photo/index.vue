@@ -199,11 +199,13 @@ const headerData = {
     path: [
         {
             text: 'Accueil',
-            target: '/'
+            target: '/',
+            active: true
         },
         {
             text: 'Galerie photo',
-            target: '/galerie-photo'
+            target: '/galerie-photo',
+            active: false
         }
     ]
 }

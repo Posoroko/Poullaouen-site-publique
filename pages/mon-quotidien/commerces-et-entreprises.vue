@@ -126,15 +126,18 @@ const headerData = {
     path: [
         {
             text: 'Accueil',
-            target: '/'
+            target: '/',
+            active: true
         },
         {
             text: 'Mon quotidien',
-            target: '/mon-quotidien/commerces-et-entreprises'
+            target: '/mon-quotidien/commerces-et-entreprises',
+            active: false
         },
         {
             text: 'Commerces et entreprises',
-            target: '/mon-quotidien/commerces-et-entreprises'
+            target: '/mon-quotidien/commerces-et-entreprises',
+            active: false
         }
     ]
 }

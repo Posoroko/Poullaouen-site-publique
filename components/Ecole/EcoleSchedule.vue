@@ -19,7 +19,7 @@
                     <p class="scheduleCell scheduleDay shallow">Lundi</p>
 
                     <p class="scheduleCell deep"> Enseignement</p>
-                    <p class="scheduleCell shallow">APC <br> (aide personnalisée)</p>
+                    <p class="scheduleCell  shallow smallFont">APC <br class="break"> (aide personnalisée)</p>
                     <p class="scheduleCell shallow">Pause</p>
                     <p class="scheduleCell shallow">TAP</p>
                     <p class="scheduleCell medium"> Enseignement </p>
@@ -45,7 +45,7 @@
                     <p class="scheduleCell scheduleDay shallow">Jeudi</p>
 
                     <p class="scheduleCell deep">Enseignement</p>
-                    <p class="scheduleCell shallow">APC <br> (aide personnalisée)</p>
+                    <p class="scheduleCell shallow smallFont">APC <br> (aide personnalisée)</p>
                     <p class="scheduleCell shallow">Pause</p>
                     <p class="scheduleCell shallow">TAP</p>
                     <p class="scheduleCell medium">Enseignement</p>
@@ -83,6 +83,13 @@
 .scheduleTime {
     font-weight: 700;
 }
+
+@media (max-width: 768px) {
+    .break {
+        display: none;
+    }
+}
+
 /* schedule */
 .scheduleBoard *{
     border: 1px solid white;
@@ -101,16 +108,16 @@
 }
 
 .shallow {
-    height: var(--shallow-height);
+    height: 60px;
 }
 .medium {
-    height: calc(var(--shallow-height) * 2);
+    height: 120px;
 }
 .deep {
-    height: calc(var(--shallow-height) * 3);
+    height: 135px;
 }
 .supaDeep {
-    height: calc(var(--shallow-height) * 5);
+    height: 300px;
 }
 
 .scheduleBackdrop {

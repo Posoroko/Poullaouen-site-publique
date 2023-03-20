@@ -1,3 +1,4 @@
+,
 <template>
     <HeaderMain :data="headerData" />
 
@@ -84,15 +85,18 @@ const headerData = {
     path: [
         {
             text: 'Accueil',
-            target: '/'
+            target: '/',
+            active: true
         },
         {
             text: 'Mon quotidien',
-            target: '/mo-quotidien/les-equipements-sportifs-et-de-loisir'
+            target: '/mo-quotidien/les-equipements-sportifs-et-de-loisir',
+            active: false
         },
         {
             text: 'Equipements sportifs et de loisir',
-            target: '/ma-mairie/les-equipements-sportifs-et-de-loisir'
+            target: '/ma-mairie/les-equipements-sportifs-et-de-loisir',
+            active: false
         }
     ]
 }

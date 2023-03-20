@@ -84,15 +84,18 @@ const headerData = {
     path: [
         {
             text: 'Accueil',
-            target: '/'
+            target: '/',
+            active: true
         },
         {
             text: 'Mes infos',
-            target: `/mes-infos/PLU`
+            target: `/mes-infos/PLU`,
+            active: false
         },
         {
             text: 'PLU',
-            target: `/mes-infos/PLU`
+            target: `/mes-infos/PLU`,
+            active: false
         }
     ]
 }

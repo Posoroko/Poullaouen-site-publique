@@ -27,15 +27,18 @@ const headerData = {
     path: [
         {
             text: "Accueil",
-            target: "/"
+            target: "/",
+            active: true
         },
         {
             text: "Mon quotidien",
-            target: "/mon-quotidien/menu-cantine"
+            target: "/mon-quotidien/menu-cantine",
+            active: false
         },
         {
             text: "Menu de la cantine",
-            target: "/mon-quotidien/menu-cantine"
+            target: "/mon-quotidien/menu-cantine",
+            active: false
         }
     ]
 }

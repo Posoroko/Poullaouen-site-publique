@@ -116,15 +116,18 @@ const headerData = {
     path: [
         {
             text: 'Accueil',
-            target: '/'
+            target: '/',
+            active: true
         },
         {
             text: 'Mes infos',
-            target: `/mes-infos/eau-et-assainissement`
+            target: `/mes-infos/eau-et-assainissement`,
+            active: false
         },
         {
             text: 'Eau et assainissement',
-            target: `/mes-infos/eau-et-assainissement`
+            target: `/mes-infos/eau-et-assainissement`,
+            active: false
         }
     ]
 }

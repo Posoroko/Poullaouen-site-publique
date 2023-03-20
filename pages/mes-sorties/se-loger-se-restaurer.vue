@@ -121,15 +121,18 @@ const headerData = {
     path: [
         {
             text: 'Accueil',
-            target: '/'
+            target: '/',
+            active: true
         },
         {
             text: 'Mes sorties',
-            target: '/mes-sorties/se-loger-se-restaurer'
+            target: '/mes-sorties/se-loger-se-restaurer',
+            active: false
         },
         {
             text: 'Se loger, se restaurer',
-            target: '/mes-sorties/se-loger-se-restaurer'
+            target: '/mes-sorties/se-loger-se-restaurer',
+            active: false
         }
     ]
 }

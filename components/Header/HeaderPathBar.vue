@@ -5,7 +5,6 @@
                 <span class="icon">chevron_right</span>
 
                 <nuxtLink :to="step.target" class="italic stepLink flex alignCenter" :class="{ pathBarActive : step.active, pathBarInactive: !step.active}">
-                    {{ step.active }}
                     {{ step.text }}
                 </nuxtLink>
                 

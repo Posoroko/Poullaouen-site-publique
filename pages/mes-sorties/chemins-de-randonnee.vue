@@ -225,15 +225,18 @@ const headerData = {
     path: [
         {
             text: 'Accueil',
-            target: '/'
+            target: '/',
+            active: true
         },
         {
             text: 'Mes sorties',
-            target: `/mes-sorties/`
+            target: `/mes-sorties/`,
+            active: false
         },
         {
             text: "Les chemins de randonnée",
-            target: `/mes-sorties/chemins-de-randonnee`
+            target: `/mes-sorties/chemins-de-randonnee`,
+            active: false
         }
     ]
 }

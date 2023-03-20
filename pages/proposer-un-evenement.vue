@@ -166,11 +166,13 @@ const showInModal = (message) => {
 const path = ref([
     {
         text: "Accueil",
-        link: "/"
+        link: "/",
+        active: true
     },
     {
         text: "Proposer un événement",
-        link: "/proposer-un-evenement"
+        link: "/proposer-un-evenement",
+        active: false
     }
 ])
 

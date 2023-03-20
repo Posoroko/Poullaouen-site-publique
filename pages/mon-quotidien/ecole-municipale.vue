@@ -228,15 +228,18 @@ const headerData = {
     path: [
         {
             text: "Accueil",
-            target: "/"
+            target: "/",
+            active: true
         },
         {
             text: "Mon quotidien",
-            target: "/mon-quotidien/ecole-municipale"
+            target: "/mon-quotidien/ecole-municipale",
+            active: false
         },
         {
             text: "Ecole municipale",
-            target: "/mon-quotidien/ecole-municipale"
+            target: "/mon-quotidien/ecole-municipale",
+            active: false
         }
     ]
 }

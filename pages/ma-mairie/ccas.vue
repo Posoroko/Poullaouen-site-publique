@@ -72,15 +72,18 @@ const headerData = {
     path: [
         {
             text: 'Accueil',
-            target: '/'
+            target: '/',
+            active: true
         },
         {
             text: 'Ma mairie',
-            target: '/ma-mairie/ccas'
+            target: '/ma-mairie/ccas',
+            active: false
         },
         {
             text: 'Ccas',
-            target: '/ma-mairie/ccas'
+            target: '/ma-mairie/ccas',
+            active: false
         }
     ]
 }

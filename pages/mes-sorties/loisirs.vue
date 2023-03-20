@@ -421,15 +421,18 @@ const headerData = {
     path: [
         {
             text: 'Accueil',
-            target: '/'
+            target: '/',
+            active: true
         },
         {
             text: 'Mes sorties',
-            target: `/mes-sorties/loisirs`
+            target: `/mes-sorties/loisirs`,
+            active: false
         },
         {
             text: 'Loisirs',
-            target: `/mes-sorties/loisirs`
+            target: `/mes-sorties/loisirs`,
+            active: false
         }
     ]
 }

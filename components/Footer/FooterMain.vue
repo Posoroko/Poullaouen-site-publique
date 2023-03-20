@@ -139,7 +139,7 @@
         
 
         <div class="bottomBar w100 ">
-            <div class="mainWidth flex justifyEvenly wrap">
+            <div class="mainWidth flex justifyEvenly wrap gap10">
                 <NuxtLink class="bottomLink" to="/">ACCUEIL</NuxtLink>
                 <!-- <div class="line"></div> -->
                 <NuxtLink class="bottomLink" to="/plan-du-site">PLAN DU SITE</NuxtLink>
@@ -263,7 +263,7 @@
     color: white;
 }
 .vague {
-    opacity: 0.7;
+    opacity: 1;
     z-index: -1;
 }
 
@@ -273,7 +273,7 @@
     }
 
     .vague {
-        top: 0;
+        top: -75px;
         /* display: none; */
         /* opacity: 0.5; */
     }
@@ -309,9 +309,9 @@
         width: 300px;
     }
     .vague {
-        top: 0;
+        top: -100px;
         /* display: none; */
-        opacity: 0.5;
+        /* opacity: 0.5; */
     }
 
     .leftBox {

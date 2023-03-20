@@ -144,15 +144,18 @@ const headerData = {
     path: [
         {
             text: 'Accueil',
-            target: '/'
+            target: '/',
+            active: true
         },
         {
             text: 'Ma mairie',
-            target: '/ma-mairie/documents/proces-verbaux-du-conseil-municipal'
+            target: '/ma-mairie/documents/proces-verbaux-du-conseil-municipal',
+            active: false
         },
         {
             text: 'Procès verbaux du conseil municipal',
-            target: '/ma-mairie/documents/proces-verbaux-du-conseil-municipal'
+            target: '/ma-mairie/documents/proces-verbaux-du-conseil-municipal',
+            active: false
         }
     ]
 }
@@ -233,13 +236,23 @@ const headerData = {
     gap: 20px;
 }
 .dashboard .button {
-    font-size: 18px;
     font-weight: 600;
-    padding: 0.6em 1.5em;
     color: white;
     border-radius: 50px;
 }
 
+@media (max-width: 399px) {
+    .dashboard .button {
+        font-size: 16px;
+        padding: 0.4em 1.1em;
+    }
+}
+@media (min-width: 400px) {
+    .dashboard .button {
+        font-size: 18px;
+        padding: 0.6em 1.5em;
+    }
+}
 
 .docsMain .docsSection .stripe .flex {
     color: white;

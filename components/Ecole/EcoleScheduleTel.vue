@@ -144,19 +144,16 @@ const selectDay = (e) => {
 }
 
 .shallow {
-    height: var(--shallow-height);
+    height: 60px;
 }
-
 .medium {
-    height: calc(var(--shallow-height) * 2);
+    height: 120px;
 }
-
 .deep {
-    height: calc(var(--shallow-height) * 3);
+    height: 135px;
 }
-
 .supaDeep {
-    height: calc(var(--shallow-height) * 5);
+    height: 300px;
 }
 
 .scheduleBackdrop {

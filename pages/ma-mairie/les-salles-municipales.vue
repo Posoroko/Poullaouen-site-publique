@@ -148,15 +148,18 @@ const headerData = {
     path: [
         {
             text: 'Accueil',
-            target: '/'
+            target: '/',
+            active: true
         },
         {
             text: 'Ma mairie',
-            target: '/ma-mairie/les-salles-municipales'
+            target: '/ma-mairie/les-salles-municipales',
+            active: false
         },
         {
             text: 'Les salles municipales',
-            target: '/ma-mairie/les-salles-municipales'
+            target: '/ma-mairie/les-salles-municipales',
+            active: false
         }
     ]
 }

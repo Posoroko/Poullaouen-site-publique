@@ -55,7 +55,8 @@ const headerData = {
     path: [
         {
             text: 'Accueil',
-            target: '/'
+            target: '/',
+            active: false
         }
     ]
 }

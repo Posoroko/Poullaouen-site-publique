@@ -55,7 +55,7 @@ const directusAssets = appConfig.directus.assets;
 const headerData = {
     images: [
         {
-            src: `${directusAssets}ed89c00d-5e0f-40bb-964a-23acac2c8b56.JPG?key=header1500`,
+            src: `${directusAssets}807c975e-d6e0-4565-abfd-2a3f7fb80155.jpg?key=header1500`,
             alt: 'Révolte des bonnets rouges à Poullaouen',
         }
     ],
@@ -63,15 +63,18 @@ const headerData = {
     path: [
         {
             text: 'Accueil',
-            target: '/'
+            target: '/',
+            active: true
         },
         {
             text: 'Mes sorties',
-            target: `/mes-sorties/patrimoine`
+            target: `/mes-sorties/patrimoine`,
+            active: false
         },
         {
             text: 'Patrimoine',
-            target: `/mes-sorties/patrimoine`
+            target: `/mes-sorties/patrimoine`,
+            active: false
         }
     ]
 }

@@ -111,15 +111,18 @@ const headerData = {
     path: [
         {
             text: 'Accueil',
-            target: '/'
+            target: '/',
+            active: true
         },
         {
             text: 'Mes infos',
-            target: `/mes-infos/se-loger`
+            target: `/mes-infos/se-loger`,
+            active: false
         },
         {
             text: 'Se loger',
-            target: `/mes-infos/se-loger`
+            target: `/mes-infos/se-loger`,
+            active: false
         }
     ]
 }

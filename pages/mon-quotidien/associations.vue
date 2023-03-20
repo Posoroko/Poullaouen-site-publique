@@ -107,15 +107,18 @@ const headerData = {
     path: [
         {
             text: 'Accueil',
-            target: '/'
+            target: '/',
+            active: true
         },
         {
             text: 'Mon quotidien',
-            target: '/mon-quotidien/associations'
+            target: '/mon-quotidien/associations',
+            active: false
         },
         {
             text: 'Associations',
-            target: '/mon-quotidien/associations'
+            target: '/mon-quotidien/associations',
+            active: false
         }
     ]
 }
