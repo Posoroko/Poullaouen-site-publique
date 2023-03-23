@@ -43,6 +43,24 @@
             </div>
         </SectionMainSloted>
 
+        <SectionMainSloted  :data="sectionData_2">
+                <div class="textBox h100 flex column justifyCenter gap20">            
+                    <p class="content page-text">
+                        Tout au long de l'année, 1 lundi sur 2, une vingtaine "d'anciens", se retrouve pour chanter, pour le 
+                        plaisir et la convivialité. Jacqueline Cras et ses musiciens animent l'ensemble dans la bonne humeur. 
+                        L'activité est libre à tous, gratuite et joyeuse! Se renseigner en mairie pour se joindre au groupe. 
+                        L'après-midi se termine toujours par un café/gâteau...
+                    </p>
+            
+                    <div class="bottomContent">
+                        <p class="moreinfo flex gap10 italic">
+                            <span class="icon">call</span>
+                            <span>02 98 93 50 76</span>
+                        </p>
+                    </div>
+                </div>
+            </SectionMainSloted>
+
         <SectionTitleBar title="Les organismes partenaires" />
         
         <p class="mainWidth page-text marTop50">
@@ -61,6 +79,11 @@ const sectionData_1 = {
     title: "Les activités"
 }
 
+const sectionData_2 = {
+    image: "/images/ccas/chantons_ensemble.JPG",
+    localImage: true,
+    title: "Chantons ensemble"
+}
 const headerData = {
     images: [
         {
