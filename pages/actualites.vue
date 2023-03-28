@@ -10,7 +10,7 @@
             <SectionMainSloted :data="{ title: actu.title, image: actu.image, imageAlt: actu.imageAlt, localImage: false }" >
                 <div class="slottedContent h100 flex column justifyCenter gap20">
                     <div class="flex column gap10">
-                        <p class="brownText italic">Le {{ toDayMonthYearFormat(actu.date_created) }}</p>
+                        <p class="brownText italic">Publié le {{ toDayMonthYearFormat(actu.date_created) }}</p>
                     </div>
 
                     <div class="actuContent" v-html="actu.content">
