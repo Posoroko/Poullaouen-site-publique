@@ -63,14 +63,15 @@ const closePdfModal = () => {
 }
 
 #masterModal {
-    /* max-width: 95vw;
-    max-height: 90vh; */
+    /* width: 95vw;
+    height: 90vh; */
     margin: auto;
     background-color: transparent;
     border: none;
+    /* margin: auto; */
+    /* display: grid;
+    place-items: center; */
 }
-
-
 .modalCloseBtn {
     width: 45px;
     height: 45px;

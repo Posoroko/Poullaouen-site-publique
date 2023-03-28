@@ -7,16 +7,16 @@
             <path class="pied rightFoot" d="M294.7,150.3L399.5,126l87.3,376.6l184.8-42.9l20.5,88.3l-289.6,67.2L294.7,150.3z" />
         </svg>
 
-        <div v-if="image && !containedImage" class="imgFrame absolutlyCentered shadow">
-            <img v-if="image && !localImage" class="objectFitCover pointer" :src="`${directusAssets}${image}?key=card500`" alt="" @click="showInModal">
+        <div v-if="image && !containedImage" class="imgFrame absolutlyCentered shadow centered">
+            <img v-if="image && !localImage" class="footImage objectFitCover pointer" :src="`${directusAssets}${image}?key=full500`" alt="" @click="showInModal">
 
-            <img v-if="image && localImage" class="objectFitCover pointer" :src="image" alt="" @click="showInModal">
+            <img v-if="image && localImage" class="footImage objectFitCover pointer" :src="image" alt="" @click="showInModal">
         </div>
 
-        <div v-if="image && containedImage" class="imgFrame absolutlyCentered ">
-            <img v-if="image && !localImage" class="objectFitContained footImage pointer shadow" :src="`${directusAssets}${image}?key=agenda500`" alt="" @click="showInModal">
+        <div v-if="image && containedImage" class="imgFrame absolutlyCentered">
+            <img v-if="image && !localImage" class="objectFitContained footImage pointer" :src="`${directusAssets}${image}?key=agenda500`" alt="" @click="showInModal">
 
-            <img v-if="image && localImage" class="objectFitContained footImage pointer shadow" :src="image" alt="" @click="showInModal">
+            <img v-if="image && localImage" class="objectFitContained footImage pointer" :src="image" alt="" @click="showInModal">
         </div>
     </div>
 </template>
@@ -41,11 +41,16 @@ const showInModal = (e) => {
     if(props.localImage) {
         _img.src = props.image
     } else {
-        _img.src = `${directusAssets}${props.image}?key=header1500`
+        // _img.src = `${directusAssets}${props.image}?key=full1500`
+        _img.src = `${directusAssets}${props.image}`
     }
 
-    _img.style.maxWidth = "80vw"
-    _img.style.maxHeight = "80vh"
+    _img.style.maxWidth = "95vw"
+    _img.style.maxHeight = "95vh"
+    // _img.style.objectFit = "contain"
+    _img.style.margin = "auto"
+
+
 
     modal.appendChild(_img)
     modal.showModal()
@@ -82,5 +87,6 @@ const props = defineProps({
     border-radius: 5px;
     overflow: hidden;
 }
+
 
 </style>
