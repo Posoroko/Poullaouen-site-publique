@@ -1,4 +1,4 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+// https://nuxt.com/docs/api/configuration/nuxt-configconsole
 export default defineNuxtConfig({
     css: [
         '@/assets/css/colors.css',
@@ -14,7 +14,7 @@ export default defineNuxtConfig({
         "nuxt-directus"
     ],
     directus: {
-        url: "https://findstable.net"
+        url: "https://admin.mairie-poullaouen.fr"
     },
     app: {
         head: {
@@ -33,12 +33,13 @@ export default defineNuxtConfig({
             title: 'Poullaouen',
             meta: [
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-                { name: 'description', content: 'Site de la Mairie de Poullaouën.' },
-                { name: "og:description", content: 'Site de la Mairie de Poullaouën.' },
+                { name: 'description', content: 'Site de la Mairie de Poullaouen.' },
+                { name: "og:description", content: 'Site de la Mairie de Poullaouen.' },
                 { name: "og:site_name", content: "Mairie de Poullaouen" },
                 { name: "og:type", content: "website" },
-                { name: "og:image", content: "@carine_leduc" },
+                { name: "og:image", content: "Poullaouen" },
                 { name: "og:url", content: "https://mairie-poullaouen.fr" },
+                { name: "google-site-verification", content: "sMTScukwNBaazph3D2m7z4y0_-M1EH8L1C1n2dYdxeQ" }
             ],
         },
         // baseURL: '/accueil/'
