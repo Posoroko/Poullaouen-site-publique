@@ -6,7 +6,7 @@
 
         <div>
             <SectionMainSloted
-                :data="{ title: 'L’expérimentation de la tarification incitative', image: '/images/dechets/sacs.jpg', imageAlt: 'Reciclag à Poullaouën', localImage: true }">
+                :data="{ title: 'L’expérimentation de la tarification incitative', image: '/images/dechets/sacs.jpg', imageAlt: 'Reciclag à Poullaouen', localImage: true }">
                 <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap10">
                     <p>
                         Pour faire face aux augmentations du coût de traitement de nos ordures
@@ -79,7 +79,7 @@
             </SectionMainSloted>
 
             <SectionMainSloted
-                :data="{ title: 'Le tri sélectif', image: '/images/dechets/consignes.jpg', imageAlt: 'Campagne Poullaouënaise', localImage: true }">
+                :data="{ title: 'Le tri sélectif', image: '/images/dechets/consignes.jpg', imageAlt: 'Campagne Poullaouenaise', localImage: true }">
                 <div class="slotedSectionTextBox page-text flex column justifyCenter alignStart pad20 gap10">
 
                     <p class="dechetParagraph">

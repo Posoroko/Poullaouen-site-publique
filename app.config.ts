@@ -3,7 +3,7 @@ export default defineAppConfig({
         primary: "#1e88e5",
     },
     directus: {
-        items: "https://findstable.net/items/",
-        assets: "https://findstable.net/assets/",
+        items: "https://admin.mairie-poullaouen.fr/items/",
+        assets: "https://admin.mairie-poullaouen.fr/assets/",
     }
 })

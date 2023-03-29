@@ -30,7 +30,7 @@
             </SectionMainSloted>
 
             <SectionMainSloted
-                :data="{ title: 'Consulter le rapport de présentation', image: '/images/plu/chemin.jpg', imageAlt: 'Campagne Poullaouënaise', localImage: true }">
+                :data="{ title: 'Consulter le rapport de présentation', image: '/images/plu/chemin.jpg', imageAlt: 'Campagne Poullaouenaise', localImage: true }">
                 <div class="slotedSectionTextBox flex column justifyCenter alignStart pad20 gap10">
                     
                     <p class="flex alignCenter gap20"> 

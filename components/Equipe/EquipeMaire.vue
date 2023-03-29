@@ -44,7 +44,7 @@ const props = defineProps({
 const headerData = {
     images: [
         {
-            src: '/images/header/equipe/équipe-municipale-Poullaouën.jpg',
+            src: '/images/header/equipe/équipe-municipale-Poullaouen.jpg',
             alt: 'mairie de Locmaria-Berrien',
         }
     ],

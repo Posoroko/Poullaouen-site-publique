@@ -47,7 +47,7 @@
 
             <div class="centerBox footerBox flex">
                 <div class="w100 flex justifyCenter marTop100">
-                    <img class="footerLogo" src="/images/logo-poullaouen-trimmed.svg" alt="logo de la Commune de Poullaouën">
+                    <img class="footerLogo" src="/images/logo-poullaouen-trimmed.svg" alt="logo de la Commune de Poullaouen">
                 </div>
                 <a href="https://www.facebook.com/profile.php?id=100064790073995" target="_blank" class="button flex alignCenter justifyCenter faceBookBtn">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="iconBox">

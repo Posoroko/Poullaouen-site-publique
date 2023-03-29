@@ -8,7 +8,7 @@
 
         <div class="gradSection">
             <SectionMainSloted
-                :data="{ title: 'Le pass loisir', image: '/images/loisirs/A-Prg1020644-maison de la mine.jpg', imageAlt: 'Reciclag à Poullaouën', localImage: true }">
+                :data="{ title: 'Le pass loisir', image: '/images/loisirs/A-Prg1020644-maison de la mine.jpg', imageAlt: 'Reciclag à Poullaouen', localImage: true }">
                 <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap10">
                     <h4 class="whiteText">Profitez de tarifs réduits avec le «pass’ loisirs» !</h4>
                     <p class="flex column gap20 whiteText">
@@ -88,7 +88,7 @@
                             L’Association pour la Sauvegarde de l’Ancienne
                             Mine de plomb et d’argent vous fait découvrir
                             dans son espace muséal le passé minier du site
-                            de Huelgoat, Locmaria-Berrien et Poullaouën,
+                            de Huelgoat, Locmaria-Berrien et Poullaouen,
                             l’un des plus importants en France au 18ème et
                             19ème siècle.
                         </p>

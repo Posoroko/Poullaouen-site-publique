@@ -15,7 +15,7 @@
             </p>
             <p class="page-text">
                 En fait, au XVIIIè siècle, le minerai exploité était la blende associée
-                avec l’argent. Le minerai de Poullaouën était plus riche en plomb que
+                avec l’argent. Le minerai de Poullaouen était plus riche en plomb que
                 celui de Huelgoat, mais moins riche en argent.
             </p>
         </div>

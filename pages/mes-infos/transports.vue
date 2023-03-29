@@ -27,10 +27,10 @@
                     <h4>Les lignes de transport scolaire.</h4>
                     <p class="page-text">
                         Ce sont les lignes qui permettent le ramassage scolaire des élèves du
-                        secondaire sur les communes de Poullaouën, Plounévézel, Cléden-
+                        secondaire sur les communes de Poullaouen, Plounévézel, Cléden-
                         Poher, Kergloff, Saint-Hernin, Motreff, Tréogan, Plévin, Treff rin, Le
                         Moustoir.
-                        Pour les communes de Cléden-Poher, de Saint-Hernin et de Poullaouën,
+                        Pour les communes de Cléden-Poher, de Saint-Hernin et de Poullaouen,
                         il existe également un service de transport scolaire à destination des
                         écoles. Les trajets se font à bord de véhicules 09 places depuis le
                         domicile de l’élève jusqu’à l’école.

@@ -47,7 +47,7 @@
 
     <nav class="menuPanel absolute" v-show="menuIsOpen">
         <div class="imageBox">
-            <img class="objectFitCover" :src="menuImageRef" alt="mairie de Poullaouën">
+            <img class="objectFitCover" :src="menuImageRef" alt="mairie de Poullaouen">
         </div>
 
         <div class="linkBox">

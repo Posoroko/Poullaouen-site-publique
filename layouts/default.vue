@@ -10,16 +10,7 @@
             close
         </span>
     </dialog>
-
-    <!-- <dialog id="pdfModal" class="pdfModal">
-        <object class="pdfReader " id="pdfReader"
-            data="https://findstable.net/assets/71c2e97e-0345-4fa8-8ed3-6f056ac55fc8.pdf">
-        </object>
-        <span class="modal modalNode pdfModalCloseBtn modalCloseBtn absolute icon pointer flex alignCenter justifyCenter" @click="closePdfModal">
-            close
-        </span>
-    </dialog> -->
-
+    
     <a href="#header" class="icon " id="homeButton">arrow_upward</a>
 </template>
 

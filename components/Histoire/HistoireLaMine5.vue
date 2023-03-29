@@ -62,7 +62,7 @@
                             et permettait aux mines de Poullaouen de fonctionner toute l’année.
                             D’importantes innovations techniques furent introduites ou projetées
                             aux mines de Poullaouen et Huelgoat. La première machine à vapeur
-                            bretonne fonctionna à Poullaouën dès 1748, mais fut démontée
+                            bretonne fonctionna à Poullaouen dès 1748, mais fut démontée
                             quelques années plus tard car sa consommation en charbon était
                             excessive.
                             <br><br>

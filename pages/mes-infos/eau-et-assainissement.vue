@@ -66,7 +66,7 @@
             </SectionMainSloted>
   
             <SectionMainSloted
-                :data="{ title: null, image: '/images/eau/manhole.jpg', imageAlt: 'Campagne Poullaouënaise', localImage: true }">
+                :data="{ title: null, image: '/images/eau/manhole.jpg', imageAlt: 'Campagne Poullaouenaise', localImage: true }">
                 <div class="slotedSectionTextBox page-text lex column justifyCenter alignStart pad20 gap20">
 
                     <p class="flex column gap10">

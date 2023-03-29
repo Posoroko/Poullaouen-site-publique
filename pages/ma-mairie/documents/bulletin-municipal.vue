@@ -14,7 +14,7 @@
                     <article class="bulletinCard" v-for="doc in documents.latests" :key="doc.id">
                         <figure class="frame relative">
                             <img class="objectFitCover" :src="`${directusAssets}${doc.image}.jpg`" 
-                            :alt="`Bulletin municipal de Poullaouën ${doc.datePublication}`" @click.prevent="openModal">
+                            :alt="`Bulletin municipal de Poullaouen ${doc.datePublication}`" @click.prevent="openModal">
 
                             <div class="downloaderFrame absoluteFull">
                                 <DocsDownloadWidget :link="`${directusAssets}${doc.file}`" />
@@ -42,7 +42,7 @@
                     <article class="bulletinCard pointer " v-for="doc in documents.rest" :key="doc.id">
                         <figure class="frame relative">
                             <img class="objectFitCover" :src="`${directusAssets}${doc.image}.jpg`" 
-                            :alt="`Bulletin municipal de Poullaouën ${doc.datePublication}`" @click.prevent="openModal">
+                            :alt="`Bulletin municipal de Poullaouen ${doc.datePublication}`" @click.prevent="openModal">
 
                             <div class="downloaderFrame absoluteFull">
                                 <DocsDownloadWidget :link="`${directusAssets}${doc.file}`" />
@@ -99,7 +99,7 @@ const headerData = {
     images: [
         {
             src: '/images/header/bulletin.jpg',
-            alt: 'Bulletin municipal de Poullaouën',
+            alt: 'Bulletin municipal de Poullaouen',
         }
     ],
     title: 'Bulletin municipal',
