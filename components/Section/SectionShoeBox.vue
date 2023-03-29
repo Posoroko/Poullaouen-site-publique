@@ -7,7 +7,7 @@
             <path class="pied rightFoot" d="M294.7,150.3L399.5,126l87.3,376.6l184.8-42.9l20.5,88.3l-289.6,67.2L294.7,150.3z" />
         </svg>
 
-        <div v-if="image && !containedImage" class="imgFrame absolutlyCentered shadow centered">
+        <div v-if="image && !containedImage" class="imgFrame absolutlyCentered shadow">
             <img v-if="image && !localImage" class="footImage objectFitCover pointer" :src="`${directusAssets}${image}?key=full500`" alt="" @click="showInModal">
 
             <img v-if="image && localImage" class="footImage objectFitCover pointer" :src="image" alt="" @click="showInModal">
@@ -87,6 +87,11 @@ const props = defineProps({
     border-radius: 5px;
     overflow: hidden;
 }
-
+/* .footImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; */
+/* } */
 
 </style>
