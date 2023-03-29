@@ -55,7 +55,7 @@ const directusAssets = appConfig.directus.assets;
 const headerData = {
     images: [
         {
-            src: `${directusAssets}807c975e-d6e0-4565-abfd-2a3f7fb80155.jpg?key=header1500`,
+            src: `${directusAssets}dc45c5fb-434f-4818-8ea3-240674e3fec9.JPG?key=header1500`,
             alt: 'Révolte des bonnets rouges à Poullaouen',
         }
     ],
