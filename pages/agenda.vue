@@ -11,8 +11,10 @@
                 <SectionMainSloted :data="{ title: date.title, image: date.image, imageAlt: date.imageAlt, localImage: false, containedImage: true }" >
                     <div class="slottedContent h100 flex column justifyCenter gap20">
                         <div class="topBox">
-                            <h3 class="italic brownText">{{ todayDDMMFormat(date.date) }}</h3>
-                            
+                            <!-- <h3 class="italic brownText">{{ todayDDMMFormat(date.date) }}</h3> -->
+                            <div class="flex alignCenter gap5">
+                                <h3 class="italic brownText">{{ todayDDMMFormat(date.date) }}</h3> <b class="brownText" v-if="date.time">à {{ date.time.slice(0, -3).replace(":", "h") }}</b>
+                            </div>
                             <p class="brownText">{{ date.location }}</p>
                         </div>
 
@@ -42,7 +44,6 @@ const todayDDMMFormat = (_date) => {
     const weekDay = weekDays[date.getDay()]
     const day = ("0" + date.getDate()).slice(-2)
     const month = ( "0" + (date.getMonth() + 1)).slice(-2)
-    console.log(`${weekDay} ${day} ${month}`)
     return `${weekDay} ${day}/${month}`;
 }
 
@@ -53,7 +54,7 @@ const directusItems = appConfig.directus.items;
 const fetchOptions = {
     server: true,
     params: {
-        fields: 'id, title, date, location, content, organiser, moreInfo, image, imageAlt, price, file, filename'
+        fields: 'id, title, date, time, location, content, organiser, moreInfo, image, imageAlt, price, file, filename'
     }
 }
 

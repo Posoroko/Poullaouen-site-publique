@@ -7,7 +7,7 @@
                 <div class="dateCard" v-for="date in dates" :key="date.id">
                     <div class="topBox">
                         <p class="title">{{ date.title }}</p>
-                        <p class="date italic">{{ todayDDMMFormat(date.date) }} <span v-if="date.time">à {{ date.time }}</span> </p>
+                        <p class="date italic">{{ todayDDMMFormat(date.date) }} <span class="brownText" v-if="date.time">à {{ date.time.slice(0, -3).replace(":", "h") }}</span> </p>
 
                         <p class="location italic">{{ date.location }}</p>
                         <p class="organiser">{{ date.organiser }}</p>
@@ -76,7 +76,7 @@ const directusItems = appConfig.directus.items;
 const fetchOptions = {
     server: true,
     params: {
-        fields: 'id, title, date, location, content, image, imageAlt, price, file, filename',
+        fields: 'id, title, date, time, location, content, image, imageAlt, price, file, filename',
         limit: props.limit,
     }
 }
