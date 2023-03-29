@@ -45,11 +45,10 @@
             <div class="flex column gap10 pad20">
                 
                 <label class="checkBoxLabel" for="acceptTerms">
-                    J'accepte que la mairie de Poullaouen conserve les informations que 
-                    j'ai fournis plus haut et je confirma avoir le les 
+                    J'accepte que la mairie de Poullaouen conserve les informations que j'ai fournies ci-dessus et je confirme avoir lu
                     <NuxtLink to="/mentions-legales" class="externalLink">
                         les mentions légales. 
-                    </NuxtLink>  
+                    </NuxtLink>
                 </label>
                 <input type="checkbox" id="acceptTerms">
             </div>
