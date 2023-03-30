@@ -1,21 +1,21 @@
 <template>        
     
     <ul class="tabBox flex alignCenter">
-        <li class="tab tabBasic pointer" data-name="mairie" @click.prevent="openMenu">
+        <li class="tab tabBasic pointer " data-name="mairie" @click.prevent="openMenu">
             <p class="article">MA</p>
             
             <p class="name">MAIRIE</p>
         </li>
 
-        <li class="line"></li>
+        <li class="line noListStyle"></li>
     
-        <li class="tab tabBasic pointer" data-name="quotidien" @click.prevent="openMenu">
+        <li class="tab tabBasic pointer " data-name="quotidien" @click.prevent="openMenu">
             <p class="article">MON</p>
     
             <p class="name">QUOTIDIEN</p>
         </li>
 
-        <li class="line"></li>
+        <li class="line noListStyle"></li>
     
         <li class="tab tabBasic pointer" data-name="sorties" @click.prevent="openMenu">
             <p class="article">MES</p>
@@ -23,7 +23,7 @@
             <p class="name">SORTIES</p>
         </li>
 
-        <li class="line"></li>
+        <li class="line noListStyle"></li>
     
         <li class="tab tabBasic pointer" data-name="infos" @click.prevent="openMenu">
             <p class="article">MES</p>
@@ -119,6 +119,7 @@ const closeMenu = () => {
     flex-direction: column;
     justify-content: center;
     transition: 300ms ease;
+    list-style: none;
 }
     
 .tabBox .tabBasic:hover {

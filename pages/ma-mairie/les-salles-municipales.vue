@@ -49,24 +49,23 @@
 
                         <div class="moreinfo italic">
                             <h5 class="level1">Non poullaouennais</h5>
-                            <li>
-                                <ul>
-                                    <li class="breadcrumbs-text level2">
-                                        <span>location 1 jour : &nbsp</span>
-                                        <span v-if="salle.externs1">{{ salle.externs1 }}€ sans cuisine</span>
-                                        <span v-if="salle.externs1 && salle.externsKitchen1">&nbsp / &nbsp</span>
-                                        <span v-if="salle.externsKitchen1"> {{ salle.externsKitchen1 }}€ avec cuisine </span>
-                                    </li>
-                                    <li class="breadcrumbs-text level2">
-                                        <span>location 2 jours : &nbsp</span>
-                                        <span v-if="salle.externs2">{{ salle.externs2 }}€ sans cuisine</span>
-                                        <span v-if="salle.externs2 && salle.externsKitchen2">&nbsp / &nbsp</span>
-                                        <span v-if="salle.externsKitchen2">
-                                            {{ salle.externsKitchen2 }}€ avec cuisine
-                                        </span>
-                                    </li>
-                                </ul>
-                            </li>
+
+                            <ul>
+                                <li class="breadcrumbs-text level2">
+                                    <span>location 1 jour : &nbsp</span>
+                                    <span v-if="salle.externs1">{{ salle.externs1 }}€ sans cuisine</span>
+                                    <span v-if="salle.externs1 && salle.externsKitchen1">&nbsp / &nbsp</span>
+                                    <span v-if="salle.externsKitchen1"> {{ salle.externsKitchen1 }}€ avec cuisine </span>
+                                </li>
+                                <li class="breadcrumbs-text level2">
+                                    <span>location 2 jours : &nbsp</span>
+                                    <span v-if="salle.externs2">{{ salle.externs2 }}€ sans cuisine</span>
+                                    <span v-if="salle.externs2 && salle.externsKitchen2">&nbsp / &nbsp</span>
+                                    <span v-if="salle.externsKitchen2">
+                                        {{ salle.externsKitchen2 }}€ avec cuisine
+                                    </span>
+                                </li>
+                            </ul>
                         </div>
 
                         <p class="page-text marTop20" v-if="salle.name == 'La salle des fêtes'">Possibilité de location de sono.</p>

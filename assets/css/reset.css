@@ -2,11 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* list-style: none; */
 }
 
-li {
+/* li {
     list-style: none;
-}
+} */
 
 a,
 a:visited,
@@ -14,4 +15,8 @@ a:hover,
 a:active {
     text-decoration: none;
     color: inherit;
+}
+
+.noListStyle {
+    list-style: none;
 }

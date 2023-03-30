@@ -5,7 +5,7 @@
     </header>
 
     <main class="galerieMain flex column marTop50">
-        <p class="mainWidth intro-text">{{ album.content }}</p>
+        <p class="mainWidth intro-text albumText">{{ album.content }}</p>
         <div class="marTop50"></div>
         <div class="albumNavBox">
             <div class="albumLinkBox mainWidth">
@@ -80,6 +80,9 @@ const path = [
 </script>
 
 <style>
+.albumText {
+    white-space: pre-wrap;
+}
 
 .albumLinkBox * {
     color: wwhite;

@@ -18,7 +18,7 @@
                     <p class="name">MAIRIE</p>
                 </li>
 
-                <li class="line"></li>
+                <li class="line noListStyle"></li>
             
                 <li class="tab tabBasic pointer" name="quotidien" @click.prevent="openTab">
                     <p class="article">MON</p>
@@ -26,7 +26,7 @@
                     <p class="name">QUOTIDIEN</p>
                 </li>
 
-                <li class="line"></li>
+                <li class="line noListStyle"></li>
             
                 <li class="tab tabBasic pointer" name="sorties" @click.prevent="openTab">
                     <p class="article">MES</p>
@@ -34,7 +34,7 @@
                     <p class="name">SORTIES</p>
                 </li>
 
-                <li class="line"></li>
+                <li class="line noListStyle"></li>
             
                 <li class="tab tabBasic pointer" name="infos" @click.prevent="openTab">
                     <p class="article">MES</p>
@@ -42,7 +42,7 @@
                     <p class="name">INFOS</p>
                 </li>
 
-                <li class="line"></li>
+                <li class="line noListStyle"></li>
             
                 <li class="tab tabDemarches pointer" name="demarches">
                     <a href="https://www.service-public.fr/particuliers/vosdroits/comment-faire-si" target="_blank">
@@ -133,6 +133,7 @@ const closeTab = () => {
     text-align: right;
     padding: 8px;
     border-radius: 10px;
+    list-style: none;
 }
 .tabList .tab:hover {
     background-color: var(--dark-blue);

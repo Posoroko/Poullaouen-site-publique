@@ -9,7 +9,7 @@
                         <p>Publié le {{ toDayMonthYearFormat(actu.date_created) }}</p>
                     </div>
 
-                    <div class="actuContent" v-html="actu.content">
+                    <div class="actuContent" id="actuContent" v-html="actu.content">
                     </div>
                     
                     <div class="moreInfoBox flex column justifyCenter">
@@ -94,10 +94,11 @@ onMounted(() => {
 .slottedContent .actuContent {
     padding: 20px 0;
 }
-.slottedContent .actuContent ul li {
+.slottedContent #actuContent ul li {
     margin-left: 20px;
     list-style: disc;
 }
+
 .moreInfoBox {
     padding: 5px;
 }
