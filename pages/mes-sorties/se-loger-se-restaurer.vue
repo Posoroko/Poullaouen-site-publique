@@ -16,7 +16,7 @@
                         <p class="flex alignCenter gap10" v-if="item.adress"> <span class="icon">location_on</span> <span>{{ item.adress }}</span> </p>
                         <p class="flex alignCenter gap10" v-if="item.phone"> <span class="icon">call</span> <span>{{ item.phone }}</span> </p>
                         <p class="flex alignCenter gap10" v-if="item.email"> <span class="icon">email</span> <span>{{ item.email }}</span> </p>
-                        <p class="flex alignCenter gap10" v-if="item.website"> <span class="icon">language</span> <a class="externalLink" :href="`https://${item.website}`" target="_blank">Voir le site web</a> </p>
+                        <p class="flex alignCenter gap10" v-if="item.website"> <span class="icon">language</span> <a class="externalLink" :href="`${item.website}`" target="_blank">Voir le site web</a> </p>
                     </div>
                 </CardsTallMain>
             </div>
@@ -31,7 +31,7 @@
                         <p class="flex alignCenter gap10" v-if="item.adress"> <span class="icon">location_on</span> <span>{{ item.adress }}</span> </p>
                         <p class="flex alignCenter gap10" v-if="item.phone"> <span class="icon">call</span> <span>{{ item.phone }}</span> </p>
                         <p class="flex alignCenter gap10" v-if="item.email"> <span class="icon">email</span> <span>{{ item.email }}</span> </p>
-                        <p class="flex alignCenter gap10" v-if="item.website"> <span class="icon">language</span> <a class="externalLink" :href="`https://${item.website}`" target="_blank">Voir le site web</a> </p>
+                        <p class="flex alignCenter gap10" v-if="item.website"> <span class="icon">language</span> <a class="externalLink" :href="`${item.website}`" target="_blank">Voir le site web</a> </p>
                     </div>
                 </CardsTallMain>
             </div>
@@ -59,7 +59,7 @@
                         <p class="flex alignCenter gap10" v-if="item.adress"> <span class="icon">location_on</span> <span>{{ item.adress }}</span> </p>
                         <p class="flex alignCenter gap10" v-if="item.phone"> <span class="icon">call</span> <span>{{ item.phone }}</span> </p>
                         <p class="flex alignCenter gap10" v-if="item.email"> <span class="icon">email</span> <span>{{ item.email }}</span> </p>
-                        <p class="flex alignCenter gap10" v-if="item.website"> <span class="icon">language</span> <a class="externalLink" :href="`https://${item.website}`" target="_blank">Voir le site web</a> </p>
+                        <p class="flex alignCenter gap10" v-if="item.website"> <span class="icon">language</span> <a class="externalLink" :href="`${item.website}`" target="_blank">Voir le site web</a> </p>
                     </div>
                 </CardsTallMain>
             </div>
@@ -74,7 +74,7 @@
                         <p class="flex alignCenter gap10" v-if="item.adress"> <span class="icon">location_on</span> <span>{{ item.adress }}</span> </p>
                         <p class="flex alignCenter gap10" v-if="item.phone"> <span class="icon">call</span> <span>{{ item.phone }}</span> </p>
                         <p class="flex alignCenter gap10" v-if="item.email"> <span class="icon">email</span> <span>{{ item.email }}</span> </p>
-                        <p class="flex alignCenter gap10" v-if="item.website"> <span class="icon">language</span> <a class="externalLink" :href="`https://${item.website}`" target="_blank">Voir le site web</a> </p>
+                        <p class="flex alignCenter gap10" v-if="item.website"> <span class="icon">language</span> <a class="externalLink" :href="`${item.website}`" target="_blank">Voir le site web</a> </p>
                     </div>
                 </CardsTallMain>
             </div>

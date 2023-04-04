@@ -50,7 +50,7 @@
                         <b>Sur Poullaouen, les horaires des TAP sont les suivants :</b>
                         <ul>
                             <li>Lundi : 13h45 - 14h45</li>
-                            <li>Mardi : 13h45 - 14h45</li>
+                            <li>Jeudi : 13h45 - 14h45</li>
                             <li>Vendredi : 13h45 - 14h45</li>
                         </ul>
                     </p>

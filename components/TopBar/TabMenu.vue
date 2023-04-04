@@ -51,13 +51,13 @@
         </div>
 
         <div class="linkBox">
-            <ul class="linkList">
-                <li class="link pointer" v-for="link in menuContent">
+            <div class="linkList">
+                <p class="link pointer" v-for="link in menuContent">
                     <nuxt-link class="block w100" :to="link.path" @click="closeMenu">
                         {{ link.text }}
                     </nuxt-link>
-                </li>
-            </ul>
+                </p>
+            </div>
         </div>
 
         <span class="icon absolute top right pointer" @click="closeMenu">close</span>

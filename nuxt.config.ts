@@ -31,5 +31,8 @@ export default defineNuxtConfig({
         head: {
             titleTemplate: '%pageTitle %titleSeparator %siteName'
         }
-    }
+    },
+    routeRules: {
+        '/accueil_poullaouen': { redirect: '/' }
+    },
 })

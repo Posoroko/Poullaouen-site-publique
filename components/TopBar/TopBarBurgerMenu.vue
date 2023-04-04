@@ -55,13 +55,13 @@
                 </li>
             </ul>
 
-            <ul class="linkList flex column alignEnd w100" v-if="tabIsSelected">
-                <li class="link pointer" v-for="link in menuContent">
+            <div class="linkList flex column alignEnd w100" v-if="tabIsSelected">
+                <p class="link pointer" v-for="link in menuContent">
                     <nuxt-link class="block w100" :to="link.path" @click="closeMenu">
                         {{ link.text }}
                     </nuxt-link>
-                </li>
-            </ul>
+                </p>
+            </div>
         </div>
     </div>
 </template>

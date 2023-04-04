@@ -28,7 +28,7 @@
 
                         <p class="bottomBox">
                             <span class="bottomBoxRow">
-                                <span>Publication :</span>
+                                <span>Date du conseil municipal :</span>
                                 <span class="date">{{ toDayMonthYearFormat(doc.datePublication) }}</span>
                             </span>
             
