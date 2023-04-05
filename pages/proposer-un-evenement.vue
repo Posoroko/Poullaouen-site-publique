@@ -130,7 +130,7 @@ const handleSubmit = async () => {
             }
         ]
     }
-
+    console.log("eric")
     await createItems(data)
         .then(res => {
             message.value = "Super! Votre événement a bien été envoyé. Il sera publié après validation par l'équipe de l'association."
@@ -155,6 +155,11 @@ const showInModal = (message) => {
     const _h1 = document.createElement('h1')
     _h1.style.margin = "40px"
     _h1.innerText = message
+    _h1.style.width = "min(95vw, 600px)"
+    _h1.style.color = "white"
+    _h1.style.padding = "10px"
+    _h1.style.margin = "10px"
+    _h1.style.backgroundColor = "var(--dark-blue)"
 
     modal.appendChild(_h1)
     modal.showModal()
