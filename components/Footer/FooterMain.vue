@@ -32,7 +32,7 @@
 
                         <div>
                             <p>Du lundi au vendredi : <br>
-                                 de 8h30 à 12h et de 13h30 à 17h30</p>
+                                 de 8h30 à 12h et de 13h30 à 17h15</p>
 
                             <p>
                                 Fermée au public le lundi matin
@@ -92,7 +92,7 @@
                         <div>
                             <span>Lundi de 8h30 à 12h</span>
                             <br>
-                            <span>Jeudi de 13h30 à 17h30</span>
+                            <span>Jeudi de 13h30 à 17h15</span>
                         </div>
                     </div>
                 </address>

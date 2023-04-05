@@ -186,7 +186,7 @@
                         <div class="bottomBox flex column gap10">
                             <p class="contentRow flex">
                                 <span class="icon">location_on</span>
-                                <span class="textContent">Kervoazon</span>
+                                <span class="textContent">Kervoazou</span>
                             </p>
                             <p class="contentRow flex">
                                 <span class="icon">schedule</span>

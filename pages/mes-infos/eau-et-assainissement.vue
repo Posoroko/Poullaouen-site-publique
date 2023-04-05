@@ -26,7 +26,7 @@
                         <p>Le service de distribution d’eau sur <b>Locmaria-Berrien</b> est géré par la <b>commune</b>.</p>
                         <br>
                         <p class="flex alignCenter"> <span class="icon">location_on</span>Mairie de Poullaouen</p>
-                        <p class="flex alignCenter"> <span class="icon">call</span>02 98 99 73 09</p>
+                        <p class="flex alignCenter"> <span class="icon">call</span>02 98 93 50 76</p>
                         <br>
                         <p class="flex alignCenter"> <span class="icon">location_on</span>Mairie de Locmaria-Berrien</p>
                         <p class="flex alignCenter"> <span class="icon">call</span>02 98 99 73 09</p>

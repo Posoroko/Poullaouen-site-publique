@@ -33,6 +33,10 @@ export default defineNuxtConfig({
         }
     },
     routeRules: {
-        '/accueil_poullaouen': { redirect: '/' }
+        '/accueil_poullaouen': { redirect: '/' },
+        '/accueil_poullaouen/vie_municipale/les_salles_municipales': { redirect: '/ma-mairie/les-salles-municipales' },
+        '/mobile_poullaouen/actualites': { redirect: '/actualites' },
+        '/mobile_poullaouen/actualites/241_7301/projet_de_charte_de_la_commune_nouvelle_entre_poullaouen_et_locmaria_berrien': { redirect: '/' },
+        'accueil_poullaouen/pied_de_page/mentions_legales': { redirect: '/mentions-legales' },
     },
 })

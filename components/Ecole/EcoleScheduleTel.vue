@@ -15,11 +15,11 @@
                     <div class="col col1 colTime">
                         <b class="scheduleCell scheduleDay shallow"></b>
 
-                        <p class="scheduleCell scheduleTime deep"> 8h45-11h45</p>
-                        <p class="scheduleCell scheduleTime shallow">11h45-12h15</p>
-                        <p class="scheduleCell scheduleTime shallow">11 h 45-13 h45</p>
-                        <p class="scheduleCell scheduleTime shallow">13h45-14h45</p>
-                        <p class="scheduleCell scheduleTime medium"> 14h45-16h45 </p>
+                        <p class="scheduleCell scheduleTime deep"> 8h45 <br> - <br> 11h45</p>
+                        <p class="scheduleCell scheduleTime shallow">11h45 <br> - <br> 12h15</p>
+                        <p class="scheduleCell scheduleTime shallow">11h45 <br> - <br> 13h45</p>
+                        <p class="scheduleCell scheduleTime shallow">13h45 <br> - <br> 14h45</p>
+                        <p class="scheduleCell scheduleTime medium"> 14h45 <br> - <br> 16h45 </p>
 
                     </div>
 
@@ -129,6 +129,8 @@ const selectDay = (e) => {
 
 .scheduleDay,
 .scheduleTime {
+    font-size: 16px;
+    line-height: 14px;
     font-weight: 500;
 }
 .smallFont{
