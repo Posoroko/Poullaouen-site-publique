@@ -127,7 +127,7 @@
 
                         <p class="contentRow flex gap10">
                             <span class="icon">call</span>
-                            <span class="textContent">02.98.93.50.73</span>
+                            <span class="textContent">02 98 93 50 76</span>
                         </p>
                         <p class="contentRow flex gap10">
                             <span class="icon">email</span>
