@@ -9,13 +9,15 @@
 
         <SectionTitleBar title="Le rôle CCAS"/>
 
-        <p class="mainWidth page-text marTop50">
-            Le <b>CCAS</b> assure une mission d’ <b>aide à la population</b>. 
-            Il apporte une aide pour les demandes d’APA, d’aide sociale (service d’aide ménagère 
-            et prise en charge des frais d’hébergement en maison de retraite ou foyer logement), 
-            et les demandes d’aides attribuées par la Maison Départementale des 
-            Personnes Handicapées.
-        </p>
+        <div class="sectionBoxSloted whiteSection">
+            <p class="sectionRole mainWidth page-text">
+                Le <b>CCAS</b> assure une mission d’ <b>aide à la population</b>. 
+                Il apporte une aide pour les demandes d’APA, d’aide sociale (service d’aide ménagère 
+                et prise en charge des frais d’hébergement en maison de retraite ou foyer logement), 
+                et les demandes d’aides attribuées par la Maison Départementale des 
+                Personnes Handicapées.
+            </p>
+        </div>
 
         <SectionMainSloted  :data="sectionData_1">
             <div class="textBox h100 flex column justifyCenter gap20">            
@@ -147,7 +149,9 @@ onMounted(() => {
 </script>
 
 <style>
-/* blue feet */
+.sectionRole {
+    padding: 50px 0;
+}
 
 
 </style>
