@@ -133,7 +133,7 @@ const handleSubmit = async () => {
     console.log("eric")
     await createItems(data)
         .then(res => {
-            message.value = "Super! Votre événement a bien été envoyé. Il sera publié après validation par l'équipe de l'association."
+            message.value = "Super! Votre événement a bien été envoyé. Il sera publié après validation par l'équipe de la mairie."
 
             showInModal(message.value)
             form.value.reset()
