@@ -131,10 +131,14 @@ const headerData = {
 }
 const applyStyleClasses_utils = () => {
 
-    const section = document.querySelector('.sectionBoxSloted')
+    const sections = document.querySelectorAll('.sectionBoxSloted')
 
-    section.classList.replace('whiteSection', 'blueSection')
-
+    for (let i = 1; i < sections.length; i = i + 4) {
+        sections[i].classList.replace('whiteSection', 'blueSection')
+    }
+    for (let i = 3; i < sections.length; i = i + 4) {
+        sections[i].classList.replace('whiteSection', 'brownSection')
+    }
 }
 onMounted(() => {
     applyStyleClasses_utils()

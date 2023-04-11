@@ -10,19 +10,19 @@
 
         <form ref="form" class="form smallWidth flex column">
             <label for="firstName">Votre nom complet</label>
-            <input name="name" type="text" id="name">
+            <input name="name" type="text" id="name" placeholder="Nom et Prénom">
 
             <label for="telephone">Votre numéro de téléphone</label>
-            <input name="telephone" type="text" id="telephone">
+            <input name="telephone" type="text" id="telephone" placeholder="0298935076">
 
             <label for="email">Votre adresse email</label>
-            <input name="email" type="text" id="email">
+            <input name="email" type="text" id="email" placeholder="adresse@mail.com">
 
             <label for="eventTitle">Titre de l'événement</label>
-            <input type="text" id="eventTitle">
+            <input type="text" id="eventTitle" placeholder="Fête des fleurs">
 
             <label for="organiser">Qui organise l'événement</label>
-            <input type="text" id="organiser">
+            <input type="text" id="organiser" placeholder="Mon association">
 
             <label for="eventDescription">Description de l'événement</label>
             <textarea id="eventDescription"></textarea>
@@ -83,12 +83,12 @@ const handleSubmit = async () => {
         alert("Le nom doit contenir entre 1 et 50 caractères")
         return
     }
-    if(!form.value.telephone.value.length || form.value.telephone.value.length > 14) {
-        alert("Le numéro de téléphone doit contenir entre 10 et 14 caractères")
+    if(!form.value.telephone.value.length || form.value.telephone.value.length > 10) {
+        alert("Le numéro de téléphone doit contenir entre 10 caractères")
         return
     }
     if(!form.value.email.value.length || form.value.email.value.length > 320 || form.value.email.value.length < 5) {
-        alert("L'adresse email doit contenir entre 1 et 50 caractères")
+        alert("L'adresse email doit contenir entre 5 et 320 caractères")
         return
     }
     if(!form.value.eventTitle.value.length || form.value.eventTitle.value.length > 50) {
