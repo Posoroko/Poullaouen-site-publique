@@ -50,7 +50,7 @@ const appConfig = useAppConfig();
 const directusAssets = appConfig.directus.assets;
 const directusItems = appConfig.directus.items;
 
-const fetchingParams = `?fields=id,title,subtitle,content,image,imageAlt,moreInfo,date_created,file,fileName&sort[]=-date_created&limit=${props.limit}`
+const fetchingParams = `?fields=id,title,subtitle,content,image,imageAlt,moreInfo,date_created,file,fileName&sort[]=-date_created&limit=3`
 
 const fetchOptions = {
     server: true,
