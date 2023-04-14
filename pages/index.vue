@@ -5,9 +5,9 @@
 
         <SectionHomeDates limit="3" />
 
-        <ClientOnly>
+        <!-- <ClientOnly> -->
             <SectionHomeActu limit="3" :isHomePage="true" />
-        </ClientOnly>
+        <!-- </ClientOnly> -->
         
         <div class="mainWidth centered agendaButtonBox marTop50">
             <NuxtLink class="mainWidth shadow actuButton textAlignCenter brown_action" to="/actualites">Voir toutes les actualités</NuxtLink>
