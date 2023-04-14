@@ -1,4 +1,4 @@
 [[headers]]
   for = "/"
   [headers.values]
-    cache-control = "no-cache, public"
+    cache-control = "no-store"
