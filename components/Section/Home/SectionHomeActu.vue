@@ -47,28 +47,25 @@ const props = defineProps({
 })
 
 const appConfig = useAppConfig();
-const directusAssets = appConfig.directus.assets;
 const directusItems = appConfig.directus.items;
-
-const fetchingParams = `?fields=id,title,subtitle,content,image,imageAlt,moreInfo,date_created,file,fileName&sort[]=-date_created&limit=3`
 
 const fetchOptions = {
     server: true,
     params: {
         fields: 'id, title, subtitle, content, image, imageAlt, moreInfo, date_created, file, fileName',
-        // limit: props.limit
     }
 }
 
 const { data: actualites } = await useAsyncData(
-    "latestActu",
+    "actualites",
     async () => {
-        const items = await $fetch(`${directusItems}Actualites${fetchingParams}`, fetchOptions)
-        return items.data
+        const items = await $fetch(`${directusItems}Actualites?sort[]=-date_created`, fetchOptions)
+        return items.data.splice(0, 3)
     }
     ,
     { server: true }
 )
+
 const applyStyleClasses_utils = () => {
 
     const sections = document.querySelectorAll('.sectionBoxSloted')
