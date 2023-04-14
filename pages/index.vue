@@ -5,7 +5,9 @@
 
         <SectionHomeDates limit="3" />
 
-        <SectionHomeActu limit="3" :isHomePage="true" />
+        <ClientOnly>
+            <SectionHomeActu limit="3" :isHomePage="true" />
+        </ClientOnly>
         
         <div class="mainWidth centered agendaButtonBox marTop50">
             <NuxtLink class="mainWidth shadow actuButton textAlignCenter brown_action" to="/actualites">Voir toutes les actualités</NuxtLink>
@@ -13,8 +15,6 @@
     </main>
 </template>
 <script setup>
-
-
 
 const headerData = {
     images: [
