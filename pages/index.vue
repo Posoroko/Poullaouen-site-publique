@@ -15,6 +15,11 @@
     </main>
 </template>
 <script setup>
+definePageMeta({
+    keepalive: {
+        exclude: ['SectionHomeActu']
+    }
+})
 
 const headerData = {
     images: [
