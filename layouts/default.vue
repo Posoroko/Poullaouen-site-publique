@@ -1,5 +1,5 @@
 <template>
-    <!-- <SeoKit /> -->
+    <SeoKit />
     <TopBarMain />
 
     <slot />
