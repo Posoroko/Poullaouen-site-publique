@@ -126,6 +126,7 @@ const handleSubmit = async () => {
                 userEmail: form.value.email.value,
                 userPhone: form.value.telephone.value,
                 userCreated: true,
+                sendEmail: true,
                 // image: null
             }
         ]
