@@ -76,7 +76,7 @@
                         </p>
                         <p class="contentRow flex gap10">
                             <span class="icon">language</span>
-                            <a href="https://www.aero-plass.com" target="_blank" class="externalLink">Voir le site web</a>
+                            <a href="http://www.aero-plass.com" target="_blank" class="externalLink">Voir le site web</a>
                         </p>
                     </div>
                 </CardsTallMain>

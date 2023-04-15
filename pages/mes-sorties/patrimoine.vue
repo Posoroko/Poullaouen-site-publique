@@ -3,9 +3,7 @@
 
     <main class="mainpatrimoine">
         <p class="mainWidth intro-text">
-            On rencontre les appellations suivantes : Ploelouen (vers 1330 et en 1386), Ploelouan (en 1349), Ploe Louan (au
-            XIVème siècle), Poulaven
-            (en 1591) et Poullaouen (en 1677).
+            Une petite ville et son clocher mais des alentours "riches en pierres", à découvrir absolument.
         </p>
 
         <nav class="patrimoineFilterBox">

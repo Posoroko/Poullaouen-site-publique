@@ -10,10 +10,10 @@
             <h2>Ce site internet est la propriété de la Mairie de Poullaouen : </h2>
             
             <address>
-                Mairie de Poullaouen
-                1 Place de la Mairie
-                29246 Poullaouen
-                Tel : 02 98 93 50 
+                Mairie de Poullaouen <br>
+                1 Place de la Mairie <br>
+                29246 Poullaouen <br>
+                Tel : 02 98 93 50 76<br>
                 mairie-de-poullaouen@wanadoo.fr
             </address>
             
@@ -38,7 +38,8 @@
                 Com Kreiz <br>
                 74, allée des peupliers – 29270 Carhaix​<br>
                 06 72 77 44 83 <br>
-                https://www.comkreiz.com/<br>
+                julie@comkreiz.com <br>
+                <a href="https://www.comkreiz.com/">www.comkreiz.com</a><br>
             </address>
 
             <h2>Développeur web et hébergeur </h2>
@@ -47,7 +48,7 @@
                 24, rue de Kerven – 29270 Carhaix​<br>
                 06 95 07 12 64<br>
                 eric@posoroko.com<br>
-                https://www.posoroko.com<br>
+                <a href="https://www.posoroko.com">www.posoroko.com</a><br>
             </address>
 
             <h2>DROITS DE REPRODUCTION </h2>

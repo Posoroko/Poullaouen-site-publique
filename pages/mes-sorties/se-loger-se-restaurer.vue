@@ -11,7 +11,7 @@
             <SectionTitleBar  title="Les gîtes" />
 
             <div class="tallCardBox roomsContent mainWidth flex justifyCenter wrap gap50">
-                <CardsTallMain v-for="item in items.filter(item => item.subType.slug == 'gites' || item.subType.slug == 'chambres_d_hotes')" :key="item.id" :title="item.name" :subtitle="item.subType.displaySubtype" :cardImage="item.image" :cardImageAlt="item.imageAlt" :localImage="false">
+                <CardsTallMain v-for="item in items.filter(item => item.subType.slug == 'gites')" :key="item.id" :title="item.name" :subtitle="item.subType.displaySubtype" :cardImage="item.image" :cardImageAlt="item.imageAlt" :localImage="false">
                     <div class="cardContent flex column gap10">
                         <p class="flex alignCenter gap10" v-if="item.adress"> <span class="icon">location_on</span> <span>{{ item.adress }}</span> </p>
                         <p class="flex alignCenter gap10" v-if="item.phone"> <span class="icon">call</span> <span>{{ item.phone }}</span> </p>

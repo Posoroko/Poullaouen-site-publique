@@ -3,8 +3,7 @@
 
     <main class="mainHistoire">
         <p class="mainWidth intro-text">
-            On rencontre les appellations suivantes : Ploelouen (vers 1330 et en 1386), Ploelouan (en 1349), Ploe Louan (au XIVème siècle), Poulaven
-            (en 1591) et Poullaouen (en 1677).
+            Plongez dans l'histoire de Poullaouen et Locmaria-Berrien. Les deux communes ont fusionné en 2018 pour ne former qu'une.
         </p>
 
         <nav class="defaultFilterBox">
@@ -17,6 +16,10 @@
                 <div class="defaultFilterButton pointer" @click="activeFilter = 'mines'" :class="{ activeDefaultFilterButton: activeFilter == 'mines' }">Les mines</div>
             </div>
         </nav>
+        <p class="mainWidth intro-text">
+            On rencontre les appellations suivantes : Ploelouen (vers 1330 et en 1386), Ploelouan (en 1349), Ploe Louan (au XIVème siècle), Poulaven
+            (en 1591) et Poullaouen (en 1677).
+        </p>
 
         <HistoireGavotte v-if="activeFilter == 'poullaouen' || activeFilter == 'all'" />
         <HistoireOrigines v-if="activeFilter == 'poullaouen' || activeFilter == 'all'" />
