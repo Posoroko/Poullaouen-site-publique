@@ -30,7 +30,7 @@
             <p><b>Crédits photos :</b> ©Mairie de Poullaouen / ©Eric Le Gret / ©Com Kreiz / ©Carhaix 
                 Golf / ©Cinéma Le Grand Bleu / ©La Vallée des Saints / ©Office de tourisme de 
                 Carhaix et du Poher / ©Mairie de Carhaix / ©Poher Communauté /©Monts d’Arrée 
-                tourisme. 
+                tourisme / ©Odile Corvest / ©Studio Posoroko. 
             </p>
             <h2>CONCEPTION DU SITE </h2>
             <h3>Web Designer </h3>
