@@ -29,7 +29,7 @@
             </SectionMainSloted>
 
             <SectionMainSloted
-                :data="{ title: 'Office de Tourisme de Carhaix et du Poherr', image: '/images/se-loger/office-de-tourisme.jpg', imageAlt: 'Offisme de tourisme de Carhaix', localImage: true }">
+                :data="{ title: 'Office de Tourisme de Carhaix et du Poher', image: '/images/se-loger/office-de-tourisme.jpg', imageAlt: 'Offisme de tourisme de Carhaix', localImage: true }">
                 <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap10">
                     <p>
                         L’office met à disposition une liste de logements (vides et meublés) situés sur le territoire de Poher communauté
