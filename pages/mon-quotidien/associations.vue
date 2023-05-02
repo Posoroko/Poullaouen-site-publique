@@ -59,8 +59,6 @@ const appConfig = useAppConfig();
 const directusAssets = appConfig.directus.assets;
 const directusItems = appConfig.directus.items;
 
-
-
 const fetchOptions = {
     server: true,
     params: {

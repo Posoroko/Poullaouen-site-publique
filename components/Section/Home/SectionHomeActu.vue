@@ -16,10 +16,9 @@
                         <p class="moreInfo" v-if="actu.moreInfo">{{ actu.moreInfo }}</p>
 
                         <div class="downloadBox" v-if="actu.file">
-                            <p>
-                                <span>{{ actu.fileName }}</span>
-                                <!-- <a href=""><span class="icon">visibility_on</span>consulter</a>  -->
-                                <a href=""><span class="icon">download</span>télécharger</a> 
+                            <p class="flex alignCenter gap20">
+                                <b>{{ actu.fileName }}</b>
+                                <a :href="`${directusAssets}${actu.file}`" class="flex alignCenter gap5"><span class="icon">download</span> <span>télécharger</span> </a>
                             </p>     
                         </div>
                     </div>
@@ -48,6 +47,7 @@ const props = defineProps({
 
 const appConfig = useAppConfig();
 const directusItems = appConfig.directus.items;
+const directusAssets = appConfig.directus.assets;
 
 const fetchOptions = {
     server: true,
