@@ -3,7 +3,7 @@
 
     <main class="mainHistoire">
         <p class="mainWidth intro-text">
-            Plongez dans l'histoire de Poullaouen et Locmaria-Berrien. Les deux communes ont fusionné en 2018 pour ne former qu'une.
+            Plongez dans l'histoire de Poullaouen et Locmaria-Berrien. Les deux communes ont fusionné en 2019 pour ne former qu'une.
         </p>
 
         <nav class="defaultFilterBox">

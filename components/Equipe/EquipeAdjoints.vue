@@ -79,6 +79,7 @@ const headerData = {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 50% 15%;
 }
 .adjointCard .topBox,
 .adjointCard .roleDetail {
