@@ -137,7 +137,7 @@ const fetchOptions = {
 const { data: galeryData } = await useAsyncData(
     "galery",
     async () => {
-        const items = await $fetch(`${directusItems}Albums_photo?[filter][gallery][_eq]=true`, fetchOptions)
+        const items = await $fetch(`${directusItems}Albums_photo?[filter][gallery][_eq]=true&sort[]=-date_created`, fetchOptions)
         const albums = items.data
 
         const temp = {
