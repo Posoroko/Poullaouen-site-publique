@@ -1,15 +1,40 @@
 <template>
-    <section class="photoViewerMain centered relative marTop20">
-        <div ref="viewerBox" class=" viewerBox relative h100">
-            <div class="viewerArrowBox viewerLeftArrowBox absolute icon headerIcon carouselChevron pointer" @click="swipeLeft"> chevron_left </div>
+    <section class="photoViewerMain centered relative marTop100">
+        <div ref="viewerBox" class=" viewerBox relative h100" @click="handleImageClick" @touchmove="handleTouch" @touchend="handleTouchEnd">
+            <div ref="leftArrow" class="viewerArrowBox viewerLeftArrowBox absolute icon headerIcon carouselChevron pointer" @click="swipeLeft"> chevron_left </div>
 
-            <div class="viewerArrowBox viewerRightArrowBox absolute icon headerIcon carouselChevron pointer" @click="swipeRignt"> chevron_right  </div>
+            <div ref="rightArrow" class="viewerArrowBox viewerRightArrowBox absolute icon headerIcon carouselChevron pointer" @click="swipeRignt"> chevron_right  </div>
         </div>
     </section>
 </template>
 
 <script setup>
+import { showInModal } from '@/composables/utilities'
+import { useSwipe } from '@vueuse/core'
+
 const viewerBox = ref(null)
+const { isSwiping, direction } = useSwipe(viewerBox)
+
+const leftArrow = ref(null)
+const rightArrow = ref(null)
+
+const swipedOnce = ref(false)
+
+const handleTouch = (e) => {
+    
+    if(direction.value == 'left' && !swipedOnce.value) {
+        swipedOnce.value = true
+        leftArrow.value.click()
+    } else if (direction.value == 'right' && !swipedOnce.value) {
+        swipedOnce.value = true
+        rightArrow.value.click()
+    }
+}
+const handleTouchEnd = (e) => {
+    swipedOnce.value = false
+}
+
+
 const appConfig = useAppConfig();
 const directusAssets = appConfig.directus.assets;
 
@@ -106,18 +131,35 @@ const viewerInit = (images) => {
 
         photoCard.classList.add('photoCard')
             const img = document.createElement('img')
+            img.classList.add('carouselImage')
+            img.setAttribute('data-url', `${directusAssets}${image.directus_files_id}`)
             img.src = `${directusAssets}${image.directus_files_id}?key=viewer750`
             
         photoCard.appendChild(img)
         viewerBox.value.appendChild(photoCard)
     })
-    
-
 }
+
 onMounted(() => {
     viewerInit(props.albumData)
     imagesNodes.value = document.querySelectorAll('.photoCard')
 })
+
+const handleImageClick = (e) => {
+    const target = e.target
+    if(!target.parentElement.classList.contains('pos1102')) {
+        // openPhotoViewer(target)
+
+        return
+    }
+    const url = target.getAttribute('data-url') + "?key=full1000"
+
+    showInModal(url)
+}
+
+
+
+
 </script>
 
 
@@ -131,14 +173,16 @@ onMounted(() => {
 .viewerBox {
     width: min(1200px, 100%);
     margin: auto;
+    overflow-x: clip;
 }
 .photoCard {
-    height: min(500px, 70vw); 
+    height: min(500px, 700vw); 
     aspect-ratio: 1/1;
     position: absolute;
     opacity: 1;
     transition: 300ms ease;
     top: 50%;
+    user-select: none;
 }
 .photoCard img {
     
@@ -151,6 +195,8 @@ onMounted(() => {
 
     border-radius: 3px;
     box-shadow: 2px 2px 4px black;
+    cursor: pointer;
+    user-select: none;
 }
 
 .pos1000 { left: 1%; transform: translate(0%, -50%) scale(100%); z-index: 1000; opacity: 0; transition: 300ms ease;}
