@@ -176,7 +176,7 @@ const handleImageClick = (e) => {
     overflow-x: clip;
 }
 .photoCard {
-    height: min(500px, 700vw); 
+    height: min(500px, 70vw); 
     aspect-ratio: 1/1;
     position: absolute;
     opacity: 1;
