@@ -9,7 +9,7 @@
         <div class="marTop50"></div>
         <div class="albumNavBox">
             <div class="albumLinkBox mainWidth">
-                <NuxtLink :href="galeryQuery" class="flex alignCenter gap20 pointer">
+                <NuxtLink @click="goBack" class="flex alignCenter gap20 pointer">
                     <span class="icon">arrow_back</span>
                     <span>galerie photo</span>
                 </NuxtLink>
