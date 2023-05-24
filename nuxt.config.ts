@@ -3,9 +3,9 @@ export default defineNuxtConfig({
     runtimeConfig: {
         public: {
             titleSeparator: '|',
-            siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://mairie-poullaouen.fr',
-            siteName: 'Mairie de Poullaouen',
-            siteDescription: 'Site officiel de la mairie de Pouallaouen',
+            siteUrl: 'https://mairie-poullaouen.fr',
+            siteName: 'Site officiel de la mairie de Poullaouen, Finistère',
+            siteDescription: 'Bienvenu sur le site officiel de la mairie de Poullaouen, petite commune dynamique du Finistère.  Tenez-vous informé des actualités, des événements et des services de la commune.',
             language: 'fr-FR',
         }
     },
@@ -29,7 +29,25 @@ export default defineNuxtConfig({
     },
     app: {
         head: {
-            titleTemplate: '%pageTitle %titleSeparator %siteName'
+            titleTemplate: '%pageTitle %titleSeparator %siteName',
+            meta: [
+                { charset: 'utf-8' },
+                { hid: 'description', name: 'description', content: '%siteDescription' },
+                { hid: 'og:site_name', property: 'og:site_name', content: '%siteName' },    
+                { hid: 'og:type', property: 'og:type', content: 'website' },
+                { hid: 'og:title', property: 'og:title', content: '%siteName' },
+                { hid: 'og:description', property: 'og:description', content: '%siteDescription' },
+                { hid: 'og:image', property: 'og:image', content: '/seo-images/logo-Poullaouen.jpg' },
+                { hid: 'og:image:width', property: 'og:image:width', content: '1200' },
+                { hid: 'og:image:height', property: 'og:image:height', content: '630' },
+                { hid: 'og:image:alt', property: 'og:image:alt', content: '%siteName' },
+                { hid: 'twitter:title', name: 'twitter:title', content: '%siteName' },
+                { hid: 'twitter:description', name: 'twitter:description', content: '%siteDescription' },
+                { hid: 'twitter:image', name: 'twitter:image', content: '/seo-images/logo-Poullaouen.jpg' },
+                { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: '%siteName' },
+
+
+            ],
         }
     },
     routeRules: {

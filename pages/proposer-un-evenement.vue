@@ -38,9 +38,9 @@
 
             <label for="eventPrice">Prix de l'événement (facultatif)</label>
             <input type="text" id="eventPrice">
-<!-- 
+
             <label for="eventImage">Image de l'événement</label>
-            <input type="file" id="eventImage"> -->
+            <input type="file" id="eventImage">
              
             <div class="flex column gap10 pad20">
                 
@@ -62,8 +62,10 @@
 
 <script setup>
 const { createItems } = useDirectusItems()
-const { createFiles } = useDirectusFiles()
-const appConfig = useAppConfig();
+
+
+
+
 
 const error = ref(null)
 const isPending = ref(false)
@@ -71,77 +73,113 @@ const message = ref(null)
 
 const form = ref(null)
 
-const allowedExtensions = ["jpg", "jpeg", "png"]
+const allowedExtensions = ["image/jpg", "image/jpeg", "image/png"]
 
 const handleSubmit = async () => {
+    // if(isPending.value) return
 
-    // if(!allowedExtensions.includes(form.value.eventImage.value.split(".").pop())) {
+    // error.value = null;
+    // isPending.value = true;
+
+    if(form.value.eventImage.files[0]) {
+        postImage()
+    }
+
+    
+
+    // if(!form.value.name.value.length || form.value.name.value.length > 50) {
+    //     alert("Le nom doit contenir entre 1 et 50 caractères")
+    //     return
+    // }
+    // if(!form.value.telephone.value.length || form.value.telephone.value.length > 10) {
+    //     alert("Le numéro de téléphone doit contenir entre 10 caractères")
+    //     return
+    // }
+    // if(!form.value.email.value.length || form.value.email.value.length > 320 || form.value.email.value.length < 5) {
+    //     alert("L'adresse email doit contenir entre 5 et 320 caractères")
+    //     return
+    // }
+    // if(!form.value.eventTitle.value.length || form.value.eventTitle.value.length > 50) {
+    //     alert("Le titre de l'événement doit contenir entre 1 et 50 caractères")
+    //     return
+    // }
+    // if(!form.value.organiser.value.length || form.value.organiser.value.length > 50) {
+    //     alert("Le nom de l'organisateur doit contenir entre 1 et 50 caractères")
+    //     return
+    // }
+    // if(!form.value.eventDescription.value.length || form.value.eventDescription.value.length > 500) {
+    //     alert("La description de l'événement doit contenir entre 1 et 500 caractères")
+    //     return
+    // }
+    // if(!form.value.eventPlace.value.length || form.value.eventPlace.value.length > 50) {
+    //     alert("Le lieu de l'événement doit contenir entre 1 et 50 caractères")
+    //     return
+    // }
+    // if(form.value.eventPrice.value.length > 50) {
+    //     alert("Le prix de l'événement doit contenir entre 1 et 50 caractères")
+    //     return
+    // }
+
+    // const data = {
+    //     collection: "Agenda",
+    //     items: [
+    //         {
+    //             title: form.value.eventTitle.value,
+    //             date: form.value.eventDate.value,
+    //             time: form.value.eventTime.value,
+    //             location: form.value.eventPlace.value,
+    //             content: form.value.eventDescription.value,
+    //             organiser: form.value.organiser.value,
+    //             userName: form.value.name.value,
+    //             userEmail: form.value.email.value,
+    //             userPhone: form.value.telephone.value,
+    //             userCreated: true,
+    //             sendEmail: true,
+    //             // image: null
+    //         }
+    //     ]
+    // }
+
+    // await createItems(data)
+    //     .then(res => {
+    //         message.value = "Super! Votre événement a bien été envoyé. Il sera publié après validation par l'équipe de la mairie."
+
+    //         showInModal(message.value)
+    //         form.value.reset()
+    //     }).catch(err => {
+    //         showInModal(err.message)
+    //     })
+        // isPending.value = false;
+}
+const postImage = () => {
+    console.log('post image')
+
+    // if (!allowedExtensions.includes(form.value.eventImage.files[0].type)) {
+    //     console.log(form.value.eventImage.value.split(".").pop())
     //     alert("L'image doit être au format jpg, jpeg ou png")
     //     return
     // }
-    if(!form.value.name.value.length || form.value.name.value.length > 50) {
-        alert("Le nom doit contenir entre 1 et 50 caractères")
-        return
-    }
-    if(!form.value.telephone.value.length || form.value.telephone.value.length > 10) {
-        alert("Le numéro de téléphone doit contenir entre 10 caractères")
-        return
-    }
-    if(!form.value.email.value.length || form.value.email.value.length > 320 || form.value.email.value.length < 5) {
-        alert("L'adresse email doit contenir entre 5 et 320 caractères")
-        return
-    }
-    if(!form.value.eventTitle.value.length || form.value.eventTitle.value.length > 50) {
-        alert("Le titre de l'événement doit contenir entre 1 et 50 caractères")
-        return
-    }
-    if(!form.value.organiser.value.length || form.value.organiser.value.length > 50) {
-        alert("Le nom de l'organisateur doit contenir entre 1 et 50 caractères")
-        return
-    }
-    if(!form.value.eventDescription.value.length || form.value.eventDescription.value.length > 500) {
-        alert("La description de l'événement doit contenir entre 1 et 500 caractères")
-        return
-    }
-    if(!form.value.eventPlace.value.length || form.value.eventPlace.value.length > 50) {
-        alert("Le lieu de l'événement doit contenir entre 1 et 50 caractères")
-        return
-    }
-    if(form.value.eventPrice.value.length > 50) {
-        alert("Le prix de l'événement doit contenir entre 1 et 50 caractères")
-        return
-    }
 
-    const data = {
-        collection: "Agenda",
-        items: [
-            {
-                title: form.value.eventTitle.value,
-                date: form.value.eventDate.value,
-                time: form.value.eventTime.value,
-                location: form.value.eventPlace.value,
-                content: form.value.eventDescription.value,
-                organiser: form.value.organiser.value,
-                userName: form.value.name.value,
-                userEmail: form.value.email.value,
-                userPhone: form.value.telephone.value,
-                userCreated: true,
-                sendEmail: true,
-                // image: null
-            }
-        ]
-    }
-    console.log("eric")
-    await createItems(data)
-        .then(res => {
-            message.value = "Super! Votre événement a bien été envoyé. Il sera publié après validation par l'équipe de la mairie."
+    // console.log(form.value.eventImage.files[0].size)
+    // const imageFormData = new FormData();
+    // imageFormData.append('file', form.value.eventImage.files[0])
 
-            showInModal(message.value)
-            form.value.reset()
-        }).catch(err => {
-            showInModal(err.message)
-        })
+    // const requestOptions = {
+    //     method: 'POST',
+    //     body: formData
+    // };
+    // fetch("https://admin.mairie-poullaouen.fr/files", requestOptions)
+    //     .then(response => response.json())
+    //     .then(data => {
+    //     // Handle the response data
+    //     console.log('Response:', data);
+    // })
+    // .catch(error => {
+    //     // Handle any errors
+    //     console.error('Error:', error);
+    // });
 }
+
 
 const showInModal = (message) => {
     const modal = document.getElementById('masterModal')

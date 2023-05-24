@@ -5,9 +5,11 @@
 
 html {
     position: relative;
-    min-height: 150vh;
 }
+.slotBox {
+    min-height: 100vh;
 
+}
 .mainWidth {
     width: var(--main-width);
     margin: auto;
