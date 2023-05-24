@@ -50,7 +50,7 @@
                         les mentions légales. 
                     </NuxtLink>
                 </label>
-                <input type="checkbox" id="acceptTerms">
+                <input type="checkbox" id="acceptTerms" required>
             </div>
 
             <div class="centered marTop50">
@@ -76,6 +76,7 @@ const form = ref(null)
 const allowedExtensions = ["image/jpg", "image/jpeg", "image/png"]
 
 const handleSubmit = async () => {
+    
     if(isPending.value) return
 
     error.value = null;
@@ -85,44 +86,54 @@ const handleSubmit = async () => {
 
     if(form.value.eventImage.files[0]) {
         fileId = await postImage(form.value.eventImage.files[0])
-
+         if (!fileId) {
+            isPending.value = false
+            return
+        }
     }
-    if(!fileId) {
-        isPending.value = false
-        return
-    }
+   
     
 
     if(!form.value.name.value.length || form.value.name.value.length > 50) {
         alert("Le nom doit contenir entre 1 et 50 caractères")
-        return
+        error.value = "there is a problem"
     }
     if(!form.value.telephone.value.length || form.value.telephone.value.length > 10) {
         alert("Le numéro de téléphone doit contenir entre 10 caractères")
-        return
+        error.value = "there is a problem"
     }
     if(!form.value.email.value.length || form.value.email.value.length > 320 || form.value.email.value.length < 5) {
         alert("L'adresse email doit contenir entre 5 et 320 caractères")
-        return
+        error.value = "there is a problem"
     }
     if(!form.value.eventTitle.value.length || form.value.eventTitle.value.length > 50) {
         alert("Le titre de l'événement doit contenir entre 1 et 50 caractères")
-        return
+        error.value = "there is a problem"
     }
     if(!form.value.organiser.value.length || form.value.organiser.value.length > 50) {
         alert("Le nom de l'organisateur doit contenir entre 1 et 50 caractères")
-        return
+        error.value = "there is a problem"
     }
     if(!form.value.eventDescription.value.length || form.value.eventDescription.value.length > 500) {
         alert("La description de l'événement doit contenir entre 1 et 500 caractères")
-        return
+        error.value = "there is a problem"
     }
     if(!form.value.eventPlace.value.length || form.value.eventPlace.value.length > 50) {
         alert("Le lieu de l'événement doit contenir entre 1 et 50 caractères")
-        return
+        error.value = "there is a problem"
     }
     if(form.value.eventPrice.value.length > 50) {
         alert("Le prix de l'événement doit contenir entre 1 et 50 caractères")
+        error.value = "there is a problem"
+    }
+    // if (!form.value.acceptTerms.checked) {
+    //     error.value = "Vous devez accepter les mentions légales"
+    //     alert(error.value)
+    //     error.value = "there is a problem"
+    // }
+
+    if(error.value) {
+        isPending.value = false
         return
     }
  
@@ -141,7 +152,8 @@ const handleSubmit = async () => {
                 userPhone: form.value.telephone.value,
                 userCreated: true,
                 sendEmail: true,
-                image: fileId
+                image: fileId,
+                termsAccepted: form.value.acceptTerms.checked
             }
         ]
     }
