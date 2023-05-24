@@ -85,7 +85,7 @@ const props = defineProps({
     width: 80%;
     height: min(70%, 350px);
     border-radius: 5px;
-    overflow: visible;
+    overflow: hidden;
 }
 
 .containedImage {
