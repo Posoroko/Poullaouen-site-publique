@@ -1,7 +1,9 @@
 <template>
     <nuxt-link to="/" class="logoBox h100 centered">
-        <img src="/images/logo-poullaouen-trimmed.svg" class="objectFitContained logo" alt="">
+        <!-- <img src="/images/logo-poullaouen-trimmed.svg" class="objectFitContained logo" alt=""> -->
+        <img src="/images/logo-Poullaouen-192x137.png" class=" logo" alt="">
     </nuxt-link>
+    
 </template>
 
 <script setup>
@@ -11,7 +13,10 @@ const icon = 'icon'
 <style scoped>
 .logoBox{
     width: 100px;
-    padding-left: 20px;
-    padding-top: 8px;
+    margin-left: 20px;
+    margin-top: 8px;
+}
+.logoBox img{
+   width: 100%;
 }
 </style>
