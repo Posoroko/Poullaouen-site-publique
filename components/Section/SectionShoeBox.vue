@@ -13,7 +13,7 @@
             <img v-if="image && localImage" class="footImage objectFitCover pointer" :src="image" alt="" @click="showInModal">
         </div>
 
-        <div v-if="image && containedImage" class="imgFrame absolutlyCentered centered">
+        <div v-if="image && containedImage" class="containedImageFrame imgFrame absolutlyCentered centered">
             <img v-if="image && !localImage" class=" containedImage shadow footImage pointer" :src="`${directusAssets}${image}?key=agenda500`" alt="" @click="showInModal">
 
             <img v-if="image && localImage" class="containedImage shadow footImage pointer" :src="image" alt="" @click="showInModal">
@@ -85,11 +85,12 @@ const props = defineProps({
     width: 80%;
     height: min(70%, 350px);
     border-radius: 5px;
-    overflow: visible;
+    overflow: hidden;
 }
+
 .containedImage {
-    max-width: 100%;
-    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
     border-radius: 10px;
 }
 

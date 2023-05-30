@@ -32,7 +32,9 @@ const props = defineProps({
 
 </script>
 
+
 <style scoped>
+
 .sectionContent {
     min-height: 60vh;
     margin-top: 20px;
@@ -45,4 +47,11 @@ const props = defineProps({
 }
 
 
+</style>
+
+<style>
+.actuContent a {
+    font-weight: 700;
+    text-decoration: underline !important;
+}
 </style>

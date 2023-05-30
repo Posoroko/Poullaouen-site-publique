@@ -86,3 +86,6 @@
 
 /* classic section text styles */
 
+sup span {
+    vertical-align: initial !important;
+}
