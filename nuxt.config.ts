@@ -38,7 +38,7 @@ export default defineNuxtConfig({
                 { hid: 'og:type', property: 'og:type', content: 'website' },
                 { hid: 'og:title', property: 'og:title', content: '%siteName' },
                 { hid: 'og:description', property: 'og:description', content: '%siteDescription' },
-                { hid: 'og:image', property: 'og:image', content: 'https://mairie-poullaouen.fr/images/logo-Poullaouen-512x512.png' },
+                { hid: 'og:image', property: 'og:image', content: '/images/logo-Poullaouen-512x512.png' },
                 { hid: 'og:image:width', property: 'og:image:width', content: '1200' },
                 { hid: 'og:image:height', property: 'og:image:height', content: '630' },
                 { hid: 'og:image:alt', property: 'og:image:alt', content: '%siteName' },
