@@ -5,7 +5,7 @@ export default defineNuxtConfig({
             titleSeparator: '|',
             siteUrl: 'https://mairie-poullaouen.fr',
             siteName: 'Site officiel de la mairie de Poullaouen, petite commune dynamique du Finistère.',
-            siteDescription: 'Bienvenu sur le site officiel de la mairie de Poullaouen, petite commune dynamique du Finistère.  Tenez-vous informé des actualités, des événements et des services de la commune.',
+            siteDescription: 'Bienvenue sur le site officiel de la mairie de Poullaouen, petite commune dynamique du Finistère.  Tenez-vous informé des actualités, des événements et des services de la commune.',
             language: 'fr-FR',
         }
     },
@@ -38,16 +38,14 @@ export default defineNuxtConfig({
                 { hid: 'og:type', property: 'og:type', content: 'website' },
                 { hid: 'og:title', property: 'og:title', content: '%siteName' },
                 { hid: 'og:description', property: 'og:description', content: '%siteDescription' },
-                { hid: 'og:image', property: 'og:image', content: '/seo-images/logo-Poullaouen-512x512.png' },
+                { hid: 'og:image', property: 'og:image', content: '/images/logo-Poullaouen-512x512.png' },
                 { hid: 'og:image:width', property: 'og:image:width', content: '1200' },
                 { hid: 'og:image:height', property: 'og:image:height', content: '630' },
                 { hid: 'og:image:alt', property: 'og:image:alt', content: '%siteName' },
                 { hid: 'twitter:title', name: 'twitter:title', content: '%siteName' },
                 { hid: 'twitter:description', name: 'twitter:description', content: '%siteDescription' },
-                { hid: 'twitter:image', name: 'twitter:image', content: '/seo-images/logo-Poullaouen-512x512.png' },
+                { hid: 'twitter:image', name: 'twitter:image', content: '/images/logo-Poullaouen-512x512.png' },
                 { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: '%siteName' },
-
-
             ],
         }
     },
