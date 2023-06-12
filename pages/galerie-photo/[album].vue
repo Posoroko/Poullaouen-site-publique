@@ -79,7 +79,7 @@ const path = [
 
 </script>
 
-<style>
+<style scoped>
 .albumText {
     white-space: pre-wrap;
 }

@@ -77,6 +77,7 @@ const props = defineProps({
 
 <style>
 
+
 .copyRightsBox {
     color: rgba(255, 255, 255, 0.507);
     background-color: #00000069;

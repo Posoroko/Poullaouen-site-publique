@@ -2,7 +2,7 @@
     <SeoKit />
     <TopBarMain />
 
-    <div id="slotBox">
+    <div id="slotBox" :style="{ 'min-height': slotBoxMinHeight }">
         <slot />
     </div>
 
@@ -18,6 +18,21 @@
 </template>
 
 <script setup>
+const route = useRoute()
+
+// Handles the min-width of the slotBox to prevent the footer from going up
+//  pages like album pages are too short for the basic 300vh min-height
+const slotBoxMinHeight = ref('300vh')
+watch(() => route.path, () => {
+    if(route.params.album) {
+        slotBoxMinHeight.value = 'auto'
+        return
+    } 
+    if(slotBoxMinHeight.value != '300vh') {
+        slotBoxMinHeight.value = '300vh'
+    }
+})
+
 const closeModal = () => {
     const modal = document.getElementById('masterModal')
     modal.close()
@@ -27,12 +42,13 @@ const closePdfModal = () => {
     modal.close()
 }
 
+
 </script>
 
 <style scoped>
-#slotBox {
+/* #slotBox {
     min-height: 300vh;
-}
+} */
 .pdfModal {
     width: min(100%, 1200px);
     height: 90vh;
