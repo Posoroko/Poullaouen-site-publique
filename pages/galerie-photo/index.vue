@@ -1,59 +1,58 @@
 <template>
-    <HeaderMain :data="headerData" />
+        <HeaderMain :data="headerData" />
 
-    <main class="galerieMain flex column">
-        <p class="mainWidth intro-text">
-            Retrouvez, en images, tous les événements de votre commune.
-        </p>
+        <main class="galerieMain flex column">
+            <p class="mainWidth intro-text">
+                Retrouvez, en images, tous les événements de votre commune.
+            </p>
 
-        <nav class="defaultFilterBox horizontalGradient">
-            <p class="mainWidth">Filtrer les résultats par thème</p>
+            <nav class="defaultFilterBox horizontalGradient">
+                <p class="mainWidth">Filtrer les résultats par thème</p>
 
-            <div class="mainWidth flex justifyCenter alignCenter wrap gap10">
-                <div class="defaultFilterButton pointer" @click="setActiveCategory" data-category="all"
-                    :class="{ activeDefaultFilterButton: activeCategory == 'all' }">Tous les albums</div>
+                <div class="mainWidth flex justifyCenter alignCenter wrap gap10">
+                    <div class="defaultFilterButton pointer" @click="setActiveCategory" data-category="all"
+                        :class="{ activeDefaultFilterButton: activeCategory == 'all' }">Tous les albums</div>
         
-                <div class="defaultFilterButton pointer" v-for="cat in galeryData.categories" :key="cat.ref"
-                        @click="setActiveCategory" :data-category="cat.ref" :data-hasSubCats="cat.hasSubCats" :class="{ activeDefaultFilterButton: activeCategory == cat.ref }">
-                    {{ cat.name }}
-                </div>
-            </div>
-
-            <div class="mainWidth flex justifyCenter alignCenter wrap marTop20" v-if="catWithSubCats">
-                <p class="w100 marTop20">Sélectionnez une sous-catégorie :</p>
-                <div class="flex justifyCenter wrap gap10">
-                    <div  class="defaultFilterButton pointer flex justifyCenter alignCenter gap5" v-for="subCat in galeryData.subCategories[activeCategory].subCats" :subCat="subCat.ref"  
-                          @click="setActiveSubCategory" :data-subCategory="subCat.ref" :class="{ activeDefaultFilterButton: activeSubCategory == subCat.ref }">
-                        <span class="">{{ subCat.name }}</span>
+                    <div class="defaultFilterButton pointer" v-for="cat in galeryData.categories" :key="cat.ref"
+                            @click="setActiveCategory" :data-category="cat.ref" :data-hasSubCats="cat.hasSubCats" :class="{ activeDefaultFilterButton: activeCategory == cat.ref }">
+                        {{ cat.name }}
                     </div>
                 </div>
-            </div>
-        </nav>
 
-        <div class="galeryContent">
-            <div  v-for="album in displayedAlbums" :key="album.id">
-
-                <SectionMainSloted :data="{ title: album.albumName, image: album.images[0].directus_files_id, localImage: false }">
-
-                    <div class="galerySectionContent h100 flex column justifyCenter gap10">
-                    <div class="galeryTopBox">
-                        <p class="albumDate">{{ toMonthYearFormat(album.date_created) }}</p>
+                <div class="mainWidth flex justifyCenter alignCenter wrap marTop20" v-if="catWithSubCats">
+                    <p class="w100 marTop20">Sélectionnez une sous-catégorie :</p>
+                    <div class="flex justifyCenter wrap gap10">
+                        <div  class="defaultFilterButton pointer flex justifyCenter alignCenter gap5" v-for="subCat in galeryData.subCategories[activeCategory].subCats" :subCat="subCat.ref"  
+                              @click="setActiveSubCategory" :data-subCategory="subCat.ref" :class="{ activeDefaultFilterButton: activeSubCategory == subCat.ref }">
+                            <span class="">{{ subCat.name }}</span>
+                        </div>
                     </div>
+                </div>
+            </nav>
 
-                    <p class="page-text">{{ album.content }}</p>
+            <div class="galeryContent">
+                <div  v-for="album in displayedAlbums" :key="album.id">
+
+                    <SectionMainSloted :data="{ title: album.albumName, image: album.images[0].directus_files_id, localImage: false }">
+
+                        <div class="galerySectionContent h100 flex column justifyCenter gap10">
+                        <div class="galeryTopBox">
+                            <p class="albumDate">{{ toMonthYearFormat(album.date_created) }}</p>
+                        </div>
+
+                        <p class="page-text">{{ album.content }}</p>
                 
-                    <div class="galeryBottomBox flex justifyEnd">
-                        <NuxtLink :to="`/galerie-photo/${album.slug}`" class="galeryAlbumButton shadow">Voir l'album</NuxtLink> 
+                        <div class="galeryBottomBox flex justifyEnd">
+                            <NuxtLink :to="`/galerie-photo/${album.slug}`" class="galeryAlbumButton shadow">Voir l'album</NuxtLink> 
+                        </div>
                     </div>
+                    </SectionMainSloted>
                 </div>
-                </SectionMainSloted>
             </div>
-        </div>
-    </main>
+        </main>
 </template>
 
 <script setup>
-
 const appConfig = useAppConfig();
 const directusItems = appConfig.directus.items;
 const directusAssets = appConfig.directus.assets;
@@ -112,8 +111,6 @@ const filterAlbums = () => {
         })
     }
 }
-
-console.log()
 
 const toMonthYearFormat = (_date) => {
 
@@ -228,6 +225,7 @@ onUpdated(() => {
 }) 
 
 onMounted(() => {
+
     applyStyleClasses_utils()
 
     if (route.query['sous-categorie']) {
@@ -240,8 +238,6 @@ onMounted(() => {
     } else {
         activeCategory.value = 'all'
     }
-
-    console.log(activeSubCategory.value)
 
     filterAlbums()
 })

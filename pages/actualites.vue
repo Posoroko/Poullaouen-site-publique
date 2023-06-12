@@ -1,5 +1,6 @@
 <template>
     <HeaderMain :data="headerData" />
+    
     <main class="">
 
         <p class="intro-text mainWidth page-text">

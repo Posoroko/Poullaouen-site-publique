@@ -26,12 +26,12 @@ const closePdfModal = () => {
     const modal = document.getElementById('pdfModal')
     modal.close()
 }
+
 </script>
 
 <style scoped>
 #slotBox {
-    min-height: 100vh;
-
+    min-height: 300vh;
 }
 .pdfModal {
     width: min(100%, 1200px);

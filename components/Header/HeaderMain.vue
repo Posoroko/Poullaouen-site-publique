@@ -1,4 +1,5 @@
 <template>
+
     <header id="header">
         <div class="imageBox relative">
             <img :src="data.images[activeImageIndex].src" :alt="data.images[activeImageIndex].alt">
@@ -63,9 +64,8 @@ onMounted(() => {
             swipeRignt()
         }, 10000)
     }
+
 })
-
-
 
 
 const props = defineProps({
@@ -76,6 +76,7 @@ const props = defineProps({
 </script>
 
 <style>
+
 .copyRightsBox {
     color: rgba(255, 255, 255, 0.507);
     background-color: #00000069;
