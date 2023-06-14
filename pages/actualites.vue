@@ -116,6 +116,7 @@ onMounted(() => {
     padding: 20px 0;
 }
 
+
 .slottedContent .actuContent ul li {
     margin-left: 20px;
     list-style: disc;
