@@ -93,16 +93,16 @@ sup span {
 /* in case of problems with font-family styles in actualités */
 
 
-/* .actuContent *,
+.actuContent *,
 .actuContent * *,
 .actuContent * * * {
     font-family: 'Montserrat', sans-serif !important;
-} */
+}
 .actuContent ol {
 
     padding-left: 20px;
 }
-/* .actuContent ol li{
+.actuContent ol li{
     list-style: inside;
     list-style-position: outside;
-} */
+}
