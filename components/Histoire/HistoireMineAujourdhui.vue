@@ -66,13 +66,13 @@
                         <br><br>
                         Monographie Jean MONOT de l’ASAM <br>
 
-                        1 -Les Mines de Poullaouen - Huelgoat - Locmaria Berrien : Jacques LE BOULANGER - septembre 1994. <br>
+                        Les Mines de Poullaouen - Huelgoat - Locmaria Berrien : Jacques LE BOULANGER - septembre 1994. <br>
 
-                        2 - Thèse de 3ème cycle réalisée à Brest en 1972 par M Edmond MONANGE sur le thème « entreprise industrielle au 18ème siècle ».<br>
+                        Thèse de 3ème cycle réalisée à Brest en 1972 par M Edmond MONANGE sur le thème « entreprise industrielle au 18ème siècle ».<br>
 
-                        3 - Les Mines de Huelgoat - Poullaouen : Michel PENVEN (Association «sur les traces de François JONCOUR») - Mars 1989 <br>
+                        Les Mines de Huelgoat - Poullaouen : Michel PENVEN (Association «sur les traces de François JONCOUR») - Mars 1989 <br>
 
-                        4 - Revue MICHERIOUZ KOZ : magazine des vieux métiers de Bretagne - «Les mineurs de Poullaouen & de Locmaria-Berrien» - 1er numéro : octobre, novembre, décembre 2002
+                        Revue MICHERIOUZ KOZ : magazine des vieux métiers de Bretagne - «Les mineurs de Poullaouen & de Locmaria-Berrien» - 1er numéro : octobre, novembre, décembre 2002
                     </p>
 
                     <div class="marTop20"></div>
