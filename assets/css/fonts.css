@@ -106,3 +106,6 @@ sup span {
     list-style: inside;
     list-style-position: outside;
 }
+.actuContent p {
+    font-size: 16px;
+}
