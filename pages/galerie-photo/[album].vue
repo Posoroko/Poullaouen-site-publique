@@ -1,25 +1,3 @@
-<template>
-    <header>
-        <HeaderPathBar :path="path" />
-        <HeaderTItleBar :title="`Album : ${album.albumName}`" />
-    </header>
-
-    <main class="galerieMain flex column marTop50">
-        <p class="mainWidth intro-text albumText">{{ album.content }}</p>
-        <div class="marTop50"></div>
-        <div class="albumNavBox">
-            <div class="albumLinkBox mainWidth">
-                <NuxtLink @click="goBack" class="flex alignCenter gap20 pointer">
-                    <span class="icon">arrow_back</span>
-                    <span>galerie photo</span>
-                </NuxtLink>
-
-            </div>
-        </div>
-        <GaleriePhotoDesktop :albumData="album.images" />
-        
-    </main>
-</template>
 <script setup>
 const route = useRoute()
 const activeAlbum = route.params.album
@@ -28,7 +6,7 @@ const router = useRouter()
 
 const appConfig = useAppConfig();
 const directusAssets = appConfig.directus.assets;
-const directusItems = appConfig.directus.items; 
+const directusItems = appConfig.directus.items;
 
 function goBack() {
     router.go(-1)
@@ -78,6 +56,30 @@ const path = [
 ]
 
 </script>
+
+<template>
+    <header>
+        <HeaderPathBar :path="path" />
+        <HeaderTItleBar :title="`Album : ${album.albumName}`" />
+    </header>
+
+    <main class="galerieMain flex column marTop50">
+        <p class="mainWidth intro-text albumText">{{ album.content }}</p>
+        <div class="marTop50"></div>
+        <div class="albumNavBox">
+            <div class="albumLinkBox mainWidth">
+                <NuxtLink @click="goBack" class="flex alignCenter gap20 pointer">
+                    <span class="icon">arrow_back</span>
+                    <span>galerie photo</span>
+                </NuxtLink>
+
+            </div>
+        </div>
+        <GaleriePhotoDesktop :albumData="album.images" />
+        
+    </main>
+</template>
+
 
 <style scoped>
 .albumText {

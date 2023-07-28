@@ -50,6 +50,8 @@
 
 .top0 {top: 0;}
 .right0 {right: 0;}
+.left0 {left: 0;}
+.bottom0 {bottom: 0;}
 
 .pointer {cursor: pointer;}
 
@@ -81,3 +83,11 @@
 
 .textAlignRight {text-align: right;}
 .textAlignCenter {text-align: center;}
+
+.noEvents_kidsEvents {
+    pointer-events: none;
+}
+
+.noEvents_kidsEvents * {
+    pointer-events: all;
+}

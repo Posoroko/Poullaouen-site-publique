@@ -5,6 +5,21 @@
 
             <div ref="rightArrow" class="viewerArrowBox viewerRightArrowBox absolute icon headerIcon carouselChevron pointer" @click="swipeRignt"> chevron_right  </div>
         </div>
+
+        <div class="modal" v-if="modalIsOpen">
+            <div class="modalContent pad20">
+                <span class="close" @click="closeModal">&times;</span>
+
+                <img class="objectFitContain" :src="`${directusAssets}${albumData[selectedImageIndex].directus_files_id}?key=viewer750`"
+                    alt="compagnie Singe Diesel">
+
+                <div class="absolute w100 h100 top0 left0 noEvents_kidsEvents ">
+                    <span class="icon modalChevronNew left" @click="modalNavigate" data-direction="left">chevron_left</span>
+
+                    <span class="icon modalChevronNew right" @click="modalNavigate" data-direction="right">chevron_right</span>
+                </div>
+            </div>
+        </div>
     </section>
 </template>
 
@@ -128,10 +143,12 @@ const viewerInit = (images) => {
             num = 2000
         }
         photoCard.classList.add('pos' + num)
+        
 
         photoCard.classList.add('photoCard')
             const img = document.createElement('img')
             img.classList.add('carouselImage')
+            img.setAttribute('data-index', index)
             img.setAttribute('data-url', `${directusAssets}${image.directus_files_id}`)
             img.src = `${directusAssets}${image.directus_files_id}?key=viewer750`
             
@@ -144,6 +161,8 @@ onMounted(() => {
     viewerInit(props.albumData)
     imagesNodes.value = document.querySelectorAll('.photoCard')
 })
+const modalIsOpen = ref(false)
+const selectedImageIndex = ref(null)
 
 const handleImageClick = (e) => {
     const target = e.target
@@ -152,11 +171,28 @@ const handleImageClick = (e) => {
 
         return
     }
-    const url = target.getAttribute('data-url') + "?key=full1000"
 
-    showInModal(url)
+    selectedImageIndex.value = e.target.dataset.index
+
+    modalIsOpen.value = true
+
+    // const url = target.getAttribute('data-url') + "?key=full1000"
+
+    // showInModal(url)
+}
+function closeModal() {
+    modalIsOpen.value = false
 }
 
+function modalNavigate(e) {
+    let direction = e.target.dataset.direction
+    console.log(selectedImageIndex.value, direction)
+    if (direction === 'left' && selectedImageIndex.value > 0) {
+        selectedImageIndex.value--
+    } else if (direction === 'right' && selectedImageIndex.value < props.albumData.length - 1) {
+        selectedImageIndex.value++
+    }
+}
 
 
 
@@ -165,6 +201,64 @@ const handleImageClick = (e) => {
 
 
 <style>
+.modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #000000b6;
+    backdrop-filter: blur(5px);
+    z-index: 9999999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContent {
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 1px 1px 10px #00000097;
+    position: relative;
+}
+
+.close {
+    width: 48px;
+    height: 48px;
+    font-size: 40px;
+    line-height: 1;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: grid;
+    place-items: center;
+}
+
+.modalChevronNew {
+    width: 48px;
+    height: 48px;
+    color: white;
+    font-size: 40px;
+    line-height: 1;
+    background-color: rgba(0, 0, 0, 0.419);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.modalChevronNew.left {
+    left: 10px;
+}
+.modalChevronNew.right {
+    right: 10px;
+}
 .photoViewerMain {
     min-height: 60vh;
     background-color: var(--dark-blue);
