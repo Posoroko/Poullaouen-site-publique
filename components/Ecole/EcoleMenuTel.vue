@@ -1,5 +1,5 @@
 <template>
-    <section class="menuSection">
+    <section class="menuSection" v-if="menus.length">
         <div class="menuBigBox mainWidth relative">
 
             <div class="menuDashboard flex justifyCenter alignCenter gap20">
