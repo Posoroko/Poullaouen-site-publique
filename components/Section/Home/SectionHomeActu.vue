@@ -50,7 +50,7 @@ const directusItems = appConfig.directus.items;
 const directusAssets = appConfig.directus.assets;
 
 const fetchOptions = {
-    server: true,
+    server: false,
     params: {
         fields: 'id, title, subtitle, content, image, imageAlt, moreInfo, date_created, file, fileName',
     }
@@ -63,7 +63,7 @@ const { data: actualites } = await useAsyncData(
         return items.data.splice(0, 3)
     }
     ,
-    { server: true }
+    { server: false }
 )
 
 const applyStyleClasses_utils = () => {
