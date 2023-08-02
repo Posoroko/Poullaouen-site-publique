@@ -74,7 +74,7 @@ const directusAssets = appConfig.directus.assets;
 const directusItems = appConfig.directus.items;
 
 const fetchOptions = {
-    server: true,
+    server: false,
     params: {
         fields: 'id, title, date, time, location, content, image, imageAlt, price, file, filename',
         limit: props.limit,
@@ -82,14 +82,14 @@ const fetchOptions = {
 }
 
 const { data: dates } = await useAsyncData(
-    "agenda",
+    "homeAgenda",
     async () => {
         const items = await $fetch(`${directusItems}Agenda?sort[]=date`, fetchOptions) 
 
         return items.data
     }
     ,
-    { server: true }
+    { server: false }
 )
 const applyStyleClasses_utils = () => {
 
