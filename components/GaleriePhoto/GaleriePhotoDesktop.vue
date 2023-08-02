@@ -1,22 +1,22 @@
 <template>
-    <section class="photoViewerMain centered relative marTop100">
-        <div ref="viewerBox" class=" viewerBox relative h100" @click="handleImageClick" @touchmove="handleTouch" @touchend="handleTouchEnd">
+    <section class="photoViewerMain centered relative marTop100" @touchmove="handleTouch" @touchend="handleTouchEnd">
+        <div ref="viewerBox" class=" viewerBox relative h100" @click="handleImageClick">
             <div ref="leftArrow" class="viewerArrowBox viewerLeftArrowBox absolute icon headerIcon carouselChevron pointer" @click="swipeLeft"> chevron_left </div>
 
             <div ref="rightArrow" class="viewerArrowBox viewerRightArrowBox absolute icon headerIcon carouselChevron pointer" @click="swipeRignt"> chevron_right  </div>
         </div>
 
         <div class="modal" v-if="modalIsOpen">
-            <div class="modalContent pad20">
+            <div ref="modalContent" class="modalContent pad20">
                 <span class="close" @click="closeModal">&times;</span>
 
                 <img class="objectFitContain" :src="`${directusAssets}${albumData[selectedImageIndex].directus_files_id}?key=viewer750`"
                     alt="compagnie Singe Diesel">
 
                 <div class="absolute w100 h100 top0 left0 noEvents_kidsEvents ">
-                    <span class="icon modalChevronNew left" @click="modalNavigate" data-direction="left">chevron_left</span>
+                    <span class="icon modalChevronNew left" ref="modalLEftArrow" @click="modalNavigate('left')">chevron_left</span>
 
-                    <span class="icon modalChevronNew right" @click="modalNavigate" data-direction="right">chevron_right</span>
+                    <span class="icon modalChevronNew right" ref="modalRightArrow" @click="modalNavigate('right')">chevron_right</span>
                 </div>
             </div>
         </div>
@@ -28,7 +28,9 @@ import { showInModal } from '@/composables/utilities'
 import { useSwipe } from '@vueuse/core'
 
 const viewerBox = ref(null)
+
 const { isSwiping, direction } = useSwipe(viewerBox)
+
 
 const leftArrow = ref(null)
 const rightArrow = ref(null)
@@ -36,15 +38,26 @@ const rightArrow = ref(null)
 const swipedOnce = ref(false)
 
 const handleTouch = (e) => {
-    
+
     if(direction.value == 'left' && !swipedOnce.value) {
         swipedOnce.value = true
+        if (modalIsOpen.value) {
+            modalLEftArrow.value.click()
+            return
+        }
+        
         leftArrow.value.click()
     } else if (direction.value == 'right' && !swipedOnce.value) {
         swipedOnce.value = true
+        if (modalIsOpen.value) {
+            modalRightArrow.value.click()
+            return
+        }
+        
         rightArrow.value.click()
     }
 }
+
 const handleTouchEnd = (e) => {
     swipedOnce.value = false
 }
@@ -144,7 +157,6 @@ const viewerInit = (images) => {
         }
         photoCard.classList.add('pos' + num)
         
-
         photoCard.classList.add('photoCard')
             const img = document.createElement('img')
             img.classList.add('carouselImage')
@@ -161,6 +173,7 @@ onMounted(() => {
     viewerInit(props.albumData)
     imagesNodes.value = document.querySelectorAll('.photoCard')
 })
+
 const modalIsOpen = ref(false)
 const selectedImageIndex = ref(null)
 
@@ -183,10 +196,11 @@ const handleImageClick = (e) => {
 function closeModal() {
     modalIsOpen.value = false
 }
+const modalLEftArrow = ref(null)
+const modalRightArrow = ref(null)
 
-function modalNavigate(e) {
-    let direction = e.target.dataset.direction
-    console.log(selectedImageIndex.value, direction)
+function modalNavigate(direction) {
+
     if (direction === 'left' && selectedImageIndex.value > 0) {
         selectedImageIndex.value--
     } else if (direction === 'right' && selectedImageIndex.value < props.albumData.length - 1) {
@@ -213,6 +227,7 @@ function modalNavigate(e) {
     display: flex;
     justify-content: center;
     align-items: center;
+    pointer-events: none;
 }
 
 .modalContent {
@@ -237,6 +252,7 @@ function modalNavigate(e) {
     right: 10px;
     display: grid;
     place-items: center;
+    pointer-events: all;
 }
 
 .modalChevronNew {
@@ -252,6 +268,7 @@ function modalNavigate(e) {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    pointer-events: all;
 }
 .modalChevronNew.left {
     left: 10px;
