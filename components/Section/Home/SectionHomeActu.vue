@@ -1,5 +1,5 @@
 <template>
-    <section class="ActuSection">
+    <section class="ActuSection" v-if="actualites">
         <SectionTitleBar title="Actualités" v-if="isHomePage" />
         <div v-for="actu in actualites" :key="actu.id">
             <SectionMainSloted :data="{ image: actu.image, imageAlt: actu.imageAlt, localImage: false}" >
@@ -56,19 +56,15 @@ const fetchOptions = {
     }
 }
 
-const { data: actualites } = await useAsyncData(
-    "homeLatestActus",
-    async () => {
-        const items = await $fetch(`${directusItems}Actualites?sort[]=-date_created`, fetchOptions)
-        return items.data.splice(0, 3)
-    }
-    ,
-    { server: false }
-)
+
+
+
 
 const applyStyleClasses_utils = () => {
 
     const sections = document.querySelectorAll('.sectionBoxSloted')
+    console.log(sections)
+
 
     for (let i = 1; i < sections.length; i = i + 4) {
         sections[i].classList.replace('whiteSection', 'blueSection')
@@ -77,7 +73,25 @@ const applyStyleClasses_utils = () => {
         sections[i].classList.replace('whiteSection', 'brownSection')
     }
 }
-onMounted(() => {
+
+
+const { data: actualites } = await useAsyncData(
+    "homeLatestActus",
+    async () => {
+        const items = await $fetch(`${directusItems}Actualites?sort[]=-date_created`, fetchOptions)
+
+        return items.data.splice(0, 3)
+    },
+
+    { server: false }
+)
+
+
+
+
+
+onUpdated(() => {
+    console.log('mounted')
     applyStyleClasses_utils()
 })
 
