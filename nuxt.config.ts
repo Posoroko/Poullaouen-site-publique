@@ -47,8 +47,17 @@ export default defineNuxtConfig({
                 { hid: 'twitter:image', name: 'twitter:image', content: '/images/logo-Poullaouen-512x512.png' },
                 { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: '%siteName' },
             ],
+            link: [
+                { rel: 'icon', type: 'image/png', href: '/favicon/favicon-32x32.png', },
+                { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicon/apple-touch-icon.png', },
+                { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon/favicon-32x32.png', },
+                { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon/favicon-16x16.png', },
+                { rel: "manifest", href: "/favicon/site.webmanifest" },
+                { rel: "shortcut icon", href: "/favicon/favicon.ico" }
+            ],
         }
     },
+
     routeRules: {
         '/accueil_poullaouen': { redirect: '/' },
         '/accueil_poullaouen/vie_municipale/les_salles_municipales': { redirect: '/ma-mairie/les-salles-municipales' },

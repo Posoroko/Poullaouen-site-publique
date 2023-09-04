@@ -1,6 +1,7 @@
 <template>
     <HeaderMain :data="headerData" :isHomePage="true"/>
-    <main class="">
+
+    <main class="flex column spaceBetween">
         <UnClickMain />
 
         <SectionHomeDates limit="3" />
@@ -14,6 +15,7 @@
         </div>
     </main>
 </template>
+
 <script setup>
 definePageMeta({
     keepalive: {
@@ -69,6 +71,9 @@ const headerData = {
 </script>
 
 <style scoped>
+main {
+    min-height: 100vh;
+}
     .actuButton {
         width: min(100%, 600px);
         font-size: 18px;

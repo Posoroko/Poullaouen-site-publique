@@ -46,9 +46,9 @@ const closePdfModal = () => {
 </script>
 
 <style scoped>
-/* #slotBox {
-    min-height: 300vh;
-} */
+#slotBox {
+    /* min-height: 100vh; */
+}
 .pdfModal {
     width: min(100%, 1200px);
     height: 90vh;
