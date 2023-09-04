@@ -1,5 +1,8 @@
 <template>
     <footer id="footer" class="relative">
+
+        <FooterVague />
+
         <div class="footerContainer mainWidth flex justifyEvenly alignStart wrap h100 ">
             
 
@@ -115,7 +118,8 @@
                 <NuxtLink class="bottomLink" to="https://www.posoroko.com/" target="_blank" >DEVELOPPEMENT :  STUDIO POSOROKO</NuxtLink>
             </div>
         </div>
-        <img class="absolute vague" src="/images/vague.svg">
+
+
     </footer>
 </template>
 
@@ -143,9 +147,6 @@
     text-decoration: underline;
 }
 
-#footer {
-    margin-top: 25vw;
-}
 .phoneBox {
     margin: 0 auto;
 }

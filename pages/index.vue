@@ -23,6 +23,8 @@ definePageMeta({
     }
 })
 
+const mainClass = ref('notMounted')
+
 const headerData = {
     images: [
         {
@@ -67,6 +69,10 @@ const headerData = {
         }
     ]
 }
+
+onMounted(() => {
+    mainClass.value = 'mounted'
+})
 
 </script>
 

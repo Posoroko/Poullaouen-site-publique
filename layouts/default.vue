@@ -25,7 +25,7 @@ const route = useRoute()
 const slotBoxMinHeight = ref('300vh')
 watch(() => route.path, () => {
     if(route.params.album) {
-        slotBoxMinHeight.value = 'auto'
+        slotBoxMinHeight.value = '100vh'
         return
     } 
     if(slotBoxMinHeight.value != '300vh') {
@@ -46,9 +46,7 @@ const closePdfModal = () => {
 </script>
 
 <style scoped>
-#slotBox {
-    /* min-height: 100vh; */
-}
+
 .pdfModal {
     width: min(100%, 1200px);
     height: 90vh;

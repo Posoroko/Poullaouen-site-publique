@@ -82,6 +82,8 @@ const path = [
 
 
 <style scoped>
+
+
 .albumText {
     white-space: pre-wrap;
 }
