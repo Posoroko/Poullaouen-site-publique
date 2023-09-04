@@ -25,7 +25,7 @@ const route = useRoute()
 const slotBoxMinHeight = ref('300vh')
 watch(() => route.path, () => {
     if(route.params.album) {
-        slotBoxMinHeight.value = '100vh'
+        slotBoxMinHeight.value = '150vh'
         return
     } 
     if(slotBoxMinHeight.value != '300vh') {
