@@ -78,6 +78,8 @@ const path = [
         <GaleriePhotoDesktop :albumData="album.images" />
         
     </main>
+
+    <FooterMain />
 </template>
 
 

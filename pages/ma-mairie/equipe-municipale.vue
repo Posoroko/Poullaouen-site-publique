@@ -13,6 +13,8 @@
 
     </main>
 
+    <FooterMain />
+
 </template>
 
 <script setup>

@@ -83,7 +83,11 @@
             Communauté.
         </p>
     </main>
+
+    <FooterMain />
+
 </template>
+
 <script setup>
 const appConfig = useAppConfig();
 const directusAssets = appConfig.directus.assets;

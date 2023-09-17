@@ -8,6 +8,8 @@
         <EcoleMenuTel class="telMenu" />
 
     </main>
+
+    <FooterMain />
 </template>
 
 <script setup>

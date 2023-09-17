@@ -58,6 +58,8 @@
             </div>
         </form>
     </main>
+
+    <FooterMain />
 </template>
 
 <script setup>

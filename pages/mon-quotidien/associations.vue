@@ -43,6 +43,8 @@
         </div>
 
     </main>
+
+    <FooterMain />
 </template>
  
 <script setup>

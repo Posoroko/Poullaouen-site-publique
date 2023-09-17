@@ -66,6 +66,8 @@
             <h4 class="mainWidth">Retrouvez l’ensemble du Plan Local d’Urbanisme sur le site du <a class="externalLink" href="https://www.geoportail-urbanisme.gouv.fr/" target="_blank">géoportail de l’urbanisme</a>.</h4>
         </div>
     </main>
+
+    <FooterMain />
 </template>
 <script setup>
 

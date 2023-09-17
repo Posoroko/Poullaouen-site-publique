@@ -56,6 +56,8 @@
         </section>
 
     </main>
+
+    <FooterMain />
 </template>
 
 <script setup>

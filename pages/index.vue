@@ -14,6 +14,8 @@
             <NuxtLink class="mainWidth shadow actuButton textAlignCenter brown_action" to="/actualites">Voir toutes les actualités</NuxtLink>
         </div>
     </main>
+
+    <FooterMain />
 </template>
 
 <script setup>

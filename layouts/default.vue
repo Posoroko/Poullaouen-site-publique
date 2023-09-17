@@ -6,7 +6,7 @@
         <slot />
     </div>
 
-    <FooterMain />
+    <!-- <FooterMain /> -->
 
     <dialog id="masterModal">
         <span class="modal modalNode masterModalCloseBtn modalCloseBtn absolute icon pointer flex alignCenter justifyCenter" @click="closeModal">
@@ -20,14 +20,21 @@
 <script setup>
 const route = useRoute()
 
-// Handles the min-width of the slotBox to prevent the footer from going up
+
+const homePageMinHeight = '550vh'
+
+
+// Handles the min-height of the slotBox to prevent the footer from going up
 //  pages like album pages are too short for the basic 300vh min-height
 const slotBoxMinHeight = ref('300vh')
+
 watch(() => route.path, () => {
+    console.log(route.fullPath)
     if(route.params.album) {
         slotBoxMinHeight.value = '150vh'
         return
-    } 
+    }
+
     if(slotBoxMinHeight.value != '300vh') {
         slotBoxMinHeight.value = '300vh'
     }

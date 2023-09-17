@@ -372,6 +372,8 @@
                     </div>
                 </SectionMainSloted>
     </main>
+
+    <FooterMain />
 </template>
 <script setup>
 const activeQuestion = ref(null);

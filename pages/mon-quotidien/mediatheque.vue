@@ -76,6 +76,8 @@
         </SectionMainSloted>
 
     </main>
+
+    <FooterMain />
 </template>
 <script setup>
 

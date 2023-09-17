@@ -84,6 +84,8 @@
         </div>
     </main>
 
+    <FooterMain />
+
     <dialog id="salleCarouselModal">
         <GaleriePhotoDesktop v-if="selectedAlbum" :albumData="selectedAlbum" />
         <span class="modalNode modalCloseBtn absolute icon pointer flex alignCenter justifyCenter" @click="closeModal">
