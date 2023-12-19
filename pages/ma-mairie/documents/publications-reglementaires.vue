@@ -9,8 +9,8 @@
     <div class="marTop50"></div>
     <section class="docsSection docsLatestsSection relative marTop150">        
         <div class="stripe darkBlueBG">
-            <div class="content mainWidth w100 flex justifyCenter wrap gap20">
-                <article class="publicationDocCard relative w100" v-for="doc in publications.latests" :key="doc.id">
+            <div class="content mainWidth">
+                <article class="publicationDocCard relative" v-for="doc in publications.latests" :key="doc.id">
                     <figure class="publicationDocCardFigure">
                         <img class="publicationDocCardFigureImg" src="/images/logo.png" alt="">
                     </figure>
@@ -43,10 +43,10 @@
     <div class="marTop50"></div>
     <section class="marTop150">
         <div class="stripe w100">
-            <div class="content mainWidth w100 flex justifyCenter wrap">
+            <div class="content mainWidth">
                 <article class="publicationDocCard relative" v-for="doc in publications.rest" :key="doc.id">
-                    <figure class="frame">
-                        <img src="/images/logo.png" alt="">
+                    <figure class="frame publicationDocCardFigure">
+                        <img class="publicationDocCardFigureImg" src="/images/logo.png" alt="">
                     </figure>
 
                     <b class="docType">{{ types[doc.publicationType] }}</b>
@@ -150,60 +150,14 @@ const headerData = {
 </script>
 
 <style scoped>
-.publicationDocCard {
-    width: 210px;
-    height: 310px;
-    background-color: #fff;
-    padding: 20px 20px;
-    border-radius: 5px;
-    box-shadow: var(--shadow);
+.content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-/* .publicationDocCard .publicationDocCardFigure {
-    width: 100px;
-    margin: auto;
-} */
 
-.publicationDocCard .publicationDocCardFigure .publicationDocCardFigureImg {
-    width: 100px;
-    /* height: 100%; */
-    object-fit: contain;
-}
-
-.publicationDocCard * {
-    text-align: center;
-    font-size: 20px;
-    font-weight: 400;
-    color: var(--dark-blue);
-}
-
-.publicationDocCard .bottomBox {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.publicationDocCard .docType {
-    font-weight: 500;
-}
-
-.publicationDocCard .bottomBox .bottomBoxRow {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.publicationDocCard .bottomBox .bottomBoxRow * {
-    font-size: 14px;
-}
-
-.publicationDocCard .bottomBox .bottomBoxRow .date {
-    font-weight: 500;
-}
 
 .piedBox {
     width: 100%;

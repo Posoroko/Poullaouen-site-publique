@@ -19,8 +19,8 @@
             
             <div class="stripe w100 marTop100" :class="{ darkBlueBG : index == 0}">
                 <div class="content mainWidth flex justifyCenter wrap">
-                    <article class="publicationDocCard relative w100" v-for="doc in myData.docs[year]" :key="doc.id">
-                        <figure class="publicationDocCardFigure">
+                    <article class="publicationDocCard relative" v-for="doc in myData.docs[year]" :key="doc.id">
+                        <figure class="frame publicationDocCardFigure">
                             <img class="publicationDocCardFigureImg" src="/images/logo.png" alt="">
                         </figure>
 
@@ -166,60 +166,6 @@ const headerData = {
 </script>
 
 <style scoped>
-.publicationDocCard {
-    width: 210px;
-    height: 310px;
-    background-color: #fff;
-    padding: 20px 20px;
-    border-radius: 5px;
-    box-shadow: var(--shadow);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
-/* .publicationDocCard .publicationDocCardFigure {
-    width: 100px;
-    margin: auto;
-} */
-
-.publicationDocCard .publicationDocCardFigure .publicationDocCardFigureImg {
-    width: 100px;
-    /* height: 100%; */
-    object-fit: contain;
-}
-
-.publicationDocCard * {
-    text-align: center;
-    font-size: 20px;
-    font-weight: 400;
-    color: var(--dark-blue);
-}
-
-.publicationDocCard .bottomBox {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.publicationDocCard .docType {
-    font-weight: 500;
-}
-
-.publicationDocCard .bottomBox .bottomBoxRow {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.publicationDocCard .bottomBox .bottomBoxRow * {
-    font-size: 14px;
-}
-
-.publicationDocCard .bottomBox .bottomBoxRow .date {
-    font-weight: 500;
-}
 .piedBox {
     height: 110%;
     width: 100%;
