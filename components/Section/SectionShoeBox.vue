@@ -46,7 +46,7 @@ const showInModal = (e) => {
     }
 
     _img.style.maxWidth = "95vw"
-    _img.style.maxHeight = "95vh"
+    _img.style.maxHeight = "80vh"
     // _img.style.objectFit = "contain"
     _img.style.margin = "auto"
 
