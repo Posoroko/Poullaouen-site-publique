@@ -37,8 +37,8 @@
                     <span class="icon">schedule</span>
 
                     <ul class="textContent mediathequeSchedule w100 schedule">
-                        <li class="w100"> <span>Mercredi:</span> 10h30 - 12h30</li>
-                        <li class="w100"><span>Vendredi:</span> 16h30 - 18h30 (sauf juillet/août)</li>
+                        <li class="w100"> <span>Mercredi:</span> 10h30 - 12h30 (10h - 12h pendant les vacances) </li>
+                        <li class="w100"><span>Vendredi:</span> 16h00 - 18h00 (sauf juillet/août)</li>
                         <li class="w100"><span>Samedi:</span> 10h00 - 12h00</li> 
                     </ul>
                 </div>
