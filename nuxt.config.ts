@@ -1,14 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-configconsole
 export default defineNuxtConfig({
-    runtimeConfig: {
-        public: {
-            titleSeparator: '|',
-            siteUrl: 'https://mairie-poullaouen.fr',
-            siteName: 'Site officiel de la mairie de Poullaouen, petite commune dynamique du Finistère.',
-            siteDescription: 'Bienvenue sur le site officiel de la mairie de Poullaouen, petite commune dynamique du Finistère.  Tenez-vous informé des actualités, des événements et des services de la commune.',
-            language: 'fr-FR',
-        }
-    },
     css: [
         '@/assets/css/colors.css',
         '@/assets/css/reset.css',
@@ -19,14 +10,38 @@ export default defineNuxtConfig({
     ssr: true,
 
     modules: [
-        "nuxt-directus"
+        "nuxt-directus",
+        '@nuxtjs/seo'
     ],
+     ogImage: {
+        enabled: false
+    },
+    sitemap: {
+        enabled: true
+    },
+    robots: {
+        enabled: true
+    },
+    seoExperiments: {
+        enabled: false
+    },
+    schemaOrg: {
+        enabled: false
+    },
+    linkChecker: {
+        enabled: false
+    },
     directus: {
         url: "https://admin.mairie-poullaouen.fr"
     },
+    site: {
+        url: 'https://mairie-poullaouen.fr',
+        name: 'Site officiel de la mairie de Poullaouen, petite commune dynamique du Finistère.',
+        description: 'Bienvenue sur le site officiel de la mairie de Poullaouen, petite commune dynamique du Finistère.  Tenez-vous informé des actualités, des événements et des services de la commune.',
+        defaultLocale: 'fr-FR',
+    },
     app: {
         head: {
-            titleTemplate: '%pageTitle %titleSeparator %siteName',
             meta: [
                 { name: 'google-site-verification', content: 'sMTScukwNBaazph3D2m7z4y0_-M1EH8L1C1n2dYdxeQ'},
                 { charset: 'utf-8' },
