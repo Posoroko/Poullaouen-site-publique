@@ -50,8 +50,6 @@ const showInModal = (e) => {
     // _img.style.objectFit = "contain"
     _img.style.margin = "auto"
 
-
-
     modal.appendChild(_img)
     modal.showModal()
 }

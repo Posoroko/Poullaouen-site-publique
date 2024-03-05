@@ -1,5 +1,4 @@
 <template>
-    <SeoKit />
     <TopBarMain />
 
     <div id="slotBox" :style="{ 'min-height': slotBoxMinHeight }">
@@ -9,12 +8,14 @@
     <!-- <FooterMain /> -->
 
     <dialog id="masterModal">
-        <span class="modal modalNode masterModalCloseBtn modalCloseBtn absolute icon pointer flex alignCenter justifyCenter" @click="closeModal">
-            close
-        </span>
+        <div class="flex justifyEnd modalNode">
+            <span class="modalNode masterModalCloseBtn modalCloseBtn icon pointer flex alignCenter justifyCenter" @click="closeModal">
+                close
+            </span>
+        </div>
     </dialog>
     
-    <a href="#header" class="icon " id="homeButton">arrow_upward</a>
+    <a href="#header" class="icon" id="homeButton">arrow_upward</a>
 </template>
 
 <script setup>
@@ -81,14 +82,11 @@ const closePdfModal = () => {
 }
 
 #masterModal {
-    /* width: 95vw;
-    height: 90vh; */
     margin: auto;
     background-color: transparent;
     border: none;
-    /* margin: auto; */
-    /* display: grid;
-    place-items: center; */
+    outline: none;
+    isolation: isolate;
 }
 .modalCloseBtn {
     width: 45px;
@@ -97,8 +95,8 @@ const closePdfModal = () => {
     color: white;
     background-color: #000000;
     border-radius: 10px;
+    margin-bottom: 5px;
     z-index: 100000000000;
-    right: 10px;
     line-height: 40px;
 }
 
