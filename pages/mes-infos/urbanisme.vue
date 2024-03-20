@@ -2,11 +2,11 @@
     <HeaderMain :data="headerData" />
 
     <main class="mainHistoire">
-       
-
+        <SectionPlateformeUnique />
+        
         <div>
             <SectionMainSloted
-                :data="{ title: 'Description', image: '/images/plu/statuts.jpg', imageAlt: 'Statuts Poullaouen', localImage: true }">
+                :data="{ title: 'Plan Local d’Urbanisme (PLU)', image: '/images/plu/statuts.jpg', imageAlt: 'Statuts Poullaouen', localImage: true }">
                 <div class="slotedSectionTextBox page-text flex column justifyCenter pad20 gap10">
                     <h4>Quel est le rôle du PLU?</h4>
                     <p>
@@ -82,7 +82,7 @@ const headerData = {
             alt: "L'entrée du bourg de Poullaouen",
         }
     ],
-    title: 'Le Plan Local d’Urbanisme (PLU)',
+    title: 'Urbanisme',
     path: [
         {
             text: 'Accueil',

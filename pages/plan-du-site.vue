@@ -55,7 +55,7 @@
                     <ul class="levelTwo flex column gap10">
                         <li><NuxtLink to="/mes-infos/transports">Les transports</NuxtLink></li>
                         <li><NuxtLink to="/mes-infos/se-loger">Se loger</NuxtLink></li>
-                        <li><NuxtLink to="/mes-infos/plan-local-d-hurbanisme">Le plan local d’urbanisme (PLU)</NuxtLink></li>
+                        <li><NuxtLink to="/mes-infos/urbanisme">Urbanisme</NuxtLink></li>
                         <li><NuxtLink to="/mes-infos/eau-et-assainissement">Eau et assainissement</NuxtLink></li>
                         <li><NuxtLink to="/mes-infos/gestion-des-dechets">Gestion et déchets</NuxtLink></li>
                     </ul>

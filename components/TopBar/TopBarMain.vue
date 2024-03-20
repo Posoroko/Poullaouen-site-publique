@@ -97,8 +97,8 @@ const links = {
             path: "/mes-infos/se-loger"
         },
         {
-            text: "Le plan local d'urbanisme (PLU)",
-            path: "/mes-infos/plan-local-d-hurbanisme"
+            text: "Urbanisme",
+            path: "/mes-infos/urbanisme"
         },
         {
             text: "Eau et assainissement",
