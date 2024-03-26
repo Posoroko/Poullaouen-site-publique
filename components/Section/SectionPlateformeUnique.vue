@@ -16,7 +16,7 @@
             <ul>
                 <li>Certificat d’urbanisme (CU)</li>
                 <li>Déclaration de cession (DC)</li>
-                <li>Déclaration préalables (DP)</li>
+                <li>Déclaration préalable (DP)</li>
                 <li>Déclaration d’intention d’aliéner (DIA)</li>
                 <li>Permis d’aménager (PA)</li>
                 <li>Permis de construire (PC)</li>
@@ -26,7 +26,7 @@
             <div class="buttonBox centered">
                 <a class="flex column" href="https://pohercommunaute.geosphere.fr/guichet-unique/" target="_blank">
                     <span>ACCEDER AU</span>
-                    <span>GUICHER UNIQUE</span>
+                    <span>GUICHET UNIQUE</span>
                 </a>
             </div>
 
