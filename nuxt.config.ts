@@ -79,6 +79,12 @@ export default defineNuxtConfig({
         '/mobile_poullaouen/actualites/241_7301/projet_de_charte_de_la_commune_nouvelle_entre_poullaouen_et_locmaria_berrien': { redirect: '/' },
         '/accueil_poullaouen/pied_de_page/mentions_legales': { redirect: '/mentions-legales' },
         '/accueil_poullaouen/pied_de_page/*': { redirect: '/mentions-legales' },
+        '/mobile_poullaouen/*': { redirect: '/' },
+        '/upload': { redirect: '/' },
+        '/upload/*': { redirect: '/' },
+        '/documents': { redirect: '/' },
+        '/documents/*': { redirect: '/' },
+        '/mes-infos/PLU': { redirect: '/mes-infos/urbanisme' },
         '/mes-infos/plan-local-d-hurbanisme': { redirect: '/mes-infos/urbanisme' },
     },
 })
