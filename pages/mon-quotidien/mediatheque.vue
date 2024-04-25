@@ -107,12 +107,12 @@ const headerData = {
         },
         {
             text: 'Mon quotidien',
-            target: '/mon-quetidien/mediatheque',
+            target: '/mon-quotidien/mediatheque',
             active: false
         },
         {
             text: 'Médiathèque',
-            target: '/mon-quetidien/mediatheque',
+            target: '/mon-quotidien/mediatheque',
             active: false
         }
     ]
