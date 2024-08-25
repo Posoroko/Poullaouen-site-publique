@@ -54,7 +54,7 @@ const links = {
         },
         {
             text: "Les équipements sportifs et de loisirs",
-            path: "/mon-quotidien/equipements-sportifs-et-de-loisir"
+            path: "/mon-quotidien/equipements-sportifs-et-de-loisirs"
         },
         {
             text: "Les commerces et entreprises",
