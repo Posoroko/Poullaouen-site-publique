@@ -86,5 +86,6 @@ export default defineNuxtConfig({
         '/documents/*': { redirect: '/' },
         '/mes-infos/PLU': { redirect: '/mes-infos/urbanisme' },
         '/mes-infos/plan-local-d-hurbanisme': { redirect: '/mes-infos/urbanisme' },
+        '/mon-quotidien/equipements-sportifs-et-de-loisir': { redirect: '/mon-quotidien/equipements-sportifs-et-de-loisirs' }
     },
 })
