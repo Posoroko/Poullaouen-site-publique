@@ -53,7 +53,7 @@ const links = {
             path: "/mon-quotidien/mediatheque"
         },
         {
-            text: "Les équipements sportifs et de loisir",
+            text: "Les équipements sportifs et de loisirs",
             path: "/mon-quotidien/equipements-sportifs-et-de-loisir"
         },
         {
