@@ -92,12 +92,12 @@ const headerData = {
         },
         {
             text: 'Mon quotidien',
-            target: '/mo-quotidien/les-equipements-sportifs-et-de-loisir',
+            target: '/mon-quotidien/les-equipements-sportifs-et-de-loisirs',
             active: false
         },
         {
-            text: 'Equipements sportifs et de loisir',
-            target: '/ma-mairie/les-equipements-sportifs-et-de-loisir',
+            text: 'Equipements sportifs et de loisirs',
+            target: '/mon-quotidien/les-equipements-sportifs-et-de-loisirs',
             active: false
         }
     ]
