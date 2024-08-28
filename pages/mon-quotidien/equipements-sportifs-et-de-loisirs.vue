@@ -83,7 +83,7 @@ const headerData = {
             alt: 'Aire de loisir de Poullaouen',
         }
     ],
-    title: 'Les équipements sportifs et de loisir',
+    title: 'Les équipements sportifs et de loisirs',
     path: [
         {
             text: 'Accueil',
