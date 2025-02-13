@@ -18,12 +18,12 @@
                 <p class="fileName">{{ fileName }}</p>
 
                 <NuxtLink class="button blue_action flex pointer alignCenter" :to="data.file">
-                    <span class="icon">download</span>
+                    <span class="icon" aria-hidden="true">download</span>
                     <span class="italic page-text">télécharger</span>
                 </NuxtLink>
 
                 <span class="button blue_action flex pointer alignCenter">
-                    <span class="icon">visibility</span>
+                    <span class="icon" aria-hidden="true">visibility</span>
                     <span class="italic page-text">afficher</span>
                 </span>
             </div>

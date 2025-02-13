@@ -55,21 +55,21 @@
                         <p class="w100 flex justifyBetween alignCenter gap10">
                             <span class="flex gap10"> <b>Poullaouen :</b> Liste des villages - semaines paires</span>
                             <span class="flex alignCenter gap5">
-                                <span class="icon">visibility</span>
+                                <span class="icon" aria-hidden="true">visibility</span>
                                 <a href="/dechets/Poullaouen Semaines Paires.png" target="_blank">Consulter</a>
                             </span>
                         </p>
                         <p class="w100 flex justifyBetween gap10">
                             <span class="flex gap10"> <b>Poullaouen :</b> Liste des villages - semaines impaires</span>
                             <span class="flex alignCenter gap5">
-                                <span class="icon">visibility</span>
+                                <span class="icon" aria-hidden="true">visibility</span>
                                 <a href="/dechets/Poullaouen Semaines Impaires.png" target="_blank">Consulter</a>
                             </span>
                         </p>
                         <p class="w100 flex justifyBetween">
                             <span class="flex gap10"> <b>Locmaria-Berrien :</b> Liste des villages</span>
                             <span class="flex alignCenter gap5">
-                                <span class="icon">visibility</span>
+                                <span class="icon" aria-hidden="true">visibility</span>
                                 <a href="/dechets/Zones de collecte Locmaria.png" target="_blank">Consulter</a>
                             </span>
                         </p>
@@ -105,11 +105,11 @@
                             <b>Consigne du tri sélectif</b> 
                             
                             <!-- <span class="flex alignCenter gap10">
-                                <span class="icon">visibility</span>
+                                <span class="icon" aria-hidden="true">visibility</span>
                                 <a class="noLineLink" href="/dechets/consignes tri.png" target="_blank">Consulter</a>
                             </span> -->
                             <span class="flex alignCenter gap10">
-                                <span class="icon">download</span>
+                                <span class="icon" aria-hidden="true">download</span>
                                 <a class="noLineLink" href="/dechets/consignes tri.png" download>Télécharger</a>
                             </span>
                         </p>
@@ -165,13 +165,13 @@
 
                         <div class="infoBox flex column gap5 w100">
                             <p>Pour se procurer un composteur ou un bio-seau :</p>
-                            <p class="flex alignCenter gap10"><span class="icon">call</span>02 98 99 84 43 / 06 45 47 39 62</p>
+                            <p class="flex alignCenter gap10"><span class="icon" aria-hidden="true">call</span>02 98 99 84 43 / 06 45 47 39 62</p>
                             <p class="flex alignCenter gap10"><span class="icon alignCenter gap10">mail</span><a class="noLineLink alignCenter" href="mailto: tri@poher.bzh">tri@poher.bzh</a></p>
                             <p class="flex justifyStart gap20"> 
                                 <b>Guide de compostage</b>
                                 <span class="flex alignCenter gap10">
-                                    <!-- <span class="icon">visibility</span> <a class="noLineLink" href="/dechets/leguideducompostage.pdf" target="_blank">Consulter</a> -->
-                                    <span class="icon">download</span> <a class="noLineLink" href="/dechets/leguideducompostage.pdf" download>Télécharger</a>
+                                    <!-- <span class="icon" aria-hidden="true">visibility</span> <a class="noLineLink" href="/dechets/leguideducompostage.pdf" target="_blank">Consulter</a> -->
+                                    <span class="icon" aria-hidden="true">download</span> <a class="noLineLink" href="/dechets/leguideducompostage.pdf" download>Télécharger</a>
                                 </span>
                                 
                             </p>
@@ -185,15 +185,15 @@
                     <CardsTallMain  title="Déchetterie de Carhaix" cardImage="/images/dechets/Déchetterie Carhaix.jpg" :localImage="true">
                         <div class="bottomBox flex column gap10">
                             <p class="contentRow flex">
-                                <span class="icon">location_on</span>
+                                <span class="icon" aria-hidden="true">location_on</span>
                                 <span class="textContent">Kervoazou</span>
                             </p>
                             <p class="contentRow flex">
-                                <span class="icon">schedule</span>
+                                <span class="icon" aria-hidden="true">schedule</span>
                                 <span class="textContent">Du lundi au samedi de 9h à 12h et de 13h30 à 18h, sauf le mardi après-midi, ouverture à 15h.</span>
                             </p>
                             <p class="contentRow flex">
-                                <span class="icon">call</span>
+                                <span class="icon" aria-hidden="true">call</span>
                                 <span class="textContent">02 98 93 37 36</span>
                             </p>
                         </div>
@@ -202,15 +202,15 @@
                     <CardsTallMain  title="Déchetterie de Locmaria-Berrien" cardImage="/images/dechets/Déchetterie Locmaria.jpg" :localImage="true">
                         <div class="bottomBox flex column gap10 justifyCenter alignStart">
                             <p class="contentRow flex">
-                                <span class="icon">location_on</span>
+                                <span class="icon" aria-hidden="true">location_on</span>
                                 <span class="textContent">ZA du Vieux Tronc</span>
                             </p>
                             <p class="contentRow flex">
-                                <span class="icon">schedule</span>
+                                <span class="icon" aria-hidden="true">schedule</span>
                                 <span class="textContent">Du lundi au samedi de 9h15 à 12h et de 14h à 17h45. Fermée le lundi après-midi et le mardi toute la journée</span>
                             </p>
                             <p class="contentRow flex">
-                                <span class="icon">call</span>
+                                <span class="icon" aria-hidden="true">call</span>
                                 <span class="textContent">02 98 99 82 49</span>
                             </p>
                         </div>

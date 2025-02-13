@@ -32,8 +32,8 @@
     </div>
 
     <a href="#footerInfo" id="tinyWidget" class="tinyWidget flex gap10">
-        <span class="icon">call</span>
-        <span class="icon">email</span>
+        <span class="icon" aria-hidden="true">call</span>
+        <span class="icon" aria-hidden="true">email</span>
     </a>
  
 

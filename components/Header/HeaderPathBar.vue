@@ -2,7 +2,7 @@
     <div class="pathBox brownBG centered">
         <div class="path mainWidth flex alignCenter wrap gap10">
             <span class="step flex alignCenter gap10" v-for="step in path" :key="step">
-                <span class="icon">chevron_right</span>
+                <span class="icon" aria-hidden="true">chevron_right</span>
 
                 <nuxtLink :to="step.target" class="italic stepLink flex alignCenter" :class="{ pathBarActive : step.active, pathBarInactive: !step.active}">
                     {{ step.text }}

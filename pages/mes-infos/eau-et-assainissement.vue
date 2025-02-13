@@ -17,19 +17,19 @@
                     </p>
 
                     <div class="infoBox">
-                        <p class="flex alignCenter"> <span class="icon">location_on</span> Service client</p>
-                        <p class="flex alignCenter"> <span class="icon">call</span> 0969 323 529</p>
+                        <p class="flex alignCenter"> <span class="icon" aria-hidden="true">location_on</span> Service client</p>
+                        <p class="flex alignCenter"> <span class="icon" aria-hidden="true">call</span> 0969 323 529</p>
                         <p class="flex alignCenter"> <span class="whiteIcon">schedule</span> 8h-18h du lundi au vendredi</p>
                         <p class="flex alignCenter"> <span class="whiteIcon">emergency</span> Service urgence 7j/7 - 24h/24</p>
-                        <p class="flex alignCenter"> <span class="icon">language</span> <a class="externalLink" href="https://www.eau.veolia.fr" target="_blank">www.eau.veolia.fr</a></p>
+                        <p class="flex alignCenter"> <span class="icon" aria-hidden="true">language</span> <a class="externalLink" href="https://www.eau.veolia.fr" target="_blank">www.eau.veolia.fr</a></p>
                         <br>
                         <p>Le service de distribution d’eau sur <b>Locmaria-Berrien</b> est géré par la <b>commune</b>.</p>
                         <br>
-                        <p class="flex alignCenter"> <span class="icon">location_on</span>Mairie de Poullaouen</p>
-                        <p class="flex alignCenter"> <span class="icon">call</span>02 98 93 50 76</p>
+                        <p class="flex alignCenter"> <span class="icon" aria-hidden="true">location_on</span>Mairie de Poullaouen</p>
+                        <p class="flex alignCenter"> <span class="icon" aria-hidden="true">call</span>02 98 93 50 76</p>
                         <br>
-                        <p class="flex alignCenter"> <span class="icon">location_on</span>Mairie de Locmaria-Berrien</p>
-                        <p class="flex alignCenter"> <span class="icon">call</span>02 98 99 73 09</p>
+                        <p class="flex alignCenter"> <span class="icon" aria-hidden="true">location_on</span>Mairie de Locmaria-Berrien</p>
+                        <p class="flex alignCenter"> <span class="icon" aria-hidden="true">call</span>02 98 99 73 09</p>
                     </div>
                 </div>
             </SectionMainSloted>
@@ -56,10 +56,10 @@
                     </p>
 
                     <div class="infoBox">
-                        <p class="flex alignCenter"> <span class="icon">location_on</span>Mairie de Poullaouen</p>
-                        <p class="flex alignCenter"> <span class="icon">call</span>02 98 93 50 76</p>
-                        <p class="flex alignCenter"> <span class="icon">location_on</span>Mairie de Locmaria-Berrien</p>
-                        <p class="flex alignCenter"> <span class="icon">call</span>02 98 99 73 09</p>
+                        <p class="flex alignCenter"> <span class="icon" aria-hidden="true">location_on</span>Mairie de Poullaouen</p>
+                        <p class="flex alignCenter"> <span class="icon" aria-hidden="true">call</span>02 98 93 50 76</p>
+                        <p class="flex alignCenter"> <span class="icon" aria-hidden="true">location_on</span>Mairie de Locmaria-Berrien</p>
+                        <p class="flex alignCenter"> <span class="icon" aria-hidden="true">call</span>02 98 99 73 09</p>
                     </div>
 
                 </div>
@@ -88,10 +88,10 @@
                     </p>
 
                     <div class="infoBox">
-                        <p class="flex alignCenter"> <span class="icon">location_on</span>SPANC - Maison des services au public - Carhaix</p>
-                        <p class="flex alignCenter"> <span class="icon">call</span>02 98 99 48 03</p>
-                        <p class="flex alignCenter"> <span class="icon">email</span><a class="" href="mailto:spanc@poher.bzh">spanc@poher.bzh</a></p>
-                        <p class="flex alignCenter"> <span class="icon">language</span><a class="externalLink" href="https://www.poher.bzh/accueil_poher/les_services/lassainissement_non_collectif" target="_blank">www.poher.bzh</a></p>
+                        <p class="flex alignCenter"> <span class="icon" aria-hidden="true">location_on</span>SPANC - Maison des services au public - Carhaix</p>
+                        <p class="flex alignCenter"> <span class="icon" aria-hidden="true">call</span>02 98 99 48 03</p>
+                        <p class="flex alignCenter"> <span class="icon" aria-hidden="true">email</span><a class="" href="mailto:spanc@poher.bzh">spanc@poher.bzh</a></p>
+                        <p class="flex alignCenter"> <span class="icon" aria-hidden="true">language</span><a class="externalLink" href="https://www.poher.bzh/accueil_poher/les_services/lassainissement_non_collectif" target="_blank">www.poher.bzh</a></p>
                     </div>
 
                 </div>

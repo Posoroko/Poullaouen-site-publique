@@ -22,7 +22,7 @@
                     
                         <div class="assoBottomBox flex column gap10 justifyStart alignStart">
                             <div class="flex assoPresBox column" v-if="asso.presidents.length">
-                                <p class="flex alignCenter gap10"><span class="icon">person</span><b>Président-e<span v-if="asso.presidents.length > 1">-s</span>:</b></p>
+                                <p class="flex alignCenter gap10"><span class="icon" aria-hidden="true">person</span><b>Président-e<span v-if="asso.presidents.length > 1">-s</span>:</b></p>
                                 
                                 <ul class="assoPresUl flex column justifyCenter gap100">
                                     <li v-for="pres in asso.presidents" :key="pres.Contacts_id.id" class="assoPresLi flex column gap5">
@@ -33,8 +33,14 @@
                             </div>
 
                             <div class="infoBox flex column gap10">
-                                <p class="flex alignCenter gap10" v-if="asso.email"> <span class="icon">mail</span> <a :href="`emailto:${asso.email}`">{{ asso.email }}</a> </p>
-                                <p class="flex elignCenter gap10" v-if="asso.website"> <span class="icon">language</span> <a class="externalLink" :href="asso.website" target="_blank">Visiter le site web</a> </p>
+                                <p class="flex alignCenter gap10" v-if="asso.email">
+                                    <span class="icon" aria-hidden="true">mail</span> 
+                                    <a :href="`emailto:${asso.email}`">{{ asso.email }}</a>
+                                </p>
+                                <p class="flex elignCenter gap10" v-if="asso.website">
+                                    <span class="icon" aria-hidden="true">language</span> 
+                                    <a class="externalLink" :href="asso.website" target="_blank">Visiter le site web</a>
+                                </p>
                             </div>
                         </div>
                     </CardsTallMain>

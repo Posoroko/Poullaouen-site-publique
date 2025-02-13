@@ -18,7 +18,7 @@
                         <div class="downloadBox" v-if="actu.file">
                             <p class="flex alignCenter gap20">
                                 <b>{{ actu.fileName }}</b>
-                                <a :href="`${directusAssets}${actu.file}`" class="flex alignCenter gap5"><span class="icon">download</span> <span>télécharger</span> </a>
+                                <a :href="`${directusAssets}${actu.file}`" class="flex alignCenter gap5"><span class="icon" aria-hidden="true">download</span> <span>télécharger</span> </a>
                             </p>     
                         </div>
                     </div>

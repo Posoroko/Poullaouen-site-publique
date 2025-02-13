@@ -37,9 +37,9 @@
                     </p>
 
                     <div class="infoBox">
-                        <p class="flex alignCenter gap10"> <span class="icon">location_on</span> Maison des Services Publics - Place de la Tour d’Auvergne - Carhaix</p>
-                        <p class="flex alignCenter gap10"> <span class="icon">call</span> 02 98 99 48 00</p>
-                        <p class="flex alignCenter gap10"> <span class="icon">language</span> <a class="externalLink" href="https://www.poher.bzh/accueil_poher/les_services/mobilites/le_transport_scolaire/annee_scolaire_2022_2023" target="_blank">www.poher.bzh</a></p>
+                        <p class="flex alignCenter gap10"> <span class="icon" aria-hidden="true">location_on</span> Maison des Services Publics - Place de la Tour d’Auvergne - Carhaix</p>
+                        <p class="flex alignCenter gap10"> <span class="icon" aria-hidden="true">call</span> 02 98 99 48 00</p>
+                        <p class="flex alignCenter gap10"> <span class="icon" aria-hidden="true">language</span> <a class="externalLink" href="https://www.poher.bzh/accueil_poher/les_services/mobilites/le_transport_scolaire/annee_scolaire_2022_2023" target="_blank">www.poher.bzh</a></p>
                     </div>
                 </div>
             </SectionMainSloted>
@@ -56,9 +56,9 @@
                     </p>
 
                     <div class="infoBox">
-                        <!-- <p class="flex alignCenter gap10"> <span class="icon">location_on</span> Maison des Services Publics - Place de la Tour d’Auvergne - Carhaix</p> -->
-                        <p class="flex alignCenter gap10"> <span class="icon">call</span> 02 98 99 48 00</p>
-                        <!-- <p class="flex alignCenter gap10"> <span class="icon">language</span> <a class="externalLink" href="https://www.poher.bzh/accueil_poher">www.poher.bzh</a></p> -->
+                        <!-- <p class="flex alignCenter gap10"> <span class="icon" aria-hidden="true">location_on</span> Maison des Services Publics - Place de la Tour d’Auvergne - Carhaix</p> -->
+                        <p class="flex alignCenter gap10"> <span class="icon" aria-hidden="true">call</span> 02 98 99 48 00</p>
+                        <!-- <p class="flex alignCenter gap10"> <span class="icon" aria-hidden="true">language</span> <a class="externalLink" href="https://www.poher.bzh/accueil_poher">www.poher.bzh</a></p> -->
                     </div>
                 </div>
             </SectionMainSloted>
@@ -88,7 +88,7 @@
                     </p>
 
                     <div class="infoBox">
-                        <p class="flex alignCenter gap10"> <span class="icon">call</span> 02 98 99 38 61</p>
+                        <p class="flex alignCenter gap10"> <span class="icon" aria-hidden="true">call</span> 02 98 99 38 61</p>
                     </div>
                 </div>
             </SectionMainSloted>
@@ -135,9 +135,9 @@
                         </p>
     
                         <div class="infoBox">
-                            <p class="flex alignCenter gap10"> <span class="icon">location_on</span> Maison des Services Publics - Place de la Tour d’Auvergne - Carhaix</p>
-                            <p class="flex alignCenter gap10"> <span class="icon">call</span> 02 98 99 48 00</p>
-                            <p class="flex alignCenter gap10"> <span class="icon">language</span> <a class="externalLink" href="https://www.poher.bzh/accueil_poher/les_services/mobilites/covoiturage?fbclid=IwAR0HDgrsKefyNGKnVy8Lf7OjuDKOE7T7GvW3r2aPUC-izuisYpfHm9PyABI" target="_blank">www.poher.bzh</a></p>
+                            <p class="flex alignCenter gap10"> <span class="icon" aria-hidden="true">location_on</span> Maison des Services Publics - Place de la Tour d’Auvergne - Carhaix</p>
+                            <p class="flex alignCenter gap10"> <span class="icon" aria-hidden="true">call</span> 02 98 99 48 00</p>
+                            <p class="flex alignCenter gap10"> <span class="icon" aria-hidden="true">language</span> <a class="externalLink" href="https://www.poher.bzh/accueil_poher/les_services/mobilites/covoiturage?fbclid=IwAR0HDgrsKefyNGKnVy8Lf7OjuDKOE7T7GvW3r2aPUC-izuisYpfHm9PyABI" target="_blank">www.poher.bzh</a></p>
                         </div>
                     </div>
                 </SectionMainSloted>
@@ -164,8 +164,8 @@
                         </p>
     
                         <div class="infoBox">
-                            <p class="flex alignCenter gap10"> <span class="icon">call</span> 02 98 99 48 00</p>
-                            <p class="flex alignCenter gap10"> <span class="icon">language</span> <a class="externalLink" href="https://www.mobibreizh.bzh/" target="_blank">www.mobibreizh.bzh</a></p>
+                            <p class="flex alignCenter gap10"> <span class="icon" aria-hidden="true">call</span> 02 98 99 48 00</p>
+                            <p class="flex alignCenter gap10"> <span class="icon" aria-hidden="true">language</span> <a class="externalLink" href="https://www.mobibreizh.bzh/" target="_blank">www.mobibreizh.bzh</a></p>
                         </div>
                     </div>
                 </SectionMainSloted>
@@ -183,7 +183,7 @@
                         </p>
 
                         <div class="infoBox">
-                            <p class="flex alignCenter gap10"> <span class="icon">language</span> <a href="https://www.ouestgo.fr/" target="_blank" class="externalLink">www.ouestgo.fr</a></p>
+                            <p class="flex alignCenter gap10"> <span class="icon" aria-hidden="true">language</span> <a href="https://www.ouestgo.fr/" target="_blank" class="externalLink">www.ouestgo.fr</a></p>
                         </div>
                     </div>
                 </SectionMainSloted>
@@ -197,8 +197,8 @@
                         </p>
 
                         <div class="infoBox  ">
-                            <p class="flex alignCenter gap10"> <span class="icon">call</span> 02 99 35 10 77</p>
-                            <p class="flex alignCenter gap10"> <span class="icon">language</span> <a class="externalLink" href="https://www.ehopcovoiturons-nous.fr/" target="_blank">www.covoiturons-nous.fr</a></p>
+                            <p class="flex alignCenter gap10"> <span class="icon" aria-hidden="true">call</span> 02 99 35 10 77</p>
+                            <p class="flex alignCenter gap10"> <span class="icon" aria-hidden="true">language</span> <a class="externalLink" href="https://www.ehopcovoiturons-nous.fr/" target="_blank">www.covoiturons-nous.fr</a></p>
                         </div>
                     </div>
 
@@ -222,8 +222,8 @@
                             services de mobilité matériels (voitures, scooters, vélos...), pédagogiques ou financiers.
                         </p>
                         <div class="infoBox">
-                            <p class="flex alignCenter gap10"> <span class="icon">call</span> 02 98 73 53 17</p>
-                            <p class="flex alignCenter gap10"> <span class="icon">language</span><a href="https://wimoov.org/" target="_blank" class="externalLink">wimoov.org</a></p>
+                            <p class="flex alignCenter gap10"> <span class="icon" aria-hidden="true">call</span> 02 98 73 53 17</p>
+                            <p class="flex alignCenter gap10"> <span class="icon" aria-hidden="true">language</span><a href="https://wimoov.org/" target="_blank" class="externalLink">wimoov.org</a></p>
                         </div>
                     </div>
                 </SectionMainSloted>

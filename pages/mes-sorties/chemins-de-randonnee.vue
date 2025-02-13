@@ -43,8 +43,8 @@
 
             <div class="moreInfo">
                 <p class="flex alignCenter gap10">Carte : 
-                    <a class="flex alignCenter gap10" href="/images/randonnee/bois de lemezec.jpg" target="_blank"><span class="icon"> visibility</span> <span>Consulter</span></a>
-                    <a class="flex alignCenter gap10" href="/images/randonnee/bois de lemezec.jpg" download><span class="icon"> download</span> <span>Télécharger</span></a>
+                    <a class="flex alignCenter gap10" href="/images/randonnee/bois de lemezec.jpg" target="_blank"><span class="icon" aria-hidden="true"> visibility</span> <span>Consulter</span></a>
+                    <a class="flex alignCenter gap10" href="/images/randonnee/bois de lemezec.jpg" download><span class="icon" aria-hidden="true"> download</span> <span>Télécharger</span></a>
                 </p>
             </div>
         </SectionMainSloted>
@@ -72,8 +72,8 @@
     
                 <div class="moreInfo">
                     <p class="flex alignCenter gap10">Carte : 
-                        <a class="flex alignCenter gap10" href="/images/randonnee/circuit le petit train.jpg" target="_blank"><span class="icon"> visibility</span> <span>Consulter</span></a>
-                        <a class="flex alignCenter gap10" href="/images/randonnee/circuit le petit train.jpg" download><span class="icon"> download</span> <span>Télécharger</span></a>
+                        <a class="flex alignCenter gap10" href="/images/randonnee/circuit le petit train.jpg" target="_blank"><span class="icon" aria-hidden="true"> visibility</span> <span>Consulter</span></a>
+                        <a class="flex alignCenter gap10" href="/images/randonnee/circuit le petit train.jpg" download><span class="icon" aria-hidden="true"> download</span> <span>Télécharger</span></a>
                     </p>
                 </div>
             </SectionMainSloted>
@@ -102,8 +102,8 @@
 
             <div class="moreInfo">
                 <p class="flex alignCenter gap10">Carte : 
-                    <a class="flex alignCenter gap10" href="/images/randonnee/circuit Botvarec.jpg" target="_blank"><span class="icon"> visibility</span> <span>Consulter</span></a>
-                    <a class="flex alignCenter gap10" href="/images/randonnee/circuit Botvarec.jpg" download><span class="icon"> download</span> <span>Télécharger</span></a>
+                    <a class="flex alignCenter gap10" href="/images/randonnee/circuit Botvarec.jpg" target="_blank"><span class="icon" aria-hidden="true"> visibility</span> <span>Consulter</span></a>
+                    <a class="flex alignCenter gap10" href="/images/randonnee/circuit Botvarec.jpg" download><span class="icon" aria-hidden="true"> download</span> <span>Télécharger</span></a>
                 </p>
             </div>
         </SectionMainSloted>
@@ -146,8 +146,8 @@
 
             <div class="moreInfo">
                 <p class="flex alignCenter gap10">Carte : 
-                    <a class="flex alignCenter gap10" href="/images/randonnee/circuit LES 2 VALLées.jpg" target="_blank"><span class="icon"> visibility</span> <span>Consulter</span></a>
-                    <a class="flex alignCenter gap10" href="/images/randonnee/circuit LES 2 VALLées.jpg" download><span class="icon"> download</span> <span>Télécharger</span></a>
+                    <a class="flex alignCenter gap10" href="/images/randonnee/circuit LES 2 VALLées.jpg" target="_blank"><span class="icon" aria-hidden="true"> visibility</span> <span>Consulter</span></a>
+                    <a class="flex alignCenter gap10" href="/images/randonnee/circuit LES 2 VALLées.jpg" download><span class="icon" aria-hidden="true"> download</span> <span>Télécharger</span></a>
                 </p>
             </div>
         </SectionMainSloted>

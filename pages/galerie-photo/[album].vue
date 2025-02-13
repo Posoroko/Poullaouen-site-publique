@@ -69,7 +69,7 @@ const path = [
         <div class="albumNavBox">
             <div class="albumLinkBox mainWidth">
                 <NuxtLink @click="goBack" class="flex alignCenter gap20 pointer">
-                    <span class="icon">arrow_back</span>
+                    <span class="icon" aria-hidden="true">arrow_back</span>
                     <span>galerie photo</span>
                 </NuxtLink>
 

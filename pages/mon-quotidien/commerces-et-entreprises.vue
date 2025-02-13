@@ -22,31 +22,31 @@
                         
                         <div class="bottomBox flex column gap10 justifyCenter alignStart">
                             <div class="contentRow flex gap10 gap10" v-if="item.hours">
-                                <span class="icon">schedule</span>
+                                <span class="icon" aria-hidden="true">schedule</span>
 
                                 <p class="textContent horaires"> {{ item.hours }} </p>
                             </div>
 
                             <div class=" contentRow flex gap10" v-if="item.adress">
-                                <span class="icon">location_on</span>
+                                <span class="icon" aria-hidden="true">location_on</span>
 
                                 <p class="textContent"> {{ item.adress }} </p>
                             </div>
 
                             <div class="contentRow flex gap10" v-if="item.phone">
-                                <span class="icon">call</span>
+                                <span class="icon" aria-hidden="true">call</span>
 
                                 <p class="textContent"> {{ item.phone }} </p>
                             </div>
 
                             <div class="contentRow flex gap10" v-if="item.email">
-                                <span class="icon">mail</span>
+                                <span class="icon" aria-hidden="true">mail</span>
 
                                 <a :href="`mailto:${item.email}`" class="textContent"> {{ item.email }}  </a>
                             </div>
 
                             <div class="contesflex flex gap10" v-if="item.website">
-                                <span class="icon">language</span>
+                                <span class="icon" aria-hidden="true">language</span>
 
                                 <a :href="`${item.website}`" target="_blank" class="textContent externalLink"> Visiter le site web </a>
                             </div>

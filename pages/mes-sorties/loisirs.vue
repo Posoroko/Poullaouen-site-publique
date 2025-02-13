@@ -62,20 +62,20 @@
                             <li>Photos Aériennes</li> 
                         </ul>
                         <p class="contentRow flex gap10">
-                            <span class="icon">location_on</span>
+                            <span class="icon" aria-hidden="true">location_on</span>
                             <span class="textContent">Stancou - Poullaouen</span>
                         </p>
                         
                         <p class="contentRow flex gap10">
-                            <span class="icon">call</span>
+                            <span class="icon" aria-hidden="true">call</span>
                             <span class="textContent">02 98 93 37 36</span>
                         </p>
                         <p class="contentRow flex gap10">
-                            <span class="icon">email</span>
+                            <span class="icon" aria-hidden="true">email</span>
                             <a href="mailto:laurent@plassart.net" class="textContent">laurent@plassart.net</a>
                         </p>
                         <p class="contentRow flex gap10">
-                            <span class="icon">language</span>
+                            <span class="icon" aria-hidden="true">language</span>
                             <a href="http://www.aero-plass.com" target="_blank" class="externalLink">Voir le site web</a>
                         </p>
                     </div>
@@ -93,20 +93,20 @@
                             19ème siècle.
                         </p>
                         <p class="contentRow flex gap10">
-                            <span class="icon">location_on</span>
+                            <span class="icon" aria-hidden="true">location_on</span>
                             <span class="textContent">Le Bourg - Locmaria-Berrien</span>
                         </p>
 
                         <p class="contentRow flex gap10">
-                            <span class="icon">call</span>
+                            <span class="icon" aria-hidden="true">call</span>
                             <span class="textContent">06.85.25.07.08</span>
                         </p>
                         <p class="contentRow flex gap10">
-                            <span class="icon">email</span>
+                            <span class="icon" aria-hidden="true">email</span>
                             <a href="mailto:asamlb@hotmail.fr" class="textContent">asamlb@hotmail.fr</a>
                         </p>
                         <p class="contentRow flex gap10">
-                            <span class="icon">language</span>
+                            <span class="icon" aria-hidden="true">language</span>
                             <a href="https://www.minelocmariaberrien.com" target="_blank" class="externalLink">Voir le site web</a>
                         </p>
                     </div>
@@ -121,20 +121,20 @@
                             toboggan, cheval à bascule ...
                         </p>
                         <p class="contentRow flex gap10">
-                            <span class="icon">location_on</span>
+                            <span class="icon" aria-hidden="true">location_on</span>
                             <span class="textContent">Av. du Général de Gaulle - Poullaouen</span>
                         </p>
 
                         <p class="contentRow flex gap10">
-                            <span class="icon">call</span>
+                            <span class="icon" aria-hidden="true">call</span>
                             <span class="textContent">02 98 93 50 76</span>
                         </p>
                         <p class="contentRow flex gap10">
-                            <span class="icon">email</span>
+                            <span class="icon" aria-hidden="true">email</span>
                             <a href="mailto:mairie-de-poullaouen@wanadoo.fr" class="textContent">mairie-de-poullaouen@wanadoo.fr</a>
                         </p>
                         <p class="contentRow flex gap10">
-                            <span class="icon">language</span>
+                            <span class="icon" aria-hidden="true">language</span>
                             <NuxtLink to="/mon-quotidien/equipements-sportifs-et-de-loisir" target="_blank" class="externalLink">Voir le site web</NuxtLink>
                         </p>
                     </div>
@@ -156,20 +156,20 @@
                                 immersive et interactive.
                             </p>
                             <p class="contentRow flex gap10">
-                                <span class="icon">location_on</span>
+                                <span class="icon" aria-hidden="true">location_on</span>
                                 <span class="textContent">5 rue du Docteur Menguy - Carhaix</span>
                             </p>
 
                             <p class="contentRow flex gap10">
-                                <span class="icon">call</span>
+                                <span class="icon" aria-hidden="true">call</span>
                                 <span class="textContent">02.98.17.53.07</span>
                             </p>
                             <p class="contentRow flex gap10">
-                                <span class="icon">email</span>
+                                <span class="icon" aria-hidden="true">email</span>
                                 <a href="mailto:accueil.vorgium@poher.bzh" class="textContent">accueil.vorgium@poher.bzh</a>
                             </p>
                             <p class="contentRow flex gap10">
-                                <span class="icon">language</span>
+                                <span class="icon" aria-hidden="true">language</span>
                                 <a href="https://www.vorgium.bzh/" target="_blank" class="externalLink">Voir le site web</a>
                             </p>
                         </div>
@@ -187,20 +187,20 @@
                             nageurs, cours de natation.
                         </p>
                         <p class="contentRow flex gap10">
-                            <span class="icon">location_on</span>
+                            <span class="icon" aria-hidden="true">location_on</span>
                             <span class="textContent">rue de la Piscine - Carhaix</span>
                         </p>
 
                         <p class="contentRow flex gap10">
-                            <span class="icon">call</span>
+                            <span class="icon" aria-hidden="true">call</span>
                             <span class="textContent">02.98.99.39.50</span>
                         </p>
                         <p class="contentRow flex gap10">
-                            <span class="icon">email</span>
+                            <span class="icon" aria-hidden="true">email</span>
                             <a href="mailto:mairie-de-poullaouen@wanadoo.fr" class="textContent">mairie-de-poullaouen@wanadoo.fr</a>
                         </p>
                         <p class="contentRow flex gap10">
-                            <span class="icon">language</span>
+                            <span class="icon" aria-hidden="true">language</span>
                             <a href="https://plijadour.poher.bzh/accueil_plijadour" target="_blank" class="externalLink">Voir le site web</a>
                         </p>
                     </div>
@@ -217,20 +217,20 @@
                             l’accueil de vos manifestations.
                         </p>
                         <p class="contentRow flex gap10">
-                            <span class="icon">location_on</span>
+                            <span class="icon" aria-hidden="true">location_on</span>
                             <span class="textContent">rue Jean Monnet - Carhaix</span>
                         </p>
 
                         <p class="contentRow flex gap10">
-                            <span class="icon">call</span>
+                            <span class="icon" aria-hidden="true">call</span>
                             <span class="textContent">02.98.99.37.50</span>
                         </p>
                         <p class="contentRow flex gap10">
-                            <span class="icon">email</span>
+                            <span class="icon" aria-hidden="true">email</span>
                             <a href="mailto:mairie-de-poullaouen@wanadoo.fr" class="textContent">mairie-de-poullaouen@wanadoo.fr</a>
                         </p>
                         <p class="contentRow flex gap10">
-                            <span class="icon">language</span>
+                            <span class="icon" aria-hidden="true">language</span>
                             <a href="http://glenmor.bzh/index.php/fr/" target="_blank" class="externalLink">Voir le site web</a>
                         </p>
                     </div>
@@ -247,20 +247,20 @@
                             manège, kart à pédales, luge sur bouée...
                         </p>
                         <p class="contentRow flex gap10">
-                            <span class="icon">location_on</span>
+                            <span class="icon" aria-hidden="true">location_on</span>
                             <span class="textContent">Vallée de l’Hyères - Carhaix</span>
                         </p>
 
                         <p class="contentRow flex gap10">
-                            <span class="icon">call</span>
+                            <span class="icon" aria-hidden="true">call</span>
                             <span class="textContent">06.50.19.15.98</span>
                         </p>
                         <p class="contentRow flex gap10">
-                            <span class="icon">email</span>
+                            <span class="icon" aria-hidden="true">email</span>
                             <a href="mailto:parc-aventure@karaezadrenaline.com" class="textContent">parc-aventure@karaezadrenaline.com</a>
                         </p>
                         <p class="contentRow flex gap10">
-                            <span class="icon">language</span>
+                            <span class="icon" aria-hidden="true">language</span>
                             <a href="https://www.karaezadrenaline.com" target="_blank" class="externalLink">Voir le site web</a>
                         </p>
                     </div>
@@ -273,20 +273,20 @@
                             du parcours 9 trous pour exprimer leur talent.
                         </p>
                         <p class="contentRow flex gap10">
-                            <span class="icon">location_on</span>
+                            <span class="icon" aria-hidden="true">location_on</span>
                             <span class="textContent">route de Kerniguez - Carhaix</span>
                         </p>
 
                         <p class="contentRow flex gap10">
-                            <span class="icon">call</span>
+                            <span class="icon" aria-hidden="true">call</span>
                             <span class="textContent">02.98.93.79.19</span>
                         </p>
                         <p class="contentRow flex gap10">
-                            <span class="icon">email</span>
+                            <span class="icon" aria-hidden="true">email</span>
                             <a href="mailto:carhaix.golf@wanadoo.fr" class="textContent">carhaix.golf@wanadoo.fr</a>
                         </p>
                         <p class="contentRow flex gap10">
-                            <span class="icon">language</span>
+                            <span class="icon" aria-hidden="true">language</span>
                             <a href="https://www.carhaixgolf.com" target="_blank" class="externalLink">Voir le site web</a>
                         </p>
                     </div>
@@ -302,20 +302,20 @@
                             fauteuils roulants.
                         </p>
                         <p class="contentRow flex gap10">
-                            <span class="icon">location_on</span>
+                            <span class="icon" aria-hidden="true">location_on</span>
                             <span class="textContent">rue Jean Monnet - Carhaix</span>
                         </p>
 
                         <p class="contentRow flex gap10">
-                            <span class="icon">call</span>
+                            <span class="icon" aria-hidden="true">call</span>
                             <span class="textContent">02.98.93.32.64</span>
                         </p>
                         <p class="contentRow flex gap10">
-                            <span class="icon">email</span>
+                            <span class="icon" aria-hidden="true">email</span>
                             <a href="mailto:carhaix.legrandbleu@orange.f r" class="textContent">carhaix.legrandbleu@orange.fr</a>
                         </p>
                         <p class="contentRow flex gap10">
-                            <span class="icon">language</span>
+                            <span class="icon" aria-hidden="true">language</span>
                             <a href="https://www.cinemalegrandbleu.fr " target="_blank" class="externalLink">Voir le site web</a>
                         </p>
                     </div>

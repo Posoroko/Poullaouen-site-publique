@@ -21,9 +21,9 @@
                     </p>
 
                     <div class="infoBox   ">
-                        <p> <span class="icon">location_on</span> Avenue Général De Gaulle - Poullaouen</p>
-                        <p> <span class="icon">call</span> 02 98 93 55 90</p>
-                        <p> <span class="icon">language</span> <a class="externalLink" href="https://lesnotairesdupoher.notaires.fr" target="_blank">www.lesnotairesdupoher.notaires.fr</a></p>
+                        <p> <span class="icon" aria-hidden="true">location_on</span> Avenue Général De Gaulle - Poullaouen</p>
+                        <p> <span class="icon" aria-hidden="true">call</span> 02 98 93 55 90</p>
+                        <p> <span class="icon" aria-hidden="true">language</span> <a class="externalLink" href="https://lesnotairesdupoher.notaires.fr" target="_blank">www.lesnotairesdupoher.notaires.fr</a></p>
                     </div>
                 </div>
             </SectionMainSloted>
@@ -36,9 +36,9 @@
                     </p>
 
                     <div class="infoBox  ">
-                        <p> <span class="icon">location_on</span> Avenue Général De Gaulle - Poullaouen </p>
-                        <p> <span class="icon">call</span> 02 98 93 04 42</p>
-                        <p> <span class="icon">language</span> <a class="externalLink" href="https://www.carhaixpohertourisme.bzh/" target="_blank">www.carhaixpohertourisme.bzh</a></p>
+                        <p> <span class="icon" aria-hidden="true">location_on</span> Avenue Général De Gaulle - Poullaouen </p>
+                        <p> <span class="icon" aria-hidden="true">call</span> 02 98 93 04 42</p>
+                        <p> <span class="icon" aria-hidden="true">language</span> <a class="externalLink" href="https://www.carhaixpohertourisme.bzh/" target="_blank">www.carhaixpohertourisme.bzh</a></p>
                     </div>
                 </div>
             </SectionMainSloted>
@@ -66,9 +66,9 @@
                     </p>
 
                     <div class="infoBox  ">
-                        <p> <span class="icon">location_on</span> Maison des Services Publics - Place de la Tour d’Auvergne - Carhaix</p>
-                        <p> <span class="icon">call</span> 0 805 203 205 (appel gratuit depuis un poste fixe)</p>
-                        <p> <span class="icon">language</span> <a class="externalLink" href="https://alecob.jimdofree.com" target="_blank">www.alecob.jimdofree.com</a></p>
+                        <p> <span class="icon" aria-hidden="true">location_on</span> Maison des Services Publics - Place de la Tour d’Auvergne - Carhaix</p>
+                        <p> <span class="icon" aria-hidden="true">call</span> 0 805 203 205 (appel gratuit depuis un poste fixe)</p>
+                        <p> <span class="icon" aria-hidden="true">language</span> <a class="externalLink" href="https://alecob.jimdofree.com" target="_blank">www.alecob.jimdofree.com</a></p>
                     </div>
                 </div>
             </SectionMainSloted>
@@ -85,9 +85,9 @@
                         </p>
     
                         <div class="infoBox ">
-                            <p> <span class="icon">location_on</span> Maison des Services Publics - Place de la Tour d’Auvergne - Carhaix</p>
-                            <p> <span class="icon">call</span> 02 98 95 99 54</p>
-                            <p> <span class="icon">language</span> <a class="externalLink" href="https://www.soliha.fr" target="_blank">www.soliha.fr</a></p>
+                            <p> <span class="icon" aria-hidden="true">location_on</span> Maison des Services Publics - Place de la Tour d’Auvergne - Carhaix</p>
+                            <p> <span class="icon" aria-hidden="true">call</span> 02 98 95 99 54</p>
+                            <p> <span class="icon" aria-hidden="true">language</span> <a class="externalLink" href="https://www.soliha.fr" target="_blank">www.soliha.fr</a></p>
                         </div>
                     </div>
                 </SectionMainSloted>

@@ -34,7 +34,7 @@
         <SectionMainSloted :data="{ title: 'Informations', image: '/images/mediatheque/interieur1.jpg', localImage: true }">
             <div class="mediathequeBox h100 flex column justifyCenter gap10">
                 <div class="contentRow w100 flex">
-                    <span class="icon">schedule</span>
+                    <span class="icon" aria-hidden="true">schedule</span>
 
                     <ul class="textContent mediathequeSchedule w100 schedule">
                         <li class="w100"> <span>Mercredi:</span> 10h30 - 12h30 (10h - 12h pendant les vacances) </li>
@@ -44,7 +44,7 @@
                 </div>
 
                 <div class=" contentRow flex">
-                    <span class="icon">accessible</span>
+                    <span class="icon" aria-hidden="true">accessible</span>
                     
                     <p class="textContent">
                         Accessible aux personnes à mobilité réduite
@@ -52,21 +52,21 @@
                 </div>
 
                 <div class="contentRow flex">
-                    <span class="icon">call</span>
+                    <span class="icon" aria-hidden="true">call</span>
                         02 98 93 50 58
                     <p class="textContent">
                     </p>
                 </div>
 
                 <div class="contentRow flex">
-                    <span class="icon">mail</span>
+                    <span class="icon" aria-hidden="true">mail</span>
                         mediatheque.poullaouen@yahoo.fr
                     <p class="textContent">
                     </p>
                 </div>
 
                 <div class="contentRow flex">
-                    <span class="icon">language</span>
+                    <span class="icon" aria-hidden="true">language</span>
 
                     <a href="https://poullaouen-pom.c3rb.org/" target="_blank" class="externalLink">
                         Catalogue de la médiathèque

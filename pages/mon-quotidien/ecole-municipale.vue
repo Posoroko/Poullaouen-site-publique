@@ -46,14 +46,14 @@
                         Celle-ci est désormais répartie sur 9 demi-journées avec le mercredi matin travaillé.
                     </p>
 
-                    <p class="flex column gap10">
+                    <div class="flex column gap10">
                         <b>Sur Poullaouen, les horaires des TAP sont les suivants :</b>
                         <ul>
                             <li>Lundi : 13h45 - 14h45</li>
                             <li>Jeudi : 13h45 - 14h45</li>
                             <li>Vendredi : 13h45 - 14h45</li>
                         </ul>
-                    </p>
+                    </div>
 
                     <p class="page-text">
                         Le lundi, mardi, jeudi et vendredi, une garderie payante peut accueillir
@@ -69,7 +69,7 @@
                     </p>
 
                     <div class="flex justifyBetween">
-                        <!-- <p class="flex alignCenter gap10"> <span class="icon">visibility</span> <b>Programme de l'année</b> </p> -->
+                        <!-- <p class="flex alignCenter gap10"> <span class="icon" aria-hidden="true">visibility</span> <b>Programme de l'année</b> </p> -->
                         <div></div>
                         <NuxtLink to="/galerie-photo?categorie=ecole&sous-categorie=tap" class="albumButton blueAlbumButton pointer" >Voir les albums</NuxtLink >
                     </div>
@@ -177,9 +177,9 @@
                     </p>
 
                     <div class="infoBox marTop20 flex column gap5">
-                        <p class="flex alignCenter gap10"> <span class="icon">call</span> 02 98 99 48 00</p>
-                        <p class="flex alignCenter gap5"><span class="icon">email</span><a href="emailto: transport@poher.com"></a>transport@poher.com</p>
-                        <p class="flex alignCenter gap10"> <span class="icon">language</span> <a class="externalLink" target="_blank" href="https://www.poher.bzh/accueil_poher/les_services/mobilites/le_transport_scolaire/annee_scolaire_2022_2023">Poher communauté</a> </p>
+                        <p class="flex alignCenter gap10"> <span class="icon" aria-hidden="true">call</span> 02 98 99 48 00</p>
+                        <p class="flex alignCenter gap5"><span class="icon" aria-hidden="true">email</span><a href="emailto: transport@poher.com"></a>transport@poher.com</p>
+                        <p class="flex alignCenter gap10"> <span class="icon" aria-hidden="true">language</span> <a class="externalLink" target="_blank" href="https://www.poher.bzh/accueil_poher/les_services/mobilites/le_transport_scolaire/annee_scolaire_2022_2023">Poher communauté</a> </p>
                     </div>
                 </div>
             </SectionMainSloted>

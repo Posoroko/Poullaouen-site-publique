@@ -2,12 +2,12 @@
     <div class="randoTopBox">
         <div class="firstRow flex justifyBetween">
             <div class="flex alignCenter gap10 ">
-                <span class="icon">swap_horiz</span>
+                <span class="icon" aria-hidden="true">swap_horiz</span>
                 <span class="randoInfo">{{ data.length }}</span>
             </div>
 
             <div class="flex alignCenter gap10">
-                <span class="icon">schedule</span>
+                <span class="icon" aria-hidden="true">schedule</span>
                 <span class="randoInfo">{{ data.time }}</span>
             </div>
 
@@ -22,11 +22,11 @@
         </div>
 
         <p class="secondRow flex alignCenter gap10">
-            <span class="icon">explore</span> <span class="randoInfo">{{ data.legend }}</span>
+            <span class="icon" aria-hidden="true">explore</span> <span class="randoInfo">{{ data.legend }}</span>
         </p>
 
         <p class="thirdRow flex alignCenter gap10">
-            <span class="icon">flag</span> <span class="randoInfo">{{ data.start }}</span>
+            <span class="icon" aria-hidden="true">flag</span> <span class="randoInfo">{{ data.start }}</span>
         </p>
 
     </div>

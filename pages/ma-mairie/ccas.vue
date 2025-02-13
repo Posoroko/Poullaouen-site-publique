@@ -35,7 +35,7 @@
             
                 <div class="bottomContent">
                     <p class="moreinfo flex gap10 italic">
-                        <span class="icon">call</span>
+                        <span class="icon" aria-hidden="true">call</span>
                         <span>02 98 93 50 76</span>
                     </p>
                 </div>
@@ -51,7 +51,7 @@
 
                 <div class="bottomContent">
                     <p class="moreinfo flex gap10 italic">
-                        <span class="icon">call</span>
+                        <span class="icon" aria-hidden="true">call</span>
                         <span>02 98 93 50 76</span>
                     </p>
                 </div>
@@ -69,7 +69,7 @@
         
                 <div class="bottomContent">
                     <p class="moreinfo flex gap10 italic">
-                        <span class="icon">call</span>
+                        <span class="icon" aria-hidden="true">call</span>
                         <span>02 98 93 50 76</span>
                     </p>
                 </div>

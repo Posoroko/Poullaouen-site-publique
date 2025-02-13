@@ -13,10 +13,10 @@
             <div class="tallCardBox roomsContent mainWidth flex justifyCenter wrap gap50">
                 <CardsTallMain v-for="item in items.filter(item => item.subType.slug == 'gite')" :key="item.id" :title="item.name" :subtitle="item.subType.displaySubtype" :cardImage="item.image" :cardImageAlt="item.imageAlt" :localImage="false">
                     <div class="cardContent flex column gap10">
-                        <p class="flex alignCenter gap10" v-if="item.adress"> <span class="icon">location_on</span> <span>{{ item.adress }}</span> </p>
-                        <p class="flex alignCenter gap10" v-if="item.phone"> <span class="icon">call</span> <span>{{ item.phone }}</span> </p>
-                        <p class="flex alignCenter gap10" v-if="item.email"> <span class="icon">email</span> <span>{{ item.email }}</span> </p>
-                        <p class="flex alignCenter gap10" v-if="item.website"> <span class="icon">language</span> <a class="externalLink" :href="`${item.website}`" target="_blank">Voir le site web</a> </p>
+                        <p class="flex alignCenter gap10" v-if="item.adress"> <span class="icon" aria-hidden="true">location_on</span> <span>{{ item.adress }}</span> </p>
+                        <p class="flex alignCenter gap10" v-if="item.phone"> <span class="icon" aria-hidden="true">call</span> <span>{{ item.phone }}</span> </p>
+                        <p class="flex alignCenter gap10" v-if="item.email"> <span class="icon" aria-hidden="true">email</span> <span>{{ item.email }}</span> </p>
+                        <p class="flex alignCenter gap10" v-if="item.website"> <span class="icon" aria-hidden="true">language</span> <a class="externalLink" :href="`${item.website}`" target="_blank">Voir le site web</a> </p>
                     </div>
                 </CardsTallMain>
             </div>
@@ -28,10 +28,10 @@
             <div class="tallCardBox roomsContent mainWidth flex justifyCenter wrap gap50">
                 <CardsTallMain v-for="item in items.filter(item => item.subType.slug == 'chambre_d_hotes')" :key="item.id" :title="item.name" :subtitle="item.subType.displaySubtype" :cardImage="item.image" :cardImageAlt="item.imageAlt" :localImage="false">
                     <div class="cardContent flex column gap10">
-                        <p class="flex alignCenter gap10" v-if="item.adress"> <span class="icon">location_on</span> <span>{{ item.adress }}</span> </p>
-                        <p class="flex alignCenter gap10" v-if="item.phone"> <span class="icon">call</span> <span>{{ item.phone }}</span> </p>
-                        <p class="flex alignCenter gap10" v-if="item.email"> <span class="icon">email</span> <span>{{ item.email }}</span> </p>
-                        <p class="flex alignCenter gap10" v-if="item.website"> <span class="icon">language</span> <a class="externalLink" :href="`${item.website}`" target="_blank">Voir le site web</a> </p>
+                        <p class="flex alignCenter gap10" v-if="item.adress"> <span class="icon" aria-hidden="true">location_on</span> <span>{{ item.adress }}</span> </p>
+                        <p class="flex alignCenter gap10" v-if="item.phone"> <span class="icon" aria-hidden="true">call</span> <span>{{ item.phone }}</span> </p>
+                        <p class="flex alignCenter gap10" v-if="item.email"> <span class="icon" aria-hidden="true">email</span> <span>{{ item.email }}</span> </p>
+                        <p class="flex alignCenter gap10" v-if="item.website"> <span class="icon" aria-hidden="true">language</span> <a class="externalLink" :href="`${item.website}`" target="_blank">Voir le site web</a> </p>
                     </div>
                 </CardsTallMain>
             </div>
@@ -43,7 +43,7 @@
             <div class="tallCardBox roomsContent mainWidth flex justifyCenter wrap gap50">
                 <CardsTallMain title="L'aire" cardImage="/images/se-loger/aire de camping car(1).jpg" cardImageAlt="L'aire de camping car de Poullaouen" :localImage="true">
                     <div class="cardContent flex column gap10">
-                        <p class="flex alignCenter gap10" > <span class="icon">location_on</span> <span>Rue du Ty Meur - Poullaouen</span> </p>
+                        <p class="flex alignCenter gap10" > <span class="icon" aria-hidden="true">location_on</span> <span>Rue du Ty Meur - Poullaouen</span> </p>
                         <p> L’aire de camping-car est dotée d’un kiosque qui se veut être un lieu de rassemblement, permettant rencontres et partages entre les voyageurs. </p>
                     </div>
                 </CardsTallMain>
@@ -56,10 +56,10 @@
             <div class="tallCardBox roomsContent mainWidth flex justifyCenter wrap gap50">
                 <CardsTallMain v-for="item in items.filter(item => item.type.slug == 'bars_et_restaurants')" :key="item.id" :title="item.name" :subtitle="item.subType.displaySubtype" :cardImage="item.image" :cardImageAlt="item.imageAlt" :localImage="false">
                     <div class="cardContent flex column gap10">
-                        <p class="flex alignCenter gap10" v-if="item.adress"> <span class="icon">location_on</span> <span>{{ item.adress }}</span> </p>
-                        <p class="flex alignCenter gap10" v-if="item.phone"> <span class="icon">call</span> <span>{{ item.phone }}</span> </p>
-                        <p class="flex alignCenter gap10" v-if="item.email"> <span class="icon">email</span> <span>{{ item.email }}</span> </p>
-                        <p class="flex alignCenter gap10" v-if="item.website"> <span class="icon">language</span> <a class="externalLink" :href="`${item.website}`" target="_blank">Voir le site web</a> </p>
+                        <p class="flex alignCenter gap10" v-if="item.adress"> <span class="icon" aria-hidden="true">location_on</span> <span>{{ item.adress }}</span> </p>
+                        <p class="flex alignCenter gap10" v-if="item.phone"> <span class="icon" aria-hidden="true">call</span> <span>{{ item.phone }}</span> </p>
+                        <p class="flex alignCenter gap10" v-if="item.email"> <span class="icon" aria-hidden="true">email</span> <span>{{ item.email }}</span> </p>
+                        <p class="flex alignCenter gap10" v-if="item.website"> <span class="icon" aria-hidden="true">language</span> <a class="externalLink" :href="`${item.website}`" target="_blank">Voir le site web</a> </p>
                     </div>
                 </CardsTallMain>
             </div>
@@ -71,10 +71,10 @@
             <div class="tallCardBox roomsContent mainWidth flex justifyCenter wrap gap50">
                 <CardsTallMain v-for="item in items.filter(item => item.type.slug == 'alimentation')" :key="item.id" :title="item.name" :cardImage="item.image" :subtitle="item.subType.displaySubtype" :cardImageAlt="item.imageAlt" :localImage="false">
                     <div class="cardContent flex column gap10">
-                        <p class="flex alignCenter gap10" v-if="item.adress"> <span class="icon">location_on</span> <span>{{ item.adress }}</span> </p>
-                        <p class="flex alignCenter gap10" v-if="item.phone"> <span class="icon">call</span> <span>{{ item.phone }}</span> </p>
-                        <p class="flex alignCenter gap10" v-if="item.email"> <span class="icon">email</span> <span>{{ item.email }}</span> </p>
-                        <p class="flex alignCenter gap10" v-if="item.website"> <span class="icon">language</span> <a class="externalLink" :href="`${item.website}`" target="_blank">Voir le site web</a> </p>
+                        <p class="flex alignCenter gap10" v-if="item.adress"> <span class="icon" aria-hidden="true">location_on</span> <span>{{ item.adress }}</span> </p>
+                        <p class="flex alignCenter gap10" v-if="item.phone"> <span class="icon" aria-hidden="true">call</span> <span>{{ item.phone }}</span> </p>
+                        <p class="flex alignCenter gap10" v-if="item.email"> <span class="icon" aria-hidden="true">email</span> <span>{{ item.email }}</span> </p>
+                        <p class="flex alignCenter gap10" v-if="item.website"> <span class="icon" aria-hidden="true">language</span> <a class="externalLink" :href="`${item.website}`" target="_blank">Voir le site web</a> </p>
                     </div>
                 </CardsTallMain>
             </div>

@@ -18,17 +18,17 @@
                         </p>
 
                         <div class="flex column gap5">
-                            <p class="flex alignCenter gap10"> <span class="icon">language</span><a class="externalLink" target="_blank" href="https://minelocmariaberrien.com">minelocmariaberrien.com</a> </p>
+                            <p class="flex alignCenter gap10"> <span class="icon" aria-hidden="true">language</span><a class="externalLink" target="_blank" href="https://minelocmariaberrien.com">minelocmariaberrien.com</a> </p>
 
                             
-                            <p class="flex alignCenter gap10"> <span class="icon">mail</span><a class="" href="mailto:asamlb@hotmail.fr">asamlb@hotmail.fr</a> </p>
+                            <p class="flex alignCenter gap10"> <span class="icon" aria-hidden="true">mail</span><a class="" href="mailto:asamlb@hotmail.fr">asamlb@hotmail.fr</a> </p>
                             <p class="flex alignCenter gap10"> 
-                                <span class="icon">call</span>
+                                <span class="icon" aria-hidden="true">call</span>
                                 <span>Mairie Locmaria-Berrien : 02.98.99.73.09</span>
                             </p>
 
                             <p class="flex alignCenter gap10"> 
-                                <span class="icon">call</span>
+                                <span class="icon" aria-hidden="true">call</span>
                                 <span>Mairie Poullaouen : 02.98.93.50.76</span>
                             </p>
                         </div>

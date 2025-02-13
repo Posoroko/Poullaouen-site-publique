@@ -4,31 +4,31 @@
 
         <nav class="buttonBox flex alignCenter justifyEvenly mainWidth wrap">
             <NuxtLink to="/mon-quotidien/menu-cantine" class="dark_blue_action roundBtn pointer flex column alignCenter justifyCenter">
-                <span class="icon">restaurant</span>
+                <span class="icon" aria-hidden="true">restaurant</span>
 
                 <span class="wayne">Menu de la cantine</span>
             </NuxtLink>
 
             <NuxtLink to="/ma-mairie/documents/bulletin-municipal" class="brown_action roundBtn pointer flex column alignCenter justifyCenter">
-                <span class="icon">newspaper</span>
+                <span class="icon" aria-hidden="true">newspaper</span>
                 
                 <span class="wayne">Bulletin <br> municipal</span>
             </NuxtLink>
 
             <NuxtLink to="/mon-quotidien/commerces-et-entreprises" class="dark_blue_action roundBtn pointer flex column alignCenter justifyCenter">
-                <span class="icon">shopping_cart</span>
+                <span class="icon" aria-hidden="true">shopping_cart</span>
                 
                 <span class="wayne">Horaires des commerces</span>
             </NuxtLink>
 
             <NuxtLink to="/mes-sorties/chemins-de-randonnee" class="brown_action roundBtn pointer flex column alignCenter justifyCenter">
-                <span class="icon">hiking</span>
+                <span class="icon" aria-hidden="true">hiking</span>
                 
                 <span class="wayne">Chemins de randonnée</span>
             </NuxtLink>
 
             <NuxtLink to="/galerie-photo" class="dark_blue_action roundBtn pointer flex column alignCenter justifyCenter">
-                <span class="icon">photo_library</span>
+                <span class="icon" aria-hidden="true">photo_library</span>
                 
                 <span class="wayne">Galerie Photo</span>
             </NuxtLink>

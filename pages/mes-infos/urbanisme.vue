@@ -36,10 +36,10 @@
                     <p class="flex alignCenter gap20"> 
                         <b>Rapport de présentation</b>
                         <span class=" flex alignCenter gap10">
-                            <!-- <span class="icon">visibility</span> <a class="externalLink" href="/plu/5. Rapport de présentation.pdf" target="_blank">consulter</a>  -->
+                            <!-- <span class="icon" aria-hidden="true">visibility</span> <a class="externalLink" href="/plu/5. Rapport de présentation.pdf" target="_blank">consulter</a>  -->
                         </span>
                          <span class=" flex alignCenter gap10">
-                            <span class="icon">download</span> <a class="externalLink" href="/plu/5. Rapport de présentation.pdf" download>télécharger</a> 
+                            <span class="icon" aria-hidden="true">download</span> <a class="externalLink" href="/plu/5. Rapport de présentation.pdf" download>télécharger</a> 
                         </span>
                     </p>
 
